@@ -1,0 +1,33 @@
+name: 투자 대시보드 업데이트
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 체크아웃 (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Python 3.11 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 의존성 설치
+        run: pip install yfinance
+
+      - name: 투자 대시보드 생성
+        run: python investment-dashboard/generate_invest.py
+
+      - name: gh-pages 배포
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          include_files: index.html
