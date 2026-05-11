@@ -1,24 +1,14 @@
-"""
-매일 17:00 KST GitHub Actions에서 실행.
-1. mock_data.py에서 데이터 로드
-2. yfinance로 PEG 비율 실시간 갱신 (실패 시 mock 유지)
-3. invest/index.html 생성 → gh-pages 커밋
-"""
-import json
-import os
-import sys
+import json, os, sys, re
 
-# 현재 스크립트 기준으로 investment-dashboard 모듈 경로 추가
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
 
 from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA
 
-# ── PEG 실시간 업데이트 ─────────────────────────────────────────
 PEG_TICKERS = [
-    ("PLTR","Palantir"), ("TSLA","Tesla"),   ("NVDA","Nvidia"),
-    ("AAPL","Apple"),    ("MSFT","Microsoft"),("APP","Applovin"),
-    ("META","Meta"),     ("AVGO","Broadcom"), ("AMZN","Amazon"), ("GOOGL","Alphabet"),
+    ("PLTR","Palantir"),("TSLA","Tesla"),("NVDA","Nvidia"),
+    ("AAPL","Apple"),("MSFT","Microsoft"),("APP","Applovin"),
+    ("META","Meta"),("AVGO","Broadcom"),("AMZN","Amazon"),("GOOGL","Alphabet"),
 ]
 
 def fetch_peg():
@@ -31,28 +21,20 @@ def fetch_peg():
                 peg = info.get("trailingPegRatio") or info.get("pegRatio")
                 pe  = info.get("trailingPE") or info.get("forwardPE")
                 if peg and pe:
-                    result.append({
-                        "ticker": ticker, "name": name,
-                        "peg": round(float(peg), 1),
-                        "pe":  round(float(pe),  1),
-                        "growth_rate": round(float(pe) / float(peg), 1),
-                    })
-            except Exception:
-                pass
+                    result.append({"ticker":ticker,"name":name,
+                        "peg":round(float(peg),1),"pe":round(float(pe),1),
+                        "growth_rate":round(float(pe)/float(peg),1)})
+            except: pass
         result.sort(key=lambda x: x["peg"], reverse=True)
         return result or None
     except ImportError:
         return None
 
-# ── 데이터 조합 ─────────────────────────────────────────────────
 def build_data():
     peg = fetch_peg()
     if peg:
         M6_DATA["peg_ratios"] = peg
-        print(f"PEG 실시간 데이터 {len(peg)}개 반영")
-    else:
-        print("yfinance 없음 — mock PEG 사용")
-
+        print(f"PEG 실시간 {len(peg)}개 반영")
     return {
         "summary": SUMMARY_DATA,
         "m1": {"investors": M1_DATA, "common_top3": M1_COMMON},
@@ -63,26 +45,21 @@ def build_data():
         "m6": M6_DATA,
     }
 
-# ── HTML 생성 ───────────────────────────────────────────────────
 def generate():
     data = build_data()
     data_json = json.dumps(data, ensure_ascii=False)
 
-    template_path = os.path.join(BASE_DIR, "templates", "index.html")
-    with open(template_path, "r", encoding="utf-8") as f:
+    html_path = os.path.join(BASE_DIR, "index.html")
+    with open(html_path, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # Jinja2 placeholder를 실제 JSON으로 교체
-    html = html.replace("{{ data_json | safe }}", data_json)
+    # INJECTED 블록을 최신 데이터로 교체
+    new_block = "const INJECTED = " + data_json + ";"
+    html = re.sub(r"const INJECTED = \{[\s\S]*?\};", new_block, html)
 
-    # 출력 경로: 레포 루트의 index.html (gh-pages가 서빙)
-    repo_root = os.path.dirname(BASE_DIR)
-    out_path  = os.path.join(repo_root, "index.html")
-
-    with open(out_path, "w", encoding="utf-8") as f:
+    with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
-
-    print(f"생성 완료: {out_path}")
+    print(f"완료: {html_path}")
 
 if __name__ == "__main__":
     generate()
