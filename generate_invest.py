@@ -1,20 +1,8 @@
-"""
-매일 17:00 KST GitHub Actions에서 실행.
-1. mock_data.py에서 데이터 로드
-2. yfinance로 PEG 비율 실시간 갱신 (실패 시 mock 유지)
-3. invest/index.html 생성 → gh-pages 커밋
-"""
-import json
-import os
-import sys
-
-# 현재 스크립트 기준으로 investment-dashboard 모듈 경로 추가
+import json, os, sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
-
 from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA, NEWS_DATA
 
-# ── PEG 실시간 업데이트 ─────────────────────────────────────────
 PEG_TICKERS = [
     ("PLTR","Palantir"), ("TSLA","Tesla"),   ("NVDA","Nvidia"),
     ("AAPL","Apple"),    ("MSFT","Microsoft"),("APP","Applovin"),
@@ -72,7 +60,6 @@ def fetch_index_peg():
     except ImportError:
         return None
 
-# ── 데이터 조합 ─────────────────────────────────────────────────
 def build_data():
     peg = fetch_peg()
     if peg:
@@ -84,7 +71,6 @@ def build_data():
     if idx_peg:
         M6_DATA["index_peg"] = idx_peg
         print(f"지수 PEG 실시간 데이터 {len(idx_peg)}개 반영")
-
     return {
         "summary": SUMMARY_DATA,
         "news": NEWS_DATA,
@@ -96,26 +82,37 @@ def build_data():
         "m6": M6_DATA,
     }
 
-# ── HTML 생성 ───────────────────────────────────────────────────
+def inject_data(html, data_json):
+    lines = html.split('\n')
+    start_idx = None
+    end_idx = None
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if start_idx is None and stripped.startswith('const INJECTED ='):
+            start_idx = i
+            if stripped.endswith(';'):
+                end_idx = i
+                break
+        elif start_idx is not None and stripped == '};':
+            end_idx = i
+            break
+    if start_idx is not None and end_idx is not None:
+        html = '\n'.join(lines[:start_idx] + ['const INJECTED = ' + data_json + ';'] + lines[end_idx+1:])
+        print(f"INJECTED 교체 성공 (line {start_idx}~{end_idx})")
+    else:
+        print(f"경고: INJECTED 블록 찾기 실패 (start={start_idx}, end={end_idx})")
+    return html
+
 def generate():
     data = build_data()
     data_json = json.dumps(data, ensure_ascii=False)
-
-    template_path = os.path.join(BASE_DIR, "templates", "index.html")
-    with open(template_path, "r", encoding="utf-8") as f:
+    html_path = os.path.join(BASE_DIR, "index.html")
+    with open(html_path, "r", encoding="utf-8") as f:
         html = f.read()
-
-    # Jinja2 placeholder를 실제 JSON으로 교체
-    html = html.replace("{{ data_json | safe }}", data_json)
-
-    # 출력 경로: 레포 루트의 index.html (gh-pages가 서빙)
-    repo_root = os.path.dirname(BASE_DIR)
-    out_path  = os.path.join(repo_root, "index.html")
-
-    with open(out_path, "w", encoding="utf-8") as f:
+    html = inject_data(html, data_json)
+    with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
-
-    print(f"생성 완료: {out_path}")
+    print("생성 완료:", html_path)
 
 if __name__ == "__main__":
     generate()
