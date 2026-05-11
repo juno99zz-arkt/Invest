@@ -1,14 +1,27 @@
-import json, os, sys
+"""
+매일 17:00 KST GitHub Actions에서 실행.
+1. mock_data.py에서 데이터 로드
+2. yfinance로 PEG 비율 실시간 갱신 (실패 시 mock 유지)
+3. invest/index.html 생성 → gh-pages 커밋
+"""
+import json
+import os
+import sys
+
+# 현재 스크립트 기준으로 investment-dashboard 모듈 경로 추가
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
+
 from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA, NEWS_DATA
 
+# ── PEG 실시간 업데이트 ─────────────────────────────────────────
 PEG_TICKERS = [
     ("PLTR","Palantir"), ("TSLA","Tesla"),   ("NVDA","Nvidia"),
     ("AAPL","Apple"),    ("MSFT","Microsoft"),("APP","Applovin"),
     ("META","Meta"),     ("AVGO","Broadcom"), ("AMZN","Amazon"), ("GOOGL","Alphabet"),
 ]
 INDEX_TICKERS = [
+    ("SPY",  "S&P 500 (SPY)"),
     ("QQQ",  "나스닥 100 (QQQ)"),
     ("SOXX", "반도체 섹터 (SOXX)"),
 ]
@@ -60,6 +73,7 @@ def fetch_index_peg():
     except ImportError:
         return None
 
+# ── 데이터 조합 ─────────────────────────────────────────────────
 def build_data():
     peg = fetch_peg()
     if peg:
@@ -71,6 +85,7 @@ def build_data():
     if idx_peg:
         M6_DATA["index_peg"] = idx_peg
         print(f"지수 PEG 실시간 데이터 {len(idx_peg)}개 반영")
+
     return {
         "summary": SUMMARY_DATA,
         "news": NEWS_DATA,
@@ -103,16 +118,21 @@ def inject_data(html, data_json):
         print(f"경고: INJECTED 블록 찾기 실패 (start={start_idx}, end={end_idx})")
     return html
 
+# ── HTML 생성 ───────────────────────────────────────────────────
 def generate():
     data = build_data()
     data_json = json.dumps(data, ensure_ascii=False)
+
     html_path = os.path.join(BASE_DIR, "index.html")
     with open(html_path, "r", encoding="utf-8") as f:
         html = f.read()
+
     html = inject_data(html, data_json)
+
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
-    print("생성 완료:", html_path)
+
+    print(f"생성 완료: {html_path}")
 
 if __name__ == "__main__":
     generate()
