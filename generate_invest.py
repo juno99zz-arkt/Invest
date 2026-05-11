@@ -55,8 +55,11 @@ def generate():
 
     # INJECTED 블록을 최신 데이터로 교체
     new_block = "const INJECTED = " + data_json + ";"
-    html = re.sub(r"const INJECTED = \{[\s\S]*?\};", new_block, html)
-
+    new_html = re.sub(r"const INJECTED = \{[\s\S]*?\};", new_block, html)
+if new_html == html:
+    new_html = html.replace("const INJECTED = {{ data_json | safe }};", new_block)
+html = new_html
+    
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"완료: {html_path}")
