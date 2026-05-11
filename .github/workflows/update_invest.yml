@@ -22,7 +22,7 @@ jobs:
         run: pip install yfinance
 
       - name: 투자 대시보드 생성
-        run: python investment-dashboard/generate_invest.py
+        run: python generate_invest.py
 
       - name: gh-pages 배포
         uses: peaceiris/actions-gh-pages@v4
