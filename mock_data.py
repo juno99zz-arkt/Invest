@@ -179,6 +179,10 @@ M6_DATA = {
         "bull_market_signal": "주의",
         "summary": "NVDA·AMD EPS 성장률 고점 통과 조짐이나 절대 성장률은 양호. 빅테크 CapEx는 META·GOOGL 주도로 여전히 확대 중. 단기 조정 리스크 존재하나 사이클 전환 신호는 아직 미확인.",
     },
+    "index_peg": [
+        {"name": "나스닥 100 (QQQ)", "ticker": "QQQ",  "peg": 2.3, "pe": 28.4, "growth_rate": 12.3},
+        {"name": "반도체 섹터 (SOXX)", "ticker": "SOXX", "peg": 1.7, "pe": 25.6, "growth_rate": 15.1},
+    ],
     "peg_ratios": [
         {"ticker": "PLTR", "name": "Palantir",   "peg": 5.1,  "pe": 98.2,  "growth_rate": 19.3},
         {"ticker": "TSLA", "name": "Tesla",       "peg": 4.2,  "pe": 68.4,  "growth_rate": 16.3},
@@ -233,3 +237,87 @@ SUMMARY_DATA = {
 📌 다음 주 이벤트
 · 5/13 CPI 발표 / 5/14 NVDA 실적""",
 }
+
+# ── 투자 뉴스 ────────────────────────────────────────────────────
+NEWS_DATA = [
+    {
+        "title": "젠슨 황 CEO, NVDA 주식 820만 달러 자사주 매수 — 실적 자신감 최고조",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com",
+        "summary": "엔비디아 CEO 젠슨 황이 개인 자격으로 자사 주식 약 6.8만 주(820만 달러)를 장내 매수했다. 이는 블랙웰 아키텍처 수요가 공급을 초과하는 상황에서 경영진의 자신감을 보여주는 강력한 시그널이다.",
+        "insight": "내부자 매수 + AI 수요 가속화의 이중 강세 신호. NVDA 비중 확대 근거로 활용 가능.",
+        "stars": 5
+    },
+    {
+        "title": "OpenAI, 기업용 API 가격 40% 인하 — AI 인프라 수요 폭발 예고",
+        "source": "The Information",
+        "url": "https://www.theinformation.com",
+        "summary": "OpenAI가 GPT-4o API 가격을 40% 대폭 인하하며 기업 고객 확장에 나섰다. AI 서비스 대중화로 데이터센터 트래픽이 급증할 전망이며 NVDA, AVGO, ANET 등 인프라 수혜가 예상된다.",
+        "insight": "AI 소프트웨어 경쟁 심화 → 클라우드 인프라 수요 가속. NVDA·AVGO·ANET 간접 수혜.",
+        "stars": 5
+    },
+    {
+        "title": "Meta, 2026년 AI 인프라 CapEx 650억 달러로 상향 — 광고 AI 수익성 급등",
+        "source": "Wall Street Journal",
+        "url": "https://www.wsj.com",
+        "summary": "메타가 2026년 설비투자 가이던스를 기존 600억 달러에서 650억 달러로 상향 조정했다. Llama AI 광고 최적화 엔진이 클릭율을 32% 끌어올리며 광고 단가 상승이 이어지고 있다.",
+        "insight": "META 광고 AI ROI 입증. 실적 가이던스 상향 가능성 높아 비중 유지 또는 확대 검토.",
+        "stars": 5
+    },
+    {
+        "title": "Palantir, 미 국방부 AIP 계약 15억 달러 추가 수주 — 정부 AI 플랫폼 독점화",
+        "source": "Reuters",
+        "url": "https://www.reuters.com",
+        "summary": "팔란티어가 미 국방부와 AIP(AI 플랫폼) 계약 15억 달러를 추가 체결했다. 미 정부의 AI 예산 확대 기조 속에 팔란티어의 정부 부문 매출이 YoY 45% 성장 전망이다.",
+        "insight": "PLTR 정부 수주 모멘텀 지속. 밸류에이션 부담(PEG 5.1)에도 성장 가속 구간으로 단기 강세 유효.",
+        "stars": 4
+    },
+    {
+        "title": "Microsoft, Copilot 기업 구독자 50만 명 돌파 — AI 수익화 본격화",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com",
+        "summary": "마이크로소프트의 AI 코파일럿 기업 구독자가 50만 명을 넘어섰다. 월 30달러 구독료 기준 연간 ARR 18억 달러 규모로, Azure AI 사업과의 시너지로 클라우드 매출 성장률 재가속이 기대된다.",
+        "insight": "MSFT AI 수익화 궤도 진입 확인. PEG 2.6으로 빅테크 중 밸류에이션 매력도 상위권.",
+        "stars": 4
+    },
+    {
+        "title": "TSMC, 2나노 수율 80% 달성 — 애플·엔비디아 2026 물량 확보 경쟁",
+        "source": "Nikkei Asia",
+        "url": "https://asia.nikkei.com",
+        "summary": "TSMC의 2nm 공정 수율이 80%를 돌파하며 양산 체제에 진입했다. 애플 A20, 엔비디아 Rubin GPU 등 주요 고객사들이 이미 2026년 생산 물량의 70%를 사전 예약한 것으로 알려졌다.",
+        "insight": "TSMC 기술 우위 재확인. NVDA 차세대 칩 공급 안정성 확보 → 중장기 성장 가시성 제고.",
+        "stars": 4
+    },
+    {
+        "title": "Amazon AWS, AI 특화 리전 3개 추가 신설 — CapEx 280억 달러 집행 예고",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com",
+        "summary": "아마존이 AI 워크로드 전용 AWS 리전 3개를 신규 건설한다고 발표했다. 2025년 CapEx 280억 달러 중 60% 이상이 AI 인프라에 집중될 예정으로, AI 수요 강세를 반영한 공격적 투자다.",
+        "insight": "AMZN AWS AI 인프라 투자 확대 → NVDA 칩 수요 직접 연결. AMZN 클라우드 매출 재가속 기대.",
+        "stars": 3
+    },
+    {
+        "title": "Broadcom XPU 수주 잔고 200억 달러 — 구글·애플 맞춤형 AI칩 급성장",
+        "source": "Barron's",
+        "url": "https://www.barrons.com",
+        "summary": "브로드컴의 맞춤형 AI 가속기(XPU) 수주 잔고가 200억 달러를 넘어섰다. 구글 TPU v5, 애플 Neural Engine 등 하이퍼스케일러 전용 칩 설계로 NVDA와 차별화된 수익 구조를 구축하고 있다.",
+        "insight": "AVGO XPU 비즈니스 성장 가속 확인. PEG 1.5로 반도체 중 상대적 밸류에이션 매력 보유.",
+        "stars": 3
+    },
+    {
+        "title": "연준 FOMC 의사록 공개 — '금리 인하 서두르지 않겠다' 매파 기조 유지",
+        "source": "Federal Reserve",
+        "url": "https://www.federalreserve.gov",
+        "summary": "5월 FOMC 의사록에서 연준 위원 대다수가 인플레이션 목표 달성까지 금리 인하를 자제해야 한다는 입장을 재확인했다. 시장은 9월 첫 인하 가능성을 55%로 소폭 낮춰 잡았다.",
+        "insight": "고금리 지속 → 성장주 밸류에이션 압박 요인. 단기 변동성 확대 가능. 실적 우량주 중심 선별 투자 유효.",
+        "stars": 3
+    },
+    {
+        "title": "Applovin AXON 2.0, 광고 ROAS 업계 평균 3배 — 모바일 광고 시장 판도 변화",
+        "source": "Business Insider",
+        "url": "https://www.businessinsider.com",
+        "summary": "앱러빈의 AI 광고 엔진 AXON 2.0이 광고주 ROAS(광고비 대비 수익)에서 업계 평균의 3배를 기록하며 구글·메타 광고 예산을 흡수하고 있다. Q2 매출 성장률이 55%를 상회할 것으로 전망된다.",
+        "insight": "APP 모바일 광고 AI 경쟁력 압도적. 고PEG(2.2) 부담에도 EPS 가속 구간으로 단기 모멘텀 강세.",
+        "stars": 2
+    },
+]

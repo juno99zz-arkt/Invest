@@ -1,12 +1,16 @@
 import json, os, sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
-from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA
+from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA, NEWS_DATA
 
 PEG_TICKERS = [
     ("PLTR","Palantir"), ("TSLA","Tesla"),   ("NVDA","Nvidia"),
     ("AAPL","Apple"),    ("MSFT","Microsoft"),("APP","Applovin"),
     ("META","Meta"),     ("AVGO","Broadcom"), ("AMZN","Amazon"), ("GOOGL","Alphabet"),
+]
+INDEX_TICKERS = [
+    ("QQQ",  "나스닥 100 (QQQ)"),
+    ("SOXX", "반도체 섹터 (SOXX)"),
 ]
 
 def fetch_peg():
@@ -32,6 +36,30 @@ def fetch_peg():
     except ImportError:
         return None
 
+def fetch_index_peg():
+    try:
+        import yfinance as yf
+        result = []
+        for ticker, name in INDEX_TICKERS:
+            try:
+                info = yf.Ticker(ticker).info
+                peg = info.get("trailingPegRatio") or info.get("pegRatio")
+                pe  = info.get("trailingPE") or info.get("forwardPE")
+                if pe:
+                    entry = {"ticker": ticker, "name": name, "pe": round(float(pe), 1)}
+                    if peg:
+                        entry["peg"] = round(float(peg), 1)
+                        entry["growth_rate"] = round(float(pe) / float(peg), 1)
+                    else:
+                        entry["peg"] = None
+                        entry["growth_rate"] = None
+                    result.append(entry)
+            except Exception:
+                pass
+        return result or None
+    except ImportError:
+        return None
+
 def build_data():
     peg = fetch_peg()
     if peg:
@@ -39,8 +67,13 @@ def build_data():
         print(f"PEG 실시간 데이터 {len(peg)}개 반영")
     else:
         print("yfinance 없음 — mock PEG 사용")
+    idx_peg = fetch_index_peg()
+    if idx_peg:
+        M6_DATA["index_peg"] = idx_peg
+        print(f"지수 PEG 실시간 데이터 {len(idx_peg)}개 반영")
     return {
         "summary": SUMMARY_DATA,
+        "news": NEWS_DATA,
         "m1": {"investors": M1_DATA, "common_top3": M1_COMMON},
         "m2": {"sectors": M2_DATA},
         "m3": {"companies": M3_DATA},
@@ -64,8 +97,7 @@ def inject_data(html, data_json):
             end_idx = i
             break
     if start_idx is not None and end_idx is not None:
-        new_line = 'const INJECTED = ' + data_json + ';'
-        html = '\n'.join(lines[:start_idx] + [new_line] + lines[end_idx+1:])
+        html = '\n'.join(lines[:start_idx] + ['const INJECTED = ' + data_json + ';'] + lines[end_idx+1:])
         print(f"INJECTED 교체 성공 (line {start_idx}~{end_idx})")
     else:
         print(f"경고: INJECTED 블록 찾기 실패 (start={start_idx}, end={end_idx})")
