@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>투자 브리핑 대시보드</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root { --bg: #0f1117; --card: #1a1d2e; --card2: #232740; --border: #2d3154; --green: #22c55e; --red: #ef4444; --yellow: #f59e0b; --blue: #3b82f6; --purple: #a855f7; --text: #e2e8f0; --muted: #94a3b8; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; min-height: 100vh; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+  .card2 { background: var(--card2); border: 1px solid var(--border); border-radius: 8px; }
+  .tab-btn { transition: all 0.2s; }
+  .tab-btn.active { background: #3b82f6; color: white; }
+  .tab-btn:not(.active) { background: var(--card2); color: var(--muted); }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #166534; color: #86efac; }
+  .badge-red { background: #7f1d1d; color: #fca5a5; }
+  .badge-yellow { background: #78350f; color: #fcd34d; }
+  .badge-blue { background: #1e3a5f; color: #93c5fd; }
+  .badge-purple { background: #4c1d95; color: #c4b5fd; }
+  .badge-gray { background: #1e293b; color: #94a3b8; }
+  .progress-bar { background: #1e293b; border-radius: 4px; height: 6px; }
+  .progress-fill { border-radius: 4px; height: 6px; transition: width 0.5s; }
+  .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0f1117; border-top: 1px solid var(--border); z-index: 100; }
+  .nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px; cursor: pointer; transition: color 0.2s; flex: 1; }
+  .nav-item.active { color: #3b82f6; }
+  .nav-item:not(.active) { color: var(--muted); }
+  .nav-dot { width: 4px; height: 4px; border-radius: 50%; background: currentColor; opacity: 0; }
+  .nav-item.active .nav-dot { opacity: 1; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .sparkline-canvas { width: 80px !important; height: 32px !important; }
+  .stance-bar { display: flex; gap: 4px; }
+  .stance-seg { flex: 1; height: 8px; border-radius: 4px; }
+  .investor-card { cursor: pointer; }
+  .investor-card .details { display: none; }
+  .investor-card.open .details { display: block; }
+  .investor-card .chevron { transition: transform 0.2s; }
+  .investor-card.open .chevron { transform: rotate(180deg); }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .loading { display: flex; align-items: center; justify-content: center; height: 120px; color: var(--muted); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .animate-pulse { animation: pulse 1.5s ease-in-out infinite; }
+  .signal-strong { border-left: 3px solid #22c55e; }
+  .signal-bull { border-left: 3px solid #86efac; }
+  .signal-bear { border-left: 3px solid #ef4444; }
+  .signal-neutral { border-left: 3px solid #94a3b8; }
+  .ticker-badge { font-family: monospace; font-weight: 700; letter-spacing: 0.05em; }
+  .capex-bar { display: flex; align-items: center; gap: 8px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { color: var(--muted); font-size: 11px; font-weight: 600; text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  td { font-size: 13px; padding: 8px; border-bottom: 1px solid #1e2340; }
+  tr:last-child td { border-bottom: none; }
+
+  /* 레이아웃 */
+  .app-wrapper { max-width: 480px; margin: 0 auto; }
+
+  /* 전체화면 버튼 */
+  .fs-btn { background: var(--card2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; cursor: pointer; color: var(--muted); display: flex; align-items: center; gap: 4px; font-size: 11px; transition: all 0.2s; }
+  .fs-btn:hover { color: var(--text); border-color: #3b82f6; }
+
+  /* 카드 접기/펼치기 */
+  .c-body { overflow: hidden; transition: max-height 0.3s ease, opacity 0.2s; max-height: 3000px; opacity: 1; }
+  .card.collapsed .c-body { max-height: 0 !important; opacity: 0; }
+  .c-chevron { transition: transform 0.25s; flex-shrink: 0; }
+  .card.collapsed .c-chevron { transform: rotate(-180deg); }
+  .c-header { display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; padding: 14px 14px 0 14px; }
+  .c-header:active { opacity: 0.7; }
+
+  /* 섹션 설명 바 접기 */
+  .sec-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .sec-collapse-btn { background: var(--card2); border: 1px solid var(--border); border-radius: 6px; padding: 3px 8px; font-size: 11px; color: var(--muted); cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div style="background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;">
+  <div class="app-wrapper" style="padding:12px 16px;">
+    <div class="flex items-center justify-between gap-2">
+      <div>
+        <div class="font-bold text-base" style="color:#3b82f6;">AI 투자 브리핑</div>
+        <div class="text-xs" style="color:var(--muted);" id="header-date">로딩 중...</div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="fs-btn" onclick="toggleFullscreen()" id="fs-btn" title="전체화면">
+          <svg id="fs-icon-expand" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+          <svg id="fs-icon-shrink" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9V4m0 5H4m0 0l5-5M15 9h5m-5 0V4m0 5l5-5M9 15v5m0-5H4m5 5l-5-5m11 5v-5h5m-5 5l5-5"/></svg>
+          <span id="fs-label">전체화면</span>
+        </button>
+        <div id="header-stance" class="badge badge-blue" style="font-size:12px;padding:4px 10px;white-space:nowrap;">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div style="padding-bottom:80px;">
+
+  <!-- Summary Section -->
+  <div id="sec-summary" class="section active pt-3">
+    <div class="app-wrapper px-3">
+      <div id="summary-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M1 Section -->
+  <div id="sec-m1" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">SEC 13F 최신 분기 기준</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m1-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m1-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M2 Section -->
+  <div id="sec-m2" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">최근 5거래일 EPS 컨센서스 변화</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m2-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m2-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M3 Section -->
+  <div id="sec-m3" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">4분기 연속 매출가속 + 영업이익 개선 기업</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m3-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m3-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M4 Section -->
+  <div id="sec-m4" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">최근 2분기 적자 → 다음 분기 EPS 흑자 전망</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m4-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m4-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M5 Section -->
+  <div id="sec-m5" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">SEC Form 4 최근 5거래일 (거래금액 $500K 이상)</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m5-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m5-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <!-- M6 Section -->
+  <div id="sec-m6" class="section pt-3">
+    <div class="app-wrapper px-3">
+      <div class="sec-bar">
+        <span class="text-xs" style="color:var(--muted);">반도체 이익성장 & 빅테크 CapEx 모니터링</span>
+        <button class="sec-collapse-btn" onclick="toggleSecContent('m6-content', this)">전체 접기 ▲</button>
+      </div>
+      <div id="m6-content" class="loading animate-pulse">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+  <div class="app-wrapper flex">
+    <div class="nav-item active" onclick="switchTab('summary','nav-summary')" id="nav-summary">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <span style="font-size:10px;">종합</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m1','nav-m1')" id="nav-m1">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+      <span style="font-size:10px;">대가</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m2','nav-m2')" id="nav-m2">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+      <span style="font-size:10px;">섹터</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m3','nav-m3')" id="nav-m3">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+      <span style="font-size:10px;">실적↑</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m4','nav-m4')" id="nav-m4">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span style="font-size:10px;">흑자↑</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m5','nav-m5')" id="nav-m5">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+      <span style="font-size:10px;">내부자</span>
+      <div class="nav-dot"></div>
+    </div>
+    <div class="nav-item" onclick="switchTab('m6','nav-m6')" id="nav-m6">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+      <span style="font-size:10px;">신호</span>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+</nav>
+
+<script>
+// ── 탭 전환 ──────────────────────────────────────────────────────
+let activeTab = 'summary';
+const sparklineInstances = {};
+
+function switchTab(tab, navId) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('sec-' + tab).classList.add('active');
+  document.getElementById(navId).classList.add('active');
+  activeTab = tab;
+  window.scrollTo(0, 0);
+}
+
+// ── 전체화면 ─────────────────────────────────────────────────────
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen();
+  }
+}
+document.addEventListener('fullscreenchange', () => {
+  const isFs = !!document.fullscreenElement;
+  document.getElementById('fs-icon-expand').style.display = isFs ? 'none' : '';
+  document.getElementById('fs-icon-shrink').style.display = isFs ? '' : 'none';
+  document.getElementById('fs-label').textContent = isFs ? '화면 축소' : '전체화면';
+});
+
+// ── 섹션 전체 접기/펼치기 ────────────────────────────────────────
+function toggleSecContent(contentId, btn) {
+  const el = document.getElementById(contentId);
+  if (!el) return;
+  const isCollapsed = el.style.maxHeight === '0px';
+  if (isCollapsed) {
+    el.style.maxHeight = el.scrollHeight + 'px';
+    el.style.opacity = '1';
+    el.style.overflow = 'hidden';
+    btn.textContent = '전체 접기 ▲';
+  } else {
+    el.style.maxHeight = '0px';
+    el.style.opacity = '0';
+    el.style.overflow = 'hidden';
+    btn.textContent = '펼치기 ▼';
+  }
+}
+
+// ── 개별 카드 접기/펼치기 ────────────────────────────────────────
+function initCollapsibleCards(containerId) {
+  const cards = document.querySelectorAll(`#${containerId} > .card`);
+  cards.forEach(card => {
+    // 이미 처리됐으면 스킵
+    if (card.querySelector('.c-chevron')) return;
+    const firstEl = card.firstElementChild;
+    if (!firstEl) return;
+
+    // 첫 번째 자식을 헤더로, 나머지를 body로
+    const children = Array.from(card.children);
+    const headerEl = children[0];
+    const bodyEls = children.slice(1);
+    if (bodyEls.length === 0) return;
+
+    // body 래퍼 생성
+    const body = document.createElement('div');
+    body.className = 'c-body';
+    bodyEls.forEach(el => body.appendChild(el));
+
+    // 헤더에 chevron 삽입
+    const chevron = document.createElement('span');
+    chevron.className = 'c-chevron';
+    chevron.innerHTML = `<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--muted)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>`;
+
+    // 헤더를 flex로 만들어 chevron 추가
+    headerEl.style.display = 'flex';
+    headerEl.style.justifyContent = 'space-between';
+    headerEl.style.alignItems = 'center';
+    headerEl.style.cursor = 'pointer';
+    headerEl.style.userSelect = 'none';
+    headerEl.appendChild(chevron);
+    headerEl.addEventListener('click', () => {
+      card.classList.toggle('collapsed');
+    });
+
+    card.appendChild(body);
+  });
+}
+
+// ── 콘텐츠 렌더 헬퍼 (loading 클래스 제거) ──────────────────────
+function render(id, html) {
+  const el = document.getElementById(id);
+  el.className = '';
+  el.innerHTML = html;
+}
+
+// ── 숫자 포맷 ────────────────────────────────────────────────────
+function fmt(n, dec=1) { return n > 0 ? '+' + n.toFixed(dec) : n.toFixed(dec); }
+function fmtB(n) { return n >= 1000 ? '$' + (n/1000).toFixed(1) + 'T' : '$' + n + 'B'; }
+function fmtM(n) { return '$' + (n/1000000).toFixed(1) + 'M'; }
+
+function flagBadge(flag) {
+  const map = { '증가': 'badge-green', '감소': 'badge-red', '신규': 'badge-blue', 'EXIT': 'badge-red', '유지': 'badge-gray' };
+  return `<span class="badge ${map[flag] || 'badge-gray'}">${flag}</span>`;
+}
+
+function changeColor(val) {
+  if (val === 'NEW' || val === '신규') return 'color:#3b82f6';
+  if (typeof val === 'number') return val > 0 ? 'color:#22c55e' : val < 0 ? 'color:#ef4444' : 'color:var(--muted)';
+  return 'color:var(--muted)';
+}
+
+// ── 스파크라인 ───────────────────────────────────────────────────
+function drawSparkline(canvasId, data, positive) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  if (sparklineInstances[canvasId]) sparklineInstances[canvasId].destroy();
+  const color = positive ? '#22c55e' : '#ef4444';
+  sparklineInstances[canvasId] = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: data.map((_, i) => i),
+      datasets: [{ data, borderColor: color, backgroundColor: color + '20', borderWidth: 2, fill: true, tension: 0.4, pointRadius: 0 }]
+    },
+    options: { responsive: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false } }, animation: false }
+  });
+}
+
+// ── Summary 렌더링 ───────────────────────────────────────────────
+function loadSummary(d) {
+  document.getElementById('header-date').textContent = d.date + ' 기준';
+  document.getElementById('header-stance').textContent = d.stance;
+
+  const stanceColors = ['#22c55e','#3b82f6','#f59e0b','#ef4444'];
+  const stanceLabels = ['공격적 매수','선별적 매수','중립','방어적'];
+  const sl = d.stance_level - 1;
+
+  let stockRows = d.screened_stocks.map(s => `
+    <div class="card2 p-3 mb-2">
+      <div class="flex items-start gap-3">
+        <span class="ticker-badge text-sm" style="color:#f59e0b;min-width:44px;">${s.ticker}</span>
+        <span class="text-xs" style="color:var(--muted);line-height:1.5;">${s.reason}</span>
+      </div>
+    </div>`).join('');
+
+  let sectorRows = d.top_sectors.map(s => `
+    <div class="flex items-start gap-3 py-2" style="border-bottom:1px solid var(--border);">
+      <span class="text-base font-bold" style="color:#f59e0b;min-width:20px;">${s.rank}</span>
+      <div>
+        <div class="font-semibold text-sm">${s.name}</div>
+        <div class="text-xs mt-0.5" style="color:var(--muted);">${s.reason}</div>
+      </div>
+    </div>`).join('');
+
+  render('summary-content', `
+    <!-- 스탠스 카드 -->
+    <div class="card p-4 mb-3">
+      <div class="text-xs mb-2" style="color:var(--muted);">투자 스탠스</div>
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xl font-bold" style="color:${stanceColors[sl]};">${d.stance}</span>
+      </div>
+      <div class="stance-bar mb-2">
+        ${stanceColors.map((c,i) => '<div class="stance-seg" style="background:' + (i===sl?c:'#1e293b') + ';opacity:' + (i===sl?1:0.4) + ';"></div>').join('')}
+      </div>
+      <div class="flex justify-between text-xs" style="color:var(--muted);">
+        ${stanceLabels.map((l,i) => '<span style="' + (i===sl?'color:'+stanceColors[sl]+';font-weight:600;':'') + '">' + l + '</span>').join('')}
+      </div>
+    </div>
+
+    <!-- 주간 메시지 -->
+    <div class="card p-4 mb-3">
+      <div class="text-xs mb-3" style="color:var(--muted);">주간 핵심 메시지</div>
+      <div class="space-y-2">
+        <div class="card2 p-3 flex gap-3">
+          <span class="text-base">🌐</span>
+          <span class="text-sm" style="line-height:1.5;">${d.weekly_message.market_env}</span>
+        </div>
+        <div class="card2 p-3 flex gap-3">
+          <span class="text-base">⚡</span>
+          <span class="text-sm" style="line-height:1.5;">${d.weekly_message.key_change}</span>
+        </div>
+        <div class="card2 p-3 flex gap-3">
+          <span class="text-base">📅</span>
+          <span class="text-sm" style="line-height:1.5;">${d.weekly_message.next_event}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 주목 섹터 -->
+    <div class="card p-4 mb-3">
+      <div class="text-xs mb-2" style="color:var(--muted);">주목 섹터 TOP 3</div>
+      ${sectorRows}
+    </div>
+
+    <!-- 스크리닝 종목 -->
+    <div class="card p-4 mb-3">
+      <div class="text-xs mb-3" style="color:var(--muted);">이번 주 픽 — 스크리닝 통과 종목</div>
+      ${stockRows}
+    </div>
+
+    <!-- 카카오 브리핑 -->
+    <div class="card p-4 mb-3">
+      <div class="flex items-center gap-2 mb-3">
+        <div class="text-xs" style="color:var(--muted);">카카오톡 브리핑 미리보기</div>
+        <span class="badge badge-yellow">500자</span>
+      </div>
+      <div class="card2 p-4" style="white-space:pre-line;font-size:13px;line-height:1.8;color:var(--text);">${d.kakao_brief}</div>
+    </div>
+  `);
+}
+
+// ── M1 렌더링 ───────────────────────────────────────────────────
+function loadM1(d) {
+
+  const commonBadges = d.common_top3.map(t =>
+    '<span class="badge badge-purple mr-1">' + t + '</span>'
+  ).join('');
+
+  // 주요 변동사항 집계
+  const changes = [];
+  d.investors.forEach(inv => {
+    inv.new_positions.forEach(t => changes.push({type:'신규', bc:'badge-blue', ticker:t, investor:inv.investor}));
+    inv.exited_positions.forEach(t => changes.push({type:'청산', bc:'badge-red', ticker:t, investor:inv.investor}));
+    inv.top10.forEach(s => {
+      if (typeof s.change === 'number' && Math.abs(s.change) >= 2) {
+        changes.push({type: s.change > 0 ? '대폭증가' : '대폭감소', bc: s.change > 0 ? 'badge-green' : 'badge-red',
+          ticker:s.ticker, investor:inv.investor, change:s.change});
+      }
+    });
+  });
+
+  const changeRows = changes.map(c =>
+    '<div class="flex items-center gap-2 py-1.5" style="border-bottom:1px solid var(--border);">'
+    + '<span class="badge ' + c.bc + '">' + c.type + '</span>'
+    + '<span class="ticker-badge text-xs" style="color:#f59e0b;min-width:44px;">' + c.ticker + '</span>'
+    + '<span class="text-xs" style="color:var(--muted);">' + c.investor + '</span>'
+    + (c.change !== undefined ? '<span class="text-xs font-semibold ml-auto" style="' + changeColor(c.change) + '">' + (c.change > 0 ? '+' : '') + c.change + '%</span>' : '')
+    + '</div>'
+  ).join('');
+
+  const changeSection = changes.length > 0
+    ? '<div class="card p-4 mb-3"><div class="text-xs font-semibold mb-3" style="color:#f59e0b;">⚡ 이번 분기 주요 변동사항</div>' + changeRows + '</div>'
+    : '';
+
+  // 투자자별 전체 포트폴리오 (flat — 아코디언 없음)
+  const investorCards = d.investors.map(inv => {
+    const stockRows = inv.top10.map((s, i) => {
+      const rankColor = i < 3 ? '#f59e0b' : 'var(--muted)';
+      const chgStr = typeof s.change === 'number' ? (s.change >= 0 ? '+' : '') + s.change + '%' : s.change;
+      const chgStyle = typeof s.change === 'number' ? changeColor(s.change) : 'color:#3b82f6;font-weight:600;';
+      return '<div class="flex items-center justify-between py-1.5" style="border-bottom:1px solid #1e2340;">'
+        + '<div class="flex items-center gap-2">'
+        + '<span class="text-xs font-bold" style="color:' + rankColor + ';min-width:20px;">#' + (i+1) + '</span>'
+        + '<span class="ticker-badge text-xs" style="color:#f59e0b;min-width:44px;">' + s.ticker + '</span>'
+        + '<span class="text-xs" style="color:var(--muted);">' + s.name + '</span>'
+        + '</div>'
+        + '<div class="flex items-center gap-2">'
+        + '<span class="text-sm font-semibold">' + s.weight_pct + '%</span>'
+        + '<span class="text-xs" style="' + chgStyle + '">' + chgStr + '</span>'
+        + flagBadge(s.flag)
+        + '</div></div>';
+    }).join('');
+
+    return `    <div class="card mb-3">
+      <div class="p-4">
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <div class="font-bold text-sm">${inv.investor}</div>
+            <div class="text-xs" style="color:var(--muted);">${inv.firm} · ${inv.filed_date}</div>
+          </div>
+          <span class="text-xs" style="color:var(--muted);">TOP ${inv.top10.length}</span>
+        </div>
+        ${stockRows}
+      </div>
+    </div>`;
+  }).join('');
+
+  render('m1-content', `
+    <div class="card p-4 mb-3">
+      <div class="text-xs mb-2" style="color:var(--muted);">대가 공통 보유 TOP 3</div>
+      <div>${commonBadges}</div>
+    </div>
+    ${changeSection}
+    ${investorCards}`);
+}
+
+// ── M2 렌더링 ───────────────────────────────────────────────────
+function loadM2(d) {
+
+  const rows = d.sectors.map((s, i) => {
+    const isPos = s.eps_revision_pct_week >= 0;
+    const barW = Math.min(Math.abs(s.eps_revision_pct_week) / 2 * 100, 100);
+    const momColor = s.momentum.includes('↑') ? '#22c55e' : s.momentum.includes('↓') ? '#ef4444' : '#f59e0b';
+    const canvasId = `spark-m2-${i}`;
+    setTimeout(() => drawSparkline(canvasId, s.sparkline, isPos), 100);
+
+    return `
+    <div class="card2 p-3 mb-2">
+      <div class="flex items-center justify-between mb-2">
+        <div>
+          <div class="text-sm font-semibold">${s.sector_kr}</div>
+          <div class="text-xs" style="color:var(--muted);">${s.sector}</div>
+        </div>
+        <canvas id="${canvasId}" class="sparkline-canvas"></canvas>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex-1">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:${barW}%;background:${isPos ? '#22c55e' : '#ef4444'};"></div>
+          </div>
+        </div>
+        <span class="text-sm font-bold" style="${changeColor(s.eps_revision_pct_week)}">${fmt(s.eps_revision_pct_week)}%</span>
+        <span class="text-sm" style="color:${momColor};">${s.momentum}</span>
+        <span class="text-xs" style="color:var(--muted);">상향 ${Math.round(s.upgrade_ratio*100)}%</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  render('m2-content', `
+    <div class="card p-4 mb-3">
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <div><div class="text-lg font-bold" style="color:#22c55e;">3</div><div class="text-xs" style="color:var(--muted);">상승 섹터</div></div>
+        <div><div class="text-lg font-bold" style="color:#f59e0b;">2</div><div class="text-xs" style="color:var(--muted);">횡보 섹터</div></div>
+        <div><div class="text-lg font-bold" style="color:#ef4444;">6</div><div class="text-xs" style="color:var(--muted);">하락 섹터</div></div>
+      </div>
+    </div>
+    ${rows}`);
+  initCollapsibleCards('m2-content');
+}
+
+// ── M3 렌더링 ───────────────────────────────────────────────────
+function loadM3(d) {
+
+  const rows = d.companies.map(c => {
+    const recentGrowth = c.revenue_growth_q[c.revenue_growth_q.length - 1];
+    const canvasId = `spark-m3-${c.rank}`;
+    setTimeout(() => drawSparkline(canvasId, c.revenue_growth_q, true), 100);
+
+    return `
+    <div class="card2 p-3 mb-2">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-xs" style="color:var(--muted);min-width:18px;">#${c.rank}</span>
+          <div>
+            <span class="ticker-badge text-base" style="color:#f59e0b;">${c.ticker}</span>
+            <span class="text-xs ml-1" style="color:var(--muted);">${c.name}</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="text-xs" style="color:var(--muted);">${c.sector} · ${fmtB(c.market_cap_b)}</div>
+          <div class="text-sm font-bold mt-0.5" style="color:#22c55e;">+${recentGrowth}% YoY</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-2">
+        <div class="text-xs" style="color:var(--muted);">매출성장 추이</div>
+        <canvas id="${canvasId}" class="sparkline-canvas"></canvas>
+        <div class="text-xs" style="color:var(--muted);">영업이익률 ${c.op_margin_q[c.op_margin_q.length-1]}%</div>
+      </div>
+      <div class="text-xs p-2 rounded" style="background:#0f1117;color:var(--muted);line-height:1.5;">${c.key_driver}</div>
+      <div class="flex items-center justify-between mt-2">
+        <span class="text-xs" style="color:var(--muted);">다음분기 컨센서스 EPS</span>
+        <span class="text-sm font-bold" style="color:#3b82f6;">$${c.next_q_consensus_eps}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  render('m3-content', `
+    <div class="card p-4 mb-3">
+      <div class="text-xs" style="color:var(--muted);">선별 기준: 매출성장 4분기 연속 가속 + 영업이익 2분기 연속 개선 + EPS 서프라이즈 2회 연속</div>
+    </div>
+    ${rows}`);
+  initCollapsibleCards('m3-content');
+}
+
+// ── M4 렌더링 ───────────────────────────────────────────────────
+function loadM4(d) {
+
+  const rows = d.companies.map(c => `
+    <div class="card2 p-3 mb-2">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-xs" style="color:var(--muted);min-width:18px;">#${c.rank}</span>
+          <div>
+            <span class="ticker-badge text-base" style="color:#a855f7;">${c.ticker}</span>
+            <span class="text-xs ml-1" style="color:var(--muted);">${c.name}</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="badge badge-green">흑자전환 예상</div>
+          <div class="text-xs mt-1" style="color:var(--muted);">${c.turnaround_quarter}</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-2 text-sm">
+        <div>
+          <div class="text-xs" style="color:var(--muted);">최근 2분기 EPS</div>
+          <div style="color:#ef4444;">${c.recent_eps[0]} / ${c.recent_eps[1]}</div>
+        </div>
+        <div style="color:var(--muted);">→</div>
+        <div>
+          <div class="text-xs" style="color:var(--muted);">전환 후 예상 EPS</div>
+          <div style="color:#22c55e;">+$${c.consensus_eps} <span style="color:var(--muted);font-size:11px;">(${c.analyst_count}명 커버)</span></div>
+        </div>
+      </div>
+      <div class="text-xs p-2 rounded mb-2" style="background:#0f1117;color:var(--muted);line-height:1.5;">💡 ${c.catalyst}</div>
+      <div class="text-xs p-2 rounded" style="background:#1a0a0a;color:#fca5a5;line-height:1.5;">⚠️ ${c.risk}</div>
+    </div>`).join('');
+
+  render('m4-content', `
+    <div class="card p-4 mb-3">
+      <div class="text-xs" style="color:var(--muted);">선별 기준: 최근 2분기 적자 + 다음 분기 컨센서스 EPS > 0 + 애널리스트 3인 이상 커버</div>
+    </div>
+    ${rows}`);
+  initCollapsibleCards('m4-content');
+}
+
+// ── M5 렌더링 ───────────────────────────────────────────────────
+function loadM5(d) {
+
+  const buyRows = d.buy.map(t => {
+    const sigClass = t.signal_type === 'strong_bullish' ? 'signal-strong' : t.signal_type === 'bullish' ? 'signal-bull' : 'signal-neutral';
+    return `
+    <div class="card2 p-3 mb-2 ${sigClass}">
+      <div class="flex items-start justify-between mb-1">
+        <div class="flex items-center gap-2">
+          <span class="ticker-badge text-base" style="color:#22c55e;">${t.ticker}</span>
+          <span class="badge badge-green">매수</span>
+        </div>
+        <span class="text-sm font-bold" style="color:#22c55e;">${fmtM(t.amount_usd)}</span>
+      </div>
+      <div class="text-xs mb-1" style="color:var(--muted);">${t.insider_name} · ${t.title}</div>
+      <div class="text-xs p-1.5 rounded" style="background:#0f1117;color:${t.signal_type==='strong_bullish'?'#86efac':'var(--muted)'};">⚡ ${t.signal}</div>
+    </div>`;
+  }).join('');
+
+  const sellRows = d.sell.map(t => {
+    const sigClass = t.signal_type === 'bearish' ? 'signal-bear' : 'signal-neutral';
+    return `
+    <div class="card2 p-3 mb-2 ${sigClass}">
+      <div class="flex items-start justify-between mb-1">
+        <div class="flex items-center gap-2">
+          <span class="ticker-badge text-base" style="color:#ef4444;">${t.ticker}</span>
+          <span class="badge badge-red">매도</span>
+        </div>
+        <span class="text-sm font-bold" style="color:#ef4444;">${fmtM(t.amount_usd)}</span>
+      </div>
+      <div class="text-xs mb-1" style="color:var(--muted);">${t.insider_name} · ${t.title} · 보유 ${t.shares_sold_pct}% 매도</div>
+      <div class="text-xs p-1.5 rounded" style="background:#0f1117;color:${t.signal_type==='bearish'?'#fca5a5':'var(--muted)'};">📌 ${t.signal}</div>
+    </div>`;
+  }).join('');
+
+  render('m5-content', `
+    <div class="card p-3 mb-3">
+      <div class="text-xs" style="color:var(--muted);">기간: ${d.period}</div>
+      <div class="flex gap-2 mt-2 text-xs">
+        <div class="flex items-center gap-1"><div style="width:10px;height:10px;background:#22c55e;border-radius:2px;"></div>강한 매수 신호</div>
+        <div class="flex items-center gap-1"><div style="width:10px;height:10px;background:#86efac;border-radius:2px;"></div>매수 신호</div>
+        <div class="flex items-center gap-1"><div style="width:10px;height:10px;background:#ef4444;border-radius:2px;"></div>주의 신호</div>
+      </div>
+    </div>
+    <div class="text-xs font-semibold mb-2 px-1" style="color:#22c55e;">내부자 매수 (${d.buy.length}건)</div>
+    ${buyRows}
+    <div class="text-xs font-semibold mb-2 mt-4 px-1" style="color:#ef4444;">내부자 매도 (${d.sell.length}건)</div>
+    ${sellRows}`);
+  initCollapsibleCards('m5-content');
+}
+
+// ── M6 렌더링 ───────────────────────────────────────────────────
+function loadM6(d) {
+
+  const overallColor = d.overall.bull_market_signal === '지속' ? '#22c55e' : d.overall.bull_market_signal === '주의' ? '#f59e0b' : '#ef4444';
+
+  const semiRows = d.semiconductor.map((s, i) => {
+    const last = s.eps_growth_q[s.eps_growth_q.length-1];
+    const trendColor = s.trend.includes('지속') ? '#22c55e' : s.trend.includes('둔화') ? '#f59e0b' : '#ef4444';
+    const canvasId = 'spark-m6-semi-' + i;
+    setTimeout(() => drawSparkline(canvasId, s.eps_growth_q, true), 100);
+    return '<div class="flex items-center justify-between py-2" style="border-bottom:1px solid var(--border);">'
+      + '<span class="ticker-badge text-sm" style="color:#f59e0b;min-width:44px;">' + s.ticker + '</span>'
+      + '<canvas id="' + canvasId + '" class="sparkline-canvas"></canvas>'
+      + '<span class="text-sm font-bold" style="color:#22c55e;">+' + last + '%</span>'
+      + '<span class="badge" style="background:#1e293b;color:' + trendColor + ';">' + s.trend + '</span>'
+      + '</div>';
+  }).join('');
+
+  const capexRows = d.capex.map(c => {
+    const last = c.capex_q_b[c.capex_q_b.length-1];
+    const canvasId = 'spark-m6-capex-' + c.ticker;
+    setTimeout(() => drawSparkline(canvasId, c.capex_q_b, true), 100);
+    const guidColor = c.guidance === '증가' ? '#22c55e' : c.guidance === '축소' ? '#ef4444' : '#f59e0b';
+    return '<div class="flex items-center justify-between py-2" style="border-bottom:1px solid var(--border);">'
+      + '<span class="ticker-badge text-sm" style="color:#f59e0b;min-width:44px;">' + c.ticker + '</span>'
+      + '<canvas id="' + canvasId + '" class="sparkline-canvas"></canvas>'
+      + '<span class="text-sm font-bold">$' + last + 'B</span>'
+      + '<span class="text-xs" style="color:#22c55e;">+' + c.yoy_growth_pct + '%</span>'
+      + '<span class="badge" style="background:#1e293b;color:' + guidColor + ';">' + c.guidance + '</span>'
+      + '</div>';
+  }).join('');
+
+  const pegRows = (d.peg_ratios || []).map(p => {
+    const danger = p.peg >= 1.5;
+    const pegColor = p.peg >= 1.5 ? '#ef4444' : p.peg >= 1.0 ? '#f59e0b' : '#22c55e';
+    return '<div class="flex items-center justify-between py-1.5" style="border-bottom:1px solid var(--border);">'
+      + '<div class="flex items-center gap-2">'
+      + '<span class="ticker-badge text-xs" style="color:#f59e0b;min-width:44px;">' + p.ticker + '</span>'
+      + '<span class="text-xs" style="color:var(--muted);">' + p.name + '</span>'
+      + '</div>'
+      + '<div class="flex items-center gap-2">'
+      + (danger ? '<span class="badge badge-red" style="font-size:10px;">⚠️위험</span>' : '')
+      + '<span class="text-sm font-bold" style="color:' + pegColor + ';">' + p.peg.toFixed(1) + '</span>'
+      + '<span class="text-xs" style="color:var(--muted);">PE ' + p.pe + '</span>'
+      + '</div></div>';
+  }).join('');
+
+  render('m6-content', `
+    <div class="card p-4 mb-3">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-sm font-bold">강세장 신호</div>
+        <span class="text-lg font-bold" style="color:${overallColor};">${d.overall.bull_market_signal}</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div class="card2 p-3 text-center">
+          <div class="text-xs mb-1" style="color:var(--muted);">반도체 이익성장</div>
+          <div class="font-bold text-sm" style="color:#f59e0b;">${d.overall.semiconductor_growth_trend}</div>
+        </div>
+        <div class="card2 p-3 text-center">
+          <div class="text-xs mb-1" style="color:var(--muted);">빅테크 CapEx</div>
+          <div class="font-bold text-sm" style="color:#22c55e;">${d.overall.capex_trend}</div>
+        </div>
+      </div>
+      <div class="text-xs p-3 rounded" style="background:#0f1117;color:var(--muted);line-height:1.6;">${d.overall.summary}</div>
+    </div>
+
+    <div class="card p-4 mb-3">
+      <div class="text-sm font-semibold mb-3">반도체 EPS 성장률 추이 (분기별)</div>
+      ${semiRows}
+    </div>
+
+    <div class="card p-4 mb-3">
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-sm font-semibold">빅테크 분기별 CapEx</div>
+        <span class="text-xs" style="color:var(--muted);">AI 비중 포함</span>
+      </div>
+      ${capexRows}
+    </div>
+
+    <div class="card p-4 mb-3">
+      <div class="flex items-center gap-2 mb-1">
+        <div class="text-sm font-semibold">PEG Ratio 과열 모니터</div>
+        <span class="badge badge-red" style="font-size:10px;">1.5↑ 위험</span>
+      </div>
+      <div class="text-xs mb-3" style="color:var(--muted);">PEG = PER ÷ EPS성장률. 1.5 이상은 성장 대비 고평가 신호</div>
+      ${pegRows}
+    </div>`);
+  initCollapsibleCards('m6-content');
+}
+
+const INJECTED = {"summary": {"date": "2026-05-11", "stance": "선별적 매수", "stance_level": 2, "top_sectors": [{"rank": 1, "name": "IT·기술", "reason": "EPS 상향 1.8%, AI 인프라 수요 지속"}, {"rank": 2, "name": "커뮤니케이션", "reason": "광고 수익성 개선, 메타·알파벳 실적 서프라이즈"}, {"rank": 3, "name": "금융", "reason": "금리 고점 인식으로 NIM 안정, 신용손실 예상 하회"}], "screened_stocks": [{"ticker": "NVDA", "reason": "M3 1위 + M1 대가 다수 보유 + M5 CEO 매수"}, {"ticker": "PLTR", "reason": "M3 5위(실적가속) + M5 임원 2인 동시 매수"}, {"ticker": "AXON", "reason": "M3 10위 + M5 CEO 매수 + M1 드러켄밀러 편입"}, {"ticker": "AVGO", "reason": "M3 3위 + M6 반도체 성장 지속 + 대가 보유"}, {"ticker": "APP", "reason": "M3 6위(EPS 가속) + M1 드러켄밀러 신규편입"}], "weekly_message": {"market_env": "AI 인프라 투자 사이클 중반부, 반도체 성장 둔화 초입 진입", "key_change": "NVDA CEO 젠슨황 820만달러 자사주 매수 — 실적 자신감 시그널", "next_event": "5/13 CPI 발표, 5/14 NVDA·CSCO 실적 발표"}, "kakao_brief": "📊 [2026-05-11] 투자 브리핑
+
+🎯 스탠스: 선별적 매수
+
+📈 주목 섹터: IT·기술 / 커뮤니케이션 / 금융
+
+✅ 이번 주 픽
+· NVDA — CEO 820만달러 자사주 매수 + AI 수요 가속
+· PLTR — 임원 2인 동시 매수 + AIP 계약 2배 성장
+· AXON — 보디캠·드론 AI 플랫폼 수요 급증
+
+⚠️ 주의 신호
+· 반도체 EPS 성장률 YoY 둔화 초입 (NVDA·AMD)
+· TSLA CEO 대규모 매도 지속 (경계)
+
+📌 다음 주 이벤트
+· 5/13 CPI 발표 / 5/14 NVDA 실적"}, "m1": {"investors": [{"investor": "Warren Buffett", "firm": "Berkshire Hathaway", "filed_date": "2025-02-14", "top10": [{"ticker": "AAPL", "name": "Apple", "weight_pct": 28.4, "change": -2.1, "flag": "감소"}, {"ticker": "BAC", "name": "Bank of America", "weight_pct": 11.2, "change": 0.0, "flag": "유지"}, {"ticker": "AXP", "name": "American Express", "weight_pct": 8.9, "change": 0.3, "flag": "증가"}, {"ticker": "KO", "name": "Coca-Cola", "weight_pct": 8.3, "change": 0.0, "flag": "유지"}, {"ticker": "CVX", "name": "Chevron", "weight_pct": 6.1, "change": -0.8, "flag": "감소"}, {"ticker": "OXY", "name": "Occidental Petroleum", "weight_pct": 5.4, "change": 0.2, "flag": "증가"}, {"ticker": "MCO", "name": "Moody's", "weight_pct": 4.8, "change": 0.0, "flag": "유지"}, {"ticker": "KHC", "name": "Kraft Heinz", "weight_pct": 4.1, "change": 0.0, "flag": "유지"}, {"ticker": "DVA", "name": "DaVita", "weight_pct": 2.9, "change": 0.4, "flag": "증가"}, {"ticker": "VRSN", "name": "VeriSign", "weight_pct": 2.1, "change": 0.0, "flag": "유지"}], "new_positions": [], "exited_positions": ["HP Inc", "Paramount Global"]}, {"investor": "Bill Ackman", "firm": "Pershing Square", "filed_date": "2025-02-14", "top10": [{"ticker": "HHH", "name": "Howard Hughes", "weight_pct": 22.1, "change": 1.2, "flag": "증가"}, {"ticker": "QSR", "name": "Restaurant Brands", "weight_pct": 18.7, "change": 0.0, "flag": "유지"}, {"ticker": "GOOGL", "name": "Alphabet", "weight_pct": 15.3, "change": 3.1, "flag": "증가"}, {"ticker": "CMG", "name": "Chipotle", "weight_pct": 14.2, "change": -1.0, "flag": "감소"}, {"ticker": "CP", "name": "Canadian Pacific", "weight_pct": 11.8, "change": 0.0, "flag": "유지"}, {"ticker": "HLT", "name": "Hilton", "weight_pct": 9.4, "change": 0.5, "flag": "증가"}, {"ticker": "BN", "name": "Brookfield", "weight_pct": 5.2, "change": 0.0, "flag": "유지"}, {"ticker": "UNI", "name": "Universal Music", "weight_pct": 3.3, "change": "NEW", "flag": "신규"}], "new_positions": ["UNI"], "exited_positions": []}, {"investor": "Cathie Wood", "firm": "ARK Invest", "filed_date": "2025-02-14", "top10": [{"ticker": "TSLA", "name": "Tesla", "weight_pct": 14.2, "change": 1.8, "flag": "증가"}, {"ticker": "COIN", "name": "Coinbase", "weight_pct": 9.1, "change": 2.3, "flag": "증가"}, {"ticker": "ROKU", "name": "Roku", "weight_pct": 7.8, "change": -0.5, "flag": "감소"}, {"ticker": "PLTR", "name": "Palantir", "weight_pct": 6.9, "change": 1.1, "flag": "증가"}, {"ticker": "EXAS", "name": "Exact Sciences", "weight_pct": 5.4, "change": 0.0, "flag": "유지"}, {"ticker": "PATH", "name": "UiPath", "weight_pct": 4.8, "change": -0.3, "flag": "감소"}, {"ticker": "CRSP", "name": "CRISPR Therapeutics", "weight_pct": 4.1, "change": 0.0, "flag": "유지"}, {"ticker": "HOOD", "name": "Robinhood", "weight_pct": 3.9, "change": "NEW", "flag": "신규"}, {"ticker": "SQ", "name": "Block", "weight_pct": 3.6, "change": -0.2, "flag": "감소"}, {"ticker": "NVDA", "name": "Nvidia", "weight_pct": 3.2, "change": 0.7, "flag": "증가"}], "new_positions": ["HOOD"], "exited_positions": ["ZM"]}, {"investor": "Stan Druckenmiller", "firm": "Duquesne", "filed_date": "2025-02-14", "top10": [{"ticker": "NVDA", "name": "Nvidia", "weight_pct": 18.9, "change": 4.2, "flag": "증가"}, {"ticker": "MSFT", "name": "Microsoft", "weight_pct": 12.3, "change": -1.5, "flag": "감소"}, {"ticker": "META", "name": "Meta", "weight_pct": 10.8, "change": 2.1, "flag": "증가"}, {"ticker": "AMZN", "name": "Amazon", "weight_pct": 9.4, "change": 0.8, "flag": "증가"}, {"ticker": "GE", "name": "GE Aerospace", "weight_pct": 7.2, "change": "NEW", "flag": "신규"}, {"ticker": "NVO", "name": "Novo Nordisk", "weight_pct": 6.1, "change": -2.0, "flag": "감소"}, {"ticker": "PANW", "name": "Palo Alto Networks", "weight_pct": 5.3, "change": 0.4, "flag": "증가"}, {"ticker": "APP", "name": "Applovin", "weight_pct": 4.8, "change": "NEW", "flag": "신규"}, {"ticker": "CRWD", "name": "CrowdStrike", "weight_pct": 3.9, "change": 0.0, "flag": "유지"}, {"ticker": "AXON", "name": "Axon Enterprise", "weight_pct": 3.1, "change": 0.6, "flag": "증가"}], "new_positions": ["GE", "APP"], "exited_positions": ["LLY"]}, {"investor": "Chase Coleman", "firm": "Tiger Global", "filed_date": "2025-02-14", "top10": [{"ticker": "MSFT", "name": "Microsoft", "weight_pct": 16.4, "change": 1.0, "flag": "증가"}, {"ticker": "NVDA", "name": "Nvidia", "weight_pct": 13.7, "change": 3.5, "flag": "증가"}, {"ticker": "META", "name": "Meta", "weight_pct": 11.2, "change": 2.8, "flag": "증가"}, {"ticker": "AMZN", "name": "Amazon", "weight_pct": 10.1, "change": 0.0, "flag": "유지"}, {"ticker": "GOOGL", "name": "Alphabet", "weight_pct": 8.9, "change": 1.3, "flag": "증가"}, {"ticker": "ADBE", "name": "Adobe", "weight_pct": 5.6, "change": -0.7, "flag": "감소"}, {"ticker": "CRM", "name": "Salesforce", "weight_pct": 4.8, "change": 0.0, "flag": "유지"}, {"ticker": "NOW", "name": "ServiceNow", "weight_pct": 4.2, "change": 0.9, "flag": "증가"}, {"ticker": "SNOW", "name": "Snowflake", "weight_pct": 3.5, "change": -1.2, "flag": "감소"}, {"ticker": "DDOG", "name": "Datadog", "weight_pct": 2.9, "change": "NEW", "flag": "신규"}], "new_positions": ["DDOG"], "exited_positions": ["SHOP"]}], "common_top3": ["NVDA", "MSFT", "META"]}, "m2": {"sectors": [{"sector": "Information Technology", "sector_kr": "IT·기술", "eps_revision_pct_week": 1.8, "upgrade_ratio": 0.72, "momentum": "↑상승중", "sparkline": [0.2, 0.4, 0.5, 0.8, 1.8]}, {"sector": "Communication Services", "sector_kr": "커뮤니케이션", "eps_revision_pct_week": 1.4, "upgrade_ratio": 0.68, "momentum": "↑상승중", "sparkline": [0.3, 0.5, 0.7, 1.0, 1.4]}, {"sector": "Financials", "sector_kr": "금융", "eps_revision_pct_week": 1.1, "upgrade_ratio": 0.61, "momentum": "↑상승중", "sparkline": [0.4, 0.6, 0.7, 0.9, 1.1]}, {"sector": "Energy", "sector_kr": "에너지", "eps_revision_pct_week": 0.7, "upgrade_ratio": 0.55, "momentum": "→횡보", "sparkline": [0.9, 0.6, 0.5, 0.7, 0.7]}, {"sector": "Industrials", "sector_kr": "산업재", "eps_revision_pct_week": 0.5, "upgrade_ratio": 0.53, "momentum": "→횡보", "sparkline": [0.3, 0.4, 0.5, 0.5, 0.5]}, {"sector": "Health Care", "sector_kr": "헬스케어", "eps_revision_pct_week": 0.3, "upgrade_ratio": 0.5, "momentum": "→횡보", "sparkline": [0.2, 0.3, 0.4, 0.3, 0.3]}, {"sector": "Consumer Discretionary", "sector_kr": "경기소비재", "eps_revision_pct_week": 0.1, "upgrade_ratio": 0.48, "momentum": "↓하락중", "sparkline": [0.5, 0.4, 0.3, 0.2, 0.1]}, {"sector": "Real Estate", "sector_kr": "부동산", "eps_revision_pct_week": -0.2, "upgrade_ratio": 0.42, "momentum": "↓하락중", "sparkline": [0.1, 0.0, -0.1, -0.2, -0.2]}, {"sector": "Materials", "sector_kr": "소재", "eps_revision_pct_week": -0.4, "upgrade_ratio": 0.38, "momentum": "↓하락중", "sparkline": [0.0, -0.1, -0.2, -0.3, -0.4]}, {"sector": "Consumer Staples", "sector_kr": "필수소비재", "eps_revision_pct_week": -0.6, "upgrade_ratio": 0.35, "momentum": "↓하락중", "sparkline": [-0.1, -0.2, -0.3, -0.5, -0.6]}, {"sector": "Utilities", "sector_kr": "유틸리티", "eps_revision_pct_week": -0.9, "upgrade_ratio": 0.3, "momentum": "↓하락중", "sparkline": [-0.2, -0.4, -0.6, -0.8, -0.9]}]}, "m3": {"companies": [{"rank": 1, "ticker": "NVDA", "name": "Nvidia", "sector": "IT", "market_cap_b": 2800, "revenue_growth_q": [42, 55, 68, 78], "op_margin_q": [22, 25, 28, 32], "eps_surprise_q": [8.2, 12.4], "key_driver": "AI 데이터센터 수요 급증, H100·B200 공급 확대 및 Blackwell 아키텍처 전환 가속", "next_q_consensus_eps": 0.89}, {"rank": 2, "ticker": "META", "name": "Meta Platforms", "sector": "커뮤니케이션", "market_cap_b": 1450, "revenue_growth_q": [23, 27, 32, 41], "op_margin_q": [28, 31, 34, 38], "eps_surprise_q": [5.1, 8.7], "key_driver": "광고 AI 최적화로 광고단가 23% 상승, 릴스 DAU 10억 돌파", "next_q_consensus_eps": 5.24}, {"rank": 3, "ticker": "AVGO", "name": "Broadcom", "sector": "IT", "market_cap_b": 890, "revenue_growth_q": [31, 38, 47, 58], "op_margin_q": [33, 35, 37, 40], "eps_surprise_q": [4.3, 6.8], "key_driver": "구글·애플 등 하이퍼스케일러 맞춤 AI칩(XPU) 수주 급증, VMware 통합 시너지", "next_q_consensus_eps": 1.48}, {"rank": 4, "ticker": "ORCL", "name": "Oracle", "sector": "IT", "market_cap_b": 420, "revenue_growth_q": [18, 22, 26, 31], "op_margin_q": [30, 32, 34, 37], "eps_surprise_q": [3.1, 5.2], "key_driver": "OCI(오라클 클라우드) AI 인프라 계약 잔고 990억달러 돌파", "next_q_consensus_eps": 1.62}, {"rank": 5, "ticker": "PLTR", "name": "Palantir", "sector": "IT", "market_cap_b": 180, "revenue_growth_q": [20, 25, 30, 39], "op_margin_q": [8, 12, 16, 21], "eps_surprise_q": [28.5, 41.2], "key_driver": "US 상업 부문 AI 플랫폼 수요 가속, AIP 계약 건수 분기 대비 2배 증가", "next_q_consensus_eps": 0.12}, {"rank": 6, "ticker": "APP", "name": "Applovin", "sector": "커뮤니케이션", "market_cap_b": 145, "revenue_growth_q": [28, 35, 44, 54], "op_margin_q": [18, 22, 28, 35], "eps_surprise_q": [18.3, 31.4], "key_driver": "AI 기반 모바일 광고 최적화 엔진 AXON 2.0 도입으로 ROAS 급상승", "next_q_consensus_eps": 1.38}, {"rank": 7, "ticker": "ANET", "name": "Arista Networks", "sector": "IT", "market_cap_b": 135, "revenue_growth_q": [21, 26, 31, 37], "op_margin_q": [35, 36, 37, 39], "eps_surprise_q": [6.2, 9.1], "key_driver": "AI 데이터센터 네트워킹 수요 급증, 400G·800G 이더넷 스위치 점유율 확대", "next_q_consensus_eps": 2.18}, {"rank": 8, "ticker": "PANW", "name": "Palo Alto Networks", "sector": "IT", "market_cap_b": 128, "revenue_growth_q": [19, 22, 25, 28], "op_margin_q": [15, 17, 19, 22], "eps_surprise_q": [4.1, 7.2], "key_driver": "플랫폼화 전략 성공, ARR 40억달러 돌파 및 차세대 보안 번들 채택 가속", "next_q_consensus_eps": 0.78}, {"rank": 9, "ticker": "CRWD", "name": "CrowdStrike", "sector": "IT", "market_cap_b": 92, "revenue_growth_q": [33, 36, 39, 42], "op_margin_q": [14, 16, 19, 22], "eps_surprise_q": [5.8, 8.3], "key_driver": "Falcon 플랫폼 확장 지속, 모듈당 ARR 상승 및 NET NEW ARR 가이던스 상향", "next_q_consensus_eps": 0.93}, {"rank": 10, "ticker": "AXON", "name": "Axon Enterprise", "sector": "산업재", "market_cap_b": 48, "revenue_growth_q": [24, 28, 33, 38], "op_margin_q": [10, 13, 16, 19], "eps_surprise_q": [12.4, 18.6], "key_driver": "AI 기반 경찰 보디캠·드론 플랫폼 수요 급증, Draft One AI 검사보고서 구독 확대", "next_q_consensus_eps": 1.14}]}, "m4": {"companies": [{"rank": 1, "ticker": "RIVN", "name": "Rivian", "market_cap_b": 14, "turnaround_quarter": "2025Q3", "consensus_eps": 0.12, "analyst_count": 18, "catalyst": "생산 효율화로 단위당 손실 $2.1 → $0.3 개선, R2 플랫폼 출시 기대", "risk": "원자재 가격 재상승 시 전환 지연 가능", "recent_eps": [-1.08, -0.95]}, {"rank": 2, "ticker": "SMCI", "name": "Super Micro", "market_cap_b": 28, "turnaround_quarter": "2025Q2", "consensus_eps": 0.48, "analyst_count": 12, "catalyst": "회계 감사 완료 후 나스닥 상장폐지 위기 해소, AI 서버 수주 재개", "risk": "감사 재지연 시 투자심리 급랭", "recent_eps": [-0.32, -0.14]}, {"rank": 3, "ticker": "BIRD", "name": "Allbirds", "market_cap_b": 0.3, "turnaround_quarter": "2025Q4", "consensus_eps": 0.04, "analyst_count": 5, "catalyst": "SKU 축소·고마진 제품 집중으로 매출총이익률 8%p 개선", "risk": "소비 침체 지속 시 매출 회복 지연", "recent_eps": [-0.18, -0.11]}, {"rank": 4, "ticker": "XPEV", "name": "XPeng", "market_cap_b": 12, "turnaround_quarter": "2025Q3", "consensus_eps": 0.08, "analyst_count": 14, "catalyst": "MONA M03 흥행으로 분기 인도량 3만대 돌파, 원가율 개선 지속", "risk": "중국 보조금 정책 변경 및 BYD 가격경쟁 심화", "recent_eps": [-0.41, -0.28]}, {"rank": 5, "ticker": "LCID", "name": "Lucid Motors", "market_cap_b": 7, "turnaround_quarter": "2026Q1", "consensus_eps": 0.06, "analyst_count": 8, "catalyst": "사우디 아람코 투자유치 및 Gravity SUV 출시, 생산능력 2만대 확충", "risk": "자금소진 속도 빨라 추가 자본조달 필요", "recent_eps": [-0.29, -0.22]}, {"rank": 6, "ticker": "JOBY", "name": "Joby Aviation", "market_cap_b": 6, "turnaround_quarter": "2026Q2", "consensus_eps": 0.09, "analyst_count": 7, "catalyst": "FAA 형식증명 승인 임박, UAE 에미레이트항공과 파일럿 서비스 계약 체결", "risk": "규제 승인 지연 시 상업화 일정 1년 이상 후퇴 가능", "recent_eps": [-0.14, -0.12]}, {"rank": 7, "ticker": "IONQ", "name": "IonQ", "market_cap_b": 5, "turnaround_quarter": "2026Q1", "consensus_eps": 0.11, "analyst_count": 9, "catalyst": "양자컴퓨터 상업 계약 확대, 포르투갈 데이터센터 구축 완료", "risk": "양자우위 달성 시기 불확실, 경쟁사 IBM·Google 대비 상용화 격차", "recent_eps": [-0.18, -0.15]}]}, "m5": {"period": "2025-05-05 ~ 2025-05-09", "buy": [{"ticker": "NVDA", "insider_name": "Jensen Huang", "title": "CEO", "transaction": "매수", "amount_usd": 8200000, "shares": 68000, "signal": "강한 매수 신호", "signal_type": "bullish"}, {"ticker": "MSFT", "insider_name": "Satya Nadella", "title": "CEO", "transaction": "매수", "amount_usd": 3100000, "shares": 8200, "signal": "경영진 자신감 표출", "signal_type": "bullish"}, {"ticker": "PLTR", "insider_name": "Alex Karp", "title": "CEO", "transaction": "매수", "amount_usd": 2400000, "shares": 92000, "signal": "내부자 2인 동시 매수 → 강한 신호", "signal_type": "strong_bullish"}, {"ticker": "PLTR", "insider_name": "Peter Thiel", "title": "이사", "transaction": "매수", "amount_usd": 1800000, "shares": 69000, "signal": "내부자 2인 동시 매수 → 강한 신호", "signal_type": "strong_bullish"}, {"ticker": "AXON", "insider_name": "Rick Smith", "title": "CEO", "transaction": "매수", "amount_usd": 1200000, "shares": 4100, "signal": "신고가 구간 임원 매수", "signal_type": "bullish"}], "sell": [{"ticker": "META", "insider_name": "Mark Zuckerberg", "title": "CEO", "transaction": "매도", "amount_usd": 4500000, "shares_sold_pct": 0.8, "signal": "정기 매도 플랜(10b5-1), 경영 판단 아님", "signal_type": "neutral"}, {"ticker": "AMZN", "insider_name": "Jeff Bezos", "title": "이사", "transaction": "매도", "amount_usd": 3200000, "shares_sold_pct": 0.3, "signal": "사전 설정 매도 플랜", "signal_type": "neutral"}, {"ticker": "TSLA", "insider_name": "Elon Musk", "title": "CEO", "transaction": "매도", "amount_usd": 7800000, "shares_sold_pct": 1.2, "signal": "주의: 지분 10% 이상 매도 접근", "signal_type": "bearish"}]}, "m6": {"semiconductor": [{"ticker": "NVDA", "eps_growth_q": [206, 265, 122, 78], "trend": "둔화 초입"}, {"ticker": "AMD", "eps_growth_q": [48, 62, 71, 58], "trend": "둔화 초입"}, {"ticker": "AVGO", "eps_growth_q": [29, 38, 54, 61], "trend": "지속 성장"}, {"ticker": "ASML", "eps_growth_q": [41, 35, 28, 22], "trend": "둔화 중"}, {"ticker": "TSM", "eps_growth_q": [33, 45, 54, 61], "trend": "지속 성장"}], "capex": [{"ticker": "META", "capex_q_b": [8.5, 9.2, 10.8, 13.7], "yoy_growth_pct": 61, "guidance": "증가", "ai_ratio_pct": 72}, {"ticker": "GOOGL", "capex_q_b": [12.0, 12.8, 13.1, 17.2], "yoy_growth_pct": 43, "guidance": "증가", "ai_ratio_pct": 68}, {"ticker": "MSFT", "capex_q_b": [14.1, 14.4, 14.9, 16.8], "yoy_growth_pct": 19, "guidance": "유지", "ai_ratio_pct": 65}, {"ticker": "AMZN", "capex_q_b": [22.0, 23.8, 25.1, 28.4], "yoy_growth_pct": 29, "guidance": "증가", "ai_ratio_pct": 58}, {"ticker": "AAPL", "capex_q_b": [2.8, 2.9, 3.0, 3.1], "yoy_growth_pct": 11, "guidance": "유지", "ai_ratio_pct": 40}], "overall": {"semiconductor_growth_trend": "둔화 초입", "capex_trend": "확대", "bull_market_signal": "주의", "summary": "NVDA·AMD EPS 성장률 고점 통과 조짐이나 절대 성장률은 양호. 빅테크 CapEx는 META·GOOGL 주도로 여전히 확대 중. 단기 조정 리스크 존재하나 사이클 전환 신호는 아직 미확인."}, "peg_ratios": [{"ticker": "TSLA", "name": "Tesla", "peg": 5.9, "pe": 394.6, "growth_rate": 66.9}, {"ticker": "AAPL", "name": "Apple", "peg": 2.6, "pe": 35.4, "growth_rate": 13.8}, {"ticker": "PLTR", "name": "Palantir", "peg": 2.0, "pe": 150.1, "growth_rate": 73.3}, {"ticker": "AMZN", "name": "Amazon", "peg": 1.9, "pe": 32.5, "growth_rate": 17.1}, {"ticker": "GOOGL", "name": "Alphabet", "peg": 1.6, "pe": 30.1, "growth_rate": 19.0}, {"ticker": "MSFT", "name": "Microsoft", "peg": 1.3, "pe": 24.4, "growth_rate": 19.0}, {"ticker": "APP", "name": "Applovin", "peg": 1.3, "pe": 39.5, "growth_rate": 30.3}, {"ticker": "META", "name": "Meta", "peg": 0.9, "pe": 21.9, "growth_rate": 24.6}, {"ticker": "AVGO", "name": "Broadcom", "peg": 0.9, "pe": 84.1, "growth_rate": 90.0}, {"ticker": "NVDA", "name": "Nvidia", "peg": 0.7, "pe": 45.2, "growth_rate": 66.1}]}};
+
+// ── 초기 로딩 ───────────────────────────────────────────────────
+function init() {
+  loadSummary(INJECTED.summary);
+  loadM1(INJECTED.m1);
+  loadM2(INJECTED.m2);
+  loadM3(INJECTED.m3);
+  loadM4(INJECTED.m4);
+  loadM5(INJECTED.m5);
+  loadM6(INJECTED.m6);
+}
+
+init();
+</script>
+</body>
+</html>
