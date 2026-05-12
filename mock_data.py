@@ -180,7 +180,8 @@ M6_DATA = {
         "summary": "NVDA·AMD EPS 성장률 고점 통과 조짐이나 절대 성장률은 양호. 빅테크 CapEx는 META·GOOGL 주도로 여전히 확대 중. 단기 조정 리스크 존재하나 사이클 전환 신호는 아직 미확인.",
     },
     "index_peg": [
-        {"name": "나스닥 100 (QQQ)", "ticker": "QQQ",  "peg": 2.3, "pe": 28.4, "growth_rate": 12.3},
+        {"name": "S&P 500 (SPY)",     "ticker": "SPY",  "peg": 2.0, "pe": 22.1, "growth_rate": 11.1},
+        {"name": "나스닥 100 (QQQ)",   "ticker": "QQQ",  "peg": 2.3, "pe": 28.4, "growth_rate": 12.3},
         {"name": "반도체 섹터 (SOXX)", "ticker": "SOXX", "peg": 1.7, "pe": 25.6, "growth_rate": 15.1},
     ],
     "peg_ratios": [
