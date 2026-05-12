@@ -13,19 +13,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
 
 from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA, NEWS_DATA
+from data_fetcher import PEG_TICKERS
 
-# ── PEG 실시간 업데이트 ─────────────────────────────────────────
-PEG_TICKERS = [
-    ("PLTR","Palantir"), ("TSLA","Tesla"),   ("NVDA","Nvidia"),
-    ("AAPL","Apple"),    ("MSFT","Microsoft"),("APP","Applovin"),
-    ("META","Meta"),     ("AVGO","Broadcom"), ("AMZN","Amazon"), ("GOOGL","Alphabet"),
-]
-INDEX_TICKERS = [
-    ("SPY",  "S&P 500 (SPY)"),
-    ("QQQ",  "나스닥 100 (QQQ)"),
-    ("SOXX", "반도체 섹터 (SOXX)"),
-]
-
+# ── PEG 실시간 업데이트 (티커 정의는 data_fetcher.PEG_TICKERS 단일 소스) ────
 def fetch_peg():
     try:
         import yfinance as yf
@@ -49,30 +39,6 @@ def fetch_peg():
     except ImportError:
         return None
 
-def fetch_index_peg():
-    try:
-        import yfinance as yf
-        result = []
-        for ticker, name in INDEX_TICKERS:
-            try:
-                info = yf.Ticker(ticker).info
-                peg = info.get("trailingPegRatio") or info.get("pegRatio")
-                pe  = info.get("trailingPE") or info.get("forwardPE")
-                if pe:
-                    entry = {"ticker": ticker, "name": name, "pe": round(float(pe), 1)}
-                    if peg:
-                        entry["peg"] = round(float(peg), 1)
-                        entry["growth_rate"] = round(float(pe) / float(peg), 1)
-                    else:
-                        entry["peg"] = None
-                        entry["growth_rate"] = None
-                    result.append(entry)
-            except Exception:
-                pass
-        return result or None
-    except ImportError:
-        return None
-
 # ── 데이터 조합 ─────────────────────────────────────────────────
 def build_data():
     peg = fetch_peg()
@@ -81,10 +47,8 @@ def build_data():
         print(f"PEG 실시간 데이터 {len(peg)}개 반영")
     else:
         print("yfinance 없음 — mock PEG 사용")
-    idx_peg = fetch_index_peg()
-    if idx_peg:
-        M6_DATA["index_peg"] = idx_peg
-        print(f"지수 PEG 실시간 데이터 {len(idx_peg)}개 반영")
+    # 지수 PEG (SPY/QQQ/SOXX) 는 제거됨 — 개별 종목 30개로 통일
+    M6_DATA.pop("index_peg", None)
 
     return {
         "summary": SUMMARY_DATA,
