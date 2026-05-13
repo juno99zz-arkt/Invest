@@ -1,7 +1,8 @@
 """
 매일 17:00 KST 실행되는 데이터 업데이트 모듈.
-- PEG_TICKERS : M6 PEG 과열 모니터 (30종목)
-- TOP50_TICKERS : M7 시총 상위 50종목 5지표 + 신호등
+- PEG_TICKERS       : M6 PEG 과열 모니터 (30종목)
+- TOP50_TICKERS     : M7 미국 시총 상위 50종목 5지표 + 신호등
+- KR_TOP50_TICKERS  : M8 한국 시총 상위 50종목 5지표 + 신호등
 - M4 흑자전환 종목 추정 PER 계산용 현재가 fetch
 """
 
@@ -95,6 +96,60 @@ PEG_TICKERS = [
     ("000660.KS", "SK하이닉스"),
 ]
 
+# 한국 시총 상위 50종목 (코스피 + 일부 코스닥 대형주)
+KR_TOP50_TICKERS = [
+    ("005930.KS", "삼성전자"),
+    ("000660.KS", "SK하이닉스"),
+    ("373220.KS", "LG에너지솔루션"),
+    ("207940.KS", "삼성바이오로직스"),
+    ("005380.KS", "현대차"),
+    ("000270.KS", "기아"),
+    ("005490.KS", "POSCO홀딩스"),
+    ("035420.KS", "NAVER"),
+    ("005935.KS", "삼성전자우"),
+    ("105560.KS", "KB금융"),
+    ("035720.KS", "카카오"),
+    ("068270.KS", "셀트리온"),
+    ("028260.KS", "삼성물산"),
+    ("055550.KS", "신한지주"),
+    ("012330.KS", "현대모비스"),
+    ("138040.KS", "메리츠금융지주"),
+    ("086790.KS", "하나금융지주"),
+    ("006400.KS", "삼성SDI"),
+    ("051910.KS", "LG화학"),
+    ("015760.KS", "한국전력"),
+    ("011200.KS", "HMM"),
+    ("032830.KS", "삼성생명"),
+    ("003670.KS", "포스코퓨처엠"),
+    ("009150.KS", "삼성전기"),
+    ("010130.KS", "고려아연"),
+    ("034730.KS", "SK"),
+    ("010950.KS", "S-Oil"),
+    ("011170.KS", "롯데케미칼"),
+    ("251270.KS", "넷마블"),
+    ("036570.KS", "엔씨소프트"),
+    ("017670.KS", "SK텔레콤"),
+    ("030200.KS", "KT"),
+    ("018260.KS", "삼성에스디에스"),
+    ("003550.KS", "LG"),
+    ("000810.KS", "삼성화재"),
+    ("024110.KS", "기업은행"),
+    ("033780.KS", "KT&G"),
+    ("066570.KS", "LG전자"),
+    ("047810.KS", "한국항공우주"),
+    ("003490.KS", "대한항공"),
+    ("009830.KS", "한화솔루션"),
+    ("042660.KS", "한화오션"),
+    ("010140.KS", "삼성중공업"),
+    ("064350.KS", "현대로템"),
+    ("326030.KS", "SK바이오팜"),
+    ("247540.KQ", "에코프로비엠"),
+    ("086520.KQ", "에코프로"),
+    ("196170.KQ", "알테오젠"),
+    ("097950.KS", "CJ제일제당"),
+    ("034220.KS", "LG디스플레이"),
+]
+
 def fetch_peg_ratios():
     """yfinance로 PEG 비율 가져오기. 실패 시 이전 값 유지."""
     try:
@@ -146,12 +201,12 @@ def _signal_trend(arrow):
     return {"↑": "green", "→": "yellow", "↓": "red"}.get(arrow, "gray")
 
 
-def fetch_top50_metrics():
-    """시총 상위 50종목 × (PER · PEG · 매출성장 · EPS성장 · EPS추이) + 신호등."""
+def _fetch_metrics(tickers_list):
+    """(ticker, name) 리스트 → 5지표 + 신호등 결과 리스트. 공통 fetcher."""
     try:
         import yfinance as yf
         result = []
-        for ticker, name in TOP50_TICKERS:
+        for ticker, name in tickers_list:
             try:
                 info = yf.Ticker(ticker).info
                 pe  = info.get("trailingPE") or info.get("forwardPE")
@@ -194,6 +249,14 @@ def fetch_top50_metrics():
         return result or None
     except ImportError:
         return None
+
+def fetch_top50_metrics():
+    """미국 시총 상위 50 × 5지표 + 신호등."""
+    return _fetch_metrics(TOP50_TICKERS)
+
+def fetch_kr_top50_metrics():
+    """한국 시총 상위 50 × 5지표 + 신호등."""
+    return _fetch_metrics(KR_TOP50_TICKERS)
 
 
 def fetch_prices(tickers):
