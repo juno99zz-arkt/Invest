@@ -1,7 +1,9 @@
 name: 투자 대시보드 업데이트
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
+  schedule:
+    - cron: "0 8 * * *"    # 매일 KST 17:00 (UTC 08:00) 자동 갱신
 
 jobs:
   update:

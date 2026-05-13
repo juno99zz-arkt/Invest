@@ -1,19 +1,26 @@
 """
 매일 17:00 KST GitHub Actions에서 실행.
 1. mock_data.py에서 데이터 로드
-2. yfinance로 PEG 비율 실시간 갱신 (실패 시 mock 유지)
-3. invest/index.html 생성 → gh-pages 커밋
+2. yfinance로 실시간 갱신:
+   - M6 PEG (30종목)
+   - M7 시총 상위 50 × 5지표 + 신호등
+   - M4 흑자전환 현재가 → 추정 PER 계산
+3. 빌드 메타(KST 타임스탬프) 주입
+4. index.html INJECTED 교체 → gh-pages 커밋
 """
 import json
 import os
 import sys
+from datetime import datetime, timezone, timedelta
 
 # 현재 스크립트 기준으로 investment-dashboard 모듈 경로 추가
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
 
-from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, SUMMARY_DATA, NEWS_DATA
-from data_fetcher import PEG_TICKERS
+from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, M7_DATA, SUMMARY_DATA, NEWS_DATA
+from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_prices
+
+KST = timezone(timedelta(hours=9))
 
 # ── PEG 실시간 업데이트 (티커 정의는 data_fetcher.PEG_TICKERS 단일 소스) ────
 def fetch_peg():
@@ -39,6 +46,33 @@ def fetch_peg():
     except ImportError:
         return None
 
+# ── M4 추정 PER 계산 ────────────────────────────────────────────
+def _signal_pe(pe):
+    if pe is None: return "gray"
+    if pe < 15: return "green"
+    if pe <= 25: return "yellow"
+    return "red"
+
+def update_m4_projected_pe():
+    """yfinance 현재가 fetch → projected_pe = current_price ÷ (consensus_eps × 4)."""
+    tickers = [c["ticker"] for c in M4_DATA]
+    prices = fetch_prices(tickers)
+    if not prices:
+        # 신호등만 mock 값 기준으로 채움
+        for c in M4_DATA:
+            c["sig_proj_pe"] = _signal_pe(c.get("projected_pe"))
+        print("yfinance 없음 — M4 mock 현재가 사용")
+        return
+    for c in M4_DATA:
+        price = prices.get(c["ticker"])
+        if price and c.get("consensus_eps", 0) > 0:
+            # consensus_eps 는 분기 EPS → 연환산 (4분기 가정)
+            projected_eps_annual = c["consensus_eps"] * 4
+            c["current_price"] = round(price, 2)
+            c["projected_pe"]  = round(price / projected_eps_annual, 1)
+        c["sig_proj_pe"] = _signal_pe(c.get("projected_pe"))
+    print(f"M4 현재가 {len(prices)}개 갱신 + 추정 PER 계산 완료")
+
 # ── 데이터 조합 ─────────────────────────────────────────────────
 def build_data():
     peg = fetch_peg()
@@ -47,8 +81,26 @@ def build_data():
         print(f"PEG 실시간 데이터 {len(peg)}개 반영")
     else:
         print("yfinance 없음 — mock PEG 사용")
-    # 지수 PEG (SPY/QQQ/SOXX) 는 제거됨 — 개별 종목 30개로 통일
     M6_DATA.pop("index_peg", None)
+
+    # M7 시총 상위 50 × 5지표
+    top50 = fetch_top50_metrics()
+    if top50:
+        M7_DATA["stocks"] = top50
+        print(f"M7 상위 50종목 {len(top50)}개 실시간 갱신")
+    else:
+        print("yfinance 없음 — M7 mock 사용")
+
+    # M4 현재가 + 추정 PER
+    update_m4_projected_pe()
+
+    # 빌드 시각 (KST)
+    now_kst = datetime.now(KST)
+    build_meta = {
+        "built_at_kst":   now_kst.strftime("%Y-%m-%d %H:%M"),
+        "built_at_iso":   now_kst.isoformat(),
+        "schedule_label": "매일 KST 17:00 자동 갱신",
+    }
 
     return {
         "summary": SUMMARY_DATA,
@@ -59,6 +111,8 @@ def build_data():
         "m4": {"companies": M4_DATA},
         "m5": M5_DATA,
         "m6": M6_DATA,
+        "m7": M7_DATA,
+        "meta": build_meta,
     }
 
 def inject_data(html, data_json):

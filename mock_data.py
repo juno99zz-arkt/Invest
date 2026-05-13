@@ -131,13 +131,15 @@ M3_DATA = [
 
 # ── M4 흑자전환 예상 기업 ──────────────────────────────────────────
 M4_DATA = [
-    {"rank": 1, "ticker": "RIVN", "name": "Rivian", "market_cap_b": 14, "turnaround_quarter": "2025Q3", "consensus_eps": 0.12, "analyst_count": 18, "catalyst": "생산 효율화로 단위당 손실 $2.1 → $0.3 개선, R2 플랫폼 출시 기대", "risk": "원자재 가격 재상승 시 전환 지연 가능", "recent_eps": [-1.08, -0.95]},
-    {"rank": 2, "ticker": "SMCI", "name": "Super Micro", "market_cap_b": 28, "turnaround_quarter": "2025Q2", "consensus_eps": 0.48, "analyst_count": 12, "catalyst": "회계 감사 완료 후 나스닥 상장폐지 위기 해소, AI 서버 수주 재개", "risk": "감사 재지연 시 투자심리 급랭", "recent_eps": [-0.32, -0.14]},
-    {"rank": 3, "ticker": "BIRD", "name": "Allbirds", "market_cap_b": 0.3, "turnaround_quarter": "2025Q4", "consensus_eps": 0.04, "analyst_count": 5, "catalyst": "SKU 축소·고마진 제품 집중으로 매출총이익률 8%p 개선", "risk": "소비 침체 지속 시 매출 회복 지연", "recent_eps": [-0.18, -0.11]},
-    {"rank": 4, "ticker": "XPEV", "name": "XPeng", "market_cap_b": 12, "turnaround_quarter": "2025Q3", "consensus_eps": 0.08, "analyst_count": 14, "catalyst": "MONA M03 흥행으로 분기 인도량 3만대 돌파, 원가율 개선 지속", "risk": "중국 보조금 정책 변경 및 BYD 가격경쟁 심화", "recent_eps": [-0.41, -0.28]},
-    {"rank": 5, "ticker": "LCID", "name": "Lucid Motors", "market_cap_b": 7, "turnaround_quarter": "2026Q1", "consensus_eps": 0.06, "analyst_count": 8, "catalyst": "사우디 아람코 투자유치 및 Gravity SUV 출시, 생산능력 2만대 확충", "risk": "자금소진 속도 빨라 추가 자본조달 필요", "recent_eps": [-0.29, -0.22]},
-    {"rank": 6, "ticker": "JOBY", "name": "Joby Aviation", "market_cap_b": 6, "turnaround_quarter": "2026Q2", "consensus_eps": 0.09, "analyst_count": 7, "catalyst": "FAA 형식증명 승인 임박, UAE 에미레이트항공과 파일럿 서비스 계약 체결", "risk": "규제 승인 지연 시 상업화 일정 1년 이상 후퇴 가능", "recent_eps": [-0.14, -0.12]},
-    {"rank": 7, "ticker": "IONQ", "name": "IonQ", "market_cap_b": 5, "turnaround_quarter": "2026Q1", "consensus_eps": 0.11, "analyst_count": 9, "catalyst": "양자컴퓨터 상업 계약 확대, 포르투갈 데이터센터 구축 완료", "risk": "양자우위 달성 시기 불확실, 경쟁사 IBM·Google 대비 상용화 격차", "recent_eps": [-0.18, -0.15]},
+    # current_price·projected_pe 는 generate_invest.py 에서 yfinance 현재가로 갱신/계산.
+    # consensus_eps 는 연환산. projected_pe = current_price / (consensus_eps × 4분기) 추정.
+    {"rank": 1, "ticker": "RIVN", "name": "Rivian", "market_cap_b": 14, "turnaround_quarter": "2025Q3", "consensus_eps": 0.12, "analyst_count": 18, "current_price": 13.5, "projected_pe": 28.1, "catalyst": "생산 효율화로 단위당 손실 $2.1 → $0.3 개선, R2 플랫폼 출시 기대", "risk": "원자재 가격 재상승 시 전환 지연 가능", "recent_eps": [-1.08, -0.95]},
+    {"rank": 2, "ticker": "SMCI", "name": "Super Micro", "market_cap_b": 28, "turnaround_quarter": "2025Q2", "consensus_eps": 0.48, "analyst_count": 12, "current_price": 48.0, "projected_pe": 25.0, "catalyst": "회계 감사 완료 후 나스닥 상장폐지 위기 해소, AI 서버 수주 재개", "risk": "감사 재지연 시 투자심리 급랭", "recent_eps": [-0.32, -0.14]},
+    {"rank": 3, "ticker": "BIRD", "name": "Allbirds", "market_cap_b": 0.3, "turnaround_quarter": "2025Q4", "consensus_eps": 0.04, "analyst_count": 5, "current_price": 8.5, "projected_pe": 53.1, "catalyst": "SKU 축소·고마진 제품 집중으로 매출총이익률 8%p 개선", "risk": "소비 침체 지속 시 매출 회복 지연", "recent_eps": [-0.18, -0.11]},
+    {"rank": 4, "ticker": "XPEV", "name": "XPeng", "market_cap_b": 12, "turnaround_quarter": "2025Q3", "consensus_eps": 0.08, "analyst_count": 14, "current_price": 12.8, "projected_pe": 40.0, "catalyst": "MONA M03 흥행으로 분기 인도량 3만대 돌파, 원가율 개선 지속", "risk": "중국 보조금 정책 변경 및 BYD 가격경쟁 심화", "recent_eps": [-0.41, -0.28]},
+    {"rank": 5, "ticker": "LCID", "name": "Lucid Motors", "market_cap_b": 7, "turnaround_quarter": "2026Q1", "consensus_eps": 0.06, "analyst_count": 8, "current_price": 2.9, "projected_pe": 12.1, "catalyst": "사우디 아람코 투자유치 및 Gravity SUV 출시, 생산능력 2만대 확충", "risk": "자금소진 속도 빨라 추가 자본조달 필요", "recent_eps": [-0.29, -0.22]},
+    {"rank": 6, "ticker": "JOBY", "name": "Joby Aviation", "market_cap_b": 6, "turnaround_quarter": "2026Q2", "consensus_eps": 0.09, "analyst_count": 7, "current_price": 6.2, "projected_pe": 17.2, "catalyst": "FAA 형식증명 승인 임박, UAE 에미레이트항공과 파일럿 서비스 계약 체결", "risk": "규제 승인 지연 시 상업화 일정 1년 이상 후퇴 가능", "recent_eps": [-0.14, -0.12]},
+    {"rank": 7, "ticker": "IONQ", "name": "IonQ", "market_cap_b": 5, "turnaround_quarter": "2026Q1", "consensus_eps": 0.11, "analyst_count": 9, "current_price": 24.5, "projected_pe": 55.7, "catalyst": "양자컴퓨터 상업 계약 확대, 포르투갈 데이터센터 구축 완료", "risk": "양자우위 달성 시기 불확실, 경쟁사 IBM·Google 대비 상용화 격차", "recent_eps": [-0.18, -0.15]},
 ]
 
 # ── M5 내부자 거래 ──────────────────────────────────────────────────
@@ -212,6 +214,76 @@ M6_DATA = {
         {"ticker": "JNJ",       "name": "Johnson & Johnson",    "peg": 0.9, "pe": 15.2, "growth_rate": 16.9},
         {"ticker": "005930.KS", "name": "삼성전자",              "peg": 0.8, "pe": 14.0, "growth_rate": 17.5},
         {"ticker": "000660.KS", "name": "SK하이닉스",            "peg": 0.6, "pe":  9.5, "growth_rate": 15.8},
+    ],
+}
+
+# ── M7 미국 시총 상위 50종목 5지표 + 신호등 ────────────────────────
+# yfinance 가 실시간 값으로 덮어씀. mock 시드는 fallback 용도.
+def _sig_pe(pe):  return "green" if pe < 15 else "yellow" if pe <= 25 else "red"
+def _sig_peg(g):  return "green" if g  < 1.0 else "yellow" if g  <= 1.5 else "red"
+def _sig_gr(p):   return "green" if p  > 15  else "yellow" if p  >= 5   else "red"
+def _sig_tr(a):   return {"↑":"green","→":"yellow","↓":"red"}.get(a, "yellow")
+
+def _row(t, n, pe, peg, rev, eps, tr):
+    return {
+        "ticker": t, "name": n, "pe": pe, "peg": peg,
+        "rev_growth": rev, "eps_growth": eps, "eps_trend": tr,
+        "sig_pe": _sig_pe(pe), "sig_peg": _sig_peg(peg),
+        "sig_rev": _sig_gr(rev), "sig_eps": _sig_gr(eps), "sig_trend": _sig_tr(tr),
+    }
+
+M7_DATA = {
+    "stocks": [
+        _row("AAPL",  "Apple",              28.8, 2.9,  9.9, 12.0, "↑"),
+        _row("MSFT",  "Microsoft",          31.2, 2.6, 12.0, 15.1, "↑"),
+        _row("NVDA",  "Nvidia",             42.1, 3.8, 78.0, 95.0, "↑"),
+        _row("GOOGL", "Alphabet",           19.8, 1.1, 18.0, 22.0, "↑"),
+        _row("AMZN",  "Amazon",             36.8, 1.4, 11.0, 26.3, "↑"),
+        _row("META",  "Meta",               23.4, 1.8, 13.0, 18.0, "↑"),
+        _row("TSLA",  "Tesla",              68.4, 4.2, 16.3,  8.0, "→"),
+        _row("BRK-B", "Berkshire",          22.5, 1.0,  9.0, 11.0, "→"),
+        _row("AVGO",  "Broadcom",           34.5, 1.5, 23.0, 28.0, "↑"),
+        _row("WMT",   "Walmart",            32.0, 2.1, 15.2,  8.0, "→"),
+        _row("JPM",   "JPMorgan",           13.0, 1.0, 10.0, 13.0, "↑"),
+        _row("ORCL",  "Oracle",             25.1, 1.5, 16.7, 14.0, "↑"),
+        _row("LLY",   "Eli Lilly",          30.5, 1.8, 35.0, 40.0, "↑"),
+        _row("V",     "Visa",               28.1, 2.4, 11.7, 13.0, "↑"),
+        _row("MA",    "Mastercard",         30.5, 2.3, 13.3, 14.0, "↑"),
+        _row("NFLX",  "Netflix",            38.5, 1.9, 20.3, 25.0, "↑"),
+        _row("XOM",   "ExxonMobil",         14.5, 0.9,  8.0, 16.1, "→"),
+        _row("COST",  "Costco",             52.0, 3.5,  7.0, 14.9, "→"),
+        _row("JNJ",   "Johnson & Johnson",  15.2, 0.9,  6.0, 16.9, "→"),
+        _row("HD",    "Home Depot",         26.5, 2.7,  9.8,  4.0, "→"),
+        _row("PG",    "P&G",                25.0, 3.0,  3.5,  7.0, "→"),
+        _row("BAC",   "Bank of America",    12.0, 1.1,  8.0, 10.0, "→"),
+        _row("ABBV",  "AbbVie",             18.0, 2.0,  4.0,  6.0, "→"),
+        _row("KO",    "Coca-Cola",          24.0, 3.4,  3.0,  5.0, "→"),
+        _row("CVX",   "Chevron",            13.5, 1.0,  7.0, 14.0, "→"),
+        _row("CRM",   "Salesforce",         42.0, 2.4, 11.0, 18.0, "↑"),
+        _row("AMD",   "AMD",                45.0, 2.2, 20.5, 25.0, "↑"),
+        _row("MRK",   "Merck",              16.0, 1.4,  7.0,  9.0, "→"),
+        _row("TMO",   "Thermo Fisher",      28.0, 2.5,  3.5,  6.0, "→"),
+        _row("PEP",   "PepsiCo",            22.5, 3.0,  4.5,  7.0, "→"),
+        _row("ACN",   "Accenture",          27.0, 2.6,  5.0,  9.0, "→"),
+        _row("ADBE",  "Adobe",              32.0, 1.8, 11.0, 16.0, "↑"),
+        _row("LIN",   "Linde",              30.0, 3.5,  5.0,  9.0, "→"),
+        _row("MCD",   "McDonald's",         24.0, 3.0,  4.0,  7.0, "→"),
+        _row("CSCO",  "Cisco",              18.0, 2.0,  6.0,  8.0, "→"),
+        _row("ABT",   "Abbott",             24.5, 2.7,  5.5,  8.0, "→"),
+        _row("IBM",   "IBM",                21.0, 2.2,  4.0,  6.0, "→"),
+        _row("GE",    "GE Aerospace",       35.0, 2.5, 11.0, 18.0, "↑"),
+        _row("NOW",   "ServiceNow",         60.0, 2.6, 22.0, 28.0, "↑"),
+        _row("AXP",   "American Express",   19.0, 1.6, 10.0, 14.0, "↑"),
+        _row("PM",    "Philip Morris",      20.0, 2.3,  6.0,  9.0, "→"),
+        _row("DIS",   "Disney",             21.0, 1.4,  5.0, 12.0, "↑"),
+        _row("INTU",  "Intuit",             54.0, 3.0, 13.0, 18.0, "↑"),
+        _row("T",     "AT&T",               12.0, 2.7,  1.5,  6.0, "→"),
+        _row("MS",    "Morgan Stanley",     14.0, 1.0,  9.0, 12.0, "↑"),
+        _row("ISRG",  "Intuitive Surgical", 65.0, 3.4, 18.0, 24.0, "↑"),
+        _row("CAT",   "Caterpillar",        16.0, 1.7,  4.0,  9.0, "→"),
+        _row("GS",    "Goldman Sachs",      14.0, 1.2,  8.0, 14.0, "↑"),
+        _row("VZ",    "Verizon",            10.0, 2.8,  1.0,  3.0, "→"),
+        _row("RTX",   "RTX",                18.0, 1.9,  6.0,  8.0, "→"),
     ],
 }
 
