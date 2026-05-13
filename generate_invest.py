@@ -17,8 +17,8 @@ from datetime import datetime, timezone, timedelta
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE_DIR)
 
-from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, M7_DATA, SUMMARY_DATA, NEWS_DATA
-from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_prices
+from mock_data import M1_DATA, M1_COMMON, M2_DATA, M3_DATA, M4_DATA, M5_DATA, M6_DATA, M7_DATA, M8_DATA, SUMMARY_DATA, NEWS_DATA
+from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_kr_top50_metrics, fetch_prices
 
 KST = timezone(timedelta(hours=9))
 
@@ -83,13 +83,21 @@ def build_data():
         print("yfinance 없음 — mock PEG 사용")
     M6_DATA.pop("index_peg", None)
 
-    # M7 시총 상위 50 × 5지표
+    # M7 미국 시총 상위 50 × 5지표
     top50 = fetch_top50_metrics()
     if top50:
         M7_DATA["stocks"] = top50
-        print(f"M7 상위 50종목 {len(top50)}개 실시간 갱신")
+        print(f"M7 미국 상위 50종목 {len(top50)}개 실시간 갱신")
     else:
         print("yfinance 없음 — M7 mock 사용")
+
+    # M8 한국 시총 상위 50 × 5지표
+    kr_top50 = fetch_kr_top50_metrics()
+    if kr_top50:
+        M8_DATA["stocks"] = kr_top50
+        print(f"M8 한국 상위 50종목 {len(kr_top50)}개 실시간 갱신")
+    else:
+        print("yfinance 없음 — M8 mock 사용")
 
     # M4 현재가 + 추정 PER
     update_m4_projected_pe()
@@ -112,6 +120,7 @@ def build_data():
         "m5": M5_DATA,
         "m6": M6_DATA,
         "m7": M7_DATA,
+        "m8": M8_DATA,
         "meta": build_meta,
     }
 
