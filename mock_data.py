@@ -224,12 +224,21 @@ def _sig_peg(g):  return "green" if g  < 1.0 else "yellow" if g  <= 1.5 else "re
 def _sig_gr(p):   return "green" if p  > 15  else "yellow" if p  >= 5   else "red"
 def _sig_tr(a):   return {"↑":"green","→":"yellow","↓":"red"}.get(a, "yellow")
 
-def _row(t, n, pe, peg, rev, eps, tr):
+def _row(t, n, pe, peg, rev, eps, tr, fwd_pe=None):
+    # fwd_pe(12개월 추정 PER) 미지정 시 trailing PER × 0.88 로 가정 (성장주 평균).
+    # yfinance fetch 가 실제 forwardPE 로 덮어쓰므로 mock 정확도는 중요치 않음.
+    if fwd_pe is None:
+        fwd_pe = round(pe * 0.88, 1)
     return {
-        "ticker": t, "name": n, "pe": pe, "peg": peg,
+        "ticker": t, "name": n,
+        "pe": pe, "fwd_pe": fwd_pe, "peg": peg,
         "rev_growth": rev, "eps_growth": eps, "eps_trend": tr,
-        "sig_pe": _sig_pe(pe), "sig_peg": _sig_peg(peg),
-        "sig_rev": _sig_gr(rev), "sig_eps": _sig_gr(eps), "sig_trend": _sig_tr(tr),
+        "sig_pe":     _sig_pe(pe),
+        "sig_fwd_pe": _sig_pe(fwd_pe),
+        "sig_peg":    _sig_peg(peg),
+        "sig_rev":    _sig_gr(rev),
+        "sig_eps":    _sig_gr(eps),
+        "sig_trend":  _sig_tr(tr),
     }
 
 # ── M8 한국 시총 상위 50종목 5지표 + 신호등 ────────────────────────

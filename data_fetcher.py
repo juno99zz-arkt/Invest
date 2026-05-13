@@ -202,14 +202,17 @@ def _signal_trend(arrow):
 
 
 def _fetch_metrics(tickers_list):
-    """(ticker, name) 리스트 → 5지표 + 신호등 결과 리스트. 공통 fetcher."""
+    """(ticker, name) 리스트 → 지표 + 신호등 결과 리스트. 공통 fetcher.
+    지표: PER (trailing) / 12개월 추정 PER (forward) / PEG / 매출↑ / EPS↑ / EPS추이
+    """
     try:
         import yfinance as yf
         result = []
         for ticker, name in tickers_list:
             try:
                 info = yf.Ticker(ticker).info
-                pe  = info.get("trailingPE") or info.get("forwardPE")
+                trailing_pe = info.get("trailingPE")
+                forward_pe  = info.get("forwardPE")
                 peg = info.get("trailingPegRatio") or info.get("pegRatio")
                 rev = info.get("revenueGrowth")     # 분수
                 eps = info.get("earningsGrowth")    # 분수
@@ -225,20 +228,27 @@ def _fetch_metrics(tickers_list):
                 else:
                     arrow = "→"
 
+                # trailingPE 가 없으면 forwardPE 로 대체 (적어도 한 값은 채움)
+                pe_r     = round(float(trailing_pe), 1) if trailing_pe else None
+                fwd_pe_r = round(float(forward_pe),  1) if forward_pe  else None
+                if pe_r is None and fwd_pe_r is not None:
+                    pe_r = fwd_pe_r
+
                 rev_pct = round(rev * 100, 1) if rev is not None else None
                 eps_pct = round(eps * 100, 1) if eps is not None else None
-                pe_r  = round(float(pe), 1) if pe else None
-                peg_r = round(float(peg), 1) if peg else None
+                peg_r   = round(float(peg), 1) if peg else None
 
                 result.append({
                     "ticker": ticker,
                     "name": name,
                     "pe": pe_r,
+                    "fwd_pe": fwd_pe_r,
                     "peg": peg_r,
                     "rev_growth": rev_pct,
                     "eps_growth": eps_pct,
                     "eps_trend": arrow,
                     "sig_pe":     _signal_pe(pe_r),
+                    "sig_fwd_pe": _signal_pe(fwd_pe_r),
                     "sig_peg":    _signal_peg(peg_r),
                     "sig_rev":    _signal_growth(rev_pct),
                     "sig_eps":    _signal_growth(eps_pct),
