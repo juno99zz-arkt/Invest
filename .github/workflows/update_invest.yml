@@ -4,7 +4,7 @@ on:
   workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
     inputs:
       mode:
-        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석 / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생)"
+        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석(정기 실행은 격주, 수동은 즉시) / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생)"
         type: choice
         options: [daily, weekly, compare, sec_check]
         default: daily
@@ -14,7 +14,7 @@ on:
         default: ""
   schedule:
     - cron: "0 8 * * *"    # 매일 KST 17:00 (UTC 08:00) 시세 갱신
-    - cron: "0 0 * * 6"    # 매주 토요일 KST 09:00 (UTC 00:00) 주간 신호·추천 (미국장 금요일 마감 후)
+    - cron: "0 0 * * 6"    # 토요일 KST 09:00 (UTC 00:00) — 아래 '격주 확인' 단계에서 격주만 실제 실행
 
 permissions:
   contents: write
@@ -48,15 +48,28 @@ jobs:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: python sec_data.py
 
-      - name: 주간 파이프라인 (신호·심층분석·추천)
-        if: github.event.schedule == '0 0 * * 6' || inputs.mode == 'weekly'
+      - name: 격주 확인 (기준일 2026-09-12 토요일부터 짝수 주차만 실행)
+        id: cadence
+        run: |
+          if [ "${{ inputs.mode }}" = "weekly" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 0 * * 6" ]; then
+            weeks=$(( ( $(date -u +%s) - $(date -u -d 2026-09-12 +%s) ) / 604800 ))
+            if [ $((weeks % 2)) -eq 0 ]; then echo "run=true" >> "$GITHUB_OUTPUT"; else echo "run=false" >> "$GITHUB_OUTPUT"; fi
+            echo "기준일 이후 ${weeks}주 경과"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 격주 파이프라인 (신호·심층분석·추천)
+        if: steps.cadence.outputs.run == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: python run_weekly.py
 
-      - name: 주간 결과 main 커밋 (추천 이력 보존)
-        if: github.event.schedule == '0 0 * * 6' || inputs.mode == 'weekly'
+      - name: 격주 결과 main 커밋 (추천 이력 보존)
+        if: steps.cadence.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

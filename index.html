@@ -217,7 +217,7 @@
   <div id="sec-m5" class="section pt-3">
     <div class="app-wrapper px-3">
       <div class="sec-bar">
-        <span class="text-xs" style="color:var(--muted);">SEC Form 4 최근 7일 · 장내매수 $100K↑ / 매도 $1M↑</span>
+        <span class="text-xs" style="color:var(--muted);">SEC Form 4 최근 14일 · 장내매수 $100K↑ / 매도 $1M↑</span>
         <button class="sec-collapse-btn" onclick="toggleSecContent('m5-content', this)">전체 접기 ▲</button>
       </div>
       <div id="m5-content" class="loading animate-pulse">데이터 로딩 중...</div>
@@ -520,7 +520,7 @@ function loadSummary(d) {
         <div class="text-sm font-bold">장기 추천 포트폴리오</div>
         <span class="text-xs" style="color:var(--muted);">${(d.portfolio || []).length} / 5</span>
       </div>
-      <div class="text-xs mb-3" style="color:var(--muted);line-height:1.5;">6개월+ 보유 목표 · 매주 투자 논리 재점검 · 편입가 대비 수익률 (아래는 같은 기간 SPY)</div>
+      <div class="text-xs mb-3" style="color:var(--muted);line-height:1.5;">6개월+ 보유 목표 · 격주 투자 논리 재점검 · 편입가 대비 수익률 (아래는 같은 기간 SPY)</div>
       ${cards || '<div class="text-xs p-3 card2" style="color:var(--muted);line-height:1.6;">아직 편입된 종목이 없습니다. 기준(편입 적합 + 확신도 4 이상)을 충족하는 종목이 나올 때만 편입합니다.</div>'}
       ${cards ? '<div class="text-xs mt-2" style="color:var(--muted);">종목을 누르면 심층분석 리포트가 열립니다.</div>' : ''}
     </div>`;
@@ -1201,7 +1201,7 @@ function loadNews(items) {
     '</div>';
   }).join('');
   render('news-content',
-    '<div class="mb-3"><span class="text-xs" style="color:var(--muted);">중요도 순 · 지난 7일 실제 기사 ' + items.length + '선 (Claude 웹검색)</span></div>' +
+    '<div class="mb-3"><span class="text-xs" style="color:var(--muted);">중요도 순 · 지난 14일 실제 기사 ' + items.length + '선 (Claude 웹검색)</span></div>' +
     rows
   );
 }
