@@ -7,11 +7,17 @@
 """
 import json
 import os
+from datetime import date, timedelta
 
 import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_PATH = os.path.join(BASE_DIR, "data", "picks_history.json")
+CACHE_PATH = os.path.join(BASE_DIR, "data", "analysis_cache.json")
+
+REUSE_MAX_DAYS = 28         # 이 기간 안의 분석은 변화가 없으면 재사용
+REUSE_PRICE_MOVE = 0.15     # 분석 시점 대비 주가 ±15% 이상 → 재분석
+REUSE_EPS_MOVE = 0.05       # 내년 EPS 컨센서스 ±5% 이상 변화 → 재분석
 
 MAX_HOLDINGS = 5
 MAX_PER_SECTOR = 2
@@ -91,6 +97,47 @@ def pick_candidates(scores, snaps, holdings, m1, m3_tickers, m5):
     return [h["ticker"] for h in holdings if h["ticker"] in snaps], [tk for _, tk in ranked[:NEW_CANDIDATES]]
 
 
+# ── 2-1. 분석 재사용 (비용 절감) ─────────────────────────────────
+def load_cache():
+    if os.path.exists(CACHE_PATH):
+        with open(CACHE_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_cache(cache, today):
+    """오래된 항목(REUSE_MAX_DAYS×2 초과) 정리 후 저장."""
+    cutoff = (date.fromisoformat(today) - timedelta(days=REUSE_MAX_DAYS * 2)).isoformat()
+    cache = {tk: c for tk, c in cache.items() if c["analyzed_date"] >= cutoff}
+    os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=1)
+
+
+def cache_entry(analysis, snap, detail, today):
+    return {"analyzed_date": today, "price": snap.get("price"), "eps_next_fy": snap.get("eps_next_fy"),
+            "next_earnings": detail.get("next_earnings"), "analysis": analysis}
+
+
+def fresh_analysis_reason(entry, snap, holding, today):
+    """재분석이 필요하면 사유 문자열, 재사용 가능하면 None."""
+    if not entry:
+        return "첫 분석"
+    if (date.fromisoformat(today) - date.fromisoformat(entry["analyzed_date"])).days >= REUSE_MAX_DAYS:
+        return f"지난 분석 {REUSE_MAX_DAYS}일 경과"
+    if entry.get("next_earnings") and entry["next_earnings"] <= today:
+        return "분석 이후 실적 발표"
+    price, old_price = snap.get("price"), entry.get("price")
+    if price and old_price and abs(price / old_price - 1) >= REUSE_PRICE_MOVE:
+        return f"분석 이후 주가 {(price / old_price - 1) * 100:+.0f}%"
+    eps, old_eps = snap.get("eps_next_fy"), entry.get("eps_next_fy")
+    if eps and old_eps and abs(eps / old_eps - 1) >= REUSE_EPS_MOVE:
+        return f"분석 이후 내년 EPS 추정치 {(eps / old_eps - 1) * 100:+.1f}%"
+    if holding and holding.get("thesis_status") == "약화":
+        return "보유 논리 약화 — 매주 재점검"
+    return None
+
+
 # ── 3. 결정 ──────────────────────────────────────────────────────
 def decide(holdings, new_candidates, analyses, snaps, scores, today):
     """
@@ -108,16 +155,18 @@ def decide(holdings, new_candidates, analyses, snaps, scores, today):
                               "reason": "이번 주 분석을 완료하지 못해 기존 판단을 유지합니다 (데이터·API 오류)."})
             continue
         status = a.get("thesis_status")
+        own_status = status not in (None, "해당없음")
+        if not own_status:  # 편입 전 후보 시절 분석을 재사용한 경우 기존 상태 유지
+            status = h.get("thesis_status") or "유효"
+        reason = (own_status and a.get("thesis_status_reason")) or a["verdict_reason"]
         if status == "붕괴" or a["verdict"] == "부적합":
             removed.append(h)
-            decisions.append({"ticker": h["ticker"], "action": "제외",
-                              "reason": a.get("thesis_status_reason") or a["verdict_reason"]})
+            decisions.append({"ticker": h["ticker"], "action": "제외", "reason": reason})
         else:
             h = {**h, "last_review": today, "thesis_status": status, "conviction": a["conviction"]}
             kept.append(h)
             note = " (논리 약화 — 관찰 강화)" if status == "약화" else ""
-            decisions.append({"ticker": h["ticker"], "action": "유지",
-                              "reason": (a.get("thesis_status_reason") or a["verdict_reason"]) + note})
+            decisions.append({"ticker": h["ticker"], "action": "유지", "reason": reason + note})
 
     qualified = [tk for tk in new_candidates
                  if analyses.get(tk) and analyses[tk]["verdict"] == "편입 적합"
