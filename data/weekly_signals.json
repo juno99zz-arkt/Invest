@@ -1,5 +1,5 @@
 {
- "built_at_kst": "2026-09-13 22:00",
+ "built_at_kst": "2026-09-13 22:41",
  "week": "2026-W37",
  "universe_size": 517,
  "m1": {
@@ -574,7 +574,7 @@
      -0.0,
      0.13,
      0.45,
-     0.48
+     0.4
     ]
    },
    {
@@ -1076,7 +1076,7 @@
   ]
  },
  "m5": {
-  "period": "2026-09-06 ~ 2026-09-13",
+  "period": "2026-08-30 ~ 2026-09-13",
   "buy": [
    {
     "ticker": "RSG",
@@ -1084,8 +1084,8 @@
     "title": "10% 대주주",
     "transaction": "매수",
     "date": "2026-09-08",
-    "amount_usd": 324294707,
-    "shares": 1456107,
+    "amount_usd": 565769989,
+    "shares": 2542507,
     "signal": "장내 매수 (자기 돈으로 매수)",
     "signal_type": "bullish"
    },
@@ -1099,6 +1099,17 @@
     "shares": 141000,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "AON",
+    "insider_name": "KNIGHT LESTER B",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-09-02",
+    "amount_usd": 6549688,
+    "shares": 20000,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
    },
    {
     "ticker": "UBER",
@@ -1123,6 +1134,39 @@
     "signal_type": "bullish"
    },
    {
+    "ticker": "MSCI",
+    "insider_name": "Taneja Rajat",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-09-02",
+    "amount_usd": 1000160,
+    "shares": 1786,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "HONA",
+    "insider_name": "ARNOLD CRAIG",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-09-01",
+    "amount_usd": 998400,
+    "shares": 6400,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "VST",
+    "insider_name": "BURKE JAMES A",
+    "title": "President and CEO",
+    "transaction": "매수",
+    "date": "2026-08-31",
+    "amount_usd": 903069,
+    "shares": 6665,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
     "ticker": "MO",
     "insider_name": "McQUADE KATHRYN B.",
     "title": "이사",
@@ -1141,10 +1185,10 @@
     "title": "이사",
     "transaction": "매도",
     "date": "2026-09-03",
-    "amount_usd": 235636867,
-    "shares_sold_pct": 30.4,
+    "amount_usd": 646480538,
+    "shares_sold_pct": 35.5,
     "plan_10b5_1": false,
-    "signal": "보유 지분의 30.4% 재량 매도 — 주의",
+    "signal": "보유 지분의 35.5% 재량 매도 — 주의",
     "signal_type": "bearish"
    },
    {
@@ -1184,25 +1228,49 @@
     "signal_type": "bearish"
    },
    {
+    "ticker": "ANET",
+    "insider_name": "BECHTOLSHEIM ANDREAS",
+    "title": "10% 대주주",
+    "transaction": "매도",
+    "date": "2026-08-27",
+    "amount_usd": 60780047,
+    "shares_sold_pct": 0.2,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
     "ticker": "CRWV",
     "insider_name": "Intrator Michael N",
     "title": "CEO and President",
     "transaction": "매도",
     "date": "2026-09-08",
-    "amount_usd": 30794542,
+    "amount_usd": 55921917,
     "shares_sold_pct": 100.0,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
    },
    {
-    "ticker": "DDOG",
-    "insider_name": "Pomel Olivier",
+    "ticker": "ALAB",
+    "insider_name": "ALBA MANUEL",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-01",
+    "amount_usd": 51263695,
+    "shares_sold_pct": 41.9,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "MSFT",
+    "insider_name": "Nadella Satya",
     "title": "Chief Executive Officer",
     "transaction": "매도",
-    "date": "2026-09-08",
-    "amount_usd": 18602602,
-    "shares_sold_pct": 13.2,
+    "date": "2026-09-01",
+    "amount_usd": 43388532,
+    "shares_sold_pct": 15.1,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
@@ -1213,54 +1281,34 @@
     "title": "10% 대주주",
     "transaction": "매도",
     "date": "2026-09-04",
-    "amount_usd": 17954368,
-    "shares_sold_pct": 46.3,
+    "amount_usd": 36878912,
+    "shares_sold_pct": 47.5,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
    },
    {
-    "ticker": "DELL",
-    "insider_name": "Saavedra Jennifer D.",
-    "title": "Chief Human Resources Officer",
+    "ticker": "SNPS",
+    "insider_name": "DE GEUS AART",
+    "title": "EXECUTIVE CHAIR",
     "transaction": "매도",
-    "date": "2026-09-04",
-    "amount_usd": 13130520,
-    "shares_sold_pct": 7.8,
-    "plan_10b5_1": false,
-    "signal": "재량 매도 (보유분 대비 소규모)",
-    "signal_type": "neutral"
-   },
-   {
-    "ticker": "META",
-    "insider_name": "Cox Christopher K",
-    "title": "Chief Product Officer",
-    "transaction": "매도",
-    "date": "2026-09-09",
-    "amount_usd": 13005575,
-    "shares_sold_pct": 7.6,
+    "date": "2026-08-31",
+    "amount_usd": 32518294,
+    "shares_sold_pct": 29.2,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
-   },
-   {
-    "ticker": "WBD",
-    "insider_name": "LEVY ANTON J",
-    "title": "이사",
-    "transaction": "매도",
-    "date": "2026-09-03",
-    "amount_usd": 9652600,
-    "shares_sold_pct": 35.5,
-    "plan_10b5_1": false,
-    "signal": "보유 지분의 35.5% 재량 매도 — 주의",
-    "signal_type": "bearish"
    }
   ],
   "buy_tickers": [
+   "AON",
+   "HONA",
    "MO",
+   "MSCI",
    "RSG",
    "TSN",
-   "UBER"
+   "UBER",
+   "VST"
   ]
  },
  "m6": {
@@ -1415,121 +1463,111 @@
   }
  },
  "market_brief": {
-  "stance": "중립",
-  "stance_reason": "섹터 이익추정치는 부동산(+1.62%)·에너지(+0.79%)·IT(+0.63%)가 상향 중이고 빅테크 분기 CapEx가 전년비 중앙값 +82%로 AI 투자 사이클 자체는 살아 있습니다. 그러나 ①8월 CPI가 헤드라인 연 3.4%·근원 월 0.3%로 컨센서스를 상회하며 디스인플레이션이 멈췄고, ②시장이 9/15~16 FOMC에서 '인하'가 아니라 '0.25%p 인상'(FedWatch 약 66%)을 가격에 반영하고 있으며, ③강한 8월 고용으로 국채금리가 급등했고, ④제공된 사이클 지표의 강세장 신호가 '주의'이며 반도체 7종목 중 3종목은 내년 EPS 둔화·역성장 전망입니다. 할인율 상승과 이익 모멘텀 둔화가 겹치는 구간이므로 일괄 매수보다 분할매수·현금 여력 유지가 합리적이라 판단해 '중립'으로 둡니다.",
-  "market_env": "금리 서사가 '인하 기대'에서 '추가 인상 가능성'으로 역전된 인플레 재가속 국면입니다. 유가 상승이 물가를 밀어올린 주범이었고(9/11 유가 반락은 완충 요인), 예상을 웃돈 고용이 금리를 끌어올리며 고밸류 기술주의 멀티플 부담이 커졌습니다. 반면 AI 인프라 CapEx와 에너지·부동산 이익 추정치는 상향돼, 시장 내부는 '금리 민감 성장주 vs 인플레 수혜 실물·에너지'로 분화되고 있습니다.",
-  "key_change": "8월 CPI(헤드라인 연 3.4%, 근원 월 0.3%)가 컨센서스를 상회하면서 9월 FOMC의 기본 시나리오가 '동결'에서 '0.25%p 인상'으로 이동했습니다(CME FedWatch 인상 확률 약 66%). 2026년 내내 금리를 동결해온 연준이 방향을 바꾸는지 여부가 향후 수개월 자산배분의 최대 변수입니다.",
+  "stance": "선별적 매수",
+  "stance_reason": "①거시는 명백히 역풍입니다. 8월 CPI가 예상을 웃돌며 근원 물가가 월 0.3% 재가속했고, 시장은 9월 FOMC 금리 '인상' 확률을 90%까지 끌어올렸습니다. 중동(미·이스라엘-이란) 충돌과 걸프 해상 공격으로 브렌트유가 109달러대까지 치솟아 인플레 재점화 경로가 열렸고, 장기금리 상승은 고밸류 성장주 할인율에 직접적인 부담입니다. ②반면 AI 인프라의 실적 사이클은 아직 꺾이지 않았습니다. 브로드컴 AI 반도체 매출 전년비 +221%, 오라클 AI 클라우드 수주잔고 6,640억 달러 등 '주문 → 매출' 전환이 실제 숫자로 확인되고, 빅테크 5사 분기 CapEx가 전년비 중앙값 +82%로 확대 중입니다. IT·기술 30일 EPS 추정치도 +0.63%로 상향 흐름입니다. ③다만 사이클 지표는 '주의'이며 반도체 7종목 중 3종목이 내년 EPS 성장 둔화·역성장 전망이라 AI 내부에서도 종목 간 차별화가 시작됐습니다. 따라서 전면적 공격 매수는 이르고, 현금 비중을 일부 유지한 채 ⓐ실제 수주·매출로 증명된 AI 인프라 핵심(NVDA·AVGO 등)과 ⓑEPS 상향 1위인 에너지(유가 수혜)로 분할 매수하는 '선별적 매수'가 적정합니다. 단일 종목(NVDA) 집중 포트폴리오인 만큼, FOMC 결과 확인 전에는 신규 매수를 2~3회로 쪼개 넣는 것을 권합니다.",
+  "market_env": "인플레이션 재가속 + 유가 쇼크 + 금리 인상 경계가 겹친 '고금리 속 AI 강세' 구간입니다. S&P500은 8월 말 7,800 부근 사상 최고치를 찍은 뒤 9월 들어 4거래일 연속 하락하며 50일 이동평균선을 7월 말 이후 처음으로 하회했고, 9월 11일 0.9% 반등해 7,656.98로 마감했으나 주간 기준으로는 하락 마감했습니다. 8월 CPI는 전월비 0.4%, 연율 3.4%대로 재가속했고 근원도 0.3%로 예상을 상회했습니다. 중동 정세 악화로 브렌트유 109달러, 미국 경유 가격은 갤런당 5.94달러로 사상 최고를 기록해 물가 상방 압력이 커졌습니다. 그 결과 연준의 9월 '금리 인상' 확률이 90%까지 상승했고 장기 국채 금리도 상승 압력을 받고 있습니다. 섹터 EPS 추정치는 부동산(+1.62%)·에너지(+0.79%)·IT(+0.63%)만 뚜렷한 상향이고 나머지는 횡보로, 유가와 AI CapEx 두 축이 실적 상향을 끌고 가는 양극화 장세입니다.",
+  "key_change": "지난주의 결정적 변화는 '연준 인하 기대'가 '연준 인상 경계'로 완전히 뒤집힌 것입니다. 유가 급등(브렌트 109달러)이 8월 CPI 재가속으로 확인되면서 9월 FOMC 인상 확률이 70%→90%로 점프했습니다. 동시에 AI 쪽에서는 오라클이 AI 클라우드 신규 계약 300억 달러 이상을 체결해 수주잔고를 6,640억 달러로 늘리며 시간외 7~8% 급등, 브로드컴은 AI 반도체 매출 +221%와 2028년 AI 매출 2,300억 달러 로드맵을 제시했습니다. 즉 '할인율은 올라가는데 AI 이익 전망은 더 올라가는' 구도로, 향후 주가 변동성은 커지되 AI 인프라와 비(非)AI 자산의 격차는 더 벌어질 가능성이 큽니다.",
   "next_events": [
    {
     "date": "2026-09-15~16",
-    "event": "FOMC 정례회의(기사로 확인된 일정) — 0.25%p 인상 여부가 최대 관건"
+    "event": "9월 FOMC 회의 및 금리 결정(현 시장 반영: 인상 확률 90%). 결과 발표와 의장 기자회견이 이번 2주의 최대 변수"
    },
    {
-    "date": "2026-09-16",
-    "event": "FOMC 금리 결정·성명 및 의장 기자회견, 분기 경제전망(점도표) 공개"
+    "date": "2026-09-16 전후",
+    "event": "8월 미국 소매판매·산업생산 발표 예정 — 유가 급등이 소비 지출을 잠식했는지 확인"
    },
    {
-    "date": "2026-09-17~18",
-    "event": "FOMC 직후 국채금리·달러 반응 확인, 주간 신규 실업수당 청구건수(매주 목요일)"
+    "date": "매주 목요일(9/17, 9/24)",
+    "event": "주간 신규 실업수당 청구건수 — 고용 둔화 여부 점검"
    },
    {
-    "date": "2026-09월 하순",
-    "event": "8월 PCE 물가지수 — CNBC 보도상 9월 FOMC 이후 월말 공개 예정(연준 선호 물가지표)"
+    "date": "2026-09-18 전후",
+    "event": "9월 미시간대 소비자심리지수 잠정치 및 기대인플레이션 — 유가발 기대인플레 상승 여부가 관건"
+   },
+   {
+    "date": "2026-09-23 전후",
+    "event": "9월 S&P글로벌 미국 제조업·서비스업 PMI 속보치"
+   },
+   {
+    "date": "2026-09-하순",
+    "event": "마이크론(MU) 회계연도 4분기 실적 발표 예정 — HBM·D램 가격과 AI 메모리 사이클 점검, NVDA 밸류체인 선행 지표"
+   },
+   {
+    "date": "2026-09-25 전후",
+    "event": "8월 PCE 물가지수 — 연준이 선호하는 물가지표, FOMC 이후 추가 인상 경로 가늠"
+   },
+   {
+    "date": "상시",
+    "event": "중동(걸프 해상 공격·이란 관련) 뉴스플로우 및 주간 EIA 원유재고 — 유가 100달러 상단 고착 여부"
    }
   ],
   "news": [
    {
-    "title": "CPI inflation report August 2026",
+    "title": "Inflation persisted in August, potentially locking in a Fed interest rate hike",
     "source": "CNBC",
     "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
     "published": "2026-09-11",
-    "summary": "8월 근원 CPI가 전월 대비 0.3%로 예상(0.2%)을 웃돌았고 헤드라인 연간 상승률은 3.4%를 기록했습니다. 발표 직후 트레이더들은 다음 주 FOMC에서의 금리 '인상' 확률을 오히려 높였고, Nationwide는 0.25%p 인상을 전망했습니다.",
-    "insight": "디스인플레이션 중단은 고밸류 성장주(나스닥·AI 관련주) 멀티플에 가장 직접적인 역풍입니다. 반대로 에너지·부동산 등 인플레 수혜 섹터의 추정치 상향 흐름을 뒷받침합니다.",
+    "summary": "8월 소비자물가가 광범위한 품목에서 상승세를 이어갔고, 근원 CPI는 전월비 0.3%로 예상을 소폭 상회하며 재가속했습니다. 발표 직후 트레이더들은 다음 주 FOMC의 금리 인상 가능성을 더 높게 반영했습니다.",
+    "insight": "할인율 상승은 NVDA를 포함한 고멀티플 성장주에 직접적인 밸류에이션 압박 요인입니다. 장기투자자 입장에서는 이익이 실제로 늘어나는 AI 인프라와 물가 수혜 섹터(에너지)로 압축하고, 금리 민감 고PER 소외주 비중은 줄이는 것이 합리적입니다.",
     "stars": 5,
     "tickers": [
      "SPY",
      "QQQ",
-     "TLT",
-     "XLE"
+     "NVDA",
+     "TLT"
     ]
    },
    {
-    "title": "U.S. CPI rose 0.4% in August 2026, annual inflation at 3.4%",
-    "source": "Quartz",
-    "url": "https://qz.com/us-cpi-inflation-august-2026-091126",
+    "title": "Inflation heated up last month, boosting the case for a Fed rate hike",
+    "source": "CNN Business",
+    "url": "https://www.cnn.com/2026/09/11/economy/cpi-inflation-august",
     "published": "2026-09-11",
-    "summary": "헤드라인 연간 물가상승률 3.4%는 컨센서스(3.3%)를 상회했고 월간 근원도 예상을 0.1%p 웃돌았습니다. 이 지표는 9월 15~16일 연준 정책회의 직전에 나왔으며, 월러 이사는 물가가 조금만 가속돼도 인상 쪽으로 기울 수 있다고 언급한 바 있습니다.",
-    "insight": "이번 주 FOMC는 '동결이냐 인상이냐'의 구도입니다. 인상 시 달러 강세가 겹쳐, 환헤지 없이 미국 주식을 보유한 한국 투자자에게는 환율이 주가 하락을 일부 상쇄하는 완충 역할을 합니다.",
+    "summary": "CPI 발표 후 CME 페드워치 기준 금리 인상 확률이 전일 70%에서 90%로 급등했으며, 연준 위원들은 다음 주 화·수요일에 회의를 엽니다.",
+    "insight": "인상이 이미 90% 반영됐다는 점은 '결정 자체'보다 점도표·기자회견의 향후 경로 시사가 변동성의 핵심임을 뜻합니다. 매파적 서프라이즈 시 기술주 조정을 분할 매수 기회로 활용하는 전략이 유효합니다.",
     "stars": 5,
     "tickers": [
      "SPY",
-     "UUP",
-     "DIA"
+     "QQQ",
+     "XLF"
     ]
    },
    {
-    "title": "PPI inflation report August 2026",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+    "title": "Oil soars to $109, pushing up chances of US interest rate increase",
+    "source": "Al Jazeera",
+    "url": "https://www.aljazeera.com/economy/2026/9/10/oil-jumps-to-105-pushing-up-chances-of-a-us-interest-rate-increase",
     "published": "2026-09-10",
-    "summary": "8월 근원 생산자물가는 0.2% 상승해 예상치(0.3%)를 밑돌았습니다. 그럼에도 발표 후 금리 인상 베팅은 소폭 늘어 CME FedWatch 기준 확률이 약 66%까지 올랐습니다.",
-    "insight": "생산자물가가 진정돼도 시장이 인상 쪽으로 기운다는 것은 연준 반응함수가 '에너지발 기대인플레'로 옮겨갔음을 시사합니다. 장기채·리츠·중소형 성장주에 부담이 이어질 수 있습니다.",
-    "stars": 4,
-    "tickers": [
-     "TLT",
-     "IWM",
-     "XLRE"
-    ]
-   },
-   {
-    "title": "Stock Market Today (Sept. 4, 2026): Yields jump, stocks fall after jobs report surprises to upside",
-    "source": "TheStreet",
-    "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026",
-    "published": "2026-09-04",
-    "summary": "8월 고용지표가 예상을 웃돌자 국채금리가 급등하고 주가는 하락했습니다. 강한 고용이 연준의 완화 여지를 좁힌다는 해석이 작용했습니다.",
-    "insight": "'좋은 뉴스가 나쁜 뉴스'가 되는 전형적인 사이클 후반 국면입니다. 경기 민감·고베타 종목보다 현금흐름이 견고한 퀄리티 대형주 비중이 유리합니다.",
-    "stars": 4,
-    "tickers": [
-     "SPY",
-     "TLT",
-     "IWM"
-    ]
-   },
-   {
-    "title": "Stock Market Midday, Sept. 11: Stocks Rise as Falling Oil Prices Outweigh Sticky Inflation",
-    "source": "Yahoo Finance / TheStreet",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-sept-11-165319326.html",
-    "published": "2026-09-11",
-    "summary": "끈적한 물가 지표에도 유가 하락이 우위를 점하며 주가가 상승했다는 장중 시황입니다. 최근 증시를 짓눌러온 유가 급등세가 한풀 꺾인 점이 부각됐습니다.",
-    "insight": "이번 인플레 국면의 진원지가 유가인 만큼 유가 안정은 금리·주가 모두에 완충재가 됩니다. 다만 에너지 섹터 추정치 상향(+0.79%)의 지속성 역시 유가 경로에 달려 있어 양날의 검입니다.",
-    "stars": 4,
+    "summary": "미국·이스라엘의 이란 관련 분쟁 이후 걸프 해상 유조선 공격이 최대 규모로 확대되면서 브렌트유가 배럴당 109.20달러까지 급등했습니다.",
+    "insight": "유가 100달러 고착은 에너지 섹터 EPS 상향(30일 +0.79%)의 근거이자 동시에 전 산업의 비용·물가 압력입니다. 에너지 대형주는 인플레이션 헤지 성격의 보완 자산으로, 항공·운송·소비 관련주는 마진 훼손 리스크로 구분해 봐야 합니다.",
+    "stars": 5,
     "tickers": [
      "XLE",
-     "USO",
-     "SPY"
+     "XOM",
+     "CVX",
+     "USO"
     ]
    },
    {
-    "title": "Stock market news for Sept. 11, 2026",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html",
-    "published": "2026-09-11",
-    "summary": "8월 CPI 발표 당일 미국 증시의 장중 흐름과 종목별 반응을 정리한 라이브 기사입니다. 물가 지표와 연준 인상 베팅 확대가 그날 시장의 중심 변수였습니다.",
-    "insight": "지표 서프라이즈에도 지수가 무너지지 않았다면 시장이 '한 번의 인상' 정도는 감내 가능하다고 본다는 뜻입니다. 반대로 연속 인상이 시사되면 조정 폭이 커질 수 있습니다.",
+    "title": "Oil surges back above $100 a barrel as diesel climbs to a record $5.94 per gallon",
+    "source": "Fortune",
+    "url": "https://fortune.com/2026/09/09/oil-prices-100-gas-diesel-middle-east/",
+    "published": "2026-09-09",
+    "summary": "중동 공격이 글로벌 원유 공급을 압박하며 유가가 100달러를 재돌파했고, 미국 경유 가격은 갤런당 5.94달러로 사상 최고를 기록했습니다. 예멘 후티 세력이 사우디의 대체 수송로까지 겨냥해 공급 차질 우려가 커졌습니다.",
+    "insight": "경유는 트럭·철도·건설 등 실물 경제 원가의 기반으로, 기록적 경유가는 산업재·유통 마진에 시차를 두고 반영됩니다. 산업재·필수소비재 EPS 추정치가 횡보에 그친 배경이며, 해당 섹터 신규 진입은 서두를 이유가 적습니다.",
     "stars": 4,
     "tickers": [
-     "SPY",
-     "QQQ",
-     "DIA"
+     "XLI",
+     "XLP",
+     "UPS",
+     "DAL"
     ]
    },
    {
-    "title": "Friday's CPI inflation report is even more important than usual. Here's what to expect",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/09/10/fridays-cpi-inflation-report-is-even-more-important-than-usual-heres-what-to-expect.html",
-    "published": "2026-09-10",
-    "summary": "8월 CPI가 9월 FOMC 직전 연준이 확인하는 마지막 물가 자료라는 점에서 평소보다 중요하다고 짚은 프리뷰입니다. 컨센서스는 헤드라인 월 0.4%·연 3.4%, 근원 월 0.2%·연 2.4%였습니다.",
-    "insight": "지표 하나로 정책 경로가 갈리는 구간이라 단기 변동성이 확대됩니다. 장기투자자는 이벤트 전후 급락을 분할매수 기회로 쓰되 레버리지는 피하는 편이 좋습니다.",
+    "title": "Stocks Up on Oil Prices as CPI Sets Stage for Fed",
+    "source": "Charles Schwab",
+    "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+    "published": "2026-09-11",
+    "summary": "S&P500이 목요일 7월 말 이후 처음으로 50일 이동평균선을 하회하며 기술적 지표가 악화됐다고 전했습니다. 8월에는 평화 기대감 속 7,800 부근 사상 최고 종가를 기록했던 지수입니다.",
+    "insight": "지수가 최고치 대비 조정을 받으며 추세선을 이탈한 국면은 장기 적립식 투자자에게 분할 매수 구간이 될 수 있습니다. 다만 사이클 지표가 '주의'인 만큼 한 번에 담기보다 FOMC 전후로 나눠 집행하는 편이 낫습니다.",
     "stars": 3,
     "tickers": [
      "SPY",
@@ -1537,42 +1575,72 @@
     ]
    },
    {
-    "title": "Here's the inflation breakdown for August 2026 — in one chart",
+    "title": "Broadcom delivers strong earnings view as CEO touts growth with AI labs",
     "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-breakdown-august-2026.html",
-    "published": "2026-09-11",
-    "summary": "8월 소비자물가를 품목별로 분해해 어떤 항목이 물가를 밀어올렸는지 보여주는 차트 중심 기사입니다.",
-    "insight": "물가 상승이 에너지 주도인지 서비스 전반으로 번졌는지에 따라 연준 대응 강도가 달라집니다. 에너지 주도라면 항공·운송 등 비용 압박 업종의 마진을 점검할 필요가 있습니다.",
-    "stars": 3,
+    "url": "https://www.cnbc.com/2026/09/02/broadcom-avgo-q3-earnings-report-2026.html",
+    "published": "2026-09-02",
+    "summary": "브로드컴 3분기 매출이 전년 159.5억 달러에서 86% 증가했고 순이익은 41.4억 달러에서 130.9억 달러로 세 배 이상 늘었습니다. AI 반도체 매출은 전년비 221% 증가한 167억 달러를 기록했습니다.",
+    "insight": "AI 수요가 '기대'가 아니라 실제 매출·이익으로 증명되고 있다는 강력한 증거로, IT 섹터 EPS 상향 흐름의 실체입니다. 다만 커스텀 ASIC의 초고속 성장은 범용 GPU와의 경쟁 심화를 뜻하므로 NVDA 단일 보유자는 AI 반도체 내 분산을 고려할 만합니다.",
+    "stars": 5,
     "tickers": [
-     "XLE",
-     "XLY"
+     "AVGO",
+     "NVDA",
+     "TSM"
     ]
    },
    {
-    "title": "US CPI Report August 2026: Key Takeaways on Inflation, Consumer Price Index",
-    "source": "Bloomberg",
-    "url": "https://www.bloomberg.com/news/articles/2026-09-11/us-cpi-report-august-2026-key-takeaways-on-inflation-consumer-price-index",
-    "published": "2026-09-11",
-    "summary": "블룸버그가 8월 CPI의 핵심 시사점을 정리한 기사로, FOMC 직전 물가 재가속이 정책 논쟁을 격화시키는 구도를 다룹니다.",
-    "insight": "기관 컨센서스의 해석을 교차 확인하는 용도로 유용합니다. 물가 재가속이 굳어질수록 채권 대비 주식의 단기 상대 매력은 약화됩니다.",
-    "stars": 3,
+    "title": "Broadcom forecasts $58B fiscal 2026 AI revenue and outlines $115B in 2027, $230B in 2028",
+    "source": "Seeking Alpha",
+    "url": "https://seekingalpha.com/news/4639799-broadcom-forecasts-58b-fiscal-2026-ai-revenue-and-outlines-115b-in-2027-230b-in-2028",
+    "published": "2026-09-02",
+    "summary": "브로드컴 경영진은 AI 반도체 매출이 회계연도 2026년 580억 달러에서 2027년 1,150억 달러, 2028년 2,300억 달러로 확대되는 로드맵을 제시했습니다.",
+    "insight": "2년 뒤까지 AI 매출이 4배가 되는 경로를 회사가 직접 제시한 것은 AI CapEx 사이클이 최소 2028년까지 이어진다는 가정의 근거가 됩니다. 장기 보유 관점에서 AI 인프라 비중 유지의 핵심 논거입니다.",
+    "stars": 4,
     "tickers": [
-     "SPY",
-     "TLT"
+     "AVGO",
+     "NVDA",
+     "AMD"
     ]
    },
    {
-    "title": "Stock Market Today (Sept. 11, 2026): Nasdaq futures edge higher ahead of key inflation report",
-    "source": "Yahoo Finance / TheStreet",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-11-131905180.html",
+    "title": "Oracle Surges 7% as AI Cloud Backlog Hits $664B, CoreWeave and Nebius Climb 4%",
+    "source": "24/7 Wall St.",
+    "url": "https://247wallst.com/investing/2026/09/11/oracle-surges-7-as-ai-cloud-backlog-hits-664b-coreweave-and-nebius-climb-4/",
     "published": "2026-09-11",
-    "summary": "CPI 발표를 앞두고 나스닥 선물이 소폭 상승 출발했다는 개장 전 시황입니다. 기술주가 물가 지표에 가장 민감하게 반응하는 국면임을 보여줍니다.",
-    "insight": "AI 대형주는 현재 실적보다 할인율이 주가를 좌우하는 구간입니다. 금리 피크아웃이 확인되기 전까지는 매수 속도 조절이 유효합니다.",
-    "stars": 2,
+    "summary": "오라클이 분기 중 300억 달러 이상의 신규 AI 클라우드 계약을 체결해 잔여이행의무(RPO) 잔고가 6,640억 달러에 도달했다고 발표했고, 주가는 급등했습니다. 코어위브·네비우스 등 AI 인프라 관련주도 동반 상승했습니다.",
+    "insight": "수주잔고는 향후 GPU·서버 발주의 선행 지표로, NVDA를 비롯한 AI 하드웨어 체인의 2027년 매출 가시성을 높입니다. 빅테크 CapEx +82%와 같은 방향의 신호로 AI 인프라 비중 유지 근거입니다.",
+    "stars": 5,
     "tickers": [
-     "QQQ",
-     "NDX"
+     "ORCL",
+     "NVDA",
+     "CRWV",
+     "NBIS"
+    ]
+   },
+   {
+    "title": "Oracle's 363% backlog jump masks a real worry",
+    "source": "Rolling Out",
+    "url": "https://rollingout.com/2026/09/10/oracle-earnings-backlog-what-to-watch/",
+    "published": "2026-09-10",
+    "summary": "6,380억 달러 수주잔고 중 약 절반이 OpenAI 한 곳에 의존하고 있다는 점이 이번 실적의 진짜 관전 포인트라고 지적했습니다.",
+    "insight": "AI 수요의 상당 부분이 소수 대형 고객의 자금 조달 능력에 걸려 있다는 구조적 리스크로, AI 밸류체인 전체의 최대 취약점입니다. NVDA 집중 포트폴리오라면 이 고객 집중도 뉴스플로우를 분기마다 점검해야 합니다.",
+    "stars": 4,
+    "tickers": [
+     "ORCL",
+     "NVDA",
+     "MSFT"
+    ]
+   },
+   {
+    "title": "Nvidia's next act is bigger than selling AI chips: Chart of the Day",
+    "source": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/article/nvidias-next-act-is-bigger-than-selling-ai-chips-chart-of-the-day-100000072.html",
+    "published": "2026-08-31",
+    "summary": "젠슨 황이 엔비디아를 단순한 지배적 칩 제조사가 아닌 'AI의 아키텍처'로 만들려 한다는 전략을 다뤘습니다. 전력과 데이터를 투입해 토큰을 생산하는 'AI 팩토리' 개념이 핵심입니다.",
+    "insight": "칩 판매 중심에서 시스템·소프트웨어·네트워킹을 포괄하는 플랫폼 모델로 전환하면 경기 변동에 덜 민감한 반복 매출 비중이 커집니다. NVDA를 '반도체 사이클주'가 아닌 'AI 인프라 플랫폼'으로 장기 보유하려는 논거와 직결됩니다.",
+    "stars": 3,
+    "tickers": [
+     "NVDA"
     ]
    }
   ]

@@ -259,7 +259,7 @@ def _merge_same_insider(rows):
     return list(merged.values())
 
 
-def fetch_insider_trades(tickers, days=7, min_buy=100_000, min_sell=1_000_000):
+def fetch_insider_trades(tickers, days=14, min_buy=100_000, min_sell=1_000_000):
     if not _ua():
         print("SEC_USER_AGENT 미설정 — Form 4 건너뜀")
         return None

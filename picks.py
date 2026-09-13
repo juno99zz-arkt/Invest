@@ -134,7 +134,7 @@ def fresh_analysis_reason(entry, snap, holding, today):
     if eps and old_eps and abs(eps / old_eps - 1) >= REUSE_EPS_MOVE:
         return f"분석 이후 내년 EPS 추정치 {(eps / old_eps - 1) * 100:+.1f}%"
     if holding and holding.get("thesis_status") == "약화":
-        return "보유 논리 약화 — 매주 재점검"
+        return "보유 논리 약화 — 실행 때마다 재점검"
     return None
 
 
