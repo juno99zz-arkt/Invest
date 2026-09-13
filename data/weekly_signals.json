@@ -1,7 +1,7 @@
 {
- "built_at_kst": "2026-09-13 16:26",
+ "built_at_kst": "2026-09-13 22:00",
  "week": "2026-W37",
- "universe_size": 518,
+ "universe_size": 517,
  "m1": {
   "investors": [
    {
@@ -453,48 +453,48 @@
     "sector": "Real Estate",
     "sector_kr": "부동산",
     "stocks": 29,
-    "eps_revision_pct_30d": 1.04,
+    "eps_revision_pct_30d": 1.62,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.49,
+    "upgrade_ratio": 0.48,
     "momentum": "↑상승중",
     "sparkline": [
      0.0,
      0.0,
      -0.13,
      0.13,
-     0.67
-    ]
-   },
-   {
-    "sector": "Technology",
-    "sector_kr": "IT·기술",
-    "stocks": 90,
-    "eps_revision_pct_30d": 0.83,
-    "eps_revision_pct_7d": 0.06,
-    "upgrade_ratio": 0.78,
-    "momentum": "↑상승중",
-    "sparkline": [
-     0.0,
-     0.16,
-     1.33,
-     3.52,
-     3.95
+     0.95
     ]
    },
    {
     "sector": "Energy",
     "sector_kr": "에너지",
     "stocks": 21,
-    "eps_revision_pct_30d": 0.3,
-    "eps_revision_pct_7d": 0.48,
-    "upgrade_ratio": 0.69,
-    "momentum": "→횡보",
+    "eps_revision_pct_30d": 0.79,
+    "eps_revision_pct_7d": 0.79,
+    "upgrade_ratio": 0.67,
+    "momentum": "↑상승중",
     "sparkline": [
      0.0,
-     -0.35,
-     0.86,
-     0.79,
-     1.4
+     -0.8,
+     0.49,
+     0.58,
+     1.43
+    ]
+   },
+   {
+    "sector": "Technology",
+    "sector_kr": "IT·기술",
+    "stocks": 90,
+    "eps_revision_pct_30d": 0.63,
+    "eps_revision_pct_7d": 0.03,
+    "upgrade_ratio": 0.78,
+    "momentum": "↑상승중",
+    "sparkline": [
+     0.0,
+     0.16,
+     1.48,
+     3.91,
+     3.95
     ]
    },
    {
@@ -509,8 +509,8 @@
      0.0,
      0.09,
      1.24,
-     2.21,
-     2.31
+     2.25,
+     2.33
     ]
    },
    {
@@ -519,39 +519,23 @@
     "stocks": 24,
     "eps_revision_pct_30d": 0.15,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.47,
+    "upgrade_ratio": 0.46,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      0.23,
      -0.0,
-     -0.55,
-     -0.3
-    ]
-   },
-   {
-    "sector": "Consumer Cyclical",
-    "sector_kr": "경기소비재",
-    "stocks": 56,
-    "eps_revision_pct_30d": 0.05,
-    "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.59,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     -0.0,
-     0.09,
-     0.37,
-     0.43
+     -0.36,
+     -0.36
     ]
    },
    {
     "sector": "Healthcare",
     "sector_kr": "헬스케어",
     "stocks": 60,
-    "eps_revision_pct_30d": 0.03,
+    "eps_revision_pct_30d": 0.04,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.7,
+    "upgrade_ratio": 0.73,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
@@ -567,7 +551,7 @@
     "stocks": 68,
     "eps_revision_pct_30d": 0.03,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.68,
+    "upgrade_ratio": 0.67,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
@@ -578,12 +562,28 @@
     ]
    },
    {
+    "sector": "Consumer Cyclical",
+    "sector_kr": "경기소비재",
+    "stocks": 55,
+    "eps_revision_pct_30d": 0.02,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.58,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     -0.0,
+     0.13,
+     0.45,
+     0.48
+    ]
+   },
+   {
     "sector": "Utilities",
     "sector_kr": "유틸리티",
     "stocks": 31,
     "eps_revision_pct_30d": -0.0,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.51,
+    "upgrade_ratio": 0.47,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
@@ -594,35 +594,35 @@
     ]
    },
    {
+    "sector": "Basic Materials",
+    "sector_kr": "소재",
+    "stocks": 20,
+    "eps_revision_pct_30d": -0.02,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.55,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.2,
+     -0.37,
+     -0.3,
+     -1.67
+    ]
+   },
+   {
     "sector": "Consumer Defensive",
     "sector_kr": "필수소비재",
     "stocks": 34,
     "eps_revision_pct_30d": -0.03,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.58,
+    "upgrade_ratio": 0.59,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      0.02,
-     0.09,
+     -0.01,
      0.07,
      0.1
-    ]
-   },
-   {
-    "sector": "Basic Materials",
-    "sector_kr": "소재",
-    "stocks": 20,
-    "eps_revision_pct_30d": -0.03,
-    "eps_revision_pct_7d": -0.01,
-    "upgrade_ratio": 0.55,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.24,
-     -0.37,
-     -0.3,
-     -1.67
     ]
    }
   ]
@@ -654,64 +654,10 @@
      34.5,
      77.6
     ],
-    "next_earnings": "2026-11-04"
+    "next_earnings": "2026-11-03"
    },
    {
     "rank": 2,
-    "ticker": "ALAB",
-    "name": "Astera Labs, Inc.",
-    "sector": "IT·기술",
-    "market_cap_b": 51,
-    "revenue_growth_pct": 104.5,
-    "earnings_growth_pct": 186.2,
-    "eps_revision_30d": 41.1,
-    "eps_revision_90d": 51.98,
-    "up_30d": 20.0,
-    "down_30d": 0.0,
-    "op_margin_q": [
-     20.7,
-     24.0,
-     24.7,
-     20.1,
-     22.7
-    ],
-    "eps_surprises": [
-     25.6,
-     12.6,
-     13.5,
-     15.6
-    ],
-    "next_earnings": "2026-11-04"
-   },
-   {
-    "rank": 3,
-    "ticker": "TER",
-    "name": "Teradyne, Inc.",
-    "sector": "IT·기술",
-    "market_cap_b": 59,
-    "revenue_growth_pct": 103.9,
-    "earnings_growth_pct": 385.8,
-    "eps_revision_30d": 13.31,
-    "eps_revision_90d": 22.49,
-    "up_30d": 15.0,
-    "down_30d": 1.0,
-    "op_margin_q": [
-     14.3,
-     19.7,
-     28.5,
-     37.1,
-     33.2
-    ],
-    "eps_surprises": [
-     7.4,
-     30.1,
-     20.9,
-     20.3
-    ],
-    "next_earnings": "2026-10-22"
-   },
-   {
-    "rank": 4,
     "ticker": "DELL",
     "name": "Dell Technologies Inc.",
     "sector": "IT·기술",
@@ -735,10 +681,37 @@
      64.0,
      43.1
     ],
-    "next_earnings": "2026-11-28"
+    "next_earnings": "2026-11-27"
    },
    {
-    "rank": 5,
+    "rank": 3,
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corporation",
+    "sector": "에너지",
+    "market_cap_b": 111,
+    "revenue_growth_pct": 53.7,
+    "earnings_growth_pct": 348.0,
+    "eps_revision_30d": 16.14,
+    "eps_revision_90d": 50.24,
+    "up_30d": 14.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     5.6,
+     4.8,
+     5.7,
+     3.0,
+     13.4
+    ],
+    "eps_surprises": [
+     -4.9,
+     50.1,
+     120.6,
+     27.1
+    ],
+    "next_earnings": "2026-11-03"
+   },
+   {
+    "rank": 4,
     "ticker": "VLO",
     "name": "Valero Energy Corporation",
     "sector": "에너지",
@@ -765,7 +738,7 @@
     "next_earnings": "2026-10-22"
    },
    {
-    "rank": 6,
+    "rank": 5,
     "ticker": "WDC",
     "name": "Western Digital Corporation",
     "sector": "IT·기술",
@@ -789,7 +762,34 @@
      13.6,
      7.9
     ],
-    "next_earnings": "2026-11-06"
+    "next_earnings": "2026-11-05"
+   },
+   {
+    "rank": 6,
+    "ticker": "TER",
+    "name": "Teradyne, Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 59,
+    "revenue_growth_pct": 103.9,
+    "earnings_growth_pct": 385.8,
+    "eps_revision_30d": 0.86,
+    "eps_revision_90d": 22.98,
+    "up_30d": 15.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     14.3,
+     19.7,
+     28.5,
+     37.1,
+     33.2
+    ],
+    "eps_surprises": [
+     7.4,
+     30.1,
+     20.9,
+     20.3
+    ],
+    "next_earnings": "2026-10-21"
    },
    {
     "rank": 7,
@@ -816,37 +816,10 @@
      5.5,
      6.2
     ],
-    "next_earnings": "2026-11-18"
+    "next_earnings": "2026-11-17"
    },
    {
     "rank": 8,
-    "ticker": "MPC",
-    "name": "Marathon Petroleum Corporation",
-    "sector": "에너지",
-    "market_cap_b": 111,
-    "revenue_growth_pct": 53.7,
-    "earnings_growth_pct": 348.0,
-    "eps_revision_30d": 6.53,
-    "eps_revision_90d": 37.81,
-    "up_30d": 14.0,
-    "down_30d": 1.0,
-    "op_margin_q": [
-     5.6,
-     4.8,
-     5.7,
-     3.0,
-     13.4
-    ],
-    "eps_surprises": [
-     -4.9,
-     50.1,
-     120.6,
-     27.1
-    ],
-    "next_earnings": "2026-11-03"
-   },
-   {
-    "rank": 9,
     "ticker": "STX",
     "name": "Seagate Technology Holdings PLC",
     "sector": "IT·기술",
@@ -870,10 +843,10 @@
      16.8,
      12.1
     ],
-    "next_earnings": "2026-10-28"
+    "next_earnings": "2026-10-27"
    },
    {
-    "rank": 10,
+    "rank": 9,
     "ticker": "PSX",
     "name": "Phillips 66",
     "sector": "에너지",
@@ -898,6 +871,33 @@
      25.4
     ],
     "next_earnings": "2026-10-29"
+   },
+   {
+    "rank": 10,
+    "ticker": "CIEN",
+    "name": "Ciena Corporation",
+    "sector": "IT·기술",
+    "market_cap_b": 50,
+    "revenue_growth_pct": 37.0,
+    "earnings_growth_pct": 422.9,
+    "eps_revision_30d": 21.84,
+    "eps_revision_90d": 22.49,
+    "up_30d": 4.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     6.2,
+     8.8,
+     13.4,
+     15.2,
+     18.1
+    ],
+    "eps_surprises": [
+     18.2,
+     15.6,
+     12.3,
+     22.1
+    ],
+    "next_earnings": "2026-09-03"
    }
   ]
  },
@@ -1013,7 +1013,7 @@
     "turnaround_quarter": "내년 연간 흑자 예상",
     "trailing_eps": -0.27,
     "consensus_eps": 0.05,
-    "analyst_count": 18,
+    "analyst_count": 19,
     "current_price": 62.95,
     "projected_pe": 1381.7,
     "sig_proj_pe": "red",
@@ -1414,9 +1414,171 @@
    "summary": "반도체 7종목 중 3종목이 내년 EPS 성장 둔화·역성장 전망. 빅테크 5사 분기 CapEx 전년동기 대비 중앙값 +82%. (컨센서스·재무공시 기반 자동 판정)"
   }
  },
- "market_brief": null,
+ "market_brief": {
+  "stance": "중립",
+  "stance_reason": "섹터 이익추정치는 부동산(+1.62%)·에너지(+0.79%)·IT(+0.63%)가 상향 중이고 빅테크 분기 CapEx가 전년비 중앙값 +82%로 AI 투자 사이클 자체는 살아 있습니다. 그러나 ①8월 CPI가 헤드라인 연 3.4%·근원 월 0.3%로 컨센서스를 상회하며 디스인플레이션이 멈췄고, ②시장이 9/15~16 FOMC에서 '인하'가 아니라 '0.25%p 인상'(FedWatch 약 66%)을 가격에 반영하고 있으며, ③강한 8월 고용으로 국채금리가 급등했고, ④제공된 사이클 지표의 강세장 신호가 '주의'이며 반도체 7종목 중 3종목은 내년 EPS 둔화·역성장 전망입니다. 할인율 상승과 이익 모멘텀 둔화가 겹치는 구간이므로 일괄 매수보다 분할매수·현금 여력 유지가 합리적이라 판단해 '중립'으로 둡니다.",
+  "market_env": "금리 서사가 '인하 기대'에서 '추가 인상 가능성'으로 역전된 인플레 재가속 국면입니다. 유가 상승이 물가를 밀어올린 주범이었고(9/11 유가 반락은 완충 요인), 예상을 웃돈 고용이 금리를 끌어올리며 고밸류 기술주의 멀티플 부담이 커졌습니다. 반면 AI 인프라 CapEx와 에너지·부동산 이익 추정치는 상향돼, 시장 내부는 '금리 민감 성장주 vs 인플레 수혜 실물·에너지'로 분화되고 있습니다.",
+  "key_change": "8월 CPI(헤드라인 연 3.4%, 근원 월 0.3%)가 컨센서스를 상회하면서 9월 FOMC의 기본 시나리오가 '동결'에서 '0.25%p 인상'으로 이동했습니다(CME FedWatch 인상 확률 약 66%). 2026년 내내 금리를 동결해온 연준이 방향을 바꾸는지 여부가 향후 수개월 자산배분의 최대 변수입니다.",
+  "next_events": [
+   {
+    "date": "2026-09-15~16",
+    "event": "FOMC 정례회의(기사로 확인된 일정) — 0.25%p 인상 여부가 최대 관건"
+   },
+   {
+    "date": "2026-09-16",
+    "event": "FOMC 금리 결정·성명 및 의장 기자회견, 분기 경제전망(점도표) 공개"
+   },
+   {
+    "date": "2026-09-17~18",
+    "event": "FOMC 직후 국채금리·달러 반응 확인, 주간 신규 실업수당 청구건수(매주 목요일)"
+   },
+   {
+    "date": "2026-09월 하순",
+    "event": "8월 PCE 물가지수 — CNBC 보도상 9월 FOMC 이후 월말 공개 예정(연준 선호 물가지표)"
+   }
+  ],
+  "news": [
+   {
+    "title": "CPI inflation report August 2026",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
+    "published": "2026-09-11",
+    "summary": "8월 근원 CPI가 전월 대비 0.3%로 예상(0.2%)을 웃돌았고 헤드라인 연간 상승률은 3.4%를 기록했습니다. 발표 직후 트레이더들은 다음 주 FOMC에서의 금리 '인상' 확률을 오히려 높였고, Nationwide는 0.25%p 인상을 전망했습니다.",
+    "insight": "디스인플레이션 중단은 고밸류 성장주(나스닥·AI 관련주) 멀티플에 가장 직접적인 역풍입니다. 반대로 에너지·부동산 등 인플레 수혜 섹터의 추정치 상향 흐름을 뒷받침합니다.",
+    "stars": 5,
+    "tickers": [
+     "SPY",
+     "QQQ",
+     "TLT",
+     "XLE"
+    ]
+   },
+   {
+    "title": "U.S. CPI rose 0.4% in August 2026, annual inflation at 3.4%",
+    "source": "Quartz",
+    "url": "https://qz.com/us-cpi-inflation-august-2026-091126",
+    "published": "2026-09-11",
+    "summary": "헤드라인 연간 물가상승률 3.4%는 컨센서스(3.3%)를 상회했고 월간 근원도 예상을 0.1%p 웃돌았습니다. 이 지표는 9월 15~16일 연준 정책회의 직전에 나왔으며, 월러 이사는 물가가 조금만 가속돼도 인상 쪽으로 기울 수 있다고 언급한 바 있습니다.",
+    "insight": "이번 주 FOMC는 '동결이냐 인상이냐'의 구도입니다. 인상 시 달러 강세가 겹쳐, 환헤지 없이 미국 주식을 보유한 한국 투자자에게는 환율이 주가 하락을 일부 상쇄하는 완충 역할을 합니다.",
+    "stars": 5,
+    "tickers": [
+     "SPY",
+     "UUP",
+     "DIA"
+    ]
+   },
+   {
+    "title": "PPI inflation report August 2026",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+    "published": "2026-09-10",
+    "summary": "8월 근원 생산자물가는 0.2% 상승해 예상치(0.3%)를 밑돌았습니다. 그럼에도 발표 후 금리 인상 베팅은 소폭 늘어 CME FedWatch 기준 확률이 약 66%까지 올랐습니다.",
+    "insight": "생산자물가가 진정돼도 시장이 인상 쪽으로 기운다는 것은 연준 반응함수가 '에너지발 기대인플레'로 옮겨갔음을 시사합니다. 장기채·리츠·중소형 성장주에 부담이 이어질 수 있습니다.",
+    "stars": 4,
+    "tickers": [
+     "TLT",
+     "IWM",
+     "XLRE"
+    ]
+   },
+   {
+    "title": "Stock Market Today (Sept. 4, 2026): Yields jump, stocks fall after jobs report surprises to upside",
+    "source": "TheStreet",
+    "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026",
+    "published": "2026-09-04",
+    "summary": "8월 고용지표가 예상을 웃돌자 국채금리가 급등하고 주가는 하락했습니다. 강한 고용이 연준의 완화 여지를 좁힌다는 해석이 작용했습니다.",
+    "insight": "'좋은 뉴스가 나쁜 뉴스'가 되는 전형적인 사이클 후반 국면입니다. 경기 민감·고베타 종목보다 현금흐름이 견고한 퀄리티 대형주 비중이 유리합니다.",
+    "stars": 4,
+    "tickers": [
+     "SPY",
+     "TLT",
+     "IWM"
+    ]
+   },
+   {
+    "title": "Stock Market Midday, Sept. 11: Stocks Rise as Falling Oil Prices Outweigh Sticky Inflation",
+    "source": "Yahoo Finance / TheStreet",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-sept-11-165319326.html",
+    "published": "2026-09-11",
+    "summary": "끈적한 물가 지표에도 유가 하락이 우위를 점하며 주가가 상승했다는 장중 시황입니다. 최근 증시를 짓눌러온 유가 급등세가 한풀 꺾인 점이 부각됐습니다.",
+    "insight": "이번 인플레 국면의 진원지가 유가인 만큼 유가 안정은 금리·주가 모두에 완충재가 됩니다. 다만 에너지 섹터 추정치 상향(+0.79%)의 지속성 역시 유가 경로에 달려 있어 양날의 검입니다.",
+    "stars": 4,
+    "tickers": [
+     "XLE",
+     "USO",
+     "SPY"
+    ]
+   },
+   {
+    "title": "Stock market news for Sept. 11, 2026",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html",
+    "published": "2026-09-11",
+    "summary": "8월 CPI 발표 당일 미국 증시의 장중 흐름과 종목별 반응을 정리한 라이브 기사입니다. 물가 지표와 연준 인상 베팅 확대가 그날 시장의 중심 변수였습니다.",
+    "insight": "지표 서프라이즈에도 지수가 무너지지 않았다면 시장이 '한 번의 인상' 정도는 감내 가능하다고 본다는 뜻입니다. 반대로 연속 인상이 시사되면 조정 폭이 커질 수 있습니다.",
+    "stars": 4,
+    "tickers": [
+     "SPY",
+     "QQQ",
+     "DIA"
+    ]
+   },
+   {
+    "title": "Friday's CPI inflation report is even more important than usual. Here's what to expect",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/09/10/fridays-cpi-inflation-report-is-even-more-important-than-usual-heres-what-to-expect.html",
+    "published": "2026-09-10",
+    "summary": "8월 CPI가 9월 FOMC 직전 연준이 확인하는 마지막 물가 자료라는 점에서 평소보다 중요하다고 짚은 프리뷰입니다. 컨센서스는 헤드라인 월 0.4%·연 3.4%, 근원 월 0.2%·연 2.4%였습니다.",
+    "insight": "지표 하나로 정책 경로가 갈리는 구간이라 단기 변동성이 확대됩니다. 장기투자자는 이벤트 전후 급락을 분할매수 기회로 쓰되 레버리지는 피하는 편이 좋습니다.",
+    "stars": 3,
+    "tickers": [
+     "SPY",
+     "QQQ"
+    ]
+   },
+   {
+    "title": "Here's the inflation breakdown for August 2026 — in one chart",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-breakdown-august-2026.html",
+    "published": "2026-09-11",
+    "summary": "8월 소비자물가를 품목별로 분해해 어떤 항목이 물가를 밀어올렸는지 보여주는 차트 중심 기사입니다.",
+    "insight": "물가 상승이 에너지 주도인지 서비스 전반으로 번졌는지에 따라 연준 대응 강도가 달라집니다. 에너지 주도라면 항공·운송 등 비용 압박 업종의 마진을 점검할 필요가 있습니다.",
+    "stars": 3,
+    "tickers": [
+     "XLE",
+     "XLY"
+    ]
+   },
+   {
+    "title": "US CPI Report August 2026: Key Takeaways on Inflation, Consumer Price Index",
+    "source": "Bloomberg",
+    "url": "https://www.bloomberg.com/news/articles/2026-09-11/us-cpi-report-august-2026-key-takeaways-on-inflation-consumer-price-index",
+    "published": "2026-09-11",
+    "summary": "블룸버그가 8월 CPI의 핵심 시사점을 정리한 기사로, FOMC 직전 물가 재가속이 정책 논쟁을 격화시키는 구도를 다룹니다.",
+    "insight": "기관 컨센서스의 해석을 교차 확인하는 용도로 유용합니다. 물가 재가속이 굳어질수록 채권 대비 주식의 단기 상대 매력은 약화됩니다.",
+    "stars": 3,
+    "tickers": [
+     "SPY",
+     "TLT"
+    ]
+   },
+   {
+    "title": "Stock Market Today (Sept. 11, 2026): Nasdaq futures edge higher ahead of key inflation report",
+    "source": "Yahoo Finance / TheStreet",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-11-131905180.html",
+    "published": "2026-09-11",
+    "summary": "CPI 발표를 앞두고 나스닥 선물이 소폭 상승 출발했다는 개장 전 시황입니다. 기술주가 물가 지표에 가장 민감하게 반응하는 국면임을 보여줍니다.",
+    "insight": "AI 대형주는 현재 실적보다 할인율이 주가를 좌우하는 구간입니다. 금리 피크아웃이 확인되기 전까지는 매수 속도 조절이 유효합니다.",
+    "stars": 2,
+    "tickers": [
+     "QQQ",
+     "NDX"
+    ]
+   }
+  ]
+ },
  "status": {
   "sec": true,
-  "claude": false
+  "claude": true
  }
 }
