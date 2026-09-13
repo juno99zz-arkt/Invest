@@ -125,7 +125,7 @@
      }
     ],
     "next_earnings": "2026-11-17",
-    "return_1y_pct": NaN,
+    "return_1y_pct": null,
     "from_52w_high_pct": -7.2,
     "quant_score": {
      "score": 80.3,
