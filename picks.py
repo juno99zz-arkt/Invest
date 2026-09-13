@@ -1,7 +1,7 @@
 """
 6개월+ 보유 목적 주간 추천 엔진.
 1) quant_scores   : 유니버스 정량 점수 (품질·재무건전성·가격매력·추정치 흐름, 퍼센타일 기반)
-2) pick_candidates: 기존 보유 + 신규 후보 상위 N
+2) pick_candidates: 기존 보유 + 신규 후보 상위 N (같은 업종 2개 제한, 경기순환 사이클 정점 할인)
 3) decide         : Claude 심층분석 결과 → 신규편입/유지/제외 (규칙 기반, 억지 편입 없음)
 4) 이력 파일(data/picks_history.json) 갱신
 """
@@ -24,6 +24,19 @@ MAX_PER_SECTOR = 2
 NEW_CANDIDATES = 8
 MIN_CONVICTION_NEW = 4      # 신규 편입 최소 확신도 (1~5)
 SWAP_CONVICTION = 5         # 만석일 때 교체하려면 후보 확신도 5 + 기존 종목 '약화'·확신도 3 이하
+
+# 후보 다양화: 같은 업종 쏠림 방지 + 경기순환 업종의 사이클 정점 이익 할인
+MAX_PER_INDUSTRY_CANDIDATES = 2
+CYCLE_POOL = 30             # 정량 상위 30 중 경기순환 업종만 연간 마진 추가 수집
+CYCLE_MARGIN_RATIO = 1.5    # 현재 영업이익률 ≥ 최근 연간 평균 × 1.5
+CYCLE_MARGIN_GAP = 10       # 그리고 평균 + 10%p 이상이면 정점으로 판단
+CYCLE_PENALTY = 15
+CYCLICAL_SECTORS = {"Energy", "Basic Materials"}
+CYCLICAL_INDUSTRY_WORDS = ("Semiconductor", "Computer Hardware", "Electronic Components", "Auto", "Airlines",
+                           "Chemicals", "Steel", "Aluminum", "Copper", "Metals", "Mining", "Oil", "Coal",
+                           "Residential Construction", "Building Products", "Farm & Heavy", "Trucking",
+                           "Marine Shipping", "Railroads", "Travel Services", "Lodging", "Resorts",
+                           "Recreational Vehicles", "Packaging", "Paper", "Lumber")
 
 
 # ── 1. 정량 점수 ──────────────────────────────────────────────────
@@ -84,17 +97,56 @@ def signal_hits(tk, m1, m3_tickers, m5):
     return hits
 
 
-def pick_candidates(scores, snaps, holdings, m1, m3_tickers, m5):
-    """보유 종목 전부 + 신규 후보 상위 NEW_CANDIDATES (신호 적중 시 가산점)."""
+def _ranked(scores, holdings, m1, m3_tickers, m5, cycle_notes):
     held = {h["ticker"] for h in holdings}
     ranked = []
     for tk, sc in scores.items():
         if tk in held or not sc["eligible"]:
             continue
-        hits = signal_hits(tk, m1, m3_tickers, m5)
-        ranked.append((sc["score"] + 3 * len(hits), tk))
+        bonus = 3 * len(signal_hits(tk, m1, m3_tickers, m5))
+        penalty = CYCLE_PENALTY if tk in cycle_notes else 0
+        ranked.append((sc["score"] + bonus - penalty, tk))
     ranked.sort(reverse=True)
-    return [h["ticker"] for h in holdings if h["ticker"] in snaps], [tk for _, tk in ranked[:NEW_CANDIDATES]]
+    return [tk for _, tk in ranked]
+
+
+def is_cyclical(snap):
+    industry = snap.get("industry") or ""
+    return snap.get("sector") in CYCLICAL_SECTORS or any(w in industry for w in CYCLICAL_INDUSTRY_WORDS)
+
+
+def cycle_pool(scores, snaps, holdings, m1, m3_tickers, m5):
+    """사이클 점검 대상: 정량 상위 CYCLE_POOL 중 경기순환 업종 (연간 마진 추가 수집 대상)."""
+    top = _ranked(scores, holdings, m1, m3_tickers, m5, {})[:CYCLE_POOL]
+    return [tk for tk in top if is_cyclical(snaps[tk])]
+
+
+def cycle_note(snap, annual_margins):
+    """현재 영업이익률이 최근 연간 평균보다 과도하게 높으면 사이클 정점 할인 사유, 아니면 None."""
+    cur = snap.get("op_margin")
+    hist = [m for m in annual_margins if m is not None]
+    if cur is None or len(hist) < 3:
+        return None
+    cur, avg = cur * 100, sum(hist) / len(hist)
+    if cur >= max(avg * CYCLE_MARGIN_RATIO, avg + CYCLE_MARGIN_GAP):
+        return (f"경기순환 업종 사이클 정점 할인(-{CYCLE_PENALTY}점): 현재 영업이익률 {cur:.0f}% vs "
+                f"최근 {len(hist)}년 평균 {avg:.0f}%")
+    return None
+
+
+def pick_candidates(scores, snaps, holdings, m1, m3_tickers, m5, cycle_notes=None):
+    """보유 종목 전부 + 신규 후보 상위 NEW_CANDIDATES.
+    신호 적중 가산점, 사이클 정점 할인, 같은 업종 최대 MAX_PER_INDUSTRY_CANDIDATES 종목."""
+    per_industry, picked = {}, []
+    for tk in _ranked(scores, holdings, m1, m3_tickers, m5, cycle_notes or {}):
+        industry = snaps[tk].get("industry") or tk
+        if per_industry.get(industry, 0) >= MAX_PER_INDUSTRY_CANDIDATES:
+            continue
+        per_industry[industry] = per_industry.get(industry, 0) + 1
+        picked.append(tk)
+        if len(picked) == NEW_CANDIDATES:
+            break
+    return [h["ticker"] for h in holdings if h["ticker"] in snaps], picked
 
 
 # ── 2-1. 분석 재사용 (비용 절감) ─────────────────────────────────

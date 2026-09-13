@@ -137,6 +137,21 @@ def _series(df, row, n):
     return [(c.strftime("%Y-%m"), _num(df.loc[row, c])) for c in cols]
 
 
+def fetch_annual_margins(tickers, workers=4):
+    """{ticker: [연간 영업이익률 %, 오래된→최신]} — 사이클 정점 할인 판단용."""
+    def job(tk):
+        try:
+            ais = _retry(lambda: yf.Ticker(tk).income_stmt)
+            rev, oi = dict(_series(ais, "Total Revenue", 4)), dict(_series(ais, "Operating Income", 4))
+            return tk, [round(oi[p] / rev[p] * 100, 1) if rev.get(p) and oi.get(p) is not None else None
+                        for p in sorted(rev)]
+        except Exception:
+            return tk, []
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        return dict(ex.map(job, tickers))
+
+
 def _details(ticker):
     t = yf.Ticker(ticker)
     d = {"ticker": ticker}

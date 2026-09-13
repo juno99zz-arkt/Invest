@@ -710,6 +710,7 @@ function openReport(tk) {
         ${kv('다음 실적 발표', m.next_earnings)}
         ${kv('정량 점수 (질/재무/가격/추정치)', m.quant_score && m.quant_score.score != null ? m.quant_score.score + ' (' + [m.quant_score.quality, m.quant_score.health, m.quant_score.value, m.quant_score.revisions].join('/') + ')' : null)}
         ${(m.dashboard_signals || []).length ? '<div class="text-xs mt-2" style="color:#86efac;line-height:1.6;">대시보드 신호: ' + esc(m.dashboard_signals.join(' · ')) + '</div>' : ''}
+        ${m.cycle_check ? '<div class="text-xs mt-2" style="color:#fcd34d;line-height:1.6;">⚠️ ' + esc(m.cycle_check) + '</div>' : ''}
       </div>
 
       <div class="card p-4 mb-3">
