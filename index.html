@@ -481,7 +481,9 @@ function logicHelpHtml(L) {
          · 가격 매력 ${w.value}% — 12개월 추정 PER·FCF 수익률(같은 섹터 내 비교)·PEG<br>
          · 추정치 흐름 ${w.revisions}% — 내년 EPS 컨센서스 30일·90일 변화, 상향 대비 하향 건수`)}
       ${step(4, '가산점과 할인',
-        `· +${L.signal_bonus}점(신호별): 대가 5인 상위 10 보유 / 대가 최근분기 매수 / 실적 개선 기업(M3) / 최근 14일 내부자 장내 매수<br>
+        `· +${L.signal_points.turnaround}점: 흑자전환 임박으로 기본 조건 통과<br>
+         · +${L.signal_points.guru_buy}점: 대가 5인 최근분기 매수 &nbsp;· +${L.signal_points.insider_buy}점: 최근 14일 내부자 장내 매수<br>
+         · +${L.signal_points.guru_top10}점: 대가 5인 상위 10 보유 &nbsp;· +${L.signal_points.m3}점: 실적 개선 기업(M3)<br>
          · −${L.guru_sell_penalty}점: 대가 5인 최근분기 매도<br>
          &nbsp;&nbsp;(매수·매도 = 비중 ${L.guru_min_weight_pct}%↑ 종목의 신규·청산 또는 주식 수 ±${L.guru_change_pct}%↑, 주식분할 제외)<br>
          · −${L.cycle_penalty}점: 경기순환 업종 사이클 정점 — 현재 영업이익률 ≥ 최근 4년 평균×${L.cycle_ratio} 이면서 +${L.cycle_gap}%p↑ (정량 상위 ${L.cycle_pool} 중 점검)`)}

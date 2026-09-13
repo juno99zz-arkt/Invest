@@ -28,7 +28,13 @@ SWAP_CONVICTION = 5         # 만석일 때 교체하려면 후보 확신도 5 +
 # 정량 점수 영역 비중 (합계 1.0)
 WEIGHTS = {"quality": 0.25, "health": 0.20, "value": 0.25, "revisions": 0.30}
 
-SIGNAL_BONUS = 3            # 대시보드 신호 1종류당 가산점
+SIGNAL_POINTS = {           # 대시보드 신호별 가산점
+    "guru_top10": 3,        # 대가 5인 13F 상위 10 보유
+    "guru_buy": 5,          # 대가 5인 최근분기 매수 (신규·주식 수 10%↑)
+    "m3": 3,                # 실적 개선 기업
+    "insider_buy": 5,       # 최근 14일 내부자 장내 매수
+    "turnaround": 10,       # 흑자전환 임박으로 기본 조건 통과
+}
 GURU_SELL_PENALTY = 5       # 대가 5인 중 최근분기 매도(청산·주식 수 10%↓) 시 할인
 
 # 후보 다양화: 같은 업종 쏠림 방지 + 경기순환 업종의 사이클 정점 이익 할인
@@ -86,6 +92,8 @@ def quant_scores(snaps):
             "quality": round(float(quality[tk]) * 100), "health": round(float(health[tk]) * 100),
             "value": round(float(value[tk]) * 100), "revisions": round(float(revisions[tk]) * 100),
             "eligible": bool(eligible[tk]),
+            # 영업이익률은 아직 적자지만 흑자전환 임박 조건으로 자격을 얻은 종목 → 가산점 대상
+            "turnaround": bool(eligible[tk] and not (df["op_margin"].fillna(0)[tk] > 0)),
             "fcf_margin_pct": None if pd.isna(fcf_margin[tk]) else round(float(fcf_margin[tk]) * 100, 1),
             "fcf_yield_pct": None if pd.isna(fcf_yield[tk]) else round(float(fcf_yield[tk]) * 100, 2),
             "net_debt_ebitda": None if pd.isna(net_debt_ebitda[tk]) else round(float(net_debt_ebitda[tk]), 2),
@@ -94,20 +102,27 @@ def quant_scores(snaps):
 
 
 # ── 2. 후보 선정 ──────────────────────────────────────────────────
-def signal_hits(tk, m1, m3_tickers, m5):
-    """가산점 대상 신호 목록 (1종류당 SIGNAL_BONUS)."""
-    hits = []
+def _signals(tk, m1, m3_tickers, m5, scores=None):
+    """가산점 신호 [(설명, 점수)]."""
+    out = []
     if m1:
         gurus = [inv["investor"] for inv in m1["investors"] if any(r["ticker"] == tk for r in inv["top10"])]
         if gurus:
-            hits.append("M1 대가 상위보유: " + ", ".join(gurus))
+            out.append(("M1 대가 상위보유: " + ", ".join(gurus), SIGNAL_POINTS["guru_top10"]))
         if m1.get("bought_by", {}).get(tk):
-            hits.append("M1 대가 최근분기 매수: " + ", ".join(m1["bought_by"][tk]))
+            out.append(("M1 대가 최근분기 매수: " + ", ".join(m1["bought_by"][tk]), SIGNAL_POINTS["guru_buy"]))
     if tk in m3_tickers:
-        hits.append("M3 실적 개선 기업")
+        out.append(("M3 실적 개선 기업", SIGNAL_POINTS["m3"]))
     if m5 and tk in m5.get("buy_tickers", []):
-        hits.append("M5 내부자 장내 매수")
-    return hits
+        out.append(("M5 내부자 장내 매수", SIGNAL_POINTS["insider_buy"]))
+    if scores and scores.get(tk, {}).get("turnaround"):
+        out.append(("흑자전환 임박(다음 분기 EPS 컨센서스 흑자)", SIGNAL_POINTS["turnaround"]))
+    return out
+
+
+def signal_hits(tk, m1, m3_tickers, m5, scores=None):
+    """가산점 신호 설명 목록 (분석 자료·리포트 표시용)."""
+    return [f"{label} (+{pts}점)" for label, pts in _signals(tk, m1, m3_tickers, m5, scores)]
 
 
 def guru_sell_note(tk, m1):
@@ -122,7 +137,7 @@ def _ranked(scores, holdings, m1, m3_tickers, m5, cycle_notes):
     for tk, sc in scores.items():
         if tk in held or not sc["eligible"]:
             continue
-        bonus = SIGNAL_BONUS * len(signal_hits(tk, m1, m3_tickers, m5))
+        bonus = sum(pts for _, pts in _signals(tk, m1, m3_tickers, m5, scores))
         penalty = (CYCLE_PENALTY if tk in cycle_notes else 0) + (GURU_SELL_PENALTY if guru_sell_note(tk, m1) else 0)
         ranked.append((sc["score"] + bonus - penalty, tk))
     ranked.sort(reverse=True)
