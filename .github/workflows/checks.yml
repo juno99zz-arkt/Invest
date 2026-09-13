@@ -1,0 +1,20 @@
+name: Research checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - name: Dashboard JavaScript syntax
+        run: |
+          python -c "from pathlib import Path; s=Path('index.html').read_text(encoding='utf-8'); Path('/tmp/invest.js').write_text(s.split('<script>')[1].split('</script>')[0],encoding='utf-8')"
+          node --check /tmp/invest.js

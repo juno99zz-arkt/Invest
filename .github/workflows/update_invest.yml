@@ -1,34 +1,57 @@
 name: 투자 대시보드 업데이트
 
 on:
-  workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
+  workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"    # 매일 KST 17:00 (UTC 08:00) 자동 갱신
+    - cron: "0 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: invest-pages
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 25
     steps:
-      - name: 코드 체크아웃 (main)
+      - name: 코드 체크아웃
         uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Python 3.11 설정
+      - name: Python 설정
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
+          python-version: "3.12"
+          cache: pip
       - name: 의존성 설치
-        run: pip install yfinance
-
-      - name: 투자 대시보드 생성
-        run: python generate_invest.py
-
+        run: pip install -r requirements.txt
+      - name: 추천 규칙 검증
+        run: python -m unittest discover -s tests -v
+      - name: 이전 주간 기록 복원
+        shell: bash
+        run: |
+          mkdir -p _previous
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            git fetch origin gh-pages --depth=1
+            if git cat-file -e FETCH_HEAD:research.json 2>/dev/null; then
+              git show FETCH_HEAD:research.json > _previous/research.json
+            fi
+          else
+            echo "gh-pages branch unavailable" >&2
+            exit 1
+          fi
+      - name: 실제 데이터 수집 및 보고서 생성
+        run: python generate_invest.py --previous _previous/research.json
       - name: gh-pages 배포
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./dist
           publish_branch: gh-pages
+      - name: 검토용 결과 보관
+        uses: actions/upload-artifact@v4
+        with:
+          name: invest-research
+          path: dist/

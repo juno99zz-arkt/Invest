@@ -260,6 +260,66 @@ def _fetch_metrics(tickers_list):
     except ImportError:
         return None
 
+def fetch_research_stocks(tickers, now):
+    """Dated real fundamentals; errors remain explicit, with no mock fallback."""
+    import yfinance as yf
+    from datetime import datetime, timezone
+    from research_engine import number
+    result, errors = [], []
+    mapping = {"price": "currentPrice", "market_cap": "marketCap", "revenue_growth": "revenueGrowth",
+               "operating_margin": "operatingMargins", "fcf": "freeCashflow", "revenue": "totalRevenue",
+               "cash": "totalCash", "debt": "totalDebt", "ebitda": "ebitda", "forward_pe": "forwardPE",
+               "forward_eps": "forwardEps", "trailing_eps": "trailingEps"}
+    def stamp(value):
+        value = number(value)
+        return datetime.fromtimestamp(value, timezone.utc).isoformat() if value and value > 0 else None
+    for ticker, name in tickers:
+        try:
+            obj = yf.Ticker(ticker)
+            info = obj.get_info()
+            row = {key: number(info.get(value)) for key, value in mapping.items()}
+            row.update(ticker=ticker, name=info.get("shortName") or name, sector=info.get("sector"),
+                       country=info.get("country"), currency=info.get("currency"), quote_type=info.get("quoteType"),
+                       source="Yahoo Finance", fetched_at=now.isoformat(), quote_at=stamp(info.get("regularMarketTime")),
+                       financial_at=stamp(info.get("mostRecentQuarter")), eps_revision=None,
+                       business=info.get("longBusinessSummary", ""), source_url=f"https://finance.yahoo.com/quote/{ticker}/key-statistics/")
+            if row["price"] is None:
+                row["price"] = number(info.get("regularMarketPrice"))
+            try:
+                trend = obj.get_eps_trend()
+                if "0y" in trend.index:
+                    current, previous = number(trend.loc["0y", "current"]), number(trend.loc["0y", "30daysAgo"])
+                    if current is not None and previous is not None and previous > 0:
+                        row["eps_revision"] = (current - previous) / previous
+            except Exception as exc:
+                errors.append(dict(ticker=ticker, stage="EPS 전망 이력", error=type(exc).__name__))
+            result.append(row)
+            print(f"수집 {ticker}: {row['quote_at']}", flush=True)
+        except Exception as exc:
+            errors.append(dict(ticker=ticker, stage="기초 데이터", error=type(exc).__name__))
+    return result, errors
+
+
+def fetch_research_news(ticker, now):
+    """Recent provider headlines only; no invented summaries or sentiment scores."""
+    import yfinance as yf
+    from research_engine import age_days
+    items, seen = [], set()
+    for item in yf.Ticker(ticker).get_news(count=10):
+        content = item.get("content") or item
+        url = (content.get("canonicalUrl") or {}).get("url") or content.get("link")
+        date = content.get("pubDate")
+        age = age_days(date, now)
+        title = content.get("title", "")
+        if not url or not url.startswith("https://") or not title or age is None or not 0 <= age <= 14:
+            continue
+        key = title.strip().casefold()
+        if key not in seen:
+            seen.add(key)
+            items.append(dict(title=title, url=url, published_at=date, publisher=(content.get("provider") or {}).get("displayName", "Yahoo Finance")))
+    return items[:5]
+
+
 def fetch_top50_metrics():
     """미국 시총 상위 50 × 5지표 + 신호등."""
     return _fetch_metrics(TOP50_TICKERS)
