@@ -4,9 +4,9 @@ on:
   workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
     inputs:
       mode:
-        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석 / compare = Opus·Sonnet 3종목 비교 (weekly·compare는 Claude API 비용 발생)"
+        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석 / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생)"
         type: choice
-        options: [daily, weekly, compare]
+        options: [daily, weekly, compare, sec_check]
         default: daily
       compare_tickers:
         description: "compare 모드 종목 지정 (예: MSFT,V,ASML). 비우면 정량 상위 후보 3개"
@@ -41,6 +41,12 @@ jobs:
 
       - name: 의존성 설치
         run: pip install -r requirements.txt
+
+      - name: SEC 접근 점검 (비용 없음)
+        if: inputs.mode == 'sec_check'
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python sec_data.py
 
       - name: 주간 파이프라인 (신호·심층분석·추천)
         if: github.event.schedule == '0 0 * * 6' || inputs.mode == 'weekly'
