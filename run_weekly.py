@@ -14,8 +14,8 @@ from datetime import datetime, timedelta, timezone
 import analyst
 from data_fetcher import fetch_prices
 from market_data import fetch_annual_margins, fetch_details, fetch_snapshots
-from picks import (cache_entry, cycle_note, cycle_pool, decide, fresh_analysis_reason, load_cache, load_history,
-                   pick_candidates, quant_scores, save_cache, save_history, signal_hits, update_history)
+from picks import (cache_entry, cycle_note, cycle_pool, decide, fresh_analysis_reason, guru_sell_note, load_cache,
+                   load_history, pick_candidates, quant_scores, save_cache, save_history, signal_hits, update_history)
 from sec_data import check_access, fetch_13f, fetch_insider_trades
 from signals import CAPEX_TICKERS, SECTOR_KR, build_m2, build_m3, build_m4, build_m6, m3_section, m4_section
 from universe import load_universe
@@ -134,7 +134,9 @@ def main():
         })
 
         holding_by_tk = {h["ticker"]: h for h in hist["portfolio"]}
-        dossiers = [build_dossier(tk, snaps, details, scores, signal_hits(tk, m1, m3_tk, m5), holding_by_tk.get(tk), today)
+        dossiers = [build_dossier(tk, snaps, details, scores,
+                                  signal_hits(tk, m1, m3_tk, m5) + [n for n in [guru_sell_note(tk, m1)] if n],
+                                  holding_by_tk.get(tk), today)
                     for tk in held_tk + new_tk]
 
         # 변화 없는 종목은 지난 분석 재사용 (비용 절감)

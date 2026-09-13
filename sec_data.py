@@ -137,6 +137,25 @@ def _holdings(cik, accession):
     return out
 
 
+GURU_MIN_WEIGHT = 0.005   # 포트폴리오 비중 0.5% 이상 종목만 매수·매도 신호로 인정
+GURU_CHANGE = 10.0        # 주식 수 ±10% 이상 변화 (신규 편입 = +∞, 전량 청산 = -100%)
+
+
+def _share_change(before, after):
+    """직전→최근 분기 주식 수 변화율(%). 주식 분할로 보이는 정수배 변화는 0 처리."""
+    b = before["shares"] if before else 0
+    a = after["shares"] if after else 0
+    if b == 0:
+        return float("inf") if a > 0 else 0.0
+    if a == 0:
+        return -100.0
+    ratio = a / b
+    for k in (2, 3, 4, 5, 8, 10, 15, 20, 25, 50):
+        if abs(ratio - k) / k < 0.01 or abs(ratio - 1 / k) * k < 0.01:
+            return 0.0
+    return (ratio - 1) * 100
+
+
 def fetch_13f():
     if not _ua():
         print("SEC_USER_AGENT 미설정 — 13F 건너뜀")
@@ -156,7 +175,7 @@ def fetch_13f():
     if not raw:
         return None
 
-    # 표시에 필요한 CUSIP만 티커 매핑 (상위 10 + 신규/청산 주요 종목)
+    # 표시·점수에 필요한 CUSIP만 티커 매핑 (상위 10 + 신규/청산 + 비중 0.5%↑ 매수·매도 종목)
     need, prepared = set(), []
     for investor, firm, filing, cur, prev in raw:
         total, prev_total = sum(h["value"] for h in cur.values()), sum(h["value"] for h in prev.values())
@@ -165,13 +184,23 @@ def fetch_13f():
                      key=lambda kv: -kv[1]["value"])[:5]
         exited = sorted([(c, h) for c, h in prev.items() if c not in cur and h["value"] / prev_total >= 0.005],
                         key=lambda kv: -kv[1]["value"])[:5]
-        need.update(c for c, _ in top + new + exited)
-        prepared.append((investor, firm, filing, cur, prev, total, top, new, exited))
+        bought = [c for c, h in cur.items() if prev and h["value"] / total >= GURU_MIN_WEIGHT
+                  and _share_change(prev.get(c), h) >= GURU_CHANGE]
+        sold = [c for c, h in prev.items() if h["value"] / prev_total >= GURU_MIN_WEIGHT
+                and _share_change(h, cur.get(c)) <= -GURU_CHANGE]
+        need.update([c for c, _ in top + new + exited] + bought + sold)
+        prepared.append((investor, firm, filing, cur, prev, total, top, new, exited, bought, sold))
     tick = _cusip_to_ticker(need)
     label = lambda c, h: tick.get(c) or h["name"].title()
 
-    investors = []
-    for investor, firm, filing, cur, prev, total, top, new, exited in prepared:
+    investors, bought_by, sold_by = [], {}, {}
+    for investor, firm, filing, cur, prev, total, top, new, exited, bought, sold in prepared:
+        for c in bought:
+            if c in tick:
+                bought_by.setdefault(tick[c], []).append(investor)
+        for c in sold:
+            if c in tick:
+                sold_by.setdefault(tick[c], []).append(investor)
         rows = []
         for c, h in top:
             p = prev.get(c)
@@ -199,8 +228,8 @@ def fetch_13f():
             cnt, w = count.get(r["ticker"], (0, 0.0))
             count[r["ticker"]] = (cnt + 1, w + r["weight_pct"])
     common = [t for t, (cnt, w) in sorted(count.items(), key=lambda kv: (-kv[1][0], -kv[1][1])) if cnt >= 2][:3]
-    print(f"13F {len(investors)}명 수집")
-    return {"investors": investors, "common_top3": common}
+    print(f"13F {len(investors)}명 수집 · 최근분기 매수 {len(bought_by)}종목 / 매도 {len(sold_by)}종목")
+    return {"investors": investors, "common_top3": common, "bought_by": bought_by, "sold_by": sold_by}
 
 
 # ── Form 4 ───────────────────────────────────────────────────────

@@ -25,6 +25,12 @@ NEW_CANDIDATES = 8
 MIN_CONVICTION_NEW = 4      # 신규 편입 최소 확신도 (1~5)
 SWAP_CONVICTION = 5         # 만석일 때 교체하려면 후보 확신도 5 + 기존 종목 '약화'·확신도 3 이하
 
+# 정량 점수 영역 비중 (합계 1.0)
+WEIGHTS = {"quality": 0.25, "health": 0.20, "value": 0.25, "revisions": 0.30}
+
+SIGNAL_BONUS = 3            # 대시보드 신호 1종류당 가산점
+GURU_SELL_PENALTY = 5       # 대가 5인 중 최근분기 매도(청산·주식 수 10%↓) 시 할인
+
 # 후보 다양화: 같은 업종 쏠림 방지 + 경기순환 업종의 사이클 정점 이익 할인
 MAX_PER_INDUSTRY_CANDIDATES = 2
 CYCLE_POOL = 30             # 정량 상위 30 중 경기순환 업종만 연간 마진 추가 수집
@@ -66,8 +72,12 @@ def quant_scores(snaps):
              + _rank(peg, higher_better=False)) / 3
     revisions = (_rank(df["rev_30d"]) + _rank(df["rev_90d"]) + _rank(breadth)) / 3
 
-    total = (quality * 0.30 + health * 0.20 + value * 0.25 + revisions * 0.25) * 100
-    eligible = (df["forward_eps"] > 0) & (df["op_margin"].fillna(0) > 0) & (df["analysts"].fillna(0) >= 5)
+    w = WEIGHTS
+    total = (quality * w["quality"] + health * w["health"] + value * w["value"] + revisions * w["revisions"]) * 100
+    # 영업이익률 흑자, 또는 흑자전환 임박(다음 분기 EPS 컨센서스 흑자 + 최근 30일 추정치 하향 없음)
+    turnaround = (df["eps_1q"] > 0) & (df["rev_30d"] >= 0)
+    eligible = ((df["forward_eps"] > 0) & (df["analysts"].fillna(0) >= 5)
+                & ((df["op_margin"].fillna(0) > 0) | turnaround))
 
     out = {}
     for tk in df.index:
@@ -85,16 +95,25 @@ def quant_scores(snaps):
 
 # ── 2. 후보 선정 ──────────────────────────────────────────────────
 def signal_hits(tk, m1, m3_tickers, m5):
+    """가산점 대상 신호 목록 (1종류당 SIGNAL_BONUS)."""
     hits = []
     if m1:
         gurus = [inv["investor"] for inv in m1["investors"] if any(r["ticker"] == tk for r in inv["top10"])]
         if gurus:
             hits.append("M1 대가 상위보유: " + ", ".join(gurus))
+        if m1.get("bought_by", {}).get(tk):
+            hits.append("M1 대가 최근분기 매수: " + ", ".join(m1["bought_by"][tk]))
     if tk in m3_tickers:
         hits.append("M3 실적 개선 기업")
     if m5 and tk in m5.get("buy_tickers", []):
         hits.append("M5 내부자 장내 매수")
     return hits
+
+
+def guru_sell_note(tk, m1):
+    """대가 최근분기 매도 신호 (할인 대상) 또는 None."""
+    sellers = (m1 or {}).get("sold_by", {}).get(tk)
+    return f"M1 대가 최근분기 매도(-{GURU_SELL_PENALTY}점): " + ", ".join(sellers) if sellers else None
 
 
 def _ranked(scores, holdings, m1, m3_tickers, m5, cycle_notes):
@@ -103,8 +122,8 @@ def _ranked(scores, holdings, m1, m3_tickers, m5, cycle_notes):
     for tk, sc in scores.items():
         if tk in held or not sc["eligible"]:
             continue
-        bonus = 3 * len(signal_hits(tk, m1, m3_tickers, m5))
-        penalty = CYCLE_PENALTY if tk in cycle_notes else 0
+        bonus = SIGNAL_BONUS * len(signal_hits(tk, m1, m3_tickers, m5))
+        penalty = (CYCLE_PENALTY if tk in cycle_notes else 0) + (GURU_SELL_PENALTY if guru_sell_note(tk, m1) else 0)
         ranked.append((sc["score"] + bonus - penalty, tk))
     ranked.sort(reverse=True)
     return [tk for _, tk in ranked]

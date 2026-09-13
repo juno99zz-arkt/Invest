@@ -102,6 +102,9 @@
   .toast.show { display: block; }
 
   /* 추천 포트폴리오 / 심층 리포트 */
+  .help-btn { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #3b82f6; background: #1e3a5f; color: #93c5fd; font-size: 12px; font-weight: 700; line-height: 1; cursor: pointer; padding: 0; }
+  .help-btn[aria-expanded="true"] { background: #3b82f6; color: #fff; }
+  #logic-help[hidden] { display: none; }
   .pick-card { cursor: pointer; transition: border-color 0.2s; }
   .pick-card:hover { border-color: #3b82f6; }
   .score-chip { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; color: var(--muted); background: #0f1117; border-radius: 6px; padding: 2px 6px; }
@@ -459,6 +462,52 @@ function hasReport(tk) {
   return !!(r && r.analyses && r.analyses[tk] && r.analyses[tk].analysis);
 }
 
+// ── 추천 로직 설명 ('?' 버튼) — 값은 서버 설정값(summary.logic) 그대로 ────
+function logicHelpHtml(L) {
+  const w = L.weights;
+  const step = (n, title, body) => `
+    <div class="card2 p-3 mb-2">
+      <div class="text-xs font-bold mb-1" style="color:#93c5fd;">${n}. ${title}</div>
+      <div class="text-xs" style="color:#cbd5e1;line-height:1.7;">${body}</div>
+    </div>`;
+  return `
+    <div id="logic-help" hidden class="mb-3">
+      ${step(1, '후보 범위', 'S&amp;P 500 + 나스닥 100 전 종목(약 520개). 격주 토요일 09:00(KST)에 실행합니다.')}
+      ${step(2, '기본 조건 (하나라도 어긋나면 제외)',
+        '· 향후 12개월 추정 EPS 흑자<br>· 애널리스트 5명 이상 커버<br>· 영업이익률 흑자, <b>또는</b> 흑자전환 임박(다음 분기 EPS 컨센서스 흑자 + 최근 30일 추정치 하향 없음)')}
+      ${step(3, '정량 점수 (0~100, 유니버스 내 백분위)',
+        `· 기업의 질 ${w.quality}% — 매출총이익률·영업이익률·ROE·FCF 마진·매출 성장·내년 EPS 성장 예상<br>
+         · 재무 건전성 ${w.health}% — 순부채/EBITDA·FCF 흑자 여부<br>
+         · 가격 매력 ${w.value}% — 12개월 추정 PER·FCF 수익률(같은 섹터 내 비교)·PEG<br>
+         · 추정치 흐름 ${w.revisions}% — 내년 EPS 컨센서스 30일·90일 변화, 상향 대비 하향 건수`)}
+      ${step(4, '가산점과 할인',
+        `· +${L.signal_bonus}점(신호별): 대가 5인 상위 10 보유 / 대가 최근분기 매수 / 실적 개선 기업(M3) / 최근 14일 내부자 장내 매수<br>
+         · −${L.guru_sell_penalty}점: 대가 5인 최근분기 매도<br>
+         &nbsp;&nbsp;(매수·매도 = 비중 ${L.guru_min_weight_pct}%↑ 종목의 신규·청산 또는 주식 수 ±${L.guru_change_pct}%↑, 주식분할 제외)<br>
+         · −${L.cycle_penalty}점: 경기순환 업종 사이클 정점 — 현재 영업이익률 ≥ 최근 4년 평균×${L.cycle_ratio} 이면서 +${L.cycle_gap}%p↑ (정량 상위 ${L.cycle_pool} 중 점검)`)}
+      ${step(5, '심층분석 대상',
+        `점수 순으로 같은 업종 최대 ${L.industry_cap}개씩 신규 후보 ${L.new_candidates}종목 + 기존 보유 종목 전부.<br>
+         최근 ${L.reuse_days}일 내 분석은 실적 발표·주가 ±${L.reuse_price_pct}%·내년 EPS 추정치 ±${L.reuse_eps_pct}% 변화가 없으면 재사용합니다.`)}
+      ${step(6, 'Claude(Opus 5) 심층분석',
+        '웹 검색으로 최신 실적·공시·뉴스를 확인해 기업의 질 / 재무 건전성 / 가격 매력 / 6~12개월 촉매 / 반대 근거·논리 붕괴 조건을 분석하고 판정(편입 적합·관찰·부적합)과 확신도(1~5)를 매깁니다.')}
+      ${step(7, '편입 · 유지 · 제외 규칙',
+        `· 신규편입: 편입 적합 + 확신도 ${L.min_conviction} 이상, 섹터당 최대 ${L.sector_cap}종목, 전체 최대 ${L.max_holdings}종목<br>
+         · 유지: 투자 논리 유효·약화 (주가 하락만으로는 제외하지 않음)<br>
+         · 제외: 투자 논리 붕괴 또는 부적합 판정<br>
+         · 교체: 만석일 때 확신도 ${L.swap_conviction} 후보가 '약화'·확신도 3 이하 보유 종목을 대체<br>
+         · 기준을 넘는 종목이 없으면 억지로 채우지 않습니다.`)}
+      <div class="text-xs px-1" style="color:var(--muted);line-height:1.6;">가중치·가산점은 장기투자 원칙에 따른 설계값이며 과거 수익률로 검증(백테스트)한 값은 아닙니다.</div>
+    </div>`;
+}
+
+function toggleLogicHelp() {
+  const box = document.getElementById('logic-help');
+  const btn = document.getElementById('logic-help-btn');
+  if (!box) return;
+  box.hidden = !box.hidden;
+  if (btn) btn.setAttribute('aria-expanded', String(!box.hidden));
+}
+
 // ── 종합(주간 추천) 렌더링 ───────────────────────────────────────
 function loadSummary(d) {
   document.getElementById('header-date').textContent = d.date + ' 기준';
@@ -517,10 +566,14 @@ function loadSummary(d) {
   const portfolioHtml = `
     <div class="card p-4 mb-3">
       <div class="flex items-center justify-between mb-1">
-        <div class="text-sm font-bold">장기 추천 포트폴리오</div>
-        <span class="text-xs" style="color:var(--muted);">${(d.portfolio || []).length} / 5</span>
+        <div class="flex items-center gap-2">
+          <div class="text-sm font-bold">장기 추천 포트폴리오</div>
+          ${d.logic ? '<button class="help-btn" onclick="toggleLogicHelp()" aria-expanded="false" id="logic-help-btn" title="추천 로직 보기">?</button>' : ''}
+        </div>
+        <span class="text-xs" style="color:var(--muted);">${(d.portfolio || []).length} / ${d.logic ? d.logic.max_holdings : 5}</span>
       </div>
       <div class="text-xs mb-3" style="color:var(--muted);line-height:1.5;">6개월+ 보유 목표 · 격주 투자 논리 재점검 · 편입가 대비 수익률 (아래는 같은 기간 SPY)</div>
+      ${d.logic ? logicHelpHtml(d.logic) : ''}
       ${cards || '<div class="text-xs p-3 card2" style="color:var(--muted);line-height:1.6;">아직 편입된 종목이 없습니다. 기준(편입 적합 + 확신도 4 이상)을 충족하는 종목이 나올 때만 편입합니다.</div>'}
       ${cards ? '<div class="text-xs mt-2" style="color:var(--muted);">종목을 누르면 심층분석 리포트가 열립니다.</div>' : ''}
     </div>`;
