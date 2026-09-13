@@ -187,7 +187,7 @@ def _details(ticker):
         d["next_earnings"] = None
 
     try:
-        hist = t.history(period="1y")["Close"]
+        hist = t.history(period="1y")["Close"].dropna()  # 빈 거래일 NaN 이 JSON 에 섞이지 않도록
         last = float(hist.iloc[-1])
         d["return_1y_pct"] = round(_pct_change(last, float(hist.iloc[0])), 1)
         d["from_52w_high_pct"] = round(_pct_change(last, float(hist.max())), 1)
