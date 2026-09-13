@@ -649,6 +649,7 @@ function openReport(tk) {
         <span class="badge ${VERDICT_BADGE[a.verdict] || 'badge-gray'}">${esc(a.verdict)}</span>
         <span class="score-chip">확신 <span class="score-dots" style="color:#f59e0b;">${dots(a.conviction)}</span></span>
         ${dec ? '<span class="badge ' + (ACTION_BADGE[dec.action] || 'badge-gray') + '">이번 주 ' + esc(dec.action) + '</span>' : ''}
+        ${rep.analyses[tk].reused_from ? '<span class="badge badge-gray">' + esc(rep.analyses[tk].reused_from) + ' 분석 재사용</span>' : ''}
       </div>
     </div>
     <div class="p-3">

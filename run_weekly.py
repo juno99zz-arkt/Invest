@@ -14,7 +14,8 @@ from datetime import datetime, timedelta, timezone
 import analyst
 from data_fetcher import fetch_prices
 from market_data import fetch_details, fetch_snapshots
-from picks import decide, load_history, pick_candidates, quant_scores, save_history, signal_hits, update_history
+from picks import (cache_entry, decide, fresh_analysis_reason, load_cache, load_history, pick_candidates,
+                   quant_scores, save_cache, save_history, signal_hits, update_history)
 from sec_data import fetch_13f, fetch_insider_trades
 from signals import CAPEX_TICKERS, SECTOR_KR, build_m2, build_m3, build_m4, build_m6, m3_section, m4_section
 from universe import load_universe
@@ -125,23 +126,43 @@ def main():
         holding_by_tk = {h["ticker"]: h for h in hist["portfolio"]}
         dossiers = [build_dossier(tk, snaps, details, scores, signal_hits(tk, m1, m3_tk, m5), holding_by_tk.get(tk), today)
                     for tk in held_tk + new_tk]
-        print(f"심층분석 {len(dossiers)}종목 (보유 {len(held_tk)} + 후보 {len(new_tk)})")
+
+        # 변화 없는 종목은 지난 분석 재사용 (비용 절감)
+        cache = load_cache()
+        fresh_reason = {d["ticker"]: fresh_analysis_reason(cache.get(d["ticker"]), snaps[d["ticker"]],
+                                                           holding_by_tk.get(d["ticker"]), today) for d in dossiers}
+        to_run = [d for d in dossiers if fresh_reason[d["ticker"]]]
+        reused = {tk: cache[tk] for tk, r in fresh_reason.items() if r is None}
+        print(f"심층분석 대상 {len(dossiers)}종목 (보유 {len(held_tk)} + 후보 {len(new_tk)}) → 신규 분석 {len(to_run)} / 재사용 {len(reused)}")
         with ThreadPoolExecutor(max_workers=3) as ex:
-            analyses = dict(zip([d["ticker"] for d in dossiers], ex.map(analyst.analyze_stock, dossiers)))
-    if analyst.available() and analyses and all(a is None for a in analyses.values()):
+            fresh = dict(zip([d["ticker"] for d in to_run], ex.map(analyst.analyze_stock, to_run)))
+        analyses = {**{tk: c["analysis"] for tk, c in reused.items()}, **fresh}
+
+    if analyst.available() and fresh and all(a is None for a in fresh.values()):
         # API 키·요청 오류 등 전면 실패: 추천 이력을 '분석 실패' 기록으로 오염시키지 않고 신호만 배포
         print("::error::Claude 심층분석이 전부 실패 — 추천 이력 갱신 건너뜀 (API 키·요청 오류 확인)")
         weekly["status"]["claude"] = False
     elif analyst.available():
+        for tk, a in fresh.items():
+            if a is not None:
+                cache[tk] = cache_entry(a, snaps[tk], details.get(tk, {}), today)
+        save_cache(cache, today)
+
         kept, decisions, removed = decide(hist["portfolio"], new_tk, analyses, snaps, scores, today)
+        for dcs in decisions:
+            if dcs["ticker"] in reused:
+                dcs["reason"] = (f"[{reused[dcs['ticker']]['analyzed_date']} 분석 재사용 — 이후 실적 발표·큰 주가 변동·"
+                                 f"추정치 급변 없음] " + dcs["reason"])
         hist = update_history(hist, week, today, kept, decisions, removed, snaps, spy)
         save_history(hist)
 
         dossier_by_tk = {d["ticker"]: d for d in dossiers}
         report = {
             "week": week, "date": today, "spy_price": spy,
-            "candidates": [{"ticker": tk, "role": "보유" if tk in held_tk else "신규후보", **scores[tk]} for tk in held_tk + new_tk],
-            "analyses": {tk: {"analysis": a, "metrics": {k: v for k, v in dossier_by_tk[tk].items() if k != "holding"}}
+            "candidates": [{"ticker": tk, "role": "보유" if tk in held_tk else "신규후보", **scores[tk],
+                            "analysis": "재사용" if tk in reused else fresh_reason[tk]} for tk in held_tk + new_tk],
+            "analyses": {tk: {"analysis": a, "metrics": {k: v for k, v in dossier_by_tk[tk].items() if k != "holding"},
+                              "reused_from": reused[tk]["analyzed_date"] if tk in reused else None}
                          for tk, a in analyses.items()},
             "decisions": decisions,
             "usage": analyst.usage_summary(),
