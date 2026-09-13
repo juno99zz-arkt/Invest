@@ -13,9 +13,9 @@ from datetime import datetime, timedelta, timezone
 
 import analyst
 from data_fetcher import fetch_prices
-from market_data import fetch_details, fetch_snapshots
-from picks import (cache_entry, decide, fresh_analysis_reason, load_cache, load_history, pick_candidates,
-                   quant_scores, save_cache, save_history, signal_hits, update_history)
+from market_data import fetch_annual_margins, fetch_details, fetch_snapshots
+from picks import (cache_entry, cycle_note, cycle_pool, decide, fresh_analysis_reason, guru_sell_note, load_cache,
+                   load_history, pick_candidates, quant_scores, save_cache, save_history, signal_hits, update_history)
 from sec_data import check_access, fetch_13f, fetch_insider_trades
 from signals import CAPEX_TICKERS, SECTOR_KR, build_m2, build_m3, build_m4, build_m6, m3_section, m4_section
 from universe import load_universe
@@ -73,6 +73,7 @@ def build_dossier(tk, snaps, details, scores, hits, holding, today):
         "next_earnings": d.get("next_earnings"),
         "return_1y_pct": d.get("return_1y_pct"), "from_52w_high_pct": d.get("from_52w_high_pct"),
         "quant_score": {k: q.get(k) for k in ("score", "quality", "health", "value", "revisions")},
+        "cycle_check": q.get("cycle_note"),
         "dashboard_signals": hits,
         "holding": None,
     }
@@ -104,7 +105,15 @@ def main():
     scores = quant_scores(snaps)
 
     hist = load_history()
-    held_tk, new_tk = pick_candidates(scores, snaps, hist["portfolio"], m1, m3_tk, m5)
+    # 경기순환 업종은 사이클 정점 이익(높은 마진·낮은 PER) 할인 후 후보 선정
+    pool = cycle_pool(scores, snaps, hist["portfolio"], m1, m3_tk, m5)
+    margins = fetch_annual_margins(pool)
+    cycle_notes = {tk: note for tk in pool if (note := cycle_note(snaps[tk], margins.get(tk, [])))}
+    for tk, note in cycle_notes.items():
+        scores[tk]["cycle_note"] = note
+        print(f"  {tk}: {note}")
+    held_tk, new_tk = pick_candidates(scores, snaps, hist["portfolio"], m1, m3_tk, m5, cycle_notes)
+    print("신규 후보:", new_tk)
     details = fetch_details(held_tk + new_tk + m3_tk + m4_tk + CAPEX_TICKERS)
     m6 = build_m6(snaps, details)
 
@@ -125,7 +134,9 @@ def main():
         })
 
         holding_by_tk = {h["ticker"]: h for h in hist["portfolio"]}
-        dossiers = [build_dossier(tk, snaps, details, scores, signal_hits(tk, m1, m3_tk, m5), holding_by_tk.get(tk), today)
+        dossiers = [build_dossier(tk, snaps, details, scores,
+                                  signal_hits(tk, m1, m3_tk, m5) + [n for n in [guru_sell_note(tk, m1)] if n],
+                                  holding_by_tk.get(tk), today)
                     for tk in held_tk + new_tk]
 
         # 변화 없는 종목은 지난 분석 재사용 (비용 절감)

@@ -19,6 +19,8 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 sys.path.insert(0, BASE_DIR)
 
 from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_kr_top50_metrics, fetch_prices
+import picks
+import sec_data
 
 KST = timezone(timedelta(hours=9))
 STANCE_LEVEL = {"공격적 매수": 1, "선별적 매수": 2, "중립": 3, "방어적": 4}
@@ -132,6 +134,19 @@ def build_summary(weekly, hist, report):
         "weeks": hist.get("weeks", [])[-12:],
         "closed": hist.get("closed", []),
         "brief_text": "\n".join(lines),
+        # 화면 '?' 로직 설명용 — 실제 코드 설정값을 그대로 전달
+        "logic": {
+            "weights": {k: round(v * 100) for k, v in picks.WEIGHTS.items()},
+            "new_candidates": picks.NEW_CANDIDATES, "industry_cap": picks.MAX_PER_INDUSTRY_CANDIDATES,
+            "signal_bonus": picks.SIGNAL_BONUS, "guru_sell_penalty": picks.GURU_SELL_PENALTY,
+            "guru_min_weight_pct": sec_data.GURU_MIN_WEIGHT * 100, "guru_change_pct": sec_data.GURU_CHANGE,
+            "cycle_pool": picks.CYCLE_POOL, "cycle_penalty": picks.CYCLE_PENALTY,
+            "cycle_ratio": picks.CYCLE_MARGIN_RATIO, "cycle_gap": picks.CYCLE_MARGIN_GAP,
+            "max_holdings": picks.MAX_HOLDINGS, "sector_cap": picks.MAX_PER_SECTOR,
+            "min_conviction": picks.MIN_CONVICTION_NEW, "swap_conviction": picks.SWAP_CONVICTION,
+            "reuse_days": picks.REUSE_MAX_DAYS, "reuse_price_pct": round(picks.REUSE_PRICE_MOVE * 100),
+            "reuse_eps_pct": round(picks.REUSE_EPS_MOVE * 100),
+        },
     }
 
 
