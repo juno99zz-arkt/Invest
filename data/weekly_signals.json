@@ -1,0 +1,1422 @@
+{
+ "built_at_kst": "2026-09-13 16:26",
+ "week": "2026-W37",
+ "universe_size": 518,
+ "m1": {
+  "investors": [
+   {
+    "investor": "Warren Buffett",
+    "firm": "Berkshire Hathaway",
+    "filed_date": "2026-08-14",
+    "report_date": "2026-06-30",
+    "top10": [
+     {
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "weight_pct": 22.0,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "AXP",
+      "name": "American Express Co",
+      "weight_pct": 17.1,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "KO",
+      "name": "Coca Cola Co",
+      "weight_pct": 10.9,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc",
+      "weight_pct": 9.4,
+      "change": 45.2,
+      "flag": "증가"
+     },
+     {
+      "ticker": "BAC",
+      "name": "Bank Of Amer Corp",
+      "weight_pct": 9.2,
+      "change": -5.9,
+      "flag": "감소"
+     },
+     {
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "weight_pct": 4.7,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "OXY",
+      "name": "Occidental Pete Corp",
+      "weight_pct": 4.3,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "Chubb Limited",
+      "name": "Chubb Limited",
+      "weight_pct": 3.9,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "MCO",
+      "name": "Moodys Corp",
+      "weight_pct": 3.7,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc",
+      "weight_pct": 3.2,
+      "change": 658.3,
+      "flag": "증가"
+     }
+    ],
+    "new_positions": [
+     "DHI"
+    ],
+    "exited_positions": []
+   },
+   {
+    "investor": "Bill Ackman",
+    "firm": "Pershing Square",
+    "filed_date": "2026-05-15",
+    "report_date": "2026-03-31",
+    "top10": [
+     {
+      "ticker": "BN",
+      "name": "Brookfield Corp",
+      "weight_pct": 17.6,
+      "change": -2.8,
+      "flag": "유지"
+     },
+     {
+      "ticker": "AMZN",
+      "name": "Amazon Com Inc",
+      "weight_pct": 17.4,
+      "change": 19.2,
+      "flag": "증가"
+     },
+     {
+      "ticker": "UBER",
+      "name": "Uber Technologies Inc",
+      "weight_pct": 15.7,
+      "change": -0.8,
+      "flag": "유지"
+     },
+     {
+      "ticker": "MSFT",
+      "name": "Microsoft Corp",
+      "weight_pct": 15.3,
+      "change": "NEW",
+      "flag": "신규"
+     },
+     {
+      "ticker": "QSR",
+      "name": "Restaurant Brands Intl Inc",
+      "weight_pct": 12.2,
+      "change": -1.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "META",
+      "name": "Meta Platforms Inc",
+      "weight_pct": 11.1,
+      "change": -0.5,
+      "flag": "유지"
+     },
+     {
+      "ticker": "HHH",
+      "name": "Howard Hughes Holdings Inc",
+      "weight_pct": 8.7,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "SEG",
+      "name": "Seaport Entmt Group Inc",
+      "weight_pct": 0.8,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc",
+      "weight_pct": 0.7,
+      "change": -94.9,
+      "flag": "감소"
+     },
+     {
+      "ticker": "HTZ",
+      "name": "Hertz Global Hldgs Inc",
+      "weight_pct": 0.5,
+      "change": 0.0,
+      "flag": "유지"
+     }
+    ],
+    "new_positions": [
+     "MSFT"
+    ],
+    "exited_positions": [
+     "HLT"
+    ]
+   },
+   {
+    "investor": "Cathie Wood",
+    "firm": "ARK Invest",
+    "filed_date": "2026-08-14",
+    "report_date": "2026-06-30",
+    "top10": [
+     {
+      "ticker": "TSLA",
+      "name": "Tesla Inc",
+      "weight_pct": 7.5,
+      "change": -2.5,
+      "flag": "유지"
+     },
+     {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices Inc",
+      "weight_pct": 5.3,
+      "change": -47.8,
+      "flag": "감소"
+     },
+     {
+      "ticker": "SPCX",
+      "name": "Space Exploration Technologies Corp",
+      "weight_pct": 5.0,
+      "change": "NEW",
+      "flag": "신규"
+     },
+     {
+      "ticker": "TEM",
+      "name": "Tempus Ai Inc",
+      "weight_pct": 3.8,
+      "change": 4.3,
+      "flag": "유지"
+     },
+     {
+      "ticker": "HOOD",
+      "name": "Robinhood Markets Inc",
+      "weight_pct": 3.4,
+      "change": -12.8,
+      "flag": "감소"
+     },
+     {
+      "ticker": "Crispr Therapeutics Ag",
+      "name": "Crispr Therapeutics Ag",
+      "weight_pct": 3.4,
+      "change": -16.4,
+      "flag": "감소"
+     },
+     {
+      "ticker": "SHOP",
+      "name": "Shopify Inc",
+      "weight_pct": 3.1,
+      "change": -0.5,
+      "flag": "유지"
+     },
+     {
+      "ticker": "TWST",
+      "name": "Twist Bioscience Corp",
+      "weight_pct": 3.0,
+      "change": -28.3,
+      "flag": "감소"
+     },
+     {
+      "ticker": "TXG",
+      "name": "10X Genomics Inc",
+      "weight_pct": 2.5,
+      "change": -14.6,
+      "flag": "감소"
+     },
+     {
+      "ticker": "AMZN",
+      "name": "Amazon.Com Inc",
+      "weight_pct": 2.5,
+      "change": 17.4,
+      "flag": "증가"
+     }
+    ],
+    "new_positions": [
+     "SPCX",
+     "CBRS",
+     "XE",
+     "SNOW",
+     "GOOGL"
+    ],
+    "exited_positions": []
+   },
+   {
+    "investor": "Stan Druckenmiller",
+    "firm": "Duquesne Family Office",
+    "filed_date": "2026-08-14",
+    "report_date": "2026-06-30",
+    "top10": [
+     {
+      "ticker": "NTRA",
+      "name": "Natera Inc",
+      "weight_pct": 19.9,
+      "change": 4.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor Manufac",
+      "weight_pct": 6.5,
+      "change": 19.1,
+      "flag": "증가"
+     },
+     {
+      "ticker": "STM",
+      "name": "Stmicroelectronics N V",
+      "weight_pct": 5.3,
+      "change": 18.8,
+      "flag": "증가"
+     },
+     {
+      "ticker": "INSM",
+      "name": "Insmed Inc",
+      "weight_pct": 3.5,
+      "change": 23.4,
+      "flag": "증가"
+     },
+     {
+      "ticker": "YPF",
+      "name": "Ypf Sociedad Anonima",
+      "weight_pct": 3.3,
+      "change": -3.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "AMZN",
+      "name": "Amazon Com Inc",
+      "weight_pct": 3.0,
+      "change": 1082.5,
+      "flag": "증가"
+     },
+     {
+      "ticker": "Bbb Foods Inc",
+      "name": "Bbb Foods Inc",
+      "weight_pct": 2.8,
+      "change": -6.7,
+      "flag": "감소"
+     },
+     {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc",
+      "weight_pct": 2.8,
+      "change": "NEW",
+      "flag": "신규"
+     },
+     {
+      "ticker": "EWZ",
+      "name": "Ishares Inc",
+      "weight_pct": 2.7,
+      "change": 0.0,
+      "flag": "유지"
+     },
+     {
+      "ticker": "Seagate Technology Hldngs Pl",
+      "name": "Seagate Technology Hldngs Pl",
+      "weight_pct": 2.7,
+      "change": 140.6,
+      "flag": "증가"
+     }
+    ],
+    "new_positions": [
+     "GOOGL",
+     "FOXA",
+     "CDW",
+     "Bitdeer Technologies Group",
+     "DAL"
+    ],
+    "exited_positions": [
+     "AVGO",
+     "OPCH",
+     "FIGR",
+     "QSR",
+     "LSCC"
+    ]
+   },
+   {
+    "investor": "Chase Coleman",
+    "firm": "Tiger Global",
+    "filed_date": "2026-08-14",
+    "report_date": "2026-06-30",
+    "top10": [
+     {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor Manufac",
+      "weight_pct": 9.7,
+      "change": -12.3,
+      "flag": "감소"
+     },
+     {
+      "ticker": "AMZN",
+      "name": "Amazon Com Inc",
+      "weight_pct": 9.6,
+      "change": -3.2,
+      "flag": "유지"
+     },
+     {
+      "ticker": "NVDA",
+      "name": "Nvidia Corporation",
+      "weight_pct": 9.3,
+      "change": -6.8,
+      "flag": "감소"
+     },
+     {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc",
+      "weight_pct": 8.7,
+      "change": -45.4,
+      "flag": "감소"
+     },
+     {
+      "ticker": "META",
+      "name": "Meta Platforms Inc",
+      "weight_pct": 6.6,
+      "change": -8.5,
+      "flag": "감소"
+     },
+     {
+      "ticker": "LRCX",
+      "name": "Lam Research Corp",
+      "weight_pct": 5.7,
+      "change": -18.9,
+      "flag": "감소"
+     },
+     {
+      "ticker": "SE",
+      "name": "Sea Ltd",
+      "weight_pct": 5.0,
+      "change": -18.5,
+      "flag": "감소"
+     },
+     {
+      "ticker": "AMAT",
+      "name": "Applied Matls Inc",
+      "weight_pct": 4.9,
+      "change": -1.5,
+      "flag": "유지"
+     },
+     {
+      "ticker": "GEV",
+      "name": "Ge Vernova Inc",
+      "weight_pct": 3.9,
+      "change": -18.0,
+      "flag": "감소"
+     },
+     {
+      "ticker": "MSFT",
+      "name": "Microsoft Corp",
+      "weight_pct": 3.5,
+      "change": -9.3,
+      "flag": "감소"
+     }
+    ],
+    "new_positions": [
+     "CBRS",
+     "AMD",
+     "Seagate Technology Hldngs Pl",
+     "V",
+     "DHR"
+    ],
+    "exited_positions": [
+     "APP",
+     "Z",
+     "NFLX",
+     "ZS",
+     "PCOR"
+    ]
+   }
+  ],
+  "common_top3": [
+   "AMZN",
+   "GOOGL",
+   "MSFT"
+  ]
+ },
+ "m2": {
+  "sectors": [
+   {
+    "sector": "Real Estate",
+    "sector_kr": "부동산",
+    "stocks": 29,
+    "eps_revision_pct_30d": 1.04,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.49,
+    "momentum": "↑상승중",
+    "sparkline": [
+     0.0,
+     0.0,
+     -0.13,
+     0.13,
+     0.67
+    ]
+   },
+   {
+    "sector": "Technology",
+    "sector_kr": "IT·기술",
+    "stocks": 90,
+    "eps_revision_pct_30d": 0.83,
+    "eps_revision_pct_7d": 0.06,
+    "upgrade_ratio": 0.78,
+    "momentum": "↑상승중",
+    "sparkline": [
+     0.0,
+     0.16,
+     1.33,
+     3.52,
+     3.95
+    ]
+   },
+   {
+    "sector": "Energy",
+    "sector_kr": "에너지",
+    "stocks": 21,
+    "eps_revision_pct_30d": 0.3,
+    "eps_revision_pct_7d": 0.48,
+    "upgrade_ratio": 0.69,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     -0.35,
+     0.86,
+     0.79,
+     1.4
+    ]
+   },
+   {
+    "sector": "Industrials",
+    "sector_kr": "산업재",
+    "stocks": 80,
+    "eps_revision_pct_30d": 0.18,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.76,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.09,
+     1.24,
+     2.21,
+     2.31
+    ]
+   },
+   {
+    "sector": "Communication Services",
+    "sector_kr": "커뮤니케이션",
+    "stocks": 24,
+    "eps_revision_pct_30d": 0.15,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.47,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.23,
+     -0.0,
+     -0.55,
+     -0.3
+    ]
+   },
+   {
+    "sector": "Consumer Cyclical",
+    "sector_kr": "경기소비재",
+    "stocks": 56,
+    "eps_revision_pct_30d": 0.05,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.59,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     -0.0,
+     0.09,
+     0.37,
+     0.43
+    ]
+   },
+   {
+    "sector": "Healthcare",
+    "sector_kr": "헬스케어",
+    "stocks": 60,
+    "eps_revision_pct_30d": 0.03,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.7,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.0,
+     0.43,
+     0.86,
+     0.86
+    ]
+   },
+   {
+    "sector": "Financial Services",
+    "sector_kr": "금융",
+    "stocks": 68,
+    "eps_revision_pct_30d": 0.03,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.68,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.1,
+     0.76,
+     0.92,
+     0.9
+    ]
+   },
+   {
+    "sector": "Utilities",
+    "sector_kr": "유틸리티",
+    "stocks": 31,
+    "eps_revision_pct_30d": -0.0,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.51,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.01,
+     0.09,
+     -0.0,
+     0.03
+    ]
+   },
+   {
+    "sector": "Consumer Defensive",
+    "sector_kr": "필수소비재",
+    "stocks": 34,
+    "eps_revision_pct_30d": -0.03,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.58,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.02,
+     0.09,
+     0.07,
+     0.1
+    ]
+   },
+   {
+    "sector": "Basic Materials",
+    "sector_kr": "소재",
+    "stocks": 20,
+    "eps_revision_pct_30d": -0.03,
+    "eps_revision_pct_7d": -0.01,
+    "upgrade_ratio": 0.55,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.24,
+     -0.37,
+     -0.3,
+     -1.67
+    ]
+   }
+  ]
+ },
+ "m3": {
+  "companies": [
+   {
+    "rank": 1,
+    "ticker": "SMCI",
+    "name": "Super Micro Computer, Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 26,
+    "revenue_growth_pct": 93.2,
+    "earnings_growth_pct": 434.7,
+    "eps_revision_30d": 38.05,
+    "eps_revision_90d": 43.59,
+    "up_30d": 8.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     4.0,
+     3.6,
+     3.7,
+     6.1,
+     13.4
+    ],
+    "eps_surprises": [
+     -10.1,
+     41.4,
+     34.5,
+     77.6
+    ],
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "rank": 2,
+    "ticker": "ALAB",
+    "name": "Astera Labs, Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 51,
+    "revenue_growth_pct": 104.5,
+    "earnings_growth_pct": 186.2,
+    "eps_revision_30d": 41.1,
+    "eps_revision_90d": 51.98,
+    "up_30d": 20.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     20.7,
+     24.0,
+     24.7,
+     20.1,
+     22.7
+    ],
+    "eps_surprises": [
+     25.6,
+     12.6,
+     13.5,
+     15.6
+    ],
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "rank": 3,
+    "ticker": "TER",
+    "name": "Teradyne, Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 59,
+    "revenue_growth_pct": 103.9,
+    "earnings_growth_pct": 385.8,
+    "eps_revision_30d": 13.31,
+    "eps_revision_90d": 22.49,
+    "up_30d": 15.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     14.3,
+     19.7,
+     28.5,
+     37.1,
+     33.2
+    ],
+    "eps_surprises": [
+     7.4,
+     30.1,
+     20.9,
+     20.3
+    ],
+    "next_earnings": "2026-10-22"
+   },
+   {
+    "rank": 4,
+    "ticker": "DELL",
+    "name": "Dell Technologies Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 361,
+    "revenue_growth_pct": 57.7,
+    "earnings_growth_pct": 272.9,
+    "eps_revision_30d": 26.95,
+    "eps_revision_90d": 34.39,
+    "up_30d": 2.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     6.4,
+     8.0,
+     9.4,
+     8.6,
+     11.6
+    ],
+    "eps_surprises": [
+     4.6,
+     10.7,
+     64.0,
+     43.1
+    ],
+    "next_earnings": "2026-11-28"
+   },
+   {
+    "rank": 5,
+    "ticker": "VLO",
+    "name": "Valero Energy Corporation",
+    "sector": "에너지",
+    "market_cap_b": 112,
+    "revenue_growth_pct": 51.7,
+    "earnings_growth_pct": 453.5,
+    "eps_revision_30d": 18.71,
+    "eps_revision_90d": 56.99,
+    "up_30d": 15.0,
+    "down_30d": 2.0,
+    "op_margin_q": [
+     3.3,
+     4.7,
+     5.2,
+     5.3,
+     11.7
+    ],
+    "eps_surprises": [
+     19.9,
+     17.0,
+     33.5,
+     23.8
+    ],
+    "next_earnings": "2026-10-22"
+   },
+   {
+    "rank": 6,
+    "ticker": "WDC",
+    "name": "Western Digital Corporation",
+    "sector": "IT·기술",
+    "market_cap_b": 161,
+    "revenue_growth_pct": 43.8,
+    "earnings_growth_pct": 984.1,
+    "eps_revision_30d": 16.95,
+    "eps_revision_90d": 29.16,
+    "up_30d": 10.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     26.1,
+     28.2,
+     31.9,
+     37.0,
+     42.9
+    ],
+    "eps_surprises": [
+     12.9,
+     10.5,
+     13.6,
+     7.9
+    ],
+    "next_earnings": "2026-11-06"
+   },
+   {
+    "rank": 7,
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "IT·기술",
+    "market_cap_b": 5271,
+    "revenue_growth_pct": 105.9,
+    "earnings_growth_pct": 127.8,
+    "eps_revision_30d": 21.26,
+    "eps_revision_90d": 22.85,
+    "up_30d": 41.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     60.8,
+     63.2,
+     65.0,
+     65.6,
+     66.2
+    ],
+    "eps_surprises": [
+     3.5,
+     5.3,
+     5.5,
+     6.2
+    ],
+    "next_earnings": "2026-11-18"
+   },
+   {
+    "rank": 8,
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corporation",
+    "sector": "에너지",
+    "market_cap_b": 111,
+    "revenue_growth_pct": 53.7,
+    "earnings_growth_pct": 348.0,
+    "eps_revision_30d": 6.53,
+    "eps_revision_90d": 37.81,
+    "up_30d": 14.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     5.6,
+     4.8,
+     5.7,
+     3.0,
+     13.4
+    ],
+    "eps_surprises": [
+     -4.9,
+     50.1,
+     120.6,
+     27.1
+    ],
+    "next_earnings": "2026-11-03"
+   },
+   {
+    "rank": 9,
+    "ticker": "STX",
+    "name": "Seagate Technology Holdings PLC",
+    "sector": "IT·기술",
+    "market_cap_b": 189,
+    "revenue_growth_pct": 48.5,
+    "earnings_growth_pct": 148.8,
+    "eps_revision_30d": 27.46,
+    "eps_revision_90d": 42.28,
+    "up_30d": 15.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     23.8,
+     26.9,
+     29.9,
+     35.7,
+     43.1
+    ],
+    "eps_surprises": [
+     8.8,
+     9.6,
+     16.8,
+     12.1
+    ],
+    "next_earnings": "2026-10-28"
+   },
+   {
+    "rank": 10,
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "에너지",
+    "market_cap_b": 104,
+    "revenue_growth_pct": 53.1,
+    "earnings_growth_pct": 344.9,
+    "eps_revision_30d": 4.34,
+    "eps_revision_90d": 26.86,
+    "up_30d": 14.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     3.6,
+     2.8,
+     4.8,
+     0.4,
+     8.4
+    ],
+    "eps_surprises": [
+     16.8,
+     14.7,
+     225.7,
+     25.4
+    ],
+    "next_earnings": "2026-10-29"
+   }
+  ]
+ },
+ "m4": {
+  "companies": [
+   {
+    "rank": 1,
+    "ticker": "SPCX",
+    "name": "Space Exploration Technologies ",
+    "market_cap_b": 1993.2,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -1.1,
+    "consensus_eps": 1.55,
+    "analyst_count": 19,
+    "current_price": 151.21,
+    "projected_pe": 97.6,
+    "sig_proj_pe": "red",
+    "recent_eps": [
+     -1.27,
+     -0.09
+    ]
+   },
+   {
+    "rank": 2,
+    "ticker": "GILD",
+    "name": "Gilead Sciences, Inc.",
+    "market_cap_b": 178.2,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -2.64,
+    "consensus_eps": 9.89,
+    "analyst_count": 27,
+    "current_price": 143.72,
+    "projected_pe": 14.5,
+    "sig_proj_pe": "green",
+    "recent_eps": [
+     2.03,
+     -6.75
+    ]
+   },
+   {
+    "rank": 3,
+    "ticker": "WBD",
+    "name": "Warner Bros. Discovery, Inc. - ",
+    "market_cap_b": 70.3,
+    "turnaround_quarter": "내년 연간 흑자 예상",
+    "trailing_eps": -1.28,
+    "consensus_eps": 0.07,
+    "analyst_count": 11,
+    "current_price": 28.04,
+    "projected_pe": 400.6,
+    "sig_proj_pe": "red",
+    "recent_eps": [
+     -1.17,
+     0.06
+    ]
+   },
+   {
+    "rank": 4,
+    "ticker": "MSTR",
+    "name": "Strategy Inc",
+    "market_cap_b": 52.0,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -99.16,
+    "consensus_eps": 49.49,
+    "analyst_count": 15,
+    "current_price": 130.97,
+    "projected_pe": 2.6,
+    "sig_proj_pe": "green",
+    "recent_eps": [
+     -38.25,
+     -24.45
+    ]
+   },
+   {
+    "rank": 5,
+    "ticker": "COIN",
+    "name": "Coinbase Global, Inc.",
+    "market_cap_b": 46.2,
+    "turnaround_quarter": "다음 분기 흑자 예상",
+    "trailing_eps": -3.87,
+    "consensus_eps": 2.74,
+    "analyst_count": 29,
+    "current_price": 175.26,
+    "projected_pe": 64.0,
+    "sig_proj_pe": "red",
+    "recent_eps": [
+     -1.49,
+     -1.36
+    ]
+   },
+   {
+    "rank": 6,
+    "ticker": "TTWO",
+    "name": "Take-Two Interactive Software, ",
+    "market_cap_b": 40.3,
+    "turnaround_quarter": "다음 분기 흑자 예상",
+    "trailing_eps": -1.72,
+    "consensus_eps": 10.29,
+    "analyst_count": 29,
+    "current_price": 215.47,
+    "projected_pe": 20.9,
+    "sig_proj_pe": "yellow",
+    "recent_eps": [
+     -0.32,
+     -0.18
+    ]
+   },
+   {
+    "rank": 7,
+    "ticker": "RKLB",
+    "name": "Rocket Lab Corporation",
+    "market_cap_b": 40.3,
+    "turnaround_quarter": "내년 연간 흑자 예상",
+    "trailing_eps": -0.27,
+    "consensus_eps": 0.05,
+    "analyst_count": 18,
+    "current_price": 62.95,
+    "projected_pe": 1381.7,
+    "sig_proj_pe": "red",
+    "recent_eps": [
+     -0.07,
+     -0.08
+    ]
+   },
+   {
+    "rank": 8,
+    "ticker": "LYV",
+    "name": "Live Nation Entertainment, Inc.",
+    "market_cap_b": 39.6,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -1.11,
+    "consensus_eps": 1.89,
+    "analyst_count": 24,
+    "current_price": 170.15,
+    "projected_pe": 90.1,
+    "sig_proj_pe": "red",
+    "recent_eps": [
+     -1.85,
+     1.05
+    ]
+   },
+   {
+    "rank": 9,
+    "ticker": "ECHO",
+    "name": "EchoStar Corporation",
+    "market_cap_b": 27.1,
+    "turnaround_quarter": "올해 연간 흑자 예상",
+    "trailing_eps": -24.88,
+    "consensus_eps": 15.64,
+    "analyst_count": 8,
+    "current_price": 93.14,
+    "projected_pe": 6.0,
+    "sig_proj_pe": "green",
+    "recent_eps": [
+     -0.7087,
+     0.135
+    ]
+   },
+   {
+    "rank": 10,
+    "ticker": "DOW",
+    "name": "Dow Inc.",
+    "market_cap_b": 21.0,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -1.83,
+    "consensus_eps": 1.8,
+    "analyst_count": 16,
+    "current_price": 29.03,
+    "projected_pe": 16.1,
+    "sig_proj_pe": "yellow",
+    "recent_eps": [
+     -0.14,
+     1.44
+    ]
+   }
+  ]
+ },
+ "m5": {
+  "period": "2026-09-06 ~ 2026-09-13",
+  "buy": [
+   {
+    "ticker": "RSG",
+    "insider_name": "CASCADE INVESTMENT, L.L.C.",
+    "title": "10% 대주주",
+    "transaction": "매수",
+    "date": "2026-09-08",
+    "amount_usd": 324294707,
+    "shares": 1456107,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "UBER",
+    "insider_name": "KHOSROWSHAHI DARA",
+    "title": "Chief Executive Officer",
+    "transaction": "매수",
+    "date": "2026-09-10",
+    "amount_usd": 10005952,
+    "shares": 141000,
+    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
+    "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "UBER",
+    "insider_name": "Macdonald Andrew",
+    "title": "See Remarks",
+    "transaction": "매수",
+    "date": "2026-09-04",
+    "amount_usd": 5308064,
+    "shares": 70000,
+    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
+    "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "TSN",
+    "insider_name": "Schomburger Jeffrey K",
+    "title": "President & CEO Elect",
+    "transaction": "매수",
+    "date": "2026-09-04",
+    "amount_usd": 1001617,
+    "shares": 19450,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "MO",
+    "insider_name": "McQUADE KATHRYN B.",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-09-09",
+    "amount_usd": 101430,
+    "shares": 1500,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   }
+  ],
+  "sell": [
+   {
+    "ticker": "NVDA",
+    "insider_name": "STEVENS MARK A",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-03",
+    "amount_usd": 235636867,
+    "shares_sold_pct": 30.4,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 30.4% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   },
+   {
+    "ticker": "DELL",
+    "insider_name": "Silver Lake Partners IV, L.P.",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-09",
+    "amount_usd": 193333036,
+    "shares_sold_pct": 58.7,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 58.7% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   },
+   {
+    "ticker": "DELL",
+    "insider_name": "SL SPV-2, L.P.",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-09",
+    "amount_usd": 156082333,
+    "shares_sold_pct": 53.1,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 53.1% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   },
+   {
+    "ticker": "DELL",
+    "insider_name": "Silver Lake Partners V DE (AIV), L.P.",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-09",
+    "amount_usd": 89677438,
+    "shares_sold_pct": 55.8,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 55.8% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   },
+   {
+    "ticker": "CRWV",
+    "insider_name": "Intrator Michael N",
+    "title": "CEO and President",
+    "transaction": "매도",
+    "date": "2026-09-08",
+    "amount_usd": 30794542,
+    "shares_sold_pct": 100.0,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "DDOG",
+    "insider_name": "Pomel Olivier",
+    "title": "Chief Executive Officer",
+    "transaction": "매도",
+    "date": "2026-09-08",
+    "amount_usd": 18602602,
+    "shares_sold_pct": 13.2,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "WDAY",
+    "insider_name": "DUFFIELD DAVID A",
+    "title": "10% 대주주",
+    "transaction": "매도",
+    "date": "2026-09-04",
+    "amount_usd": 17954368,
+    "shares_sold_pct": 46.3,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "DELL",
+    "insider_name": "Saavedra Jennifer D.",
+    "title": "Chief Human Resources Officer",
+    "transaction": "매도",
+    "date": "2026-09-04",
+    "amount_usd": 13130520,
+    "shares_sold_pct": 7.8,
+    "plan_10b5_1": false,
+    "signal": "재량 매도 (보유분 대비 소규모)",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "META",
+    "insider_name": "Cox Christopher K",
+    "title": "Chief Product Officer",
+    "transaction": "매도",
+    "date": "2026-09-09",
+    "amount_usd": 13005575,
+    "shares_sold_pct": 7.6,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
+    "ticker": "WBD",
+    "insider_name": "LEVY ANTON J",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-09-03",
+    "amount_usd": 9652600,
+    "shares_sold_pct": 35.5,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 35.5% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   }
+  ],
+  "buy_tickers": [
+   "MO",
+   "RSG",
+   "TSN",
+   "UBER"
+  ]
+ },
+ "m6": {
+  "semiconductor": [
+   {
+    "ticker": "NVDA",
+    "eps_growth_last_q": 127.8,
+    "eps_growth_this_fy": 95.1,
+    "eps_growth_next_fy": 67.3,
+    "trend": "지속 성장"
+   },
+   {
+    "ticker": "AVGO",
+    "eps_growth_last_q": 215.3,
+    "eps_growth_this_fy": 70.9,
+    "eps_growth_next_fy": 66.3,
+    "trend": "지속 성장"
+   },
+   {
+    "ticker": "AMD",
+    "eps_growth_last_q": 159.5,
+    "eps_growth_this_fy": 81.4,
+    "eps_growth_next_fy": 105.0,
+    "trend": "가속 전망"
+   },
+   {
+    "ticker": "ASML",
+    "eps_growth_last_q": 28.5,
+    "eps_growth_this_fy": 54.5,
+    "eps_growth_next_fy": 35.4,
+    "trend": "둔화 전망"
+   },
+   {
+    "ticker": "MU",
+    "eps_growth_last_q": 1368.5,
+    "eps_growth_this_fy": 785.9,
+    "eps_growth_next_fy": 112.5,
+    "trend": "둔화 전망"
+   },
+   {
+    "ticker": "QCOM",
+    "eps_growth_last_q": -23.0,
+    "eps_growth_this_fy": -12.9,
+    "eps_growth_next_fy": -2.5,
+    "trend": "역성장 전망"
+   },
+   {
+    "ticker": "AMAT",
+    "eps_growth_last_q": 42.8,
+    "eps_growth_this_fy": 35.8,
+    "eps_growth_next_fy": 44.2,
+    "trend": "가속 전망"
+   }
+  ],
+  "capex": [
+   {
+    "ticker": "MSFT",
+    "capex_q_b": [
+     17.1,
+     19.4,
+     29.9,
+     30.9,
+     35.8
+    ],
+    "quarters": [
+     "2025-06",
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06"
+    ],
+    "yoy_growth_pct": 109.6
+   },
+   {
+    "ticker": "GOOGL",
+    "capex_q_b": [
+     22.4,
+     24.0,
+     27.9,
+     35.7,
+     44.9
+    ],
+    "quarters": [
+     "2025-06",
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06"
+    ],
+    "yoy_growth_pct": 100.1
+   },
+   {
+    "ticker": "AMZN",
+    "capex_q_b": [
+     25.0,
+     32.2,
+     35.1,
+     39.5,
+     44.2
+    ],
+    "quarters": [
+     "2025-03",
+     "2025-06",
+     "2025-09",
+     "2025-12",
+     "2026-03"
+    ],
+    "yoy_growth_pct": 76.7
+   },
+   {
+    "ticker": "META",
+    "capex_q_b": [
+     16.5,
+     18.8,
+     21.4,
+     19.0,
+     30.1
+    ],
+    "quarters": [
+     "2025-06",
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06"
+    ],
+    "yoy_growth_pct": 82.1
+   },
+   {
+    "ticker": "ORCL",
+    "capex_q_b": [
+     9.1,
+     8.5,
+     12.0,
+     18.6,
+     16.5
+    ],
+    "quarters": [
+     "2025-05",
+     "2025-08",
+     "2025-11",
+     "2026-02",
+     "2026-05"
+    ],
+    "yoy_growth_pct": 81.6
+   }
+  ],
+  "overall": {
+   "semiconductor_growth_trend": "성장 지속",
+   "capex_trend": "확대",
+   "bull_market_signal": "주의",
+   "summary": "반도체 7종목 중 3종목이 내년 EPS 성장 둔화·역성장 전망. 빅테크 5사 분기 CapEx 전년동기 대비 중앙값 +82%. (컨센서스·재무공시 기반 자동 판정)"
+  }
+ },
+ "market_brief": null,
+ "status": {
+  "sec": true,
+  "claude": false
+ }
+}

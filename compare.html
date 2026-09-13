@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모델 블라인드 비교</title>
+<style>
+  :root { --bg:#0f1117; --card:#1a1d2e; --card2:#232740; --border:#2d3154; --text:#e2e8f0; --muted:#94a3b8; --a:#3b82f6; --b:#a855f7; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif; margin: 0; }
+  .wrap { max-width: 520px; margin: 0 auto; padding: 12px 12px 60px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+  h1 { font-size: 17px; margin: 4px 0; color: #93c5fd; }
+  .muted { color: var(--muted); font-size: 12px; line-height: 1.6; }
+  .ticker { font-family: monospace; font-weight: 700; color: #f59e0b; font-size: 18px; }
+  details { border-top: 1px solid var(--border); padding: 8px 0; }
+  summary { cursor: pointer; font-size: 13px; font-weight: 600; padding: 4px 0; }
+  .run { background: var(--card2); border-radius: 8px; padding: 10px; margin-top: 8px; border-left: 3px solid var(--a); }
+  .run.B { border-left-color: var(--b); }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 10px; margin-bottom: 4px; }
+  .tag.A { background: #1e3a5f; color: #93c5fd; } .tag.B { background: #4c1d95; color: #d8b4fe; }
+  .txt { font-size: 12.5px; line-height: 1.65; color: #cbd5e1; }
+  .lbl { font-size: 11px; color: var(--muted); font-weight: 600; margin-top: 6px; }
+  ul { margin: 4px 0; padding-left: 16px; } li { font-size: 12.5px; line-height: 1.6; color: #cbd5e1; }
+  .dots { color: #f59e0b; letter-spacing: 1px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .vote { display: flex; gap: 6px; margin-top: 10px; }
+  .vote button, .btn { flex: 1; background: var(--card2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 9px 4px; font-size: 12px; cursor: pointer; }
+  .vote button.on { border-color: #22c55e; background: #14532d; }
+  .btn.primary { background: #1e3a5f; border-color: #3b82f6; color: #93c5fd; font-weight: 700; width: 100%; padding: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th, td { padding: 6px 4px; border-bottom: 1px solid var(--border); text-align: right; }
+  th:first-child, td:first-child { text-align: left; color: var(--muted); }
+  a { color: #93c5fd; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="card muted">불러오는 중...</div></div>
+<script>
+function esc(s) { return s == null ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? esc(u) : '#'; }
+function dots(n) { return n == null ? '—' : '●'.repeat(n) + '○'.repeat(5 - n); }
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+};
+
+let DATA, VOTES = {};
+
+function side(label, run, render) {
+  const a = run && run.analysis;
+  const body = a ? render(a) : '<div class="txt">분석 실패' + (run && run.stats && run.stats.error ? ' — ' + esc(run.stats.error) : '') + '</div>';
+  return '<div class="run ' + label + '"><span class="tag ' + label + '">모델 ' + label + '</span>' + body + '</div>';
+}
+function section(title, stock, render, open) {
+  return '<details' + (open ? ' open' : '') + '><summary>' + title + '</summary>'
+    + side('A', stock.runs.A, render) + side('B', stock.runs.B, render) + '</details>';
+}
+const field = (l, t) => t ? '<div class="lbl">' + l + '</div><div class="txt">' + esc(t) + '</div>' : '';
+const list = xs => '<ul>' + (xs || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+
+function stockCard(s, i) {
+  const m = s.metrics, v = m.valuation || {}, g = m.growth_profitability || {};
+  const head = lab => {
+    const a = s.runs[lab] && s.runs[lab].analysis;
+    return '<div class="run ' + lab + '"><span class="tag ' + lab + '">모델 ' + lab + '</span>'
+      + (a ? '<div class="txt"><b>' + esc(a.verdict) + '</b> · 확신 <span class="dots">' + dots(a.conviction) + '</span></div>'
+           + '<div class="muted">질 ' + a.quality.score + ' · 재무 ' + a.financial_health.score + ' · 가격 ' + a.valuation.score
+           + ' · 촉매 ' + a.catalysts.length + '개 · 출처 ' + a.sources.length + '개</div>'
+         : '<div class="txt">분석 실패</div>') + '</div>';
+  };
+  const vote = VOTES[s.ticker];
+  const vb = (val, text) => '<button class="' + (vote === val ? 'on' : '') + '" onclick="castVote(\'' + esc(s.ticker) + '\',\'' + val + '\')">' + text + '</button>';
+  return '<div class="card">'
+    + '<div><span class="ticker">' + esc(s.ticker) + '</span> <span class="muted">' + esc(m.name) + ' · ' + esc(m.sector) + '</span></div>'
+    + '<div class="muted">$' + esc(m.price) + ' · 12M PER ' + esc(v.forward_pe == null ? '—' : v.forward_pe.toFixed(1))
+    + ' · 매출성장 ' + esc(g.revenue_growth_last_q_yoy_pct == null ? '—' : g.revenue_growth_last_q_yoy_pct + '%') + '</div>'
+    + '<div class="grid2">' + head('A') + head('B') + '</div>'
+    + section('투자 논지 · 판정 사유', s, a => '<div class="txt"><b>' + esc(a.one_line_thesis) + '</b></div>' + field('판정 사유', a.verdict_reason), true)
+    + section('① 기업의 질', s, a => '<div class="dots">' + dots(a.quality.score) + '</div>' + field('경쟁우위', a.quality.moat) + field('성장 지속성', a.quality.growth_durability) + field('종합', a.quality.summary))
+    + section('② 재무 건전성', s, a => '<div class="dots">' + dots(a.financial_health.score) + '</div>' + field('현금흐름', a.financial_health.cash_flow) + field('부채', a.financial_health.debt) + field('주식 희석', a.financial_health.dilution) + field('종합', a.financial_health.summary))
+    + section('③ 가격 매력', s, a => '<div class="dots">' + dots(a.valuation.score) + '</div>' + field('현재 밸류에이션', a.valuation.current_view) + field('상승 시나리오', a.valuation.upside_scenario) + field('종합', a.valuation.summary))
+    + section('④ 향후 촉매', s, a => a.catalysts.map(c => '<div class="lbl">' + esc(c.timing) + ' · ' + esc(c.impact) + '</div><div class="txt"><b>' + esc(c.event) + '</b> — ' + esc(c.detail) + '</div>').join(''))
+    + section('⑤ 반대 근거', s, a => '<div class="txt">' + esc(a.bear_case.summary) + '</div><div class="lbl">주요 리스크</div>' + list(a.bear_case.key_risks) + '<div class="lbl">논리 붕괴 조건</div>' + list(a.bear_case.thesis_breakers))
+    + section('참고 자료', s, a => a.sources.map(x => '<div class="txt"><a href="' + safeUrl(x.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.title) + '</a></div>').join('') || '<div class="txt">—</div>')
+    + '<div class="lbl" style="margin-top:10px;">어느 분석이 투자 판단에 더 도움이 되나요?</div>'
+    + '<div class="vote">' + vb('A', 'A가 낫다') + vb('same', '비슷') + vb('B', 'B가 낫다') + '</div>'
+    + '</div>';
+}
+
+function revealHtml() {
+  const tot = { A: { cost: 0, sec: 0, inp: 0, out: 0, srch: 0, ok: 0 }, B: { cost: 0, sec: 0, inp: 0, out: 0, srch: 0, ok: 0 } };
+  DATA.stocks.forEach(s => ['A', 'B'].forEach(l => {
+    const run = s.runs[l] || {}, st = run.stats || {};
+    tot[l].cost += st.est_cost_usd || 0; tot[l].sec += st.seconds || 0;
+    tot[l].inp += st.input_tokens || 0; tot[l].out += st.output_tokens || 0; tot[l].srch += st.web_searches || 0;
+    if (run.analysis) tot[l].ok++;
+  }));
+  const n = DATA.stocks.length;
+  const per = (l, v) => tot[l].ok ? v / tot[l].ok : 0;  // 평균은 성공한 분석 기준
+  const tally = { A: 0, B: 0, same: 0 };
+  Object.values(VOTES).forEach(v => { if (tally[v] != null) tally[v]++; });
+  const row = (k, f) => '<tr><td>' + k + '</td><td>' + f('A') + '</td><td>' + f('B') + '</td></tr>';
+  const weekly = l => tot[l].ok ? '$' + (per(l, tot[l].cost) * 5 + (DATA.labels[l] === 'claude-opus-5' ? 0.75 : 0.36)).toFixed(2) : '—';
+  return '<div class="card">'
+    + '<div style="font-weight:700;margin-bottom:6px;">모델 공개</div>'
+    + '<table><tr><th></th><th>모델 A</th><th>모델 B</th></tr>'
+    + row('모델', l => '<b>' + esc(DATA.labels[l].replace('claude-', '')) + '</b>')
+    + row('내 투표 (승)', l => tally[l] + '표')
+    + row('분석 성공', l => tot[l].ok + ' / ' + n)
+    + row(n + '종목 비용 (추정)', l => '$' + tot[l].cost.toFixed(2))
+    + row('종목당 비용', l => '$' + per(l, tot[l].cost).toFixed(2))
+    + row('종목당 소요', l => Math.round(per(l, tot[l].sec)) + '초')
+    + row('입력 / 출력 토큰', l => Math.round(tot[l].inp / 1000) + 'k / ' + Math.round(tot[l].out / 1000) + 'k')
+    + row('웹 검색', l => tot[l].srch + '회')
+    + row('주간 추정 (이 모델로 전부 운영)', weekly)
+    + '</table>'
+    + '<div class="muted" style="margin-top:8px;">비슷 ' + tally.same + '표 · 주간 추정은 재분석 생략 규칙 적용 시(주 평균 분석 5회 + 뉴스 브리핑 1회) 기준. 요금: Opus 5 $5/$25, Sonnet 5 $2/$10 (100만 토큰), 웹검색 $10/1,000회.</div>'
+    + '</div>';
+}
+
+function castVote(tk, val) { VOTES[tk] = val; store.set('votes-' + DATA.date, VOTES); draw(); }
+function reveal() { store.set('revealed-' + DATA.date, true); draw(); }
+
+function draw() {
+  const revealed = store.get('revealed-' + DATA.date);
+  const voted = Object.keys(VOTES).length;
+  document.getElementById('app').innerHTML =
+    '<div class="card"><h1>Opus 5 vs Sonnet 5 블라인드 비교</h1>'
+    + '<div class="muted">' + esc(DATA.date) + ' · 같은 데이터·같은 지시문으로 두 모델이 각각 분석했습니다. 어느 쪽이 어떤 모델인지는 가려져 있습니다(무작위 배정). 종목마다 읽고 투표한 뒤 맨 아래에서 공개하세요.</div></div>'
+    + DATA.stocks.map(stockCard).join('')
+    + (revealed ? revealHtml()
+       : '<button class="btn primary" onclick="reveal()">모델 공개 · 비용 보기 (' + voted + '/' + DATA.stocks.length + ' 투표)</button>');
+}
+
+fetch('data/compare/latest.json?_t=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => { DATA = d; VOTES = store.get('votes-' + d.date) || {}; draw(); })
+  .catch(() => { document.getElementById('app').innerHTML = '<div class="card muted">비교 결과가 아직 없습니다. GitHub Actions에서 mode <b>compare</b>를 실행하세요.</div>'; });
+</script>
+</body>
+</html>
