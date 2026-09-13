@@ -16,7 +16,7 @@ from data_fetcher import fetch_prices
 from market_data import fetch_details, fetch_snapshots
 from picks import (cache_entry, decide, fresh_analysis_reason, load_cache, load_history, pick_candidates,
                    quant_scores, save_cache, save_history, signal_hits, update_history)
-from sec_data import fetch_13f, fetch_insider_trades
+from sec_data import check_access, fetch_13f, fetch_insider_trades
 from signals import CAPEX_TICKERS, SECTOR_KR, build_m2, build_m3, build_m4, build_m6, m3_section, m4_section
 from universe import load_universe
 
@@ -96,8 +96,9 @@ def main():
     snaps = fetch_snapshots(universe)
     spy = fetch_prices(["SPY"]).get("SPY")
 
-    m1 = fetch_13f()
-    m5 = fetch_insider_trades(sorted(snaps))
+    sec_ok = check_access()
+    m1 = fetch_13f() if sec_ok else None
+    m5 = fetch_insider_trades(sorted(snaps)) if sec_ok else None
     m2 = build_m2(snaps)
     m3_tk, m4_tk = build_m3(snaps), build_m4(snaps)
     scores = quant_scores(snaps)

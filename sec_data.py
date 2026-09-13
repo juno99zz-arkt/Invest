@@ -31,7 +31,7 @@ def _ua():
     return os.environ.get("SEC_USER_AGENT", "").strip()
 
 
-def _get(url, as_json=False):
+def _get(url, as_json=False, ua=None):
     """SEC 요청 (초당 8회 이하로 제한)."""
     with _lock:
         wait = 0.125 - (time.time() - _last_call[0])
@@ -39,7 +39,7 @@ def _get(url, as_json=False):
             time.sleep(wait)
         _last_call[0] = time.time()
     for i in range(3):
-        r = requests.get(url, headers={"User-Agent": _ua(), "Accept-Encoding": "gzip, deflate"}, timeout=30)
+        r = requests.get(url, headers={"User-Agent": ua or _ua(), "Accept-Encoding": "gzip, deflate"}, timeout=30)
         if r.status_code == 200:
             return r.json() if as_json else r.text
         if r.status_code in (429, 503):
@@ -47,6 +47,33 @@ def _get(url, as_json=False):
             continue
         r.raise_for_status()
     r.raise_for_status()
+
+
+def check_access():
+    """SEC 접근 점검. 실패 시 원인(User-Agent 형식 vs 서버 IP 차단)을 값 노출 없이 로그로 안내."""
+    ua = _ua()
+    if not ua:
+        print("::warning::SEC_USER_AGENT 미설정 — 13F·Form 4 수집 건너뜀")
+        return False
+    probe = "https://data.sec.gov/submissions/CIK0001067983.json"
+    try:
+        _get(probe, as_json=True)
+        print("SEC 접근 OK")
+        return True
+    except Exception as e:
+        print(f"::warning::SEC 접근 실패 ({e.__class__.__name__}) — 13F·Form 4 수집 건너뜀")
+    # 공개 로그이므로 값은 출력하지 않고 형식만 점검
+    words = ua.split()
+    print("  User-Agent 형식 점검:",
+          {"ASCII만 사용": ua.isascii(), "공백으로 구분된 단어 2개 이상": len(words) >= 2,
+           "마지막 단어가 이메일(@ 포함)": "@" in words[-1] and "." in words[-1].split("@")[-1],
+           "@ 개수 1개": ua.count("@") == 1})
+    try:
+        _get(probe, as_json=True, ua="Invest Dashboard admin@example.org")
+        print("  기준 User-Agent 로는 접근 성공 → 등록한 SEC_USER_AGENT 값의 형식 문제")
+    except Exception:
+        print("  기준 User-Agent 로도 실패 → SEC가 이 서버(IP)를 차단 중")
+    return False
 
 
 def _local(tag):
@@ -237,7 +264,11 @@ def fetch_insider_trades(tickers, days=7, min_buy=100_000, min_sell=1_000_000):
         print("SEC_USER_AGENT 미설정 — Form 4 건너뜀")
         return None
     cutoff = (date.today() - timedelta(days=days)).isoformat()
-    ciks = _cik_map()
+    try:
+        ciks = _cik_map()
+    except Exception as e:
+        print(f"::warning::SEC 티커-CIK 목록 수집 실패 ({e}) — Form 4 건너뜀")
+        return None
 
     def filings_for(tk):
         cik = ciks.get(tk)
@@ -312,3 +343,7 @@ def fetch_insider_trades(tickers, days=7, min_buy=100_000, min_sell=1_000_000):
         "sell": sells[:10],
         "buy_tickers": sorted(buyers),
     }
+
+
+if __name__ == "__main__":
+    check_access()
