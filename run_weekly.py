@@ -135,7 +135,7 @@ def main():
 
         holding_by_tk = {h["ticker"]: h for h in hist["portfolio"]}
         dossiers = [build_dossier(tk, snaps, details, scores,
-                                  signal_hits(tk, m1, m3_tk, m5) + [n for n in [guru_sell_note(tk, m1)] if n],
+                                  signal_hits(tk, m1, m3_tk, m5, scores) + [n for n in [guru_sell_note(tk, m1)] if n],
                                   holding_by_tk.get(tk), today)
                     for tk in held_tk + new_tk]
 

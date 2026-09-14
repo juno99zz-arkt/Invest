@@ -138,7 +138,7 @@ def build_summary(weekly, hist, report):
         "logic": {
             "weights": {k: round(v * 100) for k, v in picks.WEIGHTS.items()},
             "new_candidates": picks.NEW_CANDIDATES, "industry_cap": picks.MAX_PER_INDUSTRY_CANDIDATES,
-            "signal_bonus": picks.SIGNAL_BONUS, "guru_sell_penalty": picks.GURU_SELL_PENALTY,
+            "signal_points": picks.SIGNAL_POINTS, "guru_sell_penalty": picks.GURU_SELL_PENALTY,
             "guru_min_weight_pct": sec_data.GURU_MIN_WEIGHT * 100, "guru_change_pct": sec_data.GURU_CHANGE,
             "cycle_pool": picks.CYCLE_POOL, "cycle_penalty": picks.CYCLE_PENALTY,
             "cycle_ratio": picks.CYCLE_MARGIN_RATIO, "cycle_gap": picks.CYCLE_MARGIN_GAP,

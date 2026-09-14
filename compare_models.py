@@ -35,7 +35,7 @@ def main():
     print("비교 종목:", tickers)
 
     details = fetch_details(tickers)
-    dossiers = {tk: build_dossier(tk, snaps, details, scores, signal_hits(tk, None, m3_tk, None), None, today)
+    dossiers = {tk: build_dossier(tk, snaps, details, scores, signal_hits(tk, None, m3_tk, None, scores), None, today)
                 for tk in tickers}
 
     jobs = [(tk, m) for tk in tickers for m in MODELS]
