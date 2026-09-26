@@ -1,5 +1,5 @@
 {
-"updated": "2026-09-13",
+"updated": "2026-09-26",
 "tickers": [
 [
 "A",
@@ -242,6 +242,10 @@
 "Becton Dickinson"
 ],
 [
+"BE",
+"Bloom Energy"
+],
+[
 "BEN",
 "Franklin Resources"
 ],
@@ -264,10 +268,6 @@
 [
 "BKR",
 "Baker Hughes"
-],
-[
-"BLDR",
-"Builders FirstSource"
 ],
 [
 "BLK",
@@ -1002,6 +1002,10 @@
 "International Flavors & Fragrances"
 ],
 [
+"ILMN",
+"Illumina, Inc."
+],
+[
 "INCY",
 "Incyte"
 ],
@@ -1454,6 +1458,10 @@
 "Occidental Petroleum"
 ],
 [
+"P",
+"Everpure"
+],
+[
 "PANW",
 "Palo Alto Networks"
 ],
@@ -1762,10 +1770,6 @@
 "AT&T"
 ],
 [
-"TAP",
-"Molson Coors Beverage Company"
-],
-[
 "TDG",
 "TransDigm Group"
 ],
@@ -1852,10 +1856,6 @@
 [
 "TT",
 "Trane Technologies"
-],
-[
-"TTD",
-"Trade Desk (The)"
 ],
 [
 "TTWO",
