@@ -78,8 +78,10 @@ def build(today, latest=False):
     fresh = sum(1 for c in cur.get("candidates", []) if c.get("analysis") != "재사용")
     reused = len(cur.get("candidates", [])) - fresh
 
+    names = {tk: (a.get("metrics") or {}).get("name") or "" for tk, a in cur.get("analyses", {}).items()}
     dec_rows = "".join(
-        f'<tr><td style="padding:6px 10px;font-weight:700">{html.escape(d["ticker"])}</td>'
+        f'<tr><td style="padding:6px 10px;font-weight:700">{html.escape(d["ticker"])}'
+        f'<div style="font-weight:400;font-size:11px;color:#888">{html.escape(names.get(d["ticker"], ""))}</div></td>'
         f'<td style="padding:6px 10px;color:{ACTION_COLOR.get(d["action"], "#555")};white-space:nowrap">{html.escape(d["action"])}</td>'
         f'<td style="padding:6px 10px;font-size:12px;color:#444">{html.escape(d["reason"][:220])}{"…" if len(d["reason"]) > 220 else ""}</td></tr>'
         for d in cur.get("decisions", []))
