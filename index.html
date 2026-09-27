@@ -457,6 +457,15 @@ const ACTION_BADGE = { '신규편입': 'badge-blue', '유지': 'badge-green', '�
 const STATUS_BADGE = { '유효': 'badge-green', '약화': 'badge-yellow', '붕괴': 'badge-red' };
 const VERDICT_BADGE = { '편입 적합': 'badge-green', '관찰': 'badge-yellow', '부적합': 'badge-red' };
 
+// 티커 → 회사명 (심층분석 리포트 메타 우선, 없으면 포트폴리오·이력)
+function companyName(tk) {
+  const r = INJECTED.report, a = r && r.analyses && r.analyses[tk];
+  if (a && a.metrics && a.metrics.name) return a.metrics.name;
+  const s = INJECTED.summary || {};
+  const h = [...(s.portfolio || []), ...(s.closed || [])].find(x => x.ticker === tk && x.name);
+  return h ? h.name : '';
+}
+
 function hasReport(tk) {
   const r = INJECTED.report;
   return !!(r && r.analyses && r.analyses[tk] && r.analyses[tk].analysis);
@@ -591,7 +600,8 @@ function loadSummary(d) {
         <div class="flex items-center gap-2 mb-1">
           <span class="badge ${ACTION_BADGE[x.action] || 'badge-gray'}">${esc(x.action)}</span>
           <span class="ticker-badge text-sm" style="color:#f59e0b;">${esc(x.ticker)}</span>
-          ${link ? '<span class="text-xs ml-auto" style="color:#93c5fd;">리포트 ›</span>' : ''}
+          <span class="text-xs truncate" style="color:var(--muted);min-width:0;">${esc(companyName(x.ticker))}</span>
+          ${link ? '<span class="text-xs ml-auto" style="color:#93c5fd;white-space:nowrap;">리포트 ›</span>' : ''}
         </div>
         <div class="text-xs" style="color:var(--muted);line-height:1.6;">${esc(x.reason)}</div>
       </div>`;
@@ -648,7 +658,7 @@ function loadSummary(d) {
   const closedRows = (d.closed || []).slice().reverse().map(c => `
     <div class="py-2" style="border-bottom:1px solid var(--border);">
       <div class="flex items-center justify-between">
-        <span class="ticker-badge text-sm" style="color:#f59e0b;">${esc(c.ticker)}</span>
+        <span><span class="ticker-badge text-sm" style="color:#f59e0b;">${esc(c.ticker)}</span> <span class="text-xs" style="color:var(--muted);">${esc(c.name || companyName(c.ticker))}</span></span>
         <span class="text-xs" style="color:var(--muted);">${esc(c.added_date)} → ${esc(c.removed_date)}</span>
         <span class="text-sm font-bold" style="${pctColor(c.return_pct)}">${pct(c.return_pct)}</span>
       </div>
