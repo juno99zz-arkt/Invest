@@ -4,7 +4,7 @@ on:
   workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
     inputs:
       mode:
-        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석(정기 실행은 격주, 수동은 즉시) / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생)"
+        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석(정기 실행은 격주, 수동은 즉시) / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생, weekly는 결과 메일 발송)"
         type: choice
         options: [daily, weekly, compare, sec_check]
         default: daily
@@ -99,3 +99,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
+
+      - name: 격주 결과 메일 리포트
+        if: steps.cadence.outputs.run == 'true'
+        continue-on-error: true   # 메일 실패가 배포 결과를 막지 않게
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          INVEST_REPORT_TO: ${{ secrets.INVEST_REPORT_TO }}
+        run: python report_email.py
