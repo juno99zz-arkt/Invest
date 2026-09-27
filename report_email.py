@@ -2,6 +2,7 @@
 격주 파이프라인 결과 메일 리포트 (GitHub Actions, run_weekly.py 직후).
 - 이번 회차 Claude 비용 (지난 회차 대비, 캐시 적중률·검색 횟수)
 - 편입/유지/제외 결정, 시장 스탠스, 핵심 뉴스
+수동 발송: python report_email.py --latest (가장 최근 리포트 기준)
 환경변수: EMAIL_SENDER, EMAIL_PASSWORD (Gmail 앱 비밀번호), INVEST_REPORT_TO (쉼표 구분 수신자)
 """
 import glob
@@ -52,10 +53,11 @@ def _row(label, cur, prev, fmt="{:,}", lower_is_better=True):
             f'<td style="padding:6px 10px;text-align:right;color:#888">{prev_s}</td><td style="padding:6px 10px;text-align:right">{diff}</td></tr>')
 
 
-def build(today):
+def build(today, latest=False):
+    """latest=True: 날짜와 무관하게 가장 최근 리포트로 작성 (수동 발송)."""
     reports = sorted(glob.glob(os.path.join(DATA_DIR, "reports", "*.json")))
     cur = _load(reports[-1]) if reports else None
-    if not cur or cur.get("date") != today:
+    if not cur or (not latest and cur.get("date") != today):
         return (f"[투자 대시보드] {today} 격주 분석 실패/건너뜀",
                 "<p>이번 격주 실행에서 새 리포트가 생성되지 않았습니다 (Claude API 키·요청 오류 가능). "
                 "GitHub Actions 로그를 확인하세요.</p>")
@@ -120,7 +122,7 @@ def main():
     sender, password = _env("EMAIL_SENDER"), _env("EMAIL_PASSWORD").replace(" ", "")
     recipients = [r.strip() for r in _env("INVEST_REPORT_TO").split(",") if r.strip()]
     today = datetime.now(KST).date().isoformat()
-    subject, body = build(today)
+    subject, body = build(today, latest="--latest" in sys.argv)
     if "--dry-run" in sys.argv:
         out = os.path.join(BASE_DIR, "report_preview.html")
         with open(out, "w", encoding="utf-8") as f:

@@ -4,9 +4,9 @@ on:
   workflow_dispatch:        # 수동 실행 / repository_dispatch 트리거
     inputs:
       mode:
-        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석(정기 실행은 격주, 수동은 즉시) / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 (weekly·compare는 Claude API 비용 발생, weekly는 결과 메일 발송)"
+        description: "daily = 시세 갱신 / weekly = 신호·추천·뉴스 재분석(정기 실행은 격주, 수동은 즉시) / compare = Opus·Sonnet 3종목 비교 / sec_check = SEC 접근 점검 / report = 최근 격주 결과 메일 즉시 발송(비용 없음) (weekly·compare는 Claude API 비용 발생, weekly는 결과 메일 발송)"
         type: choice
-        options: [daily, weekly, compare, sec_check]
+        options: [daily, weekly, compare, sec_check, report]
         default: daily
       compare_tickers:
         description: "compare 모드 종목 지정 (예: MSFT,V,ASML). 비우면 정량 상위 후보 3개"
@@ -47,6 +47,14 @@ jobs:
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: python sec_data.py
+
+      - name: 최근 격주 결과 메일 발송 (비용 없음)
+        if: inputs.mode == 'report'
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          INVEST_REPORT_TO: ${{ secrets.INVEST_REPORT_TO }}
+        run: python report_email.py --latest
 
       - name: 격주 확인 (기준일 2026-09-12 토요일부터 짝수 주차만 실행)
         id: cadence
