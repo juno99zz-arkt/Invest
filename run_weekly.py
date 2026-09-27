@@ -14,6 +14,7 @@ from datetime import datetime, timedelta, timezone
 import analyst
 from data_fetcher import fetch_prices
 from market_data import fetch_annual_margins, fetch_details, fetch_snapshots
+from news_feed import fetch_candidates
 from picks import (cache_entry, cycle_note, cycle_pool, decide, fresh_analysis_reason, guru_sell_note, load_cache,
                    load_history, pick_candidates, quant_scores, save_cache, save_history, signal_hits, update_history)
 from sec_data import check_access, fetch_13f, fetch_insider_trades
@@ -131,7 +132,7 @@ def main():
                                          for x in m2["sectors"]],
             "cycle_indicators": m6["overall"],
             "current_portfolio": [h["ticker"] for h in hist["portfolio"]],
-        })
+        }, fetch_candidates([h["ticker"] for h in hist["portfolio"]]))
 
         holding_by_tk = {h["ticker"]: h for h in hist["portfolio"]}
         dossiers = [build_dossier(tk, snaps, details, scores,

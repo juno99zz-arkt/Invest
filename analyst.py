@@ -2,9 +2,10 @@
 Claude(Opus 5 + 웹검색) 기반 분석 (주간 실행).
 - analyze_stock : 종목 심층분석 (기업의 질 / 재무 건전성 / 가격 매력 / 촉매 / 반대 근거)
 - analyze_stock_with_stats : 모델 지정 + 호출별 사용량·추정비용 반환 (모델 비교용)
-- market_brief  : 주간 시장 스탠스 + 핵심 뉴스 10선 (실제 기사 URL)
+- market_brief  : 주간 시장 스탠스 + 핵심 뉴스 10선 (RSS로 모은 실제 기사 중 선별, 실패 시 웹검색)
 
 결과는 strict 스키마의 submit 도구로 받는다. ANTHROPIC_API_KEY 미설정 시 호출하지 않음.
+프롬프트 캐싱을 켜 두어 웹검색 루프에서 앞부분(시스템·도구·데이터·이전 검색 결과)을 다시 읽을 때 정가의 10%만 낸다.
 """
 import json
 import os
@@ -17,6 +18,7 @@ MODEL = "claude-opus-5"
 # $ / 1M tokens (입력, 출력)
 PRICES = {"claude-opus-5": (5.0, 25.0), "claude-sonnet-5": (2.0, 10.0)}
 WEB_SEARCH_PRICE = 0.01  # $10 / 1,000회
+CACHE_READ_MULT, CACHE_WRITE_MULT = 0.1, 1.25  # 입력 단가 대비 (5분 캐시)
 
 _usage_lock = threading.Lock()
 USAGE = {}  # model → 누적 사용량
@@ -26,31 +28,37 @@ def available():
     return bool(os.environ.get("ANTHROPIC_API_KEY", "").strip())
 
 
-def _cost(model, input_tokens, output_tokens, web_searches):
+def _cost(model, u):
+    """u: 사용량 dict. input_tokens 는 캐시 읽기·쓰기를 포함한 전체 입력."""
     p_in, p_out = PRICES[model]
-    return (input_tokens * p_in + output_tokens * p_out) / 1e6 + web_searches * WEB_SEARCH_PRICE
+    read, write = u.get("cache_read_tokens", 0), u.get("cache_write_tokens", 0)
+    plain = u.get("input_tokens", 0) - read - write
+    return ((plain + read * CACHE_READ_MULT + write * CACHE_WRITE_MULT) * p_in
+            + u.get("output_tokens", 0) * p_out) / 1e6 + u.get("web_searches", 0) * WEB_SEARCH_PRICE
 
 
 def usage_summary():
     with _usage_lock:
-        return {m: {**u, "est_cost_usd": round(_cost(m, u["input_tokens"], u["output_tokens"], u["web_searches"]), 2)}
-                for m, u in USAGE.items()}
+        return {m: {**u, "est_cost_usd": round(_cost(m, u), 2)} for m, u in USAGE.items()}
 
 
 def _add_usage(stats, model, u):
     stu = getattr(u, "server_tool_use", None)
+    read, write = u.cache_read_input_tokens or 0, u.cache_creation_input_tokens or 0
     delta = {
         "calls": 1,
-        "input_tokens": (u.input_tokens or 0) + (u.cache_read_input_tokens or 0) + (u.cache_creation_input_tokens or 0),
+        "input_tokens": (u.input_tokens or 0) + read + write,
+        "cache_read_tokens": read,
+        "cache_write_tokens": write,
         "output_tokens": u.output_tokens or 0,
         "web_searches": (getattr(stu, "web_search_requests", 0) or 0) if stu else 0,
     }
     for k, v in delta.items():
         stats[k] = stats.get(k, 0) + v
     with _usage_lock:
-        total = USAGE.setdefault(model, {"calls": 0, "input_tokens": 0, "output_tokens": 0, "web_searches": 0})
+        total = USAGE.setdefault(model, {})
         for k, v in delta.items():
-            total[k] += v
+            total[k] = total.get(k, 0) + v
 
 
 def _run(system, user_text, submit_tool, max_searches, model=MODEL):
@@ -64,7 +72,7 @@ def _run(system, user_text, submit_tool, max_searches, model=MODEL):
     for _ in range(6):
         with client.beta.messages.stream(
             model=model, max_tokens=32000, system=system, messages=messages, tools=tools,
-            thinking={"type": "adaptive"}, **extra,
+            thinking={"type": "adaptive"}, cache_control={"type": "ephemeral"}, **extra,
         ) as stream:
             resp = stream.get_final_message()
         _add_usage(stats, model, resp.usage)
@@ -78,8 +86,7 @@ def _run(system, user_text, submit_tool, max_searches, model=MODEL):
         if resp.stop_reason != "pause_turn":
             messages.append({"role": "user", "content": f"조사를 마쳤다면 {submit_tool['name']} 도구로 결과를 제출하세요."})
     stats["seconds"] = round(time.time() - started)
-    stats["est_cost_usd"] = round(_cost(model, stats.get("input_tokens", 0), stats.get("output_tokens", 0),
-                                        stats.get("web_searches", 0)), 3)
+    stats["est_cost_usd"] = round(_cost(model, stats), 3)
     return result, stats
 
 
@@ -175,10 +182,53 @@ MARKET_SYSTEM = """당신은 미국 주식에 장기 투자하는 한국인 개�
 - next_events는 다음 14일 내 예정된 주요 일정(실적 발표, 경제지표, 연준 등)입니다."""
 
 
-def market_brief(context):
-    text = f"기준일: {context['as_of']}\n\n<data>\n{json.dumps(context, ensure_ascii=False, indent=1)}\n</data>"
+# RSS 후보에서 고르는 방식: 기사 정보는 후보 id 로만 받고 제목·출처·URL·날짜는 코드가 채운다 (링크 오류 없음)
+MARKET_TOOL_RSS = {
+    **MARKET_TOOL,
+    "input_schema": _obj({
+        **{k: v for k, v in MARKET_TOOL["input_schema"]["properties"].items() if k != "news"},
+        "news": {"type": "array", "items": _obj({
+            "id": {"type": "integer"}, "summary": _STR, "insight": _STR,
+            "stars": _SCORE, "tickers": {"type": "array", "items": _STR}})},
+    }),
+}
+
+MARKET_SYSTEM_RSS = """당신은 미국 주식에 장기 투자하는 한국인 개인투자자를 위한 주간 시장 브리핑 담당자입니다.
+<news_candidates>에는 지난 14일간 실제로 보도된 기사 목록(RSS 수집)이 있습니다. 이 중에서 미국 증시·AI 산업·거시경제와 관련해 장기 투자 판단에 의미 있는 기사 10건을 고르세요.
+- news의 id는 반드시 후보 목록의 id입니다. 목록에 없는 기사는 넣지 마세요. 같은 사건을 다룬 기사는 1건만 고릅니다.
+- summary는 기사의 핵심 사실을 구체적인 숫자와 함께 2~3문장으로 씁니다. 제목·요약만으로 사실이 불분명한 핵심 기사만 웹 검색으로 확인하고, 확인되지 않은 수치는 쓰지 마세요.
+- stars(1~5)는 장기 투자자에게의 중요도, insight는 어떤 종목·섹터에 어떤 의미인지 1~2문장.
+- stance는 제공된 섹터 추정치 흐름·사이클 지표와 뉴스를 종합해 정하고, stance_reason에 근거를 적습니다.
+- next_events는 다음 14일 내 예정된 주요 일정(실적 발표, 경제지표, 연준 등)입니다. 필요하면 웹 검색으로 일정을 확인하세요.
+- 웹 검색은 꼭 필요할 때만, 적게 사용하세요."""
+
+MIN_RSS_CANDIDATES = 20
+
+
+def market_brief(context, candidates=None):
+    """candidates: news_feed.fetch_candidates() 결과. 충분하면 그중에서 고르고(검색 최대 3회), 부족하면 웹검색으로 찾는다."""
+    data = f"기준일: {context['as_of']}\n\n<data>\n{json.dumps(context, ensure_ascii=False, indent=1)}\n</data>"
     try:
-        return _run(MARKET_SYSTEM, text, MARKET_TOOL, max_searches=10)[0]
+        if candidates and len(candidates) >= MIN_RSS_CANDIDATES:
+            by_id = {c["id"]: c for c in candidates}
+            listing = "\n".join(json.dumps({k: c[k] for k in ("id", "published", "source", "title", "snippet") if c.get(k) != ""},
+                                            ensure_ascii=False) for c in candidates)
+            brief = _run(MARKET_SYSTEM_RSS, f"{data}\n\n<news_candidates>\n{listing}\n</news_candidates>",
+                         MARKET_TOOL_RSS, max_searches=3)[0]
+            if brief:
+                news = []
+                for n in brief["news"]:
+                    c = by_id.get(n["id"])
+                    if c and all(c["url"] != x["url"] for x in news):
+                        news.append({"title": c["title"], "source": c["source"], "url": c["url"], "published": c["published"],
+                                     **{k: n[k] for k in ("summary", "insight", "stars", "tickers")}})
+                if len(news) >= 5:
+                    return {**brief, "news": news, "news_source": "rss"}
+                print(f"  RSS 기반 뉴스 {len(news)}건뿐 — 웹검색 방식으로 재시도")
+        else:
+            print(f"  RSS 후보 {len(candidates or [])}건 부족 — 웹검색 방식으로 뉴스 수집")
+        brief = _run(MARKET_SYSTEM, data, MARKET_TOOL, max_searches=10)[0]
+        return brief and {**brief, "news_source": "web_search"}
     except anthropic.APIError as e:
         print(f"  시장 브리핑 실패: {e}")
         return None
