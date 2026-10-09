@@ -14,7 +14,7 @@ on:
         default: ""
   schedule:
     - cron: "0 8 * * *"    # 매일 KST 17:00 (UTC 08:00) 시세 갱신
-    - cron: "0 0 * * 6"    # 토요일 KST 09:00 (UTC 00:00) — 아래 '격주 확인' 단계에서 격주만 실제 실행
+    - cron: "0 0 * * 6"    # 토요일 KST 09:00 (UTC 00:00) — 분석은 '격주 확인' 단계에서 격주만, 메일은 매주
 
 permissions:
   contents: write
@@ -108,11 +108,16 @@ jobs:
           publish_dir: .
           publish_branch: gh-pages
 
-      - name: 격주 결과 메일 리포트
-        if: steps.cadence.outputs.run == 'true'
+      - name: 주간 결과 메일 리포트 (매주 토 09:00 KST, 분석 주는 분석 완료 후)
+        if: steps.cadence.outputs.run == 'true' || github.event.schedule == '0 0 * * 6'
         continue-on-error: true   # 메일 실패가 배포 결과를 막지 않게
         env:
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           INVEST_REPORT_TO: ${{ secrets.INVEST_REPORT_TO }}
-        run: python report_email.py
+        run: |
+          if [ "${{ steps.cadence.outputs.run }}" = "true" ]; then
+            python report_email.py            # 이번 분석 결과 (실패 시 실패 알림)
+          else
+            python report_email.py --latest   # 분석 쉬는 주: 지난 분석 결과
+          fi
