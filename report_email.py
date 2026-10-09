@@ -2,6 +2,7 @@
 격주 파이프라인 결과 메일 리포트 (GitHub Actions, run_weekly.py 직후).
 - 이번 회차 Claude 비용 (지난 회차 대비, 캐시 적중률·검색 횟수)
 - 편입/유지/제외 결정, 시장 스탠스, 핵심 뉴스
+매주 토요일 발송: 분석 주는 이번 결과, 쉬는 주는 --latest 로 지난 분석 결과
 수동 발송: python report_email.py --latest (가장 최근 리포트 기준)
 환경변수: EMAIL_SENDER, EMAIL_PASSWORD (Gmail 앱 비밀번호), INVEST_REPORT_TO (쉼표 구분 수신자)
 """
@@ -93,10 +94,14 @@ def build(today, latest=False):
     news_src = {"rss": "RSS 후보에서 선별", "web_search": "웹검색 (RSS 부족 시 대체)"}.get(brief.get("news_source"), "-")
 
     th = 'style="padding:6px 10px;text-align:left;background:#f5f5f5"'
+    stale_note = ("" if cur.get("date") == today else
+                  '<div style="font-size:13px;background:#fff8e1;padding:8px 12px;border-radius:6px;margin-bottom:12px">'
+                  f'이번 주는 격주 분석을 쉬는 주라 지난 분석({cur["date"]}) 결과입니다. 시세는 대시보드에서 매일 갱신됩니다.</div>')
     body = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="font-family:Arial,sans-serif;color:#1a1a1a;max-width:680px;margin:0 auto;padding:16px">
 <h2 style="margin:0 0 4px">투자 대시보드 격주 리포트 · {cur['week']}</h2>
-<div style="color:#888;font-size:13px;margin-bottom:16px">{today} 실행 · <a href="{DASHBOARD_URL}">대시보드 열기</a></div>
+<div style="color:#888;font-size:13px;margin-bottom:16px">{today} 발송 · {cur['date']} 분석 기준 · <a href="{DASHBOARD_URL}">대시보드 열기</a></div>
+{stale_note}
 
 <h3 style="margin:20px 0 8px">① Claude 비용</h3>
 <table style="border-collapse:collapse;font-size:13px;width:100%">
@@ -116,7 +121,8 @@ def build(today, latest=False):
 <ul style="font-size:13px;padding-left:18px">{news}</ul>
 <div style="font-size:11px;color:#aaa;margin-top:24px">자동 발송 · 투자 판단의 최종 책임은 본인에게 있습니다.</div>
 </body></html>"""
-    subject = f"[투자 대시보드] {cur['week']} 격주 리포트 · 비용 ${u.get('est_cost_usd', 0):.2f}"
+    subject = (f"[투자 대시보드] {cur['week']} 격주 리포트 · 비용 ${u.get('est_cost_usd', 0):.2f}" if cur.get("date") == today
+               else f"[투자 대시보드] 주간 리포트 · {cur['week']} 분석 기준 (이번 주 분석 쉼)")
     return subject, body
 
 
