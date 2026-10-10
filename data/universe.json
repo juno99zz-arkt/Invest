@@ -1,5 +1,5 @@
 {
-"updated": "2026-09-26",
+"updated": "2026-10-10",
 "tickers": [
 [
 "A",
@@ -508,10 +508,6 @@
 [
 "CTSH",
 "Cognizant"
-],
-[
-"CTVA",
-"Corteva"
 ],
 [
 "CVNA",
@@ -1562,10 +1558,6 @@
 "Public Storage"
 ],
 [
-"PSKY",
-"Paramount Skydance Corporation"
-],
-[
 "PSX",
 "Phillips 66"
 ],
@@ -1676,6 +1668,10 @@
 [
 "SJM",
 "J.M. Smucker Company (The)"
+],
+[
+"SKYD",
+"Skydance Corporation"
 ],
 [
 "SLB",
@@ -1862,6 +1858,10 @@
 "Take-Two Interactive"
 ],
 [
+"TWLO",
+"Twilio"
+],
+[
 "TXN",
 "Texas Instruments"
 ],
@@ -1970,6 +1970,10 @@
 "Viatris"
 ],
 [
+"VYLR",
+"Vylor"
+],
+[
 "VZ",
 "Verizon"
 ],
@@ -1980,10 +1984,6 @@
 [
 "WAT",
 "Waters Corporation"
-],
-[
-"WBD",
-"Warner Bros. Discovery"
 ],
 [
 "WDAY",
