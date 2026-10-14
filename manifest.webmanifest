@@ -1,0 +1,33 @@
+{
+ "name": "AI 투자 브리핑",
+ "short_name": "투자 브리핑",
+ "description": "매주 Agent AI 분석 · 매일 시세 갱신 투자 대시보드",
+ "id": "/Invest/",
+ "start_url": "/Invest/?source=pwa",
+ "scope": "/Invest/",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#0f1117",
+ "theme_color": "#0f1117",
+ "lang": "ko",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
