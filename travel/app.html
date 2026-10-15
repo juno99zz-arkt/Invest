@@ -1,0 +1,281 @@
+<title>마카오·홍콩 여행앱</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 휴대폰 앱 셸 — 상단 헤더(D-day) · 가운데 화면 · 하단 탭바. 도시별 색: 마카오 타일 블루 / 홍콩 하버 레드 / 디즈니 퍼플 */
+:root{
+  --bg:#eef2f6; --surface:#ffffff; --fg:#18212c; --muted:#5b6978; --line:#dbe2ea;
+  --macau:#1f5fa8; --macau-soft:#e2ecf8;
+  --hk:#c23a3a; --hk-soft:#f8e5e3;
+  --disney:#6a4bb8; --disney-soft:#ece6f8;
+  --ok:#1f8a5b;
+  --f-display:"Do Hyeon","IBM Plex Sans KR",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1318; --surface:#182029; --fg:#e7ecf1; --muted:#97a5b3; --line:#2a343f;
+  --macau:#80b1ea; --macau-soft:#1a2b3f; --hk:#f08a80; --hk-soft:#3a2122;
+  --disney:#b9a3f0; --disney-soft:#2a2340; --ok:#5fd19b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1318; --surface:#182029; --fg:#e7ecf1; --muted:#97a5b3; --line:#2a343f;
+  --macau:#80b1ea; --macau-soft:#1a2b3f; --hk:#f08a80; --hk-soft:#3a2122;
+  --disney:#b9a3f0; --disney-soft:#2a2340; --ok:#5fd19b; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55;-webkit-tap-highlight-color:transparent}
+.app{max-width:480px;margin:0 auto;min-height:100%;padding-inline:16px;padding-block:0 calc(84px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;line-height:1.2;text-wrap:balance}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.top h1{font-size:24px}
+.top p{margin:0;font-size:12.5px;color:var(--muted)}
+.dday{font-family:var(--f-mono);font-size:13px;padding:6px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.view[hidden]{display:none!important}
+.days{display:flex;gap:8px;overflow-x:auto;padding-block:4px 12px;scrollbar-width:none;scroll-snap-type:x mandatory}
+.days::-webkit-scrollbar{display:none}
+.dchip{flex:0 0 auto;scroll-snap-align:start;display:grid;gap:1px;min-width:62px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;text-align:center;cursor:pointer;border-top:4px solid var(--c)}
+.dchip b{font-family:var(--f-mono);font-size:13px}
+.dchip span{font-size:11.5px;color:var(--muted)}
+.dchip[aria-selected="true"]{background:var(--cs);border-color:var(--c)}
+.dchip:focus-visible,.tab:focus-visible,.navbtn:focus-visible{outline:2px solid var(--c,var(--macau));outline-offset:2px}
+.m{--c:var(--macau);--cs:var(--macau-soft)} .h{--c:var(--hk);--cs:var(--hk-soft)} .d{--c:var(--disney);--cs:var(--disney-soft)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.dayhead{padding:16px;background:var(--cs);display:grid;gap:4px}
+.dayhead .meta{font-family:var(--f-mono);font-size:12.5px;color:var(--c)}
+.dayhead h2{font-size:24px}
+.dayhead .stay{font-size:13px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:6px 16px 8px}
+.tl li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding-block:10px;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .t{font-family:var(--f-mono);font-size:12.5px;color:var(--c);padding-top:2px;font-variant-numeric:tabular-nums}
+.tl small{display:block;color:var(--muted);font-size:12.5px}
+.tip{margin:0;padding:12px 16px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--muted)}
+.tip b{color:var(--fg)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.navbtn{flex:1;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:14px;cursor:pointer}
+.navbtn:disabled{opacity:.4;cursor:default}
+.sec{display:grid;gap:12px;padding-block:4px 8px}
+.sec h2{font-size:22px;margin-top:6px}
+.label{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:6px 0 0}
+.list{list-style:none;margin:0;padding:0}
+.list li{border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.check{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;cursor:pointer}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ok);flex:0 0 auto}
+.check span{min-width:0}
+.check small{display:block;color:var(--muted);font-size:12.5px}
+.check input:checked + span{color:var(--muted);text-decoration:line-through}
+.progress{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+.row{padding:13px 16px;display:grid;gap:2px}
+.row b{font-size:14.5px}
+.row span{font-size:13px;color:var(--muted)}
+.row a{color:var(--macau);font-size:14.5px;font-weight:500}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabs div{max-width:480px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.tab{border:0;background:none;color:var(--muted);font:inherit;font-size:11.5px;padding:8px 4px 10px;display:grid;justify-items:center;gap:3px;cursor:pointer}
+.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab[aria-selected="true"]{color:var(--fg);font-weight:700}
+.tab[aria-selected="true"] svg{stroke:var(--hk)}
+.foot{font-size:12px;color:var(--muted);text-align:center;padding-block:16px}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>마카오·홍콩</h1>
+      <p>12.12(토) – 12.19(토) · 마카오 2박 + 홍콩 5박</p>
+    </div>
+    <span class="dday" id="dday">D-?</span>
+  </header>
+
+  <!-- 일정 -->
+  <section class="view" id="v-plan" aria-label="일정">
+    <div class="days" id="days" role="tablist" aria-label="날짜 선택"></div>
+    <article class="card" id="day"></article>
+    <div class="pager">
+      <button class="navbtn" id="prev" type="button">← 전날</button>
+      <button class="navbtn" id="next" type="button">다음날 →</button>
+    </div>
+  </section>
+
+  <!-- 준비물 -->
+  <section class="view sec" id="v-check" aria-label="준비물" hidden>
+    <h2>준비 · 예약 체크</h2>
+    <div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext">0/0</span></div>
+    <p class="label">예약</p>
+    <div class="card"><ul class="list" id="ck-book"></ul></div>
+    <p class="label">준비물</p>
+    <div class="card"><ul class="list" id="ck-pack"></ul></div>
+    <p class="foot">체크 표시는 이 휴대폰에만 저장돼요.</p>
+  </section>
+
+  <!-- 이동 -->
+  <section class="view sec" id="v-move" aria-label="이동" hidden>
+    <h2>이동 방법</h2>
+    <div class="card"><ul class="list">
+      <li class="row"><b>홍콩공항 → 마카오 (12/12)</b><span>공항 옆 강주아오대교 터미널 → 셔틀버스 약 40분 → 마카오 국경 → 택시·호텔 셔틀로 코타이</span></li>
+      <li class="row"><b>마카오 → 침사추이 (12/14)</b><span>페리 약 1시간 (차이나 페리 터미널 도착) 또는 강주아오대교 버스 + 택시</span></li>
+      <li class="row"><b>침사추이 → 디즈니 (12/15)</b><span>MTR 써니베이역 환승 → 디즈니 라인, 40~50분</span></li>
+      <li class="row"><b>침사추이 → 옹핑 (12/16)</b><span>MTR 퉁청역 → 옹핑 360 케이블카</span></li>
+      <li class="row"><b>시내 → 공항 (12/19)</b><span>홍콩역·구룡역에서 시내 체크인 → 공항철도 AEL 24분</span></li>
+    </ul></div>
+    <p class="label">팁</p>
+    <div class="card"><ul class="list">
+      <li class="row"><b>옥토퍼스 카드</b><span>휴대폰 지갑 앱에 추가하면 지하철·버스·편의점 모두 결제</span></li>
+      <li class="row"><b>마카오 결제</b><span>홍콩달러 대부분 사용 가능, 거스름돈은 파타카(MOP)</span></li>
+      <li class="row"><b>전원</b><span>영국식 3핀 플러그 — 멀티 어댑터 필요</span></li>
+    </ul></div>
+  </section>
+
+  <!-- 정보 -->
+  <section class="view sec" id="v-info" aria-label="정보" hidden>
+    <h2>숙소 · 연락처</h2>
+    <div class="card"><ul class="list">
+      <li class="row"><b>마카오 코타이 호텔 (12/12–14, 2박)</b><span>예약 후 호텔명 · 주소 입력</span></li>
+      <li class="row"><b>하얏트 리젠시 홍콩 침사추이 (12/14–19, 5박)</b><span>마지막 날 짐 보관 · 레이트 체크아웃 요청</span></li>
+      <li class="row"><b>긴급전화</b><span>홍콩·마카오 공통 999</span></li>
+    </ul></div>
+    <p class="label">공식 사이트</p>
+    <div class="card"><ul class="list">
+      <li class="row"><a href="https://www.hongkongdisneyland.com/ko/">홍콩 디즈니랜드</a><span>크리스마스 행사 11/20 – 1/3 · 운영시간 확인</span></li>
+      <li class="row"><a href="https://www.hzmbus.com/">강주아오대교 셔틀버스</a><span>24시간 운행</span></li>
+      <li class="row"><a href="https://www.turbojet.com.hk/">터보젯 페리</a><span>마카오 ↔ 홍콩 페리 시간표</span></li>
+      <li class="row"><a href="https://www.np360.com.hk/">옹핑 360</a><span>크리스털 캐빈 사전 예약</span></li>
+      <li class="row"><a href="https://www.thepeak.com.hk/">피크 트램</a><span>오전 9시 전 추천</span></li>
+      <li class="row"><a href="https://www.discoverhongkong.com/kr/">홍콩관광청</a><span>명소 · 이벤트</span></li>
+      <li class="row"><a href="https://www.macaotourism.gov.mo/ko/">마카오관광청</a><span>명소 · 이벤트</span></li>
+    </ul></div>
+    <p class="foot">운영시간과 요금은 출발 전 공식 사이트에서 다시 확인하세요.</p>
+  </section>
+</div>
+
+<nav class="tabs" aria-label="메뉴"><div role="tablist">
+  <button class="tab" type="button" data-v="plan" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>일정</button>
+  <button class="tab" type="button" data-v="check" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7 5M3.5 12l1.5 1.5L7 11M3.5 18l1.5 1.5L7 17"/></svg>준비물</button>
+  <button class="tab" type="button" data-v="move" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="14" rx="3"/><path d="M5 11h14M8.5 21l1.5-3.5M15.5 21L14 17.5"/><circle cx="9" cy="14.5" r=".6"/><circle cx="15" cy="14.5" r=".6"/></svg>이동</button>
+  <button class="tab" type="button" data-v="info" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg>정보</button>
+</div></nav>
+
+<script>
+const DAYS=[
+ {d:"2026-12-12",dow:"토",city:"m",title:"도착 · 마카오로 이동",stay:"마카오 코타이",items:[
+  ["오후","홍콩공항 도착","입국 후 강주아오대교 터미널로"],
+  ["","셔틀버스로 마카오 (약 40분)","마카오 국경에서 택시·호텔 셔틀"],
+  ["저녁","코타이 체크인 · 베네시안 구경","곤돌라, 파리지앵 에펠탑 조명"]],
+  tip:"첫날은 이동이 길어요. 저녁은 리조트 안에서 가볍게."},
+ {d:"2026-12-13",dow:"일",city:"m",title:"마카오 구시가지",stay:"마카오 코타이",items:[
+  ["09:30","아마 사원","마카오 지명의 유래"],
+  ["11:00","마카오 타워 전망대","스카이워크는 선택"],
+  ["13:00","점심: 매캐니즈 요리","아프리칸 치킨, 민치"],
+  ["14:30","세나도 광장 · 성바울 성당 유적","유네스코 마카오 역사지구"],
+  ["16:00","육포 거리 · 마가렛 카페 에그타르트",""],
+  ["19:00","구시가지 야간 조명 → 윈 팰리스 분수쇼",""]],
+  tip:"일요일이라 구시가지가 붐벼요. 아이 손 꼭 잡기."},
+ {d:"2026-12-14",dow:"월",city:"h",title:"타이파 → 홍콩 하얏트",stay:"하얏트 리젠시 침사추이",items:[
+  ["09:30","타이파 빌리지 (관야가)","포크찹번"],
+  ["11:00","콜로안 · 로드스토우즈 원조 에그타르트",""],
+  ["13:30","체크아웃 → 페리로 침사추이",""],
+  ["16:00","하얏트 체크인 · 휴식",""],
+  ["20:00","심포니 오브 라이트","침사추이 해변 산책로, 약 10분"]],
+  tip:"다음 날 디즈니 — 일찍 자기."},
+ {d:"2026-12-15",dow:"화",city:"d",title:"🏰 홍콩 디즈니랜드",stay:"하얏트 리젠시 침사추이",items:[
+  ["개장 전","정문 대기 (30분 전)","앱 · 티켓 · 입장 예약 확인"],
+  ["개장","월드 오브 프로즌","프로즌 에버 애프터 1순위 → 슬라이딩 슬레이"],
+  ["오전","미스틱 매너 · 빅 그리즐리 마운틴",""],
+  ["점심","아렌델 또는 메인스트리트","12–13시 피크 피하기"],
+  ["오후","토이스토리 랜드 · 판타지랜드 · 마블",""],
+  ["퍼레이드","크리스마스 퍼레이드 · 캐슬 쇼","30분 전 자리 잡기"],
+  ["밤","불꽃 · 프로젝션 쇼 「Momentous」","메인스트리트 중앙"]],
+  tip:"<b>크리스마스 행사</b> 걸어 다니는 올라프, 아렌델 윈터 마켓, 미키·미니 캐슬 파티."},
+ {d:"2026-12-16",dow:"수",city:"h",title:"옹핑 · 천단대불",stay:"하얏트 리젠시 침사추이",items:[
+  ["09:30","MTR 퉁청역 → 옹핑 360","크리스털 캐빈(바닥 유리)"],
+  ["10:30","천단대불 · 포린사","계단 268개"],
+  ["12:30","사찰 채식 점심 또는 옹핑 빌리지",""],
+  ["15:00","시티게이트 아울렛 (퉁청)","선택"],
+  ["저녁","호텔 휴식 · K11 저녁",""]],
+  tip:"디즈니 다음 날이라 가볍게."},
+ {d:"2026-12-17",dow:"목",city:"h",title:"빅토리아 피크 · 센트럴",stay:"하얏트 리젠시 침사추이",items:[
+  ["09:00","피크 트램 → 빅토리아 피크","스카이 테라스 428"],
+  ["12:00","딤섬 점심","팀호완 등"],
+  ["14:00","센트럴 · 미드레벨 에스컬레이터 · PMQ",""],
+  ["16:00","스타페리 (센트럴 → 침사추이)","1888년부터 운행"],
+  ["저녁","템플 스트리트 야시장","선택"]],tip:""},
+ {d:"2026-12-18",dow:"금",city:"h",title:"오션파크 또는 스탠리",stay:"하얏트 리젠시 침사추이",items:[
+  ["10:00","오션파크","판다, 수족관, 케이블카 · 아이들 추천"],
+  ["","또는 스탠리 · 리펄스베이","해변 산책, 스탠리 마켓"],
+  ["저녁","하버시티 · 침사추이 저녁",""]],
+  tip:"비 오면 홍콩 고궁박물관 · M+로 변경."},
+ {d:"2026-12-19",dow:"토",city:"h",title:"쇼핑 · 심야 출국",stay:"귀국",items:[
+  ["오전","체크아웃 → 시내 체크인","홍콩역·구룡역, 항공사별 가능 여부 확인"],
+  ["점심","완탕면 · 차찬텡","밀크티, 파인애플번"],
+  ["오후","하버시티 · K11 MUSEA 쇼핑",""],
+  ["저녁","마지막 야경",""],
+  ["출발 3시간 전","공항철도 AEL 24분 → 출국",""]],tip:""}
+];
+const CK={book:[
+ ["b1","항공권","인천 ↔ 홍콩 왕복, 귀국편 12/19 심야"],
+ ["b2","마카오 코타이 호텔 2박",""],
+ ["b3","하얏트 리젠시 침사추이 5박","레이트 체크아웃 문의"],
+ ["b4","디즈니 티켓 + 입장 예약","12/15(화)"],
+ ["b5","옹핑 360 케이블카",""],
+ ["b6","여행자보험",""]],
+pack:[
+ ["p1","여권","유효기간 6개월 이상"],
+ ["p2","옥토퍼스 카드","휴대폰 지갑 앱"],
+ ["p3","멀티 어댑터","영국식 3핀"],
+ ["p4","얇은 패딩 · 가디건","12월 15–21℃"],
+ ["p5","편한 운동화","디즈니 하루 2만 보"],
+ ["p6","상비약 · 아이 간식",""],
+ ["p7","보조배터리",""]]};
+
+const $=s=>document.querySelector(s);
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function hkToday(){return new Date(Date.now()+8*3600e3).toISOString().slice(0,10)}
+let cur=0;
+(function(){const t=hkToday();const i=DAYS.findIndex(x=>x.d===t);if(i>=0)cur=i;
+  const h=location.hash.match(/^#d(\d)$/);if(h&&+h[1]>=1&&+h[1]<=DAYS.length)cur=+h[1]-1;
+  const start=Date.parse("2026-12-12T00:00:00+08:00"),end=Date.parse("2026-12-20T00:00:00+08:00"),now=Date.now();
+  $("#dday").textContent=now<start?"D-"+Math.ceil((start-now)/864e5):now<end?"여행 "+(Math.floor((now-start)/864e5)+1)+"일차":"다녀왔어요";
+})();
+
+function renderDays(){
+  $("#days").innerHTML=DAYS.map((x,i)=>`<button class="dchip ${x.city}" role="tab" type="button" aria-selected="${i===cur}" data-i="${i}"><b>${x.d.slice(5).replace("-","/")}</b><span>${x.dow} · ${x.city==="m"?"마카오":x.city==="d"?"디즈니":"홍콩"}</span></button>`).join("");
+  const x=DAYS[cur];
+  const day=$("#day");day.className="card "+x.city;
+  day.innerHTML=`<div class="dayhead"><span class="meta">DAY ${cur+1} · ${x.d.slice(5).replace("-","/")} ${x.dow}</span><h2>${esc(x.title)}</h2><span class="stay">숙박: ${esc(x.stay)}</span></div>
+  <ol class="tl">${x.items.map(([t,a,b])=>`<li><span class="t">${esc(t)}</span><span>${esc(a)}${b?`<small>${esc(b)}</small>`:""}</span></li>`).join("")}</ol>
+  ${x.tip?`<p class="tip">${x.tip}</p>`:""}`;
+  $("#prev").disabled=cur===0;$("#next").disabled=cur===DAYS.length-1;
+  const chip=$("#days").children[cur];chip&&chip.scrollIntoView({block:"nearest",inline:"center"});
+}
+$("#days").addEventListener("click",e=>{const b=e.target.closest(".dchip");if(b){cur=+b.dataset.i;renderDays()}});
+$("#prev").onclick=()=>{if(cur>0){cur--;renderDays()}};
+$("#next").onclick=()=>{if(cur<DAYS.length-1){cur++;renderDays()}};
+let sx=null;$("#day").addEventListener("touchstart",e=>{sx=e.touches[0].clientX},{passive:true});
+$("#day").addEventListener("touchend",e=>{if(sx==null)return;const dx=e.changedTouches[0].clientX-sx;sx=null;
+  if(dx<-60&&cur<DAYS.length-1){cur++;renderDays()}else if(dx>60&&cur>0){cur--;renderDays()}});
+
+let checked=store.get("trip-ck")||{};
+function renderCk(){
+  for(const k of ["book","pack"]){
+    $("#ck-"+k).innerHTML=CK[k].map(([id,a,b])=>`<li><label class="check" for="${id}"><input type="checkbox" id="${id}" ${checked[id]?"checked":""}><span>${esc(a)}${b?`<small>${esc(b)}</small>`:""}</span></label></li>`).join("");
+  }
+  updP();
+}
+function updP(){const all=[...CK.book,...CK.pack].length,n=Object.values(checked).filter(Boolean).length;
+  $("#pbar").style.width=(n/all*100)+"%";$("#ptext").textContent=n+"/"+all}
+document.addEventListener("change",e=>{if(e.target.matches(".check input")){checked[e.target.id]=e.target.checked;store.set("trip-ck",checked);updP()}});
+
+function show(v){document.querySelectorAll(".view").forEach(s=>s.hidden=s.id!=="v-"+v);
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.v===v));
+  store.set("trip-tab",v);window.scrollTo(0,0)}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>show(t.dataset.v));
+
+renderDays();renderCk();
+const lt=store.get("trip-tab");if(lt&&!location.hash)show(lt);
+</script>
