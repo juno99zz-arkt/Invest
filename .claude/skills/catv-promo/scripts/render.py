@@ -34,7 +34,8 @@ def render(src, out):
                         f"--screenshot={pathlib.Path(out).resolve()}", url], check=True)
         return
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        chrome = find_chromium()
+        browser = p.chromium.launch(executable_path=chrome) if chrome else p.chromium.launch()
         page = browser.new_page(viewport={"width": W, "height": H})
         page.goto(url, wait_until="networkidle")
         page.evaluate("document.fonts.ready")
