@@ -1,0 +1,209 @@
+<title>마카오·홍콩 가족여행</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 경로 띠 → 7일 요약 칩 → 일자별 타임테이블. 도시별 색(마카오 타일 블루 / 홍콩 하버 레드)으로 구분 */
+:root{
+  --bg:#f5f7f9; --surface:#ffffff; --fg:#1b2430; --muted:#5d6b7a; --line:#dde3ea;
+  --macau:#1f5fa8; --macau-soft:#e3edf8;
+  --hk:#c23a3a; --hk-soft:#f8e6e4;
+  --disney:#6a4bb8; --disney-soft:#ece6f8;
+  --f-display:"Do Hyeon","IBM Plex Sans KR",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11161c; --surface:#1a2129; --fg:#e6ebf0; --muted:#9aa7b4; --line:#2b3540;
+  --macau:#7fb0ea; --macau-soft:#1a2b3f; --hk:#f08a80; --hk-soft:#3a2122;
+  --disney:#b8a2f0; --disney-soft:#2a2340; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11161c; --surface:#1a2129; --fg:#e6ebf0; --muted:#9aa7b4; --line:#2b3540;
+  --macau:#7fb0ea; --macau-soft:#1a2b3f; --hk:#f08a80; --hk-soft:#3a2122;
+  --disney:#b8a2f0; --disney-soft:#2a2340; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(30px,6vw,44px)}
+.sub{color:var(--muted);margin:6px 0 0}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px}
+.stop{padding:6px 12px;border-radius:999px;font-weight:700}
+.stop.m{background:var(--macau-soft);color:var(--macau)}
+.stop.h{background:var(--hk-soft);color:var(--hk)}
+.arrow{color:var(--muted);font-family:var(--f-mono);font-size:12px}
+.label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.chips{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+@media (max-width:640px){.chips{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.chip{display:grid;gap:2px;padding:10px 8px;border-radius:10px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit;border-top:4px solid var(--c)}
+.chip:hover,.chip:focus-visible{outline:2px solid var(--c);outline-offset:1px}
+.chip b{font-family:var(--f-mono);font-size:13px}
+.chip span{font-size:12px;color:var(--muted);line-height:1.35}
+.m{--c:var(--macau);--cs:var(--macau-soft)} .h{--c:var(--hk);--cs:var(--hk-soft)} .d{--c:var(--disney);--cs:var(--disney-soft)}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;scroll-margin-top:12px}
+.day header{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;padding:16px 18px;background:var(--cs);border-bottom:1px solid var(--line)}
+.day header .date{font-family:var(--f-mono);color:var(--c);font-size:14px}
+.day header h2{font-size:24px;flex:1 1 220px;min-width:0}
+.day header .stay{font-size:13px;color:var(--muted)}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td{padding:9px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.t{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--c);white-space:nowrap;width:1%}
+td small{display:block;color:var(--muted);font-size:12.5px}
+.note{margin:0;padding:12px 18px;font-size:13.5px;border-top:1px dashed var(--line);color:var(--muted)}
+.note strong{color:var(--fg)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.box h3{font-size:20px;margin-bottom:8px}
+.box ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+.links a{color:var(--macau)}
+footer{font-size:12.5px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+  <section>
+    <p class="label">가족여행 · 6박 7일</p>
+    <h1>마카오·홍콩 가족여행</h1>
+    <p class="sub">2026.12.20(일) – 12.26(토) · 마카오 2박 + 홍콩 4박, 디즈니랜드 하루</p>
+  </section>
+
+  <div class="route" aria-label="이동 경로">
+    <span class="stop m">인천 → 마카오 (MFM)</span><span class="arrow">2박</span>
+    <span class="stop m">마카오</span><span class="arrow">─ 강주아오대교 40분 ─</span>
+    <span class="stop h">홍콩 디즈니 2박</span><span class="arrow">→</span>
+    <span class="stop h">침사추이 2박</span><span class="arrow">→</span>
+    <span class="stop h">홍콩 (HKG) → 인천</span>
+  </div>
+
+  <nav aria-label="날짜별 바로가기">
+    <p class="label">한눈에 보기</p>
+    <div class="chips">
+      <a class="chip m" href="#d1"><b>12/20 일</b><span>마카오 도착 · 구시가지</span></a>
+      <a class="chip m" href="#d2"><b>12/21 월</b><span>타워 · 타이파 · 코타이</span></a>
+      <a class="chip h" href="#d3"><b>12/22 화</b><span>홍콩 이동 · 디즈니 호텔</span></a>
+      <a class="chip d" href="#d4"><b>12/23 수</b><span>디즈니랜드 종일</span></a>
+      <a class="chip h" href="#d5"><b>12/24 목</b><span>옹핑 · 천단대불</span></a>
+      <a class="chip h" href="#d6"><b>12/25 금</b><span>피크 · 스타페리 · 야경</span></a>
+      <a class="chip h" href="#d7"><b>12/26 토</b><span>쇼핑 · 귀국</span></a>
+    </div>
+  </nav>
+
+  <article class="day m" id="d1">
+    <header><span class="date">DAY 1 · 12/20 일</span><h2>마카오 도착 · 구시가지</h2><span class="stay">숙박: 마카오 코타이</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">오후</td><td>마카오 공항 도착 → 코타이 호텔 짐 맡기기<small>호텔 무료 셔틀 이용</small></td></tr>
+      <tr><td class="t">15:00</td><td>세나도 광장<small>물결무늬 타일 바닥, 크리스마스 장식</small></td></tr>
+      <tr><td class="t">16:00</td><td>성 바울 성당 유적 · 몬테 요새<small>유네스코 마카오 역사지구</small></td></tr>
+      <tr><td class="t">16:30</td><td>육포 거리 · 마가렛 카페 에그타르트</td></tr>
+      <tr><td class="t">18:00</td><td>저녁: 매캐니즈 요리 (아프리칸 치킨, 민치)</td></tr>
+      <tr><td class="t">19:30</td><td>세나도 광장 야간 조명 → 호텔</td></tr>
+    </table></div>
+    <p class="note"><strong>참고</strong> 12/20은 마카오 반환 기념일(공휴일)이라 구시가지가 붐빌 수 있어요.</p>
+  </article>
+
+  <article class="day m" id="d2">
+    <header><span class="date">DAY 2 · 12/21 월</span><h2>마카오 타워 · 타이파 · 코타이</h2><span class="stay">숙박: 마카오 코타이</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">09:30</td><td>아마 사원<small>마카오 지명의 유래가 된 사원</small></td></tr>
+      <tr><td class="t">10:30</td><td>펠리시다데 거리 · 릴라우 광장 산책</td></tr>
+      <tr><td class="t">11:30</td><td>마카오 타워 전망대<small>스카이워크는 선택</small></td></tr>
+      <tr><td class="t">14:30</td><td>타이파 빌리지 (관야가 · 쿤하 거리)</td></tr>
+      <tr><td class="t">16:30</td><td>코타이 리조트 투어<small>베네시안 곤돌라, 파리지앵 에펠탑</small></td></tr>
+      <tr><td class="t">19:00</td><td>윈 팰리스 분수쇼 · 스튜디오 시티 관람차</td></tr>
+    </table></div>
+  </article>
+
+  <article class="day h" id="d3">
+    <header><span class="date">DAY 3 · 12/22 화</span><h2>마카오 → 홍콩 디즈니 호텔</h2><span class="stay">숙박: 디즈니 호텔</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">오전</td><td>호텔 조식 · 수영장 · 체크아웃</td></tr>
+      <tr><td class="t">11:00</td><td>(선택) 콜로안 빌리지 · 로드스토우즈 원조 에그타르트</td></tr>
+      <tr><td class="t">13:00</td><td>강주아오대교 셔틀버스로 홍콩 이동<small>국경 간 약 40분 → 택시 약 20분이면 디즈니 도착 · 대안: 터보젯 페리(약 1시간)</small></td></tr>
+      <tr><td class="t">16:00</td><td>디즈니 호텔 체크인</td></tr>
+      <tr><td class="t">저녁</td><td>호텔 레스토랑 · 캐릭터 다이닝<small>사전 예약 필수</small></td></tr>
+    </table></div>
+    <p class="note"><strong>팁</strong> 짐이 많은 가족여행이면 버스 + 택시 조합이 디즈니까지 가장 편해요.</p>
+  </article>
+
+  <article class="day d" id="d4">
+    <header><span class="date">DAY 4 · 12/23 수</span><h2>홍콩 디즈니랜드 종일</h2><span class="stay">숙박: 디즈니 호텔</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">개장 전</td><td>정문 대기 (개장 30분 전)<small>앱 설치, 티켓 · 입장 예약 확인</small></td></tr>
+      <tr><td class="t">개장</td><td>월드 오브 프로즌 → 프로즌 에버 애프터<small>대기가 가장 길어서 1순위 · 이어서 가족 코스터 '슬라이딩 슬레이'</small></td></tr>
+      <tr><td class="t">오전</td><td>미스틱 매너 · 빅 그리즐리 마운틴</td></tr>
+      <tr><td class="t">점심</td><td>아렌델 또는 메인스트리트<small>12–13시 피크 피하기</small></td></tr>
+      <tr><td class="t">오후</td><td>토이스토리 랜드 · 판타지랜드 · 마블 어트랙션</td></tr>
+      <tr><td class="t">퍼레이드</td><td>크리스마스 퍼레이드 · 캐슬 스테이지 쇼<small>30분 전 자리 잡기</small></td></tr>
+      <tr><td class="t">밤</td><td>캐슬 불꽃 · 프로젝션 쇼 「Momentous」<small>메인스트리트 중앙이 명당</small></td></tr>
+    </table></div>
+    <p class="note"><strong>2026 크리스마스 (11/20–1/3)</strong> 걸어 다니는 올라프, 아렌델 윈터 마켓, 미키·미니 캐슬 파티. 1일권 + HK$100에 2일권 (12/31까지).</p>
+    <p class="note"><strong>왜 수요일?</strong> 12/24–26은 크리스마스 연휴와 홍콩 공휴일이라 매우 붐벼요.</p>
+  </article>
+
+  <article class="day h" id="d5">
+    <header><span class="date">DAY 5 · 12/24 목</span><h2>란타우섬 → 침사추이</h2><span class="stay">숙박: 침사추이</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">09:00</td><td>디즈니 호텔 체크아웃<small>짐은 택시로 시내 호텔에 먼저 보내기</small></td></tr>
+      <tr><td class="t">09:30</td><td>퉁청역 → 옹핑 360 케이블카<small>바닥 유리 크리스털 캐빈 추천, 사전 예약</small></td></tr>
+      <tr><td class="t">10:30</td><td>천단대불 · 포린사<small>계단 268개</small></td></tr>
+      <tr><td class="t">12:30</td><td>사찰 채식 점심 또는 옹핑 빌리지</td></tr>
+      <tr><td class="t">16:00</td><td>침사추이 호텔 체크인 · 휴식</td></tr>
+      <tr><td class="t">저녁</td><td>크리스마스 이브 야경 · 1881 헤리티지 트리<small>매우 혼잡, 아이 손 꼭 잡기</small></td></tr>
+    </table></div>
+  </article>
+
+  <article class="day h" id="d6">
+    <header><span class="date">DAY 6 · 12/25 금</span><h2>빅토리아 피크 · 스타페리 · 야경</h2><span class="stay">숙박: 침사추이</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">09:30</td><td>피크 트램 → 빅토리아 피크<small>오전 일찍 가야 대기가 짧아요</small></td></tr>
+      <tr><td class="t">12:00</td><td>딤섬 점심 (팀호완 등)</td></tr>
+      <tr><td class="t">14:00</td><td>센트럴 · 미드레벨 에스컬레이터 · PMQ</td></tr>
+      <tr><td class="t">16:00</td><td>스타페리 (센트럴 → 침사추이)</td></tr>
+      <tr><td class="t">17:00</td><td>홍콩 고궁박물관 또는 M+<small>실내 대안</small></td></tr>
+      <tr><td class="t">20:00</td><td>심포니 오브 라이트 (약 10분)<small>침사추이 해변 산책로</small></td></tr>
+    </table></div>
+  </article>
+
+  <article class="day h" id="d7">
+    <header><span class="date">DAY 7 · 12/26 토</span><h2>박싱데이 쇼핑 · 귀국</h2><span class="stay">귀국</span></header>
+    <div class="tbl"><table>
+      <tr><td class="t">오전</td><td>하버시티 · K11 MUSEA 쇼핑</td></tr>
+      <tr><td class="t">점심</td><td>완탕면 · 차찬텡 (밀크티, 파인애플번)</td></tr>
+      <tr><td class="t">오후</td><td>홍콩역/구룡역 인타운 체크인 → 공항철도 24분<small>항공사별 가능 여부 확인</small></td></tr>
+    </table></div>
+  </article>
+
+  <section class="grid2">
+    <div class="box">
+      <h3>예약 순서</h3>
+      <ul>
+        <li>항공권 (마카오 IN / 홍콩 OUT)</li>
+        <li>디즈니 호텔 + 티켓 + 입장 예약</li>
+        <li>옹핑 360 케이블카</li>
+        <li>캐릭터 다이닝 · 크리스마스 식당</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>준비물</h3>
+      <ul>
+        <li>여권 (6개월 이상 남은 것)</li>
+        <li>옥토퍼스 카드 (휴대폰 지갑 앱)</li>
+        <li>영국식 3핀 어댑터</li>
+        <li>가벼운 패딩 · 가디건 (15–21℃)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="box links">
+    <h3>공식 사이트</h3>
+    <ul>
+      <li><a href="https://www.hongkongdisneyland.com/ko/">홍콩 디즈니랜드</a></li>
+      <li><a href="https://www.discoverhongkong.com/kr/">홍콩관광청</a> · <a href="https://www.macaotourism.gov.mo/ko/">마카오관광청</a></li>
+      <li><a href="https://www.hzmbus.com/">강주아오대교 셔틀버스</a> · <a href="https://www.turbojet.com.hk/">터보젯</a></li>
+      <li><a href="https://www.np360.com.hk/">옹핑 360</a> · <a href="https://www.thepeak.com.hk/">피크 트램</a></li>
+    </ul>
+  </section>
+
+  <footer>운영시간과 요금은 출발 전 공식 사이트에서 다시 확인하세요.</footer>
+</div>
