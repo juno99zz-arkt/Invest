@@ -101,13 +101,7 @@ jobs:
       - name: 투자 대시보드 생성
         run: python generate_invest.py
 
-      - name: gh-pages 배포
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
-
+      # 메일·발송 기록 커밋은 gh-pages 배포 전에 실행 (배포 액션 이후엔 작업 폴더의 git 저장소를 쓸 수 없음: "not in a git directory")
       - name: 주간 메일 리포트 (토요일 · 주 1회)
         id: mail
         if: steps.mode.outputs.mode == 'finalize' || steps.mode.outputs.mode == 'report_auto' || steps.mode.outputs.mode == 'report'
@@ -125,6 +119,7 @@ jobs:
 
       - name: 메일 발송 기록 커밋
         if: steps.mail.outcome == 'success'
+        continue-on-error: true   # 기록 실패가 배포를 막지 않게
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -132,3 +127,10 @@ jobs:
           git diff --cached --quiet || git commit -m "주간 메일 발송 기록: $(TZ=Asia/Seoul date +%G-W%V)"
           git pull --rebase --autostash origin main
           git push
+
+      - name: gh-pages 배포
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
