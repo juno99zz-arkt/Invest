@@ -177,6 +177,14 @@ def prepare():
     now = datetime.now(KST)
     today, week = now.date().isoformat(), now.strftime("%G-W%V")
 
+    # 중복 prepare 방지: GitHub 예약 실행은 수 시간 늦게 돌 수 있다. 이미 같은 주 요청서가 있으면
+    # (수동 prepare 후 분석·finalize 진행 중/완료) 예약 실행은 건너뛰고, 반영 완료된 주는 수동이라도 FORCE_PREPARE 없이는 건너뜀.
+    prev = _load(PENDING_PATH) or {}
+    if prev.get("week") == week and not os.environ.get("FORCE_PREPARE") \
+            and (prev.get("finalized_at") or os.environ.get("GITHUB_EVENT_NAME") == "schedule"):
+        print(f"{week} 요청서 이미 있음 (생성 {prev.get('created_at_kst')}, 반영 {prev.get('finalized_at')}) — prepare 건너뜀")
+        return
+
     universe = load_universe()
     snaps = fetch_snapshots(universe)
     spy = fetch_prices(["SPY"]).get("SPY")
