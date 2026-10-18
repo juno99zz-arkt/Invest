@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 sys.path.insert(0, BASE_DIR)
 
-from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_kr_top50_metrics, fetch_prices
+from data_fetcher import PEG_TICKERS, fetch_top50_metrics, fetch_kr_top50_metrics, fetch_prices, fetch_fear_greed
 import picks
 import sec_data
 import sim
@@ -266,6 +266,9 @@ def build_data():
         print(f"PEG 실시간 데이터 {len(peg)}개 반영")
     else:
         print("yfinance 실패 — PEG 비움")
+    fg = fetch_fear_greed()
+    m6["fear_greed"] = fg
+    print(f"Fear & Greed {fg['score']} ({fg['rating']})" if fg else "Fear & Greed 수집 실패 — 카드 대기 표시")
 
     top50 = fetch_top50_metrics()
     print(f"M7 미국 상위 50종목 {len(top50)}개 갱신" if top50 else "yfinance 실패 — M7 비움")

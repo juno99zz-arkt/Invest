@@ -258,7 +258,7 @@
   <div id="sec-m6" class="section pt-3">
     <div class="app-wrapper px-3">
       <div class="sec-bar">
-        <span class="text-xs" style="color:var(--muted);">반도체 이익성장 & 빅테크 CapEx 모니터링</span>
+        <span class="text-xs" style="color:var(--muted);">공포·탐욕 지수 · 반도체 이익성장 & 빅테크 CapEx 모니터링</span>
         <button class="sec-collapse-btn" onclick="toggleSecContent('m6-content', this)">전체 접기 ▲</button>
       </div>
       <div id="m6-content" class="loading animate-pulse">데이터 로딩 중...</div>
@@ -1447,6 +1447,70 @@ function loadM5(d) {
   initCollapsibleCards('m5-content');
 }
 
+// ── 공포·탐욕 지수 (CNN Fear & Greed) ─────────────────────────────
+let fgChart = null;
+function fgColor(v) { return v == null ? '#94a3b8' : v < 25 ? '#ef4444' : v < 45 ? '#f97316' : v <= 55 ? '#eab308' : v <= 75 ? '#84cc16' : '#22c55e'; }
+function fgLabel(v) { return v == null ? '—' : v < 25 ? '극단적 공포' : v < 45 ? '공포' : v <= 55 ? '중립' : v <= 75 ? '탐욕' : '극단적 탐욕'; }
+function fearGreedCard(fg) {
+  if (!fg) return '<div class="card p-4 mb-3"><div class="text-sm font-bold mb-1">공포·탐욕 지수 (CNN Fear & Greed)</div><div class="text-xs" style="color:var(--muted);">데이터 수집 대기 중입니다. 다음 매일 갱신(06:00 KST) 때 표시됩니다.</div></div>';
+  const v = fg.score, col = fgColor(v);
+  // 반원 게이지 (0~100)
+  const W = 220, R = 90, cx = 110, cy = 105;
+  const pt = (p, r) => { const a = Math.PI * (1 - p / 100); return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; };
+  const seg = (a, b, c) => { const [x1, y1] = pt(a, R), [x2, y2] = pt(b, R); return '<path d="M' + x1 + ' ' + y1 + ' A' + R + ' ' + R + ' 0 0 1 ' + x2 + ' ' + y2 + '" stroke="' + c + '" stroke-width="16" fill="none" opacity="0.85"/>'; };
+  const [nx, ny] = pt(v, R - 22);
+  const gauge = '<svg viewBox="0 0 ' + W + ' 120" style="width:100%;max-width:260px;display:block;margin:0 auto;">'
+    + seg(0, 24.5, '#ef4444') + seg(25, 44.5, '#f97316') + seg(45, 55, '#eab308') + seg(55.5, 75, '#84cc16') + seg(75.5, 100, '#22c55e')
+    + '<line x1="' + cx + '" y1="' + cy + '" x2="' + nx + '" y2="' + ny + '" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>'
+    + '<circle cx="' + cx + '" cy="' + cy + '" r="6" fill="#e2e8f0"/>'
+    + '<text x="10" y="118" fill="#94a3b8" font-size="10">0</text><text x="200" y="118" fill="#94a3b8" font-size="10">100</text></svg>';
+  const prev = [['전일', fg.previous_close], ['1주 전', fg.previous_1_week], ['1달 전', fg.previous_1_month], ['1년 전', fg.previous_1_year]]
+    .map(([k, x]) => '<div class="card2 p-2 text-center"><div class="text-xs" style="color:var(--muted);">' + k + '</div><div class="font-bold text-sm" style="color:' + fgColor(x) + ';">' + (x == null ? '—' : Math.round(x)) + '</div><div style="font-size:10px;color:' + fgColor(x) + ';">' + fgLabel(x) + '</div></div>').join('');
+  const comps = (fg.components || []).map(c => '<div class="py-2" style="border-bottom:1px solid var(--border);">'
+    + '<div class="flex items-center justify-between"><span class="text-sm font-semibold">' + esc(c.name) + '</span>'
+    + '<span class="text-xs font-bold" style="color:' + fgColor(c.score) + ';">' + Math.round(c.score) + ' · ' + esc(c.rating) + '</span></div>'
+    + '<div class="progress-bar mt-1"><div class="progress-fill" style="width:' + Math.max(2, Math.min(100, c.score)) + '%;background:' + fgColor(c.score) + ';"></div></div>'
+    + '<div class="flex justify-between mt-1" style="font-size:11px;color:var(--muted);"><span>' + esc(c.desc) + '</span><span style="white-space:nowrap;margin-left:8px;">' + esc(c.value) + '</span></div></div>').join('');
+  const note = v < 25 ? '시장 참여자가 극도로 겁먹은 상태입니다. 역사적으로 이 구간은 분할 매수 기회였던 경우가 많았지만, 공포가 더 깊어질 수도 있어 바닥 신호로 단정할 수는 없습니다.'
+    : v < 45 ? '공포 우위 구간입니다. 위험 회피 심리가 강해 변동성이 커지기 쉽습니다.'
+    : v <= 55 ? '공포와 탐욕이 균형인 중립 구간입니다.'
+    : v <= 75 ? '탐욕 우위 구간입니다. 상승 추세가 이어지지만 신규 매수는 가격 조건을 더 엄격히 보는 것이 좋습니다.'
+    : '극단적 탐욕 구간입니다. 과열 신호로, 역사적으로 단기 조정 위험이 커지는 구간이었습니다.';
+  setTimeout(() => drawFgChart(fg), 80);
+  return `
+    <div class="card p-4 mb-3">
+      <div class="flex items-center justify-between mb-1">
+        <div class="text-sm font-bold">공포·탐욕 지수 <span class="text-xs" style="color:var(--muted);font-weight:400;">CNN Fear & Greed</span></div>
+        <span class="text-xs" style="color:var(--muted);">${esc(fg.as_of)} 기준 · 매일 갱신</span>
+      </div>
+      ${gauge}
+      <div class="text-center" style="margin-top:-6px;">
+        <div class="text-3xl font-bold" style="color:${col};">${Math.round(v)}</div>
+        <div class="text-sm font-semibold" style="color:${col};">${esc(fg.rating || fgLabel(v))}</div>
+      </div>
+      <div class="grid grid-cols-4 gap-2 mt-3 mb-3">${prev}</div>
+      <div class="text-xs p-3 rounded mb-3" style="background:#0f1117;color:#cbd5e1;line-height:1.7;">${note}<br><span style="color:var(--muted);">0~25 극단적 공포 · 25~45 공포 · 45~55 중립 · 55~75 탐욕 · 75~100 극단적 탐욕. 아래 7개 지표의 평균이며, 매수·매도 판단은 종목별 판단표를 우선합니다.</span></div>
+      <div class="mb-3 sim-chart-box" style="height:170px;"><canvas id="fg-chart"></canvas></div>
+      <div class="text-xs font-semibold mb-1" style="color:var(--muted);">구성 지표 7개</div>
+      ${comps}
+    </div>`;
+}
+function drawFgChart(fg) {
+  const el = document.getElementById('fg-chart');
+  if (!el || !fg || !(fg.history || []).length || typeof Chart === 'undefined') return;
+  if (fgChart) fgChart.destroy();
+  const h = fg.history;
+  fgChart = new Chart(el, {
+    type: 'line',
+    data: { labels: h.map(p => p.d.slice(2)), datasets: [{ label: '공포·탐욕', data: h.map(p => p.v), borderColor: '#93c5fd', borderWidth: 1.6, pointRadius: 0, tension: 0.2,
+      segment: { borderColor: ctx => fgColor(ctx.p1.parsed.y) } }] },
+    options: { responsive: true, maintainAspectRatio: false, animation: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => Math.round(c.parsed.y) + ' · ' + fgLabel(c.parsed.y) } } },
+      scales: { x: { ticks: { color: '#64748b', maxTicksLimit: 6, font: { size: 10 } }, grid: { display: false } },
+        y: { min: 0, max: 100, ticks: { color: '#64748b', stepSize: 25, font: { size: 10 } }, grid: { color: '#1e2340' } } } }
+  });
+}
+
 // ── M6 렌더링 ───────────────────────────────────────────────────
 function loadM6(d) {
   d = d || {};
@@ -1474,7 +1538,7 @@ function loadM6(d) {
       ${pegRows || '<div class="text-xs" style="color:var(--muted);">시세 수집 실패</div>'}
     </div>`;
 
-  if (!d.overall) { render('m6-content', emptyCard('사이클 지표 데이터가 없습니다. 주간 파이프라인 실행을 확인하세요.') + pegCard); return; }
+  if (!d.overall) { render('m6-content', fearGreedCard(d.fear_greed) + emptyCard('사이클 지표 데이터가 없습니다. 주간 파이프라인 실행을 확인하세요.') + pegCard); return; }
 
   const overallColor = d.overall.bull_market_signal === '지속' ? '#22c55e' : d.overall.bull_market_signal === '주의' ? '#f59e0b' : '#ef4444';
   const capexColor = d.overall.capex_trend === '확대' ? '#22c55e' : d.overall.capex_trend === '축소' ? '#ef4444' : '#f59e0b';
@@ -1503,7 +1567,7 @@ function loadM6(d) {
       + '</div>';
   }).join('');
 
-  render('m6-content', `
+  render('m6-content', fearGreedCard(d.fear_greed) + `
     <div class="card p-4 mb-3">
       <div class="flex items-center justify-between mb-3">
         <div class="text-sm font-bold">강세장 신호</div>
