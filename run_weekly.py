@@ -401,7 +401,11 @@ def finalize():
                 rescored[tk] = r
                 print(f"  {tk}: 검증값 반영 점수 {r['before']} → {r['after']}")
 
-        kept, decisions, removed = decide(hist["portfolio"], new_tk, analyses, snaps, scores, today)
+        # 공포·탐욕 지수 20/10/5 하향 돌파 → 매수 문턱 완화 (전부는 아님: 안전장치는 그대로)
+        import fear as _fear
+        fear_t = _fear.tier(_fear.load(), _profile())
+        print("  " + fear_t.get("note", ""))
+        kept, decisions, removed = decide(hist["portfolio"], new_tk, analyses, snaps, scores, today, fear=fear_t)
         for dcs in decisions:
             if dcs["ticker"] in watch_tk and dcs["ticker"] not in held_tk:
                 dcs["reason"] = "[관심종목] " + dcs["reason"]
@@ -418,7 +422,8 @@ def finalize():
                 for tk, s in snaps.items()}
         weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights"), prev_weights,
                                                      analyses, prices, meta, stance, _profile(), res.get("allocation"),
-                                                     new_tickers=[d["ticker"] for d in decisions if d["action"] == "신규편입"])
+                                                     new_tickers=[d["ticker"] for d in decisions if d["action"] == "신규편입"],
+                                                     fear=fear_t)
         alloc["agent_reason"] = res.get("weights_reason")
         for n in alloc["notes"]:
             print("  비중: " + n)
@@ -426,7 +431,7 @@ def finalize():
         hist = update_history(hist, week, today, kept, decisions, removed, snaps, spy)
         hist["weeks"][-1]["weights"] = weights
         hist["weeks"][-1]["allocation"] = {k: alloc[k] for k in
-                                           ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct", "cash_pct", "reason", "expected_return_pct")}
+                                           ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct", "cash_pct", "reason", "expected_return_pct", "fear")}
         for h in hist["portfolio"]:
             a = analyses.get(h["ticker"]) or {}
             h["weight"] = weights.get(h["ticker"])
@@ -517,29 +522,63 @@ def finalize_interim(req, res):
                 decisions.append({"ticker": tk, "action": "유지",
                                   "reason": f"[중간 재평가 · {a.get('alert_level')}] " + a.get("thesis_status_reason", "")})
             kept.append(h)
+
+    # 공포·탐욕 10·5 하향 돌파(2·3단계) 때만 주간 분석을 기다리지 않고 신규 편입 허용 (극단적 공포는 짧게 지나가므로)
+    import fear as _fear
+    from picks import decide as _decide, MAX_HOLDINGS, MAX_PER_SECTOR
+    fear_t = _fear.tier(_fear.load(), _profile())
+    print("  " + fear_t.get("note", ""))
+    rep0 = _load(os.path.join(DATA_DIR, "reports", f"{req['week']}.json"), {}) or {}
+    new_tk = []
+    cand = [tk for tk in valid if tk not in held]
+    if cand and fear_t.get("tier", 0) >= 2:
+        snaps_i = {}
+        for tk in cand:
+            m = ((rep0.get("analyses") or {}).get(tk) or {}).get("metrics") or {}
+            snaps_i[tk] = {"name": m.get("name") or tk, "sector": m.get("sector") or "Unknown",
+                           "price": prices.get(tk) or m.get("price") or (cache.get(tk) or {}).get("price")}
+        _, dec_new, _ = _decide([], cand, valid, snaps_i, {}, today, fear=fear_t)
+        for d in dec_new:
+            tk = d["ticker"]
+            if d["action"] == "신규편입":
+                same = sum(1 for x in kept if (x.get("sector") or "") == snaps_i[tk]["sector"])
+                if len(kept) >= MAX_HOLDINGS or same >= MAX_PER_SECTOR:
+                    d = {**d, "action": "보류", "reason": f"공포 구간 매수 조건은 충족했지만 보유 한도(최대 {MAX_HOLDINGS}종목·섹터 {MAX_PER_SECTOR}) 초과로 보류. " + d["reason"]}
+                else:
+                    a = valid[tk]
+                    kept.append({"ticker": tk, "name": snaps_i[tk]["name"], "sector": snaps_i[tk]["sector"],
+                                 "added_date": today, "added_price": snaps_i[tk]["price"], "thesis": a["one_line_thesis"],
+                                 "thesis_breakers": a["bear_case"]["thesis_breakers"], "conviction": a["conviction"],
+                                 "thesis_status": "유효", "last_review": today})
+                    new_tk.append(tk)
+            decisions.append({**d, "reason": "[중간 재평가] " + d["reason"]})
+    elif cand:
+        print(f"  보유 외 종목 {cand} 분석은 캐시만 갱신 (신규 편입은 주간 분석 또는 공포·탐욕 10 미만일 때만)")
+
     prev_weights = next((w.get("weights") for w in reversed(hist["weeks"]) if w.get("weights")), None) or {}
     weekly = _load(os.path.join(DATA_DIR, "weekly_signals.json"), {}) or {}
     stance = (weekly.get("market_brief") or {}).get("stance") or "중립"
-    px = {tk: prices.get(tk) or (cache.get(tk) or {}).get("price") for tk in held}
-    meta = {h["ticker"]: {"sector": h.get("sector")} for h in hist["portfolio"]}
+    px = {tk: prices.get(tk) or (cache.get(tk) or {}).get("price") for tk in held + new_tk}
+    meta = {h["ticker"]: {"sector": h.get("sector")} for h in kept}
     keep_w = {tk: v for tk, v in prev_weights.items() if tk in [h["ticker"] for h in kept]}
     weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights") or keep_w,
                                                  prev_weights, analyses, px, meta, stance, _profile(),
-                                                 res.get("allocation"))
+                                                 res.get("allocation"), new_tickers=new_tk, fear=fear_t)
     alloc["agent_reason"] = res.get("weights_reason")
     for h in removed:
         p = px.get(h["ticker"])
         hist["closed"].append({"ticker": h["ticker"], "name": h.get("name"), "added_date": h.get("added_date"),
                                "removed_date": today, "added_price": h.get("added_price"), "removed_price": p,
                                "return_pct": round((p / h["added_price"] - 1) * 100, 1) if p and h.get("added_price") else None,
-                               "spy_return_pct": None, "reason": decisions[-1]["reason"] if decisions else ""})
+                               "spy_return_pct": None,
+                               "reason": next((d["reason"] for d in decisions if d["ticker"] == h["ticker"]), "")})
     for h in kept:
         h["weight"] = weights.get(h["ticker"])
     hist["portfolio"] = kept
     hist["weeks"].append({"week": f"{req['week']}+중간점검", "date": today, "interim": True, "decisions": decisions,
                           "portfolio_after": [h["ticker"] for h in kept], "weights": weights,
                           "allocation": {k: alloc[k] for k in ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct",
-                                                               "cash_pct", "reason", "expected_return_pct")},
+                                                               "cash_pct", "reason", "expected_return_pct", "fear")},
                           "trigger": res.get("trigger")})
     save_history(hist)
 

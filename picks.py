@@ -297,16 +297,37 @@ def expected_return(a, price):
     return round((0.25 * sc["약세"] + 0.5 * sc["기준"] + 0.25 * sc["강세"]) / price * 100 - 100, 1)
 
 
-def starter_ok(a, price):
-    """확신도 3 '탐색 편입' 조건: 편입 적합 + Agent 행동 '신규 매수' + 현재가 ≤ 매수 기준가 + 기대수익 ≥ 최소치."""
+def starter_ok(a, price, fear=None):
+    """확신도 3 '탐색 편입' 조건: 편입 적합 + Agent 행동 '신규 매수' + 현재가 ≤ 매수 기준가 + 기대수익 ≥ 최소치.
+    공포·탐욕 단계(fear.tier)가 있으면: 매수 기준가 허용폭·최소 기대수익이 완화되고, 행동이 '매수 보류'여도
+    가격 조건을 충족하면 인정 (가격 때문에 보류한 경우가 대부분이므로)"""
     dt = (a or {}).get("decision_table") or {}
     e = expected_return(a, price)
-    return (a.get("conviction") == 3 and dt.get("action") in ("신규 매수", "추가 매수")
+    t = (fear or {}).get("tier") or 0
+    tol = (fear or {}).get("buy_below_tolerance_pct", 0) / 100 if t else 0
+    hurdle = (fear or {}).get("hurdle_pct", MIN_EXPECTED_RETURN) if t else MIN_EXPECTED_RETURN
+    acts = ("신규 매수", "추가 매수") + (("매수 보류",) if t else ())
+    return (a.get("conviction") == 3 and dt.get("action") in acts
+            and dt.get("buy_below") and price and price <= dt["buy_below"] * (1 + tol)
+            and e is not None and e >= hurdle)
+
+
+def fear_watch_ok(a, price, fear=None):
+    """공포·탐욕 10·5 하향 돌파(2·3단계) 때만: '관찰' 판정이라도 확신도 3 이상 + 현재가 ≤ 매수 기준가(허용폭 없음)
+    + 기대수익 ≥ 단계별 최소치 + 반대 근거 '미해소'가 아니거나 기대수익이 최소치의 2배 이상이면 탐색 편입."""
+    if not (fear or {}).get("allow_watch"):
+        return False
+    dt = (a or {}).get("decision_table") or {}
+    e = expected_return(a, price)
+    hurdle = fear.get("hurdle_pct", MIN_EXPECTED_RETURN)
+    unresolved = ((a.get("evidence") or {}).get("bear_case_status") == "미해소")
+    return (a.get("verdict") == "관찰" and (a.get("conviction") or 0) >= 3
+            and dt.get("action") not in ("축소 검토", "매도") and a.get("alert_level") not in ("논리 붕괴", "비중 재검토")
             and dt.get("buy_below") and price and price <= dt["buy_below"]
-            and e is not None and e >= MIN_EXPECTED_RETURN)
+            and e is not None and e >= hurdle and (not unresolved or e >= hurdle * 2))
 
 
-def decide(holdings, new_candidates, analyses, snaps, scores, today):
+def decide(holdings, new_candidates, analyses, snaps, scores, today, fear=None):
     """
     analyses: {ticker: 분석 dict | None}
     반환: (새 보유 목록, 결정 로그, 교체로 빠진 종목)
@@ -342,19 +363,26 @@ def decide(holdings, new_candidates, analyses, snaps, scores, today):
 
     verified = lambda tk: (analyses[tk].get("evidence") or {}).get("data_verified", "검증 완료") == "검증 완료"
     px = lambda tk: (snaps.get(tk) or {}).get("price")
-    passes = lambda tk: analyses[tk]["conviction"] >= MIN_CONVICTION_NEW or starter_ok(analyses[tk], px(tk))
-    pending_check = [tk for tk in new_candidates
-                     if analyses.get(tk) and analyses[tk]["verdict"] == "편입 적합" and passes(tk) and not verified(tk)]
-    qualified = [tk for tk in new_candidates
-                 if analyses.get(tk) and analyses[tk]["verdict"] == "편입 적합" and passes(tk) and verified(tk)]
+    fit = lambda tk: analyses[tk]["verdict"] == "편입 적합" and (
+        analyses[tk]["conviction"] >= MIN_CONVICTION_NEW or starter_ok(analyses[tk], px(tk), fear))
+    fear_pick = lambda tk: not fit(tk) and fear_watch_ok(analyses[tk], px(tk), fear)
+    passes = lambda tk: fit(tk) or fear_pick(tk)
+    pending_check = [tk for tk in new_candidates if analyses.get(tk) and passes(tk) and not verified(tk)]
+    qualified = [tk for tk in new_candidates if analyses.get(tk) and passes(tk) and verified(tk)]
     qualified.sort(key=lambda tk: (-analyses[tk]["conviction"], -(expected_return(analyses[tk], px(tk)) or -999),
-                                   -scores[tk]["score"]))
+                                   -((scores.get(tk) or {}).get("score") or 0)))
 
     def sector_count(tk):
         return sum(1 for x in kept if sector(x["ticker"]) == sector(tk))
 
+    fear_added, fear_max = 0, (fear or {}).get("max_fear_picks", 2)
     for tk in qualified:
         a = analyses[tk]
+        if fear_pick(tk) and fear_added >= fear_max:
+            decisions.append({"ticker": tk, "action": "보류", "reason":
+                              f"공포 구간 탐색 편입 조건은 충족했지만 한 번에 최대 {fear_max}종목까지만 편입 (지수가 전부가 아니므로). "
+                              + a["verdict_reason"]})
+            continue
         if sector_count(tk) >= MAX_PER_SECTOR:
             decisions.append({"ticker": tk, "action": "보류", "reason":
                               f"편입 적합 판정이지만 같은 섹터({sector(tk)}) 보유가 이미 {MAX_PER_SECTOR}종목이라 분산을 위해 보류."})
@@ -381,12 +409,20 @@ def decide(holdings, new_candidates, analyses, snaps, scores, today):
             "thesis": a["one_line_thesis"], "thesis_breakers": a["bear_case"]["thesis_breakers"],
             "conviction": a["conviction"], "thesis_status": "유효", "last_review": today,
         })
-        if a["conviction"] < MIN_CONVICTION_NEW:
+        fnote = (f"[공포·탐욕 {fear['low']:.0f} → {fear['level']} 하향 돌파({fear['name']}) 매수 가중] "
+                 if (fear or {}).get("tier") else "")
+        if fear_pick(tk):
+            fear_added += 1
             e = expected_return(a, px(tk))
-            note = (f"[탐색 편입] 확신도 {a['conviction']}이지만 현재가 ${px(tk):.2f} ≤ 매수 기준가 ${a['decision_table']['buy_below']}, "
-                    f"기대수익 {e:+.1f}% → 작은 비중으로 시작하고 다음 검증 후 확대 여부 결정. ")
+            note = (fnote + f"[공포 구간 탐색 편입] 판정은 '관찰'(확신도 {a['conviction']})이지만 현재가 ${px(tk):.2f} ≤ 매수 기준가 "
+                    f"${a['decision_table']['buy_below']}, 기대수익 {e:+.1f}% → 작은 비중으로 시작. ")
+        elif a["conviction"] < MIN_CONVICTION_NEW:
+            e = expected_return(a, px(tk))
+            note = (fnote + f"[탐색 편입] 확신도 {a['conviction']}이지만 현재가 ${px(tk):.2f} ≤ 매수 기준가 ${a['decision_table']['buy_below']}"
+                    + (f"(공포 구간 +{fear['buy_below_tolerance_pct']}% 허용)" if fnote else "")
+                    + f", 기대수익 {e:+.1f}% → 작은 비중으로 시작하고 다음 검증 후 확대 여부 결정. ")
         else:
-            note = ""
+            note = fnote
         decisions.append({"ticker": tk, "action": "신규편입", "reason": note + a["verdict_reason"]})
 
     for tk in new_candidates:

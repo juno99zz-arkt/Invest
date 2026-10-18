@@ -211,7 +211,8 @@ def expected_return(a, price, probs=None):
     return round(tot * 100, 1)
 
 
-def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile, allocation=None, new_tickers=None):
+def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile, allocation=None, new_tickers=None,
+                   fear=None):
     """최대 5종목 개별주 + 원화 현금 계좌의 비중 결정 (ETF·코어 없음, 종목 선택과 분리).
     1) 종목별 출발점: 보유 종목은 Agent 제안(없으면 지난 비중), 신규는 확신도별 기본(5→30, 4→20, 3→10 탐색 비중)
        — Agent 는 신규 종목을 확신도 기본보다 높일 수 없음
@@ -229,6 +230,13 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
     max_loss = profile.get("max_position_loss_pct", 8)
     hurdle = profile.get("min_expected_return_pct", 10)
     probs = {k: v / 100 for k, v in (profile.get("scenario_probs") or {}).items()} or None
+    ft = (fear or {}).get("tier") or 0
+    if ft:  # 공포·탐욕 20/10/5 하향 돌파 → 매수 문턱 완화 (안전장치는 그대로)
+        hurdle = min(hurdle, fear.get("hurdle_pct", hurdle))
+        conv_w[3] = max(conv_w.get(3, 0), fear.get("starter_weight", 0))
+        if fear.get("conviction4_weight"):
+            conv_w[4] = max(conv_w.get(4, 0), fear["conviction4_weight"])
+        notes.append(fear.get("note", ""))
     w, er = {}, {}
     for tk in kept:
         a = analyses.get(tk) or {}
@@ -250,6 +258,17 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
         e = expected_return(a, price, probs)
         er[tk] = e
         info["expected_return_pct"] = e
+        add = (fear or {}).get("add_to_holdings_pct") if ft else 0
+        bb = ((a.get("decision_table") or {}).get("buy_below"))
+        if (add and tk not in new and pw is not None and price and bb and e is not None and e >= hurdle
+                and price <= bb * (1 + fear.get("buy_below_tolerance_pct", 0) / 100)
+                and a.get("alert_level") not in ("추가 매수 중단", "비중 재검토", "논리 붕괴")
+                and (a.get("evidence") or {}).get("data_verified") != "검증 대기"):
+            nx = min(max_single, pw + add)
+            if nx > x:
+                notes.append(f"{tk}: 공포 구간 추가 매수 — 현재가 ${price:.2f} ≤ 매수 기준가 ${bb}(+허용폭), 기대수익 {e:+.1f}% → {x}%→{nx}%")
+                x = nx
+                info["fear_add"] = True
         if e is None:
             notes.append(f"{tk}: 시나리오 없음 — 기대수익 미계산")
         elif e < hurdle:
@@ -303,6 +322,10 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
     caps = profile.get("stock_cap_by_stance") or {}
     base_cap = caps.get(stance, 80)
     cap, reason = base_cap, f"스탠스 '{stance}' 주식 합계 상한 {base_cap}%"
+    if ft and fear.get("stock_cap_add"):
+        base_cap = min(100, base_cap + fear["stock_cap_add"])
+        cap = base_cap
+        reason += f" + 공포·탐욕 {fear['level']} 하향 돌파({fear['name']}) +{fear['stock_cap_add']}%p → {cap}%"
     adj = profile.get("agent_adjust_max", 10)
     if allocation and isinstance(allocation.get("equity_pct"), (int, float)):
         want = min(100, _floor5(allocation["equity_pct"] + 2.5))
@@ -327,6 +350,7 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
     alloc = {"stance": stance, "equity_pct": cap, "stock_pct": stock, "core_etf": None, "core_pct": 0,
              "cash_pct": 100 - stock, "reason": reason, "notes": notes, "per_stock": per,
              "expected_return_pct": port_e,
+             "fear": ({k: fear.get(k) for k in ("tier", "level", "name", "score", "low", "crossed", "note")} if fear else None),
              "rules": {k: profile.get(k) for k in ("max_holdings", "max_position_loss_pct", "max_single_weight",
                                                     "max_theme_pct", "min_expected_return_pct", "conviction_weight")}}
     return weights, alloc

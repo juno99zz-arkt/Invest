@@ -1,11 +1,24 @@
 {
  "note": "최대 5종목 개별주 + 원화 현금만 운용하는 계좌의 비중 규칙 (ETF 없음). 숫자를 바꾸면 다음 분석부터 적용됩니다.",
  "max_holdings": 5,
- "stock_cap_by_stance": {"공격적 매수": 100, "선별적 매수": 90, "중립": 80, "방어적": 60},
+ "stock_cap_by_stance": {
+  "공격적 매수": 100,
+  "선별적 매수": 90,
+  "중립": 80,
+  "방어적": 60
+ },
  "agent_adjust_max": 10,
- "conviction_weight": {"5": 30, "4": 20, "3": 10},
+ "conviction_weight": {
+  "3": 10,
+  "4": 20,
+  "5": 30
+ },
  "min_expected_return_pct": 10,
- "scenario_probs": {"약세": 25, "기준": 50, "강세": 25},
+ "scenario_probs": {
+  "약세": 25,
+  "기준": 50,
+  "강세": 25
+ },
  "max_position_loss_pct": 8,
  "max_single_weight": 30,
  "max_theme_pct": 50,
@@ -23,6 +36,46 @@
   "max_theme_pct": "AI·반도체 등 같은 공통 위험 테마의 개별주 합계 상한(%)",
   "cash_rate_pct": "원화 현금 연 이자율(%) — 시뮬레이션 반영",
   "fx_spread_pct": "환전 스프레드(%) — 매수·매도 시 각각",
-  "dividend_tax_pct": "미국 배당 원천징수(%)"
+  "dividend_tax_pct": "미국 배당 원천징수(%)",
+  "fear_greed_boost": "CNN 공포·탐욕 지수가 최근 lookback_days 거래일 안에 level 아래로 내려가면 그 단계 규칙 적용(20<10<5 순으로 강해짐). stock_cap_add: 개별주 합계 상한 가산(%p), hurdle_pct: 최소 기대수익(%), buy_below_tolerance_pct: 매수 기준가 초과 허용폭(%), starter_weight: 탐색 편입 비중, allow_watch: 관찰 판정도 매수 기준가 이하면 탐색 편입, add_to_holdings_pct: 보유 종목 추가 매수 허용(%p), conviction4_weight: 확신도 4 신규 비중. 안전장치(편입 적합·검증 완료·경고 단계·손실 한도·종목/테마 상한·최대 5종목)는 그대로. max_fear_picks: 관찰 종목 공포 구간 탐색 편입을 한 번에 최대 몇 종목까지(기대수익 높은 순)."
+ },
+ "fear_greed_boost": {
+  "lookback_days": 5,
+  "tiers": [
+   {
+    "level": 20,
+    "name": "극단적 공포",
+    "stock_cap_add": 10,
+    "hurdle_pct": 8,
+    "buy_below_tolerance_pct": 3,
+    "starter_weight": 10,
+    "allow_watch": false,
+    "add_to_holdings_pct": 0,
+    "max_fear_picks": 0
+   },
+   {
+    "level": 10,
+    "name": "패닉",
+    "stock_cap_add": 20,
+    "hurdle_pct": 6,
+    "buy_below_tolerance_pct": 6,
+    "starter_weight": 15,
+    "allow_watch": true,
+    "add_to_holdings_pct": 5,
+    "max_fear_picks": 2
+   },
+   {
+    "level": 5,
+    "name": "투매",
+    "stock_cap_add": 30,
+    "hurdle_pct": 4,
+    "buy_below_tolerance_pct": 10,
+    "starter_weight": 15,
+    "conviction4_weight": 25,
+    "allow_watch": true,
+    "add_to_holdings_pct": 10,
+    "max_fear_picks": 3
+   }
+  ]
  }
 }
