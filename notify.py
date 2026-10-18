@@ -1,5 +1,5 @@
 """
-매도 신호 휴대폰 푸시 (ntfy.sh — 무료, 계정 불필요, 휴대폰 ntfy 앱에서 토픽 구독).
+매수·매도 신호 수시 알림 — 메일(EMAIL_SENDER→INVEST_REPORT_TO) + 휴대폰 푸시 (ntfy.sh — 무료, 계정 불필요, 휴대폰 ntfy 앱에서 토픽 구독).
 GitHub Actions 에서 실행:
   python notify.py            : 전체 점검 (Agent 판단 매도 + 가격 경고)  — 매일 06:00, finalize 직후
   python notify.py --prices   : 가격 경고만 (미국 장중 30분마다)
@@ -55,14 +55,30 @@ def send(title, message, priority=4, tags=None):
     return ok
 
 
-def agent_signals(hist):
-    """주간 분석·중간 재평가에서 확정된 매도(제외)·비중 축소."""
+def agent_signals(hist, since=""):
+    """주간 분석·중간 재평가에서 확정된 매도(제외·비중 축소)와 매수(신규 편입·비중 확대). since 이후 결정만."""
     out = []
     weeks = sorted(hist.get("weeks", []), key=lambda w: (w["date"], w.get("interim", False)))
     for i, w in enumerate(weeks):
         prev = next((x.get("weights") for x in reversed(weeks[:i]) if x.get("weights")), None) or {}
         cur = w.get("weights") or {}
         label = w.get("week")
+        if w["date"] < since:
+            continue
+        added = [d["ticker"] for d in w.get("decisions", []) if d["action"] == "신규편입"]
+        for d in w.get("decisions", []):
+            if d["action"] == "신규편입" and cur.get(d["ticker"]):
+                out.append({"key": f"{label}:{d['ticker']}:편입", "level": "buy_exec", "ticker": d["ticker"],
+                            "title": f"[매수] {d['ticker']} 신규 편입 {cur[d['ticker']]}%",
+                            "msg": f"{w['date']} {label} 판단: 비중 {cur[d['ticker']]}%로 신규 매수 (다음 거래일 시가 기준)\n{d['reason'][:300]}"})
+        if w.get("weights") is not None:
+            for tk, nw in cur.items():
+                pw = prev.get(tk)
+                if pw is not None and nw > pw and tk not in added:
+                    reason = next((d["reason"] for d in w.get("decisions", []) if d["ticker"] == tk), "")
+                    out.append({"key": f"{label}:{tk}:확대:{nw}", "level": "buy_exec", "ticker": tk,
+                                "title": f"[매수] {tk} 비중 확대 {pw}% → {nw}%",
+                                "msg": f"{w['date']} {label} 판단: 비중 {pw}% → {nw}% (차액 추가 매수)\n{reason[:300]}"})
         for d in w.get("decisions", []):
             if d["action"] == "제외":
                 out.append({"key": f"{label}:{d['ticker']}:제외", "level": "sell", "ticker": d["ticker"],
@@ -141,17 +157,65 @@ def fear_signals():
              "title": f"[매수 신호] 공포·탐욕 {t['low']:.0f} — {t['level']} 하향 돌파 ({t['name']})", "msg": msg}]
 
 
+def send_email(sigs):
+    """이번 실행에서 새로 생긴 매수·매도 신호를 메일 1통으로 (정기 리포트와 같은 발신·수신자)."""
+    import html as _h
+    import smtplib
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    env = lambda k: os.environ.get(k, "").replace("\ufeff", "").strip()
+    sender, pw = env("EMAIL_SENDER"), env("EMAIL_PASSWORD").replace(" ", "")
+    to = [r.strip() for r in env("INVEST_REPORT_TO").split(",") if r.strip()]
+    if not (sender and pw and to and sigs):
+        if sigs:
+            print("::warning::메일 설정 없음 — 수시 메일 건너뜀")
+        return False
+    color = {"sell": "#cf222e", "warn": "#9a6700", "buy": "#1a7f37", "buy_exec": "#1a7f37"}
+    order = {"sell": 0, "buy_exec": 1, "buy": 2, "warn": 3}
+    sigs = sorted(sigs, key=lambda s: order.get(s["level"], 9))
+    rows = "".join(
+        f'<div style="border-left:4px solid {color.get(s["level"], "#555")};padding:8px 12px;margin:10px 0;background:#fafafa">'
+        f'<div style="font-weight:700;color:{color.get(s["level"], "#555")}">{_h.escape(s["title"])}</div>'
+        f'<div style="font-size:13px;color:#333;line-height:1.6;margin-top:4px">{_h.escape(s["msg"]).replace(chr(10), "<br>")}</div></div>'
+        for s in sigs)
+    now = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
+    body = (f'<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body style="font-family:Arial,\'Malgun Gothic\',sans-serif;'
+            f'max-width:680px;margin:0 auto;padding:16px"><h2 style="margin:0 0 4px">투자 대시보드 수시 알림</h2>'
+            f'<div style="color:#888;font-size:13px">{now} KST · <a href="{DASHBOARD_URL}">대시보드 열기</a></div>{rows}'
+            '<div style="font-size:11px;color:#aaa;margin-top:20px">GitHub Actions 자동 발송 (ntfy 푸시와 동시) · '
+            '가상 계좌 기준이며 투자 판단의 최종 책임은 본인에게 있습니다.</div></body></html>')
+    subject = "[투자 알림] " + sigs[0]["title"] + (f" 외 {len(sigs) - 1}건" if len(sigs) > 1 else "")
+    msg = MIMEMultipart("alternative")
+    msg["Subject"], msg["From"], msg["To"] = subject, sender, ", ".join(to)
+    msg.attach(MIMEText(body, "html", "utf-8"))
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as srv:
+            srv.starttls()
+            srv.login(sender, pw)
+            srv.sendmail(sender, to, msg.as_string())
+    except Exception as e:
+        print("::warning::수시 메일 실패:", e)
+        return False
+    print(f"수시 메일 발송 → {len(to)}명: {subject}")
+    return True
+
+
 def main():
     now = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     if "--test" in sys.argv:
-        send("[테스트] AI 투자 브리핑 알림 연결됨",
-             f"{now} · 매도 신호가 생기면 이렇게 알려드립니다. 누르면 대시보드가 열립니다.", priority=3, tags=["white_check_mark"])
+        t = {"title": "[테스트] AI 투자 브리핑 알림 연결됨", "level": "buy",
+             "msg": f"{now} · 매수·매도 신호가 생기면 이렇게 메일과 푸시로 동시에 알려드립니다."}
+        send(t["title"], t["msg"], priority=3, tags=["white_check_mark"])
+        if "--mail" in sys.argv:
+            send_email([t])
         return
     hist = _load(os.path.join(DATA_DIR, "picks_history.json"), {})
     log = _load(LOG_PATH, {"sent": {}})
     sent = log.setdefault("sent", {})
     first_run = not sent and "--prices" not in sys.argv
-    sigs = [] if "--prices" in sys.argv else agent_signals(hist)
+    # 매수·매도 결정 알림은 이 기능을 켠 날 이후 결정부터 (과거 이력을 한꺼번에 보내지 않기 위해)
+    since = log.setdefault("agent_since", now[:10])
+    sigs = [] if "--prices" in sys.argv else agent_signals(hist, since)
     try:
         sigs += price_signals(hist)
     except Exception as e:
@@ -165,13 +229,17 @@ def main():
             if s["level"] == "sell":
                 sent[s["key"]] = now + " (초기화)"
         new = [s for s in new if s["level"] != "sell"]
+    pushed = []
     for s in new:
-        ok = send(s["title"], s["msg"], priority=5 if s["level"] in ("sell", "buy") else 4,
-                  tags={"sell": ["rotating_light"], "buy": ["moneybag"]}.get(s["level"], ["warning"]))
-        if ok:
-            sent[s["key"]] = now
+        ok = send(s["title"], s["msg"], priority=5 if s["level"] in ("sell", "buy", "buy_exec") else 4,
+                  tags={"sell": ["rotating_light"], "buy": ["moneybag"], "buy_exec": ["chart_with_upwards_trend"]}.get(s["level"], ["warning"]))
+        pushed.append((s, ok))
+    mailed = send_email(new) if new else False
+    for s, ok in pushed:
+        if ok or mailed:
+            sent[s["key"]] = now + (" 푸시" if ok else "") + (" 메일" if mailed else "")
     if not new:
-        print("새 매도 신호 없음")
+        print("새 매수·매도 신호 없음")
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(LOG_PATH, "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=1)

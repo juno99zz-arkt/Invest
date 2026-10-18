@@ -4,7 +4,8 @@
 메일 내용 = 대시보드 내용.
 
 발송 시점
-  --auto  : 토요일(KST)이고 이번 주에 아직 안 보냈으면 발송 (주간 AI 분석 반영 직후 + 토 21:00 안전망)
+  --auto  : 월·금요일(KST)이고 오늘 아직 안 보냈으면 발송 (07:00 정기 + 08:00 안전망, 날짜별 1회)
+  (매수·매도 신호 수시 메일은 notify.py 가 ntfy 푸시와 함께 보냄)
   --force : 즉시 발송 (수동 실행 mode=report)
   --dry-run : 발송 없이 report_preview.html 저장
 환경변수: EMAIL_SENDER, EMAIL_PASSWORD (Gmail 앱 비밀번호), INVEST_REPORT_TO (쉼표 구분 수신자)
@@ -59,6 +60,63 @@ def _won(n):
     return ("-" if n < 0 else "") + s
 
 
+def postmortem_html(today, force=False):
+    """매달 마지막 금요일(또는 수동) 월간 신호 검증 섹션. postmortem.py 결과(data/postmortem/<YYYY-MM>.json)."""
+    p = os.path.join(DATA_DIR, "postmortem", f"{today:%Y-%m}.json")
+    try:
+        with open(p, encoding="utf-8") as f:
+            pm = json.load(f)
+    except Exception:
+        return ""
+    if pm.get("generated") != today.isoformat() and not force:
+        return ""
+    th = 'style="padding:5px 6px;text-align:left;background:#f3f4f6;font-size:11px"'
+    td = 'style="padding:5px 6px;font-size:12px;border-bottom:1px solid #eee"'
+
+    def cells(s):
+        if not s or not s.get("n"):
+            return f"<td {td}>0</td><td {td}>—</td><td {td}>—</td><td {td}>—</td>"
+        wr = "—" if s.get("win_rate") is None else f"{s['win_rate']:.0%}"
+        pf = "—" if s.get("profit_factor") is None else f"{s['profit_factor']:.2f}"
+        flag = "" if s.get("reliable") else " <span style='color:#9a6700'>*</span>"
+        return (f"<td {td}>{s['n']}{flag}</td><td {td}>{wr}</td>"
+                f"<td {td}><span style='color:{_pc(s.get('expectancy_pct'))}'>{_pct(s.get('expectancy_pct'), 1)}</span></td><td {td}>{pf}</td>")
+
+    ov = pm.get("overall") or {}
+    ov_rows = "".join(f"<tr><td {td}>{e(k)}</td>" + cells((ov.get('20') or {}).get(k)) + cells((ov.get('60') or {}).get(k)) + "</tr>"
+                      for k in ("실행(편입·확대·축소·제외)", "미실행 후보"))
+    src_rows = ""
+    for name, g in (pm.get("by_source") or {}).items():
+        s20 = g.get("20") or {}
+        src_rows += (f"<tr><td {td}>{e(name)}</td>" + cells(g.get("5")) + cells(s20)
+                     + f"<td {td}>{e(s20.get('best', '—'))}<br><span style='color:#888'>{e(s20.get('worst', ''))}</span></td></tr>")
+    fs = pm.get("fear_study") or {}
+    fear_rows = "".join(
+        f"<tr><td {td}>{r['level']} 미만</td><td {td}>{r['n']}</td><td {td}>{_pct(r.get('avg_5d'))}</td><td {td}>{_pct(r.get('avg_20d'))}</td>"
+        f"<td {td}>{_pct(r.get('avg_60d'))}</td><td {td}>{e(r.get('verdict', ''))}</td></tr>" for r in fs.get("levels", []))
+    bl = fs.get("baseline") or {}
+    sug = "".join(f"<li>{e(x)}</li>" for x in pm.get("suggestions", []))
+    return f"""
+<h3 style="margin:22px 0 6px">⑦ 월간 신호 검증 · {e(pm.get('month'))} (매달 마지막 금요일)</h3>
+<div style="font-size:12px;color:#666;margin-bottom:6px">지금까지의 매수·매도 신호 {pm.get('n_signals')}건(이번 달 {pm.get('n_this_month')}건)을 신호 다음 거래일 시가에 샀다고 보고 5·20·60거래일 뒤 SPY 대비 결과를 분류했습니다.
+매도 계열은 그 뒤 SPY 보다 못했으면 적중, 미편입 후보는 SPY 를 2%p 이상 앞서면 '놓친 기회'입니다. ({e(pm.get('method'))})</div>
+<table style="border-collapse:collapse;width:100%;margin-bottom:8px">
+<tr><th {th} rowspan=2>구분</th><th {th} colspan=4>20거래일</th><th {th} colspan=4>60거래일</th></tr>
+<tr><th {th}>표본</th><th {th}>승률</th><th {th}>기대값</th><th {th}>손익비</th><th {th}>표본</th><th {th}>승률</th><th {th}>기대값</th><th {th}>손익비</th></tr>
+{ov_rows}</table>
+<table style="border-collapse:collapse;width:100%;margin-bottom:8px">
+<tr><th {th} rowspan=2>신호 종류</th><th {th} colspan=4>5거래일</th><th {th} colspan=4>20거래일</th><th {th} rowspan=2>최고 / 최악 (20일)</th></tr>
+<tr><th {th}>표본</th><th {th}>승률</th><th {th}>기대값</th><th {th}>손익비</th><th {th}>표본</th><th {th}>승률</th><th {th}>기대값</th><th {th}>손익비</th></tr>
+{src_rows}</table>
+<div style="font-size:13px;font-weight:700;margin:10px 0 4px">공포·탐욕 20/10/5 문턱 검증 <span style="font-weight:400;color:#888;font-size:12px">({e(fs.get('period', '이력 부족'))}, 평소 SPY 20일 {_pct(bl.get('20'))})</span></div>
+<table style="border-collapse:collapse;width:100%">
+<tr><th {th}>돌파</th><th {th}>횟수</th><th {th}>이후 5일</th><th {th}>20일</th><th {th}>60일</th><th {th}>판단</th></tr>
+{fear_rows}</table>
+<div style="font-size:13px;font-weight:700;margin:10px 0 4px">규칙 조정 제안 (자동 적용 안 함)</div>
+<ul style="font-size:13px;padding-left:18px;margin-top:0">{sug}</ul>
+<div style="font-size:11px;color:#888">* 표본 20건 미만은 참고용 (signal-postmortem 최소 표본 기준). 승률 = 적중/(적중+오판), 기대값 = 방향을 반영한 SPY 대비 평균 초과수익, 손익비 = 이익 합 ÷ 손실 합.</div>"""
+
+
 def build(today):
     d = load_injected()
     s = d.get("summary") or {}
@@ -70,9 +128,18 @@ def build(today):
     td = 'style="padding:6px 8px;font-size:13px;border-bottom:1px solid #eee;vertical-align:top"'
 
     stale = ""
-    if s.get("week") != week_now and today.weekday() == 5:
+    last_d = lw.get("date") or ""
+    try:
+        age = (today - datetime.strptime(last_d, "%Y-%m-%d").date()).days if last_d else None
+    except ValueError:
+        age = None
+    if age is not None and age > 8:
         stale = ('<div style="font-size:13px;background:#fff8e1;padding:8px 12px;border-radius:6px;margin-bottom:12px">'
-                 f'이번 주({week_now}) AI 분석이 아직 반영되지 않아 지난 분석({e(s.get("week"))}) 기준입니다. 시세는 매일 갱신됩니다.</div>')
+                 f'마지막 AI 분석이 {age}일 전({e(last_d)})입니다 — 주간 분석이 반영되지 않았을 수 있습니다. 시세는 매일 갱신됩니다.</div>')
+    fgt = ((d.get("m6") or {}).get("fear_tier") or {})
+    if fgt.get("score") is not None:
+        stale += ('<div style="font-size:13px;background:#f3f4f6;padding:8px 12px;border-radius:6px;margin-bottom:12px">'
+                  f'공포·탐욕 지수 {fgt["score"]:.0f} · {e(fgt.get("note"))}</div>')
 
     # ① 스탠스
     wm = s.get("weekly_message") or {}
@@ -142,9 +209,10 @@ def build(today):
     added = [x["ticker"] for x in lw.get("decisions") or [] if x["action"] == "신규편입"]
     removed = [x["ticker"] for x in lw.get("decisions") or [] if x["action"] == "제외"]
     quotes_at = s.get("quotes_at") or (d.get("meta") or {}).get("built_at_kst")
+    pm_html = postmortem_html(today, force="--postmortem" in sys.argv)
     body = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="font-family:Arial,'Malgun Gothic',sans-serif;color:#1a1a1a;max-width:720px;margin:0 auto;padding:16px">
-<h2 style="margin:0 0 4px">AI 투자 브리핑 주간 리포트 · {e(s.get('week'))}</h2>
+<h2 style="margin:0 0 4px">AI 투자 브리핑 정기 리포트 ({'월화수목금토일'[today.weekday()]}) · {e(s.get('week'))}</h2>
 <div style="color:#888;font-size:13px;margin-bottom:16px">{today.isoformat()} 발송 · {e(lw.get('date'))} 분석 · 시세 {e(quotes_at)} 기준 · <a href="{DASHBOARD_URL}">대시보드 열기</a></div>
 {stale}
 <h3 style="margin:18px 0 6px">① 시장 스탠스: {e(s.get('stance') or '-')}</h3>
@@ -171,10 +239,13 @@ def build(today):
 
 <h3 style="margin:18px 0 6px">⑥ 핵심 뉴스 (투자 논리 영향 순)</h3>
 <ul style="font-size:13px;padding-left:18px">{news_html}</ul>
+{pm_html}
 <div style="font-size:11px;color:#aaa;margin-top:24px">GitHub Actions 자동 발송 · AI 분석은 Agent(Claude API 미사용) · 투자 판단의 최종 책임은 본인에게 있습니다.</div>
 </body></html>"""
-    subject = (f"[투자 대시보드] {s.get('week')} 주간 리포트 · 스탠스 {s.get('stance') or '-'}"
+    subject = (f"[투자 대시보드] {today.month}/{today.day}({'월화수목금토일'[today.weekday()]}) 정기 리포트 · 스탠스 {s.get('stance') or '-'}"
                f" · 신규 {', '.join(added) or '없음'}" + (f" · 제외 {', '.join(removed)}" if removed else ""))
+    if pm_html:
+        subject += " · 월간 신호 검증"
     return subject, body
 
 
@@ -188,14 +259,14 @@ def _log():
 
 def main():
     now = datetime.now(KST)
-    key = now.strftime("%G-W%V")
+    key = now.strftime("%Y-%m-%d")
     log = _log()
     if "--auto" in sys.argv:
-        if now.weekday() != 5:
-            print(f"오늘은 토요일이 아님({now:%a}) — 주간 메일 건너뜀")
+        if now.weekday() not in (0, 4):
+            print(f"오늘은 월·금요일이 아님({now:%a}) — 정기 메일 건너뜀")
             return
         if key in log.get("sent", {}):
-            print(f"{key} 주간 메일은 이미 발송됨({log['sent'][key]}) — 건너뜀")
+            print(f"{key} 정기 메일은 이미 발송됨({log['sent'][key]}) — 건너뜀")
             return
     subject, body = build(now.date())
     if "--dry-run" in sys.argv:
