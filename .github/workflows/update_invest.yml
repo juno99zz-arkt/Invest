@@ -6,6 +6,7 @@ name: 투자 대시보드 업데이트 (Agent)
 #   매일 06:30    Agent 가 분석 (토: 주간 전체, 평일: 보유 종목 점검·필요 시 중간 재평가) → data/aside/result.json 업로드(push)
 #   push 감지     finalize : 편입·유지·제외 결정 + 이력·리포트 갱신 → 매수·매도 결정 시 즉시 메일 + 푸시
 #   월·금 07:00 KST report : 정기 메일 리포트 (08:00 안전망, 날짜별 1회)
+#   매달 마지막 금 07:00 : 정기 메일 직전 월간 신호 검증(postmortem.py) → 메일에 '⑦ 월간 신호 검증' 포함
 #   미국 장중 30분마다 watch : 보유 종목 가격 경고(약세 시나리오 도달·급락)만 점검 → 매도 경고 메일·푸시 (배포 없음)
 # 수시 알림(매수·매도 신호): 메일(INVEST_REPORT_TO) + ntfy 푸시(시크릿 NTFY_TOPIC) 동시
 #   (모든 실행 마지막에 대시보드 생성 → gh-pages 배포)
@@ -15,9 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "daily = 시세 갱신·매도 신호 점검 / prepare = 주간 신호·후보·분석요청서 생성 / finalize = Agent 결과 반영 / report = 정기 메일 즉시 발송 / watch = 장중 가격 경고만 / push_test = 테스트 푸시·메일 / explain = 후보 순위 진단 / sec_check = SEC 접근 점검"
+        description: "daily = 시세 갱신·매도 신호 점검 / prepare = 주간 신호·후보·분석요청서 생성 / finalize = Agent 결과 반영 / report = 정기 메일 즉시 발송 / watch = 장중 가격 경고만 / push_test = 테스트 푸시·메일 / postmortem = 월간 신호 검증만 실행(메일 없이 미리보기 저장) / explain = 후보 순위 진단 / sec_check = SEC 접근 점검"
         type: choice
-        options: [daily, prepare, finalize, report, watch, push_test, explain, sec_check]
+        options: [daily, prepare, finalize, report, watch, push_test, postmortem, explain, sec_check]
         default: daily
       tickers:
         description: "explain 모드: 탈락 사유를 볼 티커 (예: AMD,AVGO)"
@@ -136,6 +137,24 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/push_log.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "매수·매도 신호 알림 기록: $(TZ=Asia/Seoul date '+%F %H:%M')"
+          git pull --rebase --autostash origin main
+          git push
+
+      - name: 월간 신호 검증 (매달 마지막 금요일 · signal-postmortem 방식)
+        id: postmortem
+        if: steps.mode.outputs.mode == 'report_auto' || steps.mode.outputs.mode == 'report' || steps.mode.outputs.mode == 'postmortem'
+        continue-on-error: true   # 검증 실패가 정기 메일을 막지 않게
+        run: |
+          if [ "${{ steps.mode.outputs.mode }}" = "postmortem" ]; then
+            python postmortem.py --force
+            python report_email.py --dry-run --postmortem && mkdir -p data/postmortem && cp report_preview.html data/postmortem/preview.html
+          else
+            python postmortem.py --auto       # 마지막 금요일에만 실행
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/postmortem data/fear_history.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "월간 신호 검증: $(TZ=Asia/Seoul date +%F)"
           git pull --rebase --autostash origin main
           git push
 
