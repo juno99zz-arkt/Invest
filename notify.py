@@ -117,6 +117,30 @@ def price_signals(hist):
     return out
 
 
+def fear_signals():
+    """공포·탐욕 20/10/5 하향 돌파 → [매수 신호] (단계마다 돌파 1회당 1번). 대시보드 생성 직후 index.html 의 후보 목록 사용."""
+    import re
+    try:
+        with open(os.path.join(BASE_DIR, "index.html"), encoding="utf-8") as f:
+            inj = json.loads(re.search(r"const INJECTED = (\{.*?\});\n", f.read(), re.S).group(1))
+    except Exception as e:
+        print("::warning::index.html 읽기 실패:", e)
+        return []
+    m6 = inj.get("m6") or {}
+    t = m6.get("fear_tier") or {}
+    if not t.get("tier"):
+        return []
+    cands = [c for c in (m6.get("fear_candidates") or []) if c.get("eligible")]
+    near = [c for c in (m6.get("fear_candidates") or []) if not c.get("eligible") and c.get("gap_pct", 99) <= 10][:4]
+    line = lambda c: (f"{c['ticker']} ${c['price']:.2f} (기준 ${c['buy_below']}, {c['gap_pct']:+.1f}%, 기대수익 "
+                      f"{c['expected_return_pct']:+.0f}%) {c['kind']}" if c.get("expected_return_pct") is not None else c["ticker"])
+    msg = (t.get("note", "") + "\n\n지금 가격으로 조건 충족: " + ("\n· " + "\n· ".join(map(line, cands)) if cands else "없음")
+           + ("\n매수 기준가 10% 이내: " + ", ".join(f"{c['ticker']} {c['gap_pct']:+.0f}%" for c in near) if near else "")
+           + "\n\n지수만으로 사지 않습니다 — 다음 아침 Agent 가 후보를 재평가하고, 조건을 통과한 종목만 편입·추가 매수합니다.")
+    return [{"key": f"fg:{t['level']}:{t.get('crossed')}", "level": "buy", "ticker": "시장",
+             "title": f"[매수 신호] 공포·탐욕 {t['low']:.0f} — {t['level']} 하향 돌파 ({t['name']})", "msg": msg}]
+
+
 def main():
     now = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     if "--test" in sys.argv:
@@ -132,6 +156,8 @@ def main():
         sigs += price_signals(hist)
     except Exception as e:
         print("::warning::가격 점검 실패:", e)
+    if "--prices" not in sys.argv:
+        sigs += fear_signals()
     new = [s for s in sigs if s["key"] not in sent]
     if first_run:
         # 처음 켤 때 과거 이력은 보내지 않고 기록만 (오늘 이후 신호부터 푸시)
@@ -140,8 +166,8 @@ def main():
                 sent[s["key"]] = now + " (초기화)"
         new = [s for s in new if s["level"] != "sell"]
     for s in new:
-        ok = send(s["title"], s["msg"], priority=5 if s["level"] == "sell" else 4,
-                  tags=["rotating_light"] if s["level"] == "sell" else ["warning"])
+        ok = send(s["title"], s["msg"], priority=5 if s["level"] in ("sell", "buy") else 4,
+                  tags={"sell": ["rotating_light"], "buy": ["moneybag"]}.get(s["level"], ["warning"]))
         if ok:
             sent[s["key"]] = now
     if not new:

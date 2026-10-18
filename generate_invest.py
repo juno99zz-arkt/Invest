@@ -266,8 +266,12 @@ def build_data():
         print(f"PEG 실시간 데이터 {len(peg)}개 반영")
     else:
         print("yfinance 실패 — PEG 비움")
-    fg = fetch_fear_greed()
+    import fear as fear_mod
+    fg = fear_mod.load()
     m6["fear_greed"] = fg
+    fear_t = fear_mod.tier(fg)
+    m6["fear_tier"] = fear_t
+    print("  " + fear_t.get("note", ""))
     print(f"Fear & Greed {fg['score']} ({fg['rating']})" if fg else "Fear & Greed 수집 실패 — 카드 대기 표시")
 
     top50 = fetch_top50_metrics()
@@ -286,8 +290,15 @@ def build_data():
         "weekly_built_at": weekly.get("built_at_kst"),
     }
 
+    summary = build_summary(weekly, hist, report)
+    m6["fear_candidates"] = _safe(lambda: fear_candidates(report, hist, summary, fear_t), [])
+    alerts = _safe(lambda: build_alerts(hist, report, now_kst.date().isoformat()), [])
+    if fear_t.get("tier"):
+        names = ", ".join(c["ticker"] for c in m6["fear_candidates"] if c["eligible"]) or "없음"
+        alerts.insert(0, {"ticker": "시장", "role": "공포·탐욕", "level": "high" if fear_t["tier"] >= 2 else "mid",
+                          "kind": "매수신호", "msg": fear_t["note"] + f" — 지금 조건 충족 후보: {names}"})
     return {
-        "summary": build_summary(weekly, hist, report),
+        "summary": summary,
         "report": report,
         "news": (weekly.get("market_brief") or {}).get("news", []),
         "m1": weekly.get("m1"),
@@ -299,11 +310,40 @@ def build_data():
         "m7": {"stocks": top50 or []},
         "m8": {"stocks": kr_top50 or []},
         "sim": sim.build(hist),
-        "alerts": _safe(lambda: build_alerts(hist, report, now_kst.date().isoformat()), []),
+        "alerts": alerts,
         "exposure": _safe(lambda: build_exposure(hist, report), None),
         "risk_profile": _load("risk_profile.json", {}),
         "meta": build_meta,
     }
+
+def fear_candidates(report, hist, summary, fear_t):
+    """공포·탐욕 단계에서 지금 가격으로 매수 조건을 충족하는 검토 종목 (일일 갱신, 최종 판단은 Agent 재평가·finalize)."""
+    held = {h["ticker"] for h in hist.get("portfolio", [])}
+    rq = summary.get("review_quotes") or {}
+    out = []
+    for tk, an in ((report or {}).get("analyses") or {}).items():
+        a = an.get("analysis") or {}
+        p = (rq.get(tk) or {}).get("price") or (an.get("metrics") or {}).get("price")
+        dt = a.get("decision_table") or {}
+        if not p or not dt.get("buy_below"):
+            continue
+        verified = (a.get("evidence") or {}).get("data_verified", "검증 완료") == "검증 완료"
+        if tk in held:
+            ok = bool(fear_t.get("add_to_holdings_pct")) and a.get("alert_level") not in ("추가 매수 중단", "비중 재검토", "논리 붕괴") \
+                and p <= dt["buy_below"] * (1 + fear_t.get("buy_below_tolerance_pct", 0) / 100) \
+                and (picks.expected_return(a, p) or -99) >= fear_t.get("hurdle_pct", 10)
+            kind = "보유 추가 매수"
+        else:
+            fit = a.get("verdict") == "편입 적합" and (a.get("conviction", 0) >= picks.MIN_CONVICTION_NEW
+                                                     or picks.starter_ok(a, p, fear_t))
+            ok = (fit or picks.fear_watch_ok(a, p, fear_t)) and verified
+            kind = "신규 편입"
+        out.append({"ticker": tk, "held": tk in held, "kind": kind, "eligible": bool(fear_t.get("tier")) and bool(ok),
+                    "price": p, "buy_below": dt["buy_below"], "gap_pct": round((p / dt["buy_below"] - 1) * 100, 1),
+                    "expected_return_pct": picks.expected_return(a, p), "verdict": a.get("verdict"),
+                    "conviction": a.get("conviction"), "alert_level": a.get("alert_level")})
+    return sorted(out, key=lambda c: (not c["eligible"], c["gap_pct"]))
+
 
 def _safe(fn, default):
     try:
