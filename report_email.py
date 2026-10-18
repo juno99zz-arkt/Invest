@@ -4,7 +4,8 @@
 메일 내용 = 대시보드 내용.
 
 발송 시점
-  --auto  : 토요일(KST)이고 이번 주에 아직 안 보냈으면 발송 (주간 AI 분석 반영 직후 + 토 21:00 안전망)
+  --auto  : 월·금요일(KST)이고 오늘 아직 안 보냈으면 발송 (07:00 정기 + 08:00 안전망, 날짜별 1회)
+  (매수·매도 신호 수시 메일은 notify.py 가 ntfy 푸시와 함께 보냄)
   --force : 즉시 발송 (수동 실행 mode=report)
   --dry-run : 발송 없이 report_preview.html 저장
 환경변수: EMAIL_SENDER, EMAIL_PASSWORD (Gmail 앱 비밀번호), INVEST_REPORT_TO (쉼표 구분 수신자)
@@ -70,9 +71,18 @@ def build(today):
     td = 'style="padding:6px 8px;font-size:13px;border-bottom:1px solid #eee;vertical-align:top"'
 
     stale = ""
-    if s.get("week") != week_now and today.weekday() == 5:
+    last_d = lw.get("date") or ""
+    try:
+        age = (today - datetime.strptime(last_d, "%Y-%m-%d").date()).days if last_d else None
+    except ValueError:
+        age = None
+    if age is not None and age > 8:
         stale = ('<div style="font-size:13px;background:#fff8e1;padding:8px 12px;border-radius:6px;margin-bottom:12px">'
-                 f'이번 주({week_now}) AI 분석이 아직 반영되지 않아 지난 분석({e(s.get("week"))}) 기준입니다. 시세는 매일 갱신됩니다.</div>')
+                 f'마지막 AI 분석이 {age}일 전({e(last_d)})입니다 — 주간 분석이 반영되지 않았을 수 있습니다. 시세는 매일 갱신됩니다.</div>')
+    fgt = ((d.get("m6") or {}).get("fear_tier") or {})
+    if fgt.get("score") is not None:
+        stale += ('<div style="font-size:13px;background:#f3f4f6;padding:8px 12px;border-radius:6px;margin-bottom:12px">'
+                  f'공포·탐욕 지수 {fgt["score"]:.0f} · {e(fgt.get("note"))}</div>')
 
     # ① 스탠스
     wm = s.get("weekly_message") or {}
@@ -144,7 +154,7 @@ def build(today):
     quotes_at = s.get("quotes_at") or (d.get("meta") or {}).get("built_at_kst")
     body = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="font-family:Arial,'Malgun Gothic',sans-serif;color:#1a1a1a;max-width:720px;margin:0 auto;padding:16px">
-<h2 style="margin:0 0 4px">AI 투자 브리핑 주간 리포트 · {e(s.get('week'))}</h2>
+<h2 style="margin:0 0 4px">AI 투자 브리핑 정기 리포트 ({'월화수목금토일'[today.weekday()]}) · {e(s.get('week'))}</h2>
 <div style="color:#888;font-size:13px;margin-bottom:16px">{today.isoformat()} 발송 · {e(lw.get('date'))} 분석 · 시세 {e(quotes_at)} 기준 · <a href="{DASHBOARD_URL}">대시보드 열기</a></div>
 {stale}
 <h3 style="margin:18px 0 6px">① 시장 스탠스: {e(s.get('stance') or '-')}</h3>
@@ -173,7 +183,7 @@ def build(today):
 <ul style="font-size:13px;padding-left:18px">{news_html}</ul>
 <div style="font-size:11px;color:#aaa;margin-top:24px">GitHub Actions 자동 발송 · AI 분석은 Agent(Claude API 미사용) · 투자 판단의 최종 책임은 본인에게 있습니다.</div>
 </body></html>"""
-    subject = (f"[투자 대시보드] {s.get('week')} 주간 리포트 · 스탠스 {s.get('stance') or '-'}"
+    subject = (f"[투자 대시보드] {today.month}/{today.day}({'월화수목금토일'[today.weekday()]}) 정기 리포트 · 스탠스 {s.get('stance') or '-'}"
                f" · 신규 {', '.join(added) or '없음'}" + (f" · 제외 {', '.join(removed)}" if removed else ""))
     return subject, body
 
@@ -188,14 +198,14 @@ def _log():
 
 def main():
     now = datetime.now(KST)
-    key = now.strftime("%G-W%V")
+    key = now.strftime("%Y-%m-%d")
     log = _log()
     if "--auto" in sys.argv:
-        if now.weekday() != 5:
-            print(f"오늘은 토요일이 아님({now:%a}) — 주간 메일 건너뜀")
+        if now.weekday() not in (0, 4):
+            print(f"오늘은 월·금요일이 아님({now:%a}) — 정기 메일 건너뜀")
             return
         if key in log.get("sent", {}):
-            print(f"{key} 주간 메일은 이미 발송됨({log['sent'][key]}) — 건너뜀")
+            print(f"{key} 정기 메일은 이미 발송됨({log['sent'][key]}) — 건너뜀")
             return
     subject, body = build(now.date())
     if "--dry-run" in sys.argv:
