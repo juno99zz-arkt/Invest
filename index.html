@@ -537,7 +537,7 @@ function logicHelpHtml(L) {
       ${step(8, '데이터 검증 (추천 전 관문)',
         '· FCF 는 현금흐름표 4분기 합계를 기본값으로 쓰고, Yahoo 요약값과 크게 다르면 자동으로 \'불일치\' 표시<br>· AI 가 공식 공시로 핵심 수치를 확인해 확정값을 넣으면 정량 점수를 다시 계산<br>· 확인되지 않으면 \'검증 대기\' → 신규 편입·비중 확대 보류<br>· PER 은 최근 12개월 / 향후 12개월 / 올해·다음 회계연도를 구분<br>· 대가 13F 는 같은 분기끼리만 비교(지연 자료는 가산점 제외), 내부자 매매는 거래 대상 회사가 일치하는 공시만')}
       ${step(9, '투자 규모 — 종목 선택과 분리',
-        '이 계좌는 최대 5종목 개별주 + 원화 현금만 운용합니다 (ETF 없음).<br>① 신규 종목 기본 비중: 확신도 5→30% · 4→20% · 3→10%(탐색 편입) / 보유 종목은 지난 비중 또는 Agent 제안<br>② 기대수익률 = 약세 25% · 기준 50% · 강세 25% 가중 — 10% 미만이면 신규 0%, 보유는 확대 금지<br>③ 상한: 한 종목 30% · 약세 시 한 종목이 전체 자산에 주는 손실 ≤ 8% · 같은 테마 합계 ≤ 50% · 경고 단계·검증 대기<br>④ 개별주 합계 상한 = 스탠스별 (공격적 100 · 선별적 90 · 중립 80 · 방어적 60%, Agent ±10%p) — 넘으면 기대수익이 가장 낮은 종목부터 줄이고, 나머지는 원화 현금<br>⑤ 공포·탐욕 지수 가중: 최근 5거래일 안에 20 / 10 / 5 아래로 내려가면 단계별로 주식 상한 +10/+20/+30%p, 최소 기대수익 8/6/4%, 매수 기준가 허용 +3/+6/+10%. 10·5 단계는 관찰 종목의 탐색 편입과 보유 종목 추가 매수(+5/+10%p)도 허용하고 주간 분석 전에도 편입 (신호 탭 참고)<br>(규칙 값은 data/risk_profile.json)')}
+        '이 계좌는 최대 5종목 개별주 + 원화 현금만 운용합니다 (ETF 없음).<br>① 신규 종목 기본 비중: 확신도 5→30% · 4→20% · 3→10%(탐색 편입) / 보유 종목은 지난 비중 또는 Agent 제안<br>② 기대수익률 = 약세 25% · 기준 50% · 강세 25% 가중 — 10% 미만이면 신규 0%, 보유는 확대 금지<br>③ 상한: 한 종목 30% · 약세 시 한 종목이 전체 자산에 주는 손실 ≤ 8% · 같은 테마 합계 ≤ 50% · 경고 단계·검증 대기<br>④ 개별주 합계 상한 = 스탠스별 (공격적 100 · 선별적 90 · 중립 80 · 방어적 60%, Agent ±10%p) — 넘으면 기대수익이 가장 낮은 종목부터 줄이고, 나머지는 원화 현금<br>⑤ 공포·탐욕 지수 가중 (2016~2026 QQQ 백테스트 반영): 20 아래는 경계 알림만, 최근 5거래일 안에 10 / 5 아래로 내려가면 주식 상한 +20/+30%p, 최소 기대수익 6/4%, 매수 기준가 허용 +6/+10%, 관찰 종목 탐색 편입·보유 추가 매수(+5/+10%p), 주간 분석 전에도 편입. 5 아래는 늘릴 비중의 절반씩 분할 매수 (신호 탭 참고)<br>(규칙 값은 data/risk_profile.json)')}
       ${step(10, '경고 단계와 변경 알림',
         '· 보유 종목은 정상 → 추가 매수 중단 → 비중 재검토(비중 절반) → 논리 붕괴(제외) 4단계로 판정<br>· 매일 실적 발표·분석 이후 ±10% 급변·검증 일정·약세 가격 도달을 감지해 알림<br>· 수요일에 알림이 있는 보유·관심 종목만 중간 재평가 (주간 업데이트를 기다리지 않음)')}
       <div class="text-xs px-1" style="color:var(--muted);line-height:1.6;">가중치·가산점은 장기투자 원칙에 따른 설계값이며 과거 수익률로 검증(백테스트)한 값은 아닙니다.</div>
@@ -1453,19 +1453,19 @@ function fgColor(v) { return v == null ? '#94a3b8' : v < 25 ? '#ef4444' : v < 45
 function fgLabel(v) { return v == null ? '—' : v < 25 ? '극단적 공포' : v < 45 ? '공포' : v <= 55 ? '중립' : v <= 75 ? '탐욕' : '극단적 탐욕'; }
 function fearTierHtml(t, cands) {
   if (!t) return '';
-  const rows = [[20, '극단적 공포', '주식 상한 +10%p · 최소 기대수익 8% · 매수 기준가 +3% 허용'],
-                [10, '패닉', '+20%p · 6% · +6% · 관찰 종목도 기준가 이하면 탐색 편입(15%, 최대 2종목) · 보유 +5%p · 주간 분석 전에도 편입'],
-                [5, '투매', '+30%p · 4% · +10% · 관찰 종목 탐색 편입 최대 3종목 · 확신도 4 신규 25% · 보유 +10%p']];
+  const rows = [[20, '극단적 공포', '매수 가중 없음 · 10 접근 경계 알림만 (2016~2026 QQQ: 돌파 후 60일 +3.7% vs 평소 +5.0%)'],
+                [10, '패닉', '주식 상한 +20%p · 최소 기대수익 6% · 매수 기준가 +6% 허용 · 관찰 종목도 기준가 이하면 탐색 편입(15%, 최대 2종목) · 보유 +5%p · 주간 분석 전에도 편입 (QQQ 60일 +9.8%, 승률 92%)'],
+                [5, '투매', '+30%p · 4% · +10% · 관찰 종목 탐색 편입 최대 3종목 · 확신도 4 신규 25% · 보유 +10%p · 늘릴 비중의 절반씩 분할 매수 (QQQ 60일 +20.5%, 단 매수 후 평균 −7.9% 추가 하락)']];
   const ladder = rows.map(([lv, nm, rule], i) => {
-    const on = (t.tier || 0) >= i + 1;
+    const on = i === 0 ? !!(t.watch || t.tier) : (t.tier || 0) >= i + 1;
     return '<div class="flex items-start gap-2 py-1" style="' + (on ? '' : 'opacity:0.55;') + '"><span class="badge ' + (on ? (i ? 'badge-red' : 'badge-yellow') : 'badge-gray') + '" style="min-width:58px;text-align:center;">' + lv + ' 미만</span>'
-      + '<span style="font-size:12px;line-height:1.5;"><b>' + nm + '</b> ' + rule + (on && t.level === lv ? ' <b style="color:#fcd34d;">← 현재</b>' : '') + '</span></div>';
+      + '<span style="font-size:12px;line-height:1.5;"><b>' + nm + '</b> ' + rule + (on && (t.tier ? t.level === lv : lv === 20) ? ' <b style="color:#fcd34d;">← 현재</b>' : '') + '</span></div>';
   }).join('');
   const el = (cands || []).filter(c => c.eligible), near = (cands || []).filter(c => !c.eligible).slice(0, 5);
   const cl = c => '<span class="score-chip"><b style="color:#f59e0b;">' + esc(c.ticker) + '</b> $' + c.price.toFixed(2) + ' · 기준 $' + c.buy_below + ' (' + pct(c.gap_pct) + ')' + (c.expected_return_pct != null ? ' · 기대 ' + pct(c.expected_return_pct, 0) : '') + ' · ' + esc(c.kind) + '</span>';
   return '<div class="card2 p-3 mb-3" style="' + (t.tier ? 'border-color:#f59e0b;' : '') + '">'
-    + '<div class="text-sm font-semibold mb-1">매수 신호 반영 ' + (t.tier ? '<span class="badge badge-yellow">' + t.tier + '단계 · ' + esc(t.name) + '</span>' : '<span class="badge badge-gray">미적용</span>') + '</div>'
-    + '<div class="text-xs mb-2" style="color:var(--muted);line-height:1.6;">최근 ' + (t.lookback_days || 5) + '거래일 최저 ' + (t.low == null ? '—' : Math.round(t.low)) + (t.crossed ? ' · ' + esc(t.level) + ' 하향 돌파 ' + esc(t.crossed) : '') + '. 20 → 10 → 5 로 내려갈수록 매수 문턱을 더 많이 낮춥니다. 지수만으로 사지 않고, 편입 적합·데이터 검증·경고 단계·손실 한도·최대 5종목 규칙은 그대로 적용합니다.</div>'
+    + '<div class="text-sm font-semibold mb-1">매수 신호 반영 ' + (t.tier ? '<span class="badge badge-yellow">' + esc(t.level) + ' 미만 · ' + esc(t.name) + '</span>' : t.watch ? '<span class="badge badge-gray">경계 (가중 없음)</span>' : '<span class="badge badge-gray">미적용</span>') + '</div>'
+    + '<div class="text-xs mb-2" style="color:var(--muted);line-height:1.6;">최근 ' + (t.lookback_days || 5) + '거래일 최저 ' + (t.low == null ? '—' : Math.round(t.low)) + (t.crossed ? ' · ' + esc(t.level) + ' 하향 돌파 ' + esc(t.crossed) : t.watch_crossed ? ' · 20 하향 ' + esc(t.watch_crossed) : '') + '. 10 · 5 아래에서만 매수 문턱을 낮춥니다(2016~2026 QQQ 백테스트 기준, 20은 경계만). 지수만으로 사지 않고, 편입 적합·데이터 검증·경고 단계·손실 한도·최대 5종목 규칙은 그대로 적용합니다.</div>'
     + ladder
     + (t.tier ? '<div class="text-xs mt-2 mb-1" style="color:var(--muted);">지금 가격으로 조건 충족</div><div class="flex flex-wrap gap-1">' + (el.length ? el.map(cl).join('') : '<span class="text-xs" style="color:var(--muted);">없음</span>') + '</div>' : '')
     + (near.length ? '<div class="text-xs mt-2 mb-1" style="color:var(--muted);">매수 기준가에 가까운 후보</div><div class="flex flex-wrap gap-1">' + near.map(cl).join('') + '</div>' : '')

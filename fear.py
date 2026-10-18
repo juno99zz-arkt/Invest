@@ -1,7 +1,9 @@
 """
 공포·탐욕 지수(CNN Fear & Greed) 단계 → 매수 신호 가중치.
 
-단계는 '최근 N거래일(기본 5) 최저치' 기준: 20 / 10 / 5 를 하향 돌파하면 1 / 2 / 3 단계.
+단계는 '최근 N거래일(기본 5) 최저치' 기준: 10 / 5 를 하향 돌파하면 2 / 3 단계 (매수 가중).
+20 하향은 2016~2026 QQQ 백테스트상 평소와 차이가 없어 가중치 없이 경계 알림만 (watch).
+3단계(5)는 매수 후 추가 하락(평균 −7.9%, 최악 −15.8%)에 대비해 늘릴 비중의 절반씩 분할 매수.
 (극단적 공포는 며칠 만에 지나가는 경우가 많아, 토요일 판단 시점에 회복했더라도 그 주에 돌파했으면 반영)
 
 지수는 '전부'가 아니다 — 단계가 바꾸는 것은 규칙의 문턱뿐이고, 다음 안전장치는 그대로다:
@@ -16,13 +18,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(BASE_DIR, "data", "fear_greed.json")
 
 DEFAULT_TIERS = [
-    {"level": 20, "name": "극단적 공포", "stock_cap_add": 10, "hurdle_pct": 8, "buy_below_tolerance_pct": 3,
-     "starter_weight": 10, "allow_watch": False, "add_to_holdings_pct": 0, "max_fear_picks": 0},
+    # 20: 2016~2026 QQQ 백테스트상 단독 매수 근거 없음 → 가중치 없이 '10 접근 경계' 알림만 (2026-10-18 사용자 승인)
+    {"level": 20, "name": "극단적 공포", "alert_only": True},
     {"level": 10, "name": "패닉", "stock_cap_add": 20, "hurdle_pct": 6, "buy_below_tolerance_pct": 6,
      "starter_weight": 15, "allow_watch": True, "add_to_holdings_pct": 5, "max_fear_picks": 2},
     {"level": 5, "name": "투매", "stock_cap_add": 30, "hurdle_pct": 4, "buy_below_tolerance_pct": 10,
      "starter_weight": 15, "conviction4_weight": 25, "allow_watch": True, "add_to_holdings_pct": 10,
-     "max_fear_picks": 3},
+     "max_fear_picks": 3, "staged_buy": True},
 ]
 
 
@@ -81,13 +83,22 @@ def tier(fg=None, profile=None):
     out = {"tier": 0, "score": fg["score"], "low": round(low, 1), "lookback_days": n, "as_of": fg.get("as_of")}
     for i, t in enumerate(tiers, 1):
         if low < t["level"]:
-            out.update({"tier": i, **t, "crossed": crossed_on(fg, t["level"])})
+            if t.get("alert_only"):  # 가중치 없이 경계 알림만 (tier 는 0 유지)
+                out.update({"watch": True, "watch_level": t["level"], "watch_name": t["name"],
+                            "watch_crossed": crossed_on(fg, t["level"])})
+            else:
+                out.update({"tier": i, **t, "crossed": crossed_on(fg, t["level"])})
+    if not out["tier"] and out.get("watch"):
+        out["note"] = (f"공포·탐욕 최근 {n}일 최저 {low:.0f} → {out['watch_level']} 하향({out['watch_name']}) — "
+                       f"10년 백테스트상 단독 매수 근거가 없어 매수 가중 없음. 10 미만으로 내려가면 매수 가중 시작 (10 접근 경계)")
+        return out
     if out["tier"]:
         out["note"] = (f"공포·탐욕 최근 {n}일 최저 {low:.0f} → {out['level']} 하향 돌파({out['name']}, {out['tier']}단계): "
                        f"주식 상한 +{out['stock_cap_add']}%p · 최소 기대수익 {out['hurdle_pct']}% · "
                        f"매수 기준가 +{out['buy_below_tolerance_pct']}% 허용"
                        + (" · 관찰 종목도 매수 기준가 이하면 탐색 편입" if out.get("allow_watch") else "")
-                       + (f" · 보유 종목 +{out['add_to_holdings_pct']}%p 추가 매수 허용" if out.get("add_to_holdings_pct") else ""))
+                       + (f" · 보유 종목 +{out['add_to_holdings_pct']}%p 추가 매수 허용" if out.get("add_to_holdings_pct") else "")
+                       + (" · 추가 하락 위험 대비 분할 매수(늘릴 비중의 절반씩, 2~3회)" if out.get("staged_buy") else ""))
     else:
-        out["note"] = f"공포·탐욕 최근 {n}일 최저 {low:.0f} — 20 이상이라 가중치 없음"
+        out["note"] = f"공포·탐욕 최근 {n}일 최저 {low:.0f} — 매수 가중 없음 (10 미만부터 적용)"
     return out

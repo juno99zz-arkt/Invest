@@ -326,6 +326,16 @@ def _risk_info(a, price, weight):
     return out
 
 
+def _last_alloc(hist, skip_week=None):
+    """직전 판단의 배분 기록 (분할 매수 남은 목표·공포 구간 시작 전 비중 이어가기용)."""
+    for w in reversed(hist.get("weeks", [])):
+        if skip_week and w.get("week") == skip_week:
+            continue
+        if w.get("allocation"):
+            return w["allocation"]
+    return {}
+
+
 def _rewind_week(hist, week):
     """같은 주를 다시 finalize 할 때 그 주 결정 이전 상태로 되돌린다 (재실행해도 결과가 같도록).
     그 주에 편입된 종목은 보유에서 빼고, 그 주에 제외된 종목은 보유로 되돌린다."""
@@ -423,7 +433,7 @@ def finalize():
         weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights"), prev_weights,
                                                      analyses, prices, meta, stance, _profile(), res.get("allocation"),
                                                      new_tickers=[d["ticker"] for d in decisions if d["action"] == "신규편입"],
-                                                     fear=fear_t)
+                                                     fear=fear_t, prev_alloc=_last_alloc(hist, week))
         alloc["agent_reason"] = res.get("weights_reason")
         for n in alloc["notes"]:
             print("  비중: " + n)
@@ -431,7 +441,7 @@ def finalize():
         hist = update_history(hist, week, today, kept, decisions, removed, snaps, spy)
         hist["weeks"][-1]["weights"] = weights
         hist["weeks"][-1]["allocation"] = {k: alloc[k] for k in
-                                           ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct", "cash_pct", "reason", "expected_return_pct", "fear")}
+                                           ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct", "cash_pct", "reason", "expected_return_pct", "fear", "staged", "fear_base", "fear_hold_until")}
         for h in hist["portfolio"]:
             a = analyses.get(h["ticker"]) or {}
             h["weight"] = weights.get(h["ticker"])
@@ -563,7 +573,8 @@ def finalize_interim(req, res):
     keep_w = {tk: v for tk, v in prev_weights.items() if tk in [h["ticker"] for h in kept]}
     weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights") or keep_w,
                                                  prev_weights, analyses, px, meta, stance, _profile(),
-                                                 res.get("allocation"), new_tickers=new_tk, fear=fear_t)
+                                                 res.get("allocation"), new_tickers=new_tk, fear=fear_t,
+                                                 prev_alloc=_last_alloc(hist))
     alloc["agent_reason"] = res.get("weights_reason")
     for h in removed:
         p = px.get(h["ticker"])
@@ -578,7 +589,7 @@ def finalize_interim(req, res):
     hist["weeks"].append({"week": f"{req['week']}+중간점검", "date": today, "interim": True, "decisions": decisions,
                           "portfolio_after": [h["ticker"] for h in kept], "weights": weights,
                           "allocation": {k: alloc[k] for k in ("stance", "equity_pct", "stock_pct", "core_etf", "core_pct",
-                                                               "cash_pct", "reason", "expected_return_pct", "fear")},
+                                                               "cash_pct", "reason", "expected_return_pct", "fear", "staged", "fear_base", "fear_hold_until")},
                           "trigger": res.get("trigger")})
     save_history(hist)
 

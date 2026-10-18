@@ -144,6 +144,10 @@ def fear_signals():
         return []
     m6 = inj.get("m6") or {}
     t = m6.get("fear_tier") or {}
+    if not t.get("tier") and t.get("watch"):  # 20 하향: 매수 가중 없이 경계만 (키 형식 동일 → 같은 돌파는 1회)
+        return [{"key": f"fg:{t['watch_level']}:{t.get('watch_crossed')}", "level": "warn", "ticker": "시장",
+                 "title": f"[공포 경계] 공포·탐욕 {t['low']:.0f} — {t['watch_level']} 하향, 10 접근 경계",
+                 "msg": t.get("note", "") + "\n\n매수 규칙은 바뀜지 않습니다. 10 미만으로 내려가면 [매수 신호]를 보냅니다."}]
     if not t.get("tier"):
         return []
     cands = [c for c in (m6.get("fear_candidates") or []) if c.get("eligible")]

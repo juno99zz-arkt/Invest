@@ -212,7 +212,7 @@ def expected_return(a, price, probs=None):
 
 
 def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile, allocation=None, new_tickers=None,
-                   fear=None):
+                   fear=None, staged=None, prev_alloc=None):
     """최대 5종목 개별주 + 원화 현금 계좌의 비중 결정 (ETF·코어 없음, 종목 선택과 분리).
     1) 종목별 출발점: 보유 종목은 Agent 제안(없으면 지난 비중), 신규는 확신도별 기본(5→30, 4→20, 3→10 탐색 비중)
        — Agent 는 신규 종목을 확신도 기본보다 높일 수 없음
@@ -231,6 +231,12 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
     hurdle = profile.get("min_expected_return_pct", 10)
     probs = {k: v / 100 for k, v in (profile.get("scenario_probs") or {}).items()} or None
     ft = (fear or {}).get("tier") or 0
+    pa = prev_alloc or {}
+    if staged is None:
+        staged = pa.get("staged") or {}
+    # 공포 구간(10 미만)이 이어지는 동안 보유 추가 매수는 '구간 시작 전 비중 + 허용폭'까지만 (판단마다 누적 방지)
+    continuing = ((pa.get("fear") or {}).get("tier") or 0) >= 2 and pa.get("fear_base") is not None
+    fear_base = (pa.get("fear_base") if continuing else dict(prev)) if ft >= 2 else {}
     if ft:  # 공포·탐욕 20/10/5 하향 돌파 → 매수 문턱 완화 (안전장치는 그대로)
         hurdle = min(hurdle, fear.get("hurdle_pct", hurdle))
         conv_w[3] = max(conv_w.get(3, 0), fear.get("starter_weight", 0))
@@ -260,15 +266,19 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
         info["expected_return_pct"] = e
         add = (fear or {}).get("add_to_holdings_pct") if ft else 0
         bb = ((a.get("decision_table") or {}).get("buy_below"))
-        if (add and tk not in new and pw is not None and price and bb and e is not None and e >= hurdle
+        if (add and tk not in new and tk in fear_base and pw is not None and price and bb and e is not None and e >= hurdle
                 and price <= bb * (1 + fear.get("buy_below_tolerance_pct", 0) / 100)
                 and a.get("alert_level") not in ("추가 매수 중단", "비중 재검토", "논리 붕괴")
                 and (a.get("evidence") or {}).get("data_verified") != "검증 대기"):
-            nx = min(max_single, pw + add)
+            nx = min(max_single, fear_base[tk] + add)
             if nx > x:
                 notes.append(f"{tk}: 공포 구간 추가 매수 — 현재가 ${price:.2f} ≤ 매수 기준가 ${bb}(+허용폭), 기대수익 {e:+.1f}% → {x}%→{nx}%")
                 x = nx
                 info["fear_add"] = True
+        st = (staged or {}).get(tk)
+        if ft and st and tk not in new and st > x:  # 지난 판단의 분할 매수 목표 이어가기 (공포 단계가 유지될 때만)
+            notes.append(f"{tk}: 분할 매수 이어가기 — 목표 {st}% (현재 {pw}%)")
+            x = st
         if e is None:
             notes.append(f"{tk}: 시나리오 없음 — 기대수익 미계산")
         elif e < hurdle:
@@ -335,10 +345,33 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
                 reason += f" → Agent 조정 {cap}%: {allocation.get('reason', '')}"
         else:
             notes.append(f"Agent 제안 주식 상한 {allocation['equity_pct']}% 는 허용 범위(±{adj}%p) 밖 — 기본값 사용")
+    # 공포 구간(10·5 미만) 매수분 보유 기간: 백테스트 우위가 20~120거래일에 나타나므로,
+    # 구간이 끝난 뒤 90일(약 60거래일) 동안은 주식 상한이 내려가도 상한 때문에 팔지는 않는다 (위험 한도·경고는 그대로)
+    from datetime import datetime as _dt, timedelta as _td, timezone as _tz
+    today = _dt.now(_tz(_td(hours=9))).date().isoformat()
+    hold_until = pa.get("fear_hold_until")
+    if ft >= 2:
+        hold_until = max(hold_until or "", (_dt.now(_tz(_td(hours=9))).date() + _td(days=90)).isoformat())
+    elif hold_until and hold_until >= today:
+        keep = min(sum(prev.values()), 100)
+        if keep > cap:
+            notes.append(f"공포 구간 매수분 보유 기간(~{hold_until}) — 주식 상한 {cap}% 대신 기존 합계 {keep}% 유지 (상한 때문에 팔지 않음)")
+            reason += f" · 공포 구간 매수분 보유 기간(~{hold_until}) 기존 합계 {keep}% 유지"
+            cap = keep
     while sum(w.values()) > cap:
         low = min([t for t in w if w[t] > 0], key=ekey)
         w[low] -= 5
         notes.append(f"주식 합계가 상한 {cap}% 초과 → 기대수익이 가장 낮은 {low} 5%p 축소")
+    # 3단계(공포·탐욕 5 미만) 분할 매수: 늘릴 비중의 절반(5% 단위 올림)만 이번에 — 다음 판단 때 나머지 절반씩 (2~3회)
+    if ft and fear.get("staged_buy"):
+        for t, x in list(w.items()):
+            p0 = prev.get(t) or 0
+            gap = x - p0
+            if gap > 5:
+                step = min(gap, int(-(-gap / 2 // 5) * 5))
+                notes.append(f"{t}: 분할 매수 — 목표 {x}% 중 이번에 {p0}%→{p0 + step}% (나머지는 다음 판단에서)")
+                per.setdefault(t, {})["staged_target"] = x
+                w[t] = p0 + step
     weights = {t: x for t, x in w.items() if x > 0}
     stock = sum(weights.values())
     for tk, info in per.items():
@@ -350,6 +383,9 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
     alloc = {"stance": stance, "equity_pct": cap, "stock_pct": stock, "core_etf": None, "core_pct": 0,
              "cash_pct": 100 - stock, "reason": reason, "notes": notes, "per_stock": per,
              "expected_return_pct": port_e,
+             "staged": {t: i["staged_target"] for t, i in per.items() if i.get("staged_target") and weights.get(t, 0) < i["staged_target"]},
+             "fear_base": fear_base if ft >= 2 else None,
+             "fear_hold_until": hold_until if hold_until and hold_until >= today else None,
              "fear": ({k: fear.get(k) for k in ("tier", "level", "name", "score", "low", "crossed", "note")} if fear else None),
              "rules": {k: profile.get(k) for k in ("max_holdings", "max_position_loss_pct", "max_single_weight",
                                                     "max_theme_pct", "min_expected_return_pct", "conviction_weight")}}
