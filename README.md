@@ -9,12 +9,18 @@ Claude API(ANTHROPIC_API_KEY)는 더 이상 쓰지 않습니다.
 
 | 시각 (KST) | 주체 | 내용 |
 |---|---|---|
-| 토 09:00 | Actions `prepare` | 유니버스 정량 점수·신호 → 후보 선정 → `data/pending/request.json` (분석 요청서) |
-| 토 오전 | Agent | 요청서를 읽고 시장 브리핑(스탠스·뉴스·일정) + 종목 심층분석(판단표·데이터 검증) → `data/aside/result.json` 업로드 |
+| 토 06:00 | Actions `prepare` | 유니버스 정량 점수·신호 → 후보 선정 → `data/pending/request.json` (분석 요청서) |
+| 토 07:00 | Agent | 요청서를 읽고 시장 브리핑(스탠스·뉴스·일정) + 종목 심층분석(판단표·데이터 검증) → `data/aside/result.json` 업로드 |
 | 업로드 직후 | Actions `finalize` | 결과 검증 → 편입·유지·제외 결정 → 비중 → 이력·리포트 → 대시보드 배포 → **주간 메일 발송** |
 | 토 21:00 | Actions `report` 안전망 | 그 주 메일이 아직 안 나갔으면 현재 대시보드 기준으로 발송 |
-| 수 | Agent (알림 있을 때만) | 보유·관심 종목 중간 재평가 (`mode: interim`) |
-| 매일 17:00 | Actions `daily` | 시세·PEG·상위 50 갱신, 변경 알림 |
+| 평일 07:00 | Agent | 보유 종목 뉴스·알림 점검 → 필요 시 중간 재평가 (`mode: interim`) |
+| 매일 06:00 | Actions `daily` | 미국 장 마감 후 시세·PEG·상위 50 갱신, 변경 알림, 매도 신호 푸시 |
+| 미국 장중 30분마다 | Actions `watch` | 보유 종목 가격 경고(약세 시나리오 도달·급락) 푸시 |
+
+## 매도 신호 푸시 (`notify.py`, ntfy.sh)
+- [매도] Agent 판단으로 보유 종목 제외 또는 비중 축소 → 즉시 푸시 (finalize 직후)
+- [매도 경고] 약세 시나리오 가격 도달 / 분석 후 −10% / 편입가 −15% → 푸시, 다음 아침 Agent 재평가
+- 시크릿 `NTFY_TOPIC`, 휴대폰 ntfy 앱에서 같은 토픽 구독. 같은 신호는 한 번만 (`data/push_log.json`). 테스트: mode `push_test`
 
 ## 계좌 규칙 (`data/risk_profile.json`)
 최대 5종목 개별주 + 원화 현금 (ETF 없음). 확신도·기대수익(약세25·기준50·강세25)·약세 시 종목당 전체 손실 한도로 종목 비중,

@@ -1,5 +1,5 @@
 """
-매일 17:00 KST GitHub Actions에서 실행 (주간 파이프라인 직후에도 실행).
+매일 06:00 KST(미국 장 마감 후) GitHub Actions에서 실행 (주간 파이프라인 직후에도 실행).
 1. data/weekly_signals.json (주간 신호·뉴스) + data/picks_history.json + 최신 리포트 로드
 2. yfinance로 매일 갱신:
    - M6 PEG (30종목)
@@ -279,7 +279,7 @@ def build_data():
     build_meta = {
         "built_at_kst":   now_kst.strftime("%Y-%m-%d %H:%M"),
         "built_at_iso":   now_kst.isoformat(),
-        "schedule_label": "매일 KST 17:00 시세 갱신 · 매주 토 신호·추천 갱신 (Agent AI 분석)",
+        "schedule_label": "매일 KST 06:00 갱신·Agent 점검 · 매주 토 신호·추천 갱신 · 매도 신호 즉시 푸시",
         "weekly_built_at": weekly.get("built_at_kst"),
     }
 
