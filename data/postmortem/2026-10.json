@@ -18,17 +18,17 @@
     "worst": "NVDA 2026-09-13 +4.6%",
     "reliable": false
    },
-   "미실행 후보": {
+   "미실행 후보(필터 판단)": {
     "n": 25,
-    "win_rate": 1.0,
-    "expectancy_pct": 2.32,
-    "profit_factor": 2.43,
+    "win_rate": 0.52,
+    "expectancy_pct": -2.32,
+    "profit_factor": 0.41,
     "categories": {
      "MISSED_OPPORTUNITY": 12,
      "SKIPPED_OK": 13
     },
-    "best": "SNDK 2026-09-13 +17.2%",
-    "worst": "KEYS 2026-10-11 -11.3%",
+    "best": "KEYS 2026-10-11 +11.3%",
+    "worst": "SNDK 2026-09-13 -17.2%",
     "reliable": true
    }
   },
@@ -45,17 +45,17 @@
     "worst": "NVDA 2026-09-13 +5.7%",
     "reliable": false
    },
-   "미실행 후보": {
+   "미실행 후보(필터 판단)": {
     "n": 8,
-    "win_rate": 1.0,
-    "expectancy_pct": 0.27,
-    "profit_factor": 1.09,
+    "win_rate": 0.75,
+    "expectancy_pct": -0.27,
+    "profit_factor": 0.92,
     "categories": {
      "MISSED_OPPORTUNITY": 2,
      "SKIPPED_OK": 6
     },
-    "best": "KEYS 2026-09-13 +14.9%",
-    "worst": "WDC 2026-09-13 -7.6%",
+    "best": "WDC 2026-09-13 +7.6%",
+    "worst": "KEYS 2026-09-13 -14.9%",
     "reliable": false
    }
   },
@@ -63,7 +63,7 @@
    "실행(편입·확대·축소·제외)": {
     "n": 0
    },
-   "미실행 후보": {
+   "미실행 후보(필터 판단)": {
     "n": 0
    }
   }
@@ -101,28 +101,28 @@
   "미편입·보류": {
    "5": {
     "n": 23,
-    "win_rate": 1.0,
-    "expectancy_pct": 2.88,
-    "profit_factor": 3.1,
+    "win_rate": 0.48,
+    "expectancy_pct": -2.88,
+    "profit_factor": 0.32,
     "categories": {
      "MISSED_OPPORTUNITY": 12,
      "SKIPPED_OK": 11
     },
-    "best": "SNDK 2026-09-13 +17.2%",
-    "worst": "KEYS 2026-10-11 -11.3%",
+    "best": "KEYS 2026-10-11 +11.3%",
+    "worst": "SNDK 2026-09-13 -17.2%",
     "reliable": true
    },
    "20": {
     "n": 8,
-    "win_rate": 1.0,
-    "expectancy_pct": 0.27,
-    "profit_factor": 1.09,
+    "win_rate": 0.75,
+    "expectancy_pct": -0.27,
+    "profit_factor": 0.92,
     "categories": {
      "MISSED_OPPORTUNITY": 2,
      "SKIPPED_OK": 6
     },
-    "best": "KEYS 2026-09-13 +14.9%",
-    "worst": "WDC 2026-09-13 -7.6%",
+    "best": "WDC 2026-09-13 +7.6%",
+    "worst": "KEYS 2026-09-13 -14.9%",
     "reliable": false
    },
    "60": {
@@ -152,14 +152,14 @@
   "관심종목 미편입": {
    "5": {
     "n": 2,
-    "win_rate": null,
-    "expectancy_pct": -4.18,
-    "profit_factor": 0.05,
+    "win_rate": 1.0,
+    "expectancy_pct": 4.18,
+    "profit_factor": 19.58,
     "categories": {
      "SKIPPED_OK": 2
     },
-    "best": "CRCL 2026-10-11 +0.5%",
-    "worst": "MSTR 2026-10-11 -8.8%",
+    "best": "MSTR 2026-10-11 +8.8%",
+    "worst": "CRCL 2026-10-11 -0.5%",
     "reliable": false
    },
    "20": {
@@ -359,7 +359,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -9.32
+    "5": 9.32
    }
   },
   {
@@ -383,7 +383,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -0.96
+    "5": 0.96
    }
   },
   {
@@ -407,7 +407,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -8.81
+    "5": 8.81
    }
   },
   {
@@ -431,7 +431,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 5.5
+    "5": -5.5
    }
   },
   {
@@ -455,7 +455,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -11.3
+    "5": 11.3
    }
   },
   {
@@ -479,7 +479,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 8.04
+    "5": -8.04
    }
   },
   {
@@ -503,7 +503,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 0.45
+    "5": -0.45
    }
   },
   {
@@ -527,7 +527,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 1.88
+    "5": -1.88
    }
   },
   {
@@ -551,7 +551,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 8.46
+    "5": -8.46
    }
   },
   {
@@ -623,7 +623,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 0.75
+    "5": -0.75
    }
   },
   {
@@ -647,7 +647,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 6.88
+    "5": -6.88
    }
   },
   {
@@ -671,7 +671,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -0.93
+    "5": 0.93
    }
   },
   {
@@ -695,7 +695,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 6.48
+    "5": -6.48
    }
   },
   {
@@ -719,7 +719,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 6.35
+    "5": -6.35
    }
   },
   {
@@ -743,7 +743,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 1.75
+    "5": -1.75
    }
   },
   {
@@ -767,7 +767,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -0.37
+    "5": 0.37
    }
   },
   {
@@ -791,7 +791,7 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 5.32
+    "5": -5.32
    }
   },
   {
@@ -819,8 +819,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 5.16,
-    "20": -7.64
+    "5": -5.16,
+    "20": 7.64
    }
   },
   {
@@ -848,8 +848,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 0.51,
-    "20": -5.51
+    "5": -0.51,
+    "20": 5.51
    }
   },
   {
@@ -877,8 +877,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 9.76,
-    "20": -2.13
+    "5": -9.76,
+    "20": 2.13
    }
   },
   {
@@ -906,8 +906,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 17.16,
-    "20": 1.13
+    "5": -17.16,
+    "20": -1.13
    }
   },
   {
@@ -935,8 +935,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -6.32,
-    "20": -2.89
+    "5": 6.32,
+    "20": 2.89
    }
   },
   {
@@ -993,8 +993,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 11.51,
-    "20": 10.74
+    "5": -11.51,
+    "20": -10.74
    }
   },
   {
@@ -1022,8 +1022,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 2.47,
-    "20": 14.94
+    "5": -2.47,
+    "20": -14.94
    }
   },
   {
@@ -1051,8 +1051,8 @@
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -2.45,
-    "20": -6.48
+    "5": 2.45,
+    "20": 6.48
    }
   }
  ]

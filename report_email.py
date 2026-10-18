@@ -84,7 +84,7 @@ def postmortem_html(today, force=False):
 
     ov = pm.get("overall") or {}
     ov_rows = "".join(f"<tr><td {td}>{e(k)}</td>" + cells((ov.get('20') or {}).get(k)) + cells((ov.get('60') or {}).get(k)) + "</tr>"
-                      for k in ("실행(편입·확대·축소·제외)", "미실행 후보"))
+                      for k in ("실행(편입·확대·축소·제외)", "미실행 후보(필터 판단)"))
     src_rows = ""
     for name, g in (pm.get("by_source") or {}).items():
         s20 = g.get("20") or {}
@@ -114,7 +114,7 @@ def postmortem_html(today, force=False):
 {fear_rows}</table>
 <div style="font-size:13px;font-weight:700;margin:10px 0 4px">규칙 조정 제안 (자동 적용 안 함)</div>
 <ul style="font-size:13px;padding-left:18px;margin-top:0">{sug}</ul>
-<div style="font-size:11px;color:#888">* 표본 20건 미만은 참고용 (signal-postmortem 최소 표본 기준). 승률 = 적중/(적중+오판), 기대값 = 방향을 반영한 SPY 대비 평균 초과수익, 손익비 = 이익 합 ÷ 손실 합.</div>"""
+<div style="font-size:11px;color:#888">* 표본 20건 미만은 참고용 (signal-postmortem 최소 표본 기준). 승률 = 적중/(적중+오판), 기대값 = 방향을 반영한 SPY 대비 평균 초과수익, 손익비 = 이익 합 ÷ 손실 합. 미실행 후보는 필터 관점 — 승률 = 안 산 게 맞았던 비율, 기대값 +는 피한 손실·−는 놓친 수익.</div>"""
 
 
 def build(today):
