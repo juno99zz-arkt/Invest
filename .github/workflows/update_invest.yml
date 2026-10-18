@@ -28,11 +28,12 @@ on:
     branches: [main]
     paths: ["data/aside/**"]
   schedule:
-    - cron: "0 21 * * 0-4,6"        # 매일 KST 06:00 (일~금) 시세 갱신·매도 신호 점검
-    - cron: "0 21 * * 5"            # 매주 토 KST 06:00 주간 prepare (+시세 갱신·매도 신호 점검)
+    # GitHub 예약 실행은 정각에 몰려 수 시간씩 밀리는 일이 잦아 정각을 피함 (+ 06:30 Agent 가 누락 시 수동 실행)
+    - cron: "11 21 * * 0-4,6"       # 매일 KST 06:11 (일~금) 시세 갱신·매수·매도 신호 점검
+    - cron: "11 21 * * 5"           # 매주 토 KST 06:11 주간 prepare (+시세 갱신·신호 점검)
     - cron: "15,45 13-20 * * 1-5"   # 미국 장중 30분마다 (KST 22:15~05:45) 가격 경고 감시
-    - cron: "0 22 * * 0,4"          # 매주 월·금 KST 07:00 정기 메일 리포트
-    - cron: "0 23 * * 0,4"          # 매주 월·금 KST 08:00 정기 메일 안전망 (07:00 실행이 밀리거나 빠졌을 때, 날짜별 1회)
+    - cron: "7 22 * * 0,4"          # 매주 월·금 KST 07:07 정기 메일 리포트
+    - cron: "37 23 * * 0,4"         # 매주 월·금 KST 08:37 정기 메일 안전망 (날짜별 1회 — 이미 보냈으면 건너뜀)
 
 permissions:
   contents: write
@@ -64,9 +65,9 @@ jobs:
         id: mode
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then m=finalize
-          elif [ "${{ github.event.schedule }}" = "0 21 * * 5" ]; then m=prepare
+          elif [ "${{ github.event.schedule }}" = "11 21 * * 5" ]; then m=prepare
           elif [ "${{ github.event.schedule }}" = "15,45 13-20 * * 1-5" ]; then m=watch
-          elif [ "${{ github.event.schedule }}" = "0 22 * * 0,4" ] || [ "${{ github.event.schedule }}" = "0 23 * * 0,4" ]; then m=report_auto
+          elif [ "${{ github.event.schedule }}" = "7 22 * * 0,4" ] || [ "${{ github.event.schedule }}" = "37 23 * * 0,4" ]; then m=report_auto
           elif [ -n "${{ inputs.mode }}" ]; then m="${{ inputs.mode }}"
           else m=daily; fi
           echo "mode=$m" >> "$GITHUB_OUTPUT"
