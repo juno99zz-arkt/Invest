@@ -295,8 +295,10 @@ def build_data():
     alerts = _safe(lambda: build_alerts(hist, report, now_kst.date().isoformat()), [])
     if fear_t.get("tier"):
         names = ", ".join(c["ticker"] for c in m6["fear_candidates"] if c["eligible"]) or "없음"
-        alerts.insert(0, {"ticker": "시장", "role": "공포·탐욕", "level": "high" if fear_t["tier"] >= 2 else "mid",
+        alerts.insert(0, {"ticker": "시장", "role": "공포·탐욕", "level": "high",
                           "kind": "매수신호", "msg": fear_t["note"] + f" — 지금 조건 충족 후보: {names}"})
+    elif fear_t.get("watch"):
+        alerts.insert(0, {"ticker": "시장", "role": "공포·탐욕", "level": "info", "kind": "경계", "msg": fear_t["note"]})
     return {
         "summary": summary,
         "report": report,
