@@ -142,10 +142,12 @@ def evaluate(sig, px):
         br = b[bi + h - 1][2] / b[bi][1] - 1
         x = (r if market else r - br) * 100
         rec["returns"][h] = {"abs_pct": round(r * 100, 2), "excess_pct": round(x, 2)}
-        signed = x if sig["direction"] == "LONG" else -x
+        skipped = not sig.get("taken", True) and not sig.get("warn")
+        # 미실행 후보는 '필터 판단' 관점: SPY 보다 못했으면 + (피한 손실), 앞섰으면 − (놓친 수익)
+        signed = -x if skipped or sig["direction"] == "SHORT" else x
         reg1 = _regime(vd.get(s[j][0]))
-        if not sig.get("taken", True) and not sig.get("warn"):
-            cat = "MISSED_OPPORTUNITY" if signed >= 2 else "SKIPPED_OK"
+        if skipped:
+            cat = "MISSED_OPPORTUNITY" if x >= 2 else "SKIPPED_OK"
         elif rec["regime_at_signal"] and reg1 and reg1 != rec["regime_at_signal"] and signed < -2:
             cat = "REGIME_MISMATCH"
         elif abs(x) < THRESH[h]:
@@ -166,8 +168,8 @@ def summarize(recs, h):
         return {"n": 0}
     xs = [r["signed"][h] for r in rows]
     cats = [r["outcomes"][h] for r in rows]
-    win = sum(1 for c in cats if c in ("TRUE_POSITIVE", "MISSED_OPPORTUNITY"))
-    loss = sum(1 for c in cats if c.startswith("FALSE_POSITIVE") or c == "REGIME_MISMATCH")
+    win = sum(1 for c in cats if c in ("TRUE_POSITIVE", "SKIPPED_OK"))
+    loss = sum(1 for c in cats if c.startswith("FALSE_POSITIVE") or c in ("REGIME_MISMATCH", "MISSED_OPPORTUNITY"))
     gains, losses = sum(x for x in xs if x > 0), -sum(x for x in xs if x < 0)
     best, worst = max(rows, key=lambda r: r["signed"][h]), min(rows, key=lambda r: r["signed"][h])
     return {"n": len(rows), "win_rate": round(win / (win + loss), 2) if win + loss else None,
@@ -278,7 +280,7 @@ def run(today=None):
     out = {"generated": today.isoformat(), "month": month,
            "method": "signal-postmortem + weekly-performance-digest (tradermonty/claude-trading-skills) 방식, 장기 계좌용 5·20·60거래일",
            "n_signals": len(recs), "n_this_month": len(month_recs),
-           "overall": {h: {"실행(편입·확대·축소·제외)": summarize(taken, h), "미실행 후보": summarize(skipped, h)} for h in HORIZONS},
+           "overall": {h: {"실행(편입·확대·축소·제외)": summarize(taken, h), "미실행 후보(필터 판단)": summarize(skipped, h)} for h in HORIZONS},
            "by_source": gsum, "fear_study": fs, "suggestions": suggestions(gsum, fs),
            "records": sorted(recs, key=lambda r: (r["date"], r["ticker"]), reverse=True)}
     os.makedirs(OUT_DIR, exist_ok=True)
