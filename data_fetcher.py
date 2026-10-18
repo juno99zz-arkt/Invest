@@ -319,6 +319,73 @@ def fetch_prices(tickers):
         return {}
 
 
+FG_RATING_KR = {"extreme fear": "극단적 공포", "fear": "공포", "neutral": "중립", "greed": "탐욕", "extreme greed": "극단적 탐욕"}
+FG_COMPONENTS = [  # (CNN 키, 이름, 설명, 원값 표시 함수)
+    ("market_momentum_sp500", "시장 모멘텀", "S&P 500 vs 125일 이동평균",
+     lambda v, d: f"S&P 500 {v:,.0f} / 125일선 {d.get('market_momentum_sp125') or 0:,.0f}"),
+    ("stock_price_strength", "주가 강도", "NYSE 52주 신고가 − 신저가 비율",
+     lambda v, d: f"신고가−신저가 {v:+.1f}%"),
+    ("stock_price_breadth", "주가 폭", "상승·하락 거래량 (맥클레런 합산지수)",
+     lambda v, d: f"맥클레런 {v:,.0f}"),
+    ("put_call_options", "풋/콜 비율", "5일 평균 풋/콜 옵션 비율 (높을수록 공포)",
+     lambda v, d: f"풋/콜 {v:.2f}"),
+    ("market_volatility_vix", "시장 변동성", "VIX vs 50일 평균 (높을수록 공포)",
+     lambda v, d: f"VIX {v:.1f} / 50일 평균 {d.get('market_volatility_vix_50') or 0:.1f}"),
+    ("junk_bond_demand", "정크본드 수요", "하이일드−투자등급 채권 금리차 (넓을수록 공포)",
+     lambda v, d: f"금리차 {v:.2f}%p"),
+    ("safe_haven_demand", "안전자산 수요", "주식−국채 20일 수익률 차 (낮을수록 공포)",
+     lambda v, d: f"주식−국채 {v:+.2f}%p"),
+]
+
+
+def fetch_fear_greed():
+    """CNN Fear & Greed Index (0 극단적 공포 ~ 100 극단적 탐욕). 실패 시 None."""
+    import requests
+    from datetime import datetime as _dt, timezone as _tz
+    try:
+        r = requests.get("https://production.dataviz.cnn.io/index/fearandgreed/graphdata", timeout=20, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36",
+            "Accept": "application/json", "Referer": "https://edition.cnn.com/"})
+        r.raise_for_status()
+        j = r.json()
+    except Exception as e:
+        print(f"Fear & Greed 수집 실패: {e}")
+        return None
+    fg = j.get("fear_and_greed") or {}
+    if fg.get("score") is None:
+        return None
+
+    def last(k):
+        return (((j.get(k) or {}).get("data") or [{}])[-1]).get("y")
+
+    raw = {k: last(k) for k in ("market_momentum_sp125", "market_volatility_vix_50")}
+    comps = []
+    for key, name, desc, fmt in FG_COMPONENTS:
+        c = j.get(key) or {}
+        if c.get("score") is None:
+            continue
+        v = last(key)
+        try:
+            vt = fmt(v, raw) if v is not None else ""
+        except Exception:
+            vt = ""
+        comps.append({"key": key, "name": name, "desc": desc, "score": round(c["score"], 1),
+                      "rating": FG_RATING_KR.get(c.get("rating"), c.get("rating")), "value": vt})
+    dedup = {}
+    for p in ((j.get("fear_and_greed_historical") or {}).get("data") or []):
+        if p.get("y") is not None:
+            dedup[_dt.fromtimestamp(p["x"] / 1000, _tz.utc).strftime("%Y-%m-%d")] = round(p["y"], 1)
+
+    def r1(v):
+        return round(v, 1) if isinstance(v, (int, float)) else None
+
+    return {"score": r1(fg["score"]), "rating": FG_RATING_KR.get(fg.get("rating"), fg.get("rating")),
+            "as_of": (fg.get("timestamp") or "")[:10],
+            "previous_close": r1(fg.get("previous_close")), "previous_1_week": r1(fg.get("previous_1_week")),
+            "previous_1_month": r1(fg.get("previous_1_month")), "previous_1_year": r1(fg.get("previous_1_year")),
+            "components": comps, "history": [{"d": d, "v": v} for d, v in sorted(dedup.items())]}
+
+
 def fetch_and_update(m6_data: dict):
     """M6_DATA의 peg_ratios를 실시간 값으로 교체."""
     peg = fetch_peg_ratios()
