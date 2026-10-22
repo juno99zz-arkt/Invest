@@ -684,72 +684,72 @@
   },
   "ADBE": {
    "analysis": {
-    "one_line_thesis": "TTM FCF 마진 40.8%, FCF 수익률 11.2%, 희석주식 연 6.8% 감소를 갖춘 현금창출 기업입니다. 그런데 'AI가 크리에이티브 툴을 상품화한다'는 우려와 유기적 ARR 둔화(FY26 목표에서 Semrush를 빼면 약 8.3%)가 겹쳐 향후 12개월 추정 EPS 기준 8.9배까지 내려왔습니다. 12월 9일 FY27 가이던스가 리베이스 없이 나오면 기대값이 매수 쪽에 있는 '값싼 논쟁주'입니다.",
+    "one_line_thesis": "TTM FCF 마진 40.8%, 희석주식 연 6.8% 감소를 갖춘 현금창출 기업이라는 논리는 그대로입니다. 다만 주가가 11일 만에 242.27달러에서 270.55달러(+11.7%)로 오르면서 향후 12개월 추정 EPS 기준 PER이 8.9배에서 10.0배로 올랐고, 25/50/25 가중 기대수익은 +19%에서 +6.4%로 낮아졌습니다. 이번 상승은 소프트웨어 순환매와 NVIDIA 협력 확대가 이끈 것이고 회사의 공식 지표는 바뀌지 않았습니다. 그래서 12월 9일 FY27 가이던스 전까지는 기존 10%만 보유하고 추가 매수는 멈추는 구간입니다.",
     "quality": {
      "score": 4,
-     "moat": "Photoshop·Illustrator·Premiere로 이어지는 전문가 워크플로 표준, 사실상 산업 규격인 PDF/Acrobat, 기업 마케팅 스택(CX Enterprise·AEP)의 교체비용이 해자의 실체입니다. TTM 총이익률 89.3%, FY26 non-GAAP 영업이익률 목표 약 45%, ROE 61.9%를 보면 가격결정력은 아직 재무제표에 남아 있습니다. 다만 Canva·Figma·생성형 AI 모델이 프로슈머·단순 제작 구간을 잠식하고 있습니다. 회사도 6월에 Creative Cloud 가격 인상을 미루고 무료 사용자 유입(프리미엄)으로 방향을 틀어, 해자의 가장자리가 깎이고 있음을 사실상 인정했습니다.",
-     "growth_durability": "FY26 3분기 매출은 67.6억달러(+13%, 고정환율 +12%), 총 ARR은 275억달러(+11.2%)입니다. 하지만 이 성장률에는 4월에 인수를 마친 Semrush의 ARR 약 4.8억달러가 들어 있어, 이를 빼면 유기적 ARR 성장은 약 9%대입니다. FY26 ARR 목표 10.2%도 유기 기준으로는 약 8.3%로, 사실상 2%p 하향된 셈입니다. 애널리스트 계산으로 3분기 순신규 ARR은 전년 대비 36~37% 줄었고, RPO 221.6억달러(+8%)는 2023년 초 이후 처음으로 한 자릿수 성장에 그쳤습니다. 반면 AI-first ARR은 6.5억달러를 넘겨 150% 이상 성장했고, 크리에이티브 프리미엄 MAU 1억 명(+70%), 전체 MAU 10억 명이라는 퍼널은 실제로 커지고 있습니다.",
-     "summary": "구독·표준 지위에 기반한 고수익 비즈니스라는 점은 숫자로 확인됩니다. 쟁점은 성장의 지속성입니다. 회사는 유기적 ARR 성장이 8~9%대로 내려오는 것을 감수하고 프리미엄 전환과 가격 인상 보류에 베팅했고, 그 회수 기간은 아직 수치로 제시하지 않았습니다. 크리에이티브 사업을 이끌던 David Wadhwani가 9월 말 퇴사한 것도 질적 불확실성을 키웁니다."
+     "moat": "Photoshop·Illustrator·Premiere로 이어지는 전문가 워크플로 표준, 사실상 산업 규격인 PDF/Acrobat, 기업 마케팅 스택(CX Enterprise·AEP)의 교체비용이 해자의 실체입니다. TTM 총이익률 89.3%, 4분기 non-GAAP 영업이익률 가이던스 약 44%를 보면 가격결정력은 아직 재무제표에 남아 있습니다. 10월 15일 NVIDIA가 협력을 넓혀 Photoshop·Premiere·Substance 3D를 RTX Spark에 최적화했고(AI 처리 최대 2배 속도), NVIDIA.com이 Brand Concierge를 고객 응대에 채택했습니다. 'AI가 기존 툴 의존도를 높인다'는 주장을 뒷받침하는 사례입니다. 반면 Wells Fargo의 CIO 설문에서는 Adobe가 AI 예산 배분 경쟁에서 점유율을 잃는 쪽으로 나와, 해자의 가장자리가 깎이고 있다는 진단은 그대로입니다.",
+     "growth_durability": "공식 수치는 지난 분석 이후 바뀌지 않았습니다. FY26 3분기 매출 67.6억달러(+13%), 분기 말 총 ARR 275.0억달러, 4분기 매출 가이던스 68.0~68.5억달러(약 +10%)입니다. 대신 외부 추정이 악화됐습니다. Wells Fargo는 3분기 유기적 순신규 ARR이 전년 대비 40% 넘게 줄었다고 추정했습니다(지난 분석의 −36~37%보다 나쁨). 또 FY26 ARR 목표 10.2%를 맞추려면 4분기 순신규 ARR이 3분기의 약 2배가 돼야 한다고 지적했고, FY27 총 ARR 성장률을 컨센서스(8% 이상)보다 낮은 약 7%로 모델링했습니다. 긍정적인 쪽은 AI-first ARR 6.5억달러 이상(+150% 이상)과 크리에이티브 프리미엄 MAU 1억 명(+70%)이라는 퍼널입니다.",
+     "summary": "구독·표준 지위에 기반한 고수익 사업이라는 점은 변함없지만 성장 지속성이 핵심 쟁점입니다. 지난 2주간 나온 새 정보는 NVIDIA 협력 같은 제품·파트너십 쪽은 긍정적이고, 애널리스트 추정 쪽은 부정적입니다. 회사의 공식 성장 지표는 12월 9일에야 갱신됩니다."
     },
     "financial_health": {
      "score": 5,
-     "cash_flow": "TTM 영업현금흐름은 108.1억달러(FY25 4분기 31.6억 + FY26 1분기 29.6억 + 2분기 21.7억 + 3분기 25.2억)입니다. 설비투자 2.1억달러를 빼면 FCF는 105.9억달러로, TTM 매출 259.7억달러 대비 FCF 마진 40.8%입니다. 주식보상 TTM 20.7억달러를 전액 차감해도 약 85억달러가 남아 시가총액 943억달러 대비 약 9.0%의 SBC 차감 FCF 수익률입니다. 2분기 OCF가 전년 대비 1% 줄었지만 3분기에 25.2억달러(+15%)로 회복했습니다.",
-     "debt": "2분기 말 총차입은 약 66.5억달러, 3분기 말 현금·단기투자는 56.4억달러로 순부채가 약 10억달러에 불과합니다. 순부채/EBITDA는 약 0.1배입니다. 2분기에 Semrush 인수(순현금 15.6억달러)와 자사주 매입 21.1억달러를 하면서 4.9억달러를 새로 차입했지만 부담 수준은 아닙니다. FY26 GAAP 가이던스에 소송 충당금(주당 0.23달러)이 들어 있어 소규모 우발채무는 존재합니다.",
-     "dilution": "3분기 희석주식 수는 3.95억 주로 전년 4.24억 주보다 6.8% 줄었습니다. 분기마다 810만~950만 주를 매입하고 있고, 4월 승인분 250억달러 가운데 약 245.5억달러(시가총액의 약 26%)가 남아 있습니다. SBC(분기 약 5.4억달러)를 매입 규모가 크게 웃돌아 순희석이 아니라 순소각 구조입니다. 다만 FY26 EPS 성장(+16.5%)의 상당 부분이 자사주 효과라는 점은 감안해야 합니다.",
-     "summary": "재무 건전성에는 흠이 거의 없습니다. 무차입에 가까운 대차대조표, SBC 차감 후 9% FCF 수익률, 연 6~7% 주식 수 감소 조합은 멀티플이 그대로여도 주당가치를 연 10%대로 끌어올립니다. 남은 문제는 거버넌스입니다. CFO가 6월 Marvell로 떠난 뒤 Steve Day 임시 CFO 체제이고, 12월 1일 CEO가 바뀝니다."
+     "cash_flow": "TTM 영업현금흐름은 108.1억달러, 설비투자는 2.1억달러로 FCF는 105.9억달러이고 TTM 매출 259.7억달러 대비 FCF 마진은 40.8%입니다(지난 분석 이후 새 분기 공시 없음). 현재가 기준 시가총액은 약 1,053억달러(희석주식 약 3.89억 주 × 270.55달러)로 FCF 수익률은 10.1%입니다. 주식보상 20.7억달러를 빼면 8.1%입니다. 주가 상승으로 245.20달러 기준 11.2%에서 1%p 정도 낮아졌지만 여전히 높은 수준입니다.",
+     "debt": "총차입 약 66.5억달러(2분기 말)에서 현금·단기투자 56.4억달러(3분기 말)를 빼면 순부채는 약 10억달러이고, 순부채/EBITDA는 약 0.1배로 사실상 무차입입니다. FY26 GAAP 가이던스에 소송 충당금(주당 0.23달러)이 들어 있지만 부담 수준은 아닙니다.",
+     "dilution": "3분기 희석주식은 3.95억 주로 전년보다 6.8% 줄었고, 4분기 가이던스는 약 3.89억 주를 가정해 소각이 계속됩니다. 잔여 매입 승인액 약 245.5억달러는 현재 시가총액의 약 23%입니다. 다만 주가가 오른 만큼 같은 금액으로 사들일 수 있는 주식 수는 약 10% 줄었습니다. 참고로 Narayen CEO는 9월 16일 12.5만 주(평균 250.76달러, 약 3,134만달러)를 장내 매도했습니다(사전 매매계획 여부는 확인하지 못함).",
+     "summary": "재무 건전성에는 흠이 거의 없습니다. 무차입에 가까운 대차대조표, SBC 차감 후 8% FCF 수익률, 연 6~7% 주식 수 감소는 멀티플이 그대로여도 주당가치를 연 10%대로 끌어올립니다. 남은 문제는 거버넌스입니다. 6월 이후 임시 CFO 체제이고, 12월 1일 CEO가 바뀝니다."
     },
     "valuation": {
-     "score": 5,
-     "current_view": "주가 242.27달러는 향후 12개월 추정 EPS 27.25달러 기준 8.9배입니다. 이 수치를 핵심 근거로 씁니다. FY26 non-GAAP EPS 가이던스 중간값 24.475달러 기준으로는 9.9배, FY27 컨센서스 27.67달러 기준 8.8배, 트레일링 GAAP 기준 13.5배입니다. FCF 수익률 11.2%(SBC 차감 9.0%)로 과거 25~35배 및 SaaS 평균 대비 극단적 할인이며, 52주 고점 대비 −32.7%, 1년 수익률 −28.2%입니다. 시장은 유기적 ARR이 8%에서 더 내려가 결국 매출이 정체되는 터미널 시나리오를 반영하고 있습니다.",
-     "upside_scenario": "유기적 ARR이 8~10%를 유지하고 FCF의 80~90%를 소각에 쓰면, 멀티플이 9배에 고정돼도 주당 이익은 연 12~14% 늘어납니다. 연기된 Creative Cloud 가격 인상('보류이지 철회가 아님')이 FY27에 재개되고 프리미엄 MAU 전환 지표가 나오면, FY27 EPS 28.8달러에 13.5배만 적용해도 약 389달러(+61%)입니다. 애널리스트 평균 목표가는 275달러(+13.5%)입니다.",
-     "summary": "가격은 낙관이 아니라 비관을 반영하고 있어 가격 매력은 최상위권입니다. 다만 순신규 ARR −36%, RPO +8%라는 선행지표 악화가 '싼 데는 이유가 있다'는 밸류트랩 논리를 뒷받침합니다. 따라서 재평가 여부는 멀티플이 아니라 12월 9일 FY27 ARR·이익률 가이던스가 결정합니다."
+     "score": 4,
+     "current_view": "주가 270.55달러(10/22 종가)는 향후 12개월 추정 EPS 27.16달러 기준 10.0배이고, 이 수치를 핵심 근거로 씁니다. FY26 non-GAAP EPS 가이던스 중간값 24.475달러 기준으로는 11.1배, FY27 컨센서스 27.51달러 기준 9.8배, 트레일링 GAAP EPS 17.92달러 기준 15.1배입니다. 편입가 242.27달러 대비 +11.7%, 52주 고점 363.70달러 대비 약 −26%입니다. 애널리스트 평균 목표가 272.31달러가 현재가와 거의 같아졌고, 10월에는 Wells Fargo(Underweight, 225달러), HSBC(Hold, 267달러), Citi(Neutral, 250달러) 등 보수적 의견이 이어졌습니다.",
+     "upside_scenario": "기준 시나리오(FY27 EPS 27달러 × 11배 = 297달러)의 상승 여력은 +9.8%로 줄었습니다. 강세 시나리오(가격 인상 재개·프리미엄 전환으로 ARR 10% 이상 재가속, EPS 28.8달러 × 13.5배 = 389달러)는 +43.8%입니다. 정당화 조건은 같습니다. 12월 9일 FY27 유기 ARR 목표 9% 이상, non-GAAP 영업이익률 44% 안팎 유지, EPS 가이던스 27달러 안팎이 나와야 합니다.",
+     "summary": "절대 밸류에이션(10배, FCF 수익률 10%)은 여전히 싸지만, 25/50/25 가중 기대 가격 287.75달러 대비 기대수익은 +6.4%로 신규·확대 기준 10%에 못 미칩니다. 이번 상승은 EPS 추정치(30일 −0.09%)가 아니라 멀티플이 오른 것이어서 가격 매력 점수를 5에서 4로 낮춥니다."
     },
     "catalysts": [
      {
       "event": "Adobe MAX 2026(마이애미비치)",
       "timing": "2026-11-10~11-12",
       "impact": "불확실",
-      "detail": "에이전트형 AI 기반 Creative Cloud·Firefly·Firefly Enterprise 발표가 예정돼 있고, 9월 23일 인수를 마친 Topaz Labs 업스케일링 모델의 통합도 소개될 전망입니다. 프리미엄 MAU 1억 명의 유료 전환 경로나 가격 재조정 계획을 수치로 내놓으면 내러티브 반전의 출발점이 됩니다. 기능 나열에 그치면 무반응일 가능성이 큽니다."
+      "detail": "에이전트형 Creative Cloud·Firefly Enterprise와 Topaz Labs 업스케일링 통합이 공개될 전망입니다. 프리미엄 MAU 1억 명의 유료 전환율이나 AI-first ARR 목표를 수치로 내놓으면 내러티브 반전의 근거가 됩니다. 이미 주가가 11% 오른 상태라 기능 나열에 그치면 차익 실현의 빌미가 될 수 있습니다."
+     },
+     {
+      "event": "NVIDIA 협력 확대 후속(Brand Concierge Nemotron 버전 출시)",
+      "timing": "2026년 말",
+      "impact": "긍정",
+      "detail": "10월 15일 발표로 Photoshop·Premiere·Substance 3D가 RTX Spark에 최적화돼 AI 처리 속도가 최대 2배가 됐습니다. NVIDIA 오픈 모델 Nemotron 기반 Brand Concierge는 연내 기업 고객에게 출시되고, NVIDIA.com이 이를 채택했습니다. 3월 전략적 제휴의 연장선이며, 매출 기여 수치는 아직 없습니다."
      },
      {
       "event": "Anil Chakravarthy 신임 CEO 취임(Narayen은 Executive Chair로 이동)",
       "timing": "2026-12-01",
       "impact": "불확실",
-      "detail": "9월 3일 발표 다음 날 주가가 7% 하락했고, 유력 후보였던 크리에이티브 부문 대표 Wadhwani는 9월 27일 퇴사했습니다. 엔터프라이즈 CXO 전문가인 신임 CEO는 기업 수요 확대에는 유리하지만, 전형적인 '첫해 리베이스'와 추가 조직 개편 위험이 단기 불확실성입니다."
+      "detail": "9월 발표 다음 날 주가가 7% 떨어졌고, 크리에이티브 부문 대표 Wadhwani는 9월 27일 퇴사했습니다. Narayen은 9월 16일 약 3,134만달러어치를 매도했습니다. 엔터프라이즈 CXO 전문가인 신임 CEO의 '첫해 리베이스' 위험이 FY27 가이던스의 최대 변수입니다."
      },
      {
       "event": "FY26 4분기 실적 및 FY27 가이던스 발표",
       "timing": "2026-12-09",
       "impact": "불확실",
-      "detail": "가장 중요한 분기점입니다. 4분기 가이던스는 매출 68.0~68.5억달러(약 +10%), non-GAAP EPS 6.30~6.35달러, 영업이익률 약 44%입니다. Semrush 효과가 사라진 FY27의 순수 유기 ARR 목표가 9% 이상이고 EPS 컨센서스 27.67달러 수준이면 8.9배 멀티플은 과도한 할인이 됩니다. 반대로 8% 미만이거나 이익률 리베이스가 나오면 밸류트랩 논리가 확정됩니다."
-     },
-     {
-      "event": "연기된 Creative Cloud 가격 인상 재개 여부",
-      "timing": "FY27 중(2027년)",
-      "impact": "긍정",
-      "detail": "경영진은 2분기에 ARR 목표 하향분 약 4.8억달러의 절반을 가격 인상 보류 탓으로 돌리며 '보류이지 철회가 아니다'라고 밝혔습니다. 재개되면 ARR 성장률을 1%p가량 되돌릴 수 있는 선택지입니다. 경쟁 때문에 재개하지 못하면 가격결정력 약화의 증거가 됩니다."
-     },
-     {
-      "event": "대규모 자사주 매입 지속",
-      "timing": "분기별, 상시",
-      "impact": "긍정",
-      "detail": "잔여 승인액 약 245.5억달러는 시가총액의 약 26%입니다. 8~9배 이익에서의 소각은 효율이 높아, 주가가 정체돼도 주당 EPS를 연 6~7% 끌어올립니다."
+      "detail": "4분기 가이던스는 매출 68.0~68.5억달러, non-GAAP EPS 6.30~6.35달러, 영업이익률 약 44%입니다. Wells Fargo는 FY26 ARR 목표 10.2% 달성에 4분기 순신규 ARR이 3분기의 약 2배가 필요하다고 봅니다. FY27 유기 ARR 목표 9% 이상·EPS 27달러 안팎이면 논리가 강화되고, 8% 미만이거나 이익률 리베이스가 나오면 논리 붕괴입니다."
      },
      {
       "event": "정규 CFO 선임",
       "timing": "신임 CEO 취임 후, 2026년 말~2027년",
       "impact": "불확실",
-      "detail": "6월 15일 이후 임시 CFO 체제입니다. 외부 거물급 CFO를 선임하면 자본배분 연속성에 대한 신뢰가 회복됩니다. 공백이 길어지면 FY27 계획의 신뢰도가 떨어집니다."
+      "detail": "6월 이후 Steve Day 임시 CFO 체제입니다. 외부 거물급 CFO를 선임하면 자본배분 연속성에 대한 신뢰가 회복되고, 공백이 길어지면 FY27 계획의 신뢰도가 떨어집니다."
+     },
+     {
+      "event": "소프트웨어 업종 순환매와 금리",
+      "timing": "상시(10월 하순 진행 중)",
+      "impact": "불확실",
+      "detail": "10월 22일 QQQ가 −3%, 소프트웨어 ETF IGV가 −0.2%였던 날에도 Adobe는 장중 +5%(종가 +6.1%) 올랐습니다. 'AI 피해주' 할인을 되돌리는 선별적 매수였지만, 회사 고유의 실적 뉴스는 없었습니다. 9월 Fed 인상 이후 고금리가 이어지는 환경이라 수급이 반대로 돌면 상승분이 빠르게 되돌려질 수 있습니다."
      }
     ],
     "bear_case": {
-     "summary": "가장 강한 약세 논리는 생성형 AI가 Adobe 해자의 원천인 '툴 숙련도'를 상품화하고 있고, 그 증거가 이미 숫자로 나왔다는 것입니다. FY26 ARR 목표는 유기 기준 약 8.3%로 사실상 2%p 하향됐고, 3분기 순신규 ARR은 전년 대비 36~37% 줄었으며, RPO는 +8%로 첫 한 자릿수 성장에 진입했습니다. 회사는 이를 프리미엄 전략에 따른 의도된 선택이라고 설명하지만 전환율·회수 기간은 제시하지 않았습니다. 여기에 CEO·CFO 동시 교체와 크리에이티브 수장 퇴사가 겹쳐, 신임 CEO가 FY27을 투자 확대 해로 리베이스할 위험이 큽니다.",
+     "summary": "가장 강한 약세 논리는 생성형 AI가 Adobe 해자의 원천인 '툴 숙련도'를 상품화하고 있고, 그 증거가 숫자로 쌓이고 있다는 것입니다. FY26 ARR 목표는 유기 기준 약 8.3%, RPO는 +8%이고, 10월 Wells Fargo 추정으로는 3분기 유기적 순신규 ARR이 40% 넘게 줄었으며 FY27 총 ARR 성장률은 약 7%로 논리 붕괴선(8%) 아래입니다. 같은 증권사의 CIO 설문은 Adobe가 AI 예산 점유율을 잃고 있다고 봤습니다. 여기에 CEO·CFO 동시 교체가 겹칩니다. 반면 이번 주가 반등에는 이 우려를 반박할 새 공식 수치가 없었습니다.",
      "key_risks": [
-      "유기적 성장 둔화: Semrush(ARR 약 4.8억달러)를 빼면 FY26 ARR 목표는 약 8.3%이고, 유기 ARR 성장률은 6개 분기 연속 하락 중입니다. FY27에는 인수 효과가 사라져 총 ARR 성장률이 한 자릿수로 보일 가능성이 큽니다.",
-      "프리미엄 전환 실패: 크리에이티브 프리미엄 MAU 1억 명(+70%)이 유료로 전환되지 않으면 무료 사용자에게 드는 AI 추론 원가만 늘어납니다. GAAP 영업이익률은 36.3%에서 34.8%로 하락했고, GAAP 순이익은 +3%에 그쳤습니다.",
-      "리더십 공백과 리베이스: 12월 1일 CEO 교체, 6월 이후 임시 CFO, 9월 크리에이티브 부문 대표 퇴사가 겹쳤습니다. 신임 CEO 첫 가이던스에서 이익률을 낮추거나 ARR 정의를 바꿀 위험이 있습니다.",
-      "가격결정력 약화: Canva·Figma·OpenAI·Google 같은 저가·무료 대안 때문에 Creative Cloud 가격 인상을 보류했습니다. 재개가 막히면 ARPU 성장 모델이 깨집니다.",
-      "밸류트랩 지속: 성장률이 6~7%로 굳으면 8~9배 멀티플이 오히려 적정가가 되고, 재평가 없이 자사주 효과만 남습니다."
+      "유기 성장 둔화 심화: Wells Fargo는 3분기 유기 순신규 ARR −40% 이상, 4분기 순신규 ARR이 3분기의 약 2배 필요, FY27 총 ARR 약 7%(컨센서스 8% 이상)로 추정합니다. 4분기에 FY26 ARR 목표(+10.2%)를 놓치면 FY27 가이던스 신뢰도도 함께 떨어집니다.",
+      "AI 예산 점유율과 가격결정력: CIO 설문에서 AI 예산 경쟁의 패자로 지목됐습니다. Canva·Figma·OpenAI·Google에 오픈소스 대안(ArtCraft 등)까지 늘어 Creative Cloud 가격 인상 재개가 막힐 수 있습니다.",
+      "리더십 공백과 리베이스: 12월 1일 CEO 교체, 임시 CFO, 크리에이티브 수장 퇴사가 겹쳤습니다. 퇴임 예정 CEO의 9월 3,134만달러 매도도 심리에 부담입니다. 신임 CEO 첫 가이던스에서 이익률을 낮출 위험이 있습니다.",
+      "수급 주도 반등의 되돌림: 10월 22일 상승은 공식 지표 변화 없이 순환매로 일어났습니다. 평균 목표가 272달러가 현재가와 같아졌고, 30일 EPS 추정치 변화는 −0.09%입니다. 주가가 실적보다 먼저 움직여 12월 가이던스 실망 시 하락폭이 커질 수 있습니다.",
+      "프리미엄 전환 실패와 AI 원가: 프리미엄 MAU 1억 명이 유료로 전환되지 않으면 추론 원가만 늘어납니다. GAAP 영업이익률은 이미 36.3%에서 34.8%로 떨어졌습니다."
      ],
      "thesis_breakers": [
       "FY27 총 ending ARR 성장 목표가 8% 미만(Semrush 효과 소멸 후 순수 유기 기준)이거나, 실제 총 ARR 성장률이 2개 분기 연속 8% 미만인 경우.",
@@ -760,86 +760,104 @@
       "신임 CEO 체제에서 ARR·MAU 등 핵심 지표 공시가 축소되거나 정의가 바뀌어 투명성이 후퇴하는 경우."
      ]
     },
-    "thesis_status": "해당없음",
-    "thesis_status_reason": "신규 편입 후보라 기존 보유 논리가 없습니다. 편입 시 기준점은 '유기적 ARR 8% 이상 + non-GAAP 영업이익률 40% 중반 + 연 5% 이상 주식 수 감소'이며, 첫 점검일은 2026-12-09 FY27 가이던스입니다.",
-    "verdict": "편입 적합",
-    "verdict_reason": "향후 12개월 EPS 기준 8.9배, SBC 차감 후에도 9% FCF 수익률, 연 6.8% 희석주식 감소라는 조합은 멀티플이 오르지 않아도 주당가치가 연 10%대로 늘어나는 구조입니다. 기준 시나리오는 +23%, 강세는 +61%로 비대칭이 매수 쪽에 있습니다. 다만 유기 ARR 약 8.3%, 순신규 ARR −36%, RPO +8%라는 선행지표 악화는 실재하고, 12월 1일 CEO 교체와 12월 9일 FY27 가이던스라는 이진적 이벤트가 2개월 안에 있습니다. 그래서 전액 매수가 아니라 소규모 분할 편입(목표 비중의 1/3)으로 시작하고, FY27 가이던스 확인 뒤 나머지를 집행할 것을 권합니다.",
+    "thesis_status": "유효",
+    "thesis_status_reason": "편입 논리는 '유기 ARR 8% 이상 + non-GAAP 영업이익률 40% 중반 + 연 5% 이상 주식 수 감소'였고, 10월 11일 이후 이를 바꾸는 회사 공시는 없었습니다. 4분기 가이던스(매출 약 +10%, 영업이익률 약 44%, 희석주식 약 3.89억 주)도 그대로입니다. Wells Fargo의 FY27 ARR 약 7% 추정은 첫 번째 축에 대한 경고이지만 회사 가이던스가 아닌 외부 추정이라 붕괴로 보지 않습니다. 논리 검증 시점은 여전히 12월 9일입니다. 주가 +11.7%는 논리가 아니라 가격 매력만 바꿨습니다.",
+    "verdict": "관찰",
+    "verdict_reason": "기업과 논리는 그대로지만, 270.55달러에서는 25/50/25 가중 기대수익이 +6.4%로 '6개월 이상 기대값이 뚜렷하다'는 기준에 못 미칩니다. 약세 시 −37.9% 대비 기준 시나리오 상승은 +9.8%에 그칩니다. 지난 판단표의 '가이던스 확인 전 270달러 이상 반등 → 관망' 조건에 도달했으므로 기존 10%(약세 시 계좌 손실 약 3.8%, 한도 이내)는 유지하고, 남은 분할 매수는 멈춥니다. 비중을 다시 늘릴지는 12월 9일 FY27 가이던스가 논리를 확인하거나 주가가 buy_below 250달러 이하로 돌아올 때 판단합니다. 가이던스 전에 290달러를 넘으면 기대수익이 0 이하가 되므로 일부 차익 실현을 검토합니다.",
     "conviction": 3,
     "sources": [
      {
-      "title": "Adobe Reports Record Q3 Results (FY2026 3분기 보도자료, Business Wire 전문)",
-      "url": "https://marketchameleon.com/PressReleases/i/2373157/ADBE/adobe-reports-record-q3-results"
+      "title": "ADOBE INC. Form 8-K EX-99.1: Adobe Reports Record Q3 Results (FY2026 3분기, 4분기·연간 목표 포함)",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbeex991q326.htm"
      },
      {
       "title": "ADBE Q3FY26 Earnings Release (Adobe IR PDF)",
       "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01906202/au56y4ter.pdf"
      },
      {
-      "title": "ADBE Q3FY26 Earnings Script and Slides (Adobe IR)",
-      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01906202/c6yetrerew.pdf"
+      "title": "ADOBE INC. Form 10-Q (FY2026 3분기, 2026-08-28 종료)",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm"
      },
      {
-      "title": "ADOBE INC. Form 8-K EX-99.1: FY2026 2분기 실적 및 CFO 교체 (2026-06-11)",
-      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbeex991q226.htm"
+      "title": "Adobe and NVIDIA Expand Collaboration to Speed Agentic Creation (Adobe Newsroom, 2026-10-15)",
+      "url": "https://news.adobe.com/news/2026/10/adobe-and-nvidia-expand-collaboration-to-speed-agentic-creation"
      },
      {
-      "title": "ADOBE INC. Form 8-K EX-99.1: Adobe Delivers Record Q1 Results (2026-03-12)",
-      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000048/adbeex991q126.htm"
+      "title": "Adobe and NVIDIA Expand Collaboration to Speed Agentic Creation (NVIDIA Newsroom, 2026-10-15)",
+      "url": "https://nvidianews.nvidia.com/news/adobe-and-nvidia-expand-collaboration-to-speed-agentic-creation"
      },
      {
-      "title": "Adobe Reports Record Q4 and FY2025 Revenue (Business Wire, 2025-12-10)",
-      "url": "https://www.businesswire.com/news/home/20251210150605/en/Adobe-Reports-Record-Q4-and-FY2025-Revenue"
+      "title": "SEC Form 4: Shantanu Narayen 125,000주 매도 (2026-09-16, 평균 250.76달러)",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000122415426000003/xslF345X06/wk-form4_1789769889.xml"
+     },
+     {
+      "title": "Adobe Jumps 5% as Beaten-Down Software Names Rebound Despite Risk-Off Day (24/7 Wall St., 2026-10-22)",
+      "url": "https://247wallst.com/investing/2026/10/22/adobe-jumps-5-as-beaten-down-software-names-rebound-despite-risk-off-day-salesforce-rises-3/"
+     },
+     {
+      "title": "Adobe stock falls as Wells Fargo downgrades shares (Invezz, 2026-10-12)",
+      "url": "https://invezz.com/news/2026/10/12/adobe-stock-falls-as-wells-fargo-downgrades-shares/"
+     },
+     {
+      "title": "Wells Fargo Downgrades Adobe to Underweight, Says AI Survey Shows It Is Losing Budget Share (Benzinga, 2026-10-12)",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62297901/wells-fargo-downgrades-adobe-to-underweight-says-ai-survey-shows-it-is-losing-budget-share"
+     },
+     {
+      "title": "Tuesday's Top Wall Street Analyst Research Calls: HSBC Adobe Hold, 목표가 267달러 (24/7 Wall St., 2026-10-13)",
+      "url": "https://247wallst.com/investing/2026/10/13/here-are-tuesdays-top-wall-street-analyst-research-calls-att-adobe-albemarle-american-electric-power-pershing-square-rtx-sofi-technologies-technip-fmc-yeti-holdings-and-more"
+     },
+     {
+      "title": "Adobe Inc Stock (ADBE) Moved Up by 3.27% on Oct 20 (TradingKey)",
+      "url": "https://www.tradingkey.com/news/market-movers/262226351-market-movers-adbe-20261020"
      },
      {
       "title": "Adobe Announces Anil Chakravarthy to Become President and CEO (Adobe Newsroom, 2026-09-03)",
       "url": "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo"
      },
      {
-      "title": "Adobe completes acquisition of Topaz Labs (Adobe Blog, 2026-09-23)",
-      "url": "https://blog.adobe.com/en/publish/2026/09/23/adobe-completes-acquisition-of-topaz-labs"
-     },
-     {
       "title": "Adobe (ADBE) Q2 2026 earnings review: organic ARR guide cut (Finsee)",
       "url": "https://finsee.ai/earnings/adbe/2026/q2/en/"
-     },
-     {
-      "title": "Should You Buy Adobe Stock At $260? (Trefis via Yahoo Finance, 2026-09-15)",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/buy-adobe-stock-260-174839186.html"
-     },
-     {
-      "title": "Adobe Stock Falls 7% as CEO Appointment Disappoints Wall Street (Markets Insider)",
-      "url": "https://markets.businessinsider.com/news/stocks/adobe-stock-adbe-falls-7-as-ceo-appointment-disappoints-wall-street-1036524277"
-     },
-     {
-      "title": "Adobe CFO's exit leaves leadership gap (CFO Dive)",
-      "url": "https://www.cfodive.com/news/adobe-cfo-leadership-gap-marvell-amid-ceo-search-ai/822849"
      },
      {
       "title": "Adobe MAX 2026 (November 10-12, Miami Beach)",
       "url": "https://max.adobe.com/"
      }
     ],
-    "alert_level": "해당없음",
+    "alert_level": "추가 매수 중단",
     "data_checks": [
      {
       "metric": "FCF 마진(TTM)",
       "dashboard_value": "40.8%",
-      "verified_value": "40.8% (OCF 108.06억 − CapEx 2.14억 = FCF 105.92억 ÷ TTM 매출 259.7억달러)",
+      "verified_value": "40.8% (OCF 108.06억 − CapEx 2.14억 = FCF 105.92억 ÷ TTM 매출 259.7억달러). 10/11 이후 새 분기 공시 없음",
       "source": "FY25 4분기, FY26 1~3분기 실적 발표 현금흐름표(8-K EX-99.1)",
       "status": "일치"
      },
      {
       "metric": "PER 기준",
-      "dashboard_value": "pe_ntm_est 8.9 / pe_current_fy 9.9 / pe_next_fy 8.8",
-      "verified_value": "향후 12개월 추정 EPS 27.25달러 기준 8.9배를 사용합니다. 공식 FY26 non-GAAP EPS 가이던스 24.45~24.50달러 중간값 기준으로는 9.9배로 대시보드와 같습니다.",
-      "source": "FY26 3분기 보도자료 재무 목표",
+      "dashboard_value": "pe_ntm_est 9.0 / pe_current_fy 10.0 / pe_next_fy 8.9 (10/17 가격 245.20달러 기준)",
+      "verified_value": "현재가 270.55달러, 향후 12개월 추정 EPS 27.16달러 기준 10.0배를 핵심 근거로 사용합니다. FY26 가이던스 중간값 24.475달러 기준 11.1배, FY27 컨센서스 27.51달러 기준 9.8배입니다. 대시보드와의 차이는 주가 변동분뿐입니다.",
+      "source": "FY26 3분기 보도자료 재무 목표, dossier 컨센서스",
       "status": "일치"
      },
      {
-      "metric": "매출 성장(최근 분기, 전년 대비)",
-      "dashboard_value": "12.9%",
-      "verified_value": "+13% (67.6억달러, 고정환율 +12%), Semrush 기여 포함",
+      "metric": "FCF 수익률",
+      "dashboard_value": "11.2% (245.20달러 기준)",
+      "verified_value": "10.1% (FCF 105.9억 ÷ 시가총액 약 1,053억달러 = 희석주식 약 3.89억 주 × 270.55달러). SBC 차감 시 8.1%",
+      "source": "FY26 3분기 보도자료(4분기 희석주식 가정 약 3.89억 주)",
+      "status": "일치"
+     },
+     {
+      "metric": "매출 성장·ARR(최근 분기)",
+      "dashboard_value": "매출 +12.9%",
+      "verified_value": "매출 67.6억달러 +13%(고정환율 +12%, Semrush 포함), 분기 말 총 ARR 275.0억달러",
       "source": "FY26 3분기 보도자료",
+      "status": "일치"
+     },
+     {
+      "metric": "4분기·FY26 가이던스",
+      "dashboard_value": "대시보드 미제공 (next_earnings 2026-12-09)",
+      "verified_value": "4분기 매출 68.0~68.5억달러, non-GAAP EPS 6.30~6.35달러, 영업이익률 약 44%, 희석주식 약 3.89억 주. FY26 매출 265.76~266.26억달러. 10/11 이후 변경 없음",
+      "source": "FY26 3분기 보도자료 Q4·FY26 targets 표",
       "status": "일치"
      },
      {
@@ -848,32 +866,25 @@
       "verified_value": "희석주식 3.95억 주 vs 전년 동기 4.24억 주 = −6.8%. 대시보드는 기본주식·기간 기준 차이로 추정",
       "source": "FY26 3분기 보도자료 non-GAAP 조정표",
       "status": "불일치(수정)"
-     },
-     {
-      "metric": "순부채/EBITDA",
-      "dashboard_value": "0.12배",
-      "verified_value": "약 0.1배 (총차입 약 66.5억달러(2분기 말) − 현금·단기투자 56.4억달러(3분기 말) = 순부채 약 10억달러, EBITDA 약 100억달러)",
-      "source": "FY26 2·3분기 보도자료",
-      "status": "일치"
      }
     ],
     "verified_metrics": {
      "fcf_margin_pct": 40.8,
-     "fcf_yield_pct": 11.2,
-     "pe_ntm": 8.9,
-     "pe_basis_note": "향후 12개월 추정 EPS 27.25달러 기준 (FY26 가이던스 중간값 24.475달러 기준 9.9배, FY27 컨센서스 27.67달러 기준 8.8배)"
+     "fcf_yield_pct": 10.1,
+     "pe_ntm": 10,
+     "pe_basis_note": "현재가 270.55달러, 향후 12개월 추정 EPS 27.16달러 기준 10.0배 (FY26 가이던스 중간값 24.475달러 기준 11.1배, FY27 컨센서스 27.51달러 기준 9.8배)"
     },
     "evidence": {
      "data_verified": "검증 완료",
      "bear_case_status": "미해소",
-     "estimate_dispersion": "FY27 EPS 추정치는 최저 26.00달러, 평균 27.67달러, 최고 29.19달러로 분산 11.5%입니다. 대형 소프트웨어 치고 좁은 편이고, 최근 30일 상향 21건 대 하향 10건(평균 +0.64%)으로 수정 방향도 소폭 우호적입니다. 다만 이 컨센서스는 신임 CEO의 FY27 계획이 반영되기 전 값이라, 12월 9일 리베이스가 나오면 분산이 한꺼번에 아래로 이동할 위험이 있습니다.",
-     "reward_risk": "기준 +23% (297달러) / 강세 +61% (389달러) / 약세 −31% (168달러) → 기준 대 약세 손익비 0.74, 강세 대 약세 2.0. 확률을 25/50/25로 가정하면 기대수익은 약 +19%입니다.",
-     "conviction_basis": "핵심 수치는 공식 자료와 일치해 검증 완료이고 EPS 분산도 11.5%로 낮습니다. 하지만 가장 강한 반대 근거(유기 ARR 약 8.3%, 순신규 ARR −36%, RPO +8%)가 오히려 숫자로 강화됐고, 프리미엄 전환 성과가 아직 수치로 확인되지 않아 미해소입니다. 그래서 4가 아니라 3입니다. FY27 가이던스에서 유기 ARR 9% 이상과 이익률 유지가 확인되면 4로 올릴 수 있습니다."
+     "estimate_dispersion": "FY27 EPS 추정치는 최저 22.67달러, 평균 27.51달러, 최고 29.19달러로 분산이 23.7%입니다. 지난 분석 때(최저 26.00달러, 11.5%)보다 두 배로 넓어졌는데, 최저치가 크게 내려간 시점이 10월 Wells Fargo·HSBC 하향과 겹칩니다. 30일 상향 21건 대 하향 10건이지만 평균 변화는 −0.09%(7일 −0.11%)로 정체입니다. 12월 9일 신임 CEO의 리베이스가 나오면 평균이 아래로 이동할 여지가 커졌다는 뜻입니다.",
+     "reward_risk": "현재가 270.55달러 기준으로 기준 +9.8%(297달러) / 강세 +43.8%(389달러) / 약세 −37.9%(168달러)입니다. 기준 대 약세 손익비는 0.26, 강세 대 약세는 1.16입니다. 25/50/25 가중 기대 가격은 287.75달러로 기대수익은 약 +6.4%이며, 신규·확대 기준 10%에 못 미칩니다(지난 분석 242.27달러 기준 +19%). 약세 시 계좌 손실은 비중 10% × 37.9% = 약 3.8%로 한도 8% 이내입니다.",
+     "conviction_basis": "핵심 수치는 공식 자료와 일치해 검증 완료이고, 10월 11일 이후 회사 지표에는 변화가 없습니다. 하지만 가장 강한 반대 근거(유기 ARR 약 8.3%, 순신규 ARR 감소, RPO +8%)는 Wells Fargo 추정(유기 순신규 ARR −40% 이상, FY27 ARR 약 7%)으로 오히려 보강됐고, EPS 분산도 11.5%에서 23.7%로 넓어져 4로 올릴 근거가 없습니다. NVIDIA 협력 확대는 정성적 긍정 요인이지만 수치로 확인된 것은 아니어서 반대 근거를 해소하지 못합니다. 그래서 3을 유지합니다."
     },
     "decision_table": {
-     "action": "신규 매수",
+     "action": "추가 매수 보류",
      "buy_below": 250,
-     "price_logic": "기준 FY27 EPS 27.0달러(컨센서스 27.67달러에서 신임 CEO 리베이스 위험을 일부 차감) × 적정 PER 11배 = 297달러에 15% 안전마진을 적용하면 약 252달러이므로 250달러로 잡았습니다. 현재가 242.27달러는 이 아래라 목표 비중의 1/3을 분할 매수하고, 나머지는 12월 9일 가이던스 확인 뒤 집행합니다.",
+     "price_logic": "기준 FY27 EPS 27.0달러(컨센서스 27.51달러에서 신임 CEO 리베이스 위험을 일부 차감) × 적정 PER 11배 = 297달러에 15% 안전마진을 적용하면 약 252달러이므로 250달러를 유지합니다. 이번 상승은 순환매와 NVIDIA 협력 확대 같은 수급·심리 요인이고 EPS 추정치(30일 −0.09%)와 공식 지표는 바뀌지 않아 buy_below를 올리지 않습니다. 현재가 270.55달러는 buy_below를 8.2% 웃돌고 가중 기대수익이 +6.4%라, 지난 판단표의 '270달러 이상 반등 → 관망' 조건이 충족됐습니다. 그래서 기존 10%는 유지하고 남은 분할 매수(목표 비중의 2/3)는 중단합니다. 가이던스 전에 기대 가격 287.75달러를 넘는 290달러 이상이 되면 일부 차익 실현을 검토합니다.",
      "scenarios": [
       {
        "name": "약세",
@@ -881,7 +892,7 @@
        "pe": 8,
        "price": 168,
        "horizon": "12개월",
-       "assumption": "신임 CEO가 FY27을 AI·프리미엄 투자 해로 리베이스해 non-GAAP 영업이익률을 40% 안팎으로 낮추고, Semrush 효과가 사라진 ARR 성장이 6%대로 둔화되는 경우입니다."
+       "assumption": "신임 CEO가 FY27을 AI·프리미엄 투자 해로 리베이스해 non-GAAP 영업이익률이 40% 안팎으로 내려가고, Wells Fargo 추정처럼 총 ARR 성장 약 7%와 순신규 ARR 감소가 현실화되는 경우입니다."
       },
       {
        "name": "기준",
@@ -907,6 +918,11 @@
        "date": "2026-11-10"
       },
       {
+       "metric": "FY26 ending ARR 성장 목표(+10.2%) 달성 여부와 4분기 순신규 ARR·RPO",
+       "threshold": "목표 달성 + RPO +8% 이상이면 긍정, 미달이면 경고 단계 상향",
+       "date": "2026-12-09"
+      },
+      {
        "metric": "FY27 총 ending ARR 성장 목표(Semrush 효과 소멸 후 유기 기준)",
        "threshold": "9% 이상이면 긍정, 8% 미만이면 논리 붕괴",
        "date": "2026-12-09"
@@ -915,29 +931,24 @@
        "metric": "FY27 non-GAAP EPS 및 영업이익률 가이던스",
        "threshold": "EPS 중간값 26.5달러 이상, 영업이익률 44% 이상",
        "date": "2026-12-09"
-      },
-      {
-       "metric": "FY26 4분기 RPO 성장률 및 순신규 ARR",
-       "threshold": "RPO +8% 이상 유지, 4분기 순신규 ARR 전년 대비 감소폭 축소",
-       "date": "2026-12-09"
       }
      ],
      "change_triggers": [
       {
-       "condition": "FY27 유기 ARR 목표 8% 미만 또는 non-GAAP EPS 가이던스 중간값 25달러 미만",
-       "new_action": "매수 보류"
+       "condition": "FY27 유기 ARR 목표 8% 미만, non-GAAP EPS 가이던스 중간값 25달러 미만, 또는 영업이익률 가이던스 42% 미만",
+       "new_action": "축소 검토"
       },
       {
-       "condition": "FY27 non-GAAP 영업이익률 가이던스 42% 미만(AI 원가·투자 리베이스)",
-       "new_action": "매수 보류"
+       "condition": "FY27 가이던스 확인 전 주가가 290달러 이상(가중 기대 가격 287.75달러 초과, 기대수익 0 이하)으로 추가 상승",
+       "new_action": "축소 검토"
       },
       {
-       "condition": "FY27 ARR 목표 9% 이상 + EPS 가이던스 27달러 이상 + 가격 인상 재개 언급",
+       "condition": "FY26 ending ARR 목표(+10.2%) 미달 또는 4분기 RPO 성장률 8% 미만",
+       "new_action": "추가 매수 보류"
+      },
+      {
+       "condition": "FY27 ARR 목표 9% 이상 + EPS 가이던스 27달러 이상 + 영업이익률 44% 이상이 확인되고, 주가가 250달러 이하이거나 기대수익 10% 이상",
        "new_action": "추가 매수"
-      },
-      {
-       "condition": "가이던스 확인 전 주가가 buy_below 250달러를 크게 웃도는 270달러 이상으로 반등",
-       "new_action": "관망"
       }
      ]
     }
@@ -1094,19 +1105,20 @@
    },
    "reused_from": "2026-10-11",
    "risk": {
-    "action": "신규 매수",
+    "action": "추가 매수 보류",
     "buy_below": 250,
     "weight": 10,
-    "price": 245.2,
-    "bear_pct": -31.5,
-    "base_pct": 21.1,
-    "bull_pct": 58.6,
-    "portfolio_impact_pct": -3.15
+    "price": 270.55,
+    "bear_pct": -37.9,
+    "base_pct": 9.8,
+    "bull_pct": 43.8,
+    "portfolio_impact_pct": -3.79
    },
    "rescored": {
     "before": 71.7,
     "after": 71.7
-   }
+   },
+   "interim_update": "2026-10-23"
   },
   "SPCX": {
    "analysis": {
@@ -6975,5 +6987,18 @@
    "est_cost_usd": 0,
    "analyzed_at": "2026-10-17 10:44"
   }
- }
+ },
+ "interim_notes": [
+  {
+   "date": "2026-10-23",
+   "tickers": [
+    "ADBE"
+   ],
+   "trigger": "ADBE high 알림: 분석 이후 주가 +10% ($245.20 → $270.55), 판단 변경 조건 \"가이던스 전 270달러 이상 → 관망\" 도달",
+   "weights": {
+    "NVDA": 20,
+    "ADBE": 10
+   }
+  }
+ ]
 }
