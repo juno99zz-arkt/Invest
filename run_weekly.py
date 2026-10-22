@@ -599,6 +599,8 @@ def finalize_interim(req, res):
         if tk in rep.get("analyses", {}):
             rep["analyses"][tk]["analysis"] = a
             rep["analyses"][tk]["interim_update"] = today
+            if px.get(tk):
+                rep["analyses"][tk]["interim_price"] = px.get(tk)  # 급변 알림 기준가 갱신
             rep["analyses"][tk]["risk"] = _risk_info(a, px.get(tk), weights.get(tk))
     rep.setdefault("interim_notes", []).append({"date": today, "tickers": list(valid), "trigger": res.get("trigger"),
                                                 "weights": weights})
