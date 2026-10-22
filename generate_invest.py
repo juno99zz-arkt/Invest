@@ -101,7 +101,7 @@ def build_alerts(hist, report, today):
     out = []
     for tk, an in report["analyses"].items():
         a, m = an.get("analysis") or {}, an.get("metrics") or {}
-        p0, p1 = m.get("price"), prices.get(tk)
+        p0, p1 = an.get("interim_price") or m.get("price"), prices.get(tk)  # 중간 재평가 후엔 그때 가격 기준
         d0 = an.get("interim_update") or an.get("reused_from") or report.get("date")
         role = "보유" if tk in held else roles.get(tk, "후보")
         add = lambda level, kind, msg: out.append({"ticker": tk, "role": role, "level": level, "kind": kind, "msg": msg})
