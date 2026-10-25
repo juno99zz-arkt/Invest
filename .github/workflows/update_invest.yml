@@ -1,13 +1,12 @@
 name: 투자 대시보드 업데이트 (Agent)
 
 # Claude API 비용 0원 구조
-#   매일 06:00 KST daily   : 미국 장 마감 후 시세·PEG·M7/M8·알림 갱신 + 매수·매도 신호 알림 (토요일은 prepare)
-#   토 06:00 KST  prepare  : 정량 신호·후보 선정·분석 요청서(data/pending/request.json) 생성
-#   매일 06:30    Agent 가 분석 (토: 주간 전체, 평일: 보유 종목 점검·필요 시 중간 재평가) → data/aside/result.json 업로드(push)
+#   매일 06:11 KST prepare : 정량 신호·후보 선정·분석 요청서 + 시세·알림 갱신 (예약 실행은 2~3시간 늦을 수 있어 06:30 Agent 가 없으면 직접 실행)
+#   매일 06:30    Agent 가 새 후보·변화 종목·보유 종목 분석 → data/aside/result.json 업로드(push)
 #   push 감지     finalize : 편입·유지·제외 결정 + 이력·리포트 갱신 → 매수·매도 결정 시 즉시 메일 + 푸시
 #   월·금 07:00 KST report : 정기 메일 리포트 (08:00 안전망, 날짜별 1회)
 #   매달 마지막 금 07:00 : 정기 메일 직전 월간 신호 검증(postmortem.py) → 메일에 '⑦ 월간 신호 검증' 포함
-#   미국 장중 30분마다 watch : 보유 종목 가격 경고(약세 시나리오 도달·급락)만 점검 → 매도 경고 메일·푸시 (배포 없음)
+#   미국 장중 3회 watch    : 보유 종목 가격 경고(약세 시나리오 도달·급락)만 점검 → 매도 경고 메일·푸시 (배포 없음)
 # 수시 알림(매수·매도 신호): 메일(INVEST_REPORT_TO) + ntfy 푸시(시크릿 NTFY_TOPIC) 동시
 #   (모든 실행 마지막에 대시보드 생성 → gh-pages 배포)
 # 메일: EMAIL_SENDER(juno99zz@gmail.com) / EMAIL_PASSWORD(Gmail 앱 비밀번호) / INVEST_REPORT_TO(쉼표 구분 수신자)
@@ -29,9 +28,8 @@ on:
     paths: ["data/aside/**"]
   schedule:
     # GitHub 예약 실행은 정각에 몰려 수 시간씩 밀리는 일이 잦아 정각을 피함 (+ 06:30 Agent 가 누락 시 수동 실행)
-    - cron: "11 21 * * 0-4,6"       # 매일 KST 06:11 (일~금) 시세 갱신·매수·매도 신호 점검
-    - cron: "11 21 * * 5"           # 매주 토 KST 06:11 주간 prepare (+시세 갱신·신호 점검)
-    - cron: "15,45 13-20 * * 1-5"   # 미국 장중 30분마다 (KST 22:15~05:45) 가격 경고 감시
+    - cron: "11 21 * * *"           # 매일 KST 06:11 prepare (정량 신호·후보·분석 요청서 + 시세 갱신·신호 점검) → 06:30 Agent 분석
+    - cron: "7 15,17,19 * * 1-5"    # 미국 장중 3회 가격 경고 감시 (UTC 15:07/17:07/19:07 = KST 00:07/02:07/04:07, 미 동부 오전·점심·오후)
     - cron: "7 22 * * 0,4"          # 매주 월·금 KST 07:07 정기 메일 리포트
     - cron: "37 23 * * 0,4"         # 매주 월·금 KST 08:37 정기 메일 안전망 (날짜별 1회 — 이미 보냈으면 건너뜀)
 
@@ -65,8 +63,8 @@ jobs:
         id: mode
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then m=finalize
-          elif [ "${{ github.event.schedule }}" = "11 21 * * 5" ]; then m=prepare
-          elif [ "${{ github.event.schedule }}" = "15,45 13-20 * * 1-5" ]; then m=watch
+          elif [ "${{ github.event.schedule }}" = "11 21 * * *" ]; then m=prepare
+          elif [ "${{ github.event.schedule }}" = "7 15,17,19 * * 1-5" ]; then m=watch
           elif [ "${{ github.event.schedule }}" = "7 22 * * 0,4" ] || [ "${{ github.event.schedule }}" = "37 23 * * 0,4" ]; then m=report_auto
           elif [ -n "${{ inputs.mode }}" ]; then m="${{ inputs.mode }}"
           else m=daily; fi
