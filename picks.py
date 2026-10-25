@@ -275,7 +275,9 @@ def fresh_analysis_reason(entry, snap, holding, today):
         return "판단표·데이터 검증 도입 전 분석 — 새 형식으로 재분석"
     if (date.fromisoformat(today) - date.fromisoformat(entry["analyzed_date"])).days >= REUSE_MAX_DAYS:
         return f"지난 분석 {REUSE_MAX_DAYS}일 경과"
-    if entry.get("next_earnings") and entry["next_earnings"] <= today:
+    ne = entry.get("next_earnings")
+    # 실적일이 분석일 이후(같은 날 포함)이고 오늘까지 지났을 때만. 분석 전에 이미 지난 실적일(야후의 지난 날짜)은 분석에 반영된 것으로 본다.
+    if ne and entry["analyzed_date"] <= ne <= today and not (ne == entry["analyzed_date"] == today):
         return "분석 이후 실적 발표"
     price, old_price = snap.get("price"), entry.get("price")
     if price and old_price and abs(price / old_price - 1) >= REUSE_PRICE_MOVE:
