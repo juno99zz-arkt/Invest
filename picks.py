@@ -363,6 +363,8 @@ def decide(holdings, new_candidates, analyses, snaps, scores, today, fear=None):
 
     verified = lambda tk: (analyses[tk].get("evidence") or {}).get("data_verified", "검증 완료") == "검증 완료"
     px = lambda tk: (snaps.get(tk) or {}).get("price")
+    held_now = {x["ticker"] for x in kept} | {x["ticker"] for x in removed}
+    new_candidates = [tk for tk in new_candidates if tk not in held_now]  # 보유 종목이 후보에도 있으면 중복 판단 방지
     fit = lambda tk: analyses[tk]["verdict"] == "편입 적합" and (
         analyses[tk]["conviction"] >= MIN_CONVICTION_NEW or starter_ok(analyses[tk], px(tk), fear))
     fear_pick = lambda tk: not fit(tk) and fear_watch_ok(analyses[tk], px(tk), fear)
