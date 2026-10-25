@@ -508,7 +508,7 @@ function logicHelpHtml(L) {
     </div>`;
   return `
     <div id="logic-help" hidden class="mb-3">
-      ${step(1, '후보 범위', 'S&amp;P 500 + 나스닥 100 전 종목(약 520개). 매주 토요일 06:00(KST)에 정량 단계를 실행하고, 이어서 Agent가 AI 분석을 수행합니다. 평일에도 매일 06:00 시세 갱신 후 Agent가 보유 종목을 점검하고, 매도 신호는 휴대폰으로 즉시 푸시합니다.')}
+      ${step(1, '후보 범위', 'S&amp;P 500 + 나스닥 100 전 종목(약 520개). 매일 06:11(KST)에 정량 단계(후보 선정)를 실행하고, 06:30부터 Agent가 새 후보·변화가 생긴 종목과 보유 종목을 분석해 매일 편입·유지·제외를 결정합니다. 매수·매도 신호는 메일과 휴대폰 푸시로 즉시 보냅니다.')}
       ${step(2, '기본 조건 (하나라도 어긋나면 제외)',
         '· 향후 12개월 추정 EPS 흑자<br>· 애널리스트 5명 이상 커버<br>· 영업이익률 흑자, <b>또는</b> 흑자전환 임박(다음 분기 EPS 컨센서스 흑자 + 최근 30일 추정치 하향 없음)')}
       ${step(3, '정량 점수 (0~100, 유니버스 내 백분위)',
@@ -892,9 +892,9 @@ function loadSummary(d) {
     const noNew = !lw.decisions.some(x => x.action === '신규편입');
     decisionHtml = `
       <div class="card p-4 mb-3">
-        <div class="text-sm font-bold mb-1">이번 주 결정 · ${esc(lw.week)}</div>
+        <div class="text-sm font-bold mb-1">최근 결정 · ${esc(lw.week)}</div>
         <div class="text-xs mb-2" style="color:var(--muted);">${esc(lw.date)} 분석 기준 · 현재가는 ${esc(d.quotes_at || INJECTED.meta.built_at_kst)} 업데이트 시점</div>
-        ${noNew ? '<div class="card2 p-2 mb-2 text-xs" style="color:#fcd34d;line-height:1.6;">이번 주 신규 편입 없음 — 억지로 채우지 않습니다. 아래 검토 후보의 판정 사유를 확인하세요.</div>' : ''}
+        ${noNew ? '<div class="card2 p-2 mb-2 text-xs" style="color:#fcd34d;line-height:1.6;">이번 분석에서 신규 편입 없음 — 억지로 채우지 않습니다. 아래 검토 후보의 판정 사유를 확인하세요.</div>' : ''}
         ${main.map(row).join('')}
         ${others.length ? `<details class="mt-2"><summary class="text-xs cursor-pointer py-1" style="color:#93c5fd;">검토했지만 편입하지 않은 후보 ${others.length}종목</summary>${others.map(row).join('')}</details>` : ''}
       </div>`;
@@ -1004,7 +1004,7 @@ function openReport(tk) {
         ${a.decision_table ? '<span class="badge ' + (ACT_BADGE[a.decision_table.action] || 'badge-gray') + '">' + esc(a.decision_table.action) + '</span>' : ''}
         ${evidenceChips(a.evidence)}
         ${rep.analyses[tk].interim_update ? '<span class="badge badge-yellow">' + esc(rep.analyses[tk].interim_update) + ' 중간 재평가</span>' : ''}
-        ${dec ? '<span class="badge ' + (ACTION_BADGE[dec.action] || 'badge-gray') + '">이번 주 ' + esc(dec.action) + '</span>' : ''}
+        ${dec ? '<span class="badge ' + (ACTION_BADGE[dec.action] || 'badge-gray') + '">최근 ' + esc(dec.action) + '</span>' : ''}
         ${rep.analyses[tk].reused_from ? '<span class="badge badge-gray">' + esc(rep.analyses[tk].reused_from) + ' 분석 재사용</span>' : ''}
       </div>
     </div>

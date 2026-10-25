@@ -18,7 +18,7 @@
 import json
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -175,7 +175,9 @@ def prepare():
     from universe import load_universe
 
     now = datetime.now(KST)
-    today, week = now.date().isoformat(), now.strftime("%G-W%V")
+    # 2026-10-26~ 매일 분석: 판단 단위(week 키)를 날짜로 쓴다 (이전 기록은 '2026-W41' 같은 주차 키)
+    today = now.date().isoformat()
+    week = today
 
     # 중복 prepare 방지: GitHub 예약 실행은 수 시간 늦게 돌 수 있다. 이미 같은 주 요청서가 있으면
     # (수동 prepare 후 분석·finalize 진행 중/완료) 예약 실행은 건너뛰고, 반영 완료된 주는 수동이라도 FORCE_PREPARE 없이는 건너뜀.
@@ -291,6 +293,24 @@ def _archive(week, payload):
     """당시 추천·원자료 보존 — 덮어쓰지 않고 실행 시각별 파일로 쌓는다."""
     stamp = datetime.now(KST).strftime("%Y%m%d-%H%M%S")
     _dump(os.path.join(DATA_DIR, "archive", week.replace("+", "_"), f"{stamp}.json"), payload)
+    _prune_daily()
+
+
+def _prune_daily(keep_days=35):
+    """매일 분석으로 늘어나는 리포트·원자료 정리: 최근 keep_days 일 + 토요일자만 보관 (주차 키 기록은 그대로)."""
+    import re
+    import shutil
+    cut = (datetime.now(KST).date() - timedelta(days=keep_days)).isoformat()
+    for sub in ("reports", "archive"):
+        d = os.path.join(DATA_DIR, sub)
+        if not os.path.isdir(d):
+            continue
+        for name in os.listdir(d):
+            m = re.match(r"^(\d{4}-\d{2}-\d{2})", name)
+            if not m or m.group(1) >= cut or date.fromisoformat(m.group(1)).weekday() == 5:
+                continue
+            p = os.path.join(d, name)
+            shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
 
 
 def _apply_verified(tk, a, scores, dist, dossier):
@@ -385,6 +405,9 @@ def finalize():
     for e in errors:
         print("::warning::" + e)
 
+    if not brief and (old_weekly.get("market_brief") or {}).get("stance"):
+        brief = old_weekly["market_brief"]  # 시장 브리핑을 새로 쓰지 않은 날은 직전 브리핑 유지
+        print("  시장 브리핑 없음 — 직전 브리핑 유지")
     weekly = {**req["signals"], "market_brief": brief}
     ok = [tk for tk, a in fresh.items() if a]
     weekly["status"] = {**weekly.get("status", {}), "claude": bool(brief) or bool(ok), "engine": "aside"}

@@ -66,6 +66,7 @@ def collect_signals(hist, push_log):
         if h.get("removed_date"):
             add(ticker=h["ticker"], date=h["removed_date"], direction="SHORT", source="제외", taken=True)
     weeks = sorted(hist.get("weeks", []), key=lambda w: (w["date"], w.get("interim", False)))
+    last_skip = {}  # 매일 분석: 같은 미편입 후보를 매일 세지 않도록 7일에 1건만
     for i, w in enumerate(weeks):
         prev = next((x.get("weights") for x in reversed(weeks[:i]) if x.get("weights")), None) or {}
         cur = w.get("weights") or {}
@@ -77,6 +78,10 @@ def collect_signals(hist, push_log):
             elif d["action"] == "제외":
                 add(ticker=d["ticker"], date=w["date"], direction="SHORT", source="제외", taken=True)
             elif d["action"] in ("미편입", "보류"):
+                ls = last_skip.get(d["ticker"])
+                if ls and (date.fromisoformat(w["date"]) - date.fromisoformat(ls)).days < 7:
+                    continue
+                last_skip[d["ticker"]] = w["date"]
                 add(ticker=d["ticker"], date=w["date"], direction="LONG",
                     source="관심종목 미편입" if "[관심종목]" in r else "미편입·보류", taken=False)
         if w.get("weights") is not None and prev:
