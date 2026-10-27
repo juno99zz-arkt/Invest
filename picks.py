@@ -276,8 +276,9 @@ def fresh_analysis_reason(entry, snap, holding, today):
     if (date.fromisoformat(today) - date.fromisoformat(entry["analyzed_date"])).days >= REUSE_MAX_DAYS:
         return f"지난 분석 {REUSE_MAX_DAYS}일 경과"
     ne = entry.get("next_earnings")
-    # 실적일이 분석일 이후(같은 날 포함)이고 오늘까지 지났을 때만. 분석 전에 이미 지난 실적일(야후의 지난 날짜)은 분석에 반영된 것으로 본다.
-    if ne and entry["analyzed_date"] <= ne <= today and not (ne == entry["analyzed_date"] == today):
+    # 실적일이 분석일 이후(같은 날 포함)이고 오늘(KST) 이전일 때만. 미국 실적일 D 는 KST D 밤(장전)~D+1 새벽(장후)에
+    # 발표되므로, KST 아침 실행일 = 실적일이면 아직 발표 전이다. 분석 전에 이미 지난 실적일은 분석에 반영된 것으로 본다.
+    if ne and entry["analyzed_date"] <= ne < today:
         return "분석 이후 실적 발표"
     price, old_price = snap.get("price"), entry.get("price")
     if price and old_price and abs(price / old_price - 1) >= REUSE_PRICE_MOVE:
