@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-18",
+ "generated": "2026-10-30",
  "month": "2026-10",
  "method": "signal-postmortem + weekly-performance-digest (tradermonty/claude-trading-skills) 방식, 장기 계좌용 5·20·60거래일",
- "n_signals": 39,
- "n_this_month": 22,
+ "n_signals": 47,
+ "n_this_month": 30,
  "overall": {
   "5": {
    "실행(편입·확대·축소·제외)": {
@@ -19,13 +19,13 @@
     "reliable": false
    },
    "미실행 후보(필터 판단)": {
-    "n": 25,
-    "win_rate": 0.52,
-    "expectancy_pct": -2.32,
-    "profit_factor": 0.41,
+    "n": 28,
+    "win_rate": 0.54,
+    "expectancy_pct": -1.92,
+    "profit_factor": 0.48,
     "categories": {
-     "MISSED_OPPORTUNITY": 12,
-     "SKIPPED_OK": 13
+     "MISSED_OPPORTUNITY": 13,
+     "SKIPPED_OK": 15
     },
     "best": "KEYS 2026-10-11 +11.3%",
     "worst": "SNDK 2026-09-13 -17.2%",
@@ -46,16 +46,16 @@
     "reliable": false
    },
    "미실행 후보(필터 판단)": {
-    "n": 8,
-    "win_rate": 0.75,
-    "expectancy_pct": -0.27,
-    "profit_factor": 0.92,
+    "n": 16,
+    "win_rate": 0.62,
+    "expectancy_pct": -2.3,
+    "profit_factor": 0.51,
     "categories": {
-     "MISSED_OPPORTUNITY": 2,
-     "SKIPPED_OK": 6
+     "MISSED_OPPORTUNITY": 6,
+     "SKIPPED_OK": 10
     },
-    "best": "WDC 2026-09-13 +7.6%",
-    "worst": "KEYS 2026-09-13 -14.9%",
+    "best": "KEYS 2026-09-26 +11.7%",
+    "worst": "MPC 2026-09-26 -16.6%",
     "reliable": false
    }
   },
@@ -100,29 +100,29 @@
   },
   "미편입·보류": {
    "5": {
-    "n": 23,
-    "win_rate": 0.48,
-    "expectancy_pct": -2.88,
-    "profit_factor": 0.32,
+    "n": 26,
+    "win_rate": 0.5,
+    "expectancy_pct": -2.38,
+    "profit_factor": 0.39,
     "categories": {
-     "MISSED_OPPORTUNITY": 12,
-     "SKIPPED_OK": 11
+     "MISSED_OPPORTUNITY": 13,
+     "SKIPPED_OK": 13
     },
     "best": "KEYS 2026-10-11 +11.3%",
     "worst": "SNDK 2026-09-13 -17.2%",
     "reliable": true
    },
    "20": {
-    "n": 8,
-    "win_rate": 0.75,
-    "expectancy_pct": -0.27,
-    "profit_factor": 0.92,
+    "n": 16,
+    "win_rate": 0.62,
+    "expectancy_pct": -2.3,
+    "profit_factor": 0.51,
     "categories": {
-     "MISSED_OPPORTUNITY": 2,
-     "SKIPPED_OK": 6
+     "MISSED_OPPORTUNITY": 6,
+     "SKIPPED_OK": 10
     },
-    "best": "WDC 2026-09-13 +7.6%",
-    "worst": "KEYS 2026-09-13 -14.9%",
+    "best": "KEYS 2026-09-26 +11.7%",
+    "worst": "MPC 2026-09-26 -16.6%",
     "reliable": false
    },
    "60": {
@@ -171,7 +171,17 @@
   },
   "공포·탐욕 20": {
    "5": {
-    "n": 0
+    "n": 2,
+    "win_rate": 0.5,
+    "expectancy_pct": 0.15,
+    "profit_factor": 1.31,
+    "categories": {
+     "FALSE_POSITIVE_MILD": 1,
+     "TRUE_POSITIVE": 1
+    },
+    "best": "SPY 2026-10-22 +1.2%",
+    "worst": "SPY 2026-10-16 -0.9%",
+    "reliable": false
    },
    "20": {
     "n": 0
@@ -182,12 +192,12 @@
   }
  },
  "fear_study": {
-  "period": "2025-10-20 ~ 2026-10-16",
-  "days": 249,
+  "period": "2025-10-20 ~ 2026-10-29",
+  "days": 258,
   "baseline": {
-   "5": 0.27,
-   "20": 1.22,
-   "60": 4.11
+   "5": 0.25,
+   "20": 1.17,
+   "60": 4.03
   },
   "levels": [
    {
@@ -196,19 +206,20 @@
      "2025-11-17",
      "2026-03-11",
      "2026-03-18",
-     "2026-10-16"
+     "2026-10-16",
+     "2026-10-23"
     ],
-    "n": 4,
-    "avg_5d": -0.07,
-    "hit_5d": 0.67,
-    "n_5d": 3,
+    "n": 5,
+    "avg_5d": -0.29,
+    "hit_5d": 0.5,
+    "n_5d": 4,
     "avg_20d": 3.74,
     "hit_20d": 1.0,
     "n_20d": 3,
     "avg_60d": 8.89,
     "hit_60d": 1.0,
     "n_60d": 3,
-    "verdict": "돌파 후 20일 SPY +3.7% vs 평소 +1.2% (+2.5%p, 유의미해 보임) · 표본 3건이라 참고용"
+    "verdict": "돌파 후 20일 SPY +3.7% vs 평소 +1.2% (+2.6%p, 유의미해 보임) · 표본 3건이라 참고용"
    },
    {
     "level": 10,
@@ -251,20 +262,252 @@
  ],
  "records": [
   {
-   "ticker": "SPCX",
-   "date": "2026-10-17",
+   "ticker": "RDDT",
+   "date": "2026-10-27",
    "direction": "LONG",
    "source": "미편입·보류",
    "taken": false,
-   "status": "진입 전"
+   "entry_date": "2026-10-28",
+   "entry_price": 135.25,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
   },
   {
-   "ticker": "RDDT",
-   "date": "2026-10-17",
+   "ticker": "ASML",
+   "date": "2026-10-27",
    "direction": "LONG",
    "source": "미편입·보류",
    "taken": false,
-   "status": "진입 전"
+   "entry_date": "2026-10-28",
+   "entry_price": 1656.74,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "GOOG",
+   "date": "2026-10-26",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-27",
+   "entry_price": 314.4,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "TXN",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 288.92,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "SPCX",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 146.84,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "MU",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 889.88,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "MSTR",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "관심종목 미편입",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 141.67,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "KEYS",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 318.93,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "FIX",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 1175.01,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "EXPE",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 289.01,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "EOG",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 162.19,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "CRCL",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "관심종목 미편입",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 82.36,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "CPAY",
+   "date": "2026-10-24",
+   "direction": "LONG",
+   "source": "미편입·보류",
+   "taken": false,
+   "entry_date": "2026-10-26",
+   "entry_price": 405.69,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "SPY",
+   "date": "2026-10-23",
+   "direction": "LONG",
+   "source": "공포·탐욕 20",
+   "taken": true,
+   "entry_date": "2026-10-26",
+   "entry_price": 762.25,
+   "returns": {},
+   "outcomes": {
+    "5": "PENDING",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON"
+  },
+  {
+   "ticker": "SPY",
+   "date": "2026-10-22",
+   "direction": "LONG",
+   "source": "공포·탐욕 20",
+   "taken": true,
+   "entry_date": "2026-10-23",
+   "entry_price": 759.9,
+   "returns": {
+    "5": {
+     "abs_pct": 1.24,
+     "excess_pct": 1.24
+    }
+   },
+   "outcomes": {
+    "5": "TRUE_POSITIVE",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON",
+   "signed": {
+    "5": 1.24
+   }
   },
   {
    "ticker": "MU",
@@ -272,23 +515,23 @@
    "direction": "LONG",
    "source": "미편입·보류",
    "taken": false,
-   "status": "진입 전"
-  },
-  {
-   "ticker": "MSTR",
-   "date": "2026-10-17",
-   "direction": "LONG",
-   "source": "관심종목 미편입",
-   "taken": false,
-   "status": "진입 전"
-  },
-  {
-   "ticker": "KEYS",
-   "date": "2026-10-17",
-   "direction": "LONG",
-   "source": "미편입·보류",
-   "taken": false,
-   "status": "진입 전"
+   "entry_date": "2026-10-19",
+   "entry_price": 913.55,
+   "returns": {
+    "5": {
+     "abs_pct": -3.94,
+     "excess_pct": -2.99
+    }
+   },
+   "outcomes": {
+    "5": "SKIPPED_OK",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON",
+   "signed": {
+    "5": 2.99
+   }
   },
   {
    "ticker": "GOOG",
@@ -296,15 +539,23 @@
    "direction": "LONG",
    "source": "미편입·보류",
    "taken": false,
-   "status": "진입 전"
-  },
-  {
-   "ticker": "EXPE",
-   "date": "2026-10-17",
-   "direction": "LONG",
-   "source": "미편입·보류",
-   "taken": false,
-   "status": "진입 전"
+   "entry_date": "2026-10-19",
+   "entry_price": 340.12,
+   "returns": {
+    "5": {
+     "abs_pct": -6.72,
+     "excess_pct": -5.77
+    }
+   },
+   "outcomes": {
+    "5": "SKIPPED_OK",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON",
+   "signed": {
+    "5": 5.77
+   }
   },
   {
    "ticker": "EOG",
@@ -312,23 +563,23 @@
    "direction": "LONG",
    "source": "미편입·보류",
    "taken": false,
-   "status": "진입 전"
-  },
-  {
-   "ticker": "CRCL",
-   "date": "2026-10-17",
-   "direction": "LONG",
-   "source": "관심종목 미편입",
-   "taken": false,
-   "status": "진입 전"
-  },
-  {
-   "ticker": "CPAY",
-   "date": "2026-10-17",
-   "direction": "LONG",
-   "source": "미편입·보류",
-   "taken": false,
-   "status": "진입 전"
+   "entry_date": "2026-10-19",
+   "entry_price": 157.52,
+   "returns": {
+    "5": {
+     "abs_pct": 3.5,
+     "excess_pct": 4.44
+    }
+   },
+   "outcomes": {
+    "5": "MISSED_OPPORTUNITY",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON",
+   "signed": {
+    "5": -4.44
+   }
   },
   {
    "ticker": "SPY",
@@ -336,7 +587,23 @@
    "direction": "LONG",
    "source": "공포·탐욕 20",
    "taken": true,
-   "status": "진입 전"
+   "entry_date": "2026-10-19",
+   "entry_price": 767.23,
+   "returns": {
+    "5": {
+     "abs_pct": -0.95,
+     "excess_pct": -0.95
+    }
+   },
+   "outcomes": {
+    "5": "FALSE_POSITIVE_MILD",
+    "20": "PENDING",
+    "60": "PENDING"
+   },
+   "regime_at_signal": "RISK_ON",
+   "signed": {
+    "5": -0.95
+   }
   },
   {
    "ticker": "SPCX",
@@ -614,16 +881,21 @@
     "5": {
      "abs_pct": 0.92,
      "excess_pct": 0.75
+    },
+    "20": {
+     "abs_pct": 13.85,
+     "excess_pct": 14.94
     }
    },
    "outcomes": {
     "5": "SKIPPED_OK",
-    "20": "PENDING",
+    "20": "MISSED_OPPORTUNITY",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -0.75
+    "5": -0.75,
+    "20": -14.94
    }
   },
   {
@@ -638,16 +910,21 @@
     "5": {
      "abs_pct": 7.05,
      "excess_pct": 6.88
+    },
+    "20": {
+     "abs_pct": -0.67,
+     "excess_pct": 0.42
     }
    },
    "outcomes": {
     "5": "MISSED_OPPORTUNITY",
-    "20": "PENDING",
+    "20": "SKIPPED_OK",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -6.88
+    "5": -6.88,
+    "20": -0.42
    }
   },
   {
@@ -662,16 +939,21 @@
     "5": {
      "abs_pct": -0.77,
      "excess_pct": -0.93
+    },
+    "20": {
+     "abs_pct": -3.19,
+     "excess_pct": -2.1
     }
    },
    "outcomes": {
     "5": "SKIPPED_OK",
-    "20": "PENDING",
+    "20": "SKIPPED_OK",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 0.93
+    "5": 0.93,
+    "20": 2.1
    }
   },
   {
@@ -686,16 +968,21 @@
     "5": {
      "abs_pct": 6.65,
      "excess_pct": 6.48
+    },
+    "20": {
+     "abs_pct": 15.46,
+     "excess_pct": 16.55
     }
    },
    "outcomes": {
     "5": "MISSED_OPPORTUNITY",
-    "20": "PENDING",
+    "20": "MISSED_OPPORTUNITY",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -6.48
+    "5": -6.48,
+    "20": -16.55
    }
   },
   {
@@ -710,16 +997,21 @@
     "5": {
      "abs_pct": 6.52,
      "excess_pct": 6.35
+    },
+    "20": {
+     "abs_pct": -12.83,
+     "excess_pct": -11.74
     }
    },
    "outcomes": {
     "5": "MISSED_OPPORTUNITY",
-    "20": "PENDING",
+    "20": "SKIPPED_OK",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -6.35
+    "5": -6.35,
+    "20": 11.74
    }
   },
   {
@@ -734,16 +1026,21 @@
     "5": {
      "abs_pct": 1.92,
      "excess_pct": 1.75
+    },
+    "20": {
+     "abs_pct": 11.15,
+     "excess_pct": 12.24
     }
    },
    "outcomes": {
     "5": "SKIPPED_OK",
-    "20": "PENDING",
+    "20": "MISSED_OPPORTUNITY",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -1.75
+    "5": -1.75,
+    "20": -12.24
    }
   },
   {
@@ -758,16 +1055,21 @@
     "5": {
      "abs_pct": -0.2,
      "excess_pct": -0.37
+    },
+    "20": {
+     "abs_pct": 3.3,
+     "excess_pct": 4.39
     }
    },
    "outcomes": {
     "5": "SKIPPED_OK",
-    "20": "PENDING",
+    "20": "MISSED_OPPORTUNITY",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": 0.37
+    "5": 0.37,
+    "20": -4.39
    }
   },
   {
@@ -782,16 +1084,21 @@
     "5": {
      "abs_pct": 5.49,
      "excess_pct": 5.32
+    },
+    "20": {
+     "abs_pct": -1.11,
+     "excess_pct": -0.02
     }
    },
    "outcomes": {
     "5": "MISSED_OPPORTUNITY",
-    "20": "PENDING",
+    "20": "SKIPPED_OK",
     "60": "PENDING"
    },
    "regime_at_signal": "RISK_ON",
    "signed": {
-    "5": -5.32
+    "5": -5.32,
+    "20": 0.02
    }
   },
   {
