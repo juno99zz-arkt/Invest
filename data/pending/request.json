@@ -1,7 +1,7 @@
 {
  "week": "2026-11-01",
  "date": "2026-11-01",
- "created_at_kst": "2026-11-01 09:04",
+ "created_at_kst": "2026-11-01 09:09",
  "spy_price": 755.72,
  "held": [
   "NVDA",
@@ -3391,18 +3391,18 @@
    "id": 60
   },
   {
-   "title": "S&P 500 Forecast: SPX rises as tech rebounds ahead of earnings",
-   "source": "StoneX",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeXJtdmRLMmFmVF90Zl83WXNEbjVjaF84SFVqVUdJcmNxM3Zodi14a1poMzJGb0I1N2hxSm0xNWRWeUE4dlBFRXpEVW1MRXluSUlmcjZ5M0t5NnZ6cTctZE45MXFJVHdZOXlUNUZhUUROZkdSclF2UThlX1l1bVJLUk4tNTFsazRBbjVlYUMzVEhJaWtFZ0xzbnZDRFlGMmlxNS1WYjVzbmVTamVZMWNJTA?oc=5",
+   "title": "Nvidia Eyes Cosigning Nscale's West Virginia AI Data Center Loan",
+   "source": "The Tech Buzz",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYmZ4TGNIeWxBYUxVSzB0XzZhaC1WYkg5ckF2Q0I1SnR1cDBMczkzZ3F1LXJ0eHVaUDBGTXR1Q2FDNi1TdUJsNWM4djN4WFpxMlJSbmFnTC1ibUNoYXRiZmthUkNEVk1YNHREdUM1RnZqOVNIYzBSNlZMSkdLQWZqX1ZMaFc0YTJDc2c0U3kzTzVXTDc4cktuZWo2MnBNZw?oc=5",
    "kind": "뉴스",
    "published": "2026-10-31",
    "snippet": "",
    "id": 61
   },
   {
-   "title": "Stock market takes a hit amid AI concerns",
-   "source": "NBC News",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOblJlVnh4RWJiczhOcWhGOUNBREhRcmwzUkpDWmt3U0JTMEtkUzhvcFFUVWFyWDNkbUpLUjdSSzFwYlBDVWtobUpGb0FzWVdBRS1qbXlXVHFtRUJRd1RwT1ctVFpSc2Rmczl2RTBobmJ5TWJrV3FldHlCdlRxbDNFdE50ZjBNNVZZdjk2ZA?oc=5",
+   "title": "S&P 500 Forecast: SPX rises as tech rebounds ahead of earnings",
+   "source": "StoneX",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeXJtdmRLMmFmVF90Zl83WXNEbjVjaF84SFVqVUdJcmNxM3Zodi14a1poMzJGb0I1N2hxSm0xNWRWeUE4dlBFRXpEVW1MRXluSUlmcjZ5M0t5NnZ6cTctZE45MXFJVHdZOXlUNUZhUUROZkdSclF2UThlX1l1bVJLUk4tNTFsazRBbjVlYUMzVEhJaWtFZ0xzbnZDRFlGMmlxNS1WYjVzbmVTamVZMWNJTA?oc=5",
    "kind": "뉴스",
    "published": "2026-10-31",
    "snippet": "",
@@ -4109,7 +4109,7 @@
   "CRCL": "2026-11-04"
  },
  "signals": {
-  "built_at_kst": "2026-11-01 09:04",
+  "built_at_kst": "2026-11-01 09:09",
   "week": "2026-11-01",
   "universe_size": 519,
   "m1": {
