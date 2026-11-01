@@ -1,6 +1,6 @@
 {
- "built_at_kst": "2026-11-01 09:09",
- "week": "2026-11-01",
+ "built_at_kst": "2026-11-02 06:31",
+ "week": "2026-11-02",
  "universe_size": 519,
  "m1": {
   "investors": [
@@ -738,6 +738,22 @@
     ]
    },
    {
+    "sector": "Industrials",
+    "sector_kr": "산업재",
+    "stocks": 80,
+    "eps_revision_pct_30d": 0.48,
+    "eps_revision_pct_7d": 0.07,
+    "upgrade_ratio": 0.54,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.35,
+     0.56,
+     0.75,
+     1.23
+    ]
+   },
+   {
     "sector": "Technology",
     "sector_kr": "IT·기술",
     "stocks": 92,
@@ -748,41 +764,25 @@
     "sparkline": [
      0.0,
      1.19,
-     1.58,
+     1.69,
      2.88,
      4.21
     ]
    },
    {
-    "sector": "Industrials",
-    "sector_kr": "산업재",
-    "stocks": 80,
-    "eps_revision_pct_30d": 0.36,
-    "eps_revision_pct_7d": 0.02,
-    "upgrade_ratio": 0.54,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.35,
-     0.56,
-     0.75,
-     1.17
-    ]
-   },
-   {
     "sector": "Financial Services",
     "sector_kr": "금융",
-    "stocks": 68,
+    "stocks": 69,
     "eps_revision_pct_30d": 0.26,
     "eps_revision_pct_7d": 0.1,
     "upgrade_ratio": 0.57,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.14,
-     0.2,
-     0.18,
-     0.62
+     0.12,
+     0.17,
+     0.17,
+     0.57
     ]
    },
    {
@@ -830,14 +830,14 @@
      -0.09,
      -0.41,
      -1.16,
-     -0.63
+     -0.39
     ]
    },
    {
     "sector": "Utilities",
     "sector_kr": "유틸리티",
     "stocks": 31,
-    "eps_revision_pct_30d": -0.05,
+    "eps_revision_pct_30d": -0.06,
     "eps_revision_pct_7d": 0.0,
     "upgrade_ratio": 0.48,
     "momentum": "→횡보",
@@ -847,22 +847,6 @@
      0.0,
      -0.06,
      -0.01
-    ]
-   },
-   {
-    "sector": "Real Estate",
-    "sector_kr": "부동산",
-    "stocks": 30,
-    "eps_revision_pct_30d": -0.06,
-    "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.33,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     1.2,
-     1.22,
-     0.99,
-     0.78
     ]
    },
    {
@@ -878,7 +862,23 @@
      0.08,
      0.0,
      -0.06,
-     0.02
+     -0.0
+    ]
+   },
+   {
+    "sector": "Real Estate",
+    "sector_kr": "부동산",
+    "stocks": 30,
+    "eps_revision_pct_30d": -0.3,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.33,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.8,
+     1.62,
+     1.2,
+     0.99
     ]
    },
    {
@@ -893,7 +893,7 @@
      0.0,
      0.04,
      -0.06,
-     -0.02,
+     -0.03,
      -0.44
     ]
    }
@@ -964,7 +964,7 @@
     "revenue_growth_pct": 104.5,
     "earnings_growth_pct": 186.2,
     "eps_revision_30d": 0.23,
-    "eps_revision_90d": 41.42,
+    "eps_revision_90d": 38.5,
     "up_30d": 20.0,
     "down_30d": 0.0,
     "op_margin_q": [
@@ -1061,7 +1061,7 @@
      23.8,
      12.6
     ],
-    "next_earnings": "2026-10-22"
+    "next_earnings": "2027-01-28"
    },
    {
     "rank": 7,
@@ -1071,8 +1071,8 @@
     "market_cap_b": 110,
     "revenue_growth_pct": 46.4,
     "earnings_growth_pct": 4299.0,
-    "eps_revision_30d": 17.21,
-    "eps_revision_90d": 62.81,
+    "eps_revision_30d": 16.9,
+    "eps_revision_90d": 62.38,
     "up_30d": 10.0,
     "down_30d": 1.0,
     "op_margin_q": [
@@ -1146,30 +1146,30 @@
    },
    {
     "rank": 10,
-    "ticker": "NVDA",
-    "name": "NVIDIA Corporation",
+    "ticker": "SNDK",
+    "name": "Sandisk Corporation",
     "sector": "IT·기술",
-    "market_cap_b": 4941,
-    "revenue_growth_pct": 105.9,
-    "earnings_growth_pct": 127.8,
-    "eps_revision_30d": 1.48,
-    "eps_revision_90d": 24.19,
-    "up_30d": 7.0,
+    "market_cap_b": 164,
+    "revenue_growth_pct": 377.9,
+    "earnings_growth_pct": 6913.3,
+    "eps_revision_30d": 8.34,
+    "eps_revision_90d": 11.67,
+    "up_30d": 1.0,
     "down_30d": 0.0,
     "op_margin_q": [
-     60.8,
-     63.2,
-     65.0,
-     65.6,
-     66.2
+     8.3,
+     35.5,
+     70.0,
+     78.5,
+     null
     ],
     "eps_surprises": [
-     3.5,
-     5.3,
-     5.5,
-     6.2
+     75.0,
+     59.7,
+     13.7,
+     6.7
     ],
-    "next_earnings": "2026-11-17"
+    "next_earnings": "2026-10-29"
    }
   ]
  },
@@ -1182,10 +1182,10 @@
     "market_cap_b": 211.7,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -3.13,
-    "consensus_eps": 10.06,
-    "analyst_count": 26,
+    "consensus_eps": 10.09,
+    "analyst_count": 25,
     "current_price": 170.68,
-    "projected_pe": 17.0,
+    "projected_pe": 16.9,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      -6.75,
@@ -1233,10 +1233,10 @@
     "market_cap_b": 38.0,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -2.77,
-    "consensus_eps": 2.89,
+    "consensus_eps": 2.66,
     "analyst_count": 33,
     "current_price": 143.54,
-    "projected_pe": 49.7,
+    "projected_pe": 53.9,
     "sig_proj_pe": "red",
     "recent_eps": [
      -1.36,
@@ -1527,7 +1527,7 @@
     "ticker": "AMD",
     "eps_growth_last_q": 159.5,
     "eps_growth_this_fy": 82.8,
-    "eps_growth_next_fy": 108.7,
+    "eps_growth_next_fy": 109.2,
     "trend": "가속 전망"
    },
    {
