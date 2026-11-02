@@ -1,0 +1,2936 @@
+{
+ "kind": "weekly",
+ "finalized_at": "2026-11-03T06:41:05.846373+09:00",
+ "request": {
+  "week": "2026-11-03",
+  "date": "2026-11-03",
+  "created_at_kst": "2026-11-03 06:31",
+  "spy_price": 752.1,
+  "held": [
+   "NVDA",
+   "ADBE"
+  ],
+  "new_candidates": [
+   "FIX",
+   "RDDT",
+   "CPAY",
+   "SPCX",
+   "EXPE",
+   "SNDK",
+   "MPWR",
+   "KEYS",
+   "MSTR",
+   "CRCL"
+  ],
+  "watchlist": [
+   "MSTR",
+   "CRCL"
+  ],
+  "fresh_reason": {
+   "NVDA": null,
+   "ADBE": null,
+   "FIX": null,
+   "RDDT": null,
+   "CPAY": null,
+   "SPCX": null,
+   "EXPE": null,
+   "SNDK": null,
+   "MPWR": null,
+   "KEYS": null,
+   "MSTR": "분석 이후 내년 EPS 추정치 +35.4%",
+   "CRCL": null
+  },
+  "reused": {
+   "NVDA": "2026-11-01",
+   "ADBE": "2026-10-23",
+   "FIX": "2026-10-27",
+   "RDDT": "2026-11-01",
+   "CPAY": "2026-10-11",
+   "SPCX": "2026-10-26",
+   "EXPE": "2026-10-11",
+   "SNDK": "2026-11-02",
+   "MPWR": "2026-11-01",
+   "KEYS": "2026-10-24",
+   "CRCL": "2026-10-11"
+  },
+  "dossiers": [
+   {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "IT·기술",
+    "industry": "Semiconductors",
+    "as_of": "2026-11-03",
+    "price": 202.06,
+    "market_cap_b": 4879.14,
+    "valuation": {
+     "trailing_pe": 25.54488,
+     "forward_pe": 12.696517,
+     "peg": 0.2496,
+     "pe_trailing_gaap": 25.5,
+     "pe_current_fy": 21.7,
+     "pe_next_fy": 12.7,
+     "pe_ntm_est": 14.0,
+     "eps_current_fy": 9.31242,
+     "eps_next_fy": 15.9146,
+     "eps_ntm_est": 14.41,
+     "forward_pe_yahoo": 12.7,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 2.57,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 328.95346,
+     "analyst_rating_mean_1buy_5sell": 1.29032,
+     "analysts": 58.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 12.84835,
+     "mean": 15.9146,
+     "high": 18.746,
+     "spread_pct": 37.1
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 74.7,
+     "op_margin_pct": 66.2,
+     "roe_pct": 117.2,
+     "revenue_growth_last_q_yoy_pct": 105.9,
+     "eps_growth_last_q_yoy_pct": 127.8,
+     "eps_growth_est_this_fy_pct": 95.2,
+     "eps_growth_est_next_fy_pct": 70.9
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 127.01,
+     "sbc_ttm_b": 7.24,
+     "buyback_ttm_b": 55.31,
+     "fcf_margin_pct": 41.9,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 302.97,
+     "net_debt_to_ebitda": -0.12,
+     "share_count_change_pct": -0.82,
+     "share_count_span": "2025-07→2026-07"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 15.9146,
+     "chg_7d_pct": 0.0,
+     "chg_30d_pct": 1.48,
+     "chg_90d_pct": 24.19,
+     "up_revisions_30d": 7.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-07",
+      "2025-10",
+      "2026-01",
+      "2026-04",
+      "2026-07"
+     ],
+     "revenue_b": [
+      46.74,
+      57.01,
+      68.13,
+      81.61,
+      96.22
+     ],
+     "op_margin_pct": [
+      60.8,
+      63.2,
+      65.0,
+      65.6,
+      66.2
+     ],
+     "diluted_eps": [
+      1.08,
+      1.3,
+      1.76,
+      2.39,
+      2.46
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2023-01",
+      26.97
+     ],
+     [
+      "2024-01",
+      60.92
+     ],
+     [
+      "2025-01",
+      130.5
+     ],
+     [
+      "2026-01",
+      215.94
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-10",
+      "actual": 1.3,
+      "estimate": 1.25647,
+      "surprise_pct": 3.5
+     },
+     {
+      "quarter": "2026-01",
+      "actual": 1.62,
+      "estimate": 1.53812,
+      "surprise_pct": 5.3
+     },
+     {
+      "quarter": "2026-04",
+      "actual": 1.87,
+      "estimate": 1.77191,
+      "surprise_pct": 5.5
+     },
+     {
+      "quarter": "2026-07",
+      "actual": 2.22,
+      "estimate": 2.09113,
+      "surprise_pct": 6.2
+     }
+    ],
+    "next_earnings": "2026-11-17",
+    "return_1y_pct": -2.1,
+    "from_52w_high_pct": -15.5,
+    "quant_score": {
+     "score": 82.9,
+     "quality": 96,
+     "health": 71,
+     "value": 73,
+     "revisions": 88,
+     "score_before": 79.1
+    },
+    "data_conflicts": [
+     {
+      "metric": "FCF 마진(TTM)",
+      "values": {
+       "현금흐름표 4분기 합계": "41.9%",
+       "Yahoo 요약(levered FCF)": "13.8%"
+      },
+      "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+     }
+    ],
+    "cycle_check": null,
+    "dashboard_signals": [
+     "M1 대가 상위보유: Chase Coleman (+3점)",
+     "M1 대가 최근분기 매수: Cathie Wood (+5점)"
+    ],
+    "holding": {
+     "added_date": "2026-09-13",
+     "added_price": 218.29,
+     "return_since_add_pct": -7.4,
+     "original_thesis": "AI 인프라 사이클의 사실상 독점 공급자로 분기 매출이 1년 만에 2배(46.7B→96.2B)가 됐는데 주가는 1년간 +23%에 그쳐, 선행 PER 14배(PEG 0.46)까지 멀티플이 압축된 '고성장 + 비(非)고평가' 조합이다.",
+     "thesis_breakers": [
+      "분기 매출의 전분기 대비 증가율이 2개 분기 연속 5% 미만으로 둔화되거나 가이던스가 컨센서스를 하회하는 경우",
+      "GAAP 총마진이 70% 아래로 하락하고 경영진이 원가 전가 실패를 인정하는 경우",
+      "차기 회계연도 EPS 컨센서스가 2개 분기 연속 하향(상향 건수 < 하향 건수)으로 전환되는 경우",
+      "재고와 구매 약정은 계속 늘어나는데 데이터센터 매출 성장률이 함께 둔화되는 조합이 나타나는 경우",
+      "상위 고객 중 한 곳이 자체 ASIC 비중 대폭 확대로 엔비디아 물량을 축소한다고 공식화하는 경우",
+      "하이퍼스케일러 합산 2027년 CAPEX 가이던스가 전년 대비 감소로 제시되는 경우"
+     ],
+     "last_thesis_status": "유효",
+     "last_conviction": 3
+    }
+   },
+   {
+    "ticker": "ADBE",
+    "name": "Adobe Inc.",
+    "sector": "IT·기술",
+    "industry": "Software - Application",
+    "as_of": "2026-11-03",
+    "price": 251.47,
+    "market_cap_b": 97.87,
+    "valuation": {
+     "trailing_pe": 14.040759,
+     "forward_pe": 9.168054,
+     "peg": 0.6046,
+     "pe_trailing_gaap": 14.0,
+     "pe_current_fy": 10.3,
+     "pe_next_fy": 9.1,
+     "pe_ntm_est": 9.2,
+     "eps_current_fy": 24.47602,
+     "eps_next_fy": 27.50756,
+     "eps_ntm_est": 27.3,
+     "forward_pe_yahoo": 9.2,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 10.1,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 272.31375,
+     "analyst_rating_mean_1buy_5sell": 2.92308,
+     "analysts": 32.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 22.67,
+     "mean": 27.50756,
+     "high": 29.19,
+     "spread_pct": 23.7
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 89.3,
+     "op_margin_pct": 34.8,
+     "roe_pct": 61.9,
+     "revenue_growth_last_q_yoy_pct": 12.9,
+     "eps_growth_last_q_yoy_pct": 10.5,
+     "eps_growth_est_this_fy_pct": 16.9,
+     "eps_growth_est_next_fy_pct": 12.4
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 10.59,
+     "sbc_ttm_b": 2.07,
+     "buyback_ttm_b": 9.29,
+     "fcf_margin_pct": 40.8,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 25.97,
+     "net_debt_to_ebitda": 0.12,
+     "share_count_change_pct": -5.0,
+     "share_count_span": "2025-08→2026-08"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 27.50756,
+     "chg_7d_pct": 0.0,
+     "chg_30d_pct": -0.11,
+     "chg_90d_pct": 0.58,
+     "up_revisions_30d": 21.0,
+     "down_revisions_30d": 10.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-08",
+      "2025-11",
+      "2026-02",
+      "2026-05",
+      "2026-08"
+     ],
+     "revenue_b": [
+      5.99,
+      6.19,
+      6.4,
+      6.62,
+      6.76
+     ],
+     "op_margin_pct": [
+      36.3,
+      36.5,
+      37.8,
+      33.8,
+      34.8
+     ],
+     "diluted_eps": [
+      4.18,
+      4.45,
+      4.6,
+      4.25,
+      4.62
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-11",
+      17.61
+     ],
+     [
+      "2023-11",
+      19.41
+     ],
+     [
+      "2024-11",
+      21.5
+     ],
+     [
+      "2025-11",
+      23.77
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-11",
+      "actual": 5.5,
+      "estimate": 5.39763,
+      "surprise_pct": 1.9
+     },
+     {
+      "quarter": "2026-02",
+      "actual": 6.06,
+      "estimate": 5.87314,
+      "surprise_pct": 3.2
+     },
+     {
+      "quarter": "2026-05",
+      "actual": 5.96,
+      "estimate": 5.81474,
+      "surprise_pct": 2.5
+     },
+     {
+      "quarter": "2026-08",
+      "actual": 6.13,
+      "estimate": 6.08663,
+      "surprise_pct": 0.7
+     }
+    ],
+    "next_earnings": "2026-12-09",
+    "return_1y_pct": -25.5,
+    "from_52w_high_pct": -29.7,
+    "quant_score": {
+     "score": 72.2,
+     "quality": 82,
+     "health": 69,
+     "value": 91,
+     "revisions": 50,
+     "score_before": 72.0
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": {
+     "added_date": "2026-10-11",
+     "added_price": 242.27,
+     "return_since_add_pct": 3.8,
+     "original_thesis": "TTM FCF 마진 40.8%, FCF 수익률 11.2%, 희석주식 연 6.8% 감소를 갖춘 현금창출 기업입니다. 그런데 'AI가 크리에이티브 툴을 상품화한다'는 우려와 유기적 ARR 둔화(FY26 목표에서 Semrush를 빼면 약 8.3%)가 겹쳐 향후 12개월 추정 EPS 기준 8.9배까지 내려왔습니다. 12월 9일 FY27 가이던스가 리베이스 없이 나오면 기대값이 매수 쪽에 있는 '값싼 논쟁주'입니다.",
+     "thesis_breakers": [
+      "FY27 총 ending ARR 성장 목표가 8% 미만(Semrush 효과 소멸 후 순수 유기 기준)이거나, 실제 총 ARR 성장률이 2개 분기 연속 8% 미만인 경우.",
+      "FY27 non-GAAP EPS 가이던스 중간값이 25달러 미만(FY26 24.45~24.50달러 대비 사실상 정체)인 경우.",
+      "non-GAAP 영업이익률이 40% 미만으로 가이던스되거나, TTM FCF 마진이 32% 미만으로 2개 분기 연속 떨어지는 경우.",
+      "AI-first ARR 성장률이 전년 대비 50% 미만으로 꺾이거나, 프리미엄 MAU 증가에도 순신규 ARR이 2개 분기 더 전년 대비 감소하는 경우.",
+      "자사주 매입이 FCF의 50% 미만으로 줄거나, 대형 현금 인수로 희석주식 감소 추세(현재 연 −6.8%)가 멈추는 경우.",
+      "신임 CEO 체제에서 ARR·MAU 등 핵심 지표 공시가 축소되거나 정의가 바뀌어 투명성이 후퇴하는 경우."
+     ],
+     "last_thesis_status": "유효",
+     "last_conviction": 3
+    }
+   },
+   {
+    "ticker": "FIX",
+    "name": "Comfort Systems USA, Inc.",
+    "sector": "산업재",
+    "industry": "Engineering & Construction",
+    "as_of": "2026-11-03",
+    "price": 1200.14,
+    "market_cap_b": 42.24,
+    "valuation": {
+     "trailing_pe": 25.920952,
+     "forward_pe": 17.964754,
+     "peg": 0.3811,
+     "pe_trailing_gaap": 25.9,
+     "pe_current_fy": 23.6,
+     "pe_next_fy": 18.0,
+     "pe_ntm_est": 18.7,
+     "eps_current_fy": 50.93393,
+     "eps_next_fy": 66.80526,
+     "eps_ntm_est": 64.29,
+     "forward_pe_yahoo": 18.0,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 5.6,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 1916.875,
+     "analyst_rating_mean_1buy_5sell": 1.2,
+     "analysts": 8.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 62.75,
+     "mean": 66.80526,
+     "high": 71.32,
+     "spread_pct": 12.8
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 25.7,
+     "op_margin_pct": 16.5,
+     "roe_pct": 58.6,
+     "revenue_growth_last_q_yoy_pct": 53.7,
+     "eps_growth_last_q_yoy_pct": 68.6,
+     "eps_growth_est_this_fy_pct": 76.4,
+     "eps_growth_est_next_fy_pct": 31.2
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 2.44,
+     "sbc_ttm_b": 0.04,
+     "buyback_ttm_b": 0.44,
+     "fcf_margin_pct": 19.5,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 12.54,
+     "net_debt_to_ebitda": -0.81,
+     "share_count_change_pct": -0.2,
+     "share_count_span": "2025-09→2026-09"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 66.80526,
+     "chg_7d_pct": 10.93,
+     "chg_30d_pct": 11.01,
+     "chg_90d_pct": 11.26,
+     "up_revisions_30d": 7.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      2.45,
+      2.65,
+      2.87,
+      3.27,
+      3.77
+     ],
+     "op_margin_pct": [
+      15.4,
+      16.1,
+      16.9,
+      17.1,
+      16.5
+     ],
+     "diluted_eps": [
+      8.25,
+      9.37,
+      10.51,
+      12.53,
+      13.91
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      4.14
+     ],
+     [
+      "2023-12",
+      5.21
+     ],
+     [
+      "2024-12",
+      7.03
+     ],
+     [
+      "2025-12",
+      9.1
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-12",
+      "actual": 9.37,
+      "estimate": 6.75492,
+      "surprise_pct": 38.7
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 10.51,
+      "estimate": 6.80521,
+      "surprise_pct": 54.4
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 12.53,
+      "estimate": 10.45514,
+      "surprise_pct": 19.9
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 13.91,
+      "estimate": 12.85102,
+      "surprise_pct": 8.2
+     }
+    ],
+    "next_earnings": "2026-10-22",
+    "return_1y_pct": 23.0,
+    "from_52w_high_pct": -41.9,
+    "quant_score": {
+     "score": 80.6,
+     "quality": 67,
+     "health": 74,
+     "value": 85,
+     "revisions": 92,
+     "score_before": 80.0
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "RDDT",
+    "name": "Reddit, Inc.",
+    "sector": "커뮤니케이션",
+    "industry": "Internet Content & Information",
+    "as_of": "2026-11-03",
+    "price": 90.97,
+    "market_cap_b": 17.57,
+    "valuation": {
+     "trailing_pe": 18.565306,
+     "forward_pe": 9.737671,
+     "peg": 0.4576,
+     "pe_trailing_gaap": 18.6,
+     "pe_current_fy": 16.6,
+     "pe_next_fy": 12.8,
+     "pe_ntm_est": 13.3,
+     "eps_current_fy": 5.46621,
+     "eps_next_fy": 7.10738,
+     "eps_ntm_est": 6.85,
+     "forward_pe_yahoo": 9.7,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 6.3,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 165.84666,
+     "analyst_rating_mean_1buy_5sell": 2.14706,
+     "analysts": 30.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 4.35,
+     "mean": 7.10738,
+     "high": 8.59,
+     "spread_pct": 59.7
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 91.5,
+     "op_margin_pct": 29.2,
+     "roe_pct": 32.0,
+     "revenue_growth_last_q_yoy_pct": 53.0,
+     "eps_growth_last_q_yoy_pct": 74.9,
+     "eps_growth_est_this_fy_pct": 70.4,
+     "eps_growth_est_next_fy_pct": 20.9
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 1.02,
+     "sbc_ttm_b": 0.34,
+     "buyback_ttm_b": null,
+     "fcf_margin_pct": 38.8,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": null,
+     "net_debt_to_ebitda": -3.25,
+     "share_count_change_pct": 2.8,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 7.10738,
+     "chg_7d_pct": 0.07,
+     "chg_30d_pct": 0.55,
+     "chg_90d_pct": 8.63,
+     "up_revisions_30d": 2.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      0.58,
+      0.73,
+      0.66,
+      0.8,
+      null
+     ],
+     "op_margin_pct": [
+      23.7,
+      31.9,
+      27.6,
+      28.8,
+      null
+     ],
+     "diluted_eps": [
+      0.8,
+      1.24,
+      1.01,
+      1.25,
+      1.4
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      0.67
+     ],
+     [
+      "2023-12",
+      0.8
+     ],
+     [
+      "2024-12",
+      1.3
+     ],
+     [
+      "2025-12",
+      2.2
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-12",
+      "actual": 1.24,
+      "estimate": 0.93136,
+      "surprise_pct": 33.1
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 1.01,
+      "estimate": 0.56388,
+      "surprise_pct": 79.1
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 1.25,
+      "estimate": 0.96481,
+      "surprise_pct": 29.6
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 1.4,
+      "estimate": 1.3258,
+      "surprise_pct": 5.6
+     }
+    ],
+    "next_earnings": "2026-10-29",
+    "return_1y_pct": -55.6,
+    "from_52w_high_pct": -64.9,
+    "quant_score": {
+     "score": 79.8,
+     "quality": 86,
+     "health": 77,
+     "value": 74,
+     "revisions": 82,
+     "score_before": 79.0
+    },
+    "data_conflicts": [
+     {
+      "metric": "다음 회계연도 EPS",
+      "values": {
+       "forwardEps": 9.34207,
+       "추정치 추이(+1y)": 7.10738
+      },
+      "why": "추정 PER 기준 EPS 불일치"
+     }
+    ],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "CPAY",
+    "name": "Corpay, Inc.",
+    "sector": "IT·기술",
+    "industry": "Software - Infrastructure",
+    "as_of": "2026-11-03",
+    "price": 409.29,
+    "market_cap_b": 26.87,
+    "valuation": {
+     "trailing_pe": 24.88085,
+     "forward_pe": 12.956582,
+     "peg": 0.7661,
+     "pe_trailing_gaap": 24.9,
+     "pe_current_fy": 14.9,
+     "pe_next_fy": 13.0,
+     "pe_ntm_est": 13.2,
+     "eps_current_fy": 27.42799,
+     "eps_next_fy": 31.58935,
+     "eps_ntm_est": 30.93,
+     "forward_pe_yahoo": 13.0,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 6.3,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 460.66666,
+     "analyst_rating_mean_1buy_5sell": 1.6875,
+     "analysts": 15.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 29.42,
+     "mean": 31.58935,
+     "high": 34.5,
+     "spread_pct": 16.1
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 80.5,
+     "op_margin_pct": 46.9,
+     "roe_pct": 29.2,
+     "revenue_growth_last_q_yoy_pct": 21.5,
+     "eps_growth_last_q_yoy_pct": -7.0,
+     "eps_growth_est_this_fy_pct": 28.3,
+     "eps_growth_est_next_fy_pct": 15.2
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 1.64,
+     "sbc_ttm_b": 0.11,
+     "buyback_ttm_b": 1.8,
+     "fcf_margin_pct": 32.6,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 5.02,
+     "net_debt_to_ebitda": 2.7,
+     "share_count_change_pct": -7.02,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 31.58935,
+     "chg_7d_pct": 0.13,
+     "chg_30d_pct": 0.45,
+     "chg_90d_pct": 3.25,
+     "up_revisions_30d": 2.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-06",
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06"
+     ],
+     "revenue_b": [
+      1.1,
+      1.17,
+      1.25,
+      1.26,
+      1.34
+     ],
+     "op_margin_pct": [
+      43.5,
+      44.6,
+      41.8,
+      40.8,
+      35.2
+     ],
+     "diluted_eps": [
+      3.98,
+      3.91,
+      3.75,
+      5.07,
+      3.7
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      3.43
+     ],
+     [
+      "2023-12",
+      3.76
+     ],
+     [
+      "2024-12",
+      3.97
+     ],
+     [
+      "2025-12",
+      4.53
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-09",
+      "actual": 5.7,
+      "estimate": 5.64252,
+      "surprise_pct": 1.0
+     },
+     {
+      "quarter": "2025-12",
+      "actual": 6.04,
+      "estimate": 5.94046,
+      "surprise_pct": 1.7
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 5.8,
+      "estimate": 5.4702,
+      "surprise_pct": 6.0
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 7.0,
+      "estimate": 6.58496,
+      "surprise_pct": 6.3
+     }
+    ],
+    "next_earnings": "2026-11-04",
+    "return_1y_pct": 55.4,
+    "from_52w_high_pct": -3.8,
+    "quant_score": {
+     "score": 72.8,
+     "quality": 83,
+     "health": 45,
+     "value": 81,
+     "revisions": 76,
+     "score_before": 73.7
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [
+     "M1 대가 최근분기 매수: Chase Coleman (+5점)"
+    ],
+    "holding": null
+   },
+   {
+    "ticker": "SPCX",
+    "name": "Space Exploration Technologies ",
+    "sector": "산업재",
+    "industry": "Aerospace & Defense",
+    "as_of": "2026-11-03",
+    "price": 136.37,
+    "market_cap_b": 1852.05,
+    "valuation": {
+     "trailing_pe": 592.913,
+     "forward_pe": 53.17232,
+     "peg": null,
+     "pe_trailing_gaap": 592.9,
+     "pe_current_fy": 614.3,
+     "pe_next_fy": 33.8,
+     "pe_ntm_est": 39.8,
+     "eps_current_fy": 0.22199,
+     "eps_next_fy": 4.0304,
+     "eps_ntm_est": 3.43,
+     "forward_pe_yahoo": 53.2,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": -1.96,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 257.11444,
+     "analyst_rating_mean_1buy_5sell": 1.71795,
+     "analysts": 36.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 0.34,
+     "mean": 4.0304,
+     "high": 13.49,
+     "spread_pct": 326.3
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 56.8,
+     "op_margin_pct": 27.6,
+     "roe_pct": null,
+     "revenue_growth_last_q_yoy_pct": 161.4,
+     "eps_growth_last_q_yoy_pct": null,
+     "eps_growth_est_this_fy_pct": null,
+     "eps_growth_est_next_fy_pct": 2483.8
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": -40.16,
+     "sbc_ttm_b": 4.74,
+     "buyback_ttm_b": 5.03,
+     "fcf_margin_pct": -122.2,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 32.04,
+     "net_debt_to_ebitda": -4.31,
+     "share_count_change_pct": 3.85,
+     "share_count_span": "2025-12→2026-09"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 4.0304,
+     "chg_7d_pct": 2.56,
+     "chg_30d_pct": 116.14,
+     "chg_90d_pct": 607.65,
+     "up_revisions_30d": 4.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      5.58,
+      4.96,
+      4.69,
+      7.81,
+      14.57
+     ],
+     "op_margin_pct": [
+      0.1,
+      -27.2,
+      -41.6,
+      -1.8,
+      19.2
+     ],
+     "diluted_eps": [
+      -0.099368,
+      null,
+      -0.41,
+      -0.09,
+      0.35
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2023-12",
+      10.39
+     ],
+     [
+      "2024-12",
+      14.02
+     ],
+     [
+      "2025-12",
+      18.67
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2026-03",
+      "actual": -1.27,
+      "estimate": null,
+      "surprise_pct": null
+     },
+     {
+      "quarter": "2026-06",
+      "actual": -0.09,
+      "estimate": -0.28931,
+      "surprise_pct": 68.9
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 0.35,
+      "estimate": 0.16471,
+      "surprise_pct": 112.5
+     }
+    ],
+    "next_earnings": "2026-10-20",
+    "return_1y_pct": -15.3,
+    "from_52w_high_pct": -35.5,
+    "quant_score": {
+     "score": 60.4,
+     "quality": 64,
+     "health": 52,
+     "value": 19,
+     "revisions": 97,
+     "score_before": 70.6
+    },
+    "data_conflicts": [
+     {
+      "metric": "다음 회계연도 EPS",
+      "values": {
+       "forwardEps": 2.56468,
+       "추정치 추이(+1y)": 4.0304
+      },
+      "why": "추정 PER 기준 EPS 불일치"
+     }
+    ],
+    "cycle_check": null,
+    "dashboard_signals": [
+     "M1 대가 상위보유: Cathie Wood (+3점)",
+     "M1 대가 최근분기 매수: Cathie Wood (+5점)"
+    ],
+    "holding": null
+   },
+   {
+    "ticker": "EXPE",
+    "name": "Expedia Group, Inc.",
+    "sector": "경기소비재",
+    "industry": "Travel Services",
+    "as_of": "2026-11-03",
+    "price": 298.99,
+    "market_cap_b": 35.88,
+    "valuation": {
+     "trailing_pe": 18.675201,
+     "forward_pe": 12.166167,
+     "peg": 0.751,
+     "pe_trailing_gaap": 18.7,
+     "pe_current_fy": 14.3,
+     "pe_next_fy": 12.2,
+     "pe_ntm_est": 12.5,
+     "eps_current_fy": 20.9045,
+     "eps_next_fy": 24.57553,
+     "eps_ntm_est": 23.99,
+     "forward_pe_yahoo": 12.2,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 13.6,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 337.79413,
+     "analyst_rating_mean_1buy_5sell": 2.15789,
+     "analysts": 34.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 20.18,
+     "mean": 24.57553,
+     "high": 30.89,
+     "spread_pct": 43.6
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 90.4,
+     "op_margin_pct": 19.0,
+     "roe_pct": 89.5,
+     "revenue_growth_last_q_yoy_pct": 14.0,
+     "eps_growth_last_q_yoy_pct": 188.7,
+     "eps_growth_est_this_fy_pct": 31.8,
+     "eps_growth_est_next_fy_pct": 17.6
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 4.46,
+     "sbc_ttm_b": 0.41,
+     "buyback_ttm_b": 1.92,
+     "fcf_margin_pct": 28.4,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 15.7,
+     "net_debt_to_ebitda": -0.5,
+     "share_count_change_pct": -3.61,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 24.57553,
+     "chg_7d_pct": 0.11,
+     "chg_30d_pct": 0.45,
+     "chg_90d_pct": 7.29,
+     "up_revisions_30d": 4.0,
+     "down_revisions_30d": 1.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-06",
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06"
+     ],
+     "revenue_b": [
+      3.79,
+      4.41,
+      3.55,
+      3.43,
+      4.32
+     ],
+     "op_margin_pct": [
+      14.0,
+      25.6,
+      15.4,
+      7.1,
+      19.0
+     ],
+     "diluted_eps": [
+      2.48,
+      7.33,
+      1.6,
+      -0.05,
+      7.16
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      11.67
+     ],
+     [
+      "2023-12",
+      12.84
+     ],
+     [
+      "2024-12",
+      13.69
+     ],
+     [
+      "2025-12",
+      14.73
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-09",
+      "actual": 7.57,
+      "estimate": 6.94574,
+      "surprise_pct": 9.0
+     },
+     {
+      "quarter": "2025-12",
+      "actual": 3.78,
+      "estimate": 3.36869,
+      "surprise_pct": 12.2
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 1.96,
+      "estimate": 1.37698,
+      "surprise_pct": 42.3
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 5.76,
+      "estimate": 5.25301,
+      "surprise_pct": 9.6
+     }
+    ],
+    "next_earnings": "2026-11-04",
+    "return_1y_pct": 39.7,
+    "from_52w_high_pct": -11.7,
+    "quant_score": {
+     "score": 78.2,
+     "quality": 78,
+     "health": 73,
+     "value": 88,
+     "revisions": 74,
+     "score_before": 77.5
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "SNDK",
+    "name": "Sandisk Corporation",
+    "sector": "IT·기술",
+    "industry": "Computer Hardware",
+    "as_of": "2026-11-03",
+    "price": 1075.08,
+    "market_cap_b": 152.97,
+    "valuation": {
+     "trailing_pe": 8.592391,
+     "forward_pe": 3.742553,
+     "peg": null,
+     "pe_trailing_gaap": 8.6,
+     "pe_current_fy": 4.7,
+     "pe_next_fy": 3.7,
+     "pe_ntm_est": 4.3,
+     "eps_current_fy": 227.83615,
+     "eps_next_fy": 288.22943,
+     "eps_ntm_est": 248.22,
+     "forward_pe_yahoo": 3.7,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 8.5,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 2029.0416,
+     "analyst_rating_mean_1buy_5sell": 1.52,
+     "analysts": 24.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 243.95,
+     "mean": 288.22943,
+     "high": 356.85,
+     "spread_pct": 39.2
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 80.0,
+     "op_margin_pct": 79.6,
+     "roe_pct": 141.2,
+     "revenue_growth_last_q_yoy_pct": 377.9,
+     "eps_growth_last_q_yoy_pct": 6913.3,
+     "eps_growth_est_this_fy_pct": 221.4,
+     "eps_growth_est_next_fy_pct": 26.5
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 11.49,
+     "sbc_ttm_b": 0.23,
+     "buyback_ttm_b": null,
+     "fcf_margin_pct": 48.3,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": null,
+     "net_debt_to_ebitda": -0.24,
+     "share_count_change_pct": 0.0,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 288.22943,
+     "chg_7d_pct": 8.24,
+     "chg_30d_pct": 9.39,
+     "chg_90d_pct": 12.75,
+     "up_revisions_30d": 1.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      2.31,
+      3.02,
+      5.95,
+      8.96,
+      null
+     ],
+     "op_margin_pct": [
+      8.3,
+      35.5,
+      70.0,
+      78.5,
+      null
+     ],
+     "diluted_eps": [
+      0.75,
+      5.15,
+      23.03,
+      43.97,
+      52.6
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2023-06",
+      6.09
+     ],
+     [
+      "2024-06",
+      6.66
+     ],
+     [
+      "2025-06",
+      7.36
+     ],
+     [
+      "2026-06",
+      20.25
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-12",
+      "actual": 6.2,
+      "estimate": 3.54338,
+      "surprise_pct": 75.0
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 23.41,
+      "estimate": 14.66111,
+      "surprise_pct": 59.7
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 39.25,
+      "estimate": 34.515,
+      "surprise_pct": 13.7
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 49.51,
+      "estimate": 46.40613,
+      "surprise_pct": 6.7
+     }
+    ],
+    "next_earnings": "2026-10-29",
+    "return_1y_pct": 419.3,
+    "from_52w_high_pct": -54.0,
+    "quant_score": {
+     "score": 86.4,
+     "quality": 96,
+     "health": 72,
+     "value": 81,
+     "revisions": 92,
+     "score_before": 86.1
+    },
+    "data_conflicts": [],
+    "cycle_check": "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 80% vs 최근 4년 평균 10%",
+    "dashboard_signals": [
+     "M3 실적 개선 기업 (+3점)"
+    ],
+    "holding": null
+   },
+   {
+    "ticker": "MPWR",
+    "name": "Monolithic Power Systems, Inc.",
+    "sector": "IT·기술",
+    "industry": "Semiconductors",
+    "as_of": "2026-11-03",
+    "price": 1243.95,
+    "market_cap_b": 60.69,
+    "valuation": {
+     "trailing_pe": 68.19901,
+     "forward_pe": 26.841278,
+     "peg": 0.8815,
+     "pe_trailing_gaap": 68.2,
+     "pe_current_fy": 42.5,
+     "pe_next_fy": 27.5,
+     "pe_ntm_est": 29.1,
+     "eps_current_fy": 29.24384,
+     "eps_next_fy": 45.29099,
+     "eps_ntm_est": 42.74,
+     "forward_pe_yahoo": 26.8,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 1,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 1822.6,
+     "analyst_rating_mean_1buy_5sell": 1.17647,
+     "analysts": 15.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 30.53952,
+     "mean": 45.29099,
+     "high": 48.45,
+     "spread_pct": 39.5
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 55.3,
+     "op_margin_pct": 29.7,
+     "roe_pct": 24.5,
+     "revenue_growth_last_q_yoy_pct": 63.1,
+     "eps_growth_last_q_yoy_pct": 48.5,
+     "eps_growth_est_this_fy_pct": 64.6,
+     "eps_growth_est_next_fy_pct": 54.9
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 0.58,
+     "sbc_ttm_b": 0.21,
+     "buyback_ttm_b": null,
+     "fcf_margin_pct": 15.9,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": null,
+     "net_debt_to_ebitda": -0.94,
+     "share_count_change_pct": 2.61,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 45.29099,
+     "chg_7d_pct": 28.41,
+     "chg_30d_pct": 29.88,
+     "chg_90d_pct": 30.17,
+     "up_revisions_30d": 1.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      0.74,
+      0.75,
+      0.8,
+      0.98,
+      null
+     ],
+     "op_margin_pct": [
+      26.5,
+      26.6,
+      30.0,
+      31.0,
+      null
+     ],
+     "diluted_eps": [
+      3.71,
+      3.46,
+      3.92,
+      5.22,
+      5.51
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      1.79
+     ],
+     [
+      "2023-12",
+      1.82
+     ],
+     [
+      "2024-12",
+      2.21
+     ],
+     [
+      "2025-12",
+      2.79
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-12",
+      "actual": 4.79,
+      "estimate": 4.73649,
+      "surprise_pct": 1.1
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 5.1,
+      "estimate": 4.90131,
+      "surprise_pct": 4.0
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 6.5,
+      "estimate": 5.88072,
+      "surprise_pct": 10.5
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 8.19,
+      "estimate": 7.74983,
+      "surprise_pct": 5.7
+     }
+    ],
+    "next_earnings": "2026-10-29",
+    "return_1y_pct": 24.7,
+    "from_52w_high_pct": -26.2,
+    "quant_score": {
+     "score": 72.5,
+     "quality": 77,
+     "health": 75,
+     "value": 39,
+     "revisions": 96,
+     "score_before": 74.0
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "KEYS",
+    "name": "Keysight Technologies Inc.",
+    "sector": "IT·기술",
+    "industry": "Scientific & Technical Instruments",
+    "as_of": "2026-11-03",
+    "price": 298.94,
+    "market_cap_b": 50.89,
+    "valuation": {
+     "trailing_pe": 40.45196,
+     "forward_pe": 21.45389,
+     "peg": 0.6091,
+     "pe_trailing_gaap": 40.5,
+     "pe_current_fy": 26.1,
+     "pe_next_fy": 21.5,
+     "pe_ntm_est": 21.5,
+     "eps_current_fy": 11.47402,
+     "eps_next_fy": 13.93407,
+     "eps_ntm_est": 13.93,
+     "forward_pe_yahoo": 21.5,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 2.74,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 418.0,
+     "analyst_rating_mean_1buy_5sell": 1.58333,
+     "analysts": 12.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 12.76602,
+     "mean": 13.93407,
+     "high": 15.76,
+     "spread_pct": 21.5
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 63.3,
+     "op_margin_pct": 25.7,
+     "roe_pct": 20.9,
+     "revenue_growth_last_q_yoy_pct": 36.5,
+     "eps_growth_last_q_yoy_pct": 109.1,
+     "eps_growth_est_this_fy_pct": 60.2,
+     "eps_growth_est_next_fy_pct": 21.4
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 1.47,
+     "sbc_ttm_b": 0.21,
+     "buyback_ttm_b": 0.62,
+     "fcf_margin_pct": 22.3,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 6.58,
+     "net_debt_to_ebitda": 0.09,
+     "share_count_change_pct": -0.92,
+     "share_count_span": "2025-07→2026-07"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 13.93407,
+     "chg_7d_pct": 0.0,
+     "chg_30d_pct": 0.45,
+     "chg_90d_pct": 16.9,
+     "up_revisions_30d": 2.0,
+     "down_revisions_30d": 0.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-07",
+      "2025-10",
+      "2026-01",
+      "2026-04",
+      "2026-07"
+     ],
+     "revenue_b": [
+      1.35,
+      1.42,
+      1.6,
+      1.72,
+      1.85
+     ],
+     "op_margin_pct": [
+      17.3,
+      15.3,
+      15.5,
+      23.7,
+      25.0
+     ],
+     "diluted_eps": [
+      1.1,
+      1.33,
+      1.63,
+      2.02,
+      2.3
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-10",
+      5.42
+     ],
+     [
+      "2023-10",
+      5.46
+     ],
+     [
+      "2024-10",
+      4.98
+     ],
+     [
+      "2025-10",
+      5.38
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-10",
+      "actual": 1.91,
+      "estimate": 1.85411,
+      "surprise_pct": 3.0
+     },
+     {
+      "quarter": "2026-01",
+      "actual": 2.17,
+      "estimate": 1.9954,
+      "surprise_pct": 8.8
+     },
+     {
+      "quarter": "2026-04",
+      "actual": 2.87,
+      "estimate": 2.32041,
+      "surprise_pct": 23.7
+     },
+     {
+      "quarter": "2026-07",
+      "actual": 3.07,
+      "estimate": 2.48193,
+      "surprise_pct": 23.7
+     }
+    ],
+    "next_earnings": "2026-11-19",
+    "return_1y_pct": 60.6,
+    "from_52w_high_pct": -23.0,
+    "quant_score": {
+     "score": 71.9,
+     "quality": 75,
+     "health": 69,
+     "value": 58,
+     "revisions": 83,
+     "score_before": 73.4
+    },
+    "data_conflicts": [],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "MSTR",
+    "name": "Strategy Inc",
+    "sector": "IT·기술",
+    "industry": "Software - Application",
+    "as_of": "2026-11-03",
+    "price": 130.76,
+    "market_cap_b": 55.39,
+    "valuation": {
+     "trailing_pe": null,
+     "forward_pe": 5.524292,
+     "peg": null,
+     "pe_trailing_gaap": null,
+     "pe_current_fy": 12.2,
+     "pe_next_fy": 8.7,
+     "pe_ntm_est": 9.1,
+     "eps_current_fy": 10.7105,
+     "eps_next_fy": 15.05897,
+     "eps_ntm_est": 14.37,
+     "forward_pe_yahoo": 5.5,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": -0.07,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 234.26666,
+     "analyst_rating_mean_1buy_5sell": 1.26667,
+     "analysts": 15.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": -4.25,
+     "mean": 15.05897,
+     "high": 69.86,
+     "spread_pct": 492.1
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 67.8,
+     "op_margin_pct": 16670.9,
+     "roe_pct": -21.6,
+     "revenue_growth_last_q_yoy_pct": -2.5,
+     "eps_growth_last_q_yoy_pct": 431.4,
+     "eps_growth_est_this_fy_pct": null,
+     "eps_growth_est_next_fy_pct": 235.7
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": -21.75,
+     "sbc_ttm_b": 0.05,
+     "buyback_ttm_b": null,
+     "fcf_margin_pct": -8.3,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": null,
+     "net_debt_to_ebitda": null,
+     "share_count_change_pct": 32.26,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 15.05897,
+     "chg_7d_pct": 15.44,
+     "chg_30d_pct": 14.75,
+     "chg_90d_pct": 134.17,
+     "up_revisions_30d": 1.0,
+     "down_revisions_30d": 2.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06",
+      "2026-09"
+     ],
+     "revenue_b": [
+      0.13,
+      0.12,
+      0.12,
+      0.12,
+      null
+     ],
+     "op_margin_pct": [
+      -0.0,
+      -8.1,
+      -12.0,
+      -12.7,
+      null
+     ],
+     "diluted_eps": [
+      8.42,
+      -42.93,
+      -38.25,
+      -24.45,
+      44.75
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      0.5
+     ],
+     [
+      "2023-12",
+      0.5
+     ],
+     [
+      "2024-12",
+      0.46
+     ],
+     [
+      "2025-12",
+      0.48
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-12",
+      "actual": -42.93,
+      "estimate": -20.99,
+      "surprise_pct": -104.5
+     },
+     {
+      "quarter": "2026-03",
+      "actual": -38.25,
+      "estimate": -15.326,
+      "surprise_pct": -149.6
+     },
+     {
+      "quarter": "2026-06",
+      "actual": -24.45,
+      "estimate": 3.07433,
+      "surprise_pct": -895.3
+     },
+     {
+      "quarter": "2026-09",
+      "actual": 44.75,
+      "estimate": 22.88906,
+      "surprise_pct": 95.5
+     }
+    ],
+    "next_earnings": "2026-10-29",
+    "return_1y_pct": -50.6,
+    "from_52w_high_pct": -50.6,
+    "quant_score": {
+     "score": 53.6,
+     "quality": 49,
+     "health": 28,
+     "value": 51,
+     "revisions": 76,
+     "score_before": 63.3
+    },
+    "data_conflicts": [
+     {
+      "metric": "다음 회계연도 EPS",
+      "values": {
+       "forwardEps": 23.67,
+       "추정치 추이(+1y)": 15.05897
+      },
+      "why": "추정 PER 기준 EPS 불일치"
+     }
+    ],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   },
+   {
+    "ticker": "CRCL",
+    "name": "Circle Internet Group, Inc.",
+    "sector": "금융",
+    "industry": "Capital Markets",
+    "as_of": "2026-11-03",
+    "price": 72.08,
+    "market_cap_b": 18.3,
+    "valuation": {
+     "trailing_pe": 49.36986,
+     "forward_pe": 48.799313,
+     "peg": null,
+     "pe_trailing_gaap": 49.4,
+     "pe_current_fy": 64.9,
+     "pe_next_fy": 51.1,
+     "pe_ntm_est": 52.8,
+     "eps_current_fy": 1.11138,
+     "eps_next_fy": 1.41159,
+     "eps_ntm_est": 1.36,
+     "forward_pe_yahoo": 48.8,
+     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+     "fcf_yield_pct": 3.2,
+     "fcf_yield_basis": "AI 검증 확정값",
+     "analyst_target_mean": 107.47583,
+     "analyst_rating_mean_1buy_5sell": 2.24138,
+     "analysts": 24.0
+    },
+    "eps_estimate_range_next_fy": {
+     "low": 1.11,
+     "mean": 1.41159,
+     "high": 1.78,
+     "spread_pct": 47.5
+    },
+    "growth_profitability": {
+     "gross_margin_pct": 22.0,
+     "op_margin_pct": 4.9,
+     "roe_pct": 15.3,
+     "revenue_growth_last_q_yoy_pct": 6.6,
+     "eps_growth_last_q_yoy_pct": null,
+     "eps_growth_est_this_fy_pct": -51.0,
+     "eps_growth_est_next_fy_pct": 28.3
+    },
+    "cash_debt_dilution": {
+     "fcf_ttm_b": 0.71,
+     "sbc_ttm_b": 0.22,
+     "buyback_ttm_b": null,
+     "fcf_margin_pct": 23.9,
+     "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+     "revenue_ttm_b": 2.91,
+     "net_debt_to_ebitda": -7.49,
+     "share_count_change_pct": 10.53,
+     "share_count_span": "2025-06→2026-06"
+    },
+    "estimate_revisions_next_fy_eps": {
+     "current": 1.41159,
+     "chg_7d_pct": -1.3,
+     "chg_30d_pct": 1.66,
+     "chg_90d_pct": -5.74,
+     "up_revisions_30d": 6.0,
+     "down_revisions_30d": 1.0
+    },
+    "quarterly": {
+     "periods": [
+      "2025-06",
+      "2025-09",
+      "2025-12",
+      "2026-03",
+      "2026-06"
+     ],
+     "revenue_b": [
+      0.66,
+      0.74,
+      0.77,
+      0.69,
+      0.7
+     ],
+     "op_margin_pct": [
+      -49.6,
+      10.7,
+      7.3,
+      6.6,
+      4.8
+     ],
+     "diluted_eps": [
+      -4.48,
+      0.64,
+      0.43,
+      0.21,
+      0.18
+     ]
+    },
+    "annual_revenue_b": [
+     [
+      "2022-12",
+      0.77
+     ],
+     [
+      "2023-12",
+      1.45
+     ],
+     [
+      "2024-12",
+      1.68
+     ],
+     [
+      "2025-12",
+      2.75
+     ]
+    ],
+    "eps_surprises": [
+     {
+      "quarter": "2025-09",
+      "actual": 0.64,
+      "estimate": 0.18338,
+      "surprise_pct": 249.0
+     },
+     {
+      "quarter": "2025-12",
+      "actual": 0.43,
+      "estimate": 0.16199,
+      "surprise_pct": 165.5
+     },
+     {
+      "quarter": "2026-03",
+      "actual": 0.21,
+      "estimate": 0.1771,
+      "surprise_pct": 18.6
+     },
+     {
+      "quarter": "2026-06",
+      "actual": 0.18,
+      "estimate": 0.15958,
+      "surprise_pct": 12.8
+     }
+    ],
+    "next_earnings": "2026-11-04",
+    "return_1y_pct": -38.8,
+    "from_52w_high_pct": -45.7,
+    "quant_score": {
+     "score": 50.2,
+     "quality": 46,
+     "health": 78,
+     "value": 27,
+     "revisions": 55,
+     "score_before": 47.0
+    },
+    "data_conflicts": [
+     {
+      "metric": "FCF 마진(TTM)",
+      "values": {
+       "현금흐름표 4분기 합계": "24.4%",
+       "Yahoo 요약(levered FCF)": "7.1%"
+      },
+      "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+     }
+    ],
+    "cycle_check": null,
+    "dashboard_signals": [],
+    "holding": null
+   }
+  ],
+  "scores": {
+   "NVDA": {
+    "score": 82.9,
+    "quality": 96,
+    "health": 71,
+    "value": 73,
+    "revisions": 88,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 41.9,
+    "fcf_yield_pct": 2.57,
+    "net_debt_ebitda": -0.12,
+    "parts": {
+     "quality": {
+      "gross": 0.8726,
+      "op": 0.9846,
+      "roe": 0.98,
+      "fcf_margin": 0.9552238805970149,
+      "rev_growth": 0.9846,
+      "eps_growth": 0.9687
+     },
+     "health": {
+      "net_debt": 0.8533,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.7802,
+      "fcf_yield": 0.4444444444444444,
+      "peg": 0.9749
+     },
+     "revisions": 0.8816
+    },
+    "score_before": 79.1,
+    "rescored": {
+     "fcf_margin": 0.419,
+     "fcf_yield": 0.025699999999999997
+    }
+   },
+   "ADBE": {
+    "score": 72.2,
+    "quality": 82,
+    "health": 69,
+    "value": 91,
+    "revisions": 50,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 40.8,
+    "fcf_yield_pct": 10.1,
+    "net_debt_ebitda": 0.12,
+    "parts": {
+     "quality": {
+      "gross": 0.9653,
+      "op": 0.8127,
+      "roe": 0.903,
+      "fcf_margin": 0.9530916844349681,
+      "rev_growth": 0.6554,
+      "eps_growth": 0.6047
+     },
+     "health": {
+      "net_debt": 0.8202,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.8901,
+      "fcf_yield": 0.9666666666666667,
+      "peg": 0.8858
+     },
+     "revisions": 0.5042
+    },
+    "score_before": 72.0,
+    "rescored": {
+     "fcf_margin": 0.408,
+     "fcf_yield": 0.10099999999999999
+    }
+   },
+   "FIX": {
+    "score": 80.6,
+    "quality": 67,
+    "health": 74,
+    "value": 85,
+    "revisions": 92,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 19.5,
+    "fcf_yield_pct": 5.6,
+    "net_debt_ebitda": -0.81,
+    "parts": {
+     "quality": {
+      "gross": 0.2046,
+      "op": 0.3475,
+      "roe": 0.9008,
+      "fcf_margin": 0.7377398720682303,
+      "rev_growth": 0.9411,
+      "eps_growth": 0.8865
+     },
+     "health": {
+      "net_debt": 0.9236,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.7125,
+      "fcf_yield": 0.881578947368421,
+      "peg": 0.9543
+     },
+     "revisions": 0.9248
+    },
+    "score_before": 80.0,
+    "rescored": {
+     "fcf_margin": 0.195,
+     "fcf_yield": 0.055999999999999994
+    }
+   },
+   "RDDT": {
+    "score": 79.8,
+    "quality": 86,
+    "health": 77,
+    "value": 74,
+    "revisions": 82,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 38.8,
+    "fcf_yield_pct": 6.3,
+    "net_debt_ebitda": -3.25,
+    "parts": {
+     "quality": {
+      "gross": 0.971,
+      "op": 0.7278,
+      "roe": 0.7511,
+      "fcf_margin": 0.9424307036247335,
+      "rev_growth": 0.9363,
+      "eps_growth": 0.8082
+     },
+     "health": {
+      "net_debt": 0.9793,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.6818,
+      "fcf_yield": 0.6086956521739131,
+      "peg": 0.9338
+     },
+     "revisions": 0.8156
+    },
+    "score_before": 79.0,
+    "rescored": {
+     "fcf_margin": 0.38799999999999996,
+     "fcf_yield": 0.063
+    }
+   },
+   "CPAY": {
+    "score": 72.8,
+    "quality": 83,
+    "health": 45,
+    "value": 81,
+    "revisions": 76,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 32.6,
+    "fcf_yield_pct": 6.3,
+    "net_debt_ebitda": 2.7,
+    "parts": {
+     "quality": {
+      "gross": 0.9247,
+      "op": 0.9266,
+      "roe": 0.73,
+      "fcf_margin": 0.8997867803837953,
+      "rev_growth": 0.7983,
+      "eps_growth": 0.7104
+     },
+     "health": {
+      "net_debt": 0.3326,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.7692,
+      "fcf_yield": 0.8333333333333334,
+      "peg": 0.8242
+     },
+     "revisions": 0.7613
+    },
+    "score_before": 73.7,
+    "rescored": {
+     "fcf_margin": 0.326,
+     "fcf_yield": 0.063
+    }
+   },
+   "SPCX": {
+    "score": 60.4,
+    "quality": 64,
+    "health": 52,
+    "value": 19,
+    "revisions": 97,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": -122.2,
+    "fcf_yield_pct": -1.96,
+    "net_debt_ebitda": -4.31,
+    "parts": {
+     "quality": {
+      "gross": 0.6718,
+      "op": 0.6853,
+      "roe": 0.5,
+      "fcf_margin": 0.00851063829787234,
+      "rev_growth": 0.9942,
+      "eps_growth": 1.0
+     },
+     "health": {
+      "net_debt": 0.9876,
+      "fcf_positive": 0.0
+     },
+     "value": {
+      "fwd_pe": 0.0375,
+      "fcf_yield": 0.03896103896103896,
+      "peg": 0.5
+     },
+     "revisions": 0.9662
+    },
+    "score_before": 70.6,
+    "rescored": {
+     "fcf_margin": -1.222,
+     "fcf_yield": -0.0196
+    }
+   },
+   "EXPE": {
+    "score": 78.2,
+    "quality": 78,
+    "health": 73,
+    "value": 88,
+    "revisions": 74,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 28.4,
+    "fcf_yield_pct": 13.6,
+    "net_debt_ebitda": -0.5,
+    "parts": {
+     "quality": {
+      "gross": 0.9672,
+      "op": 0.4402,
+      "roe": 0.9451,
+      "fcf_margin": 0.8592750533049041,
+      "rev_growth": 0.6921,
+      "eps_growth": 0.7573
+     },
+     "health": {
+      "net_debt": 0.9029,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.875,
+      "fcf_yield": 0.9259259259259259,
+      "peg": 0.8333
+     },
+     "revisions": 0.7388
+    },
+    "score_before": 77.5,
+    "rescored": {
+     "fcf_margin": 0.284,
+     "fcf_yield": 0.136
+    }
+   },
+   "SNDK": {
+    "score": 86.4,
+    "quality": 96,
+    "health": 72,
+    "value": 81,
+    "revisions": 92,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 48.3,
+    "fcf_yield_pct": 8.5,
+    "net_debt_ebitda": -0.24,
+    "parts": {
+     "quality": {
+      "gross": 0.9208,
+      "op": 0.9961,
+      "roe": 0.98,
+      "fcf_margin": 0.976545842217484,
+      "rev_growth": 0.9961,
+      "eps_growth": 0.8611
+     },
+     "health": {
+      "net_debt": 0.8781,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 1.0,
+      "fcf_yield": 0.9444444444444444,
+      "peg": 0.5
+     },
+     "revisions": 0.9242
+    },
+    "cycle_note": "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 80% vs 최근 4년 평균 10%",
+    "score_before": 86.1,
+    "rescored": {
+     "fcf_margin": 0.483,
+     "fcf_yield": 0.085
+    }
+   },
+   "MPWR": {
+    "score": 72.5,
+    "quality": 77,
+    "health": 75,
+    "value": 39,
+    "revisions": 96,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 15.9,
+    "fcf_yield_pct": 1.0,
+    "net_debt_ebitda": -0.94,
+    "parts": {
+     "quality": {
+      "gross": 0.6525,
+      "op": 0.7375,
+      "roe": 0.6688,
+      "fcf_margin": 0.6361702127659574,
+      "rev_growth": 0.9633,
+      "eps_growth": 0.9432
+     },
+     "health": {
+      "net_debt": 0.9318,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.1978,
+      "fcf_yield": 0.18681318681318682,
+      "peg": 0.7831
+     },
+     "revisions": 0.9571
+    },
+    "score_before": 74.0,
+    "rescored": {
+     "fcf_margin": 0.159,
+     "fcf_yield": 0.01
+    }
+   },
+   "KEYS": {
+    "score": 71.9,
+    "quality": 75,
+    "health": 69,
+    "value": 58,
+    "revisions": 83,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 22.3,
+    "fcf_yield_pct": 2.74,
+    "net_debt_ebitda": 0.09,
+    "parts": {
+     "quality": {
+      "gross": 0.7568,
+      "op": 0.6525,
+      "roe": 0.6013,
+      "fcf_margin": 0.7761194029850746,
+      "rev_growth": 0.9006,
+      "eps_growth": 0.8151
+     },
+     "health": {
+      "net_debt": 0.8264,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.3846,
+      "fcf_yield": 0.4666666666666667,
+      "peg": 0.8836
+     },
+     "revisions": 0.826
+    },
+    "score_before": 73.4,
+    "rescored": {
+     "fcf_margin": 0.223,
+     "fcf_yield": 0.0274
+    }
+   },
+   "MSTR": {
+    "score": 53.6,
+    "quality": 49,
+    "health": 28,
+    "value": 51,
+    "revisions": 76,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": -8.3,
+    "fcf_yield_pct": -0.07,
+    "net_debt_ebitda": null,
+    "parts": {
+     "quality": {
+      "gross": 0.7992,
+      "op": 1.0,
+      "roe": 0.0148,
+      "fcf_margin": 0.08297872340425531,
+      "rev_growth": 0.0676,
+      "eps_growth": 0.9902
+     },
+     "health": {
+      "net_debt": 0.5,
+      "fcf_positive": 0.0
+     },
+     "value": {
+      "fwd_pe": 0.967,
+      "fcf_yield": 0.06593406593406594,
+      "peg": 0.5
+     },
+     "revisions": 0.7616
+    },
+    "score_before": 63.3,
+    "rescored": {
+     "fcf_margin": -0.083,
+     "fcf_yield": -0.0007000000000000001
+    }
+   },
+   "CRCL": {
+    "score": 50.2,
+    "quality": 46,
+    "health": 78,
+    "value": 27,
+    "revisions": 55,
+    "eligible": true,
+    "turnaround": false,
+    "fcf_margin_pct": 23.9,
+    "fcf_yield_pct": 3.2,
+    "net_debt_ebitda": -7.49,
+    "parts": {
+     "quality": {
+      "gross": 0.1718,
+      "op": 0.0618,
+      "roe": 0.4578,
+      "fcf_margin": 0.7995735607675906,
+      "rev_growth": 0.3861,
+      "eps_growth": 0.8767
+     },
+     "health": {
+      "net_debt": 0.9959,
+      "fcf_positive": 1.0
+     },
+     "value": {
+      "fwd_pe": 0.0278,
+      "fcf_yield": 0.2702702702702703,
+      "peg": 0.5
+     },
+     "revisions": 0.5518
+    },
+    "score_before": 47.0,
+    "rescored": {
+     "fcf_margin": 0.239,
+     "fcf_yield": 0.032
+    }
+   }
+  },
+  "snaps": {
+   "NVDA": {
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
+    "price": 202.06,
+    "eps_next_fy": 15.9146
+   },
+   "ADBE": {
+    "name": "Adobe Inc.",
+    "sector": "Technology",
+    "price": 251.47,
+    "eps_next_fy": 27.50756
+   },
+   "FIX": {
+    "name": "Comfort Systems USA, Inc.",
+    "sector": "Industrials",
+    "price": 1200.14,
+    "eps_next_fy": 66.80526
+   },
+   "RDDT": {
+    "name": "Reddit, Inc.",
+    "sector": "Communication Services",
+    "price": 90.97,
+    "eps_next_fy": 7.10738
+   },
+   "CPAY": {
+    "name": "Corpay, Inc.",
+    "sector": "Technology",
+    "price": 409.29,
+    "eps_next_fy": 31.58935
+   },
+   "SPCX": {
+    "name": "Space Exploration Technologies ",
+    "sector": "Industrials",
+    "price": 136.37,
+    "eps_next_fy": 4.0304
+   },
+   "EXPE": {
+    "name": "Expedia Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "price": 298.99,
+    "eps_next_fy": 24.57553
+   },
+   "SNDK": {
+    "name": "Sandisk Corporation",
+    "sector": "Technology",
+    "price": 1075.08,
+    "eps_next_fy": 288.22943
+   },
+   "MPWR": {
+    "name": "Monolithic Power Systems, Inc.",
+    "sector": "Technology",
+    "price": 1243.95,
+    "eps_next_fy": 45.29099
+   },
+   "KEYS": {
+    "name": "Keysight Technologies Inc.",
+    "sector": "Technology",
+    "price": 298.94,
+    "eps_next_fy": 13.93407
+   },
+   "MSTR": {
+    "name": "Strategy Inc",
+    "sector": "Technology",
+    "price": 130.76,
+    "eps_next_fy": 15.05897
+   },
+   "CRCL": {
+    "name": "Circle Internet Group, Inc.",
+    "sector": "Financial Services",
+    "price": 72.08,
+    "eps_next_fy": 1.41159
+   }
+  },
+  "market_context": {
+   "as_of": "2026-11-03",
+   "sector_eps_revisions_30d": [
+    {
+     "sector": "에너지",
+     "chg_pct": 3.6,
+     "momentum": "↑상승중"
+    },
+    {
+     "sector": "IT·기술",
+     "chg_pct": 0.48,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "산업재",
+     "chg_pct": 0.36,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "금융",
+     "chg_pct": 0.2,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "커뮤니케이션",
+     "chg_pct": 0.15,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "헬스케어",
+     "chg_pct": 0.08,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "소재",
+     "chg_pct": 0.05,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "유틸리티",
+     "chg_pct": -0.06,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "필수소비재",
+     "chg_pct": -0.18,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "부동산",
+     "chg_pct": -0.18,
+     "momentum": "→횡보"
+    },
+    {
+     "sector": "경기소비재",
+     "chg_pct": -0.32,
+     "momentum": "→횡보"
+    }
+   ],
+   "cycle_indicators": {
+    "semiconductor_growth_trend": "성장 지속",
+    "capex_trend": "확대",
+    "bull_market_signal": "주의",
+    "summary": "반도체 7종목 중 3종목이 내년 EPS 성장 둔화·역성장 전망. 빅테크 5사 분기 CapEx 전년동기 대비 중앙값 +103%. (컨센서스·재무공시 기반 자동 판정)"
+   },
+   "current_portfolio": [
+    "NVDA",
+    "ADBE"
+   ]
+  }
+ },
+ "result": {
+  "week": "2026-11-03",
+  "analyzed_at": "2026-11-03 06:40",
+  "analyses": {
+   "MSTR": {
+    "one_line_thesis": "Strategy(MSTR)는 비트코인 849,327개(평균 단가 $75,451)를 선순위 약 198.5억달러(전환사채·우선주)로 떠받친 BTC 레버리지 상품입니다. 이번 재분석 사유인 내년 EPS 추정치 +35.4%(11.19→15.06달러)는 영업 변화가 아니라 3분기 실적 반영 뒤 애널리스트들의 BTC 가격 가정(평균 공표 BTC 목표 약 $111,000) 갱신과 소수 표본(추정 범위 -$4.25~$69.86 그대로) 변화입니다. 11/2 BTC 매입(811개)이 재개됐지만 보통주 발행 자금이었고 주당 BTC(BTC Yield)는 연초 이후 -3.9%로 더 줄었습니다. 현재가 $130.76은 BTC $77,000 기준 주당 순NAV 약 $119의 1.10배여서 할인이 아니며, 순NAV 아래(약 $112 이하)에서만 기대값이 생깁니다.",
+    "quality": {
+     "score": 2,
+     "moat": "해자는 소프트웨어가 아니라 자본시장 접근성입니다. 상장사 최대 BTC 보유량(849,327개, 총공급의 4.04%), 3분기 보통주 ATM 순조달 54.1억달러, STRC(명목 약 81.8억달러, 배당률 12%)를 중심으로 한 디지털 크레딧 상품군이 실체입니다. 소프트웨어는 3분기 매출 1.254억달러(전년 대비 -3%, 컨센서스 약 1.278억달러 하회), 총이익 8,960만달러로 시가총액 554억달러에 비하면 의미가 거의 없습니다. 클라우드 구독 매출 6,860만달러(+49%)는 빠르게 크지만 라이선스 매출 383만달러(전년 1,737만달러)의 급감이 이를 상쇄합니다.",
+     "growth_durability": "이 회사의 성장 지표인 '주당 BTC'가 계속 뒷걸음질입니다. 회사 원장 기준 11/1 현재 연초 이후 BTC Yield는 -3.9%(10/25 -3.7%, 7월 말 +4.5%), 4분기 들어서도 -0.1%이고 주당 BTC 감소분은 26,014 BTC입니다. 10/26~11/1 주간에 보통주 117.9만주를 팔아 1.64억달러를 조달했지만 BTC에는 6,550만달러(811개, 평균 $80,846)만 썼고 9,850만달러는 현금으로 돌렸으며, 별도로 STRC 2.08억달러를 현금으로 재매입했습니다. STRC가 $99대로 액면 아래에 머물러 우선주 신규 발행은 3분기 이후 0달러입니다. 성장은 구조적이지 않고 STRC가 액면을 회복해 우선주 발행이 재개되는지에 달려 있습니다.",
+     "summary": "전통적 기업 질은 낮습니다. BTC 레버리지 수단으로서 규모와 유동성은 독보적이고 STRC를 6월 말 약 $75에서 $99대로 되돌린 점은 실행력의 증거입니다. 그러나 핵심 약속인 '주당 BTC를 꾸준히 늘린다'가 3분기에 깨졌고 11월 첫 주에도 회복되지 않았습니다. CFO는 11/5 퇴임하며 소프트웨어 매출은 역성장입니다. Saylor 의장은 실적 발표에서 BTC 상승이나 보통주 발행 없이도 100억~300억달러의 디지털 크레딧을 만들 수 있다고 했지만 아직 실적으로 확인된 것은 없습니다."
+    },
+    "financial_health": {
+     "score": 2,
+     "cash_flow": "대시보드의 FCF -217.5억달러(시총 대비 -39.3%)는 BTC 매입액을 설비투자처럼 계산한 값이라 쓸 수 없습니다. 10-Q 현금흐름표 기준 TTM(2025년 3분기~2026년 2분기) 영업현금흐름은 -2,009만달러, 설비투자 2,110만달러로 FCF는 -4,120만달러(매출 4.98억달러 대비 -8.3%, 시총 대비 -0.07%)입니다. 실질적인 현금 유출은 우선주 배당으로, 3분기 우선주 배당은 4.196억달러(전년 1.399억달러)였고 연환산 약 15억달러 수준입니다. 11/1 주간에도 우선주 배당 4,340만달러를 USD Reserve에서 지급했습니다. 3분기 10-Q 현금흐름표는 아직 확인하지 못했습니다.",
+     "debt": "회사 지표 기준 BTC 평가액 약 659.6억달러(BTC $77,657)와 USD 자산 49.2억달러(USD Reserve 47.9억 + USD Cash 1.33억달러)를 더한 준비금 708.8억달러에서 선순위 청구권 약 198.5억달러를 빼면 보통주 몫(순준비금)은 510.3억달러입니다. 보통주 순NAV가 0이 되는 BTC 가격은 현금을 차감하면 약 $17,600입니다. USD 자산은 3분기 말 50.7억달러에서 49.2억달러로 줄었고, 특히 USD Cash가 2.42억달러에서 1.33억달러로 감소해 STRC 재매입 여력이 대부분 Reserve에 묶였습니다. 2027년 9월 만기 전환사채(약 10.1억달러)는 유동부채로 넘어왔고 2028년 상반기에도 약 35억달러의 풋이 몰려 있습니다.",
+     "dilution": "보통주는 2025년 6월 대비 2026년 6월 32.3% 늘었고, 3분기 MSTR ATM 순조달 54.1억달러에 이어 10/26~11/1에도 117.9만주를 추가 발행했습니다(회사 원장 가정 희석주식수 4억 5,311만주). 10억달러 자사주 매입 프로그램은 집행하지 않았고 우선주 재매입은 3분기 20.4억달러에 이어 11/1 주간 2.08억달러를 더 썼습니다(남은 한도 약 7.5억달러로 추정). 회사 기준 mNAV 1.11배에서 보통주를 팔아 BTC가 아닌 현금과 우선주 방어에 쓰는 구조가 이어지고 있어 주당 BTC가 줄고 있습니다.",
+     "summary": "단기 유동성은 USD 자산 49.2억달러(약 3.3년치 배당·이자)로 아직 넉넉합니다. 그러나 연 15억달러 안팎의 우선주 배당은 BTC 가격과 무관한 고정비이고, USD Cash가 빠르게 줄고 있으며, 2027~2028년 전환사채 풋도 다가옵니다. 구조적 취약성은 11/01 분석 이후에도 그대로입니다."
+    },
+    "valuation": {
+     "score": 3,
+     "current_view": "PER은 쓰지 않습니다. 이익이 영업이 아니라 BTC 공정가치 평가손익에서 나오기 때문입니다. 대시보드 PER(향후 12개월 추정 EPS $14.37 기준 9.1배, 다음 회계연도 EPS $15.06 기준 8.7배, Yahoo forwardEps $23.67 기준 5.5배)은 모두 애널리스트의 BTC 상승 가정에서 나온 값입니다. 대신 순NAV로 평가합니다. BTC 849,327개 × $77,000 = 654.0억달러에 USD 자산 49.2억달러를 더하고 선순위 198.5억달러를 빼면 504.7억달러이고, 기본 주식 약 4억 2,360만주로 나누면 주당 약 $119.1입니다(회사 공표 순BTC/주 $119.37). 현재가 $130.76은 그 1.10배입니다(회사 공표 mNAV 1.11배, 52주 고점 대비 -50.6%). BTC가 $10,000 움직일 때 주당 순NAV는 약 $20(약 17%) 변합니다.",
+     "upside_scenario": "BTC가 $125,000으로 오르고 STRC가 액면을 회복해 우선주 발행·BTC 매입이 재가속하며 mNAV가 1.35배로 넓어지면 12개월 뒤 주가는 약 $278(+113%)입니다. 애널리스트 평균 목표가 $234(15명, 평균 등급 1.27, Clear Street는 BTC 가정을 낮춰 $211→$209)는 같은 BTC 강세 가정에 기대고 있습니다. 반대로 BTC가 $55,000까지 내려가면 주당 순NAV $69, mNAV 0.9배로 약 $62(-53%)입니다.",
+     "summary": "가격 매력은 'BTC를 얼마나 싸게 사느냐'로 결정되는데 현재는 순NAV 대비 약 10% 프리미엄입니다. 11/01 분석 이후 주가($130.51→$130.76)와 BTC($77,000 안팎)가 거의 그대로여서 평가도 거의 바뀌지 않았습니다. 내년 EPS 추정치 +35.4%는 BTC 가정 변화라 순NAV에는 영향이 없습니다. 프리미엄을 정당화할 주당 BTC 증가가 아직 없어 순NAV의 약 94% 수준($112) 이하를 합리적 진입 구간으로 봅니다."
+    },
+    "catalysts": [
+     {
+      "event": "STRC 일일 배당 전환(11/1 시작)과 STRC 액면($100) 안착",
+      "timing": "2026-11-01 시작, 주간 8-K는 매주 월요일(다음 2026-11-09)",
+      "impact": "긍정",
+      "detail": "STRC는 11/1부터 일일 배당(배당률 12.00%)으로 바뀌었고 STRF·STRK·STRD는 2027-01-01부터입니다. 그러나 STRC 가격은 10/30 종가 $99.13으로 여전히 액면 아래이고, 회사는 11/1 주간에도 2.08억달러를 들여 STRC를 재매입했습니다. 액면을 지켜 우선주 발행이 재개돼야 보통주 희석 없이 주당 BTC를 늘릴 수 있으므로 이것이 가장 중요한 긍정 촉매입니다."
+     },
+     {
+      "event": "MSCI 비영업회사 제외 대상 최종 명단",
+      "timing": "2026-11-11 명단 공개, 2026-11-30 장 마감 기준 적용",
+      "impact": "부정",
+      "detail": "MSCI는 10/15 비영업회사를 지수에서 제외하는 규칙을 확정했고 8월 시뮬레이션에서 Strategy는 FIF 시총 약 239억달러 규모로 삭제 대상에 올랐습니다. 기존 편입 종목은 최근 2개 연차 공시 기간 모두 심사에 걸려야 제외되는 완충장치가 있어 제외 여부는 아직 확정이 아닙니다. 명단에 포함되면 11월 30일 장 마감에 패시브 매도가 몰리고 다른 지수사업자의 검토도 이어질 수 있습니다."
+     },
+     {
+      "event": "CFO 교체와 3분기 10-Q(주당 Sats KPI·현금흐름표)",
+      "timing": "2026-11-05 Kang 퇴임, 11-06~12-31 Phong Le가 PFO 겸임, 2027-01-01 소프트웨어·BTC 사업 CFO 분리",
+      "impact": "불확실",
+      "detail": "Andrew Kang CFO가 개인 사유로 사임해 11/5 물러나고 연말까지 고문으로 남습니다. 자본시장 활동이 많은 회사에서 CFO 공백은 우선주 발행·전환사채 관리의 연속성 위험입니다. 3분기 10-Q의 주당 Sats와 영업현금흐름으로 3분기 FCF와 BTC 매각 내역을 다시 확인해야 합니다."
+     },
+     {
+      "event": "4분기 BTC Yield와 BTC 평가손익",
+      "timing": "주간 8-K, 2026-12-31 연말 평가, 4분기 실적 2027-02-04 예상",
+      "impact": "불확실",
+      "detail": "4분기 BTC Yield는 11/1 현재 -0.1%입니다. BTC는 11/2 약 $76,600~77,400으로 3분기 말($83,556)보다 약 8% 낮아, 이 수준이 연말까지 이어지면 4분기에 약 55억달러(주당 약 -$13, 세전)의 평가손실이 납니다. 반대로 애널리스트 컨센서스는 올해 EPS $10.71(4분기 약 +$29 가정)로 BTC 반등을 전제하고 있어 추정치가 다시 크게 하향될 수 있습니다."
+     },
+     {
+      "event": "BTC 수급 충격: Binance 63억달러 해킹과 현물 ETF 유출",
+      "timing": "2026-10-30 이후 진행 중",
+      "impact": "부정",
+      "detail": "10/30 Binance에서 사상 최대 규모인 약 63억달러 해킹이 발생했고 같은 날 현물 ETF에서 약 6.43억달러가 빠져나갔습니다. BTC는 $80,000을 회복하지 못하고 $77,000 안팎에 머물러 있으며 30일 기준 약 -9% 하락했습니다. MSTR 순NAV는 BTC에 1.7배가량 민감하게 반응합니다."
+     },
+     {
+      "event": "전환사채 조기상환 가능 시점과 2027·2028년 풋",
+      "timing": "2026-12-04 이후(2029년물), 2027-09(10.1억달러), 2028년 상반기(약 35억달러)",
+      "impact": "불확실",
+      "detail": "2028년물 전환가는 $183.19로 현재가보다 높아 풋이 행사되면 현금으로 상환해야 합니다. 상환 재원을 보통주 발행이나 BTC 매각으로 마련하면 희석 요인입니다. 회사는 USD Reserve 적립용 BTC 매각 승인을 갖고 있어 이를 상환에 쓸 가능성도 있습니다."
+     }
+    ],
+    "bear_case": {
+     "summary": "가장 강한 약세 논리는 'MSTR은 BTC 레버리지 상품인데 레버리지 비용(우선주 배당 연 약 15억달러)은 고정이고, 프리미엄(mNAV)과 주당 BTC 증가는 사라질 수 있다'는 것입니다. 3분기에 이 논리가 숫자로 확인됐고 11월 첫 주에도 바뀌지 않았습니다. 보통주를 mNAV 1.1배에 팔아 조달한 1.64억달러 가운데 BTC 매입은 40%뿐이었고, 현금은 STRC 방어(2.08억달러)에 쓰였으며, BTC Yield는 연초 이후 -3.9%로 더 나빠졌습니다. 여기에 MSCI 제외 위험, CFO 퇴임, Binance 해킹 이후 BTC 수급 약세가 겹쳤습니다. 반론은 USD 자산 49.2억달러(약 3.3년치)와 BTC 매입 재개입니다.",
+     "key_risks": [
+      "비트코인 하락: BTC가 $10,000 내리면 주당 순NAV가 약 $20(약 17%) 줄고, mNAV 축소가 겹치면 하락폭이 BTC의 1.5~2배입니다. BTC는 3분기 말 $83,556에서 $77,000 안팎으로 내려와 있습니다.",
+      "고정 배당 부담과 BTC 매각: 3분기 우선주 배당은 4.2억달러(연환산 약 15억달러)로 BTC 약세에도 그대로 나갑니다. 3분기에는 BTC 5,552개를 평균 $62,780(원가 아래)에 팔았습니다. STRC 발행이 막힌 채 BTC가 약하면 BTC 매각 또는 보통주 희석 가운데 하나를 택해야 합니다.",
+      "주당 BTC 감소: 연초 이후 BTC Yield가 -3.9%(11/1)입니다. 보통주 발행 자금이 BTC가 아니라 우선주 방어와 현금 적립에 쓰이면 보통주 가치가 구조적으로 깎입니다.",
+      "지수 제외와 수급: MSCI가 11/11 명단을 공개하고 11/30 장 마감에 적용합니다. 8월 시뮬레이션상 약 239억달러(FIF 시총)가 걸려 있고 다른 지수사업자의 연쇄 검토 가능성도 있습니다.",
+      "리파이낸싱과 거버넌스: 2027년 9월 약 10.1억달러, 2028년 상반기 약 35억달러의 풋이 대부분 외가격이라 현금 상환이 필요합니다. CFO 교체 시기가 자본시장 활동이 가장 중요한 시기와 겹칩니다."
+     ],
+     "thesis_breakers": [
+      "회사 기준 mNAV가 1.0배 미만인 상태가 4주 이상 이어지는데도 MSTR ATM 발행이 계속되는 경우(가치 파괴형 희석 확정)",
+      "4분기에도 주당 BTC(BTC Yield)가 감소해 2개 분기 연속 줄거나, 분기 말 BTC 보유량이 순감소하는 경우",
+      "USD Reserve가 이사회 정책인 12개월치 배당·이자 아래로 떨어지거나, STRC 등 우선주 배당의 삭감·이연이 발표되는 경우",
+      "BTC가 $55,000 아래에서 1개월 이상 머물러 주당 순NAV가 $70 이하로 내려가는 경우",
+      "전환사채 풋·조기상환 재원을 대규모 BTC 매각으로 조달한다고 발표하는 경우"
+     ]
+    },
+    "thesis_status": "해당없음",
+    "thesis_status_reason": "신규 편입 후보(관심종목)라 기존 보유 논리가 없습니다. 편입한다면 점검 기준은 네 가지입니다. ① 회사 기준 mNAV 1.0배 이상 ② 분기 주당 BTC 증가(BTC Yield 플러스 회복) ③ USD 자산 24개월치 이상 ④ BTC 순매도 없음. 11/1 현재 ①(1.11배)과 ③(약 3.3년치)은 충족, ④는 4분기 들어 매각 없이 811개 매입으로 일단 충족이지만, ②는 연초 이후 -3.9%, 4분기 -0.1%로 미충족입니다.",
+    "verdict": "관찰",
+    "verdict_reason": "재분석 사유인 내년 EPS 추정치 +35.4%(11.19→15.06달러, 7일 +15.4%)는 사업 변화가 아닙니다. 같은 기간 BTC는 $77,000 안팎으로 거의 그대로였고 추정 범위(-$4.25~$69.86)도 그대로여서, 3분기 실적 반영 뒤 일부 애널리스트가 BTC 가격 가정(평균 공표 목표 약 $111,000)으로 모델을 갱신한 결과입니다. 소프트웨어 매출은 -3%로 오히려 컨센서스를 밑돌았습니다. 11/01 이후 바뀐 사실은 BTC 811개 매입 재개(보통주 발행 자금), STRC 2.08억달러 추가 재매입, USD Cash 1.33억달러로 감소, BTC Yield -3.9%로 악화입니다. 현재가 $130.76은 주당 순NAV 약 $119의 1.10배로 여전히 프리미엄이고, 기준 시나리오(BTC $85,000) +6%에 비해 약세 시나리오(BTC $55,000)는 -53%여서 기준 손익비가 0.1 수준입니다. 따라서 매수 판단을 보류하고 ① STRC 액면 회복과 우선주 발행 재개 ② 11/11 MSCI 명단 ③ 주가가 순NAV 94% 수준($112) 이하로 내려오는지를 확인한 뒤 다시 평가합니다.",
+    "conviction": 2,
+    "sources": [
+     {
+      "title": "Strategy Acquires 811 BTC and Repurchases $208 Million of STRC (Strategy IR, Form 8-K, 2026-11-02)",
+      "url": "https://www.strategy.com/press/strategy-acquires-811-btc-and-repurchases-208-million-of-strc_11-02-2026"
+     },
+     {
+      "title": "Strategy Form 8-K (2026-11-02): ATM 117.9만주·1.64억달러, BTC 849,327개, USD Reserve 47.9억·USD Cash 1.33억달러 (StockTitan)",
+      "url": "https://www.stocktitan.net/sec-filings/MSTR/8-k-strategy-inc-reports-material-event-7887ccbdfdd3.html"
+     },
+     {
+      "title": "Strategy Bitcoin Ledger: BTC Yield QTD -0.1%, YTD -3.9%, ADSO 453,112천주 (Strategy)",
+      "url": "https://www.strategy.com/ledger"
+     },
+     {
+      "title": "Strategy MSTR Metrics: mNAV 1.11배, 순BTC/주 $119.37, 순준비금 510.3억달러 (Strategy)",
+      "url": "https://www.strategy.com/btc"
+     },
+     {
+      "title": "STRC Metrics: 가격 $99.13, 배당률 12.00%, 명목 81.8억달러 (Strategy)",
+      "url": "https://www.strategy.com/strc"
+     },
+     {
+      "title": "Strategy Announces Third Quarter 2026 Financial Results (Strategy IR, 2026-10-29)",
+      "url": "https://www.strategy.com/press/strategy-announces-third-quarter-2026-financial-results_10-29-2026"
+     },
+     {
+      "title": "Strategy 3분기 실적 보도자료 원문 (SEC, 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000047/mstr-20261029x8kxex9912.htm"
+     },
+     {
+      "title": "Strategy Q3 2026 Earnings Call Transcript: 애널리스트 평균 목표가 약 $248, 평균 BTC 목표 약 $111,000 (Yahoo Finance)",
+      "url": "https://finance.yahoo.com/quote/MSTR/earnings/MSTR-Q3-2026-earnings_call-662581.html"
+     },
+     {
+      "title": "Strategy Resumes Bitcoin Buys With $66M Purchase (Decrypt, 2026-11-02)",
+      "url": "https://decrypt.co/382333/strategy-resumes-bitcoin-buys-with-66m-purchase"
+     },
+     {
+      "title": "Strategy (MSTR) Stock Price & Forecast: Clear Street 목표가 $211→$209 (StockAnalysis)",
+      "url": "https://stockanalysis.com/stocks/mstr"
+     },
+     {
+      "title": "Michael Saylor says Strategy can thrive without Bitcoin or equity (Crypto Briefing, 2026-11-01)",
+      "url": "https://cryptobriefing.com/saylor-strategy-digital-credit-without-bitcoin-equity"
+     },
+     {
+      "title": "Bitcoin Price Today: Binance 63억달러 해킹 뒤 ETF 유출, BTC $78,000 안팎 (Blockchain Reporter, 2026-11-02)",
+      "url": "https://blockchainreporter.net/bitcoin-price/"
+     },
+     {
+      "title": "Bitcoin USD Price History: 11/1 $78,248, 11/2 $77,386 (Yahoo Finance)",
+      "url": "https://finance.yahoo.com/quote/BTC-USD/history/"
+     },
+     {
+      "title": "MSCI Finalizes Rule That Could Oust Strategy, Metaplanet From Indexes (CoinMarketCap, 2026-10-16)",
+      "url": "https://coinmarketcap.com/academy/article/msci-finalizes-rule-that-could-oust-strategy-metaplanet-from-indexes"
+     },
+     {
+      "title": "Strategy Form 10-Q for the quarter ended June 30, 2026 (SEC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm"
+     }
+    ],
+    "alert_level": "해당없음",
+    "data_checks": [
+     {
+      "metric": "FCF 마진(TTM)",
+      "dashboard_value": "FCF -217.5억달러, FCF 수익률 -39.3% (BTC 매입 포함)",
+      "verified_value": "-8.3% (TTM 2025Q3~2026Q2 영업현금흐름 -2,009만달러 - 설비투자 2,110만달러 = FCF -4,120만달러, 매출 4.98억달러). 시총 대비 -0.07%. BTC 매입은 투자활동으로 FCF에서 제외. 실질 고정 유출은 우선주 배당(3분기 4.196억달러, 연환산 약 15억달러). 3분기 10-Q 현금흐름표는 미확인",
+      "source": "Strategy 10-Q(2026-06-30), 3분기 실적 보도자료(SEC 8-K Exhibit 99.1)",
+      "status": "불일치(수정)"
+     },
+     {
+      "metric": "PER 기준 / 다음 회계연도 EPS (data_conflicts: forwardEps 23.67 vs 추정치 추이 15.06, 재분석 사유 +35.4%)",
+      "dashboard_value": "pe_ntm_est 9.1배, pe_next_fy 8.7배, Yahoo forward PE 5.5배, 내년 EPS 11.19→15.06달러",
+      "verified_value": "PER은 쓰지 않습니다. 2027년 EPS는 2026년 말 대비 2027년 말 BTC 가격 변화로 결정됩니다(BTC $1,000당 세전 주당 약 $2.0, 우선주 배당은 주당 연 약 $3.5 차감). 추정치가 오른 7일 동안 BTC는 $77,000~78,000으로 거의 그대로였고 추정 범위(-$4.25~$69.86)도 같아, 실적 반영 뒤 일부 애널리스트의 BTC 가정 갱신 또는 표본 구성 변화입니다. 올해 EPS 추정 -7.24→+10.71도 3분기 실제 $44.75 반영과 4분기 BTC 반등(약 +$29) 가정 때문입니다. $15.06은 BTC가 1년간 약 $9,000~10,000, $23.67은 약 $13,000~14,000 오른다는 가정에 해당하며 오류가 아니라 BTC 가정 차이입니다. 평가는 순NAV(주당 약 $119)와 mNAV(1.10~1.11배)로 대체합니다",
+      "source": "Strategy IR 3분기 실적, strategy.com 지표·원장(11/2), 실적 발표 콜(평균 BTC 목표 약 $111,000), Yahoo BTC 가격 이력",
+      "status": "불일치(수정)"
+     },
+     {
+      "metric": "BTC 보유량·평균 단가·USD 자산·선순위 청구권",
+      "dashboard_value": "dossier 미포함 (11/01 분석: 848,517개, 평균 $75,446, USD 자산 50.7억달러, 선순위 200.6억달러)",
+      "verified_value": "849,327개(11/1 기준, 10/26~11/1 811개를 평균 $80,846에 매입), 평균 $75,451, 매입 원가 640.8억달러. USD Reserve 47.9억 + USD Cash 1.33억달러 = 49.2억달러. 회사 지표상 준비금 708.8억달러, 순준비금 510.3억달러 → 선순위 청구권 약 198.5억달러(STRC 2.08억달러 재매입 반영)",
+      "source": "Strategy Form 8-K(2026-11-02), strategy.com/btc·/strc·/ledger",
+      "status": "일치"
+     },
+     {
+      "metric": "3분기 손익과 주당 BTC",
+      "dashboard_value": "3분기 EPS $44.75(추정 $22.89 대비 +95%)",
+      "verified_value": "EPS $44.75 확인(순이익 195.3억달러, 보통주 귀속 191.2억달러, 디지털자산 평가이익 209.1억달러, 우선주 배당 4.196억달러). 다만 BTC Yield는 연초 이후 -3.9%(11/1), 4분기 -0.1%로 EPS 호조와 주당 BTC가 분리됨",
+      "source": "Strategy 3분기 실적 보도자료·8-K(2026-10-29), strategy.com/ledger",
+      "status": "일치"
+     },
+     {
+      "metric": "소프트웨어 매출 성장률",
+      "dashboard_value": "-2.5% (YoY)",
+      "verified_value": "-3% (1.254억달러 vs 전년 1.287억달러, 총이익 8,960만달러), 구독 매출 6,860만달러(+49%), 라이선스 383만달러(전년 1,737만달러). 컨센서스 약 1.278억달러 하회",
+      "source": "Strategy 3분기 실적 보도자료(SEC 8-K Exhibit 99.1)",
+      "status": "일치"
+     }
+    ],
+    "verified_metrics": {
+     "fcf_margin_pct": -8.3,
+     "fcf_yield_pct": -0.07,
+     "pe_ntm": null,
+     "pe_basis_note": "PER 미사용: 이익이 비트코인 공정가치 평가손익(비영업)에 좌우되므로 순NAV(BTC $77,000 기준 주당 약 $119)와 mNAV(순NAV 기준 1.10배, 회사 공표 1.11배)로 평가"
+    },
+    "evidence": {
+     "data_verified": "검증 완료",
+     "bear_case_status": "부분 해소",
+     "estimate_dispersion": "다음 회계연도 EPS 추정치는 저 -$4.25, 평균 $15.06, 고 $69.86으로 분산이 492.1%입니다. 영업 전망의 차이가 아니라 애널리스트마다 다른 BTC 가격 가정이 그대로 반영된 값이라 컨센서스는 평가 근거로서 정보가 거의 없습니다. 최근 7일 +15.4%, 30일 +14.8%(상향 1건, 하향 2건) 변화는 저·고 추정치가 그대로인 채 평균만 움직인 것으로, BTC 가정 갱신이나 표본 변화에 따른 기계적 조정입니다. 직전 분석 때 같은 지표가 -14.7%였던 것처럼 방향이 수시로 바뀌므로 판단 근거로 쓰지 않습니다.",
+     "reward_risk": "기준 +6%($138.7), 강세 +113%($278) / 약세 -53%($62) → 기준 시나리오 손익비 약 0.1입니다. 25/50/25 가중 기대값은 약 +18%이지만 대부분 강세 시나리오(BTC $125,000) 한 곳에서 나오는 BTC 방향성 베팅이라 확신도를 높일 근거가 되지 못합니다.",
+     "conviction_basis": "BTC 보유량·USD 자산·선순위 청구권·BTC Yield는 11/2 8-K와 회사 지표로, 3분기 손익은 실적 보도자료로, FCF는 2분기 10-Q 현금흐름표로 검증했습니다(3분기 10-Q는 미확인). 단기 유동성(약 3.3년치)과 BTC 매입 재개는 긍정적이지만 고정 배당 부담, 주당 BTC 감소 지속, STRC 액면 미회복, MSCI 제외 위험, CFO 교체, BTC 수급 약세가 남아 '부분 해소'로 봤습니다. 순NAV 대비 10% 프리미엄과 기준 손익비 0.1을 고려해 확신도는 2로 11/01 분석과 같습니다."
+    },
+    "decision_table": {
+     "action": "매수 보류",
+     "buy_below": 112,
+     "price_logic": "eps 칸에는 12개월 후 주당 순NAV(달러), pe 칸에는 순NAV 대비 mNAV 배수를 넣었습니다. 기준 시나리오는 BTC $85,000, 보유 약 853,000개, USD 자산 40억달러, 선순위 197억달러, 주식 4.30억주로 주당 순NAV $132.1입니다. 여기에 mNAV 1.0배와 안전마진 15%를 적용하면 $132.1 × 1.0 × 0.85 = 약 $112입니다. 현재 주당 순NAV(약 $119)보다 낮아 프리미엄 없이 BTC를 사는 가격이며, 11/01 분석과 같습니다. EPS 추정치 상향은 BTC 가정 변화라 기준가를 올리지 않았습니다.",
+     "scenarios": [
+      {
+       "name": "약세",
+       "eps": 68.9,
+       "pe": 0.9,
+       "price": 62,
+       "horizon": "12개월",
+       "assumption": "BTC가 해킹·ETF 유출 같은 수급 충격과 지수 제외 압력 속에 $55,000(-29%)까지 내려 USD Reserve를 쓰고 희석 발행(주식 4.40억주)으로 배당을 메우며 mNAV가 0.9배로 할인되는 경우입니다(보유 846,000개, USD 35억달러, 선순위 197억달러, 주당 순NAV $68.9)."
+      },
+      {
+       "name": "기준",
+       "eps": 132.1,
+       "pe": 1.05,
+       "price": 138.7,
+       "horizon": "12개월",
+       "assumption": "BTC가 $85,000(+10%)으로 완만히 회복하고 STRC가 액면 근처를 유지해 보유량이 약 853,000개로 소폭 늘며 mNAV가 1.05배로 유지되는 경우입니다(USD 40억달러, 선순위 197억달러, 주식 4.30억주, 주당 순NAV $132.1)."
+      },
+      {
+       "name": "강세",
+       "eps": 206.1,
+       "pe": 1.35,
+       "price": 278,
+       "horizon": "12개월",
+       "assumption": "BTC가 $125,000으로 오르고 STRC 액면 안착으로 우선주 발행과 BTC 매입이 재가속(보유 870,000개)되며 mNAV가 1.35배로 넓어지는 경우입니다(USD 50억달러, 선순위 210억달러, 주식 4.50억주, 주당 순NAV $206)."
+      }
+     ],
+     "next_checks": [
+      {
+       "metric": "CFO 퇴임과 PFO 인수인계, 3분기 10-Q의 주당 BTC(Sats)·영업현금흐름",
+       "threshold": "3분기 영업현금흐름 확인, 주당 Sats와 BTC Yield 추세(4분기 플러스 전환 여부)",
+       "date": "2026-11-05"
+      },
+      {
+       "metric": "주간 8-K: STRC 가격·신규 발행액, BTC 순매수, USD Cash, mNAV",
+       "threshold": "STRC $100 이상과 우선주 신규 발행 재개, BTC 순매수, 회사 기준 mNAV 1.0배 이상, BTC $75,000 이상",
+       "date": "2026-11-09"
+      },
+      {
+       "metric": "MSCI 비영업회사 영향 종목 최종 명단",
+       "threshold": "Strategy 포함 여부(포함 시 11/30 장 마감 적용, 제외 시 완충장치 적용 확인)",
+       "date": "2026-11-11"
+      },
+      {
+       "metric": "MSCI 적용일 전후 주가·거래대금, 2029년물 조기상환 가능 시점",
+       "threshold": "패시브 매도로 mNAV 1.0배 미만 진입 여부, MSTR ATM 발행 지속 여부",
+       "date": "2026-11-30"
+      }
+     ],
+     "change_triggers": [
+      {
+       "condition": "주가가 $112 이하(순NAV 약 0.94배)로 내려오고, BTC가 $75,000 이상이며, STRC가 $100 이상에서 우선주 신규 발행이 재개돼 BTC 순매수가 확인되고, USD 자산 24개월치 이상이 유지되면",
+       "new_action": "신규 매수"
+      },
+      {
+       "condition": "MSCI 제외가 확정되고 회사 기준 mNAV가 1.0배 미만으로 떨어진 상태에서 MSTR ATM 발행이 이어지면",
+       "new_action": "관망"
+      },
+      {
+       "condition": "4분기에도 주당 BTC가 감소하거나, 우선주 배당 삭감·이연 또는 분기 BTC 순매도가 공시되면",
+       "new_action": "관망"
+      },
+      {
+       "condition": "BTC Yield가 플러스로 돌아서고 mNAV가 1.3배를 넘더라도 주가가 $180을 넘으면(순NAV 대비 프리미엄 과다)",
+       "new_action": "매수 보류"
+      }
+     ]
+    }
+   }
+  },
+  "target_weights": {
+   "NVDA": 20,
+   "ADBE": 10
+  },
+  "weights_reason": "NVDA 20%: 11/01 재점검 이후 새 공시·가이던스 변화 없음(Melius 목표가 420→315 하향, 10/30 인텔 실적 쇼크 여파 반도체 약세는 논리 범위), $202.06 로 매수 기준가 197 위, 경고 단계 \"추가 매수 중단\"이라 11/17 실적까지 동결. ADBE 10%: 새 공시 없음(컨센서스 목표가 265 소폭 하향·MAX 11/10 대기), $251.47 매수 기준가 250 부근, 동결. 관심종목 MSTR 은 내년 EPS 추정 +35.4% 가 BTC 가정 변화일 뿐이라 재분석 결과 관찰·확신도 2·매수 보류(buy_below 112)로 미편입, 현금 70% 유지."
+ },
+ "decisions": [
+  {
+   "ticker": "NVDA",
+   "action": "유지",
+   "reason": "[2026-11-01 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] 기존 붕괴 조건 6개와 추가 2개 중 충족된 것은 없습니다. 10월 24일 이후 새 8-K나 가이던스 변경은 없었고(엔비디아는 10월 28일 11월 17일 실적 발표 일정만 공지), 매출 성장 +18% QoQ, 3분기 가이던스 +12%, 총마진 75.0%, FY28 EPS 상향 7건·하향 0건입니다. 핵심 점검 대상이던 6번(2027년 CAPEX)은 알파벳 큰 폭 증가, 아마존 의미 있게 증가, 마이크로소프트 2027년 상반기 가속으로 충족되지 않았습니다. 다만 10월 24일 판단 이후 두 가지가 나빠졌습니다. 첫째 알파벳·아마존·메타가 모두 FCF 마이너스가 되었고, 둘째 CoreWeave CDS가 1,100bp 부근에서 내려오지 않고 마이크로소프트도 네오클라우드 지연을 공개했습니다. 이는 4번·8번 조건 쪽으로 위험이 이동했다는 뜻이지 논리 훼손은 아니라서 '유효'를 유지합니다. 주가 하락(편입가 218.29달러 대비 -6.3%) 자체는 판단 사유가 아닙니다. [경고: 추가 매수 중단]"
+  },
+  {
+   "ticker": "ADBE",
+   "action": "유지",
+   "reason": "[2026-10-23 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] 편입 논리는 '유기 ARR 8% 이상 + non-GAAP 영업이익률 40% 중반 + 연 5% 이상 주식 수 감소'였고, 10월 11일 이후 이를 바꾸는 회사 공시는 없었습니다. 4분기 가이던스(매출 약 +10%, 영업이익률 약 44%, 희석주식 약 3.89억 주)도 그대로입니다. Wells Fargo의 FY27 ARR 약 7% 추정은 첫 번째 축에 대한 경고이지만 회사 가이던스가 아닌 외부 추정이라 붕괴로 보지 않습니다. 논리 검증 시점은 여전히 12월 9일입니다. 주가 +11.7%는 논리가 아니라 가격 매력만 바꿨습니다. [경고: 추가 매수 중단]"
+  },
+  {
+   "ticker": "FIX",
+   "action": "미편입",
+   "reason": "[2026-10-27 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 추정치 상향(+9.4%, 30일 상향 7건·하향 0건)은 기록적 수주(약 75억달러), 백로그 +90%, 2027년 매출 +20%대 중반 구두 전망으로 뒷받침되는 '근거 있는 상향'입니다. 다만 상향된 컨센서스 $65.86은 회사가 약속하지 않은 마진 확대를 일부 포함하고 있고, 제 기준 EPS는 $63→$64로 1.6%만 올립니다. 반면 주가는 앤트로픽 IPO발 AI 랠리로 7% 올라 확률가중 기대수익이 약 +8.4%로 기준(10%) 아래로 떨어졌고, 증권사들은 업종 멀티플 축소를 이유로 목표가를 낮췄습니다. 이미 보유 중인 NVDA와 같은 AI 인프라 테마라는 점까지 고려하면 방어적 스탠스에서 지금 편입할 이유는 약하며, $1,125 이하 또는 2027년 정량 전망 확인 후 탐색 편입을 검토하는 '관찰'을 유지합니다."
+  },
+  {
+   "ticker": "RDDT",
+   "action": "미편입",
+   "reason": "[2026-11-01 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 숫자 자체(매출 +53%, 순이익률 32%, FCF 마진 41%, 순현금 30억달러)는 최상위지만, 직전 분석이 지적한 핵심 반대 근거(미국 사용자 정체)가 정체에서 감소로 악화됐고 경영진이 4분기 총 사용자 두 자릿수 초반 감소 가능성까지 인정했습니다. 주가가 -29%로 내려 PER은 12~15배가 됐지만, 컨센서스 EPS가 아직 하향 반영 전이라 실제 PER은 이보다 높게 나올 수 있고 법인세 정상화 위험도 있습니다. 제 시나리오 기준 가중평균 기대수익은 약 +22%(약세 -40%·기준 +22%·강세 +82%)이고 기준 손익비 0.55에 그쳐 편입 적합 기준(뚜렷한 기대값)에는 미달합니다. 84달러 이하까지 내려오거나, 4Q 실적에서 로그인·앱 DAUq 증가와 매출 +38% 이상이 확인되면 분할 편입을 다시 검토합니다. 하락 자체를 이유로 포기하는 것이 아니라, 반대 근거가 풀리거나 가격이 더 보상해 줄 때를 기다리는 판단입니다."
+  },
+  {
+   "ticker": "CPAY",
+   "action": "미편입",
+   "reason": "[2026-10-11 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 공식 자료로 핵심 수치는 모두 검증했습니다(TTM FCF 마진 약 32.6%, 향후 12개월 기준 PER 13배, 2분기 매출 +21%, 유기적 +10%, 주식수 −7.1%). 법인결제 중심 전환과 자사주 소각이 만드는 주당이익 성장도 실재합니다. 그러나 2026년 EPS 성장의 상당 부분이 유가·환율 순풍과 인수 효과에서 나왔고 주가는 1년간 42% 올랐습니다. 기준 시나리오(FY27 EPS 31.5달러 × 14배 = 441달러) 상승여력은 약 +11%로 약세 시 하락폭 약 −31%보다 작습니다. 3분기 실적(11/4)과 FY27 가이던스로 매크로 제외 성장을 확인하거나, 주가가 375달러 이하로 내려오면 분할 편입을 검토하는 '관찰'이 적절합니다."
+  },
+  {
+   "ticker": "SPCX",
+   "action": "미편입",
+   "reason": "[2026-10-26 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 3분기에 SI 사업부 첫 영업흑자, 백로그 630억 달러, 2027년 1분기 매출 가이던스 330~370억 달러(LSEG 컨센서스 222억 달러의 약 1.6배)가 나와 지난 분석의 핵심 의문인 'AI 투자가 매출로 이어지는가'는 상당 부분 풀렸습니다. 하지만 ① 대시보드의 FY27 EPS +95.5% 상향은 방향(가이던스 반영)만 사실이고, 수준(4.05달러)은 다른 취합처(2.25달러)·Yahoo 자체 forwardEps(2.36달러)와 충돌해 검증되지 않았습니다. ② TTM FCF -392억 달러에 4분기 설비투자가 2배로 늘고, ③ 보수적 EPS 기준 46배라 기준 시나리오 상승 여력이 +8% 남짓입니다. 회사의 질은 좋지만 가격과 추정치 신뢰도가 아직 편입을 뒷받침하지 못해 '관찰'을 유지합니다. 120달러 이하로 내려오거나 추정치가 안정되면 재평가합니다."
+  },
+  {
+   "ticker": "EXPE",
+   "action": "미편입",
+   "reason": "[2026-10-11 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 향후 12개월 추정 EPS 기준 PER 11.5배, 연 4~5% 자사주 소각, 5개 분기 연속 가이던스 상회, 추정치 상향(90일 +6.2%)은 분명 매력적입니다. 하지만 9월 급락의 원인인 AI 에이전트 우회 위험은 아직 숫자로 반증되지 않았습니다. 3분기 가이던스(총예약 +5~7%)와 역산한 4분기 매출 성장률(+3~5%)도 하반기 둔화를 예고합니다. 약세 시나리오(175달러, −36%)에 비해 기준 시나리오 상방(318달러, +16%)이 작아 현재가의 손익비는 0.45로 불리합니다. 따라서 11월 4일 실적에서 B2C 성장 유지와 4분기 가이던스를 확인하거나, 주가가 255달러 이하로 내려와 안전마진이 생길 때 소규모 분할 편입을 검토하는 것이 합리적입니다."
+  },
+  {
+   "ticker": "SNDK",
+   "action": "미편입",
+   "reason": "[2026-11-02 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 실적 자체는 매출·EPS·가이던스 모두 컨센서스를 넘었고 순현금·조정 FCF 마진 48%로 재무도 탄탄합니다. 그러나 가격 상승 기울기가 SanDisk·Kioxia 두 회사에서 24시간 안에 동시에 꺾였다고 확인됐고, 대시보드 사이클 점검(영업이익률 80% vs 4년 평균 10%)대로 지금 PER 4.7배는 정점 이익 기준입니다. 기대수익(약세25·기준50·강세25)은 약 +9.3%로 최소 기준 10%에 못 미치고, 약세 시 −43%라 손익비가 나쁩니다. 확신도 2, '매수 보류'로 두고 12월 NAND 계약가·Micron 가이던스·1월 말 실적에서 '고원'인지 '정점'인지 확인한 뒤 다시 판단합니다."
+  },
+  {
+   "ticker": "MPWR",
+   "action": "미편입",
+   "reason": "[2026-11-01 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 사업 모멘텀은 최상급이지만 가격이 이를 이미 반영했습니다. 12개월 시나리오의 확률가중 가치는 약 1,194달러로 현재가 대비 −1.5%이고, 기준 시나리오(EPS 45달러×28배=1,260달러)도 +4%뿐인 반면 약세 시나리오(EPS 31달러×19배=589달러)는 −51%여서 손익비가 1보다 훨씬 낮습니다. 3분기 실적이 컨센서스를 상회하고 4분기 가이던스(13.15~13.85억달러, 중간값 약 +12% QoQ)도 강했지만 주가가 1,211.63달러로 크게 오르지 못한 점은 시장이 이를 상당 부분 가격에 반영했을 가능성을 시사합니다. 추가로 FCF 마진 하락(16%), SBC 2배 증가, 내부통제 취약점, 10월 30일 AI·반도체 동반 급락 환경을 감안해 신규 매수는 확률가중 기대수익이 +20% 이상 나오는 1,000달러 이하로 기다리는 것이 합리적입니다. 좋은 회사의 가격을 기다리는 판단이며 성장 논리 자체가 훼손된 것은 아닙니다."
+  },
+  {
+   "ticker": "KEYS",
+   "action": "미편입",
+   "reason": "[2026-10-24 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관찰] 회사의 질(non-GAAP 총마진 69%, 영업이익률 33%, 수주 +56%)과 재무(사실상 순현금 0, FCF 전환율 약 90%)는 우수하고, 이번 하락은 실적이 아니라 AI 관련주 전반의 재평가에서 왔습니다. 주가 하락으로 NTM PER이 27.7배에서 22.7배로 내려와 가중 기대수익은 약 +10.7%로 개선됐지만, 기준 상승률 +13%에 비해 약세 하락률이 −33%로 커서 손익비가 여전히 불리합니다. 더구나 시장이 의심하는 바로 그 지점(AI 설비투자 지속성)이 Keysight 성장의 핵심 동인이고, 이를 확인할 4분기 실적이 약 한 달 뒤(11월 23일)에 있습니다. 따라서 지금은 매수 기준가 $300 이하이면서 4분기 수주가 20억달러 이상 유지될 때 편입을 검토하는 '관찰'이 맞습니다."
+  },
+  {
+   "ticker": "MSTR",
+   "action": "미편입",
+   "reason": "[관심종목] [관찰] 재분석 사유인 내년 EPS 추정치 +35.4%(11.19→15.06달러, 7일 +15.4%)는 사업 변화가 아닙니다. 같은 기간 BTC는 $77,000 안팎으로 거의 그대로였고 추정 범위(-$4.25~$69.86)도 그대로여서, 3분기 실적 반영 뒤 일부 애널리스트가 BTC 가격 가정(평균 공표 목표 약 $111,000)으로 모델을 갱신한 결과입니다. 소프트웨어 매출은 -3%로 오히려 컨센서스를 밑돌았습니다. 11/01 이후 바뀐 사실은 BTC 811개 매입 재개(보통주 발행 자금), STRC 2.08억달러 추가 재매입, USD Cash 1.33억달러로 감소, BTC Yield -3.9%로 악화입니다. 현재가 $130.76은 주당 순NAV 약 $119의 1.10배로 여전히 프리미엄이고, 기준 시나리오(BTC $85,000) +6%에 비해 약세 시나리오(BTC $55,000)는 -53%여서 기준 손익비가 0.1 수준입니다. 따라서 매수 판단을 보류하고 ① STRC 액면 회복과 우선주 발행 재개 ② 11/11 MSCI 명단 ③ 주가가 순NAV 94% 수준($112) 이하로 내려오는지를 확인한 뒤 다시 평가합니다."
+  },
+  {
+   "ticker": "CRCL",
+   "action": "미편입",
+   "reason": "[2026-10-11 분석 재사용 — 이후 실적 발표·큰 주가 변동·추정치 급변 없음] [관심종목] [관찰] 규제 면허와 기관 네트워크라는 해자, 그리고 9월 연준 금리 인상이라는 우호적 거시 환경은 분명합니다. 그러나 USDC 유통량이 6개월째 730억달러 수준에서 정체했고, 유통비용 구조는 2029년까지 고정됐으며, FCF 일부는 일회성 토큰 프리세일 대금입니다. 그 상태에서 향후 12개월 EPS 기준 62.8배는 기준 시나리오 상승 여력(약 +4%)이 약세 하락 위험(약 −53%)에 비해 너무 작습니다. 금리 1%p에 EPS의 약 75%가 걸린 구조라 약세 시 손실이 크고 분산(57%)도 높습니다. 주가가 60달러 이하로 내려오거나, 3분기 실적에서 유통량과 RLDC 마진이 동시에 개선되는 것을 확인할 때까지 관찰하는 것이 맞다고 판단합니다."
+  }
+ ],
+ "weights": {
+  "NVDA": 20,
+  "ADBE": 10
+ },
+ "allocation": {
+  "stance": "방어적",
+  "equity_pct": 60,
+  "stock_pct": 30,
+  "core_etf": null,
+  "core_pct": 0,
+  "cash_pct": 70,
+  "reason": "스탠스 '방어적' 주식 합계 상한 60%",
+  "notes": [],
+  "per_stock": {
+   "NVDA": {
+    "new": false,
+    "proposed": 20,
+    "expected_return_pct": 20.8,
+    "downside_pct": -34.7,
+    "risk_cap": 20,
+    "final": 20,
+    "portfolio_impact_pct": -6.9
+   },
+   "ADBE": {
+    "new": false,
+    "proposed": 10,
+    "expected_return_pct": 14.4,
+    "downside_pct": -33.2,
+    "risk_cap": 20,
+    "final": 10,
+    "portfolio_impact_pct": -3.3
+   }
+  },
+  "expected_return_pct": 7.3,
+  "staged": {},
+  "fear_base": null,
+  "fear_hold_until": null,
+  "fear": {
+   "tier": 0,
+   "level": null,
+   "name": null,
+   "score": 22.7,
+   "low": 22.7,
+   "crossed": null,
+   "note": "공포·탐욕 최근 5일 최저 23 — 매수 가중 없음 (10 미만부터 적용)"
+  },
+  "rules": {
+   "max_holdings": 5,
+   "max_position_loss_pct": 8,
+   "max_single_weight": 30,
+   "max_theme_pct": 50,
+   "min_expected_return_pct": 10,
+   "conviction_weight": {
+    "3": 10,
+    "4": 20,
+    "5": 30
+   }
+  },
+  "agent_reason": "NVDA 20%: 11/01 재점검 이후 새 공시·가이던스 변화 없음(Melius 목표가 420→315 하향, 10/30 인텔 실적 쇼크 여파 반도체 약세는 논리 범위), $202.06 로 매수 기준가 197 위, 경고 단계 \"추가 매수 중단\"이라 11/17 실적까지 동결. ADBE 10%: 새 공시 없음(컨센서스 목표가 265 소폭 하향·MAX 11/10 대기), $251.47 매수 기준가 250 부근, 동결. 관심종목 MSTR 은 내년 EPS 추정 +35.4% 가 BTC 가정 변화일 뿐이라 재분석 결과 관찰·확신도 2·매수 보류(buy_below 112)로 미편입, 현금 70% 유지."
+ }
+}
