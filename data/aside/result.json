@@ -1,269 +1,268 @@
 {
- "week": "2026-11-02",
- "analyzed_at": "2026-11-02 06:40",
+ "week": "2026-11-03",
+ "analyzed_at": "2026-11-03 06:40",
  "analyses": {
-  "SNDK": {
-   "one_line_thesis": "AI 데이터센터 SSD 수요로 매출이 1년 새 5배(분기 110억달러), 총마진 85%까지 치솟은 NAND 순수 기업이지만, 가격 상승 기울기가 이미 꺾이기 시작한 '사이클 정점 이익'에 PER 4.7배가 붙어 있는 상태 — 장기계약(NBM)이 이번 사이클을 다르게 만들지 확인되기 전에는 싼 PER이 함정일 수 있어 관찰이 맞습니다.",
+  "MSTR": {
+   "one_line_thesis": "Strategy(MSTR)는 비트코인 849,327개(평균 단가 $75,451)를 선순위 약 198.5억달러(전환사채·우선주)로 떠받친 BTC 레버리지 상품입니다. 이번 재분석 사유인 내년 EPS 추정치 +35.4%(11.19→15.06달러)는 영업 변화가 아니라 3분기 실적 반영 뒤 애널리스트들의 BTC 가격 가정(평균 공표 BTC 목표 약 $111,000) 갱신과 소수 표본(추정 범위 -$4.25~$69.86 그대로) 변화입니다. 11/2 BTC 매입(811개)이 재개됐지만 보통주 발행 자금이었고 주당 BTC(BTC Yield)는 연초 이후 -3.9%로 더 줄었습니다. 현재가 $130.76은 BTC $77,000 기준 주당 순NAV 약 $119의 1.10배여서 할인이 아니며, 순NAV 아래(약 $112 이하)에서만 기대값이 생깁니다.",
    "quality": {
-    "score": 3,
-    "moat": "Kioxia와의 합작 팹(Flash Ventures)으로 세계 최대급 NAND 생산 규모와 BiCS8 공정을 갖췄고, 8개 고객과 맺은 장기계약(NBM: 약정 물량·최소 금액 보장·가격 구조)이 FY2027 비트의 약 50%, FY2028의 약 3분의 2를 덮습니다. 다만 NAND는 본질적으로 범용 제품이라 Morningstar는 '해자 없음(No moat)'으로 평가하며, 시장 가격이 계약가 아래로 내려가면 고객이 재협상하거나 이탈할 지렛대를 가진다고 봅니다. 차세대 HBF(고대역폭 플래시)는 첫 다이 테이프아웃을 마쳤지만 샘플은 2027년, 양산은 2028년 목표라 아직 해자가 아닌 옵션입니다.",
-    "growth_durability": "FY27 1분기(10/2 마감) 매출 110.3억달러(+378% YoY, +23% QoQ), 그중 데이터센터 48.0억달러(+61% QoQ), Edge 58.3억달러(+7% QoQ), Consumer 4.0억달러(−29% QoQ, −39% YoY)입니다. 성장 기여는 물량 60%·가격 40%로, 직전 분기(가격 3분의 2·물량 3분의 1)보다 가격 기여가 확 줄었습니다. Kioxia도 NAND 평균가 상승률이 2분기 약 +70%에서 3분기 약 +20%로 둔화했다고 밝혀, 이익 증가의 2차 미분(기울기)이 꺾인 것이 업계 공통으로 확인됐습니다.",
-    "summary": "데이터센터 비트 수요(업계 비트 중 비중 약 50%→2027년 55% 이상)는 구조적이지만, 지금 이익 수준은 공급 부족이 만든 가격 효과가 크게 얹힌 정점권 숫자입니다. Consumer 매출 급감은 높은 가격이 한계 수요를 파괴하는 전형적인 사이클 정점 신호이고, TrendForce는 2027년 하반기 NAND 공급 부족 완화를 전망합니다. 질은 '좋은 사이클 위의 범용 기업'이지 '구조적 독점'은 아직 아닙니다."
+    "score": 2,
+    "moat": "해자는 소프트웨어가 아니라 자본시장 접근성입니다. 상장사 최대 BTC 보유량(849,327개, 총공급의 4.04%), 3분기 보통주 ATM 순조달 54.1억달러, STRC(명목 약 81.8억달러, 배당률 12%)를 중심으로 한 디지털 크레딧 상품군이 실체입니다. 소프트웨어는 3분기 매출 1.254억달러(전년 대비 -3%, 컨센서스 약 1.278억달러 하회), 총이익 8,960만달러로 시가총액 554억달러에 비하면 의미가 거의 없습니다. 클라우드 구독 매출 6,860만달러(+49%)는 빠르게 크지만 라이선스 매출 383만달러(전년 1,737만달러)의 급감이 이를 상쇄합니다.",
+    "growth_durability": "이 회사의 성장 지표인 '주당 BTC'가 계속 뒷걸음질입니다. 회사 원장 기준 11/1 현재 연초 이후 BTC Yield는 -3.9%(10/25 -3.7%, 7월 말 +4.5%), 4분기 들어서도 -0.1%이고 주당 BTC 감소분은 26,014 BTC입니다. 10/26~11/1 주간에 보통주 117.9만주를 팔아 1.64억달러를 조달했지만 BTC에는 6,550만달러(811개, 평균 $80,846)만 썼고 9,850만달러는 현금으로 돌렸으며, 별도로 STRC 2.08억달러를 현금으로 재매입했습니다. STRC가 $99대로 액면 아래에 머물러 우선주 신규 발행은 3분기 이후 0달러입니다. 성장은 구조적이지 않고 STRC가 액면을 회복해 우선주 발행이 재개되는지에 달려 있습니다.",
+    "summary": "전통적 기업 질은 낮습니다. BTC 레버리지 수단으로서 규모와 유동성은 독보적이고 STRC를 6월 말 약 $75에서 $99대로 되돌린 점은 실행력의 증거입니다. 그러나 핵심 약속인 '주당 BTC를 꾸준히 늘린다'가 3분기에 깨졌고 11월 첫 주에도 회복되지 않았습니다. CFO는 11/5 퇴임하며 소프트웨어 매출은 역성장입니다. Saylor 의장은 실적 발표에서 BTC 상승이나 보통주 발행 없이도 100억~300억달러의 디지털 크레딧을 만들 수 있다고 했지만 아직 실적으로 확인된 것은 없습니다."
    },
    "financial_health": {
-    "score": 4,
-    "cash_flow": "회사 자료 기준 FY27 1분기 영업현금흐름률 57.7%, FCF 63.1억달러, NBM 선수금·합작 정산을 뺀 조정 FCF 57.0억달러(마진 51.6%)입니다. 최근 4분기(FY26 2분기~FY27 1분기) 합산 FCF는 약 173.7억달러(매출 289.7억달러 대비 59.9%), 조정 FCF는 약 139.9억달러(48.3%)로, 대시보드의 38.8%(Yahoo 요약)·FCF 114.9억달러(FY26 연간치)는 오래된 값입니다. 주식보상비용은 분기 9,100만달러로 미미합니다.",
-    "debt": "FY26 말(2026-07-03) 현금 47.6억달러, 장기차입금 0(전년 18.3억달러 전액 상환)으로 순현금 상태입니다(대시보드 순부채/EBITDA −0.24배와 방향 일치). 다만 NBM 선수금(FY26 24.8억달러, FY27 1분기 4.7억달러)은 고객에게 물량으로 갚아야 하는 부채 성격의 현금이라 조정 FCF로 보는 것이 맞습니다.",
-    "dilution": "발행주식은 FY25 말 1.46억주→FY26 말 1.49억주로 오히려 약 2% 늘었고(대시보드 0%와 다름), 이후 FY26 4분기 45억달러, FY27 1분기 50억달러(약 320만주, 평균 약 1,560달러)를 자사주로 매입했습니다. 잉여현금 100% 환원 방침은 긍정적이지만, 최근 매입 단가가 현재가(1,150.89달러)보다 약 36% 높아 '사이클 정점 가격에 자사주를 산' 셈입니다. Western Digital이 보유한 잔여 지분은 연차보고서상 2026년 말까지 교환 처분 예정이라 단기 물량 부담 요인입니다.",
-    "summary": "현금창출력과 순현금 대차대조표는 흠잡을 데가 없고, 하락 사이클이 와도 단기 유동성 위험은 낮습니다. 감점 요인은 이 현금흐름이 정점 가격에서 나온다는 점과, 고점 부근 자사주 매입의 자본배분 효율입니다."
+    "score": 2,
+    "cash_flow": "대시보드의 FCF -217.5억달러(시총 대비 -39.3%)는 BTC 매입액을 설비투자처럼 계산한 값이라 쓸 수 없습니다. 10-Q 현금흐름표 기준 TTM(2025년 3분기~2026년 2분기) 영업현금흐름은 -2,009만달러, 설비투자 2,110만달러로 FCF는 -4,120만달러(매출 4.98억달러 대비 -8.3%, 시총 대비 -0.07%)입니다. 실질적인 현금 유출은 우선주 배당으로, 3분기 우선주 배당은 4.196억달러(전년 1.399억달러)였고 연환산 약 15억달러 수준입니다. 11/1 주간에도 우선주 배당 4,340만달러를 USD Reserve에서 지급했습니다. 3분기 10-Q 현금흐름표는 아직 확인하지 못했습니다.",
+    "debt": "회사 지표 기준 BTC 평가액 약 659.6억달러(BTC $77,657)와 USD 자산 49.2억달러(USD Reserve 47.9억 + USD Cash 1.33억달러)를 더한 준비금 708.8억달러에서 선순위 청구권 약 198.5억달러를 빼면 보통주 몫(순준비금)은 510.3억달러입니다. 보통주 순NAV가 0이 되는 BTC 가격은 현금을 차감하면 약 $17,600입니다. USD 자산은 3분기 말 50.7억달러에서 49.2억달러로 줄었고, 특히 USD Cash가 2.42억달러에서 1.33억달러로 감소해 STRC 재매입 여력이 대부분 Reserve에 묶였습니다. 2027년 9월 만기 전환사채(약 10.1억달러)는 유동부채로 넘어왔고 2028년 상반기에도 약 35억달러의 풋이 몰려 있습니다.",
+    "dilution": "보통주는 2025년 6월 대비 2026년 6월 32.3% 늘었고, 3분기 MSTR ATM 순조달 54.1억달러에 이어 10/26~11/1에도 117.9만주를 추가 발행했습니다(회사 원장 가정 희석주식수 4억 5,311만주). 10억달러 자사주 매입 프로그램은 집행하지 않았고 우선주 재매입은 3분기 20.4억달러에 이어 11/1 주간 2.08억달러를 더 썼습니다(남은 한도 약 7.5억달러로 추정). 회사 기준 mNAV 1.11배에서 보통주를 팔아 BTC가 아닌 현금과 우선주 방어에 쓰는 구조가 이어지고 있어 주당 BTC가 줄고 있습니다.",
+    "summary": "단기 유동성은 USD 자산 49.2억달러(약 3.3년치 배당·이자)로 아직 넉넉합니다. 그러나 연 15억달러 안팎의 우선주 배당은 BTC 가격과 무관한 고정비이고, USD Cash가 빠르게 줄고 있으며, 2027~2028년 전환사채 풋도 다가옵니다. 구조적 취약성은 11/01 분석 이후에도 그대로입니다."
    },
    "valuation": {
     "score": 3,
-    "current_view": "현재가 1,150.89달러(분할 전)는 향후 12개월 추정 EPS 246.47달러 기준 4.7배, 이번 회계연도(FY27, 2027년 6월) 컨센서스 226.85달러 기준 5.1배, 최근 4분기 non-GAAP EPS 합 118.37달러 기준 9.7배입니다. FY28 EPS(285.46달러) 기준 4.0배는 정점 이후 이익을 낙관한 숫자라 근거로 쓰지 않습니다. 메모리 업종은 이익 정점에서 PER이 가장 낮아 보이는 것이 정상이며, Kioxia도 선행 3.5배에 거래되는 등 시장은 '정체'가 아니라 '붕괴'를 가격에 넣고 있습니다. 주가는 6월 25일 사상 최고가 대비 약 −50.7%, 1년 수익률은 +477%입니다.",
-    "upside_scenario": "NBM의 최소 계약 매출(보도 기준 8개 고객 939억달러, 잔여이행의무 889억달러)이 가격 하락을 실제로 막아 2027년 이익이 정체 수준에서 버티면, 시장이 '사이클 이익'이 아니라 '반(半)계약 이익'으로 재평가해 6~7배를 줄 수 있습니다. 이 경우 EPS 300달러 × 6.5배 = 1,950달러(+69%)이고, 애널리스트 평균 목표가 2,029달러(Susquehanna 2,720달러)도 이 그림입니다. 정당화 조건은 2027년 1분기 NAND 계약가가 하락 전환하지 않는 것과 NBM 연장·신규 계약 공시입니다.",
-    "summary": "PER 숫자는 극단적으로 싸 보이지만 정점 이익 기준이라 가격 매력은 중간으로 봅니다. 반대편 끝에는 Morningstar 적정가 870달러(별 2개, '2028년 초 가격 정점 후 2029~2031년 심한 하강' 전망)가 있어, 같은 숫자를 두고 2배 이상 차이가 나는 고불확실성 구간입니다."
+    "current_view": "PER은 쓰지 않습니다. 이익이 영업이 아니라 BTC 공정가치 평가손익에서 나오기 때문입니다. 대시보드 PER(향후 12개월 추정 EPS $14.37 기준 9.1배, 다음 회계연도 EPS $15.06 기준 8.7배, Yahoo forwardEps $23.67 기준 5.5배)은 모두 애널리스트의 BTC 상승 가정에서 나온 값입니다. 대신 순NAV로 평가합니다. BTC 849,327개 × $77,000 = 654.0억달러에 USD 자산 49.2억달러를 더하고 선순위 198.5억달러를 빼면 504.7억달러이고, 기본 주식 약 4억 2,360만주로 나누면 주당 약 $119.1입니다(회사 공표 순BTC/주 $119.37). 현재가 $130.76은 그 1.10배입니다(회사 공표 mNAV 1.11배, 52주 고점 대비 -50.6%). BTC가 $10,000 움직일 때 주당 순NAV는 약 $20(약 17%) 변합니다.",
+    "upside_scenario": "BTC가 $125,000으로 오르고 STRC가 액면을 회복해 우선주 발행·BTC 매입이 재가속하며 mNAV가 1.35배로 넓어지면 12개월 뒤 주가는 약 $278(+113%)입니다. 애널리스트 평균 목표가 $234(15명, 평균 등급 1.27, Clear Street는 BTC 가정을 낮춰 $211→$209)는 같은 BTC 강세 가정에 기대고 있습니다. 반대로 BTC가 $55,000까지 내려가면 주당 순NAV $69, mNAV 0.9배로 약 $62(-53%)입니다.",
+    "summary": "가격 매력은 'BTC를 얼마나 싸게 사느냐'로 결정되는데 현재는 순NAV 대비 약 10% 프리미엄입니다. 11/01 분석 이후 주가($130.51→$130.76)와 BTC($77,000 안팎)가 거의 그대로여서 평가도 거의 바뀌지 않았습니다. 내년 EPS 추정치 +35.4%는 BTC 가정 변화라 순NAV에는 영향이 없습니다. 프리미엄을 정당화할 주당 BTC 증가가 아직 없어 순NAV의 약 94% 수준($112) 이하를 합리적 진입 구간으로 봅니다."
    },
    "catalysts": [
     {
-     "event": "8대1 주식 분할",
-     "timing": "기준일 2026-11-09, 분할 반영 거래 2026-11-20",
-     "impact": "불확실",
-     "detail": "기업가치에는 영향이 없고 개인 접근성만 높입니다. 10/30 발표 직후에도 매도를 막지 못했습니다. 11/20부터 주가·EPS·buy_below 모두 8로 나눠 봐야 합니다(예: buy_below 950달러 → 118.75달러)."
-    },
-    {
-     "event": "TrendForce 4분기 NAND 계약가 확정 및 2027년 1분기 가격 전망",
-     "timing": "2026년 11월 말~12월",
-     "impact": "불확실",
-     "detail": "9월 전망은 4분기 NAND 계약가 +15~20%, 기업용 SSD +23~28%였습니다. 이 범위가 유지되면 '고원(plateau)' 논리, 한 자릿수로 꺾이면 '정점 통과' 논리가 힘을 얻습니다. 10월 계약가 보고서는 MLC가 고점 횡보 후 하락 조정 위험을 언급했습니다."
-    },
-    {
-     "event": "Micron 회계 1분기 실적·가이던스",
-     "timing": "2026년 12월 중순(예상)",
-     "impact": "불확실",
-     "detail": "Micron이 NAND 가격에 대해 SanDisk처럼 '완만한(modest) 상승'을 반복하면 업종 전체 디레이팅이, 아니면 NAND 순수 기업에 국한된 조정으로 정리됩니다."
-    },
-    {
-     "event": "SanDisk FY27 2분기 실적·3분기 가이던스",
-     "timing": "2027년 1월 말(예상)",
-     "impact": "불확실",
-     "detail": "회사 가이던스는 매출 122~126억달러, 총마진 84.5~85.5%, non-GAAP EPS 55~57달러(분할 전)입니다. 경영진이 3월 분기를 계절적 약세 분기로 미리 경고해, 3분기 가이던스가 QoQ 감소로 나오면 정점 논리가 확정될 수 있습니다."
-    },
-    {
-     "event": "NBM 장기계약 연장·신규 체결",
-     "timing": "2026년 4분기~2027년 상반기",
+     "event": "STRC 일일 배당 전환(11/1 시작)과 STRC 액면($100) 안착",
+     "timing": "2026-11-01 시작, 주간 8-K는 매주 월요일(다음 2026-11-09)",
      "impact": "긍정",
-     "detail": "CFO는 기존 NBM 고객의 계약 연장 검토와 신규 고객 협의를 언급했고, CEO는 고객 수요 신호가 FY2030 이후까지 이어진다고 했습니다. 최소 금액 보장 조건이 붙은 연장이 공시되면 하락 사이클 방어력의 가장 직접적인 증거가 됩니다."
+     "detail": "STRC는 11/1부터 일일 배당(배당률 12.00%)으로 바뀌었고 STRF·STRK·STRD는 2027-01-01부터입니다. 그러나 STRC 가격은 10/30 종가 $99.13으로 여전히 액면 아래이고, 회사는 11/1 주간에도 2.08억달러를 들여 STRC를 재매입했습니다. 액면을 지켜 우선주 발행이 재개돼야 보통주 희석 없이 주당 BTC를 늘릴 수 있으므로 이것이 가장 중요한 긍정 촉매입니다."
     },
     {
-     "event": "HBF(고대역폭 플래시) 고객 샘플",
-     "timing": "2027년(양산 목표 2028년)",
-     "impact": "긍정",
-     "detail": "AI 추론용으로 HBM급 읽기 대역폭과 더 큰 용량을 노리는 제품으로, SK hynix와 표준화하고 Google 등이 지지합니다. 성공하면 범용 NAND를 넘는 차별화 축이 되지만 12개월 안의 실적 기여는 없습니다."
+     "event": "MSCI 비영업회사 제외 대상 최종 명단",
+     "timing": "2026-11-11 명단 공개, 2026-11-30 장 마감 기준 적용",
+     "impact": "부정",
+     "detail": "MSCI는 10/15 비영업회사를 지수에서 제외하는 규칙을 확정했고 8월 시뮬레이션에서 Strategy는 FIF 시총 약 239억달러 규모로 삭제 대상에 올랐습니다. 기존 편입 종목은 최근 2개 연차 공시 기간 모두 심사에 걸려야 제외되는 완충장치가 있어 제외 여부는 아직 확정이 아닙니다. 명단에 포함되면 11월 30일 장 마감에 패시브 매도가 몰리고 다른 지수사업자의 검토도 이어질 수 있습니다."
+    },
+    {
+     "event": "CFO 교체와 3분기 10-Q(주당 Sats KPI·현금흐름표)",
+     "timing": "2026-11-05 Kang 퇴임, 11-06~12-31 Phong Le가 PFO 겸임, 2027-01-01 소프트웨어·BTC 사업 CFO 분리",
+     "impact": "불확실",
+     "detail": "Andrew Kang CFO가 개인 사유로 사임해 11/5 물러나고 연말까지 고문으로 남습니다. 자본시장 활동이 많은 회사에서 CFO 공백은 우선주 발행·전환사채 관리의 연속성 위험입니다. 3분기 10-Q의 주당 Sats와 영업현금흐름으로 3분기 FCF와 BTC 매각 내역을 다시 확인해야 합니다."
+    },
+    {
+     "event": "4분기 BTC Yield와 BTC 평가손익",
+     "timing": "주간 8-K, 2026-12-31 연말 평가, 4분기 실적 2027-02-04 예상",
+     "impact": "불확실",
+     "detail": "4분기 BTC Yield는 11/1 현재 -0.1%입니다. BTC는 11/2 약 $76,600~77,400으로 3분기 말($83,556)보다 약 8% 낮아, 이 수준이 연말까지 이어지면 4분기에 약 55억달러(주당 약 -$13, 세전)의 평가손실이 납니다. 반대로 애널리스트 컨센서스는 올해 EPS $10.71(4분기 약 +$29 가정)로 BTC 반등을 전제하고 있어 추정치가 다시 크게 하향될 수 있습니다."
+    },
+    {
+     "event": "BTC 수급 충격: Binance 63억달러 해킹과 현물 ETF 유출",
+     "timing": "2026-10-30 이후 진행 중",
+     "impact": "부정",
+     "detail": "10/30 Binance에서 사상 최대 규모인 약 63억달러 해킹이 발생했고 같은 날 현물 ETF에서 약 6.43억달러가 빠져나갔습니다. BTC는 $80,000을 회복하지 못하고 $77,000 안팎에 머물러 있으며 30일 기준 약 -9% 하락했습니다. MSTR 순NAV는 BTC에 1.7배가량 민감하게 반응합니다."
+    },
+    {
+     "event": "전환사채 조기상환 가능 시점과 2027·2028년 풋",
+     "timing": "2026-12-04 이후(2029년물), 2027-09(10.1억달러), 2028년 상반기(약 35억달러)",
+     "impact": "불확실",
+     "detail": "2028년물 전환가는 $183.19로 현재가보다 높아 풋이 행사되면 현금으로 상환해야 합니다. 상환 재원을 보통주 발행이나 BTC 매각으로 마련하면 희석 요인입니다. 회사는 USD Reserve 적립용 BTC 매각 승인을 갖고 있어 이를 상환에 쓸 가능성도 있습니다."
     }
    ],
    "bear_case": {
-    "summary": "가장 강한 약세 논리는 '지금 이익이 사이클 정점이고, 정점 이익에 붙은 낮은 PER은 싼 것이 아니다'입니다. 가격 기여가 성장의 3분의 2(FY26 4분기)에서 40%(FY27 1분기)로 줄었고, Kioxia의 NAND 평균가 상승률은 +70%→+20%로 꺾였으며, 회사 스스로 다음 분기 가격 상승을 '완만'하다고 했습니다. TrendForce는 2027년 하반기 공급 부족 완화를, Morningstar는 2027~2029년 대규모 증설(중국 포함) 후 2029~2031년 심한 하강을 전망합니다. 여기에 Alphabet의 설비투자 회수 논쟁(3분기 FCF −90.7억달러)과 인텔 실적 쇼크(10/30 하루 −25~30%, 필라델피아 반도체지수 −6% 이상)가 겹쳐 AI 설비투자 사이클 자체에 대한 의심이 커졌습니다. 과거 FY2023에는 매출 −38%, GB당 가격 −39%를 겪은 업종입니다.",
+    "summary": "가장 강한 약세 논리는 'MSTR은 BTC 레버리지 상품인데 레버리지 비용(우선주 배당 연 약 15억달러)은 고정이고, 프리미엄(mNAV)과 주당 BTC 증가는 사라질 수 있다'는 것입니다. 3분기에 이 논리가 숫자로 확인됐고 11월 첫 주에도 바뀌지 않았습니다. 보통주를 mNAV 1.1배에 팔아 조달한 1.64억달러 가운데 BTC 매입은 40%뿐이었고, 현금은 STRC 방어(2.08억달러)에 쓰였으며, BTC Yield는 연초 이후 -3.9%로 더 나빠졌습니다. 여기에 MSCI 제외 위험, CFO 퇴임, Binance 해킹 이후 BTC 수급 약세가 겹쳤습니다. 반론은 USD 자산 49.2억달러(약 3.3년치)와 BTC 매입 재개입니다.",
     "key_risks": [
-     "가격 정점 통과: 4분기 NAND 계약가 상승률이 전망(+15~20%)을 밑돌거나 2027년 1분기 하락 전환하면, 85% 총마진에서 가격 10% 하락만으로도 이익이 크게 줄어드는 높은 영업 레버리지가 반대로 작동합니다.",
-     "NBM 계약의 실효성: 시장 가격이 계약가 아래로 내려가면 고객이 재협상·이탈할 지렛대를 가진다는 반론(Morningstar)이 있고, 메모리 장기계약은 과거 하강기마다 재조정된 전례가 있습니다.",
-     "수요 파괴와 설비투자 회수 논쟁: Consumer 매출 −29% QoQ는 고가가 수요를 깎는 신호이고, Alphabet·Amazon의 FCF 악화로 하이퍼스케일러 설비투자 속도 조절 가능성이 커졌습니다.",
-     "공급 증가: Samsung·SK hynix·Kioxia·Micron과 중국 업체의 2027~2029년 증설, 공정 전환에 따른 비트 증가로 TrendForce는 2027년 하반기 수급 균형 회복을 예상합니다.",
-     "수급·포지션: 1년 +477% 상승 후 크게 몰린 포지션, 고점 대비 −50% 하락에도 이어지는 차익 실현, Western Digital 잔여 지분 처분(2026년 말까지) 물량 부담."
+     "비트코인 하락: BTC가 $10,000 내리면 주당 순NAV가 약 $20(약 17%) 줄고, mNAV 축소가 겹치면 하락폭이 BTC의 1.5~2배입니다. BTC는 3분기 말 $83,556에서 $77,000 안팎으로 내려와 있습니다.",
+     "고정 배당 부담과 BTC 매각: 3분기 우선주 배당은 4.2억달러(연환산 약 15억달러)로 BTC 약세에도 그대로 나갑니다. 3분기에는 BTC 5,552개를 평균 $62,780(원가 아래)에 팔았습니다. STRC 발행이 막힌 채 BTC가 약하면 BTC 매각 또는 보통주 희석 가운데 하나를 택해야 합니다.",
+     "주당 BTC 감소: 연초 이후 BTC Yield가 -3.9%(11/1)입니다. 보통주 발행 자금이 BTC가 아니라 우선주 방어와 현금 적립에 쓰이면 보통주 가치가 구조적으로 깎입니다.",
+     "지수 제외와 수급: MSCI가 11/11 명단을 공개하고 11/30 장 마감에 적용합니다. 8월 시뮬레이션상 약 239억달러(FIF 시총)가 걸려 있고 다른 지수사업자의 연쇄 검토 가능성도 있습니다.",
+     "리파이낸싱과 거버넌스: 2027년 9월 약 10.1억달러, 2028년 상반기 약 35억달러의 풋이 대부분 외가격이라 현금 상환이 필요합니다. CFO 교체 시기가 자본시장 활동이 가장 중요한 시기와 겹칩니다."
     ],
     "thesis_breakers": [
-     "TrendForce 기준 NAND(특히 기업용 SSD) 계약가가 분기 대비 하락 전환하는 경우.",
-     "non-GAAP 총마진이 80% 아래로 내려가거나, 다음 분기 매출 가이던스가 직전 분기보다 5% 넘게 낮게 제시되는 경우(계절성 감안해도 정점 통과 확정).",
-     "NBM 고객의 계약 재협상·물량 축소·최소 보장 조건 완화가 보도·공시되거나, NBM 비중(FY27 비트 50%) 목표가 하향되는 경우.",
-     "데이터센터 매출이 분기 대비 감소하거나 주요 하이퍼스케일러가 2027년 설비투자 가이던스를 낮추는 경우.",
-     "주요 경쟁사가 2027년 NAND 설비투자를 대폭(전년 대비 30% 이상) 늘리는 증설 계획을 발표하는 경우."
+     "회사 기준 mNAV가 1.0배 미만인 상태가 4주 이상 이어지는데도 MSTR ATM 발행이 계속되는 경우(가치 파괴형 희석 확정)",
+     "4분기에도 주당 BTC(BTC Yield)가 감소해 2개 분기 연속 줄거나, 분기 말 BTC 보유량이 순감소하는 경우",
+     "USD Reserve가 이사회 정책인 12개월치 배당·이자 아래로 떨어지거나, STRC 등 우선주 배당의 삭감·이연이 발표되는 경우",
+     "BTC가 $55,000 아래에서 1개월 이상 머물러 주당 순NAV가 $70 이하로 내려가는 경우",
+     "전환사채 풋·조기상환 재원을 대규모 BTC 매각으로 조달한다고 발표하는 경우"
     ]
    },
    "thesis_status": "해당없음",
-   "thesis_status_reason": "미보유 신규 후보라 기존 보유 논리가 없습니다. 편입을 검토하려면 '4분기 NAND 계약가 +15% 이상 확정 + NBM 연장·신규 공시 + 주가가 사이클 하강을 반영한 수준(950달러 이하, 분할 후 118.75달러)'이 출발점입니다.",
+   "thesis_status_reason": "신규 편입 후보(관심종목)라 기존 보유 논리가 없습니다. 편입한다면 점검 기준은 네 가지입니다. ① 회사 기준 mNAV 1.0배 이상 ② 분기 주당 BTC 증가(BTC Yield 플러스 회복) ③ USD 자산 24개월치 이상 ④ BTC 순매도 없음. 11/1 현재 ①(1.11배)과 ③(약 3.3년치)은 충족, ④는 4분기 들어 매각 없이 811개 매입으로 일단 충족이지만, ②는 연초 이후 -3.9%, 4분기 -0.1%로 미충족입니다.",
    "verdict": "관찰",
-   "verdict_reason": "실적 자체는 매출·EPS·가이던스 모두 컨센서스를 넘었고 순현금·조정 FCF 마진 48%로 재무도 탄탄합니다. 그러나 가격 상승 기울기가 SanDisk·Kioxia 두 회사에서 24시간 안에 동시에 꺾였다고 확인됐고, 대시보드 사이클 점검(영업이익률 80% vs 4년 평균 10%)대로 지금 PER 4.7배는 정점 이익 기준입니다. 기대수익(약세25·기준50·강세25)은 약 +9.3%로 최소 기준 10%에 못 미치고, 약세 시 −43%라 손익비가 나쁩니다. 확신도 2, '매수 보류'로 두고 12월 NAND 계약가·Micron 가이던스·1월 말 실적에서 '고원'인지 '정점'인지 확인한 뒤 다시 판단합니다.",
+   "verdict_reason": "재분석 사유인 내년 EPS 추정치 +35.4%(11.19→15.06달러, 7일 +15.4%)는 사업 변화가 아닙니다. 같은 기간 BTC는 $77,000 안팎으로 거의 그대로였고 추정 범위(-$4.25~$69.86)도 그대로여서, 3분기 실적 반영 뒤 일부 애널리스트가 BTC 가격 가정(평균 공표 목표 약 $111,000)으로 모델을 갱신한 결과입니다. 소프트웨어 매출은 -3%로 오히려 컨센서스를 밑돌았습니다. 11/01 이후 바뀐 사실은 BTC 811개 매입 재개(보통주 발행 자금), STRC 2.08억달러 추가 재매입, USD Cash 1.33억달러로 감소, BTC Yield -3.9%로 악화입니다. 현재가 $130.76은 주당 순NAV 약 $119의 1.10배로 여전히 프리미엄이고, 기준 시나리오(BTC $85,000) +6%에 비해 약세 시나리오(BTC $55,000)는 -53%여서 기준 손익비가 0.1 수준입니다. 따라서 매수 판단을 보류하고 ① STRC 액면 회복과 우선주 발행 재개 ② 11/11 MSCI 명단 ③ 주가가 순NAV 94% 수준($112) 이하로 내려오는지를 확인한 뒤 다시 평가합니다.",
    "conviction": 2,
    "sources": [
     {
-     "title": "Sandisk Corp 8-K (2026-10-29) — FY27 1분기 실적·8대1 주식 분할",
-     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndk-20261029.htm"
+     "title": "Strategy Acquires 811 BTC and Repurchases $208 Million of STRC (Strategy IR, Form 8-K, 2026-11-02)",
+     "url": "https://www.strategy.com/press/strategy-acquires-811-btc-and-repurchases-208-million-of-strc_11-02-2026"
     },
     {
-     "title": "Sandisk Reports Fiscal First Quarter 2027 Financial Results (EX-99.1)",
-     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm"
+     "title": "Strategy Form 8-K (2026-11-02): ATM 117.9만주·1.64억달러, BTC 849,327개, USD Reserve 47.9억·USD Cash 1.33억달러 (StockTitan)",
+     "url": "https://www.stocktitan.net/sec-filings/MSTR/8-k-strategy-inc-reports-material-event-7887ccbdfdd3.html"
     },
     {
-     "title": "Sandisk Reports Fiscal First Quarter 2027 Financial Results (회사 보도자료, 사업부별 매출)",
-     "url": "https://www.sandisk.com/company/newsroom/press-releases/2026/2026-10-29-sandisk-reports-fiscal-first-quarter-2027-financial-results"
+     "title": "Strategy Bitcoin Ledger: BTC Yield QTD -0.1%, YTD -3.9%, ADSO 453,112천주 (Strategy)",
+     "url": "https://www.strategy.com/ledger"
     },
     {
-     "title": "Sandisk FY27 1분기 실적 발표 자료(FCF·조정 FCF·가이던스·JV CapEx)",
-     "url": "https://investor.sandisk.com/static-files/4ca97b6e-7da4-4d52-b4ac-0e80f462716f"
+     "title": "Strategy MSTR Metrics: mNAV 1.11배, 순BTC/주 $119.37, 순준비금 510.3억달러 (Strategy)",
+     "url": "https://www.strategy.com/btc"
     },
     {
-     "title": "Sandisk Reports Fiscal Fourth Quarter 2026 Financial Results (현금·부채·FY26 FCF)",
-     "url": "https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-05-sandisk-reports-fiscal-fourth-quarter-2026-financial-results"
+     "title": "STRC Metrics: 가격 $99.13, 배당률 12.00%, 명목 81.8억달러 (Strategy)",
+     "url": "https://www.strategy.com/strc"
     },
     {
-     "title": "Sandisk 2026 Investor Day — NBM 8개 고객, FY27 비트 50%·FY28 3분의 2, 조정 FCF 마진 50%",
-     "url": "https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-13-sandisk-investor-day-2026"
+     "title": "Strategy Announces Third Quarter 2026 Financial Results (Strategy IR, 2026-10-29)",
+     "url": "https://www.strategy.com/press/strategy-announces-third-quarter-2026-financial-results_10-29-2026"
     },
     {
-     "title": "Sandisk Annual Report 2026 (SEC ARS)",
-     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000130817926000425/sndk015568-ars.pdf"
+     "title": "Strategy 3분기 실적 보도자료 원문 (SEC, 8-K Exhibit 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000047/mstr-20261029x8kxex9912.htm"
     },
     {
-     "title": "TrendForce — SanDisk 1QFY27: $11B Revenue, 85.1% Gross Margin; Long-Term Customers Weigh Extensions",
-     "url": "https://www.trendforce.com/news/2026/10/30/news-sandisk-1qfy27-11b-revenue-nearly-quintuples-85-1-gross-margin-long-term-customers-weigh-extensions"
+     "title": "Strategy Q3 2026 Earnings Call Transcript: 애널리스트 평균 목표가 약 $248, 평균 BTC 목표 약 $111,000 (Yahoo Finance)",
+     "url": "https://finance.yahoo.com/quote/MSTR/earnings/MSTR-Q3-2026-earnings_call-662581.html"
     },
     {
-     "title": "TrendForce — AI Server Demand Sustains Memory Contract Price Increases in 4Q26",
-     "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html"
+     "title": "Strategy Resumes Bitcoin Buys With $66M Purchase (Decrypt, 2026-11-02)",
+     "url": "https://decrypt.co/382333/strategy-resumes-bitcoin-buys-with-66m-purchase"
     },
     {
-     "title": "TrendForce — NAND Flash Supply Growth to Outpace Demand in 2027, Easing Supply Constraints in 2H27",
-     "url": "https://www.trendforce.com/presscenter/news/20260721-13148.html"
+     "title": "Strategy (MSTR) Stock Price & Forecast: Clear Street 목표가 $211→$209 (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/mstr"
     },
     {
-     "title": "TrendForce — NAND Flash Contract Price Oct. 2026",
-     "url": "https://www.trendforce.com/research/download/RP261030RM"
+     "title": "Michael Saylor says Strategy can thrive without Bitcoin or equity (Crypto Briefing, 2026-11-01)",
+     "url": "https://cryptobriefing.com/saylor-strategy-digital-credit-without-bitcoin-equity"
     },
     {
-     "title": "Morningstar — SanDisk Earnings: Lowering Fair Value Estimate; Decelerating Price Growth Is a Bad Omen",
-     "url": "https://www.morningstar.com/stocks/sandisk-earnings-lowering-fair-value-estimate-decelerating-price-growth-is-bad-omen"
+     "title": "Bitcoin Price Today: Binance 63억달러 해킹 뒤 ETF 유출, BTC $78,000 안팎 (Blockchain Reporter, 2026-11-02)",
+     "url": "https://blockchainreporter.net/bitcoin-price/"
     },
     {
-     "title": "VLSI Korea — NAND Peak or Plateau? Kioxia, SanDisk Selloff",
-     "url": "https://www.vlsi.kr/en/nand-peak-kioxia-sandisk-en/"
+     "title": "Bitcoin USD Price History: 11/1 $78,248, 11/2 $77,386 (Yahoo Finance)",
+     "url": "https://finance.yahoo.com/quote/BTC-USD/history/"
     },
     {
-     "title": "Motley Fool (Yahoo Finance) — Why Sandisk Stock Plunged Today",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/why-sandisk-stock-plunged-today-151937243.html"
+     "title": "MSCI Finalizes Rule That Could Oust Strategy, Metaplanet From Indexes (CoinMarketCap, 2026-10-16)",
+     "url": "https://coinmarketcap.com/academy/article/msci-finalizes-rule-that-could-oust-strategy-metaplanet-from-indexes"
     },
     {
-     "title": "CNBC — Intel stock plunges as chipmaker blames PC slowdown for weak guidance",
-     "url": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html"
-    },
-    {
-     "title": "Seoul Economic Daily — Memory Price Gains Slow Sharply, Raising Peak-Cycle Questions",
-     "url": "https://en.sedaily.com/finance/2026/10/03/memory-price-gains-slow-sharply-raising-peak-cycle-questions"
-    },
-    {
-     "title": "Markets Insider — SanDisk price target lowered to $2,720 at Susquehanna (ASP 2027년 상반기 정점 가정)",
-     "url": "https://markets.businessinsider.com/news/stocks/sandisk-price-target-lowered-to-2-720-from-2-745-at-susquehanna-1036693982"
+     "title": "Strategy Form 10-Q for the quarter ended June 30, 2026 (SEC)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm"
     }
    ],
    "alert_level": "해당없음",
    "data_checks": [
     {
      "metric": "FCF 마진(TTM)",
-     "dashboard_value": "38.8% (Yahoo 요약), FCF TTM 114.9억달러",
-     "verified_value": "최근 4분기(FY26 2Q~FY27 1Q) FCF 약 173.7억달러 / 매출 289.7억달러 = 59.9%; NBM 선수금·JV 정산 제외 조정 FCF 약 139.9억달러 = 48.3% (분기값은 FY26 연간 FCF 114.94억·조정 87.43억에서 1·3·4분기를 빼 2분기 산출)",
-     "source": "FY27 1분기·FY26 4분기 실적 발표 자료(OCF−설비투자)",
+     "dashboard_value": "FCF -217.5억달러, FCF 수익률 -39.3% (BTC 매입 포함)",
+     "verified_value": "-8.3% (TTM 2025Q3~2026Q2 영업현금흐름 -2,009만달러 - 설비투자 2,110만달러 = FCF -4,120만달러, 매출 4.98억달러). 시총 대비 -0.07%. BTC 매입은 투자활동으로 FCF에서 제외. 실질 고정 유출은 우선주 배당(3분기 4.196억달러, 연환산 약 15억달러). 3분기 10-Q 현금흐름표는 미확인",
+     "source": "Strategy 10-Q(2026-06-30), 3분기 실적 보도자료(SEC 8-K Exhibit 99.1)",
      "status": "불일치(수정)"
     },
     {
-     "metric": "PER 기준",
-     "dashboard_value": "pe_ntm_est 4.7 / pe_current_fy 5.1 / pe_next_fy 4.0",
-     "verified_value": "향후 12개월 추정 EPS 246.47달러 기준 4.7배 사용(최근 4분기 non-GAAP EPS 합 118.37달러 기준 9.7배, 2분기 가이던스 중간값 56달러 연환산 224달러 기준 5.1배). FY28 기준 4.0배는 정점 이후 이익 낙관이라 미사용",
-     "source": "dossier + 실적 발표(분기 non-GAAP EPS 6.20/23.41/39.25/49.51)",
-     "status": "일치"
-    },
-    {
-     "metric": "FY27 1분기 실적",
-     "dashboard_value": "매출 미수집, 희석 EPS 52.6, non-GAAP EPS 49.51",
-     "verified_value": "매출 110.31억달러(+378% YoY, +23% QoQ), GAAP 순이익 81.0억달러·희석 EPS 52.60, non-GAAP EPS 49.51, non-GAAP 총마진 85.1%",
-     "source": "8-K EX-99.1 (2026-10-29)",
-     "status": "일치"
-    },
-    {
-     "metric": "주식수 변화",
-     "dashboard_value": "0% (2025-06→2026-06)",
-     "verified_value": "발행주식 1.46억주(FY25 말)→1.49억주(FY26 말) 약 +2%; 이후 FY27 1분기 약 320만주(50억달러) 매입",
-     "source": "FY26 4분기 보도자료 대차대조표, FY27 1분기 보도자료",
+     "metric": "PER 기준 / 다음 회계연도 EPS (data_conflicts: forwardEps 23.67 vs 추정치 추이 15.06, 재분석 사유 +35.4%)",
+     "dashboard_value": "pe_ntm_est 9.1배, pe_next_fy 8.7배, Yahoo forward PE 5.5배, 내년 EPS 11.19→15.06달러",
+     "verified_value": "PER은 쓰지 않습니다. 2027년 EPS는 2026년 말 대비 2027년 말 BTC 가격 변화로 결정됩니다(BTC $1,000당 세전 주당 약 $2.0, 우선주 배당은 주당 연 약 $3.5 차감). 추정치가 오른 7일 동안 BTC는 $77,000~78,000으로 거의 그대로였고 추정 범위(-$4.25~$69.86)도 같아, 실적 반영 뒤 일부 애널리스트의 BTC 가정 갱신 또는 표본 구성 변화입니다. 올해 EPS 추정 -7.24→+10.71도 3분기 실제 $44.75 반영과 4분기 BTC 반등(약 +$29) 가정 때문입니다. $15.06은 BTC가 1년간 약 $9,000~10,000, $23.67은 약 $13,000~14,000 오른다는 가정에 해당하며 오류가 아니라 BTC 가정 차이입니다. 평가는 순NAV(주당 약 $119)와 mNAV(1.10~1.11배)로 대체합니다",
+     "source": "Strategy IR 3분기 실적, strategy.com 지표·원장(11/2), 실적 발표 콜(평균 BTC 목표 약 $111,000), Yahoo BTC 가격 이력",
      "status": "불일치(수정)"
+    },
+    {
+     "metric": "BTC 보유량·평균 단가·USD 자산·선순위 청구권",
+     "dashboard_value": "dossier 미포함 (11/01 분석: 848,517개, 평균 $75,446, USD 자산 50.7억달러, 선순위 200.6억달러)",
+     "verified_value": "849,327개(11/1 기준, 10/26~11/1 811개를 평균 $80,846에 매입), 평균 $75,451, 매입 원가 640.8억달러. USD Reserve 47.9억 + USD Cash 1.33억달러 = 49.2억달러. 회사 지표상 준비금 708.8억달러, 순준비금 510.3억달러 → 선순위 청구권 약 198.5억달러(STRC 2.08억달러 재매입 반영)",
+     "source": "Strategy Form 8-K(2026-11-02), strategy.com/btc·/strc·/ledger",
+     "status": "일치"
+    },
+    {
+     "metric": "3분기 손익과 주당 BTC",
+     "dashboard_value": "3분기 EPS $44.75(추정 $22.89 대비 +95%)",
+     "verified_value": "EPS $44.75 확인(순이익 195.3억달러, 보통주 귀속 191.2억달러, 디지털자산 평가이익 209.1억달러, 우선주 배당 4.196억달러). 다만 BTC Yield는 연초 이후 -3.9%(11/1), 4분기 -0.1%로 EPS 호조와 주당 BTC가 분리됨",
+     "source": "Strategy 3분기 실적 보도자료·8-K(2026-10-29), strategy.com/ledger",
+     "status": "일치"
+    },
+    {
+     "metric": "소프트웨어 매출 성장률",
+     "dashboard_value": "-2.5% (YoY)",
+     "verified_value": "-3% (1.254억달러 vs 전년 1.287억달러, 총이익 8,960만달러), 구독 매출 6,860만달러(+49%), 라이선스 383만달러(전년 1,737만달러). 컨센서스 약 1.278억달러 하회",
+     "source": "Strategy 3분기 실적 보도자료(SEC 8-K Exhibit 99.1)",
+     "status": "일치"
     }
    ],
    "verified_metrics": {
-    "fcf_margin_pct": 48.3,
-    "fcf_yield_pct": 8.5,
-    "pe_ntm": 4.7,
-    "pe_basis_note": "향후 12개월 추정 EPS 246.47달러 기준(분할 전). FCF 마진·수익률은 NBM 선수금 제외 조정 FCF 기준(미조정 FCF 기준이면 59.9%·10.6%)"
+    "fcf_margin_pct": -8.3,
+    "fcf_yield_pct": -0.07,
+    "pe_ntm": null,
+    "pe_basis_note": "PER 미사용: 이익이 비트코인 공정가치 평가손익(비영업)에 좌우되므로 순NAV(BTC $77,000 기준 주당 약 $119)와 mNAV(순NAV 기준 1.10배, 회사 공표 1.11배)로 평가"
    },
    "evidence": {
     "data_verified": "검증 완료",
-    "bear_case_status": "미해소",
-    "estimate_dispersion": "다음 회계연도(FY28) EPS 추정치 저 243.95달러·평균 285.46달러·고 356.85달러, 분산 39.6%로 큽니다. 최근 90일 +11.7% 상향(30일 상향 1건·하향 0건)은 낙관 쪽이지만, Morningstar처럼 2028년 초 가격 정점 후 하강을 보는 시각까지 포함하면 실제 의견 차이는 이 범위보다 훨씬 넓습니다.",
-    "reward_risk": "기준 +5.1% / 강세 +69.4% / 약세 −42.7%, 가중 기대수익 약 +9.3%(최소 기준 10% 미달). 기준 시나리오 상승폭이 약세 하락폭의 8분의 1 수준이라 손익비가 나쁩니다.",
-    "conviction_basis": "핵심 수치는 회사 공시로 검증 완료했지만, 가장 강한 반대 근거(가격 정점 통과·2027년 하반기 공급 완화)가 오히려 이번 실적과 Kioxia 가이던스로 강화돼 '미해소'이고, EPS 추정 분산 39.6%·애널리스트 목표가 870~2,720달러의 극단적 차이가 있어 확신도 2입니다. NBM 연장 공시와 4분기 계약가 확정이 나오면 3으로 올릴 수 있습니다."
+    "bear_case_status": "부분 해소",
+    "estimate_dispersion": "다음 회계연도 EPS 추정치는 저 -$4.25, 평균 $15.06, 고 $69.86으로 분산이 492.1%입니다. 영업 전망의 차이가 아니라 애널리스트마다 다른 BTC 가격 가정이 그대로 반영된 값이라 컨센서스는 평가 근거로서 정보가 거의 없습니다. 최근 7일 +15.4%, 30일 +14.8%(상향 1건, 하향 2건) 변화는 저·고 추정치가 그대로인 채 평균만 움직인 것으로, BTC 가정 갱신이나 표본 변화에 따른 기계적 조정입니다. 직전 분석 때 같은 지표가 -14.7%였던 것처럼 방향이 수시로 바뀌므로 판단 근거로 쓰지 않습니다.",
+    "reward_risk": "기준 +6%($138.7), 강세 +113%($278) / 약세 -53%($62) → 기준 시나리오 손익비 약 0.1입니다. 25/50/25 가중 기대값은 약 +18%이지만 대부분 강세 시나리오(BTC $125,000) 한 곳에서 나오는 BTC 방향성 베팅이라 확신도를 높일 근거가 되지 못합니다.",
+    "conviction_basis": "BTC 보유량·USD 자산·선순위 청구권·BTC Yield는 11/2 8-K와 회사 지표로, 3분기 손익은 실적 보도자료로, FCF는 2분기 10-Q 현금흐름표로 검증했습니다(3분기 10-Q는 미확인). 단기 유동성(약 3.3년치)과 BTC 매입 재개는 긍정적이지만 고정 배당 부담, 주당 BTC 감소 지속, STRC 액면 미회복, MSCI 제외 위험, CFO 교체, BTC 수급 약세가 남아 '부분 해소'로 봤습니다. 순NAV 대비 10% 프리미엄과 기준 손익비 0.1을 고려해 확신도는 2로 11/01 분석과 같습니다."
    },
    "decision_table": {
     "action": "매수 보류",
-    "buy_below": 950,
-    "price_logic": "기준 시나리오 적정가 1,210달러(12개월 뒤 시장이 보는 선행 EPS 220달러 × 정점권 메모리 PER 5.5배)에 사이클 정점 불확실성을 반영한 약 22% 안전마진을 적용한 950달러(분할 후 118.75달러). 이 가격에서 가중 기대수익은 약 +32%, 약세 시 손실은 약 −30%로 줄어듭니다. 참고로 Morningstar 적정가는 870달러입니다.",
+    "buy_below": 112,
+    "price_logic": "eps 칸에는 12개월 후 주당 순NAV(달러), pe 칸에는 순NAV 대비 mNAV 배수를 넣었습니다. 기준 시나리오는 BTC $85,000, 보유 약 853,000개, USD 자산 40억달러, 선순위 197억달러, 주식 4.30억주로 주당 순NAV $132.1입니다. 여기에 mNAV 1.0배와 안전마진 15%를 적용하면 $132.1 × 1.0 × 0.85 = 약 $112입니다. 현재 주당 순NAV(약 $119)보다 낮아 프리미엄 없이 BTC를 사는 가격이며, 11/01 분석과 같습니다. EPS 추정치 상향은 BTC 가정 변화라 기준가를 올리지 않았습니다.",
     "scenarios": [
      {
       "name": "약세",
-      "eps": 120,
-      "pe": 5.5,
-      "price": 660,
+      "eps": 68.9,
+      "pe": 0.9,
+      "price": 62,
       "horizon": "12개월",
-      "assumption": "2027년 상반기 NAND 가격이 정점을 찍고 하반기 공급 증가로 계약가가 하락 전환, NBM 일부 재협상까지 겹쳐 시장이 보는 선행 EPS가 2027년 수준(약 240달러)의 절반으로 낮아지는 경우."
+      "assumption": "BTC가 해킹·ETF 유출 같은 수급 충격과 지수 제외 압력 속에 $55,000(-29%)까지 내려 USD Reserve를 쓰고 희석 발행(주식 4.40억주)으로 배당을 메우며 mNAV가 0.9배로 할인되는 경우입니다(보유 846,000개, USD 35억달러, 선순위 197억달러, 주당 순NAV $68.9)."
      },
      {
       "name": "기준",
-      "eps": 220,
-      "pe": 5.5,
-      "price": 1210,
+      "eps": 132.1,
+      "pe": 1.05,
+      "price": 138.7,
       "horizon": "12개월",
-      "assumption": "가격은 2027년 상반기까지 소폭 상승 후 고원·완만한 하락, 데이터센터 물량 증가와 NBM 최소 보장이 이익을 받쳐 선행 EPS가 정점보다 약간 낮은 220달러에서 유지되고 멀티플은 정점권 수준에 머무는 경우."
+      "assumption": "BTC가 $85,000(+10%)으로 완만히 회복하고 STRC가 액면 근처를 유지해 보유량이 약 853,000개로 소폭 늘며 mNAV가 1.05배로 유지되는 경우입니다(USD 40억달러, 선순위 197억달러, 주식 4.30억주, 주당 순NAV $132.1)."
      },
      {
       "name": "강세",
-      "eps": 300,
-      "pe": 6.5,
-      "price": 1950,
+      "eps": 206.1,
+      "pe": 1.35,
+      "price": 278,
       "horizon": "12개월",
-      "assumption": "데이터센터 비트 수요 +40%가 공급(10% 중후반 증가)을 계속 앞서고 NBM 연장·신규 계약으로 2028년 이익까지 가시화돼, 시장이 '계약형 이익'으로 보고 멀티플을 올려주는 경우."
+      "assumption": "BTC가 $125,000으로 오르고 STRC 액면 안착으로 우선주 발행과 BTC 매입이 재가속(보유 870,000개)되며 mNAV가 1.35배로 넓어지는 경우입니다(USD 50억달러, 선순위 210억달러, 주식 4.50억주, 주당 순NAV $206)."
      }
     ],
     "next_checks": [
      {
-      "metric": "TrendForce 4분기 NAND 계약가 확정치·2027년 1분기 전망",
-      "threshold": "전체 NAND +15% 이상 유지(정점 논리 약화) / 한 자릿수 또는 1분기 하락 전망(정점 확정)",
-      "date": "2026-12-31"
+      "metric": "CFO 퇴임과 PFO 인수인계, 3분기 10-Q의 주당 BTC(Sats)·영업현금흐름",
+      "threshold": "3분기 영업현금흐름 확인, 주당 Sats와 BTC Yield 추세(4분기 플러스 전환 여부)",
+      "date": "2026-11-05"
      },
      {
-      "metric": "Micron 회계 1분기 가이던스의 NAND 가격 문구",
-      "threshold": "'완만한(modest)' 가격 상승 반복 여부",
-      "date": "2026-12-17"
+      "metric": "주간 8-K: STRC 가격·신규 발행액, BTC 순매수, USD Cash, mNAV",
+      "threshold": "STRC $100 이상과 우선주 신규 발행 재개, BTC 순매수, 회사 기준 mNAV 1.0배 이상, BTC $75,000 이상",
+      "date": "2026-11-09"
      },
      {
-      "metric": "SanDisk FY27 2분기 실적·3분기 가이던스",
-      "threshold": "매출 122~126억달러·총마진 84.5% 이상 달성, 3분기 매출 가이던스 QoQ −5% 이내",
-      "date": "2027-01-28"
+      "metric": "MSCI 비영업회사 영향 종목 최종 명단",
+      "threshold": "Strategy 포함 여부(포함 시 11/30 장 마감 적용, 제외 시 완충장치 적용 확인)",
+      "date": "2026-11-11"
      },
      {
-      "metric": "NBM 연장·신규 계약 공시",
-      "threshold": "최소 금액 보장 포함 연장 1건 이상",
-      "date": "2027-01-28"
+      "metric": "MSCI 적용일 전후 주가·거래대금, 2029년물 조기상환 가능 시점",
+      "threshold": "패시브 매도로 mNAV 1.0배 미만 진입 여부, MSTR ATM 발행 지속 여부",
+      "date": "2026-11-30"
      }
     ],
     "change_triggers": [
      {
-      "condition": "주가 950달러(분할 후 118.75달러) 이하 + 4분기 NAND 계약가 +15% 이상 확정 + NBM 연장·신규 공시가 확인되면",
+      "condition": "주가가 $112 이하(순NAV 약 0.94배)로 내려오고, BTC가 $75,000 이상이며, STRC가 $100 이상에서 우선주 신규 발행이 재개돼 BTC 순매수가 확인되고, USD 자산 24개월치 이상이 유지되면",
       "new_action": "신규 매수"
      },
      {
-      "condition": "NAND 계약가가 분기 대비 하락 전환하거나 총마진 가이던스가 80% 미만으로 제시되면",
+      "condition": "MSCI 제외가 확정되고 회사 기준 mNAV가 1.0배 미만으로 떨어진 상태에서 MSTR ATM 발행이 이어지면",
       "new_action": "관망"
      },
      {
-      "condition": "NBM 고객의 재협상·물량 축소·최소 보장 완화가 보도되면",
+      "condition": "4분기에도 주당 BTC가 감소하거나, 우선주 배당 삭감·이연 또는 분기 BTC 순매도가 공시되면",
       "new_action": "관망"
      },
      {
-      "condition": "주가가 기준 적정가(1,210달러) 근처에서 정점 신호만 늘어나면",
+      "condition": "BTC Yield가 플러스로 돌아서고 mNAV가 1.3배를 넘더라도 주가가 $180을 넘으면(순NAV 대비 프리미엄 과다)",
       "new_action": "매수 보류"
      }
     ]
@@ -274,5 +273,5 @@
   "NVDA": 20,
   "ADBE": 10
  },
- "weights_reason": "NVDA 20%: 11/01 재점검 이후 새 공시·가이던스 변화 없음(주말 CEO 표적 첩보 보도는 논리와 무관), $204.64 로 매수 기준가 197 위, 경고 단계 \"추가 매수 중단\"이라 11/17 실적까지 동결. ADBE 10%: 새 공시 없음(Alpine 파트너십·HSBC 목표가 하향은 기존 반영), $250.23 매수 기준가 부근, 동결. 신규 SNDK 는 확신도 2·매수 보류·기대수익 +9.3%(10% 미만)로 미편입, 현금 70% 유지."
+ "weights_reason": "NVDA 20%: 11/01 재점검 이후 새 공시·가이던스 변화 없음(Melius 목표가 420→315 하향, 10/30 인텔 실적 쇼크 여파 반도체 약세는 논리 범위), $202.06 로 매수 기준가 197 위, 경고 단계 \"추가 매수 중단\"이라 11/17 실적까지 동결. ADBE 10%: 새 공시 없음(컨센서스 목표가 265 소폭 하향·MAX 11/10 대기), $251.47 매수 기준가 250 부근, 동결. 관심종목 MSTR 은 내년 EPS 추정 +35.4% 가 BTC 가정 변화일 뿐이라 재분석 결과 관찰·확신도 2·매수 보류(buy_below 112)로 미편입, 현금 70% 유지."
 }
