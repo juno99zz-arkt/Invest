@@ -1,6 +1,6 @@
 {
- "built_at_kst": "2026-11-04 06:31",
- "week": "2026-11-04",
+ "built_at_kst": "2026-11-06 10:30",
+ "week": "2026-11-06",
  "universe_size": 519,
  "m1": {
   "investors": [
@@ -727,11 +727,11 @@
     "stocks": 21,
     "eps_revision_pct_30d": 3.54,
     "eps_revision_pct_7d": 0.42,
-    "upgrade_ratio": 0.72,
+    "upgrade_ratio": 0.74,
     "momentum": "↑상승중",
     "sparkline": [
      0.0,
-     0.59,
+     0.18,
      2.3,
      6.56,
      5.33
@@ -740,17 +740,17 @@
    {
     "sector": "Technology",
     "sector_kr": "IT·기술",
-    "stocks": 92,
-    "eps_revision_pct_30d": 0.51,
-    "eps_revision_pct_7d": 0.11,
+    "stocks": 93,
+    "eps_revision_pct_30d": 0.52,
+    "eps_revision_pct_7d": 0.18,
     "upgrade_ratio": 0.75,
     "momentum": "↑상승중",
     "sparkline": [
      0.0,
-     1.08,
-     1.33,
-     2.63,
-     3.85
+     0.71,
+     1.15,
+     2.27,
+     3.71
     ]
    },
    {
@@ -758,14 +758,14 @@
     "sector_kr": "산업재",
     "stocks": 80,
     "eps_revision_pct_30d": 0.37,
-    "eps_revision_pct_7d": 0.03,
-    "upgrade_ratio": 0.55,
+    "eps_revision_pct_7d": 0.05,
+    "upgrade_ratio": 0.58,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.31,
-     0.46,
-     0.48,
+     0.27,
+     0.36,
+     0.45,
      1.2
     ]
    },
@@ -773,64 +773,64 @@
     "sector": "Financial Services",
     "sector_kr": "금융",
     "stocks": 69,
-    "eps_revision_pct_30d": 0.26,
-    "eps_revision_pct_7d": 0.08,
-    "upgrade_ratio": 0.55,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.02,
-     0.12,
-     0.19,
-     0.48
-    ]
-   },
-   {
-    "sector": "Communication Services",
-    "sector_kr": "커뮤니케이션",
-    "stocks": 22,
-    "eps_revision_pct_30d": 0.17,
+    "eps_revision_pct_30d": 0.24,
     "eps_revision_pct_7d": 0.01,
-    "upgrade_ratio": 0.51,
+    "upgrade_ratio": 0.54,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.1,
-     0.14,
-     0.39,
-     0.77
-    ]
-   },
-   {
-    "sector": "Healthcare",
-    "sector_kr": "헬스케어",
-    "stocks": 61,
-    "eps_revision_pct_30d": 0.08,
-    "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.57,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.17,
-     0.18,
-     0.22,
-     0.49
+     0.01,
+     0.13,
+     0.25,
+     0.5
     ]
    },
    {
     "sector": "Basic Materials",
     "sector_kr": "소재",
     "stocks": 18,
-    "eps_revision_pct_30d": 0.06,
-    "eps_revision_pct_7d": -0.0,
-    "upgrade_ratio": 0.4,
+    "eps_revision_pct_30d": 0.16,
+    "eps_revision_pct_7d": -0.02,
+    "upgrade_ratio": 0.38,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      -0.1,
      -1.36,
      -1.41,
-     -0.76
+     -0.6
+    ]
+   },
+   {
+    "sector": "Healthcare",
+    "sector_kr": "헬스케어",
+    "stocks": 61,
+    "eps_revision_pct_30d": 0.12,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.54,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.11,
+     0.15,
+     0.16,
+     0.34
+    ]
+   },
+   {
+    "sector": "Communication Services",
+    "sector_kr": "커뮤니케이션",
+    "stocks": 22,
+    "eps_revision_pct_30d": 0.06,
+    "eps_revision_pct_7d": 0.02,
+    "upgrade_ratio": 0.46,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.04,
+     0.14,
+     0.06,
+     0.38
     ]
    },
    {
@@ -839,45 +839,45 @@
     "stocks": 31,
     "eps_revision_pct_30d": -0.05,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.47,
+    "upgrade_ratio": 0.37,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      0.0,
      -0.01,
-     -0.01,
-     0.01
+     -0.02,
+     -0.01
     ]
    },
    {
     "sector": "Consumer Defensive",
     "sector_kr": "필수소비재",
-    "stocks": 33,
-    "eps_revision_pct_30d": -0.1,
+    "stocks": 32,
+    "eps_revision_pct_30d": -0.06,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.32,
+    "upgrade_ratio": 0.31,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      0.0,
-     0.01,
-     -0.19,
-     0.0
+     0.0,
+     -0.11,
+     -0.07
     ]
    },
    {
     "sector": "Real Estate",
     "sector_kr": "부동산",
     "stocks": 29,
-    "eps_revision_pct_30d": -0.11,
+    "eps_revision_pct_30d": -0.14,
     "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.32,
+    "upgrade_ratio": 0.3,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.67,
-     1.23,
-     1.09,
+     0.44,
+     0.76,
+     0.74,
      1.57
     ]
    },
@@ -885,16 +885,16 @@
     "sector": "Consumer Cyclical",
     "sector_kr": "경기소비재",
     "stocks": 56,
-    "eps_revision_pct_30d": -0.32,
-    "eps_revision_pct_7d": -0.02,
-    "upgrade_ratio": 0.4,
+    "eps_revision_pct_30d": -0.34,
+    "eps_revision_pct_7d": -0.08,
+    "upgrade_ratio": 0.32,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.04,
+     0.01,
      -0.04,
-     -0.04,
-     -0.69
+     -0.01,
+     -0.82
     ]
    }
   ]
@@ -903,15 +903,41 @@
   "companies": [
    {
     "rank": 1,
+    "ticker": "LITE",
+    "name": "Lumentum Holdings Inc.",
+    "sector": "IT·기술",
+    "market_cap_b": 46,
+    "revenue_growth_pct": 136.5,
+    "earnings_growth_pct": 6980.0,
+    "eps_revision_30d": 9.69,
+    "eps_revision_90d": 30.69,
+    "up_30d": 6.0,
+    "down_30d": 0.0,
+    "op_margin_q": [
+     2.8,
+     9.6,
+     21.7,
+     28.0,
+     28.0
+    ],
+    "eps_surprises": [
+     18.6,
+     4.6,
+     8.2
+    ],
+    "next_earnings": "2027-02-02"
+   },
+   {
+    "rank": 2,
     "ticker": "SMCI",
     "name": "Super Micro Computer, Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 21,
-    "revenue_growth_pct": 93.2,
-    "earnings_growth_pct": 434.7,
-    "eps_revision_30d": 6.63,
-    "eps_revision_90d": 47.2,
-    "up_30d": 8.0,
+    "market_cap_b": 18,
+    "revenue_growth_pct": 297.5,
+    "earnings_growth_pct": 581.3,
+    "eps_revision_30d": 9.31,
+    "eps_revision_90d": 50.91,
+    "up_30d": 4.0,
     "down_30d": 0.0,
     "op_margin_q": [
      4.0,
@@ -921,51 +947,51 @@
      13.4
     ],
     "eps_surprises": [
-     -10.1,
      41.4,
      34.5,
-     77.6
+     77.6,
+     46.6
     ],
-    "next_earnings": "2026-11-03"
-   },
-   {
-    "rank": 2,
-    "ticker": "ALAB",
-    "name": "Astera Labs, Inc.",
-    "sector": "IT·기술",
-    "market_cap_b": 41,
-    "revenue_growth_pct": 104.5,
-    "earnings_growth_pct": 186.2,
-    "eps_revision_30d": 1.69,
-    "eps_revision_90d": 30.14,
-    "up_30d": 20.0,
-    "down_30d": 0.0,
-    "op_margin_q": [
-     20.7,
-     24.0,
-     24.7,
-     20.1,
-     22.7
-    ],
-    "eps_surprises": [
-     25.6,
-     12.6,
-     13.5,
-     15.6
-    ],
-    "next_earnings": "2026-11-03"
+    "next_earnings": "2027-02-02"
    },
    {
     "rank": 3,
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corporation",
+    "sector": "에너지",
+    "market_cap_b": 103,
+    "revenue_growth_pct": 60.9,
+    "earnings_growth_pct": 489.6,
+    "eps_revision_30d": 18.62,
+    "eps_revision_90d": 96.76,
+    "up_30d": 15.0,
+    "down_30d": 2.0,
+    "op_margin_q": [
+     4.8,
+     5.7,
+     3.0,
+     13.4,
+     17.8
+    ],
+    "eps_surprises": [
+     50.1,
+     120.6,
+     27.1,
+     3.6
+    ],
+    "next_earnings": "2027-02-02"
+   },
+   {
+    "rank": 4,
     "ticker": "DELL",
     "name": "Dell Technologies Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 260,
+    "market_cap_b": 201,
     "revenue_growth_pct": 57.7,
     "earnings_growth_pct": 272.9,
-    "eps_revision_30d": 14.34,
-    "eps_revision_90d": 45.16,
-    "up_30d": 4.0,
+    "eps_revision_30d": 14.39,
+    "eps_revision_90d": 45.22,
+    "up_30d": 1.0,
     "down_30d": 0.0,
     "op_margin_q": [
      6.4,
@@ -983,43 +1009,16 @@
     "next_earnings": "2026-11-24"
    },
    {
-    "rank": 4,
-    "ticker": "MPC",
-    "name": "Marathon Petroleum Corporation",
-    "sector": "에너지",
-    "market_cap_b": 120,
-    "revenue_growth_pct": 53.7,
-    "earnings_growth_pct": 348.0,
-    "eps_revision_30d": 24.66,
-    "eps_revision_90d": 117.18,
-    "up_30d": 14.0,
-    "down_30d": 1.0,
-    "op_margin_q": [
-     5.6,
-     4.8,
-     5.7,
-     3.0,
-     13.4
-    ],
-    "eps_surprises": [
-     50.1,
-     120.6,
-     27.1,
-     3.6
-    ],
-    "next_earnings": "2026-11-03"
-   },
-   {
     "rank": 5,
     "ticker": "VLO",
     "name": "Valero Energy Corporation",
     "sector": "에너지",
-    "market_cap_b": 108,
+    "market_cap_b": 98,
     "revenue_growth_pct": 46.5,
     "earnings_growth_pct": 576.8,
     "eps_revision_30d": 36.28,
     "eps_revision_90d": 93.01,
-    "up_30d": 11.0,
+    "up_30d": 14.0,
     "down_30d": 2.0,
     "op_margin_q": [
      4.7,
@@ -1041,13 +1040,13 @@
     "ticker": "PSX",
     "name": "Phillips 66",
     "sector": "에너지",
-    "market_cap_b": 106,
+    "market_cap_b": 96,
     "revenue_growth_pct": 46.4,
     "earnings_growth_pct": 4299.0,
-    "eps_revision_30d": 17.18,
-    "eps_revision_90d": 65.44,
-    "up_30d": 10.0,
-    "down_30d": 1.0,
+    "eps_revision_30d": 15.38,
+    "eps_revision_90d": 60.24,
+    "up_30d": 14.0,
+    "down_30d": 3.0,
     "op_margin_q": [
      2.8,
      4.8,
@@ -1068,12 +1067,12 @@
     "ticker": "OXY",
     "name": "Occidental Petroleum Corporatio",
     "sector": "에너지",
-    "market_cap_b": 60,
+    "market_cap_b": 56,
     "revenue_growth_pct": 53.4,
     "earnings_growth_pct": 964.9,
     "eps_revision_30d": 24.8,
     "eps_revision_90d": 27.67,
-    "up_30d": 12.0,
+    "up_30d": 16.0,
     "down_30d": 3.0,
     "op_margin_q": [
      15.2,
@@ -1095,12 +1094,12 @@
     "ticker": "MU",
     "name": "Micron Technology, Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 967,
+    "market_cap_b": 743,
     "revenue_growth_pct": 379.3,
     "earnings_growth_pct": 1059.5,
     "eps_revision_30d": 0.52,
     "eps_revision_90d": 24.49,
-    "up_30d": 19.0,
+    "up_30d": 20.0,
     "down_30d": 1.0,
     "op_margin_q": [
      32.6,
@@ -1122,13 +1121,13 @@
     "ticker": "STX",
     "name": "Seagate Technology Holdings PLC",
     "sector": "IT·기술",
-    "market_cap_b": 139,
+    "market_cap_b": 107,
     "revenue_growth_pct": 61.0,
     "earnings_growth_pct": 212.3,
     "eps_revision_30d": 18.01,
     "eps_revision_90d": 19.43,
-    "up_30d": 5.0,
-    "down_30d": 0.0,
+    "up_30d": 7.0,
+    "down_30d": 1.0,
     "op_margin_q": [
      26.9,
      29.9,
@@ -1149,7 +1148,7 @@
     "ticker": "SNDK",
     "name": "Sandisk Corporation",
     "sector": "IT·기술",
-    "market_cap_b": 160,
+    "market_cap_b": 115,
     "revenue_growth_pct": 377.9,
     "earnings_growth_pct": 6913.3,
     "eps_revision_30d": 9.02,
@@ -1179,12 +1178,12 @@
     "rank": 1,
     "ticker": "GILD",
     "name": "Gilead Sciences, Inc.",
-    "market_cap_b": 207.7,
+    "market_cap_b": 207.8,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -3.13,
     "consensus_eps": 10.09,
     "analyst_count": 26,
-    "current_price": 167.47,
+    "current_price": 167.57,
     "projected_pe": 16.6,
     "sig_proj_pe": "yellow",
     "recent_eps": [
@@ -1196,13 +1195,13 @@
     "rank": 2,
     "ticker": "MSTR",
     "name": "Strategy Inc",
-    "market_cap_b": 57.4,
+    "market_cap_b": 54.7,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -52.33,
-    "consensus_eps": 23.67,
+    "consensus_eps": 16.59,
     "analyst_count": 15,
-    "current_price": 135.63,
-    "projected_pe": 5.7,
+    "current_price": 129.3,
+    "projected_pe": 7.8,
     "sig_proj_pe": "green",
     "recent_eps": [
      -24.45,
@@ -1211,32 +1210,32 @@
    },
    {
     "rank": 3,
-    "ticker": "LYV",
-    "name": "Live Nation Entertainment, Inc.",
-    "market_cap_b": 41.7,
-    "turnaround_quarter": "이번 분기 흑자 예상",
-    "trailing_eps": -1.11,
-    "consensus_eps": 1.9,
-    "analyst_count": 24,
-    "current_price": 178.87,
-    "projected_pe": 94.0,
-    "sig_proj_pe": "red",
+    "ticker": "TTWO",
+    "name": "Take-Two Interactive Software, ",
+    "market_cap_b": 39.9,
+    "turnaround_quarter": "다음 분기 흑자 예상",
+    "trailing_eps": -1.73,
+    "consensus_eps": 10.32,
+    "analyst_count": 28,
+    "current_price": 213.36,
+    "projected_pe": 20.7,
+    "sig_proj_pe": "yellow",
     "recent_eps": [
-     -1.85,
-     1.05
+     -0.32,
+     -0.18
     ]
    },
    {
     "rank": 4,
     "ticker": "COIN",
     "name": "Coinbase Global, Inc.",
-    "market_cap_b": 38.5,
+    "market_cap_b": 36.2,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -2.77,
     "consensus_eps": 2.47,
     "analyst_count": 34,
-    "current_price": 145.45,
-    "projected_pe": 58.9,
+    "current_price": 136.82,
+    "projected_pe": 55.4,
     "sig_proj_pe": "red",
     "recent_eps": [
      -1.36,
@@ -1245,43 +1244,54 @@
    },
    {
     "rank": 5,
-    "ticker": "TTWO",
-    "name": "Take-Two Interactive Software, ",
-    "market_cap_b": 36.5,
-    "turnaround_quarter": "다음 분기 흑자 예상",
-    "trailing_eps": -1.73,
-    "consensus_eps": 10.32,
-    "analyst_count": 28,
-    "current_price": 194.99,
-    "projected_pe": 18.9,
-    "sig_proj_pe": "yellow",
-    "recent_eps": [
-     -0.32,
-     -0.18
-    ]
-   },
-   {
-    "rank": 6,
     "ticker": "RKLB",
     "name": "Rocket Lab Corporation",
-    "market_cap_b": 34.8,
+    "market_cap_b": 29.4,
     "turnaround_quarter": "내년 연간 흑자 예상",
     "trailing_eps": -0.27,
     "consensus_eps": 0.06,
     "analyst_count": 20,
-    "current_price": 54.43,
-    "projected_pe": 946.8,
+    "current_price": 45.99,
+    "projected_pe": 800.0,
     "sig_proj_pe": "red",
     "recent_eps": [
      -0.07,
      -0.08
     ]
+   },
+   {
+    "rank": 6,
+    "ticker": "MOS",
+    "name": "Mosaic Company (The)",
+    "market_cap_b": 7.1,
+    "turnaround_quarter": "이번 분기 흑자 예상",
+    "trailing_eps": -3.54,
+    "consensus_eps": 1.52,
+    "analyst_count": 18,
+    "current_price": 22.33,
+    "projected_pe": 14.7,
+    "sig_proj_pe": "green",
+    "recent_eps": [
+     0.13,
+     -0.19
+    ]
    }
   ]
  },
  "m5": {
-  "period": "2026-10-20 ~ 2026-11-03",
+  "period": "2026-10-23 ~ 2026-11-06",
   "buy": [
+   {
+    "ticker": "MGM",
+    "insider_name": "Meister Keith A.",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-10-30",
+    "amount_usd": 51740827,
+    "shares": 1745592,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
    {
     "ticker": "ROL",
     "insider_name": "R. Randall Rollins Voting Trust U/A dated August 25, 1994",
@@ -1303,6 +1313,17 @@
     "shares": 1444402,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "INTC",
+    "insider_name": "TAN LIP BU",
+    "title": "CEO",
+    "transaction": "매수",
+    "date": "2026-11-02",
+    "amount_usd": 9709680,
+    "shares": 150000,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
    },
    {
     "ticker": "ACN",
@@ -1327,6 +1348,17 @@
     "signal_type": "bullish"
    },
    {
+    "ticker": "BA",
+    "insider_name": "Buckley Mortimer J",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-10-30",
+    "amount_usd": 998421,
+    "shares": 5820,
+    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
+    "signal_type": "strong_bullish"
+   },
+   {
     "ticker": "XYL",
     "insider_name": "KOCH D CHRISTIAN",
     "title": "이사",
@@ -1345,6 +1377,39 @@
     "date": "2026-11-02",
     "amount_usd": 620390,
     "shares": 1000,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "BKR",
+    "insider_name": "RICE JOHN G",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-03",
+    "amount_usd": 531000,
+    "shares": 10000,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "BA",
+    "insider_name": "MOLLENKOPF STEVEN M",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-10-30",
+    "amount_usd": 510427,
+    "shares": 2950,
+    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
+    "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "CLX",
+    "insider_name": "Breber Pierre R",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-04",
+    "amount_usd": 400251,
+    "shares": 4000,
     "signal": "장내 매수 (자기 돈으로 매수)",
     "signal_type": "bullish"
    },
@@ -1380,17 +1445,6 @@
     "shares": 12700,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
-   },
-   {
-    "ticker": "NBIS",
-    "insider_name": "Grimme Arne",
-    "title": "이사",
-    "transaction": "매수",
-    "date": "2026-10-22",
-    "amount_usd": 122438,
-    "shares": 770,
-    "signal": "장내 매수 (자기 돈으로 매수)",
-    "signal_type": "bullish"
    }
   ],
   "sell": [
@@ -1405,6 +1459,18 @@
     "plan_10b5_1": false,
     "signal": "재량 매도 (보유분 대비 소규모)",
     "signal_type": "neutral"
+   },
+   {
+    "ticker": "ILMN",
+    "insider_name": "Meister Keith A.",
+    "title": "이사",
+    "transaction": "매도",
+    "date": "2026-11-03",
+    "amount_usd": 66560212,
+    "shares_sold_pct": 36.5,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 36.5% 재량 매도 — 주의",
+    "signal_type": "bearish"
    },
    {
     "ticker": "APH",
@@ -1431,6 +1497,18 @@
     "signal_type": "bearish"
    },
    {
+    "ticker": "ANET",
+    "insider_name": "BECHTOLSHEIM ANDREAS",
+    "title": "10% 대주주",
+    "transaction": "매도",
+    "date": "2026-10-30",
+    "amount_usd": 45859344,
+    "shares_sold_pct": 0.1,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
+   },
+   {
     "ticker": "TRV",
     "insider_name": "Schnitzer Alan D",
     "title": "Chairman and CEO",
@@ -1443,27 +1521,27 @@
     "signal_type": "bearish"
    },
    {
-    "ticker": "MU",
-    "insider_name": "Deboer Scott J",
-    "title": "Pres. & Chief Tech & Prod Offr",
+    "ticker": "CRWD",
+    "insider_name": "Kurtz George",
+    "title": "PRESIDENT AND CEO",
     "transaction": "매도",
-    "date": "2026-10-16",
-    "amount_usd": 25690216,
-    "shares_sold_pct": 16.2,
+    "date": "2026-11-02",
+    "amount_usd": 31503846,
+    "shares_sold_pct": 0.6,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
    },
    {
-    "ticker": "CRWD",
-    "insider_name": "Kurtz George",
-    "title": "PRESIDENT AND CEO",
+    "ticker": "V",
+    "insider_name": "Taneja Rajat",
+    "title": "PRESIDENT, TECHNOLOGY",
     "transaction": "매도",
-    "date": "2026-10-29",
-    "amount_usd": 24818781,
-    "shares_sold_pct": 0.3,
-    "plan_10b5_1": true,
-    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "date": "2026-11-04",
+    "amount_usd": 29331401,
+    "shares_sold_pct": 12.9,
+    "plan_10b5_1": false,
+    "signal": "재량 매도 (보유분 대비 소규모)",
     "signal_type": "neutral"
    },
    {
@@ -1479,37 +1557,13 @@
     "signal_type": "bearish"
    },
    {
-    "ticker": "COF",
-    "insider_name": "FAIRBANK RICHARD D",
-    "title": "Chairman and CEO",
+    "ticker": "FTNT",
+    "insider_name": "Xie Ken",
+    "title": "President & CEO",
     "transaction": "매도",
-    "date": "2026-10-27",
-    "amount_usd": 18407891,
-    "shares_sold_pct": 2.2,
-    "plan_10b5_1": true,
-    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
-    "signal_type": "neutral"
-   },
-   {
-    "ticker": "SCHW",
-    "insider_name": "Schwab Charles R.",
-    "title": "Co-Chairman",
-    "transaction": "매도",
-    "date": "2026-10-28",
-    "amount_usd": 18105625,
-    "shares_sold_pct": 0.4,
-    "plan_10b5_1": false,
-    "signal": "재량 매도 (보유분 대비 소규모)",
-    "signal_type": "neutral"
-   },
-   {
-    "ticker": "HSY",
-    "insider_name": "HERSHEY TRUST CO TRUSTEE IN TRUST FOR MILTON HERSHEY SCHOOL",
-    "title": "10% 대주주",
-    "transaction": "매도",
-    "date": "2026-10-29",
-    "amount_usd": 16713227,
-    "shares_sold_pct": 5.8,
+    "date": "2026-11-01",
+    "amount_usd": 20880684,
+    "shares_sold_pct": 0.3,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
@@ -1517,10 +1571,17 @@
   ],
   "buy_tickers": [
    "ACN",
+   "BA",
+   "BKR",
    "CAT",
+   "CLX",
+   "CRH",
    "HBAN",
+   "INTC",
+   "MGM",
    "NBIS",
    "ROL",
+   "SYY",
    "TFC",
    "XYL"
   ]
@@ -1543,15 +1604,15 @@
    },
    {
     "ticker": "AMD",
-    "eps_growth_last_q": 159.5,
-    "eps_growth_this_fy": 82.9,
-    "eps_growth_next_fy": 110.7,
+    "eps_growth_last_q": 93.8,
+    "eps_growth_this_fy": 93.4,
+    "eps_growth_next_fy": 102.2,
     "trend": "가속 전망"
    },
    {
     "ticker": "ASML",
     "eps_growth_last_q": 135.9,
-    "eps_growth_this_fy": 67.3,
+    "eps_growth_this_fy": 67.9,
     "eps_growth_next_fy": 36.0,
     "trend": "둔화 전망"
    },
@@ -1565,9 +1626,9 @@
    {
     "ticker": "QCOM",
     "eps_growth_last_q": -23.0,
-    "eps_growth_this_fy": -12.5,
-    "eps_growth_next_fy": -3.5,
-    "trend": "역성장 전망"
+    "eps_growth_this_fy": -3.6,
+    "eps_growth_next_fy": 26.5,
+    "trend": "가속 전망"
    },
    {
     "ticker": "AMAT",
@@ -1672,8 +1733,8 @@
   "overall": {
    "semiconductor_growth_trend": "성장 지속",
    "capex_trend": "확대",
-   "bull_market_signal": "주의",
-   "summary": "반도체 7종목 중 3종목이 내년 EPS 성장 둔화·역성장 전망. 빅테크 5사 분기 CapEx 전년동기 대비 중앙값 +114%. (컨센서스·재무공시 기반 자동 판정)"
+   "bull_market_signal": "지속",
+   "summary": "반도체 7종목 중 2종목이 내년 EPS 성장 둔화·역성장 전망. 빅테크 5사 분기 CapEx 전년동기 대비 중앙값 +114%. (컨센서스·재무공시 기반 자동 판정)"
   }
  },
  "status": {
@@ -1683,213 +1744,214 @@
  },
  "market_brief": {
   "stance": "방어적",
-  "stance_reason": "① AI 인프라 위험이 '대형 기술주 현금흐름'으로 번졌다. 10/30 나스닥은 아마존·인텔 실적 여파로 −2.9%(25,437), 10/6 고점 대비 약 −7.8%로 6월 이후 최악의 하루를 기록했고 반도체지수는 하루 −7.2%, 10월 누적 −15% 이상이다. 인텔은 −29%(1970년대 이후 최악), AMD −10.9%, NVDA −4.2%였다. 알파벳(3분기 FCF −90.7억달러), 메타(−21.2억달러, S&P가 신용전망을 '부정적'으로 하향), 아마존(최근 12개월 FCF −424억달러)이 모두 CapEx 때문에 현금흐름이 마이너스다. ② 금리·물가는 그대로 부담이다. 연준은 10/28 기준금리를 3.75~4.00%로 10대 2 표결로 동결했고(9월에 25bp 인상), 9월 PCE는 전년비 3.6%(근원 3.1%)이며 3분기 GDP는 +3.4%로 강해 12월 추가 인상 가능성이 열려 있다. 11/6 고용보고서와 11/10 CPI가 분수령이다. ③ 이익 모멘텀은 에너지(+3.54%)에만 있고 IT(+0.46%) 포함 나머지 10개 섹터는 ±0.4% 내 횡보하며 강세장 신호는 '주의'다. ④ 공포·탐욕 지수는 26(최근 5일 최저 26, '공포')으로 매수 가중 문턱(10 미만)에 닿지 않아 반영하지 않는다. 다만 AI 수요 자체는 꺾이지 않았다(AWS 매출 +39%로 5년래 최고 성장, 알파벳 2027년 CapEx 대폭 증가 예고, 아마존이 엔비디아 칩 추가 구매 계획). 결론: 개별주 합계 상한은 기본 60%를 유지하고, 현재 실제 비중은 30%(NVDA 20·ADBE 10)이므로 신규 편입은 가격·기대수익 조건을 넘는 경우에만 하며, 11/6 고용과 11/17 NVDA 실적 전까지는 현금 비중을 지킨다.",
-  "market_env": "연준은 10/28 FOMC에서 기준금리를 3.75~4.00%로 동결했지만 10대 2(쿡 이사 등 2명 반대) 표결이었고, 성명에서 '인플레이션은 여전히 높다'고 하며 12월 인상 여부에 대한 명확한 신호는 주지 않았다. 3분기 실질 GDP는 연율 +3.4%로 예상보다 강했고 9월 PCE 물가는 전년비 3.6%, 근원 3.1%로 목표(2%)를 크게 웃돈다. 즉 경기는 강하고 물가는 높은 '인상 여지가 남은 동결' 국면이다. 빅테크 3분기 실적은 사업은 좋지만 현금흐름이 나쁜 모습이었다. 마이크로소프트는 연간 CapEx 전망을 1,750억에서 1,700억달러로 낮췄고, 알파벳은 올해 CapEx를 유지하면서 2027년 '대폭 증가'를 예고했고 주가가 −10% 급락했다. 아마존은 CapEx 2,200억달러를 유지하며 최근 12개월 FCF가 −424억달러로 돌아섰다. 10월 나스닥100은 2025년 3월 이후 최악의 월간 하락(−7%대)을 기록했고 주간으로도 −6.7%였다. 에너지 업종만 이익 추정치가 오르는 가운데(+3.54%) 유가·정제마진 강세가 물가 부담을 키우는 한편 OPEC+는 12월 감산 목표 동결에 원칙 합의했다고 전해졌다.",
-  "key_change": "이번 주 결정적 변화는 'AI 투자가 현금흐름과 신용으로 번졌다'는 점이다. 알파벳·메타·아마존이 모두 3분기에 FCF 마이너스를 내고 S&P가 메타 전망을 부정적으로 낮추자, 지금까지 '수요는 강하고 자금조달이 문제'였던 우려가 '대형 기술주 대차대조표 문제'로 확대됐다. 한편 아마존 AWS가 +39%로 가속하고 엔비디아 칩을 더 사겠다고 한 점, 알파벳이 2027년 CapEx 증가를 예고한 점은 NVDA의 수요 논리를 훼손하지 않는다. 마이크로소프트의 연간 CapEx 전망 소폭 하향(1,750→1,700억달러)이 유일한 감소 신호이므로 NVDA 붕괴 조건 6번(2027년 CapEx 감소·동결)에 해당하는지 따로 점검한다. 레딧(−29%)은 구글 검색 유입 감소로 4분기 이용자 감소를 경고해 AI 검색이 콘텐츠 플랫폼에 미치는 구조적 위험이 처음 숫자로 확인됐다.",
+  "stance_reason": "① 11/3 중간선거에서 민주당이 상·하원을 모두 가져갔고, 데이터센터 모라토리엄을 공약한 텍사스 주지사 당선인 등이 나오며 AI 인프라 증설 속도에 처음으로 '정치·인허가' 위험이 붙었다. 11/5 나스닥 −5.5%(조정 진입), S&P 500 −4.4%, 반도체지수 −12% 이상으로 2025년 4월 관세 쇼크 이후 최대 하락이다. ② 금리 쪽도 우호적이지 않다. 연준은 10/28 3.75~4.00%에서 동결했지만 선물시장은 12월 0.25%p 인상 확률을 약 79%로 보고 10년물은 4.8%대다. 금리 상승 속 네오클라우드(CoreWeave −60%/1개월)의 자금조달 불안이 AI 체인 할인율을 높이고 있다. ③ 공포·탐욕 지수는 19.9(극단적 공포, 5일 최저 19.4)로 20 하향 경계 단계지만, 10년 백테스트상 20 미만은 단독 매수 근거가 없어 가중하지 않는다. 섹터 이익 추정치는 에너지(+3.5%)만 뚜렷하고 나머지는 ±0.5% 안 횡보다. 오늘 분석한 8종목(FIX·EME·ON·LITE·SPCX·CF·CRCL·NVDA) 모두 하락 원인은 회사 고유 악재가 아니었지만, 텍사스 비중이 큰 데이터센터 시공사(FIX)와 네오클라우드 고객 노출 종목은 기준가를 낮췄다. 개별주 상한 60%는 유지하고 현금 70%로 11/6 고용·11/10 CPI·11/17 NVDA 실적을 확인한 뒤 분할 접근한다.",
+  "market_env": "미국 증시는 11/4 선거 직후 반등을 하루 만에 전부 반납하고 11/5 기술주 중심 투매가 나왔다. 기술 섹터(−7.3%)는 2020년 3월 이후 최악의 하루였고, 매그니피센트 7 시가총액이 하루에 1조달러 넘게 사라졌으며 VIX 는 하루 11.6포인트 올라 3월 말 이후 최고다. 원인은 실적이 아니라 정책 기대의 변화다. 민주당 지도부 일부가 '전국 데이터센터 모라토리엄'을 공개 요구했고, 계획 데이터센터 용량의 27%가 있는 텍사스에서 승인 중단을 공약한 주지사가 당선됐다. 여기에 12월 금리 인상 가능성, 브렌트유 100달러 안팎(미·이스라엘-이란 전쟁)이 겹쳐 할인율·비용 양쪽이 부담이다. 다만 11/6 아시아 반도체가 따라 빠지는 가운데 미국 선물은 혼조로 출발해 패닉의 연장 여부는 고용·물가 지표에 달려 있다.",
+  "key_change": "결정적 변화는 AI 인프라 랠리의 전제였던 '증설은 막을 수 없다'에 정치 변수가 처음 붙었다는 점이다. 그동안의 걱정은 수요(OpenAI 매출)와 자금조달(네오클라우드 신용)이었는데, 이번 주에는 인허가·전력·물 규제라는 공급 측 제약이 더해졌다. 실제 수요 지표는 아직 꺾이지 않았다. IREN 은 백로그가 203억달러로 22% 늘었다고 했고 마이크로소프트 요청으로 연환산 40억달러 매출이 내년 초로 밀린 것도 '취소'가 아닌 '재구성'이라고 설명했다. 그래서 오늘 판단은 보유 NVDA 의 논리 붕괴가 아니라 '증설 속도 위험 프리미엄 확대'다. 매수 기준가는 낮추되, 확인되지 않은 정책 위험만으로 팔지는 않는다.",
   "next_events": [
    {
-    "date": "2026-11-02",
-    "event": "ISM 제조업 PMI(10월), 애플·팔란티어 장 마감 후 실적 — 소비자 기기와 AI 소프트웨어 수요 확인"
-   },
-   {
-    "date": "2026-11-03",
-    "event": "미국 중간선거, JOLTS, AMD·Super Micro·Arista 실적(장 마감 후) — AI 반도체 수요와 서버 공급망 확인, 선거 결과에 따른 정책 변동성"
-   },
-   {
-    "date": "2026-11-04",
-    "event": "ADP·ISM 서비스업, 유로존 10월 CPI, CF·CPAY·EXPE·CRCL 실적 — 후보·관심 종목 재평가 트리거"
-   },
-   {
-    "date": "2026-11-05",
-    "event": "영란은행 금리 결정, 미국 3분기 생산성·단위노동비용 — 고용보고서 전날 임금·물가 압력 확인"
-   },
-   {
     "date": "2026-11-06",
-    "event": "미국 10월 고용보고서(비농업 컨센서스 약 +5만, 실업률 4.2%) — 12월 FOMC 인상 여부의 핵심 입력값"
+    "event": "미국 10월 고용보고서(예상 +5.9만~6.5만명, 실업률 4.2%) — 너무 강하면 12월 금리 인상 기대 강화, 너무 약하면 경기 우려"
    },
    {
     "date": "2026-11-10",
-    "event": "미국 10월 CPI — 근원 물가 재가속 여부, 성장주 할인율 방향"
+    "event": "미국 10월 CPI(9월 전년비 3.7%) — 12월 FOMC 인상 여부의 분수령, Adobe MAX(ADBE)"
+   },
+   {
+    "date": "2026-11-10",
+    "event": "CoreWeave 3분기 실적(1개월 −60%) — 네오클라우드 자금조달·GPU 수요 확인, NVDA 고객 신용 위험 점검"
+   },
+   {
+    "date": "2026-11-11",
+    "event": "MSCI 지수 결정(MSTR 등 디지털자산 보유 기업 처리)"
+   },
+   {
+    "date": "2026-11-12",
+    "event": "Nebius 실적 — 네오클라우드 2번째 확인"
+   },
+   {
+    "date": "2026-11-13",
+    "event": "미국 10월 PPI"
    },
    {
     "date": "2026-11-17",
-    "event": "NVDA 3분기 실적(총마진 ≥73.5%, 4분기 가이던스, DSO, OCF/NI ≥60% 검증)"
+    "event": "NVIDIA 3분기(FY27) 실적(미 장 마감 후) — 총마진·4분기 가이던스·보증 잔액, 보유 종목 추가 매수 여부 판단 시점"
    },
    {
     "date": "2026-11-18",
-    "event": "10월 FOMC 의사록 공개 — 12월 인상 논의 강도"
+    "event": "10월 FOMC 의사록, 하원 위원회가 젠슨 황에게 요청한 비공개 브리핑(중국 정보원 관계 의혹)"
    }
   ],
   "news": [
    {
-    "title": "Fed issues FOMC statement",
-    "source": "연방준비제도(FOMC 성명)",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-    "published": "2026-10-28",
-    "kind": "공시",
-    "summary": "연준이 10/28 FOMC에서 기준금리를 3.75~4.00%로 10대 2 표결로 동결했고, 성명은 \"경제 활동이 강한 속도로 확장 중이며 인플레이션은 여전히 높다\"고 밝혔다. 9월 인상 뒤 동결이지만 12월 추가 인상에 대한 명확한 신호는 없어, 금리 경로의 불확실성이 성장주 할인율에 계속 얹힌다.",
-    "insight": "NVDA의 12개월 선행 PER은 약 14배로 낮은 편이라 동결 자체는 중립이다. 11/6 고용과 11/10 CPI에서 인상 확률이 오르면 고PER 후보(RDDT 등)의 매수 기준가를 더 보수적으로 잡는다.",
-    "fact": "연준이 10/28 FOMC에서 기준금리를 3.75~4.00%로 10대 2 표결로 동결했고, 성명은 \"경제 활동이 강한 속도로 확장 중이며 인플레이션은 여전히 높다\"고 밝혔다.",
-    "interpretation": "9월 인상 뒤 동결이지만 12월 추가 인상에 대한 명확한 신호는 없어, 금리 경로의 불확실성이 성장주 할인율에 계속 얹힌다.",
+    "title": "Nasdaq posts biggest daily drop in 19 months on fears of AI regulations",
+    "source": "Reuters",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObTdYYmZaZmRqRUt0TDhBbERraDF2VlpSTDJ4M1NyZ2dRRkNUUVJ0OVFHdzJyc01uNDZOV2YzZFprbU90aUNzTEtYTEdNWU5Jc19VVVlHc24tNkZ2VFhqOWg3b0swVDFnY2hHaGxuNVZXVkE5S09xZXV2eGRQb1kwdWFEZWxpeGMybDZRcGtyWW52Q1JfaHY4MVo1YmJfRW9KZmNsdVJqS24zeGRZVUpaV3VB?oc=5",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "11/5 나스닥이 5.5% 급락해 조정 구간에 들어갔고 반도체지수는 12% 넘게, NVIDIA 는 9% 넘게 하락했다. 민주당 압승 뒤 AI 규제·데이터센터 증설 지연 우려가 원인이며 2025년 4월 이후 최대 낙폭이다.",
+    "insight": "보유 NVDA 의 기준 시나리오 전제인 '하이퍼스케일러 2027년 CAPEX 증가 집행'에 인허가 지연 위험이 더해졌다. 오늘 재점검에서 적정 PER 을 15.5배→14.5배, 매수 기준가를 $197→$184 로 낮췄지만 논리 붕괴 조건(CAPEX 감소 가이던스·ASIC 전환 공식화)은 발생하지 않아 20% 유지.",
+    "fact": "11/5 나스닥 종합지수가 하루 5.5% 내려 10/6 고점 대비 10% 넘게 빠진 조정 구간에 들어갔고, 필라델피아 반도체지수는 12% 이상, NVIDIA 는 9% 넘게 하락했다. 2025년 4월 관세 발표 이후 최대 낙폭이다.",
+    "interpretation": "민주당 중간선거 압승 뒤 AI 규제·데이터센터 증설 지연 우려가 반도체와 데이터센터주에 집중됐다. 실적 악재가 아닌 정책 위험 재평가라 낙폭이 업종 전체로 번졌다.",
+    "thesis_impact": "약화",
+    "stars": 5,
+    "tickers": [
+     "NVDA",
+     "ON",
+     "LITE",
+     "FIX",
+     "EME"
+    ]
+   },
+   {
+    "title": "Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now'",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "민주당 일부가 전국 데이터센터 모라토리엄을 요구했고 텍사스 주지사 당선인은 승인 중단을 공약했다. 텍사스는 계획 용량의 27%를 차지해 증설 지연 위험이 현실적인 변수가 됐다.",
+    "insight": "FIX 는 3분기 백로그 순증의 약 80%가 텍사스에서 나와 직격 대상이라 매수 기준가를 $1,125→$900 으로 낮췄다. EME(데이터센터 RPO 87억달러)·NVDA 도 '증설 속도' 가정의 불확실성이 커졌다.",
+    "fact": "버니 샌더스 상원의원이 '전국 데이터센터 모라토리엄'을 요구했고, 텍사스 주지사 당선인 히노호사는 법 제정 전까지 모든 데이터센터 승인을 중단하겠다고 공약했다. 텍사스에는 계획된 데이터센터 용량의 27%(웰스파고)가 몰려 있고, CNBC 출구조사에서 유권자 56%가 AI·데이터센터를 주요 투표 요인으로 꼽았다.",
+    "interpretation": "연방 차원 모라토리엄은 실현 가능성이 낮지만 주·지방 인허가는 실제로 늦어질 수 있다. 증설 속도가 느려지면 2027~2028년 장비·시공 수요가 뒤로 밀린다.",
+    "thesis_impact": "약화",
+    "stars": 5,
+    "tickers": [
+     "FIX",
+     "EME",
+     "NVDA"
+    ]
+   },
+   {
+    "title": "Neocloud IREN says $4 billion in annualized revenue being delayed due to customer request",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/iren-earnings-report-q1-2027-.html",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "IREN 이 마이크로소프트 요청으로 연환산 40억달러 매출이 내년 초로 밀린다고 밝혔다. 백로그는 203억달러로 늘었지만 네오클라우드 주가는 한 달 새 반토막 수준이다.",
+    "insight": "NVDA 약세 시나리오의 핵심 가정(네오클라우드 차환 실패·용량 구매 약정의 비용화)에 가까워지는 신호다. 11/10 CoreWeave 실적에서 자금조달 조건을 확인한다.",
+    "fact": "네오클라우드 IREN 은 마이크로소프트의 네트워크 재구성 요청으로 2026년 예정이던 연환산 매출 40억달러가 최소 2027년 1월로 밀린다고 밝혔다. 3분기 매출은 2.28억달러(+66% 전분기), 백로그는 203억달러(+22%)이고, 주가는 한 달 새 55% 떨어졌다. CoreWeave 는 한 달 −60%.",
+    "interpretation": "수요(백로그)는 늘고 있지만 '납기·자금조달·수익성'으로 질문이 바뀌었다. 금리 상승기에 차입 의존 네오클라우드의 차환 위험이 AI 체인의 약한 고리다.",
+    "thesis_impact": "약화",
+    "stars": 4,
+    "tickers": [
+     "NVDA",
+     "MSFT"
+    ]
+   },
+   {
+    "title": "Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/nvidia-jensen-huang-china-spy-congress.html",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "하원 위원장들이 젠슨 황에게 중국 정보원 의혹 인물과의 관계에 대해 11/18 비공개 브리핑을 요청했다. NVIDIA 는 민감 정보 공유를 부인했다.",
+    "insight": "NVDA 의 투자 논리(데이터센터 수요·마진)는 바뀌지 않았지만, 실적 직후 정치 이벤트가 겹쳐 11/17~18 변동성이 커질 수 있다.",
+    "fact": "미 하원 외교·중국특위·정보위원장 3명이 젠슨 황 CEO 에게 중국 정보원으로 지목된 Megaspeed 임원 앨리스 황과의 관계에 대해 11/18 비공개 브리핑을 요청했다(실적 발표 다음 날). NVIDIA 는 '민감한 정보는 공유하지 않았다'고 밝혔다.",
+    "interpretation": "당장 실적 영향은 없지만 대중 수출 규제·거버넌스 논쟁을 다시 키울 수 있는 헤드라인 위험이다.",
     "thesis_impact": "변화 없음",
-    "stars": 4,
-    "tickers": [
-     "SPY",
-     "NVDA",
-     "ADBE"
-    ]
-   },
-   {
-    "title": "PCE inflation report September 2026 / GDP advance estimate Q3 2026",
-    "source": "CNBC·BEA",
-    "url": "https://www.cnbc.com/2026/10/29/pce-inflation-report-september-2026-.html",
-    "published": "2026-10-29",
-    "kind": "뉴스",
-    "summary": "미국 3분기 실질 GDP가 연율 +3.4%로 예상보다 강했고, 9월 PCE 물가는 전년비 3.6%, 근원 3.1%였다. 성장은 강한데 물가는 목표(2%)보다 크게 높아, 연준이 인하로 돌아설 근거가 약하고 인상 선택지가 남는다.",
-    "insight": "직접적으로 보유 종목 논리를 바꾸지는 않지만, 방어적 스탠스(개별주 상한 60%)와 현금 비중 유지 근거를 강화한다.",
-    "fact": "미국 3분기 실질 GDP가 연율 +3.4%로 예상보다 강했고, 9월 PCE 물가는 전년비 3.6%, 근원 3.1%였다.",
-    "interpretation": "성장은 강한데 물가는 목표(2%)보다 크게 높아, 연준이 인하로 돌아설 근거가 약하고 인상 선택지가 남는다.",
-    "thesis_impact": "해당없음",
-    "stars": 4,
-    "tickers": [
-     "SPY"
-    ]
-   },
-   {
-    "title": "AI buildout hits snag as Google and Microsoft hold capex forecasts",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html",
-    "published": "2026-10-29",
-    "kind": "뉴스",
-    "summary": "마이크로소프트는 연간 CapEx 전망을 1,750억에서 1,700억달러로 낮췄고, 알파벳은 올해 CapEx를 유지하면서 2027년 \"대폭 증가\"를 예고했으며 3분기 FCF가 −90.7억달러로 주가가 10% 급락했다. 두 회사 모두 CapEx 실적이 시장 예상에 못 미쳤고 한쪽은 전망을 낮췄다. 다만 2027년 증가 방향은 알파벳이 유지해 AI 투자 사이클이 꺾였다고 보기는 어렵다.",
-    "insight": "NVDA 붕괴 조건 6번(2027년 CapEx 감소·동결)은 마이크로소프트의 2027년 방향 확인이 필요하다. 알파벳은 증가 예고라 해당하지 않지만, 한 곳이라도 소폭 하향이 나왔으므로 NVDA는 신규 매수 중단 상태를 유지하고 11/17 실적에서 데이터센터 매출 가이던스로 재확인한다.",
-    "fact": "마이크로소프트는 연간 CapEx 전망을 1,750억에서 1,700억달러로 낮췄고, 알파벳은 올해 CapEx를 유지하면서 2027년 \"대폭 증가\"를 예고했으며 3분기 FCF가 −90.7억달러로 주가가 10% 급락했다.",
-    "interpretation": "두 회사 모두 CapEx 실적이 시장 예상에 못 미쳤고 한쪽은 전망을 낮췄다. 다만 2027년 증가 방향은 알파벳이 유지해 AI 투자 사이클이 꺾였다고 보기는 어렵다.",
-    "thesis_impact": "약화",
-    "stars": 5,
-    "tickers": [
-     "NVDA",
-     "MSFT",
-     "GOOGL"
-    ]
-   },
-   {
-    "title": "Amazon posts negative free cash flow of $42.4 billion, holds 2026 capex unchanged",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/10/29/amazon-amzn-q3-earnings-report-2026.html",
-    "published": "2026-10-29",
-    "kind": "뉴스",
-    "summary": "아마존 3분기 매출은 +12%(2,019억달러)로 예상을 밑돌았고 올해 CapEx 2,200억달러를 유지했으며 최근 12개월 FCF가 −424억달러로 돌아섰다. AWS 매출은 +39%(460억달러)로 약 5년 만에 가장 빠르게 성장했고 엔비디아 칩 추가 구매 계획을 밝혔다. 클라우드 수요는 오히려 가속하지만 CapEx를 현금흐름이 감당하지 못하는 구조가 드러났다. 수요(좋음)와 자금조달 여력(나쁨)이 동시에 확인됐다.",
-    "insight": "NVDA의 \"고객사 수요\" 가정은 AWS 가속과 칩 추가 구매로 강화된다. 반면 \"고객사 자금조달\" 가정은 FCF 적자로 약해졌으므로, 판단은 11/17 NVDA 실적과 고객사 신용 지표로 가른다.",
-    "fact": "아마존 3분기 매출은 +12%(2,019억달러)로 예상을 밑돌았고 올해 CapEx 2,200억달러를 유지했으며 최근 12개월 FCF가 −424억달러로 돌아섰다. AWS 매출은 +39%(460억달러)로 약 5년 만에 가장 빠르게 성장했고 엔비디아 칩 추가 구매 계획을 밝혔다.",
-    "interpretation": "클라우드 수요는 오히려 가속하지만 CapEx를 현금흐름이 감당하지 못하는 구조가 드러났다. 수요(좋음)와 자금조달 여력(나쁨)이 동시에 확인됐다.",
-    "thesis_impact": "강화",
-    "stars": 5,
-    "tickers": [
-     "NVDA",
-     "AMZN"
-    ]
-   },
-   {
-    "title": "Meta outlook revised to negative by S&P after cash flow negative",
-    "source": "CNBC·S&P Global Ratings",
-    "url": "https://www.cnbc.com/2026/10/30/meta-outlook-to-revised-to-negative-by-sp-after-cash-flow-negative.html",
-    "published": "2026-10-30",
-    "kind": "뉴스",
-    "summary": "S&P가 10/30 메타의 신용전망을 \"부정적\"으로 낮췄다. 메타의 3분기 FCF는 −21.2억달러로 처음 적자였고, S&P는 메타 CapEx가 올해 약 1,400억, 2027년 2,250억달러 이상(기존 1,630억)으로 늘 것으로 본다. 신용평가사가 AI CapEx를 대차대조표 리스크로 공식 지적한 첫 사례 중 하나로, 채권 조달 비용과 CDS 스프레드 상승으로 이어질 수 있다.",
-    "insight": "NVDA 매출의 큰 부분이 대형 기술주 CapEx에서 나오므로, 메타의 2027년 CapEx 전망 상향은 단기 수요에는 긍정이지만 신용 악화가 CapEx 속도를 제한할 위험이 생긴다. NVDA 붕괴 조건 6번 점검 항목에 신용 지표를 추가해 본다.",
-    "fact": "S&P가 10/30 메타의 신용전망을 \"부정적\"으로 낮췄다. 메타의 3분기 FCF는 −21.2억달러로 처음 적자였고, S&P는 메타 CapEx가 올해 약 1,400억, 2027년 2,250억달러 이상(기존 1,630억)으로 늘 것으로 본다.",
-    "interpretation": "신용평가사가 AI CapEx를 대차대조표 리스크로 공식 지적한 첫 사례 중 하나로, 채권 조달 비용과 CDS 스프레드 상승으로 이어질 수 있다.",
-    "thesis_impact": "약화",
-    "stars": 5,
-    "tickers": [
-     "NVDA",
-     "META"
-    ]
-   },
-   {
-    "title": "Stock market rocked as investors dump tech shares; Nasdaq suffers worst day since June",
-    "source": "CNBC",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVll4LVFGMjA2Y0lxRFBqS2g3T19vQmtzeG1STUp3cWdYZTJVNTRxeHQ1R21JTzBRcFRhNHFha2pEMmI2Z0ozVnpIYkY4RkxaamlzWGp5MlhLZkVQYjJnNkw4VjBNTnJ0Rk5VcVpKS3JqeVA3T2FEZnIwUU10NTdON1AxNGVZRGwxVjJLOXNXVmswM3lhNk1xdm8xT0h0aVBmc1FCVWs1c19nQV9rZEtGbXZ1dkJKRl83QjI5LU03WER0TlZsdjRB?oc=5",
-    "published": "2026-10-30",
-    "kind": "뉴스",
-    "summary": "10/30 나스닥은 −2.86%(25,437)로 6월 이후 최악의 하루를 기록해 10/6 고점 대비 약 −7.8%이고, 반도체지수는 하루 −7.2%·10월 누적 −15% 이상이다. 인텔(−28.6%)·AMD(−10.9%)·NVDA(−4.2%)가 급락했다. 아마존·인텔의 실적 부진이 \"AI 투자 수익성\" 우려를 다시 키우며 AI 반도체 전반의 투매로 번졌다. 가격 급락이지 사업 지표 변화는 아니다.",
-    "insight": "NVDA는 매수 기준가($204) 근처까지 내려왔지만 논리 점검 알림(추가 매수 중단)이 걸려 있어 가격만으로 추가 매수하지 않는다. 가격 하락과 논리 훼손은 구분한다.",
-    "fact": "10/30 나스닥은 −2.86%(25,437)로 6월 이후 최악의 하루를 기록해 10/6 고점 대비 약 −7.8%이고, 반도체지수는 하루 −7.2%·10월 누적 −15% 이상이다. 인텔(−28.6%)·AMD(−10.9%)·NVDA(−4.2%)가 급락했다.",
-    "interpretation": "아마존·인텔의 실적 부진이 \"AI 투자 수익성\" 우려를 다시 키우며 AI 반도체 전반의 투매로 번졌다. 가격 급락이지 사업 지표 변화는 아니다.",
-    "thesis_impact": "변화 없음",
-    "stars": 5,
-    "tickers": [
-     "NVDA",
-     "AMD",
-     "INTC"
-    ]
-   },
-   {
-    "title": "Reddit stock plunges 29% after weak outlook, wrapping its worst day ever",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/10/30/reddit-stock-q3-earnings.html",
-    "published": "2026-10-30",
-    "kind": "뉴스",
-    "summary": "레딧은 3분기 매출 8.95억달러(+53%)로 예상을 웃돌았지만 4분기 매출 가이던스(10~10.3억달러)가 시장 기대에 못 미치고 구글 검색 유입 감소로 4분기 일일 이용자가 두 자릿수 초반 감소할 수 있다고 경고해 주가가 −29%(약 91달러)로 상장 이후 최악의 하루를 보냈다. 실적은 좋았지만 이용자 성장의 핵심 경로(구글 검색 유입)가 흔들린다는 구조적 경고다. 가격이 싸졌다고 바로 매수 근거가 되지 않는다.",
-    "insight": "RDDT 매수 가격 조건($91.73 ≤ $144)은 충족됐으나, 기존 논리의 전제(검색 유입 기반 이용자 성장)가 약해졌다. 기준가를 억지로 올리지 않고 재분석 결과(확신도·반대 근거)로 판단한다.",
-    "fact": "레딧은 3분기 매출 8.95억달러(+53%)로 예상을 웃돌았지만 4분기 매출 가이던스(10~10.3억달러)가 시장 기대에 못 미치고 구글 검색 유입 감소로 4분기 일일 이용자가 두 자릿수 초반 감소할 수 있다고 경고해 주가가 −29%(약 91달러)로 상장 이후 최악의 하루를 보냈다.",
-    "interpretation": "실적은 좋았지만 이용자 성장의 핵심 경로(구글 검색 유입)가 흔들린다는 구조적 경고다. 가격이 싸졌다고 바로 매수 근거가 되지 않는다.",
-    "thesis_impact": "약화",
-    "stars": 5,
-    "tickers": [
-     "RDDT",
-     "GOOGL"
-    ]
-   },
-   {
-    "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html",
-    "published": "2026-10-31",
-    "kind": "뉴스",
-    "summary": "CNBC에 따르면 OpenAI가 이번 라운드 조달 목표를 줄여 최대 200억달러를 모으려 한다. 최종 수요처의 자금조달이 기대보다 작아졌다는 신호로, AI 인프라 체인의 \"최종 수요 대비 CapEx\" 우려와 맞닿아 있다.",
-    "insight": "NVDA 매출의 일부는 OpenAI 관련 약정·네오클라우드로 이어진다. 조달 규모 축소가 데이터센터 보증·약정(최대 1,645억달러) 해소에 부담을 줄 수 있어 NVDA 검증 항목(DSO, OCF/NI)을 계속 본다.",
-    "fact": "CNBC에 따르면 OpenAI가 이번 라운드 조달 목표를 줄여 최대 200억달러를 모으려 한다.",
-    "interpretation": "최종 수요처의 자금조달이 기대보다 작아졌다는 신호로, AI 인프라 체인의 \"최종 수요 대비 CapEx\" 우려와 맞닿아 있다.",
-    "thesis_impact": "약화",
-    "stars": 4,
-    "tickers": [
-     "NVDA",
-     "ORCL"
-    ]
-   },
-   {
-    "title": "OPEC+ said to have agreed in principle to hold December oil output targets steady",
-    "source": "Seeking Alpha",
-    "url": "https://seekingalpha.com/news/4661863-opec-agrees-hold-december-oil-output-targets-steady?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
-    "published": "2026-10-31",
-    "kind": "뉴스",
-    "summary": "OPEC+가 12월 산유량 목표를 현 수준으로 동결하기로 원칙적으로 합의했다고 전해졌다. 증산 압력이 없어 유가·정제마진 강세가 이어질 여지가 있어, 에너지 이익 상향과 물가 부담이 함께 간다.",
-    "insight": "에너지 이익 상향(+3.54%)은 PSX·CF 등 신규 후보의 근거이면서 물가 부담의 원인이기도 하다. 후보 평가에서 사이클 정점 위험을 따로 본다.",
-    "fact": "OPEC+가 12월 산유량 목표를 현 수준으로 동결하기로 원칙적으로 합의했다고 전해졌다.",
-    "interpretation": "증산 압력이 없어 유가·정제마진 강세가 이어질 여지가 있어, 에너지 이익 상향과 물가 부담이 함께 간다.",
-    "thesis_impact": "해당없음",
     "stars": 3,
     "tickers": [
-     "PSX"
+     "NVDA"
     ]
    },
    {
-    "title": "Wall St Week Ahead: Midterm US elections, earnings, jobs data loom for AI-wary stock market",
-    "source": "Reuters",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPMDJJM0JmU1Nreks0a1ViM1lWX2VRX043dHpXd2xjR091TTNJd1UyZjZ4a2kwMURZLXkwLTBHSWZaMG41VU5nbTE0VW1iNDdCbHNCTjc5RG5BZUx3QzM2d0IzUmJkWXB3VkNsMW5EMDVFUlQ1NmhvdDBVTy05RkpxaDZ4QW9xRExsY2QwVzFpMTJmRG52bW0tSWgwbkdCTlJlaFFnU2tUcEEyQml0cV9VRktaVTh4VDVFNkIwVjkyWmN6dFpTNE9FZkx4dw?oc=5",
-    "published": "2026-10-30",
+    "title": "Fed rate futures price ~79% odds of a December hike; 10-year yield 4.88%",
+    "source": "Barchart",
+    "url": "https://www.barchart.com/story/news/8667824/nasdaq-futures-slip-as-chip-stocks-extend-slide-earnings-and-fed-speak-on-tap",
+    "published": "2026-11-05",
     "kind": "뉴스",
-    "summary": "이번 주는 11/2 애플·팔란티어, 11/3 AMD 실적과 중간선거(11/3), 11/6 10월 고용보고서(비농업 컨센서스 약 +5만, 실업률 4.2%)가 몰려 있고 S&P 500 기업의 약 31%가 실적을 발표한다. AI 투자에 경계심이 커진 시장이 실적과 고용으로 방향을 정하는 주간이며, 고용이 강하면 12월 인상 우려가, 약하면 경기 둔화 우려가 커진다.",
-    "insight": "이번 주에는 신규 편입을 서두르지 않고 11/6 고용 발표와 11/10 CPI 이후 기준가 도달 종목만 판단한다.",
-    "fact": "이번 주는 11/2 애플·팔란티어, 11/3 AMD 실적과 중간선거(11/3), 11/6 10월 고용보고서(비농업 컨센서스 약 +5만, 실업률 4.2%)가 몰려 있고 S&P 500 기업의 약 31%가 실적을 발표한다.",
-    "interpretation": "AI 투자에 경계심이 커진 시장이 실적과 고용으로 방향을 정하는 주간이며, 고용이 강하면 12월 인상 우려가, 약하면 경기 둔화 우려가 커진다.",
-    "thesis_impact": "해당없음",
+    "summary": "금리선물은 12월 금리 인상 확률을 약 79%로 보고 10년물은 4.88%다. 연준은 10월 동결했지만 인상 기조가 유지돼 성장주 할인율 부담이 남아 있다.",
+    "insight": "고PER 성장주(LITE·SPCX·CRCL)의 멀티플 상단을 누르고, 네오클라우드 차환 비용을 높여 NVDA 약세 시나리오 확률을 키운다. CRCL 은 반대로 금리 유지가 준비금 수익에 유리하다.",
+    "fact": "금리선물은 12월 FOMC 0.25%p 인상 확률을 약 79%로 반영하고 있고 10년물 국채금리는 4.88%다. 연준은 10/28 3.75~4.00%에서 동결했고, JP모건도 12월 인상을 예상한다. 10월 ADP 민간고용은 8.6만명으로 예상(6.7만명)을 웃돌았다.",
+    "interpretation": "'다음은 인하'가 아니라 '다음은 인상'인 국면이 이어진다. 증시 급락에도 금리 인하 기대로 받쳐줄 여지가 작다.",
+    "thesis_impact": "약화",
     "stars": 4,
     "tickers": [
      "SPY",
-     "AMD"
+     "QQQ",
+     "CRCL"
+    ]
+   },
+   {
+    "title": "FIX 8-K: 기타 중요 사항",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926122938/tm2629087d1_8k.htm",
+    "published": "2026-11-05",
+    "kind": "공시",
+    "summary": "FIX 가 자사주 매입 한도를 100만 주로 재충전했다. 이틀 새 주가가 약 25% 빠졌지만 원인은 회사 악재가 아닌 텍사스 데이터센터 규제 우려다.",
+    "insight": "회사 고유 악재는 없지만 백로그 순증 약 80%가 텍사스라 정책 위험이 크다. 관찰·확신도 3 유지, 매수 기준가 $1,125→$900, 현재가 $964.94 라 아직 매수 구간 아님(기대수익 +19.6%).",
+    "fact": "FIX 는 11/5 8-K(8.01)로 자사주 매입 한도를 100만 주로 다시 채웠다고 공시했다(11/4 까지 누적 매입 17.1억달러). 주가는 11/4 −15.1%, 11/5 −11.6%로 이틀 새 25% 가까이 빠졌다.",
+    "interpretation": "실적·사고 공시가 아니라 주주환원 공시다. 급락은 텍사스 데이터센터 규제 우려와 시장 급락 때문이다.",
+    "thesis_impact": "약화",
+    "stars": 3,
+    "tickers": [
+     "FIX",
+     "EME"
+    ]
+   },
+   {
+    "title": "CRCL 8-K: 실적 발표",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000309/crcl-20261104.htm",
+    "published": "2026-11-04",
+    "kind": "공시",
+    "summary": "CRCL 3분기 이익 대부분이 일회성 토큰 판매였고 일회성을 빼면 매출이 전년 대비 8% 줄었다. USDC 유통량은 제자리이고 준비금 수익률도 내려갔다.",
+    "insight": "관심종목 CRCL 은 관찰·확신도 2 유지, 매수 기준가 $60→$58, 기대수익 약 +1% 로 편입 기준에 한참 못 미친다.",
+    "fact": "CRCL 3분기 EPS 는 $0.84 였지만 약 $0.68 이 일회성 ARC 토큰 프리세일(1.82억달러)이다. 이를 빼면 매출은 전년 대비 −8%, USDC 유통량은 분기 말 739억달러로 전년과 같고 준비금 수익률은 3.54%(−0.61%p)다.",
+    "interpretation": "헤드라인 숫자보다 본업은 정체다. 4분기에는 바이낸스 인센티브로 마진이 더 내려간다고 회사가 밝혔고, 민주당 의회로 크립토 규제가 다시 엄격해질 수 있다.",
+    "thesis_impact": "약화",
+    "stars": 3,
+    "tickers": [
+     "CRCL",
+     "MSTR"
+    ]
+   },
+   {
+    "title": "CF 8-K: 실적 발표",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1324404/000110465926122757/tm2628886d1_8k.htm",
+    "published": "2026-11-04",
+    "kind": "공시",
+    "summary": "CF 3분기 매출은 예상을 웃돌았고 판매량이 회복됐지만 EPS 는 소폭 미달했다. 현재가는 2027 EPS 의 약 10배로 높은 비료 가격을 이미 반영했다.",
+    "insight": "CF 는 관찰·확신도 2, 매수 기준가 $105→$107, 현재가 $118.57 에서 기대수익 +4.4% 로 신규 편입 기준(10%) 미달.",
+    "fact": "CF 3분기 매출 18.6억달러로 예상을 웃돌고 판매량이 7% 늘었지만 EPS $2.87 은 소폭 미달했다. 최근 12개월 FCF 는 20.25억달러, 3분기 자사주 매입은 3.67억달러다.",
+    "interpretation": "질소 비료 가격 강세가 이어지지만 미·이란 휴전·호르무즈 재개방 협상이 진행되면 지정학 프리미엄이 빠질 수 있다.",
+    "thesis_impact": "해당없음",
+    "stars": 2,
+    "tickers": [
+     "CF"
+    ]
+   },
+   {
+    "title": "The 'Musk selloff' deepens as Tesla and SpaceX combine for $456 billion two-day wipeout",
+    "source": "MarketWatch",
+    "url": "https://www.marketwatch.com/story/the-musk-selloff-deepens-as-tesla-and-spacex-combine-for-450-billion-two-day-wipeout-d300ab4f?mod=mw_rss_topstories",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "선거 후 이틀 동안 테슬라와 SpaceX 시총이 약 4,560억달러 줄었다. SPCX 는 12.5% 내렸지만 회사 고유 악재는 없었다.",
+    "insight": "SPCX 는 관찰·확신도 2, 매수 기준가 $120→$112. 매출의 34.5%가 해지 가능한 단일 고객 계약이고 EPS 추정이 여전히 검증 대기라 가격이 내려도 서두르지 않는다.",
+    "fact": "테슬라와 SpaceX 시가총액이 선거 후 이틀 동안 합쳐 약 4,560억달러 줄었다. SPCX 는 11/3 $141.31 에서 11/5 $123.62 로 −12.5%다.",
+    "interpretation": "민주당 의회의 머스크 관련 조사·규제 가능성과 AI 데이터센터 우려가 겹친 정치 프리미엄 축소다. 회사 공시 악재는 없었다.",
+    "thesis_impact": "변화 없음",
+    "stars": 2,
+    "tickers": [
+     "SPCX",
+     "TSLA"
+    ]
+   },
+   {
+    "title": "Himax Blames 'Abrupt and Significant Correction' in Auto Chip Demand as Stock Crashes Nearly 30%. Is Now the Time to Buy?",
+    "source": "Nasdaq",
+    "url": "https://www.nasdaq.com/articles/himax-blames-abrupt-and-significant-correction-auto-chip-demand-stock-crashes-nearly-30",
+    "published": "2026-11-05",
+    "kind": "뉴스",
+    "summary": "Himax 가 자동차 칩 수요 급감으로 4분기 매출이 22~26% 줄 것이라고 밝혀 주가가 30% 가까이 빠졌다. 자동차 반도체 바닥은 아직이다.",
+    "insight": "ON 은 매출의 45%가 자동차이고 4분기에도 한 자릿수 후반 감소를 예고했다. 관찰·확신도 3, 매수 기준가 $58, 기대수익 +13.5% 지만 자동차 회복(2027년 1분기 약속) 확인 전에는 매수 보류.",
+    "fact": "Himax 는 자동차용 칩 수요의 '급격하고 큰 조정'으로 4분기 매출이 전분기 대비 22~26% 줄 것이라고 밝혔고 주가는 약 30% 급락했다.",
+    "interpretation": "AI 와 별개로 자동차 반도체 경기는 아직 바닥을 확인하지 못했다.",
+    "thesis_impact": "해당없음",
+    "stars": 2,
+    "tickers": [
+     "ON"
     ]
    }
   ],
