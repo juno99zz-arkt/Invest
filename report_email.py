@@ -283,10 +283,19 @@ def main():
     msg = MIMEMultipart("alternative")
     msg["Subject"], msg["From"], msg["To"] = subject, sender, ", ".join(recipients)
     msg.attach(MIMEText(body, "html", "utf-8"))
-    with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as srv:
-        srv.starttls()
-        srv.login(sender, password)
-        srv.sendmail(sender, recipients, msg.as_string())
+    try:
+        import mailer
+        mailer.send(sender, password, recipients, msg.as_string())
+    except Exception as e:
+        # 11/6: 실패가 조용히 묻혔다 → 푸시로 알리고 단계를 실패로 표시한다(워크플로는 continue-on-error 라 배포는 막지 않음)
+        print(f"::error::정기 메일 발송 실패: {type(e).__name__}: {e}")
+        try:
+            import notify
+            hint = "EMAIL_PASSWORD(Gmail 앱 비밀번호) 재발급 필요" if type(e).__name__ == "MailAuthError" else "잠시 후 Actions에서 mode=report 재실행"
+            notify.send("[메일 실패] 정기 리포트 미발송", f"{key} 정기 메일을 보내지 못했습니다 ({type(e).__name__}). {hint}.", priority=4, tags=["warning"])
+        except Exception as e2:
+            print("::warning::실패 푸시도 보내지 못함:", e2)
+        sys.exit(1)
     log.setdefault("sent", {})[key] = now.strftime("%Y-%m-%d %H:%M")
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(LOG_PATH, "w", encoding="utf-8") as f:

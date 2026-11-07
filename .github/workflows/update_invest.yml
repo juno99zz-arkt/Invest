@@ -164,6 +164,7 @@ jobs:
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           INVEST_REPORT_TO: ${{ secrets.INVEST_REPORT_TO }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # 메일 실패 시 푸시로 알리기 위함 (2026-11-06)
         run: |
           if [ "${{ steps.mode.outputs.mode }}" = "report" ]; then
             python report_email.py --force    # 수동: 즉시 발송
