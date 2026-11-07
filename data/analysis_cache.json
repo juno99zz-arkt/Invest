@@ -272,6 +272,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 184,
+   "last_price": 186.64,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "WDC": {
@@ -2210,6 +2217,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 112,
+   "last_price": 134.27,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "CPAY": {
@@ -3112,6 +3126,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 250,
+   "last_price": 239.3,
+   "observed_date": "2026-11-08",
+   "pending": true
   }
  },
  "ALL": {
@@ -3785,6 +3806,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 112,
+   "last_price": 128.93,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "CRCL": {
@@ -4038,6 +4066,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 58,
+   "last_price": 67.88,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "GOOG": {
@@ -5061,6 +5096,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 900,
+   "last_price": 1017.5,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "ASML": {
@@ -5328,6 +5370,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 1450,
+   "last_price": 1424.75,
+   "observed_date": "2026-11-08",
+   "pending": true
   }
  },
  "MPWR": {
@@ -6374,6 +6423,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 545,
+   "last_price": 608.45,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "ON": {
@@ -6634,6 +6690,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 58,
+   "last_price": 63.31,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "LITE": {
@@ -7152,6 +7215,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 165,
+   "last_price": 182.86,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  },
  "APA": {
@@ -7395,6 +7465,13 @@
      }
     ]
    }
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 40,
+   "last_price": 44.63,
+   "observed_date": "2026-11-08",
+   "pending": false
   }
  }
 }

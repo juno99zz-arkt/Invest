@@ -193,10 +193,8 @@ def send_email(sigs):
     msg["Subject"], msg["From"], msg["To"] = subject, sender, ", ".join(to)
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as srv:
-            srv.starttls()
-            srv.login(sender, pw)
-            srv.sendmail(sender, to, msg.as_string())
+        import mailer
+        mailer.send(sender, pw, to, msg.as_string())
     except Exception as e:
         print("::warning::수시 메일 실패:", e)
         return False

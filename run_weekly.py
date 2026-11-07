@@ -169,7 +169,7 @@ def prepare():
     from market_data import fetch_annual_margins, fetch_details, fetch_snapshots
     from news_feed import fetch_candidates
     from picks import (cycle_note, cycle_pool, fresh_analysis_reason, guru_sell_note, load_cache, load_history,
-                       pick_candidates, quant_scores, signal_hits)
+                       observe_review_price, pick_candidates, quant_scores, save_cache, signal_hits)
     from sec_data import check_access, fetch_13f, fetch_insider_trades
     from signals import CAPEX_TICKERS, build_m2, build_m3, build_m4, build_m6, m3_section, m4_section
     from universe import load_universe
@@ -248,6 +248,10 @@ def prepare():
                                                        holding_by_tk.get(d["ticker"]), today) for d in dossiers}
     to_analyze = [d for d in dossiers if fresh_reason[d["ticker"]]]
     reused = {tk: cache[tk]["analyzed_date"] for tk, r in fresh_reason.items() if r is None}
+    # 가격 회복→기준가 재진입을 감지하고, 분석 실패 시 pending을 다음 요청까지 유지한다.
+    for d in dossiers:
+        observe_review_price(cache.get(d["ticker"]), snaps[d["ticker"]], today)
+    save_cache(cache, today)
     print(f"심층분석 대상 {len(dossiers)}종목 → Aside 신규 분석 {len(to_analyze)} / 재사용 {len(reused)}")
 
     news = fetch_candidates(list(dict.fromkeys(held_tk + watch_tk + picked_tk)))

@@ -262,9 +262,53 @@ def save_cache(cache, today):
         json.dump(cache, f, ensure_ascii=False, indent=1)
 
 
+def _review_number(value):
+    """가격 조건은 유한한 양수만 인정한다 (bool/문자열/NaN 제외)."""
+    import math
+    return (isinstance(value, (int, float)) and not isinstance(value, bool)
+            and math.isfinite(value) and value > 0)
+
+
+def buy_price_review_reason(entry, snap):
+    """기준가 하향 도달 시 캐시를 무효화한다. 매수 승인/경고 해제와는 무관하다.
+    기존 캐시는 기준가 이하에서 최초 1회 재심사한다. 새 분석 뒤 계속 이하이면 재사용하되,
+    위로 회복했다가 다시 내려오거나 이전 재심사가 미완료이면 다시 요청한다.
+    """
+    if not entry:
+        return None
+    bb = (((entry.get("analysis") or {}).get("decision_table") or {}).get("buy_below"))
+    price = (snap or {}).get("price")
+    if not (_review_number(bb) and _review_number(price)) or price > bb:
+        return None
+    state = entry.get("price_review") or {}
+    if state.get("version") != 1 or state.get("buy_below") != bb:
+        return f"매수 기준가 이하 — 기존 판단 재심사 (${price:.2f} ≤ ${bb:g})"
+    if state.get("pending") or (_review_number(state.get("last_price")) and state["last_price"] > bb):
+        return f"매수 기준가 도달 — 가격·최신 위험 재심사 (${price:.2f} ≤ ${bb:g})"
+    return None
+
+
+def observe_review_price(entry, snap, today):
+    """prepare 관측값 저장. 요청만으로 완료 처리하지 않아 분석 실패 시 다음 날 재요청한다."""
+    if not entry:
+        return
+    bb = (((entry.get("analysis") or {}).get("decision_table") or {}).get("buy_below"))
+    price = (snap or {}).get("price")
+    if not (_review_number(bb) and _review_number(price)):
+        return
+    pending = buy_price_review_reason(entry, snap) is not None
+    entry["price_review"] = {"version": 1, "buy_below": bb, "last_price": price,
+                             "observed_date": today, "pending": pending}
+
+
 def cache_entry(analysis, snap, detail, today):
-    return {"analyzed_date": today, "price": snap.get("price"), "eps_next_fy": snap.get("eps_next_fy"),
-            "next_earnings": detail.get("next_earnings"), "analysis": analysis}
+    entry = {"analyzed_date": today, "price": snap.get("price"), "eps_next_fy": snap.get("eps_next_fy"),
+             "next_earnings": detail.get("next_earnings"), "analysis": analysis}
+    observe_review_price(entry, snap, today)
+    if entry.get("price_review"):
+        # 실제 새 분석이 저장됐을 때만 재심사 완료로 처리한다.
+        entry["price_review"]["pending"] = False
+    return entry
 
 
 def fresh_analysis_reason(entry, snap, holding, today):
@@ -286,6 +330,9 @@ def fresh_analysis_reason(entry, snap, holding, today):
     eps, old_eps = snap.get("eps_next_fy"), entry.get("eps_next_fy")
     if eps and old_eps and abs(eps / old_eps - 1) >= REUSE_EPS_MOVE:
         return f"분석 이후 내년 EPS 추정치 {(eps / old_eps - 1) * 100:+.1f}%"
+    price_review = buy_price_review_reason(entry, snap)
+    if price_review:
+        return price_review
     if holding and holding.get("thesis_status") == "약화":
         return "보유 논리 약화 — 실행 때마다 재점검"
     return None
