@@ -15,9 +15,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "daily = 시세 갱신·매도 신호 점검 / prepare = 주간 신호·후보·분석요청서 생성 / finalize = Agent 결과 반영 / report = 정기 메일 즉시 발송 / watch = 장중 가격 경고만 / push_test = 테스트 푸시·메일 / postmortem = 월간 신호 검증만 실행(메일 없이 미리보기 저장) / explain = 후보 순위 진단 / sec_check = SEC 접근 점검"
+        description: "daily = 시세 갱신·매도 신호 점검 / prepare = 주간 신호·후보·분석요청서 생성 / finalize = Agent 결과 반영 / report = 정기 메일 즉시 발송 / report_auto = 정기 메일(월·금, 오늘 미발송일 때만) / watch = 장중 가격 경고만 / push_test = 테스트 푸시·메일 / postmortem = 월간 신호 검증만 실행(메일 없이 미리보기 저장) / explain = 후보 순위 진단 / sec_check = SEC 접근 점검"
         type: choice
-        options: [daily, prepare, finalize, report, watch, push_test, postmortem, explain, sec_check]
+        options: [daily, prepare, finalize, report, report_auto, watch, push_test, postmortem, explain, sec_check]
         default: daily
       tickers:
         description: "explain 모드: 탈락 사유를 볼 티커 (예: AMD,AVGO)"
