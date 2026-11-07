@@ -6,6 +6,8 @@
 name: 투자 AI 분석 (클라우드 시험)
 
 on:
+  schedule:
+    - cron: "47 22 * * 0-4"   # 평일 07:47 KST — Aside(06:30) 분석 뒤 같은 요청서로 비교. GitHub 예약 지연은 비교에 지장 없음. 전환 후 삭제
   workflow_dispatch:
     inputs:
       allow_stale:
