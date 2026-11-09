@@ -1,0 +1,49 @@
+name: 메일 연결 진단 (발송 없음)
+on:
+  workflow_dispatch:
+  push:
+    paths: [.github/workflows/mail_check.yml]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: SMTP 단계 확인 (메일 발송 없음)
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          INVEST_REPORT_TO: ${{ secrets.INVEST_REPORT_TO }}
+        run: |
+          python -u - <<'PY'
+          import os, smtplib, ssl
+          sender=os.environ["EMAIL_SENDER"].replace("\ufeff","").strip()
+          password=os.environ["EMAIL_PASSWORD"].replace("\ufeff","").replace(" ","").strip()
+          print("settings", "sender_present", bool(sender), "password_present", bool(password), "password_ascii", password.isascii(), "password_length",len(password),flush=True)
+          failed=[]
+          for mode in ("starttls","ssl"):
+              srv=None
+              stage="connect"
+              try:
+                  if mode=="starttls":
+                      srv=smtplib.SMTP("smtp.gmail.com",587,timeout=20)
+                      stage="ehlo"; srv.ehlo()
+                      stage="tls";srv.starttls(context=ssl.create_default_context())
+                      stage="ehlo_tls";srv.ehlo()
+                  else:
+                      srv=smtplib.SMTP_SSL("smtp.gmail.com",465,timeout=20,context=ssl.create_default_context())
+                  stage="login";srv.login(sender,password)
+                  print(mode,"LOGIN_OK",flush=True)
+              except Exception as e:
+                  failed.append(mode)
+                  print(mode,"FAILED_AT",stage,type(e).__name__,getattr(e,"smtp_code",""),flush=True)
+              finally:
+                  if srv:
+                      try:srv.quit()
+                      except Exception:srv.close()
+          if len(failed)==2: raise SystemExit(1)
+          PY
