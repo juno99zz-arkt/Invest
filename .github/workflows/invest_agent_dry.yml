@@ -93,6 +93,11 @@ jobs:
             [ -f "$OUT/note.json" ] && python -c "import json;n=json.load(open('$OUT/note.json',encoding='utf-8'));print('**요약**', n.get('summary',''));[print('-',m) for m in n.get('memo',[])];[print('- ⚠', i) for i in n.get('issues',[])]"
           } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: 기존 분석과 비교
+        run: |
+          python scripts/compare_agent.py data/aside/result.json "$OUT/result.json" | tee "$OUT/comparison.md"
+          cat "$OUT/comparison.md" >> "$GITHUB_STEP_SUMMARY"
+
       - name: 결과 보관 (artifact)
         if: always()
         uses: actions/upload-artifact@v4
