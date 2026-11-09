@@ -190,3 +190,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
+
+      # 배포는 유지하되 메일·알림 실패를 전체 성공으로 숨기지 않는다.
+      - name: 필수 전달 결과 확인
+        if: always()
+        env:
+          MAIL: ${{ steps.mail.outcome }}
+          PUSH: ${{ steps.push.outcome }}
+        run: |
+          if [ "$MAIL" = "failure" ] || [ "$PUSH" = "failure" ]; then
+            echo "::error::메일 또는 신호 알림 전달 실패 — 해당 단계 로그를 확인하세요."
+            exit 1
+          fi
