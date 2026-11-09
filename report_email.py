@@ -278,10 +278,10 @@ def main():
     sender, password = _env("EMAIL_SENDER"), _env("EMAIL_PASSWORD").replace(" ", "")
     recipients = [r.strip() for r in _env("INVEST_REPORT_TO").split(",") if r.strip()]
     if not (sender and password and recipients):
-        print("::warning::메일 설정(EMAIL_SENDER / EMAIL_PASSWORD / INVEST_REPORT_TO) 없음 — 발송 건너뜀")
-        return
+        raise RuntimeError("메일 설정(EMAIL_SENDER / EMAIL_PASSWORD / INVEST_REPORT_TO) 없음")
     msg = MIMEMultipart("alternative")
     msg["Subject"], msg["From"], msg["To"] = subject, sender, ", ".join(recipients)
+    msg["Message-ID"] = f"<invest-report-{key}@{sender.split('@')[-1]}>"
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         import mailer

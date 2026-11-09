@@ -74,7 +74,7 @@ Aside 루틴 "Invest 매일 AI 분석"(2026-11-07 기준)을 클라우드로 옮
   "analyses": { "TK": { ... } },      // $OUT/analyses/*.json 을 모은 것
   "target_weights": { "TK": 20 }, "weights_reason": "...", "allocation": { ... } }
 ```
-검증: `python aside_bridge.py data/pending/request.json $OUT/result.json`
+검증: `python scripts/validate_agent.py data/pending/request.json $OUT/result.json` (평일 시장 브리핑 생략 허용, 토요일은 필수)
 - ✗ 항목이 있으면 해당 종목을 고치거나 재분석해 다시 검증한다. 2회 실패한 종목은 analyses 에서 빼고 note.issues 에 적는다 (finalize 가 '분석 실패로 판단 보류' 처리).
 
 ## 7. note.json
