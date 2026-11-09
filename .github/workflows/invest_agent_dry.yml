@@ -82,9 +82,10 @@ jobs:
         if: always()
         run: |
           if [ -f "$OUT/result.json" ]; then
-            python aside_bridge.py data/pending/request.json "$OUT/result.json" | tee "$OUT/validation.txt"
+            python scripts/validate_agent.py data/pending/request.json "$OUT/result.json" | tee "$OUT/validation.txt"
           else
             echo "result.json 없음" | tee "$OUT/validation.txt"
+            exit 1
           fi
           {
             echo "## 투자 AI 분석 (클라우드 시험) $(date '+%F %H:%M')"
