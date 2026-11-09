@@ -23,7 +23,7 @@ jobs:
           import os, smtplib, ssl
           sender=os.environ["EMAIL_SENDER"].replace("\ufeff","").strip()
           password=os.environ["EMAIL_PASSWORD"].replace("\ufeff","").replace(" ","").strip()
-          print("settings", "sender_present", bool(sender), "password_present", bool(password), "password_ascii", password.isascii(), "password_length",len(password),flush=True)
+          print("settings", "sender_present", bool(sender), "password_present", bool(password), "password_ascii", password.isascii(), "password_length",len(password),"sender_format",sender.count("@")==1 and not any(c.isspace() for c in sender),flush=True)
           failed=[]
           for mode in ("starttls","ssl"):
               srv=None
@@ -36,7 +36,7 @@ jobs:
                       stage="ehlo_tls";srv.ehlo()
                   else:
                       srv=smtplib.SMTP_SSL("smtp.gmail.com",465,timeout=20,context=ssl.create_default_context())
-                  stage="login";srv.login(sender,password)
+                  stage="login_challenge";srv.user,srv.password=sender,password;srv.auth("LOGIN",srv.auth_login,initial_response_ok=False)
                   print(mode,"LOGIN_OK",flush=True)
               except Exception as e:
                   failed.append(mode)
