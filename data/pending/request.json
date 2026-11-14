@@ -1,8 +1,8 @@
 {
- "week": "2026-11-14",
- "date": "2026-11-14",
- "created_at_kst": "2026-11-14 06:14",
- "spy_price": 754.21,
+ "week": "2026-11-15",
+ "date": "2026-11-15",
+ "created_at_kst": "2026-11-15 06:14",
+ "spy_price": 754.37,
  "held": [
   "NVDA",
   "ADBE"
@@ -11,11 +11,11 @@
   "FIX",
   "APA",
   "VRT",
-  "MPC",
-  "EME",
   "ASML",
+  "EME",
   "VLO",
   "CF",
+  "SPCX",
   "MSTR",
   "CRCL"
  ],
@@ -27,26 +27,25 @@
   "NVDA": "보유 논리 약화 — 실행 때마다 재점검",
   "ADBE": null,
   "FIX": null,
-  "APA": "분석 이후 내년 EPS 추정치 +5.6%",
+  "APA": "분석 이후 내년 EPS 추정치 +5.8%",
   "VRT": null,
-  "MPC": null,
-  "EME": null,
   "ASML": null,
+  "EME": null,
   "VLO": null,
   "CF": null,
-  "MSTR": null,
+  "SPCX": null,
+  "MSTR": "분석 이후 내년 EPS 추정치 +13.3%",
   "CRCL": null
  },
  "reused": {
   "ADBE": "2026-11-09",
   "FIX": "2026-11-10",
   "VRT": "2026-11-07",
-  "MPC": "2026-11-12",
-  "EME": "2026-11-06",
   "ASML": "2026-11-09",
+  "EME": "2026-11-06",
   "VLO": "2026-11-12",
   "CF": "2026-11-06",
-  "MSTR": "2026-11-13",
+  "SPCX": "2026-11-11",
   "CRCL": "2026-11-10"
  },
  "to_analyze": [
@@ -55,31 +54,31 @@
    "name": "NVIDIA Corporation",
    "sector": "IT·기술",
    "industry": "Semiconductors",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 162.85,
    "market_cap_b": 3932.34,
    "valuation": {
     "trailing_pe": 20.587864,
-    "forward_pe": 10.28589,
-    "peg": 0.2021,
+    "forward_pe": 10.272057,
+    "peg": 0.198,
     "pe_trailing_gaap": 20.6,
     "pe_current_fy": 17.5,
     "pe_next_fy": 10.3,
     "pe_ntm_est": 11.2,
-    "eps_current_fy": 9.32324,
-    "eps_next_fy": 15.84963,
-    "eps_ntm_est": 14.56,
+    "eps_current_fy": 9.32703,
+    "eps_next_fy": 15.85369,
+    "eps_ntm_est": 14.59,
     "forward_pe_yahoo": 10.3,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": 3.23,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
-    "analyst_target_mean": 285.34528,
-    "analyst_rating_mean_1buy_5sell": 1.59016,
+    "analyst_target_mean": 278.30756,
+    "analyst_rating_mean_1buy_5sell": 1.62295,
     "analysts": 53.0
    },
    "eps_estimate_range_next_fy": {
     "low": 11.85,
-    "mean": 15.84963,
+    "mean": 15.85369,
     "high": 18.746,
     "spread_pct": 43.5
    },
@@ -104,10 +103,10 @@
     "share_count_span": "2025-07→2026-07"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 15.84963,
-    "chg_7d_pct": -0.41,
-    "chg_30d_pct": -0.41,
-    "chg_90d_pct": 23.63,
+    "current": 15.85369,
+    "chg_7d_pct": -0.38,
+    "chg_30d_pct": -0.38,
+    "chg_90d_pct": 23.66,
     "up_revisions_30d": 7.0,
     "down_revisions_30d": 0.0
    },
@@ -189,7 +188,7 @@
    "return_1y_pct": -14.2,
    "from_52w_high_pct": -31.9,
    "quant_score": {
-    "score": 79.8,
+    "score": 79.9,
     "quality": 96,
     "health": 71,
     "value": 78,
@@ -233,19 +232,19 @@
    "name": "APA Corporation",
    "sector": "에너지",
    "industry": "Oil & Gas E&P",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 48.44,
    "market_cap_b": 16.26,
    "valuation": {
     "trailing_pe": 7.8764224,
     "forward_pe": 8.553514,
-    "peg": 1.1781,
+    "peg": 1.1972,
     "pe_trailing_gaap": 7.9,
     "pe_current_fy": 6.9,
-    "pe_next_fy": 8.6,
+    "pe_next_fy": 8.5,
     "pe_ntm_est": 8.3,
-    "eps_current_fy": 7.00443,
-    "eps_next_fy": 5.66317,
+    "eps_current_fy": 7.02965,
+    "eps_next_fy": 5.67086,
     "eps_ntm_est": 5.84,
     "forward_pe_yahoo": 8.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
@@ -257,9 +256,9 @@
    },
    "eps_estimate_range_next_fy": {
     "low": 2.42564,
-    "mean": 5.66317,
+    "mean": 5.67086,
     "high": 9.07475,
-    "spread_pct": 117.4
+    "spread_pct": 117.3
    },
    "growth_profitability": {
     "gross_margin_pct": 79.0,
@@ -267,8 +266,8 @@
     "roe_pct": 33.3,
     "revenue_growth_last_q_yoy_pct": 31.5,
     "eps_growth_last_q_yoy_pct": 250.9,
-    "eps_growth_est_this_fy_pct": 85.8,
-    "eps_growth_est_next_fy_pct": -19.1
+    "eps_growth_est_this_fy_pct": 86.5,
+    "eps_growth_est_next_fy_pct": -19.3
    },
    "cash_debt_dilution": {
     "fcf_ttm_b": 2.08,
@@ -282,10 +281,10 @@
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 5.66317,
-    "chg_7d_pct": 5.32,
-    "chg_30d_pct": 21.82,
-    "chg_90d_pct": 36.11,
+    "current": 5.67086,
+    "chg_7d_pct": 4.27,
+    "chg_30d_pct": 18.28,
+    "chg_90d_pct": 36.3,
     "up_revisions_30d": 21.0,
     "down_revisions_30d": 2.0
    },
@@ -367,17 +366,187 @@
    "return_1y_pct": 101.0,
    "from_52w_high_pct": -8.3,
    "quant_score": {
-    "score": 78.1,
+    "score": 78.0,
     "quality": 71,
     "health": 65,
     "value": 78,
     "revisions": 92,
-    "score_before": 78.1
+    "score_before": 78.0
    },
    "data_conflicts": [],
    "cycle_check": null,
    "dashboard_signals": [
     "M3 실적 개선 기업 (+3점)"
+   ],
+   "holding": null
+  },
+  {
+   "ticker": "MSTR",
+   "name": "Strategy Inc",
+   "sector": "IT·기술",
+   "industry": "Software - Application",
+   "as_of": "2026-11-15",
+   "price": 111.62,
+   "market_cap_b": 47.25,
+   "valuation": {
+    "trailing_pe": null,
+    "forward_pe": 6.4744782,
+    "peg": null,
+    "pe_trailing_gaap": null,
+    "pe_current_fy": null,
+    "pe_next_fy": 5.2,
+    "pe_ntm_est": 6.3,
+    "eps_current_fy": -6.73156,
+    "eps_next_fy": 21.34548,
+    "eps_ntm_est": 17.81,
+    "forward_pe_yahoo": 6.5,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": -36.75,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 233.26666,
+    "analyst_rating_mean_1buy_5sell": 1.25,
+    "analysts": 15.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": -4.28,
+    "mean": 21.34548,
+    "high": 69.86,
+    "spread_pct": 347.3
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 67.8,
+    "op_margin_pct": -1100.1,
+    "roe_pct": -21.6,
+    "revenue_growth_last_q_yoy_pct": -2.5,
+    "eps_growth_last_q_yoy_pct": 431.5,
+    "eps_growth_est_this_fy_pct": null,
+    "eps_growth_est_next_fy_pct": 199.4
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": -17.37,
+    "sbc_ttm_b": 0.05,
+    "buyback_ttm_b": null,
+    "fcf_margin_pct": -3507.6,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 0.5,
+    "net_debt_to_ebitda": null,
+    "share_count_change_pct": 46.97,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 21.34548,
+    "chg_7d_pct": 12.15,
+    "chg_30d_pct": 62.02,
+    "chg_90d_pct": 310.56,
+    "up_revisions_30d": 3.0,
+    "down_revisions_30d": 2.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     0.13,
+     0.12,
+     0.12,
+     0.12,
+     0.13
+    ],
+    "op_margin_pct": [
+     -0.0,
+     -8.1,
+     -12.0,
+     -12.7,
+     -2.1
+    ],
+    "diluted_eps": [
+     8.42,
+     -42.93,
+     -38.25,
+     -24.45,
+     44.75
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     0.5
+    ],
+    [
+     "2023-12",
+     0.5
+    ],
+    [
+     "2024-12",
+     0.46
+    ],
+    [
+     "2025-12",
+     0.48
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": -42.93,
+     "estimate": -20.99,
+     "surprise_pct": -104.5
+    },
+    {
+     "quarter": "2026-03",
+     "actual": -38.25,
+     "estimate": -15.326,
+     "surprise_pct": -149.6
+    },
+    {
+     "quarter": "2026-06",
+     "actual": -24.45,
+     "estimate": 3.07433,
+     "surprise_pct": -895.3
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 44.75,
+     "estimate": 22.88906,
+     "surprise_pct": 95.5
+    }
+   ],
+   "next_earnings": "2026-10-29",
+   "return_1y_pct": -44.1,
+   "from_52w_high_pct": -46.0,
+   "quant_score": {
+    "score": 51.1,
+    "quality": 31,
+    "health": 28,
+    "value": 50,
+    "revisions": 84,
+    "score_before": 51.2
+   },
+   "data_conflicts": [
+    {
+     "metric": "FCF 마진(TTM)",
+     "values": {
+      "현금흐름표 4분기 합계": "-3507.6%",
+      "Yahoo 요약(levered FCF)": "-654.5%"
+     },
+     "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+    },
+    {
+     "metric": "다음 회계연도 EPS",
+     "values": {
+      "forwardEps": 17.24,
+      "추정치 추이(+1y)": 21.34548
+     },
+     "why": "추정 PER 기준 EPS 불일치"
+    }
+   ],
+   "cycle_check": null,
+   "dashboard_signals": [
+    "흑자전환 임박(다음 분기 EPS 컨센서스 흑자) (+10점)"
    ],
    "holding": null
   }
@@ -388,31 +557,31 @@
    "name": "NVIDIA Corporation",
    "sector": "IT·기술",
    "industry": "Semiconductors",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 162.85,
    "market_cap_b": 3932.34,
    "valuation": {
     "trailing_pe": 20.587864,
-    "forward_pe": 10.28589,
-    "peg": 0.2021,
+    "forward_pe": 10.272057,
+    "peg": 0.198,
     "pe_trailing_gaap": 20.6,
     "pe_current_fy": 17.5,
     "pe_next_fy": 10.3,
     "pe_ntm_est": 11.2,
-    "eps_current_fy": 9.32324,
-    "eps_next_fy": 15.84963,
-    "eps_ntm_est": 14.56,
+    "eps_current_fy": 9.32703,
+    "eps_next_fy": 15.85369,
+    "eps_ntm_est": 14.59,
     "forward_pe_yahoo": 10.3,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": 3.23,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
-    "analyst_target_mean": 285.34528,
-    "analyst_rating_mean_1buy_5sell": 1.59016,
+    "analyst_target_mean": 278.30756,
+    "analyst_rating_mean_1buy_5sell": 1.62295,
     "analysts": 53.0
    },
    "eps_estimate_range_next_fy": {
     "low": 11.85,
-    "mean": 15.84963,
+    "mean": 15.85369,
     "high": 18.746,
     "spread_pct": 43.5
    },
@@ -437,10 +606,10 @@
     "share_count_span": "2025-07→2026-07"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 15.84963,
-    "chg_7d_pct": -0.41,
-    "chg_30d_pct": -0.41,
-    "chg_90d_pct": 23.63,
+    "current": 15.85369,
+    "chg_7d_pct": -0.38,
+    "chg_30d_pct": -0.38,
+    "chg_90d_pct": 23.66,
     "up_revisions_30d": 7.0,
     "down_revisions_30d": 0.0
    },
@@ -522,7 +691,7 @@
    "return_1y_pct": -14.2,
    "from_52w_high_pct": -31.9,
    "quant_score": {
-    "score": 79.8,
+    "score": 79.9,
     "quality": 96,
     "health": 71,
     "value": 78,
@@ -566,20 +735,20 @@
    "name": "Adobe Inc.",
    "sector": "IT·기술",
    "industry": "Software - Application",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 243.08,
    "market_cap_b": 94.61,
    "valuation": {
     "trailing_pe": 13.572307,
     "forward_pe": 8.869208,
-    "peg": 0.5745,
+    "peg": 0.5855,
     "pe_trailing_gaap": 13.6,
     "pe_current_fy": 9.9,
     "pe_next_fy": 8.9,
     "pe_ntm_est": 8.9,
     "eps_current_fy": 24.47864,
     "eps_next_fy": 27.40718,
-    "eps_ntm_est": 27.29,
+    "eps_ntm_est": 27.3,
     "forward_pe_yahoo": 8.9,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": 11.2,
@@ -617,7 +786,7 @@
    "estimate_revisions_next_fy_eps": {
     "current": 27.40718,
     "chg_7d_pct": 0.0,
-    "chg_30d_pct": -0.41,
+    "chg_30d_pct": -0.36,
     "chg_90d_pct": 0.17,
     "up_revisions_30d": 0.0,
     "down_revisions_30d": 3.0
@@ -700,12 +869,12 @@
    "return_1y_pct": -26.6,
    "from_52w_high_pct": -32.0,
    "quant_score": {
-    "score": 65.8,
+    "score": 65.9,
     "quality": 82,
     "health": 69,
     "value": 93,
     "revisions": 28,
-    "score_before": 65.5
+    "score_before": 65.6
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -732,23 +901,23 @@
    "name": "Comfort Systems USA, Inc.",
    "sector": "산업재",
    "industry": "Engineering & Construction",
-   "as_of": "2026-11-14",
-   "price": 1112.27,
-   "market_cap_b": 39.15,
+   "as_of": "2026-11-15",
+   "price": 1112.5,
+   "market_cap_b": 38.92,
    "valuation": {
-    "trailing_pe": 24.023111,
-    "forward_pe": 16.562887,
-    "peg": 0.3424,
+    "trailing_pe": 24.028078,
+    "forward_pe": 16.56631,
+    "peg": 0.3377,
     "pe_trailing_gaap": 24.0,
     "pe_current_fy": 21.9,
     "pe_next_fy": 16.6,
     "pe_ntm_est": 17.1,
     "eps_current_fy": 50.7477,
     "eps_next_fy": 67.15436,
-    "eps_ntm_est": 65.04,
+    "eps_ntm_est": 65.09,
     "forward_pe_yahoo": 16.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 6.24,
+    "fcf_yield_pct": 6.27,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 1808.5,
     "analyst_rating_mean_1buy_5sell": 1.41667,
@@ -866,12 +1035,12 @@
    "return_1y_pct": 22.6,
    "from_52w_high_pct": -46.1,
    "quant_score": {
-    "score": 82.2,
+    "score": 82.1,
     "quality": 68,
     "health": 74,
     "value": 89,
-    "revisions": 94,
-    "score_before": 81.7
+    "revisions": 93,
+    "score_before": 81.6
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -883,19 +1052,19 @@
    "name": "APA Corporation",
    "sector": "에너지",
    "industry": "Oil & Gas E&P",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 48.44,
    "market_cap_b": 16.26,
    "valuation": {
     "trailing_pe": 7.8764224,
     "forward_pe": 8.553514,
-    "peg": 1.1781,
+    "peg": 1.1972,
     "pe_trailing_gaap": 7.9,
     "pe_current_fy": 6.9,
-    "pe_next_fy": 8.6,
+    "pe_next_fy": 8.5,
     "pe_ntm_est": 8.3,
-    "eps_current_fy": 7.00443,
-    "eps_next_fy": 5.66317,
+    "eps_current_fy": 7.02965,
+    "eps_next_fy": 5.67086,
     "eps_ntm_est": 5.84,
     "forward_pe_yahoo": 8.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
@@ -907,9 +1076,9 @@
    },
    "eps_estimate_range_next_fy": {
     "low": 2.42564,
-    "mean": 5.66317,
+    "mean": 5.67086,
     "high": 9.07475,
-    "spread_pct": 117.4
+    "spread_pct": 117.3
    },
    "growth_profitability": {
     "gross_margin_pct": 79.0,
@@ -917,8 +1086,8 @@
     "roe_pct": 33.3,
     "revenue_growth_last_q_yoy_pct": 31.5,
     "eps_growth_last_q_yoy_pct": 250.9,
-    "eps_growth_est_this_fy_pct": 85.8,
-    "eps_growth_est_next_fy_pct": -19.1
+    "eps_growth_est_this_fy_pct": 86.5,
+    "eps_growth_est_next_fy_pct": -19.3
    },
    "cash_debt_dilution": {
     "fcf_ttm_b": 2.08,
@@ -932,10 +1101,10 @@
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 5.66317,
-    "chg_7d_pct": 5.32,
-    "chg_30d_pct": 21.82,
-    "chg_90d_pct": 36.11,
+    "current": 5.67086,
+    "chg_7d_pct": 4.27,
+    "chg_30d_pct": 18.28,
+    "chg_90d_pct": 36.3,
     "up_revisions_30d": 21.0,
     "down_revisions_30d": 2.0
    },
@@ -1017,12 +1186,12 @@
    "return_1y_pct": 101.0,
    "from_52w_high_pct": -8.3,
    "quant_score": {
-    "score": 78.1,
+    "score": 78.0,
     "quality": 71,
     "health": 65,
     "value": 78,
     "revisions": 92,
-    "score_before": 78.1
+    "score_before": 78.0
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -1036,26 +1205,26 @@
    "name": "Vertiv Holdings, LLC",
    "sector": "산업재",
    "industry": "Electrical Equipment & Parts",
-   "as_of": "2026-11-14",
-   "price": 202.0375,
-   "market_cap_b": 77.8,
+   "as_of": "2026-11-15",
+   "price": 202.07,
+   "market_cap_b": 77.81,
    "valuation": {
-    "trailing_pe": 37.76402,
-    "forward_pe": 20.369333,
-    "peg": 0.6187,
+    "trailing_pe": 37.770096,
+    "forward_pe": 20.37261,
+    "peg": 0.5963,
     "pe_trailing_gaap": 37.8,
     "pe_current_fy": 28.1,
     "pe_next_fy": 20.4,
     "pe_ntm_est": 21.1,
     "eps_current_fy": 7.19552,
     "eps_next_fy": 9.91871,
-    "eps_ntm_est": 9.57,
+    "eps_ntm_est": 9.58,
     "forward_pe_yahoo": 20.4,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": 4.0,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 334.286,
-    "analyst_rating_mean_1buy_5sell": 1.3871,
+    "analyst_rating_mean_1buy_5sell": 1.41935,
     "analysts": 30.0
    },
    "eps_estimate_range_next_fy": {
@@ -1087,7 +1256,7 @@
    "estimate_revisions_next_fy_eps": {
     "current": 9.91871,
     "chg_7d_pct": 0.78,
-    "chg_30d_pct": 7.86,
+    "chg_30d_pct": 7.9,
     "chg_90d_pct": 9.01,
     "up_revisions_30d": 27.0,
     "down_revisions_30d": 0.0
@@ -1183,65 +1352,65 @@
    "holding": null
   },
   {
-   "ticker": "MPC",
-   "name": "Marathon Petroleum Corporation",
-   "sector": "에너지",
-   "industry": "Oil & Gas Refining & Marketing",
-   "as_of": "2026-11-14",
-   "price": 414.61,
-   "market_cap_b": 112.89,
+   "ticker": "ASML",
+   "name": "ASML Holding N.V. - New York Re",
+   "sector": "IT·기술",
+   "industry": "Semiconductor Equipment & Materials",
+   "as_of": "2026-11-15",
+   "price": 1495.16,
+   "market_cap_b": 576.26,
    "valuation": {
-    "trailing_pe": 8.214979,
-    "forward_pe": 6.750498,
-    "peg": 0.952,
-    "pe_trailing_gaap": 8.2,
-    "pe_current_fy": 6.0,
-    "pe_next_fy": 6.8,
-    "pe_ntm_est": 6.6,
-    "eps_current_fy": 68.84958,
-    "eps_next_fy": 61.41917,
-    "eps_ntm_est": 62.38,
-    "forward_pe_yahoo": 6.8,
+    "trailing_pe": 36.790356,
+    "forward_pe": 23.583231,
+    "peg": 0.7893,
+    "pe_trailing_gaap": 36.8,
+    "pe_current_fy": 36.1,
+    "pe_next_fy": 26.5,
+    "pe_ntm_est": 27.4,
+    "eps_current_fy": 41.41393,
+    "eps_next_fy": 56.43418,
+    "eps_ntm_est": 54.54,
+    "forward_pe_yahoo": 23.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 18.46,
+    "fcf_yield_pct": 3.64,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
-    "analyst_target_mean": 461.9412,
-    "analyst_rating_mean_1buy_5sell": 2.33333,
+    "analyst_target_mean": 2115.0967,
+    "analyst_rating_mean_1buy_5sell": 1.36585,
     "analysts": 17.0
    },
    "eps_estimate_range_next_fy": {
-    "low": 36.61621,
-    "mean": 61.41917,
-    "high": 90.87,
-    "spread_pct": 88.3
+    "low": 37.43,
+    "mean": 56.43418,
+    "high": 63.89124,
+    "spread_pct": 46.9
    },
    "growth_profitability": {
-    "gross_margin_pct": 16.2,
-    "op_margin_pct": 11.7,
-    "roe_pct": 60.5,
-    "revenue_growth_last_q_yoy_pct": 60.9,
-    "eps_growth_last_q_yoy_pct": 489.6,
-    "eps_growth_est_this_fy_pct": 543.5,
-    "eps_growth_est_next_fy_pct": -10.8
+    "gross_margin_pct": 54.3,
+    "op_margin_pct": 38.6,
+    "roe_pct": 65.6,
+    "revenue_growth_last_q_yoy_pct": 55.2,
+    "eps_growth_last_q_yoy_pct": 135.9,
+    "eps_growth_est_this_fy_pct": 67.6,
+    "eps_growth_est_next_fy_pct": 36.3
    },
    "cash_debt_dilution": {
-    "fcf_ttm_b": 20.84,
-    "sbc_ttm_b": null,
-    "buyback_ttm_b": 7.29,
-    "fcf_margin_pct": 11.9,
+    "fcf_ttm_b": 21.0,
+    "sbc_ttm_b": 0.22,
+    "buyback_ttm_b": 7.85,
+    "fcf_margin_pct": 53.2,
     "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
-    "revenue_ttm_b": 174.8,
-    "net_debt_to_ebitda": 0.88,
-    "share_count_change_pct": -8.64,
+    "revenue_ttm_b": 39.47,
+    "net_debt_to_ebitda": -0.67,
+    "share_count_change_pct": -0.7,
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 61.41917,
-    "chg_7d_pct": 1.84,
-    "chg_30d_pct": 15.71,
-    "chg_90d_pct": 95.44,
-    "up_revisions_30d": 15.0,
-    "down_revisions_30d": 2.0
+    "current": 56.43418,
+    "chg_7d_pct": 0.9,
+    "chg_30d_pct": 9.09,
+    "chg_90d_pct": 10.47,
+    "up_revisions_30d": 22.0,
+    "down_revisions_30d": 0.0
    },
    "quarterly": {
     "periods": [
@@ -1252,87 +1421,102 @@
      "2026-09"
     ],
     "revenue_b": [
-     34.81,
-     32.57,
-     34.2,
-     51.99,
-     56.03
+     7.52,
+     9.72,
+     8.77,
+     9.33,
+     11.66
     ],
     "op_margin_pct": [
-     4.8,
-     5.7,
-     3.0,
-     13.4,
-     17.8
+     32.8,
+     35.3,
+     36.0,
+     37.1,
+     44.4
     ],
     "diluted_eps": [
-     4.51,
-     5.12,
-     1.73,
-     17.73,
-     26.59
+     5.48,
+     7.34,
+     7.15,
+     7.58,
+     12.93
     ]
    },
    "annual_revenue_b": [
     [
      "2022-12",
-     177.45
+     21.17
     ],
     [
      "2023-12",
-     148.38
+     27.56
     ],
     [
      "2024-12",
-     138.86
+     28.26
     ],
     [
      "2025-12",
-     132.7
+     32.67
     ]
    ],
    "eps_surprises": [
     {
      "quarter": "2025-12",
-     "actual": 4.07,
-     "estimate": 2.71093,
-     "surprise_pct": 50.1
+     "actual": 7.34,
+     "estimate": 7.54521,
+     "surprise_pct": -2.7
     },
     {
      "quarter": "2026-03",
-     "actual": 1.65,
-     "estimate": 0.74786,
-     "surprise_pct": 120.6
+     "actual": 7.15,
+     "estimate": 6.621,
+     "surprise_pct": 8.0
     },
     {
      "quarter": "2026-06",
-     "actual": 17.73,
-     "estimate": 13.95135,
-     "surprise_pct": 27.1
+     "actual": 7.58,
+     "estimate": 6.94813,
+     "surprise_pct": 9.1
     },
     {
      "quarter": "2026-09",
-     "actual": 26.93,
-     "estimate": 26.00363,
-     "surprise_pct": 3.6
+     "actual": 11.8193,
+     "estimate": 10.75815,
+     "surprise_pct": 9.9
     }
    ],
-   "next_earnings": "2027-02-02",
-   "return_1y_pct": 110.8,
-   "from_52w_high_pct": -14.5,
+   "next_earnings": "2027-01-27",
+   "return_1y_pct": 49.4,
+   "from_52w_high_pct": -24.6,
    "quant_score": {
-    "score": 73.6,
-    "quality": 45,
-    "health": 61,
-    "value": 90,
+    "score": 78.5,
+    "quality": 88,
+    "health": 74,
+    "value": 56,
     "revisions": 92,
-    "score_before": 73.2
+    "score_before": 76.0
    },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [
-    "M3 실적 개선 기업 (+3점)"
+   "data_conflicts": [
+    {
+     "metric": "FCF 마진(TTM)",
+     "values": {
+      "현금흐름표 4분기 합계": "53.2%",
+      "Yahoo 요약(levered FCF)": "26.3%"
+     },
+     "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+    },
+    {
+     "metric": "다음 회계연도 EPS",
+     "values": {
+      "forwardEps": 63.39929,
+      "추정치 추이(+1y)": 56.43418
+     },
+     "why": "추정 PER 기준 EPS 불일치"
+    }
    ],
+   "cycle_check": null,
+   "dashboard_signals": [],
    "holding": null
   },
   {
@@ -1340,23 +1524,23 @@
    "name": "EMCOR Group, Inc.",
    "sector": "산업재",
    "industry": "Engineering & Construction",
-   "as_of": "2026-11-14",
-   "price": 659.08,
-   "market_cap_b": 28.86,
+   "as_of": "2026-11-15",
+   "price": 659.36,
+   "market_cap_b": 28.87,
    "valuation": {
-    "trailing_pe": 19.054062,
-    "forward_pe": 16.111849,
-    "peg": 0.4181,
+    "trailing_pe": 19.062157,
+    "forward_pe": 16.118694,
+    "peg": 0.4159,
     "pe_trailing_gaap": 19.1,
     "pe_current_fy": 18.9,
     "pe_next_fy": 16.1,
     "pe_ntm_est": 16.4,
     "eps_current_fy": 34.91161,
     "eps_next_fy": 40.90654,
-    "eps_ntm_est": 40.14,
+    "eps_ntm_est": 40.15,
     "forward_pe_yahoo": 16.1,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 5.14,
+    "fcf_yield_pct": 5.13,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 884.1111,
     "analyst_rating_mean_1buy_5sell": 1.83333,
@@ -1474,182 +1658,14 @@
    "return_1y_pct": 6.6,
    "from_52w_high_pct": -30.1,
    "quant_score": {
-    "score": 76.7,
+    "score": 76.6,
     "quality": 52,
     "health": 70,
     "value": 87,
     "revisions": 93,
-    "score_before": 76.0
+    "score_before": 75.8
    },
    "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  },
-  {
-   "ticker": "ASML",
-   "name": "ASML Holding N.V. - New York Re",
-   "sector": "IT·기술",
-   "industry": "Semiconductor Equipment & Materials",
-   "as_of": "2026-11-14",
-   "price": 1495.16,
-   "market_cap_b": 576.26,
-   "valuation": {
-    "trailing_pe": 36.790356,
-    "forward_pe": 23.583231,
-    "peg": 0.7852,
-    "pe_trailing_gaap": 36.8,
-    "pe_current_fy": 36.1,
-    "pe_next_fy": 26.5,
-    "pe_ntm_est": 27.4,
-    "eps_current_fy": 41.41393,
-    "eps_next_fy": 56.43418,
-    "eps_ntm_est": 54.5,
-    "forward_pe_yahoo": 23.6,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 3.64,
-    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
-    "analyst_target_mean": 2114.6304,
-    "analyst_rating_mean_1buy_5sell": 1.36585,
-    "analysts": 17.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 37.43,
-    "mean": 56.43418,
-    "high": 63.89124,
-    "spread_pct": 46.9
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 54.3,
-    "op_margin_pct": 38.6,
-    "roe_pct": 65.6,
-    "revenue_growth_last_q_yoy_pct": 55.2,
-    "eps_growth_last_q_yoy_pct": 135.9,
-    "eps_growth_est_this_fy_pct": 67.6,
-    "eps_growth_est_next_fy_pct": 36.3
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 21.0,
-    "sbc_ttm_b": 0.22,
-    "buyback_ttm_b": 7.85,
-    "fcf_margin_pct": 53.2,
-    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
-    "revenue_ttm_b": 39.47,
-    "net_debt_to_ebitda": -0.67,
-    "share_count_change_pct": -0.7,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 56.43418,
-    "chg_7d_pct": 0.9,
-    "chg_30d_pct": 9.09,
-    "chg_90d_pct": 10.47,
-    "up_revisions_30d": 21.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     7.52,
-     9.72,
-     8.77,
-     9.33,
-     11.66
-    ],
-    "op_margin_pct": [
-     32.8,
-     35.3,
-     36.0,
-     37.1,
-     44.4
-    ],
-    "diluted_eps": [
-     5.48,
-     7.34,
-     7.15,
-     7.58,
-     12.93
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     21.17
-    ],
-    [
-     "2023-12",
-     27.56
-    ],
-    [
-     "2024-12",
-     28.26
-    ],
-    [
-     "2025-12",
-     32.67
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 7.34,
-     "estimate": 7.54521,
-     "surprise_pct": -2.7
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 7.15,
-     "estimate": 6.621,
-     "surprise_pct": 8.0
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 7.58,
-     "estimate": 6.94813,
-     "surprise_pct": 9.1
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 11.8193,
-     "estimate": 10.75815,
-     "surprise_pct": 9.9
-    }
-   ],
-   "next_earnings": "2027-01-27",
-   "return_1y_pct": 49.4,
-   "from_52w_high_pct": -24.6,
-   "quant_score": {
-    "score": 78.5,
-    "quality": 88,
-    "health": 74,
-    "value": 56,
-    "revisions": 92,
-    "score_before": 76.0
-   },
-   "data_conflicts": [
-    {
-     "metric": "FCF 마진(TTM)",
-     "values": {
-      "현금흐름표 4분기 합계": "53.2%",
-      "Yahoo 요약(levered FCF)": "26.3%"
-     },
-     "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
-    },
-    {
-     "metric": "다음 회계연도 EPS",
-     "values": {
-      "forwardEps": 63.39929,
-      "추정치 추이(+1y)": 56.43418
-     },
-     "why": "추정 PER 기준 EPS 불일치"
-    }
-   ],
    "cycle_check": null,
    "dashboard_signals": [],
    "holding": null
@@ -1659,23 +1675,23 @@
    "name": "Valero Energy Corporation",
    "sector": "에너지",
    "industry": "Oil & Gas Refining & Marketing",
-   "as_of": "2026-11-14",
-   "price": 379.755,
-   "market_cap_b": 105.91,
+   "as_of": "2026-11-15",
+   "price": 379.83,
+   "market_cap_b": 105.93,
    "valuation": {
-    "trailing_pe": 8.636684,
-    "forward_pe": 7.0989447,
-    "peg": 1.3515,
+    "trailing_pe": 8.63839,
+    "forward_pe": 7.230249,
+    "peg": 1.3691,
     "pe_trailing_gaap": 8.6,
-    "pe_current_fy": 6.3,
-    "pe_next_fy": 7.1,
-    "pe_ntm_est": 7.0,
-    "eps_current_fy": 59.80853,
-    "eps_next_fy": 53.49457,
-    "eps_ntm_est": 54.31,
-    "forward_pe_yahoo": 7.1,
+    "pe_current_fy": 6.4,
+    "pe_next_fy": 7.2,
+    "pe_ntm_est": 7.1,
+    "eps_current_fy": 59.49088,
+    "eps_next_fy": 52.53346,
+    "eps_ntm_est": 53.41,
+    "forward_pe_yahoo": 7.2,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 14.24,
+    "fcf_yield_pct": 14.23,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 423.05264,
     "analyst_rating_mean_1buy_5sell": 2.5,
@@ -1683,9 +1699,9 @@
    },
    "eps_estimate_range_next_fy": {
     "low": 36.705,
-    "mean": 53.49457,
+    "mean": 52.53346,
     "high": 78.22,
-    "spread_pct": 77.6
+    "spread_pct": 79.0
    },
    "growth_profitability": {
     "gross_margin_pct": 19.5,
@@ -1693,8 +1709,8 @@
     "roe_pct": 46.9,
     "revenue_growth_last_q_yoy_pct": 46.5,
     "eps_growth_last_q_yoy_pct": 576.8,
-    "eps_growth_est_this_fy_pct": 463.7,
-    "eps_growth_est_next_fy_pct": -10.6
+    "eps_growth_est_this_fy_pct": 460.7,
+    "eps_growth_est_next_fy_pct": -11.7
    },
    "cash_debt_dilution": {
     "fcf_ttm_b": 15.08,
@@ -1708,10 +1724,10 @@
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 53.49457,
-    "chg_7d_pct": -0.19,
-    "chg_30d_pct": 18.2,
-    "chg_90d_pct": 93.01,
+    "current": 52.53346,
+    "chg_7d_pct": -1.8,
+    "chg_30d_pct": 16.11,
+    "chg_90d_pct": 79.43,
     "up_revisions_30d": 15.0,
     "down_revisions_30d": 1.0
    },
@@ -1793,12 +1809,12 @@
    "return_1y_pct": 113.4,
    "from_52w_high_pct": -17.4,
    "quant_score": {
-    "score": 73.3,
+    "score": 73.2,
     "quality": 44,
-    "health": 70,
+    "health": 69,
     "value": 81,
-    "revisions": 94,
-    "score_before": 72.8
+    "revisions": 93,
+    "score_before": 72.6
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -1812,31 +1828,31 @@
    "name": "CF Industries Holdings, Inc.",
    "sector": "소재",
    "industry": "Agricultural Inputs",
-   "as_of": "2026-11-14",
-   "price": 125.16,
-   "market_cap_b": 18.31,
+   "as_of": "2026-11-15",
+   "price": 125.09,
+   "market_cap_b": 18.3,
    "valuation": {
-    "trailing_pe": 8.826516,
-    "forward_pe": 10.697135,
-    "peg": 0.5302,
+    "trailing_pe": 8.821579,
+    "forward_pe": 10.642642,
+    "peg": 0.5105,
     "pe_trailing_gaap": 8.8,
     "pe_current_fy": 8.3,
     "pe_next_fy": 10.7,
     "pe_ntm_est": 10.3,
-    "eps_current_fy": 15.02097,
-    "eps_next_fy": 11.68508,
+    "eps_current_fy": 15.03642,
+    "eps_next_fy": 11.69341,
     "eps_ntm_est": 12.11,
-    "forward_pe_yahoo": 10.7,
+    "forward_pe_yahoo": 10.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 11.33,
+    "fcf_yield_pct": 11.34,
     "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
-    "analyst_target_mean": 129.636,
+    "analyst_target_mean": 130.036,
     "analyst_rating_mean_1buy_5sell": 2.86364,
     "analysts": 20.0
    },
    "eps_estimate_range_next_fy": {
     "low": 6.65,
-    "mean": 11.68508,
+    "mean": 11.69341,
     "high": 17.05402,
     "spread_pct": 89.0
    },
@@ -1846,8 +1862,8 @@
     "roe_pct": 30.9,
     "revenue_growth_last_q_yoy_pct": 12.1,
     "eps_growth_last_q_yoy_pct": 31.1,
-    "eps_growth_est_this_fy_pct": 53.5,
-    "eps_growth_est_next_fy_pct": -20.1
+    "eps_growth_est_this_fy_pct": 53.6,
+    "eps_growth_est_next_fy_pct": -19.9
    },
    "cash_debt_dilution": {
     "fcf_ttm_b": 2.08,
@@ -1861,10 +1877,10 @@
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 11.68508,
-    "chg_7d_pct": -1.16,
-    "chg_30d_pct": 3.79,
-    "chg_90d_pct": 8.59,
+    "current": 11.69341,
+    "chg_7d_pct": 1.81,
+    "chg_30d_pct": 3.86,
+    "chg_90d_pct": 8.66,
     "up_revisions_30d": 6.0,
     "down_revisions_30d": 1.0
    },
@@ -1946,12 +1962,12 @@
    "return_1y_pct": 49.2,
    "from_52w_high_pct": -10.2,
    "quant_score": {
-    "score": 76.2,
+    "score": 76.0,
     "quality": 59,
     "health": 68,
     "value": 92,
-    "revisions": 84,
-    "score_before": 75.5
+    "revisions": 83,
+    "score_before": 75.2
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -1959,11 +1975,164 @@
    "holding": null
   },
   {
+   "ticker": "SPCX",
+   "name": "Space Exploration Technologies ",
+   "sector": "산업재",
+   "industry": "Aerospace & Defense",
+   "as_of": "2026-11-15",
+   "price": 139.11,
+   "market_cap_b": 1889.26,
+   "valuation": {
+    "trailing_pe": 604.82605,
+    "forward_pe": 50.726936,
+    "peg": null,
+    "pe_trailing_gaap": 604.8,
+    "pe_current_fy": 491.3,
+    "pe_next_fy": 33.9,
+    "pe_ntm_est": 38.4,
+    "eps_current_fy": 0.28317,
+    "eps_next_fy": 4.10056,
+    "eps_ntm_est": 3.62,
+    "forward_pe_yahoo": 50.7,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": -2.13,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 256.41406,
+    "analyst_rating_mean_1buy_5sell": 1.7,
+    "analysts": 37.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 0.34,
+    "mean": 4.10056,
+    "high": 13.49,
+    "spread_pct": 320.7
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 56.8,
+    "op_margin_pct": 1.8,
+    "roe_pct": null,
+    "revenue_growth_last_q_yoy_pct": 161.4,
+    "eps_growth_last_q_yoy_pct": null,
+    "eps_growth_est_this_fy_pct": null,
+    "eps_growth_est_next_fy_pct": 1492.8
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": -40.16,
+    "sbc_ttm_b": 4.74,
+    "buyback_ttm_b": 5.03,
+    "fcf_margin_pct": -125.3,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 32.04,
+    "net_debt_to_ebitda": -4.31,
+    "share_count_change_pct": 3.85,
+    "share_count_span": "2025-12→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 4.10056,
+    "chg_7d_pct": 1.43,
+    "chg_30d_pct": 104.64,
+    "chg_90d_pct": 139.27,
+    "up_revisions_30d": 14.0,
+    "down_revisions_30d": 1.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     5.58,
+     4.96,
+     4.69,
+     7.81,
+     14.57
+    ],
+    "op_margin_pct": [
+     0.1,
+     -27.2,
+     -41.6,
+     -1.8,
+     19.2
+    ],
+    "diluted_eps": [
+     -0.099368,
+     null,
+     -0.41,
+     -0.09,
+     0.35
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2023-12",
+     10.39
+    ],
+    [
+     "2024-12",
+     14.02
+    ],
+    [
+     "2025-12",
+     18.67
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2026-03",
+     "actual": -1.27,
+     "estimate": null,
+     "surprise_pct": null
+    },
+    {
+     "quarter": "2026-06",
+     "actual": -0.09,
+     "estimate": -0.28931,
+     "surprise_pct": 68.9
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 0.35,
+     "estimate": 0.16471,
+     "surprise_pct": 112.5
+    }
+   ],
+   "next_earnings": "2026-10-20",
+   "return_1y_pct": -13.6,
+   "from_52w_high_pct": -34.2,
+   "quant_score": {
+    "score": 56.9,
+    "quality": 53,
+    "health": 52,
+    "value": 19,
+    "revisions": 94,
+    "score_before": 67.1
+   },
+   "data_conflicts": [
+    {
+     "metric": "다음 회계연도 EPS",
+     "values": {
+      "forwardEps": 2.74233,
+      "추정치 추이(+1y)": 4.10056
+     },
+     "why": "추정 PER 기준 EPS 불일치"
+    }
+   ],
+   "cycle_check": null,
+   "dashboard_signals": [
+    "M1 대가 상위보유: Cathie Wood (+3점)",
+    "M1 대가 최근분기 매수: Cathie Wood (+5점)"
+   ],
+   "holding": null
+  },
+  {
    "ticker": "MSTR",
    "name": "Strategy Inc",
    "sector": "IT·기술",
    "industry": "Software - Application",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 111.62,
    "market_cap_b": 47.25,
    "valuation": {
@@ -1972,11 +2141,11 @@
     "peg": null,
     "pe_trailing_gaap": null,
     "pe_current_fy": null,
-    "pe_next_fy": 5.9,
-    "pe_ntm_est": 7.2,
-    "eps_current_fy": -6.72797,
-    "eps_next_fy": 18.84693,
-    "eps_ntm_est": 15.56,
+    "pe_next_fy": 5.2,
+    "pe_ntm_est": 6.3,
+    "eps_current_fy": -6.73156,
+    "eps_next_fy": 21.34548,
+    "eps_ntm_est": 17.81,
     "forward_pe_yahoo": 6.5,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": -36.75,
@@ -1987,9 +2156,9 @@
    },
    "eps_estimate_range_next_fy": {
     "low": -4.28,
-    "mean": 18.84693,
+    "mean": 21.34548,
     "high": 69.86,
-    "spread_pct": 393.4
+    "spread_pct": 347.3
    },
    "growth_profitability": {
     "gross_margin_pct": 67.8,
@@ -2012,10 +2181,10 @@
     "share_count_span": "2025-09→2026-09"
    },
    "estimate_revisions_next_fy_eps": {
-    "current": 18.84693,
-    "chg_7d_pct": 69.44,
-    "chg_30d_pct": 40.57,
-    "chg_90d_pct": 262.5,
+    "current": 21.34548,
+    "chg_7d_pct": 12.15,
+    "chg_30d_pct": 62.02,
+    "chg_90d_pct": 310.56,
     "up_revisions_30d": 3.0,
     "down_revisions_30d": 2.0
    },
@@ -2097,12 +2266,12 @@
    "return_1y_pct": -44.1,
    "from_52w_high_pct": -46.0,
    "quant_score": {
-    "score": 51.3,
+    "score": 51.1,
     "quality": 31,
     "health": 28,
     "value": 50,
-    "revisions": 85,
-    "score_before": 51.4
+    "revisions": 84,
+    "score_before": 51.2
    },
    "data_conflicts": [
     {
@@ -2112,6 +2281,14 @@
       "Yahoo 요약(levered FCF)": "-654.5%"
      },
      "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+    },
+    {
+     "metric": "다음 회계연도 EPS",
+     "values": {
+      "forwardEps": 17.24,
+      "추정치 추이(+1y)": 21.34548
+     },
+     "why": "추정 PER 기준 EPS 불일치"
     }
    ],
    "cycle_check": null,
@@ -2125,7 +2302,7 @@
    "name": "Circle Internet Group, Inc.",
    "sector": "금융",
    "industry": "Capital Markets",
-   "as_of": "2026-11-14",
+   "as_of": "2026-11-15",
    "price": 62.2,
    "market_cap_b": 15.96,
    "valuation": {
@@ -2178,8 +2355,8 @@
     "chg_7d_pct": -7.61,
     "chg_30d_pct": -8.85,
     "chg_90d_pct": -7.1,
-    "up_revisions_30d": 8.0,
-    "down_revisions_30d": 2.0
+    "up_revisions_30d": 7.0,
+    "down_revisions_30d": 5.0
    },
    "quarterly": {
     "periods": [
@@ -2259,12 +2436,12 @@
    "return_1y_pct": -24.0,
    "from_52w_high_pct": -53.2,
    "quant_score": {
-    "score": 44.5,
+    "score": 42.7,
     "quality": 52,
     "health": 78,
-    "value": 29,
-    "revisions": 29,
-    "score_before": 40.7
+    "value": 30,
+    "revisions": 22,
+    "score_before": 38.7
    },
    "data_conflicts": [
     {
@@ -2293,7 +2470,7 @@
   }
  ],
  "market_context": {
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-15",
   "sector_eps_revisions_30d": [
    {
     "sector": "에너지",
@@ -2307,22 +2484,22 @@
    },
    {
     "sector": "산업재",
-    "chg_pct": 0.9,
+    "chg_pct": 0.95,
     "momentum": "↑상승중"
    },
    {
     "sector": "커뮤니케이션",
-    "chg_pct": 0.54,
-    "momentum": "↑상승중"
-   },
-   {
-    "sector": "금융",
-    "chg_pct": 0.36,
+    "chg_pct": 0.35,
     "momentum": "→횡보"
    },
    {
     "sector": "헬스케어",
     "chg_pct": 0.29,
+    "momentum": "→횡보"
+   },
+   {
+    "sector": "금융",
+    "chg_pct": 0.26,
     "momentum": "→횡보"
    },
    {
@@ -2347,7 +2524,7 @@
    },
    {
     "sector": "경기소비재",
-    "chg_pct": -0.81,
+    "chg_pct": -0.71,
     "momentum": "↓하락중"
    }
   ],
@@ -2400,6 +2577,18 @@
    "id": 2
   },
   {
+   "title": "SPCX 8-K: 경영진·이사 변경",
+   "source": "SEC EDGAR (기업 공시)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026071689/spcx-20261104.htm",
+   "published": "2026-11-06",
+   "snippet": "SPCX 공식 공시 항목: 5.02",
+   "kind": "공시",
+   "tickers": [
+    "SPCX"
+   ],
+   "id": 3
+  },
+  {
    "title": "FIX 8-K: 기타 중요 사항",
    "source": "SEC EDGAR (기업 공시)",
    "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926122938/tm2629087d1_8k.htm",
@@ -2409,7 +2598,7 @@
    "tickers": [
     "FIX"
    ],
-   "id": 3
+   "id": 4
   },
   {
    "title": "CRCL 8-K: 실적 발표",
@@ -2421,7 +2610,7 @@
    "tickers": [
     "CRCL"
    ],
-   "id": 4
+   "id": 5
   },
   {
    "title": "APA 8-K: 실적 발표",
@@ -2433,7 +2622,7 @@
    "tickers": [
     "APA"
    ],
-   "id": 5
+   "id": 6
   },
   {
    "title": "CF 8-K: 실적 발표",
@@ -2445,7 +2634,7 @@
    "tickers": [
     "CF"
    ],
-   "id": 6
+   "id": 7
   },
   {
    "title": "CF 8-K: 실적 발표",
@@ -2456,18 +2645,6 @@
    "kind": "공시",
    "tickers": [
     "CF"
-   ],
-   "id": 7
-  },
-  {
-   "title": "MPC 8-K: 실적 발표",
-   "source": "SEC EDGAR (기업 공시)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000069/mpc-20261103.htm",
-   "published": "2026-11-03",
-   "snippet": "MPC 공식 공시 항목: 2.02, 9.01",
-   "kind": "공시",
-   "tickers": [
-    "MPC"
    ],
    "id": 8
   },
@@ -2484,142 +2661,481 @@
    "id": 9
   },
   {
-   "title": "VLO 8-K: 공정공시(IR 자료) · 기타 중요 사항",
-   "source": "SEC EDGAR (기업 공시)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1035002/000162828026068387/vlo-20261029.htm",
-   "published": "2026-10-30",
-   "snippet": "VLO 공식 공시 항목: 7.01, 8.01, 9.01",
-   "kind": "공시",
-   "tickers": [
-    "VLO"
-   ],
+   "title": "SpaceX plans to try first-ever catch of Starship rocket from orbit",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/spacex-plans-to-try-first-ever-catch-of-starship-rocket-from-orbit.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Starship Test Flight 15 marks the first time Elon Musk's company has tried to catch both the booster and upper stage of the rocket.",
    "id": 10
   },
   {
-   "title": "What's ahead for AI financing after Nvidia CEO Jensen Huang departs",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html",
+   "title": "Is CoreWeave Stock a Buy After Its Latest Earnings?",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/coreweave-stock-buy-after-its-latest-earnings",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
+   "published": "2026-11-14",
+   "snippet": "Key PointsCoreWeave is executing.",
    "id": 11
   },
   {
-   "title": "AI risks are the biggest threat to the financial system, Fed survey finds",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/ai-risks-financial-system-federal-reserve.html",
+   "title": "I inherited $1.4 million from my father. Am I wrong to ask my husband of 25 years for a postnuptial agreement?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/i-inherited-1-4-million-from-my-father-am-i-wrong-to-ask-my-husband-of-25-years-for-a-postnuptial-agreement-b739c51d?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spread of data centers.",
+   "published": "2026-11-14",
+   "snippet": "“He has always said he wants his daughter to inherit a chunk of his estate, and I’ve never objected to that.”",
    "id": 12
   },
   {
-   "title": "Nvidia closes below $4T market cap for first time since July 2025 in Huang fallout",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html",
+   "title": "Fastly: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/fastly-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Jensen Huang resigned as CEO of Nvidia on Thursday after coming under scrutiny for two extramarital affairs.",
+   "published": "2026-11-14",
+   "snippet": "Key PointsFastly generated record revenue of $190.2 million in the third quarter.",
    "id": 13
   },
   {
-   "title": "FAA issues nationwide ground stop",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html",
+   "title": "5 Dividend Stocks With High Yields That Are Safer Than You Might Think",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/5-dividend-stocks-high-yields-are-safer-you-might-think",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "The Federal Aviation Administration issued a nationwide ground stop on Friday afternoon, \"due to extraordinary circumstances and for reasons of safety.\"",
+   "published": "2026-11-14",
+   "snippet": "Key PointsPfizer and Bristol Myers Squibb are facing normal industry headwinds in the drug space.",
    "id": 14
   },
   {
-   "title": "Agencies extend comment period for proposed third-party risk management guidance",
-   "source": "Federal Reserve",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+   "title": "American Express vs. Mastercard: Which Financial Stock Is a Better Buy for 2027?",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/american-express-vs-mastercard-which-financial-stock-better-buy-2027",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Agencies extend comment period for proposed third-party risk management guidance",
+   "published": "2026-11-14",
+   "snippet": "Key PointsAmerican Express maintains a closed-loop network that serves as both the issuer and the payment processor for its premium customer base.",
    "id": 15
   },
   {
-   "title": "The FAA issues a national ground stop covering all U.S. airports",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672642-the-faa-issues-a-national-ground-stop-covering-all-u-s-airports?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Better Biotech ETF: First Trust's FBT vs. Invesco's PBE",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/better-biotech-etf-first-trusts-fbt-vs-invescos-pbe",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
+   "published": "2026-11-14",
+   "snippet": "Key PointsThe First Trust NYSE Arca Biotechnology Index Fund has a lower expense ratio and significantly higher assets under management (AUM).",
    "id": 16
   },
   {
-   "title": "Enveric Biosciences GAAP EPS of -$0.57",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672651-enveric-biosciences-gaap-eps-of-0_57?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Corporate Yield vs. Government Safety: Comparing Returns, Dividends, and Risk of VCLT and VGLT",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/corporate-yield-vs-government-safety-comparing-returns-dividends-and-risk-vclt-and-vglt",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
+   "published": "2026-11-14",
+   "snippet": "Key PointsVanguard Long-Term Corporate Bond ETF offers a higher dividend yield than Vanguard Long-Term Treasury ETF by roughly 100 basis points.",
    "id": 17
   },
   {
-   "title": "Freightos not in compliance with Nasdaq's minimum bid price requirement",
+   "title": "Prominent NVIDIA investors call for board to contemplate Huang's return",
    "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672644-freightos-not-in-compliance-with-nasdaqs-minimum-bid-price-requirement?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "url": "https://seekingalpha.com/news/4672775-prominent-nvidia-investors-call-for-board-contemplate-huang-return?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-13",
+   "published": "2026-11-14",
    "snippet": "",
    "id": 18
   },
   {
-   "title": "S&P 500 scores weekly advance despite Friday's tech-led decline",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672648-s-and-p-500-scores-weekly-advance-despite-fridays-tech-led-decline?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/it-leaves-me-with-a-sour-taste-my-elderly-mother-gave-our-cousin-800-for-a-car-repair-should-i-be-worried-88dbd188?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
+   "published": "2026-11-14",
+   "snippet": "“I know older people can easily feel patronized, and I don’t want that to happen.”",
    "id": 19
   },
   {
-   "title": "VistaGen Therapeutics GAAP EPS of -$0.24 beats by $0.14, revenue of $0.14M misses by $0.11M",
+   "title": "L3Harris addresses ground stop",
    "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672649-vistagen-therapeutics-gaap-eps-of-0_24-beats-by-0_14-revenue-of-0_14m-misses-by-0_11m?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "url": "https://seekingalpha.com/news/4672774-l3harris-addresses-ground-stop?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-13",
+   "published": "2026-11-14",
    "snippet": "",
    "id": 20
   },
   {
-   "title": "Cineverse reaffirms $115M-$120M FY2027 revenue outlook while targeting $10M-$20M adjusted EBITDA",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672647-cineverse-reaffirms-115m-120m-fy2027-revenue-outlook-while-targeting-10m-20m-adjusted-ebitda?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Astera Labs vs. Arm: Which Technology Stock Is a Better Buy for 2027?",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/astera-labs-vs-arm-which-technology-stock-better-buy-2027",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
+   "published": "2026-11-14",
+   "snippet": "Key PointsAstera Labs is delivering triple-digit revenue growth by providing essential connectivity solutions for artificial intelligence infrastructure.",
    "id": 21
   },
   {
-   "title": "AMD and other chip stocks slide as Wall Street rethinks the AI trade without Jensen Huang",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/amd-and-other-chip-stocks-slide-as-wall-street-rethinks-the-ai-trade-without-jensen-huang-2fb74547?mod=mw_rss_topstories",
+   "title": "REET vs RWR: Global Versus U.S. REIT ETF Which Is Better",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/reet-vs-rwr-global-versus-us-reit-etf-which-better",
    "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "At first, it looked like Nvidia’s pain might be the rest of the chip sector’s gain. But now, investors aren’t so sure.",
+   "published": "2026-11-14",
+   "snippet": "Key PointsiShares Global REIT ETF offers lower fees and broader international exposure than State Street SPDR Dow Jones REIT ETF.",
    "id": 22
+  },
+  {
+   "title": "Monolithic Power: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/monolithic-power-3-key-takeaways-long-term-investors",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsThird-quarter revenue reached $1.2 billion, up 63% year over year.",
+   "id": 23
+  },
+  {
+   "title": "BorgWarner: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/borgwarner-3-key-takeaways-long-term-investors",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsLight vehicle eProduct sales increased 33% year over year.",
+   "id": 24
+  },
+  {
+   "title": "Sonic Automotive: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/sonic-automotive-3-key-takeaways-long-term-investors",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsSonic Automotive reported all-time record quarterly total revenues of $4 billion.",
+   "id": 25
+  },
+  {
+   "title": "Apple's Market Value Grew From $350 Billion to $4 Trillion During Tim Cook's 15 Years as CEO. Here's What That Growth Curve Means for Apple's Next Chapter Under John Ternus",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/apples-market-value-grew-350-billion-4-trillion-during-tim-cooks-15-years-ceo-heres-what-0",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsApple is highly unlikely to match the returns it produced under Tim Cook over the next 15 years.",
+   "id": 26
+  },
+  {
+   "title": "‘I’m sick of flying’: I paid for priority boarding, but the overhead bins were full. Was I duped?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/im-sick-of-flying-i-paid-for-priority-boarding-but-the-overhead-bins-were-full-was-i-duped-0badcc80?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "“Maybe next time I’ll try the other approach: I’ll board whenever I feel like it and drop my suitcase in the first open slot I see.”",
+   "id": 27
+  },
+  {
+   "title": "High Roller (ROLR) Q3 2026 Earnings Call Transcript",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/high-roller-rolr-q3-2026-earnings-call-transcript",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "@media (max-width: 768px) { .image-container { width: 100% !important; float: none !important; margin: 0 0 1rem 0 !important; } } Image source: The Mo",
+   "id": 28
+  },
+  {
+   "title": "Monro: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/monro-3-key-takeaways-long-term-investors",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsMonro refinanced its debt with a new $375 million credit facility.",
+   "id": 29
+  },
+  {
+   "title": "Silicon Motion: 3 Key Takeaways for Long-Term Investors",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/silicon-motion-3-key-takeaways-long-term-investors",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Key PointsSilicon Motion expects revenue to grow at least 40% in 2027.",
+   "id": 30
+  },
+  {
+   "title": "Nvidia's leadership crisis rattles the AI trade. Here's how we're adjusting our portfolio",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/investingclub/2026/11/14/nvidias-leadership-crisis-rattles-wall-street-how-were-adjusting.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Despite the turbulence, the S&P 500 secured a weekly gain of 2.5%, while the tech-heavy Nasdaq added 2.3%.",
+   "id": 31
+  },
+  {
+   "title": "Nationwide ground stop followed contractor upgrade to L3Harris telecommunication system: DOT’s Duffy",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "The FAA ground stop came after updates to an older communication system managed by L3Harris Technologies, Transportation Secretary Sean Duffy said Saturday.",
+   "id": 32
+  },
+  {
+   "title": "Should a widow leave her late partner’s home to her stepkids — or cut off contact with them?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/she-can-always-change-her-mind-should-a-widow-leave-the-family-home-to-her-stepchildren-649b06af?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "“It would be a less drastic step than selling the home now and splitting the proceeds.”",
+   "id": 33
+  },
+  {
+   "title": "FAA Administrator Bedford warns comms system will \"continue to break\" without fix",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4672773-faa-administrator-bedford-warns-comms-system-will-continue-to-break-without-fix?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 34
+  },
+  {
+   "title": "‘He calls my plans a fantasy’: My husband says we can’t afford a $200,000-a-year retirement. Is he being cheap?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/he-calls-my-plans-a-fantasy-my-husband-says-we-cant-afford-our-200-000-a-year-dream-retirement-i-think-hes-cheap-45bc5b4e?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "“We have $2 million saved in our retirement accounts and a house worth $1.3 million.”",
+   "id": 35
+  },
+  {
+   "title": "Here’s how Bernie Sanders wants to keep Social Security solvent ‘for generations’",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/heres-how-bernie-sanders-wants-to-keep-social-security-solvent-for-generations-f5666a38?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "The Vermont senator aims to eliminate the taxable maximum, making the wealthy pay more in taxes",
+   "id": 36
   },
   {
    "title": "The trillion-dollar mistake corporate America is making about retirement",
    "source": "MarketWatch",
    "url": "https://www.marketwatch.com/story/corporate-america-is-making-a-trillion-dollar-mistake-about-retirement-234c8996?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-13",
+   "published": "2026-11-14",
    "snippet": "The market is dramatically underpricing the economic impact of Americans age 50 and older.",
-   "id": 23
+   "id": 37
   },
   {
-   "title": "OpenAI dissolves stand-alone robotics team: report",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4672622-openai-dissolves-stand-alone-robotics-team-report?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Retirees should be big beneficiaries of the midterms: ‘Democrats will hold every gavel that matters for aging and public policy’",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/retirees-should-be-big-beneficiaries-of-the-midterms-democrats-will-hold-every-gavel-that-matters-for-aging-and-public-policy-71e966f0?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-13",
+   "published": "2026-11-14",
+   "snippet": "Here’s what might be coming for Social Security, Medicare and long-term care.",
+   "id": 38
+  },
+  {
+   "title": "The lonely labor of caregiving: ‘You shouldn’t have to be rich to take care of the people you love’",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/if-you-could-change-one-thing-about-caregiving-what-would-it-be-8b20be29?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "“Take Me Home” offers a view of how one family faces caregiving issues and finds solutions.",
+   "id": 39
+  },
+  {
+   "title": "Medicare at age 50? What ‘Medicare for more’ could mean for American workers.",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/its-not-medicare-for-all-but-medicare-for-more-what-this-could-mean-for-workers-over-50-4a5c51a3?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "It’s not “Medicare for All,” but a new bill would lower the Medicare age to 50, expanding coverage for 60 million adults",
+   "id": 40
+  },
+  {
+   "title": "Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Two Nvidia investors with about $2.13 billion of stock disclosed as of June 30 are calling for a deliberate leadership search after Huang’s resignation.",
+   "id": 41
+  },
+  {
+   "title": "Home heating oil price declines from October high but still up 59% YoY",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4672772-home-heating-oil-price-declines-from-october-high-but-still-up-59-yoy?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-14",
    "snippet": "",
-   "id": 24
+   "id": 42
+  },
+  {
+   "title": "L3Harris upgrade to communications system preceded ground stop: Duffy",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4672771-l3harris-upgrade-to-communications-system-preceded-ground-stop-duffy?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 43
+  },
+  {
+   "title": "Weekly Market Outlook – Not A Decisive Reversal Effort - TalkMarkets",
+   "source": "Howl.Link",
+   "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE0ydjdtdFdJOUhsVk8zLTFPLU1CWml1MGU1WVFvUnVsSTRURkJpUjRBU1R4eXFEaURQUEtJ?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 44
+  },
+  {
+   "title": "Insider trades: Microsoft, Netflix, Boeing among notable names",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4672721-insider-trades-microsoft-netflix-boeing-among-notable-names?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 45
+  },
+  {
+   "title": "Musk defends Huang, says NVIDIA will have supply chain issues without him",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4672770-musk-defends-huang-says-nvidia-will-have-supply-chain-issues-without-him?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 46
+  },
+  {
+   "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "ETF experts say Nvidia’s leadership turmoil and Democratic control of Congress could shift AI demand to the benefit of other Big Tech stocks, rival chipmakers.",
+   "id": 47
+  },
+  {
+   "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/13/trump-nvidia-huang-china.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Nvidia CEO Jensen Huang resigned this week after reports of multiple affairs, including one with a suspected Chinese spy, Alice Huang.",
+   "id": 48
+  },
+  {
+   "title": "Rising rents draw Wall Street money to industrial outdoor storage lot investments across the U.S.",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/real-estate-rental-income-industrial-storage-market.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "A real estate investment in markets across the U.S. called 'industrial outdoor storage' is attracting Wall Street giants including Brookfield and Blackstone.",
+   "id": 49
+  },
+  {
+   "title": "How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/gta-6-grand-theft-auto-launch.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "\"Grand Theft Auto VI\" launches Nov. 19 with huge expectations. Its impact could reach creators, streaming, music, workplace time off, food delivery and tourism.",
+   "id": 50
+  },
+  {
+   "title": "Heating oil prices are up 59% from last winter. The spike is 'crushing folks,' Maine nonprofit says",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/heating-oil-price-spike-household-budgets.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "With household budgets already squeezed by persistent inflation, some residents are seeking emergency help with heating oil bills before winter begins.",
+   "id": 51
+  },
+  {
+   "title": "Juice your growth and save on taxes in this workplace investment account",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/hsa-investing-tax-benefits.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "High-deductible medical benefit plans with health savings accounts are on the menu at many employers as enrollment season for 2027 continues.",
+   "id": 52
+  },
+  {
+   "title": "Berkshire breaks out to record high with fourth-quarter rally reaching 19%",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Berkshire Hathaway's red-hot shares are ending a strong week with four consecutive fresh record high closes.",
+   "id": 53
+  },
+  {
+   "title": "Nvidia Stock Falls Below $165 After Its CEO Resigns: Is It a Bargain Buy?",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNenJRUDJwOENPWU80dGxWN2JyOVhSZkVyVmVIT0tETGUxamdnUENsRGJMWFRFSWdxelZoY3FIS2oyWUtUTDh0SU9hbjN2ZzJSNWdfRTl3X1JoMWJZQS1KM2RvcGRDLWxRV2Nnak96SnpTSmtZb0pxSE5ib3JJU2pTNFkzMlFlQW9TQ1VzN2FWS3IxZUs4OVJSbA?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 54
+  },
+  {
+   "title": "Retailers are turning to entertainment to win shoppers’ attention",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/retailers-invest-entertainment.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Retailers are increasingly investing in and building out entertainment studios as the race for audience attention speeds up.",
+   "id": 55
+  },
+  {
+   "title": "Meet the seven co-founders of Anthropic",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/meet-the-seven-co-founders-of-anthropic.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Four researchers, a former journalist, a public policymaker, and an engineer founded Anthropic in 2021. They're now poised to become multi-billionaires.",
+   "id": 56
+  },
+  {
+   "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Eric Trump-backed robot startup Foundation Future Industries has run low on cash and missed payroll, as CEO Sankaet Pathak faces scrutiny over a $4.6 million company loan.",
+   "id": 57
+  },
+  {
+   "title": "Should You Buy Nvidia Stock Before Nov. 17?",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOFAtcnF3amNYRWpVUmY0cE9sckF2NThGVldfYm9xTWRBeUp0ZzFVekhwUkdHblJRQXJ6alhlU29RcUNWZmdxdXlNQ0F6MGoyUnRRTXU3XzM5aThuSG9TalVjSXlqSDdka0ZvdFIza2hYUG1ZaEFRN1Z1aXVaV1J6M1hMMGNQWlpmQkI5UWp5aUhaUQ?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 58
+  },
+  {
+   "title": "Analysis: Companies love a ‘rockstar’ CEO. Until they depend on one",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/14/nvidia-jensen-huang-ceo-succession-risk.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "Jensen Huang’s exit tests Nvidia’s succession planning and governance, and offers lessons for companies that elevate their CEOs to rockstar status.",
+   "id": 59
+  },
+  {
+   "title": "S&P 500 Forecast: SPX rebounds amid revived AI enthusiasm",
+   "source": "StoneX",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxON3pXQ3ZCRDd3N0laV3lRNHJHdzc2S09DSEhuc1ZnQTJiekU0MXNxSnpSMHJ2ZXBxLVZTN1oteVZFMlozSjBvV0F2UFAtUVVlVEN2dkZoU18xNEx1RHdiX1o1NWhjUDFxTDBmelFFNThvSmlEX3JfSkZPZmJ5dlg5RXVXTmttWFpzT2tPVGk4N1NBQW9YVnlhRlVORW1SZzVKMWJsQ2tuZUlUUQ?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 60
+  },
+  {
+   "title": "SpaceX launches Starship in key test flight of massive rocket",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/13/spacex-launches-starship-in-key-test-flight-of-massive-rocket.html",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "The test flight is SpaceX's first attempt to ​catch both the Super Heavy booster and upper stage spacecraft of the rocket at its launch site in Starbase, Texas.",
+   "id": 61
+  },
+  {
+   "title": "Does Strong Earnings Guidance Change The Bull Case For Lindblad Expeditions Holdings (LIND)?",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdlZLNUVDN1J3ZmdCYXNkRy1lWlA0TnVPMWtsdXVIbm9hNGxJeV8xbGdZY1pVX29XMmxNY2ZrYTNKUmhfTGJkT1kzSFB4YW9CaHZoWS1YN1lsemhyN2tCNVBYanFLMDU2LWlabzVhSHZ3SWJGQVVLUG9oMHJnWGdqVjJubWNuRjFFX2VlUmNwOEVwMEhJN0NuYVlKeGpJdjNIeUVz?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-14",
+   "snippet": "",
+   "id": 62
   },
   {
    "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
@@ -2628,349 +3144,61 @@
    "kind": "뉴스",
    "published": "2026-11-13",
    "snippet": "The Republican-led Congress wants to see Jensen Huang in Washington before Democrats take control in January.",
-   "id": 25
+   "id": 63
   },
   {
-   "title": "Kevin Warsh’s Plan to Remake the Fed: Fewer Rate Votes, More Deliberating",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWWREYWtpWllac2NUdW9FOW1tdXZrTS1FclFzZnA4TEhkOEFJQ0liTEZZdElXbU5BUHMtTnNVME1zYUVpWHY5VXZmM0Z4YWRMY0U4YzVFdldTOEhEQUpSSnluaXNNM2VVVlQ0YnNXR0hUNHRhM1gwSWhtZXl3QlB2QXR5aUVXajZBTTlRdDhB?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
-   "id": 26
-  },
-  {
-   "title": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/cathie-wood-goes-bargain-hunting-3-stocks-she-just-bought",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Key PointsCathie Wood's Ark Invest bought shares of Archer Aviation, CoreWeave, and Rocket Lab on Thursday.",
-   "id": 27
-  },
-  {
-   "title": "Supreme Court agrees to hear Robinhood challenge to IPO information omission lawsuit",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/robinhood-supreme-court-ipo-lawsuit.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "The Trump administration had urged the Supreme Court to hear an appeal by Robinhood of a lower-court's decision to revive an investors' lawsuit over the IPO.",
-   "id": 28
-  },
-  {
-   "title": "ImmuCell (ICCC) Q3 2026 Earnings Call Transcript",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/immucell-iccc-q3-2026-earnings-call-transcript",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "@media (max-width: 768px) { .image-container { width: 100% !important; float: none !important; margin: 0 0 1rem 0 !important; } } Image source: The Mo",
-   "id": 29
-  },
-  {
-   "title": "DiaMedica (DMAC) Q3 2026 Earnings Call Transcript",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/diamedica-dmac-q3-2026-earnings-call-transcript",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "@media (max-width: 768px) { .image-container { width: 100% !important; float: none !important; margin: 0 0 1rem 0 !important; } } Image source: The Mo",
-   "id": 30
-  },
-  {
-   "title": "Inter (INTR) Q3 2026 Earnings Call Transcript",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/inter-intr-q3-2026-earnings-call-transcript",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "@media (max-width: 768px) { .image-container { width: 100% !important; float: none !important; margin: 0 0 1rem 0 !important; } } Image source: The Mo",
-   "id": 31
-  },
-  {
-   "title": "How to figure out a key question this open-enrollment season: Are you overpaying for health insurance?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/am-i-overpaying-for-health-insurance-how-to-answer-the-key-question-this-open-enrollment-season-2d00ed55?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "This back-of-the-napkin calculation can help you see if you’re buying too much coverage",
-   "id": 32
-  },
-  {
-   "title": "NeoVolta Power Signs $116 Mln Master Purchase Agreement",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/neovolta-power-signs-116-mln-master-purchase-agreement",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "(RTTNews) - On Friday, NeoVolta (NEOV) announced that its majority-owned subsidiary, NeoVolta Power, signed a $116 million master purchase agreement with a leading energy solutions provider.",
-   "id": 33
-  },
-  {
-   "title": "Arm Stock Took a Hit Because Investors Fear Nvidia Might Poach Its CEO. Is It Time to Sell?",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/arm-stock-took-hit-because-investors-fear-nvidia-might-poach-its-ceo-it-time-sell",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Key PointsArm shares fell about 5% Friday after a report that Nvidia's board approached CEO Rene Haas as a possible successor to Jensen Huang.",
-   "id": 34
-  },
-  {
-   "title": "OptimumBank (OPHC) Q3 2026 Earnings Call Transcript",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/optimumbank-ophc-q3-2026-earnings-call-transcript",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "@media (max-width: 768px) { .image-container { width: 100% !important; float: none !important; margin: 0 0 1rem 0 !important; } } Image source: The Mo",
-   "id": 35
-  },
-  {
-   "title": "Hapag-Lloyd Raises Guidance Again on Strong Freight Rates",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdEZpZll0TUZycEJTdVc2WWJmNnN4UUJlbUxxd3pkdS1NZ0ZXVUJTREhyRUZ2OEM2NUkzMHpTNFB0VTQzNWJWVFRxQ250ZHRURWNudVhBMDFLQlpWem4wVzl2eDZoTmxyazhHTktfYm5ET3ZCNGoxVTl3SWI3U1ZMclFQUnNCY3ROaXJQaDhkc0pRQnRlMFlyWnhGRUtXdFhRdUVxWUxWLTE?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
-   "id": 36
-  },
-  {
-   "title": "Hassett denies report he's leaving White House: 'Not true'",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/kevin-hassett-white-house-nec.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "National Economic Council Director Kevin Hassett poured cold water on a report that he's expected to leave the White House in the coming weeks.",
-   "id": 37
-  },
-  {
-   "title": "Why Digital Turbine Stock Plunged This Week",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/why-digital-turbine-stock-plunged-week",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Key PointsDigital Turbine stock dropped 29.7% this week after disclosing an accounting revision alongside second-quarter financial results.",
-   "id": 38
-  },
-  {
-   "title": "Celsius vs. Colgate-Palmolive: Which Consumer Goods Stock Is a Better Buy for 2027?",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/celsius-vs-colgate-palmolive-which-consumer-goods-stock-better-buy-2027",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Key PointsCelsius is experiencing hyper-growth in the functional energy category while benefiting from a major distribution partnership.",
-   "id": 39
-  },
-  {
-   "title": "Notable Friday Option Activity: KR, MP, SPCX",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/notable-friday-option-activity-kr-mp-spcx",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in Kroger Co (Symbol: KR), where a total volume of 59,141 contracts has been traded thus far today, a contract volume which is representative of approximately 5.9 m",
-   "id": 40
-  },
-  {
-   "title": "Noteworthy Friday Option Activity: ALNY, SMCI, BURL",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/noteworthy-friday-option-activity-alny-smci-burl",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in Alnylam Pharmaceuticals Inc (Symbol: ALNY), where a total volume of 18,383 contracts has been traded thus far today, a contract volume which is representative of",
-   "id": 41
-  },
-  {
-   "title": "Noteworthy Friday Option Activity: APP, CRCL, MRVL",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/noteworthy-friday-option-activity-app-crcl-mrvl",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in Applovin Corp (Symbol: APP), where a total volume of 47,224 contracts has been traded thus far today, a contract volume which is representative of approximately",
-   "id": 42
-  },
-  {
-   "title": "Notable Friday Option Activity: SOFI, SNOW, JPM",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/notable-friday-option-activity-sofi-snow-jpm",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Among the underlying components of the Russell 3000 index, we saw noteworthy options trading volume today in SoFi Technologies Inc (Symbol: SOFI), where a total of 298,546 contracts have traded so far, representing approximately 29.9 million underlying shares. That amounts to a",
-   "id": 43
-  },
-  {
-   "title": "Notable Friday Option Activity: IREN, ADBE, MRNA",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/notable-friday-option-activity-iren-adbe-mrna",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Looking at options trading activity among components of the Russell 3000 index, there is noteworthy activity today in IREN Ltd (Symbol: IREN), where a total volume of 340,943 contracts has been traded thus far today, a contract volume which is representative of approximately 34.",
-   "id": 44
-  },
-  {
-   "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-huang-ceo-replacement-search.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Speculation has swirled around who Nvidia's board will select to permanently succeed CEO Jensen Huang.",
-   "id": 45
-  },
-  {
-   "title": "Ten-Year Treasury Yield Bounces Back To Highest Level In Almost A Month",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/ten-year-treasury-yield-bounces-back-highest-level-almost-month",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "(RTTNews) - After moving sharply lower over the two previous sessions, treasuries have shown a notable move to the downside during trading on Friday.",
-   "id": 46
-  },
-  {
-   "title": "Jensen Huang was a ‘China salesman’ for Nvidia. His exit is weighing on Chinese tech stocks.",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/jensen-huang-was-a-china-salesman-for-nvidia-his-exit-is-weighing-on-chinese-tech-stocks-e46351e4?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "The former Nvidia CEO was an ‘influential voice’ for selling chips to Chinese companies, but now investors are preparing for more restrictions, experts say.",
-   "id": 47
-  },
-  {
-   "title": "CFTC Chair Selig tells CNBC crypto industry is embracing agency rules as legislation hopes fade",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/cftc-chair-selig-crypto-industry-opting-into-agencys-crypto-rules-.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "The top U.S. commodities regulator in October announced proposed crypto rules to assert its jurisdiction over the asset class.",
-   "id": 48
-  },
-  {
-   "title": "Retirees should be big beneficiaries of the midterms: ‘Democrats will hold every gavel that matters for aging and public policy’",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/retirees-should-be-big-beneficiaries-of-the-midterms-democrats-will-hold-every-gavel-that-matters-for-aging-and-public-policy-71e966f0?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Here’s what might be coming for Social Security, Medicare and long-term care.",
-   "id": 49
-  },
-  {
-   "title": "My husband inherited $500,000, but he refuses to spend it on our home. Should I be worried?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/it-feels-like-hes-quietly-building-a-separate-life-my-husband-inherited-500-000-but-he-refuses-to-spend-it-on-our-home-06535cff?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "“Our kitchen dates from 1999 and the oven only works if you hit the door a certain way.”",
-   "id": 50
-  },
-  {
-   "title": "After Jensen Huang’s exit, what top financial advisors are doing with Nvidia: Exclusive CNBC poll",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-stock-advisors-jensen-huang-exit-exclusive-poll.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Advisors say investors should weigh their Nvidia exposure, time horizon and risk tolerance before reacting to the leadership change.",
-   "id": 51
-  },
-  {
-   "title": "Budget airlines are going upscale with first-class seats and faster wifi",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/budget-airlines-are-going-upscale-with-first-class-seats-and-faster-wifi-999868ab?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Forget no-frills: Frontier and JetBlue are chasing luxury flyers, and Wall Street is buying in.",
-   "id": 52
-  },
-  {
-   "title": "A trading strategy to ride out the Nvidia uncertainty and generate income in the process",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/a-trading-strategy-to-ride-out-the-nvidia-uncertainty-and-generate-income-in-the-process.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "By deploying a persistent covered call strategy, investors can leverage the exact fear driving the stock down to generate robust, risk-reducing income.",
-   "id": 53
-  },
-  {
-   "title": "Medicare at age 50? What ‘Medicare for more’ could mean for American workers.",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/its-not-medicare-for-all-but-medicare-for-more-what-this-could-mean-for-workers-over-50-4a5c51a3?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "It’s not “Medicare for All,” but a new bill would lower the Medicare age to 50, expanding coverage for 60 million adults",
-   "id": 54
-  },
-  {
-   "title": "The scandal at Nvidia is exactly what’s wrong with the S&P 500",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/the-scandal-at-nvidia-is-exactly-whats-wrong-with-the-s-p-500-7307457e?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "A big chunk of your retirement is likely invested in the computer-chip giant.",
-   "id": 55
-  },
-  {
-   "title": "Washington’s efforts to block Beijing’s access to Nvidia chips could spark a ‘short-lived U.S.-China trade war’ that rattles markets",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/washingtons-efforts-to-block-beijings-access-to-nvidia-chips-could-spark-a-short-lived-u-s-china-trade-war-that-rattles-markets-83078d84?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Meanwhile, top officials from Nvidia and the Commerce Department face a series of congressional hearings next month.",
-   "id": 56
-  },
-  {
-   "title": "Lutnick faces questions over Nvidia spy scandal. His sons’ firm has deep ties to the chipmaker",
+   "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has deep ties to the chipmaker",
    "source": "CNBC",
    "url": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family’s financial ties to the chipmaker.",
-   "id": 57
+   "snippet": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family's financial ties to the chipmaker.",
+   "id": 64
   },
   {
-   "title": "Retirees sometimes tap savings for one-off expenses. Here’s what advisors say to consider first",
+   "title": "What's ahead for AI financing after Nvidia CEO Jensen Huang departs",
    "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/retirement-401k-ira-withdrawal-taxes.html",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-resignation-ai-financing.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Retirees who need cash for a one-time expense may look to their 401(k) or IRA, but financial advisors say there are trade-offs to weigh first.",
-   "id": 58
+   "snippet": "Jensen Huang’s resignation puts Nvidia’s AI financing strategy in focus as investors watch credit markets and neocloud exposure.",
+   "id": 65
   },
   {
-   "title": "OpenAI launches ChatGPT Wallet, allowing its 'dots' AI agents to make purchases for users",
+   "title": "AI risks are the biggest threat to the financial system, Fed survey finds",
    "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html",
+   "url": "https://www.cnbc.com/2026/11/13/ai-risks-financial-system-federal-reserve.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "OpenAI's ChatGPT Wallet partners with American Express, Mastercard and Visa, and those cardholders keep their existing credit card rewards.",
-   "id": 59
+   "snippet": "The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spread of data centers.",
+   "id": 66
   },
   {
-   "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
+   "title": "Nvidia closes below $4T market cap for first time since July 2025 in Huang fallout",
    "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "A Microsoft outage on Thursday and Friday affected users of services like Outlook, Teams and 365.",
-   "id": 60
+   "snippet": "Jensen Huang resigned as CEO of Nvidia on Thursday after coming under scrutiny for two extramarital affairs.",
+   "id": 67
   },
   {
-   "title": "Is a bottom in for the Nasdaq-100? Charts to watch",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/is-a-bottom-in-for-the-nasdaq-100-charts-to-watch.html",
+   "title": "Agencies extend comment period for proposed third-party risk management guidance",
+   "source": "Federal Reserve",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Frank Cappelleri of CappThesis looks at several charts to help answer that question.",
-   "id": 61
+   "snippet": "Agencies extend comment period for proposed third-party risk management guidance",
+   "id": 68
   },
   {
-   "title": "Bessent blames Lutnick’s Commerce as he slams Nvidia chip ‘leakage’ to China",
+   "title": "They train people to avoid 'honeypot' scams—here are the common red flags they spot: 'It feels so good to be wanted'",
    "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/us-inflation-outlook-federal-reserve-rate-hike.html",
+   "url": "https://www.cnbc.com/make-it/2026/11/13/honeypot-scam-red-flags.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Jensen Huang resigned as Nvidia CEO days after admitting to an affair following scrutiny of his relationship with a woman reportedly deemed a Chinese spy.",
-   "id": 62
-  },
-  {
-   "title": "Why the data center slowdown concern is overblown. Two stocks to buy amid the fear",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/data-center-slowdown-utility-stocks.html",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "Not one utility CEO we spoke with at the EEI conference is anticipating a slowdown in electricity growth expectations.",
-   "id": 63
+   "snippet": "Corporate security firms train companies and their employees on strategies for being vigilant against honeypots, and other social engineering attacks.",
+   "id": 69
   },
   {
    "title": "Nvidia stock slips as investors digest CEO exit, broader chip sell-off accelerates",
@@ -2979,52 +3207,70 @@
    "kind": "뉴스",
    "published": "2026-11-13",
    "snippet": "",
-   "id": 64
+   "id": 70
   },
   {
-   "title": "Nvidia scandal draws in Commerce Secretary Lutnick, who reportedly agrees to testify about China chip sales",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-scandal-lutnick-chip-sales.html",
+   "title": "Kevin Warsh’s Plan to Remake the Fed: Fewer Rate Votes, More Deliberating",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWWREYWtpWllac2NUdW9FOW1tdXZrTS1FclFzZnA4TEhkOEFJQ0liTEZZdElXbU5BUHMtTnNVME1zYUVpWHY5VXZmM0Z4YWRMY0U4YzVFdldTOEhEQUpSSnluaXNNM2VVVlQ0YnNXR0hUNHRhM1gwSWhtZXl3QlB2QXR5aUVXajZBTTlRdDhB?oc=5",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Commerce Secretary Lutnick will testify before the Senate Banking Committee following revelations about Jensen Huang's affair with an alleged Chinese spy.",
-   "id": 65
+   "snippet": "",
+   "id": 71
   },
   {
-   "title": "Wholesale prices rose 0.3% in October, putting annual rate at 6.5%, the highest in nearly four years",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html",
+   "title": "'Nothing has changed': Why some Nvidia stock bulls aren't wavering after Jensen Huang ouster",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPNElWbE1lOVJadXoxSXhxYy04M3B4ZG9PeWhIaW1lZE9maF91M3N1OXd6eFhSSDJZcVlkMm5oZFdoeDJiaVRqYnJBRVkzczJ0TG1kSjFVT0Y1dG5iV1JMS0NPTW9oeVNlYXZZS0haUThFQVNlcnhJbTlMTjAtZ1pQaFc5WDNhd1VDTFVqY1dDOF9NYlRhTE9xamFUdkpBVVo2MlIyOXJsYVdRYVNDV0RCTDRBS2dKRFc1YkR1Tnczc0VSbGNUX21pRTFsWUpDR0dNMmpLT2V4UmtheUs0WWs2YXRB?oc=5",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "The producer price index was expected to increase 0.4% in October, according to the Dow Jones consensus.",
-   "id": 66
+   "snippet": "",
+   "id": 72
   },
   {
-   "title": "Apple, Alphabet and Uber survived major founder transitions. Nvidia will be a harder test",
+   "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
    "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-founder-ceo-transition.html",
+   "url": "https://www.cnbc.com/2026/11/13/nvidia-huang-ceo-replacement-search.html",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Like Apple, Nvidia now faces its own transition away from a founder-led company. But experts say Jensen Huang’s central role could make replacing him difficult.",
-   "id": 67
+   "snippet": "Speculation has swirled around who Nvidia's board will select to permanently succeed CEO Jensen Huang.",
+   "id": 73
   },
   {
-   "title": "Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
+   "title": "Inflation isn't going away. Here's what that means for interest rates.",
+   "source": "CBS News",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE53dzBGV004V2lLZGdMR2FUVjByX1E4Q3BCemoxSzhCWF9YVEpJZUo4ejJlcktSeGdSWEozX0NFaEc2V29IYVJaZGpfN2p6WmNaeWpDa0dYc25LaU9NdVJJS1o2d290X2R4S3ZCWlpELVpraUc2bm42VXRn?oc=5",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "The policymaker expressed concern about the latest inflation data, telling CNBC that the central bank likely will need to take action.",
-   "id": 68
+   "snippet": "",
+   "id": 74
   },
   {
-   "title": "Jensen Huang scandal casts doubt on Nvidia’s AI dominance — how we got here",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/13/jensen-huang-scandal-casts-doubt-on-nvidias-ai-dominance-how-we-got-here.html",
+   "title": "Fed on Track to Raise Interest Rates Next Month And Maybe Again in January",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeXJmalVqcjF1WEgxXzRyZ2hNRTRMWXdCWGdpblhnaGwxY0ZDeFIwYTVnWENtQ2U2NFg3YkpUS21EdkNHaXlwVlVicGxWd2RJZnJqOXlySXJfZzdscXlqRFNJSkswUjZ0ZjFINC11aU9GMWdrMGR6SzdfYUlkN3pGaDZZci1NbnkxWmtoZ1lNa3E2MmxDcnFqRnN0MWpwUURLT05odHBpdVlhNXRjNUJOd3JGcnNCYzd6bjVqWQ?oc=5",
    "kind": "뉴스",
    "published": "2026-11-13",
-   "snippet": "Nvidia is facing its biggest crisis in its 33 year history, with founder Jensen Huang resigning as CEO. Here's the story of the rise and fall of Jensen Huang.",
-   "id": 69
+   "snippet": "",
+   "id": 75
+  },
+  {
+   "title": "What to Look Out for in Economic Data This Week (November 16-20)",
+   "source": "Kiplinger",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1MeVNwMVVnVmhvRWo4b0N4WkhCRXQxTVRtb2ZmTWhCSmd4eERsN3Nfdllwejg0eG5ueFFCRUdPTzVUaXh4dEFZaWJqN3FFZnlFWTBlZ2ZvVkFFRzVScTR3TXRhZGl6MHp2RUF1clppVDRvR1lveC1FaXNCeXQ?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-13",
+   "snippet": "",
+   "id": 76
+  },
+  {
+   "title": "Could The Fed Raise Interest Rates By 50 Basis Points In December?",
+   "source": "Forbes",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVlpMUGJTVFJlck5hRWotVFZkNTl1UkhZU1NfOFBBMHpmLUs5dzM3QlA1RXdfdE9lbUJvS3NGNzFxRWdlc2FJLWJUOVo5ZlpPYlY2MnFSY0JIUlFVUGNxQkYzczNqd2hXOHdsRXVRbV8zYjZiWXg3ZklWQ1A2dkE0aHJZMFdSTXFoMExKbktwdFZ4eUpaQkV3NE5ZZnRCblZra2lWODZwR2Fuc3FIeHlHcjl3?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-13",
+   "snippet": "",
+   "id": 77
   },
   {
    "title": "The Stock Market’s Bargain Bin Is Secretly Stuffed With AI Stocks",
@@ -3033,25 +3279,7 @@
    "kind": "뉴스",
    "published": "2026-11-13",
    "snippet": "",
-   "id": 70
-  },
-  {
-   "title": "Nvidia Stock Is Still a Buy After CEO Jensen Huang’s Departure",
-   "source": "Barron's",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBTbHVXbEZWNnBkNlRaU1A5QWdvS3pNV1lWdF9yRkU2UVNpUUpLWlNEY0JhX1ZJLWYtMjFXZXlmeWgxV09DRUdRZ19HbEhrSlBVZ1ZzWVVVSkl3bFN2azlEM0VQMloydHY4MERiYTJzWU9qNlVGczlkcUhJRQ?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
-   "id": 71
-  },
-  {
-   "title": "Fed faces tougher inflation fight as pressure builds for more rate hikes",
-   "source": "Axios",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBDR2FBVnZjdTZUR1ZQSjRQLXBkamFfVVZiQjFxb016UE1oWS1qTl9Ha0ZPeEpaMGs3TXJMbV9sRGtickN1YkxzSTc0QVR2X2NnWGRMSXNrVG0wSWEyMktzVWRkWmhidzZMNXZzZkZNN3dXTms?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-13",
-   "snippet": "",
-   "id": 72
+   "id": 78
   },
   {
    "title": "S&P 500 and Nasdaq: Tech Stocks Rebound as Nvidia Rivals AMD and Broadcom Rally",
@@ -3060,70 +3288,7 @@
    "kind": "뉴스",
    "published": "2026-11-13",
    "snippet": "",
-   "id": 73
-  },
-  {
-   "title": "Nvidia stock falls after Huang resigns, weighing on broader market",
-   "source": "NBC News",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTVNwbUF0dnZ3TUV6OTl2cWE0clBuRE93ZEdlcjZxNjhlTWN6emg0ZlYwOUtIVmVMMlltc2dlbjhZOEstOXoxMDl5VDFON05QNFctSkw2TGI2VGdxT2d3eHZsSndTS054ZHZYZjZwM2RtNnFNN0k5a3pDR1luMUN4dl9aWUI?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "",
-   "id": 74
-  },
-  {
-   "title": "3 AI Infrastructure Stocks To Watch As Nvidia Chip Curbs Reshape Cloud Spending",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPc2FlQjF1b3FJX2ExbDEtaFplaEtjZFJaYkktX0R4Mm1BaS1qZ1BwcU4zQ3hCVmw3QVFrZmRseHlSTFk3bjl2dWhTR18wNENVVHVPc0VCX1gxX2szcGhobW56TWJWT0FIQnc3YTFIZS12Q21uLVRJTE5Nd2xVSktyc1RmQTNRNVExTXFZNUVhSnE0X3JpNXZSQTZNdVg?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "",
-   "id": 75
-  },
-  {
-   "title": "Retail buyers limit Nvidia stock rout",
-   "source": "Reuters",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVHdDV1ltYXhSMVY3dUtMMGxkZHdxRld0cThBSlQzUmt2NE9fTENSM2NZWHowSk9wZS1ObXpTVFZqNlZ2dUQxam5NVC0yYXNBcW41amRsbXFMbEFfblNLWXNkSUhnOGcwOWFocUlyQllReDBwSjdzakJMZTNkYUpDN3FMY0QxaWVSeGRtNVEyOEJFNlRjb1ZXMFJmTXIxeUU?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "",
-   "id": 76
-  },
-  {
-   "title": "Federal Reserve to Forgo Rate Decision at October 2027 Meeting",
-   "source": "WSJ",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWkZiVk1uU2k5a1RQRGUxdFBJMEcxSVhtWEJfR0s3Q3E3T185OXRrZHRZMDVsQlhTdVpIbVlfQnNPem4zbGlTMDR6elFDRlM3RzhETUhCVzlTTDJvWmtfQzctcUFhRXZsVmxpVjBQUXpXTkRUTThQNVJwQV9YX19qaTZGVGswRGF1N2d0dktsZW5DVHlFWVNENmtQaERZYm5ZTmREdm8tMzVjX3ZCQUdqbTFCbWktdw?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "",
-   "id": 77
-  },
-  {
-   "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-   "source": "Federal Reserve",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-   "id": 78
-  },
-  {
-   "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-   "source": "Federal Reserve",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
    "id": 79
-  },
-  {
-   "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-   "source": "Federal Reserve",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
-   "kind": "뉴스",
-   "published": "2026-11-12",
-   "snippet": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-   "id": 80
   }
  ],
  "snaps": {
@@ -3131,7 +3296,7 @@
    "name": "NVIDIA Corporation",
    "sector": "Technology",
    "price": 162.85,
-   "eps_next_fy": 15.84963
+   "eps_next_fy": 15.85369
   },
   "ADBE": {
    "name": "Adobe Inc.",
@@ -3142,32 +3307,20 @@
   "FIX": {
    "name": "Comfort Systems USA, Inc.",
    "sector": "Industrials",
-   "price": 1112.27,
+   "price": 1112.5,
    "eps_next_fy": 67.15436
   },
   "APA": {
    "name": "APA Corporation",
    "sector": "Energy",
    "price": 48.44,
-   "eps_next_fy": 5.66317
+   "eps_next_fy": 5.67086
   },
   "VRT": {
    "name": "Vertiv Holdings, LLC",
    "sector": "Industrials",
-   "price": 202.0375,
+   "price": 202.07,
    "eps_next_fy": 9.91871
-  },
-  "MPC": {
-   "name": "Marathon Petroleum Corporation",
-   "sector": "Energy",
-   "price": 414.61,
-   "eps_next_fy": 61.41917
-  },
-  "EME": {
-   "name": "EMCOR Group, Inc.",
-   "sector": "Industrials",
-   "price": 659.08,
-   "eps_next_fy": 40.90654
   },
   "ASML": {
    "name": "ASML Holding N.V. - New York Re",
@@ -3175,23 +3328,35 @@
    "price": 1495.16,
    "eps_next_fy": 56.43418
   },
+  "EME": {
+   "name": "EMCOR Group, Inc.",
+   "sector": "Industrials",
+   "price": 659.36,
+   "eps_next_fy": 40.90654
+  },
   "VLO": {
    "name": "Valero Energy Corporation",
    "sector": "Energy",
-   "price": 379.755,
-   "eps_next_fy": 53.49457
+   "price": 379.83,
+   "eps_next_fy": 52.53346
   },
   "CF": {
    "name": "CF Industries Holdings, Inc.",
    "sector": "Basic Materials",
-   "price": 125.16,
-   "eps_next_fy": 11.68508
+   "price": 125.09,
+   "eps_next_fy": 11.69341
+  },
+  "SPCX": {
+   "name": "Space Exploration Technologies ",
+   "sector": "Industrials",
+   "price": 139.11,
+   "eps_next_fy": 4.10056
   },
   "MSTR": {
    "name": "Strategy Inc",
    "sector": "Technology",
    "price": 111.62,
-   "eps_next_fy": 18.84693
+   "eps_next_fy": 21.34548
   },
   "CRCL": {
    "name": "Circle Internet Group, Inc.",
@@ -3202,7 +3367,7 @@
  },
  "scores": {
   "NVDA": {
-   "score": 79.8,
+   "score": 79.9,
    "quality": 96,
    "health": 71,
    "value": 78,
@@ -3214,12 +3379,12 @@
    "net_debt_ebitda": -0.12,
    "parts": {
     "quality": {
-     "gross": 0.8726,
+     "gross": 0.8707,
      "op": 0.9826,
      "roe": 0.9803,
      "fcf_margin": 0.954639175257732,
      "rev_growth": 0.9807,
-     "eps_growth": 0.9648
+     "eps_growth": 0.9668
     },
     "health": {
      "net_debt": 0.8512,
@@ -3228,9 +3393,9 @@
     "value": {
      "fwd_pe": 0.837,
      "fcf_yield": 0.5217391304347826,
-     "peg": 0.9863
+     "peg": 0.9886
     },
-    "revisions": 0.7388
+    "revisions": 0.7418
    },
    "score_before": 75.6,
    "rescored": {
@@ -3239,7 +3404,7 @@
    }
   },
   "ADBE": {
-   "score": 65.8,
+   "score": 65.9,
    "quality": 82,
    "health": 69,
    "value": 93,
@@ -3256,7 +3421,7 @@
      "roe": 0.9068,
      "fcf_margin": 0.9525773195876288,
      "rev_growth": 0.6419,
-     "eps_growth": 0.5957
+     "eps_growth": 0.5996
     },
     "health": {
      "net_debt": 0.814,
@@ -3267,33 +3432,33 @@
      "fcf_yield": 0.9782608695652174,
      "peg": 0.8924
     },
-    "revisions": 0.2772
+    "revisions": 0.2821
    },
-   "score_before": 65.5,
+   "score_before": 65.6,
    "rescored": {
     "fcf_margin": 0.4078552175587216,
     "fcf_yield": 0.1119581997032733
    }
   },
   "FIX": {
-   "score": 82.2,
+   "score": 82.1,
    "quality": 68,
    "health": 74,
    "value": 89,
-   "revisions": 94,
+   "revisions": 93,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 19.5,
-   "fcf_yield_pct": 6.24,
+   "fcf_yield_pct": 6.27,
    "net_debt_ebitda": -0.81,
    "parts": {
     "quality": {
      "gross": 0.2027,
-     "op": 0.3958,
+     "op": 0.3977,
      "roe": 0.9006,
      "fcf_margin": 0.7402061855670103,
      "rev_growth": 0.9382,
-     "eps_growth": 0.8906
+     "eps_growth": 0.8926
     },
     "health": {
      "net_debt": 0.9256,
@@ -3304,16 +3469,16 @@
      "fcf_yield": 0.8961038961038961,
      "peg": 0.9588
     },
-    "revisions": 0.9365
+    "revisions": 0.933
    },
-   "score_before": 81.7,
+   "score_before": 81.6,
    "rescored": {
     "fcf_margin": 0.194636332203572,
-    "fcf_yield": 0.06236699193061286
+    "fcf_yield": 0.06272556418034576
    }
   },
   "APA": {
-   "score": 78.1,
+   "score": 78.0,
    "quality": 71,
    "health": 65,
    "value": 78,
@@ -3330,7 +3495,7 @@
      "roe": 0.766,
      "fcf_margin": 0.7855670103092783,
      "rev_growth": 0.8629,
-     "eps_growth": 0.0195
+     "eps_growth": 0.0234
     },
     "health": {
      "net_debt": 0.7438,
@@ -3339,11 +3504,11 @@
     "value": {
      "fwd_pe": 0.7619,
      "fcf_yield": 0.9523809523809523,
-     "peg": 0.627
+     "peg": 0.6316
     },
-    "revisions": 0.9249
+    "revisions": 0.9192
    },
-   "score_before": 78.1,
+   "score_before": 78.0,
    "rescored": {
     "fcf_margin": 0.22029598308668077,
     "fcf_yield": 0.12813560264315582
@@ -3367,7 +3532,7 @@
      "roe": 0.8696,
      "fcf_margin": 0.8103092783505155,
      "rev_growth": 0.9614,
-     "eps_growth": 0.9102
+     "eps_growth": 0.9121
     },
     "health": {
      "net_debt": 0.8492,
@@ -3378,86 +3543,12 @@
      "fcf_yield": 0.6883116883116883,
      "peg": 0.8764
     },
-    "revisions": 0.9125
+    "revisions": 0.911
    },
    "score_before": 77.2,
    "rescored": {
     "fcf_margin": 0.23742433252519707,
-    "fcf_yield": 0.04003000288074935
-   }
-  },
-  "MPC": {
-   "score": 73.6,
-   "quality": 45,
-   "health": 61,
-   "value": 90,
-   "revisions": 92,
-   "eligible": true,
-   "turnaround": false,
-   "fcf_margin_pct": 11.9,
-   "fcf_yield_pct": 18.46,
-   "net_debt_ebitda": 0.88,
-   "parts": {
-    "quality": {
-     "gross": 0.1062,
-     "op": 0.2297,
-     "roe": 0.9048,
-     "fcf_margin": 0.4927835051546392,
-     "rev_growth": 0.9575,
-     "eps_growth": 0.0371
-    },
-    "health": {
-     "net_debt": 0.6653,
-     "fcf_positive": 1.0
-    },
-    "value": {
-     "fwd_pe": 0.9524,
-     "fcf_yield": 1.0,
-     "peg": 0.7437
-    },
-    "revisions": 0.9151
-   },
-   "score_before": 73.2,
-   "rescored": {
-    "fcf_margin": 0.11923340961098398,
-    "fcf_yield": 0.18462065226793284
-   }
-  },
-  "EME": {
-   "score": 76.7,
-   "quality": 52,
-   "health": 70,
-   "value": 87,
-   "revisions": 93,
-   "eligible": true,
-   "turnaround": false,
-   "fcf_margin_pct": 7.5,
-   "fcf_yield_pct": 5.14,
-   "net_debt_ebitda": -0.1,
-   "parts": {
-    "quality": {
-     "gross": 0.1409,
-     "op": 0.1873,
-     "roe": 0.8199,
-     "fcf_margin": 0.3525773195876289,
-     "rev_growth": 0.8475,
-     "eps_growth": 0.748
-    },
-    "health": {
-     "net_debt": 0.845,
-     "fcf_positive": 1.0
-    },
-    "value": {
-     "fwd_pe": 0.825,
-     "fcf_yield": 0.8441558441558441,
-     "peg": 0.9405
-    },
-    "revisions": 0.9319
-   },
-   "score_before": 76.0,
-   "rescored": {
-    "fcf_margin": 0.07471113430816756,
-    "fcf_yield": 0.05136228057037561
+    "fcf_yield": 0.04002356314319498
    }
   },
   "ASML": {
@@ -3478,7 +3569,7 @@
      "roe": 0.9172,
      "fcf_margin": 0.9814432989690721,
      "rev_growth": 0.944,
-     "eps_growth": 0.9062
+     "eps_growth": 0.9082
     },
     "health": {
      "net_debt": 0.9194,
@@ -3487,9 +3578,9 @@
     "value": {
      "fwd_pe": 0.2935,
      "fcf_yield": 0.5869565217391305,
-     "peg": 0.8055
+     "peg": 0.8078
     },
-    "revisions": 0.9242
+    "revisions": 0.922
    },
    "score_before": 76.0,
    "rescored": {
@@ -3497,23 +3588,60 @@
     "fcf_yield": 0.036440767187790005
    }
   },
-  "VLO": {
-   "score": 73.3,
-   "quality": 44,
+  "EME": {
+   "score": 76.6,
+   "quality": 52,
    "health": 70,
+   "value": 87,
+   "revisions": 93,
+   "eligible": true,
+   "turnaround": false,
+   "fcf_margin_pct": 7.5,
+   "fcf_yield_pct": 5.13,
+   "net_debt_ebitda": -0.1,
+   "parts": {
+    "quality": {
+     "gross": 0.1409,
+     "op": 0.1873,
+     "roe": 0.8199,
+     "fcf_margin": 0.34845360824742266,
+     "rev_growth": 0.8475,
+     "eps_growth": 0.75
+    },
+    "health": {
+     "net_debt": 0.845,
+     "fcf_positive": 1.0
+    },
+    "value": {
+     "fwd_pe": 0.825,
+     "fcf_yield": 0.8441558441558441,
+     "peg": 0.9428
+    },
+    "revisions": 0.9284
+   },
+   "score_before": 75.8,
+   "rescored": {
+    "fcf_margin": 0.07471113430816756,
+    "fcf_yield": 0.05134047235273632
+   }
+  },
+  "VLO": {
+   "score": 73.2,
+   "quality": 44,
+   "health": 69,
    "value": 81,
-   "revisions": 94,
+   "revisions": 93,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 9.8,
-   "fcf_yield_pct": 14.24,
+   "fcf_yield_pct": 14.23,
    "net_debt_ebitda": 0.06,
    "parts": {
     "quality": {
      "gross": 0.139,
      "op": 0.2471,
      "roe": 0.8716,
-     "fcf_margin": 0.4309278350515464,
+     "fcf_margin": 0.4288659793814433,
      "rev_growth": 0.9286,
      "eps_growth": 0.0391
     },
@@ -3524,26 +3652,26 @@
     "value": {
      "fwd_pe": 0.9048,
      "fcf_yield": 0.9523809523809523,
-     "peg": 0.5698
+     "peg": 0.5675
     },
-    "revisions": 0.9379
+    "revisions": 0.9334
    },
-   "score_before": 72.8,
+   "score_before": 72.6,
    "rescored": {
     "fcf_margin": 0.09833884443053083,
-    "fcf_yield": 0.14236918602964746
+    "fcf_yield": 0.1423410771672475
    }
   },
   "CF": {
-   "score": 76.2,
+   "score": 76.0,
    "quality": 59,
    "health": 68,
    "value": 92,
-   "revisions": 84,
+   "revisions": 83,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 26.1,
-   "fcf_yield_pct": 11.33,
+   "fcf_yield_pct": 11.34,
    "net_debt_ebitda": 0.21,
    "parts": {
     "quality": {
@@ -3552,7 +3680,7 @@
      "roe": 0.7391,
      "fcf_margin": 0.8309278350515464,
      "rev_growth": 0.612,
-     "eps_growth": 0.0156
+     "eps_growth": 0.0215
     },
     "health": {
      "net_debt": 0.7934,
@@ -3561,22 +3689,59 @@
     "value": {
      "fwd_pe": 0.8947,
      "fcf_yield": 0.9473684210526315,
-     "peg": 0.9085
+     "peg": 0.9108
     },
-    "revisions": 0.8356
+    "revisions": 0.8263
    },
-   "score_before": 75.5,
+   "score_before": 75.2,
    "rescored": {
     "fcf_margin": 0.26133501259445846,
-    "fcf_yield": 0.11333211935389803
+    "fcf_yield": 0.11339554002590502
+   }
+  },
+  "SPCX": {
+   "score": 56.9,
+   "quality": 53,
+   "health": 52,
+   "value": 19,
+   "revisions": 94,
+   "eligible": true,
+   "turnaround": false,
+   "fcf_margin_pct": -125.3,
+   "fcf_yield_pct": -2.13,
+   "net_debt_ebitda": -4.31,
+   "parts": {
+    "quality": {
+     "gross": 0.6757,
+     "op": 0.0309,
+     "roe": 0.5,
+     "fcf_margin": 0.00823045267489712,
+     "rev_growth": 0.9903,
+     "eps_growth": 1.0
+    },
+    "health": {
+     "net_debt": 0.9855,
+     "fcf_positive": 0.0
+    },
+    "value": {
+     "fwd_pe": 0.0375,
+     "fcf_yield": 0.038461538461538464,
+     "peg": 0.5
+    },
+    "revisions": 0.9402
+   },
+   "score_before": 67.1,
+   "rescored": {
+    "fcf_margin": -1.2532222326249103,
+    "fcf_yield": -0.021255391397332624
    }
   },
   "MSTR": {
-   "score": 51.3,
+   "score": 51.1,
    "quality": 31,
    "health": 28,
    "value": 50,
-   "revisions": 85,
+   "revisions": 84,
    "eligible": true,
    "turnaround": true,
    "fcf_margin_pct": -3507.6,
@@ -3588,7 +3753,7 @@
      "op": 0.0019,
      "roe": 0.0124,
      "fcf_margin": 0.002061855670103093,
-     "rev_growth": 0.082,
+     "rev_growth": 0.084,
      "eps_growth": 0.9863
     },
     "health": {
@@ -3600,20 +3765,20 @@
      "fcf_yield": 0.03260869565217391,
      "peg": 0.5
     },
-    "revisions": 0.8464
+    "revisions": 0.8385
    },
-   "score_before": 51.4,
+   "score_before": 51.2,
    "rescored": {
     "fcf_margin": -35.07584788813189,
     "fcf_yield": -0.3675485759964726
    }
   },
   "CRCL": {
-   "score": 44.5,
+   "score": 42.7,
    "quality": 52,
    "health": 78,
-   "value": 29,
-   "revisions": 29,
+   "value": 30,
+   "revisions": 22,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 23.1,
@@ -3626,7 +3791,7 @@
      "roe": 0.4037,
      "fcf_margin": 0.8020618556701031,
      "rev_growth": 0.723,
-     "eps_growth": 0.7734
+     "eps_growth": 0.7773
     },
     "health": {
      "net_debt": 0.9897,
@@ -3634,12 +3799,12 @@
     },
     "value": {
      "fwd_pe": 0.0278,
-     "fcf_yield": 0.3488372093023256,
+     "fcf_yield": 0.37209302325581395,
      "peg": 0.5
     },
-    "revisions": 0.2874
+    "revisions": 0.2194
    },
-   "score_before": 40.7,
+   "score_before": 38.7,
    "rescored": {
     "fcf_margin": 0.23059769653741477,
     "fcf_yield": 0.04379366911406911
@@ -3652,17 +3817,17 @@
   "FIX": "2026-10-22",
   "APA": "2026-11-04",
   "VRT": "2026-10-28",
-  "MPC": "2027-02-02",
-  "EME": "2026-10-29",
   "ASML": "2027-01-27",
+  "EME": "2026-10-29",
   "VLO": "2027-01-28",
   "CF": "2026-11-05",
+  "SPCX": "2026-10-20",
   "MSTR": "2026-10-29",
   "CRCL": "2026-11-04"
  },
  "signals": {
-  "built_at_kst": "2026-11-14 06:14",
-  "week": "2026-11-14",
+  "built_at_kst": "2026-11-15 06:14",
+  "week": "2026-11-15",
   "universe_size": 519,
   "m1": {
    "investors": [
@@ -4225,13 +4390,13 @@
      "sector_kr": "에너지",
      "stocks": 21,
      "eps_revision_pct_30d": 2.49,
-     "eps_revision_pct_7d": 0.49,
-     "upgrade_ratio": 0.71,
+     "eps_revision_pct_7d": 0.06,
+     "upgrade_ratio": 0.7,
      "momentum": "↑상승중",
      "sparkline": [
       0.0,
       0.74,
-      6.31,
+      6.56,
       5.33,
       5.39
      ]
@@ -4241,63 +4406,47 @@
      "sector_kr": "IT·기술",
      "stocks": 93,
      "eps_revision_pct_30d": 0.96,
-     "eps_revision_pct_7d": 0.21,
-     "upgrade_ratio": 0.69,
+     "eps_revision_pct_7d": 0.13,
+     "upgrade_ratio": 0.7,
      "momentum": "↑상승중",
      "sparkline": [
       0.0,
-      0.32,
-      0.65,
-      1.36,
-      3.36
+      0.34,
+      0.71,
+      1.59,
+      3.99
      ]
     },
     {
      "sector": "Industrials",
      "sector_kr": "산업재",
      "stocks": 80,
-     "eps_revision_pct_30d": 0.9,
-     "eps_revision_pct_7d": 0.11,
+     "eps_revision_pct_30d": 0.95,
+     "eps_revision_pct_7d": 0.09,
      "upgrade_ratio": 0.61,
      "momentum": "↑상승중",
      "sparkline": [
       0.0,
       0.05,
       0.19,
-      0.88,
-      1.06
+      0.93,
+      1.13
      ]
     },
     {
      "sector": "Communication Services",
      "sector_kr": "커뮤니케이션",
      "stocks": 22,
-     "eps_revision_pct_30d": 0.54,
-     "eps_revision_pct_7d": 0.09,
-     "upgrade_ratio": 0.44,
-     "momentum": "↑상승중",
+     "eps_revision_pct_30d": 0.35,
+     "eps_revision_pct_7d": 0.0,
+     "upgrade_ratio": 0.47,
+     "momentum": "→횡보",
      "sparkline": [
       0.0,
       0.0,
       0.14,
       0.58,
-      1.05
-     ]
-    },
-    {
-     "sector": "Financial Services",
-     "sector_kr": "금융",
-     "stocks": 69,
-     "eps_revision_pct_30d": 0.36,
-     "eps_revision_pct_7d": 0.04,
-     "upgrade_ratio": 0.58,
-     "momentum": "→횡보",
-     "sparkline": [
-      0.0,
-      0.0,
-      0.13,
-      0.29,
-      0.5
+      0.81
      ]
     },
     {
@@ -4305,15 +4454,31 @@
      "sector_kr": "헬스케어",
      "stocks": 61,
      "eps_revision_pct_30d": 0.29,
-     "eps_revision_pct_7d": 0.04,
-     "upgrade_ratio": 0.54,
+     "eps_revision_pct_7d": 0.05,
+     "upgrade_ratio": 0.57,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
       0.0,
-      0.09,
+      0.13,
       0.19,
       0.45
+     ]
+    },
+    {
+     "sector": "Financial Services",
+     "sector_kr": "금융",
+     "stocks": 69,
+     "eps_revision_pct_30d": 0.26,
+     "eps_revision_pct_7d": 0.02,
+     "upgrade_ratio": 0.58,
+     "momentum": "→횡보",
+     "sparkline": [
+      0.0,
+      0.0,
+      0.14,
+      0.5,
+      0.5
      ]
     },
     {
@@ -4322,14 +4487,14 @@
      "stocks": 31,
      "eps_revision_pct_30d": 0.01,
      "eps_revision_pct_7d": 0.03,
-     "upgrade_ratio": 0.45,
+     "upgrade_ratio": 0.47,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
       0.0,
       -0.01,
       -0.06,
-      0.0
+      -0.02
      ]
     },
     {
@@ -4337,12 +4502,12 @@
      "sector_kr": "필수소비재",
      "stocks": 32,
      "eps_revision_pct_30d": -0.07,
-     "eps_revision_pct_7d": 0.0,
-     "upgrade_ratio": 0.35,
+     "eps_revision_pct_7d": -0.0,
+     "upgrade_ratio": 0.4,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
-      -0.0,
+      -0.01,
       -0.03,
       0.02,
       -0.06
@@ -4353,8 +4518,8 @@
      "sector_kr": "소재",
      "stocks": 19,
      "eps_revision_pct_30d": -0.19,
-     "eps_revision_pct_7d": -0.23,
-     "upgrade_ratio": 0.46,
+     "eps_revision_pct_7d": -0.15,
+     "upgrade_ratio": 0.45,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
@@ -4370,30 +4535,30 @@
      "stocks": 30,
      "eps_revision_pct_30d": -0.27,
      "eps_revision_pct_7d": -0.12,
-     "upgrade_ratio": 0.33,
+     "upgrade_ratio": 0.39,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
       0.07,
-      0.2,
-      -0.07,
-      0.32
+      0.13,
+      -0.12,
+      0.09
      ]
     },
     {
      "sector": "Consumer Cyclical",
      "sector_kr": "경기소비재",
      "stocks": 56,
-     "eps_revision_pct_30d": -0.81,
-     "eps_revision_pct_7d": -0.03,
-     "upgrade_ratio": 0.39,
+     "eps_revision_pct_30d": -0.71,
+     "eps_revision_pct_7d": -0.02,
+     "upgrade_ratio": 0.4,
      "momentum": "↓하락중",
      "sparkline": [
       0.0,
-      0.01,
-      -0.04,
-      -0.68,
-      -1.2
+      0.0,
+      -0.01,
+      -0.86,
+      -1.17
      ]
     }
    ]
@@ -4410,7 +4575,7 @@
      "earnings_growth_pct": 581.3,
      "eps_revision_30d": 30.4,
      "eps_revision_90d": 80.02,
-     "up_30d": 5.0,
+     "up_30d": 12.0,
      "down_30d": 0.0,
      "op_margin_q": [
       3.6,
@@ -4456,33 +4621,6 @@
     },
     {
      "rank": 3,
-     "ticker": "MPC",
-     "name": "Marathon Petroleum Corporation",
-     "sector": "에너지",
-     "market_cap_b": 113,
-     "revenue_growth_pct": 60.9,
-     "earnings_growth_pct": 489.6,
-     "eps_revision_30d": 15.71,
-     "eps_revision_90d": 95.44,
-     "up_30d": 15.0,
-     "down_30d": 2.0,
-     "op_margin_q": [
-      4.8,
-      5.7,
-      3.0,
-      13.4,
-      17.8
-     ],
-     "eps_surprises": [
-      50.1,
-      120.6,
-      27.1,
-      3.6
-     ],
-     "next_earnings": "2027-02-02"
-    },
-    {
-     "rank": 4,
      "ticker": "DELL",
      "name": "Dell Technologies Inc.",
      "sector": "IT·기술",
@@ -4509,15 +4647,15 @@
      "next_earnings": "2026-11-24"
     },
     {
-     "rank": 5,
+     "rank": 4,
      "ticker": "VLO",
      "name": "Valero Energy Corporation",
      "sector": "에너지",
      "market_cap_b": 106,
      "revenue_growth_pct": 46.5,
      "earnings_growth_pct": 576.8,
-     "eps_revision_30d": 18.2,
-     "eps_revision_90d": 93.01,
+     "eps_revision_30d": 16.11,
+     "eps_revision_90d": 79.43,
      "up_30d": 15.0,
      "down_30d": 1.0,
      "op_margin_q": [
@@ -4536,17 +4674,17 @@
      "next_earnings": "2027-01-28"
     },
     {
-     "rank": 6,
+     "rank": 5,
      "ticker": "PSX",
      "name": "Phillips 66",
      "sector": "에너지",
      "market_cap_b": 103,
      "revenue_growth_pct": 46.4,
      "earnings_growth_pct": 4299.0,
-     "eps_revision_30d": 18.03,
-     "eps_revision_90d": 61.41,
+     "eps_revision_30d": 13.23,
+     "eps_revision_90d": 49.17,
      "up_30d": 14.0,
-     "down_30d": 3.0,
+     "down_30d": 4.0,
      "op_margin_q": [
       2.8,
       4.8,
@@ -4561,6 +4699,33 @@
       19.4
      ],
      "next_earnings": "2026-10-28"
+    },
+    {
+     "rank": 6,
+     "ticker": "MPC",
+     "name": "Marathon Petroleum Corporation",
+     "sector": "에너지",
+     "market_cap_b": 113,
+     "revenue_growth_pct": 60.9,
+     "earnings_growth_pct": 489.6,
+     "eps_revision_30d": 5.79,
+     "eps_revision_90d": 79.83,
+     "up_30d": 13.0,
+     "down_30d": 3.0,
+     "op_margin_q": [
+      4.8,
+      5.7,
+      3.0,
+      13.4,
+      17.8
+     ],
+     "eps_surprises": [
+      50.1,
+      120.6,
+      27.1,
+      3.6
+     ],
+     "next_earnings": "2027-02-02"
     },
     {
      "rank": 7,
@@ -4597,8 +4762,8 @@
      "market_cap_b": 16,
      "revenue_growth_pct": 31.5,
      "earnings_growth_pct": 250.9,
-     "eps_revision_30d": 21.82,
-     "eps_revision_90d": 36.11,
+     "eps_revision_30d": 18.28,
+     "eps_revision_90d": 36.3,
      "up_30d": 21.0,
      "down_30d": 2.0,
      "op_margin_q": [
@@ -4700,8 +4865,8 @@
      "trailing_eps": -0.15,
      "consensus_eps": 1.54,
      "analyst_count": 20,
-     "current_price": 64.23,
-     "projected_pe": 41.7,
+     "current_price": 64.22,
+     "projected_pe": 41.6,
      "sig_proj_pe": "red",
      "recent_eps": [
       1.0428,
@@ -4713,7 +4878,7 @@
      "ticker": "MSTR",
      "name": "Strategy Inc",
      "market_cap_b": 47.2,
-     "turnaround_quarter": "다음 분기 흑자 예상",
+     "turnaround_quarter": "이번 분기 흑자 예상",
      "trailing_eps": -52.33,
      "consensus_eps": 17.24,
      "analyst_count": 15,
@@ -4731,11 +4896,11 @@
      "name": "Take-Two Interactive Software, ",
      "market_cap_b": 42.7,
      "turnaround_quarter": "이번 분기 흑자 예상",
-     "trailing_eps": -1.73,
-     "consensus_eps": 10.2,
+     "trailing_eps": -1.29,
+     "consensus_eps": 10.13,
      "analyst_count": 29,
      "current_price": 227.82,
-     "projected_pe": 22.3,
+     "projected_pe": 22.5,
      "sig_proj_pe": "yellow",
      "recent_eps": [
       -0.32,
@@ -4766,10 +4931,10 @@
      "market_cap_b": 33.8,
      "turnaround_quarter": "다음 분기 흑자 예상",
      "trailing_eps": -2.77,
-     "consensus_eps": 2.42,
+     "consensus_eps": 2.46,
      "analyst_count": 34,
      "current_price": 127.64,
-     "projected_pe": 52.7,
+     "projected_pe": 52.0,
      "sig_proj_pe": "red",
      "recent_eps": [
       -1.36,
@@ -4783,10 +4948,10 @@
      "market_cap_b": 7.0,
      "turnaround_quarter": "다음 분기 흑자 예상",
      "trailing_eps": -3.54,
-     "consensus_eps": 1.4,
+     "consensus_eps": 1.37,
      "analyst_count": 18,
-     "current_price": 21.91,
-     "projected_pe": 15.6,
+     "current_price": 21.92,
+     "projected_pe": 16.0,
      "sig_proj_pe": "yellow",
      "recent_eps": [
       0.13,
@@ -4796,7 +4961,7 @@
    ]
   },
   "m5": {
-   "period": "2026-10-30 ~ 2026-11-13",
+   "period": "2026-10-31 ~ 2026-11-14",
    "buy": [
     {
      "ticker": "MGM",
@@ -4854,6 +5019,17 @@
      "signal_type": "bullish"
     },
     {
+     "ticker": "AKAM",
+     "insider_name": "LEIGHTON F THOMSON",
+     "title": "Chief Executive Officer",
+     "transaction": "매수",
+     "date": "2026-11-13",
+     "amount_usd": 2552400,
+     "shares": 30000,
+     "signal": "장내 매수 (자기 돈으로 매수)",
+     "signal_type": "bullish"
+    },
+    {
      "ticker": "CVS",
      "insider_name": "Shah Prem S",
      "title": "EVP and Group President",
@@ -4905,8 +5081,8 @@
      "date": "2026-11-02",
      "amount_usd": 620390,
      "shares": 1000,
-     "signal": "장내 매수 (자기 돈으로 매수)",
-     "signal_type": "bullish"
+     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
+     "signal_type": "strong_bullish"
     },
     {
      "ticker": "CRH",
@@ -4951,17 +5127,6 @@
      "shares": 4000,
      "signal": "장내 매수 (자기 돈으로 매수)",
      "signal_type": "bullish"
-    },
-    {
-     "ticker": "WY",
-     "insider_name": "BECKWITT RICHARD",
-     "title": "이사",
-     "transaction": "매수",
-     "date": "2026-11-11",
-     "amount_usd": 306600,
-     "shares": 15000,
-     "signal": "장내 매수 (자기 돈으로 매수)",
-     "signal_type": "bullish"
     }
    ],
    "sell": [
@@ -4970,8 +5135,8 @@
      "insider_name": "Wilhelmsen Arne Alexander",
      "title": "이사",
      "transaction": "매도",
-     "date": "2026-11-06",
-     "amount_usd": 241964419,
+     "date": "2026-11-11",
+     "amount_usd": 304073672,
      "shares_sold_pct": 2.9,
      "plan_10b5_1": false,
      "signal": "재량 매도 (보유분 대비 소규모)",
@@ -5050,16 +5215,16 @@
      "signal_type": "neutral"
     },
     {
-     "ticker": "HLT",
-     "insider_name": "Jacobs Kevin J",
+     "ticker": "PLTR",
+     "insider_name": "Sankar Shyam",
      "title": "See Remarks",
      "transaction": "매도",
-     "date": "2026-10-29",
-     "amount_usd": 53802435,
-     "shares_sold_pct": 34.0,
-     "plan_10b5_1": false,
-     "signal": "보유 지분의 34.0% 재량 매도 — 주의",
-     "signal_type": "bearish"
+     "date": "2026-11-10",
+     "amount_usd": 64933199,
+     "shares_sold_pct": 31.0,
+     "plan_10b5_1": true,
+     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+     "signal_type": "neutral"
     },
     {
      "ticker": "LIN",
@@ -5088,6 +5253,7 @@
    ],
    "buy_tickers": [
     "ADM",
+    "AKAM",
     "ALNY",
     "BA",
     "BKR",
@@ -5119,7 +5285,7 @@
      "ticker": "AVGO",
      "eps_growth_last_q": 215.3,
      "eps_growth_this_fy": 71.0,
-     "eps_growth_next_fy": 66.9,
+     "eps_growth_next_fy": 66.4,
      "trend": "지속 성장"
     },
     {
@@ -5153,8 +5319,8 @@
     {
      "ticker": "AMAT",
      "eps_growth_last_q": 43.1,
-     "eps_growth_this_fy": 46.4,
-     "eps_growth_next_fy": 28.1,
+     "eps_growth_this_fy": 48.5,
+     "eps_growth_next_fy": 28.8,
      "trend": "둔화 전망"
     }
    ],
@@ -5289,7 +5455,7 @@
    "ALL": 0.126,
    "ALLE": 0.1323,
    "ALNY": 0.0653,
-   "AMAT": 0.0523,
+   "AMAT": 0.0732,
    "AMCR": 0.0372,
    "AMD": 0.1619,
    "AME": 0.1847,
@@ -5528,7 +5694,7 @@
    "J": 0.0454,
    "JBHT": 0.0632,
    "JBL": 0.0357,
-   "JCI": 0.1213,
+   "JCI": 0.1071,
    "JKHY": 0.1553,
    "JNJ": 0.1863,
    "JPM": null,
@@ -5540,7 +5706,7 @@
    "KKR": null,
    "KLAC": 0.1942,
    "KMB": 0.0967,
-   "KMI": 0.0586,
+   "KMI": 0.086,
    "KO": 0.0852,
    "KR": 0.017,
    "L": 0.1064,
@@ -5595,7 +5761,7 @@
    "MTB": null,
    "MTD": 0.1615,
    "MU": 0.2188,
-   "NBIS": -7.0952,
+   "NBIS": -9.2762,
    "NCLH": -0.103,
    "NDAQ": 0.3488,
    "NDSN": 0.206,
@@ -5667,7 +5833,7 @@
    "RKLB": -0.2515,
    "RL": 0.1301,
    "RMD": 0.2264,
-   "ROK": -0.0524,
+   "ROK": 0.1501,
    "ROL": 0.1392,
    "ROP": 0.2887,
    "ROST": 0.0817,
@@ -5675,7 +5841,7 @@
    "RTX": 0.0865,
    "RVTY": 0.215,
    "SBAC": 0.24,
-   "SBUX": 0.084,
+   "SBUX": 0.0842,
    "SCHW": null,
    "SHOP": 0.1158,
    "SHW": 0.0995,
@@ -5755,7 +5921,7 @@
    "VST": 0.0439,
    "VTR": 0.2191,
    "VTRS": 0.2145,
-   "VYLR": 0.1357,
+   "VYLR": 0.1184,
    "VZ": 0.1147,
    "WAB": 0.1015,
    "WAT": -0.0301,
@@ -5784,327 +5950,327 @@
    "CRCL": 0.0863
   },
   "fcf_yield": {
-   "A": 0.02163,
+   "A": 0.02162,
    "AAPL": 0.02041,
-   "ABBV": 0.03391,
+   "ABBV": 0.03393,
    "ABNB": 0.02916,
-   "ABT": 0.03227,
+   "ABT": 0.03228,
    "ACGL": 0.10933,
-   "ACN": 0.07222,
+   "ACN": 0.07221,
    "ADBE": 0.09878,
    "ADI": 0.02151,
    "ADM": -0.03256,
    "ADP": 0.05283,
    "ADSK": 0.05714,
-   "AEE": -0.0801,
+   "AEE": -0.08011,
    "AEP": -0.11048,
-   "AES": -0.30427,
-   "AFL": 0.06011,
-   "AIG": 0.17569,
-   "AIZ": 0.16023,
+   "AES": -0.30458,
+   "AFL": 0.06012,
+   "AIG": 0.17568,
+   "AIZ": 0.16021,
    "AJG": 0.03806,
    "AKAM": 0.01543,
    "ALAB": 0.00339,
    "ALB": 0.11326,
    "ALGN": 0.04835,
-   "ALL": 0.13354,
+   "ALL": 0.13357,
    "ALLE": 0.03559,
    "ALNY": 0.0148,
-   "AMAT": 0.00613,
-   "AMCR": 0.04389,
+   "AMAT": 0.00857,
+   "AMCR": 0.04393,
    "AMD": 0.0084,
-   "AME": 0.02726,
+   "AME": 0.02725,
    "AMGN": 0.02929,
    "AMP": 0.0705,
-   "AMT": 0.03394,
+   "AMT": 0.03395,
    "AMZN": -0.01205,
    "ANET": 0.01204,
-   "AON": 0.06127,
-   "AOS": 0.0499,
+   "AON": 0.06126,
+   "AOS": 0.04989,
    "APA": 0.12975,
    "APD": -0.00267,
-   "APH": 0.02223,
+   "APH": 0.02224,
    "APO": null,
    "APP": 0.02743,
-   "APTV": 0.19783,
+   "APTV": 0.19785,
    "ARE": 0.1689,
    "ARES": null,
    "ARM": 0.00558,
    "ASML": 0.018,
    "ATO": -0.07455,
    "AVGO": 0.01847,
-   "AVY": 0.06849,
+   "AVY": 0.06852,
    "AWK": -0.05475,
    "AXON": 0.00257,
    "AXP": null,
    "AZO": 0.0228,
-   "BA": 0.03475,
+   "BA": 0.03476,
    "BAC": null,
    "BALL": 0.01546,
-   "BAX": 0.09157,
-   "BBY": 0.06429,
+   "BAX": 0.09155,
+   "BBY": 0.0643,
    "BDX": 0.06975,
    "BE": -3e-05,
-   "BEN": -0.19859,
-   "BF-B": 0.04876,
-   "BG": -0.15445,
+   "BEN": -0.19853,
+   "BF-B": 0.04875,
+   "BG": -0.15446,
    "BIIB": 0.02157,
    "BKNG": 0.06411,
    "BKR": 0.10346,
    "BLK": 0.04477,
    "BMY": 0.04909,
    "BNY": null,
-   "BR": 0.06187,
-   "BRK-B": 0.04167,
-   "BRO": 0.05072,
+   "BR": 0.06188,
+   "BRK-B": 0.04166,
+   "BRO": 0.05071,
    "BSX": 0.03877,
    "BX": null,
-   "BXP": 0.09673,
+   "BXP": 0.09672,
    "C": null,
-   "CAH": 0.07729,
-   "CARR": 0.04383,
+   "CAH": 0.07728,
+   "CARR": 0.04384,
    "CASY": 0.01912,
    "CAT": 0.01447,
-   "CB": 0.07825,
-   "CBOE": 0.02166,
-   "CBRE": 0.03319,
+   "CB": 0.07826,
+   "CBOE": 0.02167,
+   "CBRE": 0.0332,
    "CCEP": 0.03043,
    "CCI": 0.02538,
-   "CCL": 0.046,
+   "CCL": 0.04599,
    "CDNS": 0.01971,
    "CDW": 0.0405,
    "CEG": -0.05455,
-   "CF": 0.08683,
+   "CF": 0.08688,
    "CFG": null,
    "CHD": 0.02914,
    "CHRW": 0.02435,
    "CHTR": 0.13039,
-   "CI": 0.10466,
+   "CI": 0.10464,
    "CIEN": 0.01592,
    "CINF": 0.08262,
    "CL": 0.04258,
-   "CLX": 0.01565,
+   "CLX": 0.01562,
    "CMCSA": 0.14637,
    "CME": 0.02681,
-   "CMG": 0.02652,
-   "CMI": 0.03779,
+   "CMG": 0.02653,
+   "CMI": 0.03781,
    "CMS": -0.09377,
-   "CNC": 0.08738,
-   "CNP": -0.1826,
+   "CNC": 0.08737,
+   "CNP": -0.18262,
    "COF": null,
    "COHR": -0.03921,
    "COIN": 0.10895,
    "COO": 0.04555,
-   "COP": 0.06811,
+   "COP": 0.06815,
    "COR": 0.02613,
    "COST": 0.01378,
-   "CPAY": 0.06749,
+   "CPAY": 0.06747,
    "CPRT": 0.03002,
    "CPT": 0.0249,
    "CRH": 0.03676,
-   "CRL": 0.02736,
+   "CRL": 0.02737,
    "CRM": 0.0989,
    "CRWD": 0.0086,
-   "CRWV": -0.67056,
-   "CSCO": 0.02966,
+   "CRWV": -0.66502,
+   "CSCO": 0.0297,
    "CSGP": 0.03552,
    "CSX": 0.02524,
    "CTAS": 0.01941,
    "CTSH": 0.07382,
    "CVNA": 0.00604,
-   "CVS": 0.10346,
-   "CVX": 0.06072,
-   "D": -0.13132,
-   "DAL": 0.04394,
+   "CVS": 0.10345,
+   "CVX": 0.06071,
+   "D": -0.13131,
+   "DAL": 0.04392,
    "DASH": 0.08521,
-   "DD": 0.23603,
+   "DD": 0.23599,
    "DDOG": 0.01604,
-   "DE": 0.02488,
-   "DECK": 0.07037,
-   "DELL": 0.02756,
+   "DE": 0.02487,
+   "DECK": 0.07039,
+   "DELL": 0.02754,
    "DG": 0.05873,
-   "DGX": 0.03043,
-   "DHI": 0.19774,
+   "DGX": 0.03055,
+   "DHI": 0.19782,
    "DHR": 0.02895,
    "DIS": 0.02366,
-   "DLR": 0.05673,
+   "DLR": 0.05672,
    "DLTR": 0.04051,
-   "DOC": 0.1112,
-   "DOV": 0.03093,
+   "DOC": 0.11122,
+   "DOV": 0.03092,
    "DOW": 0.03753,
    "DPZ": 0.05035,
    "DRI": 0.03071,
-   "DTE": -0.09288,
-   "DUK": -0.05983,
-   "DVA": 0.08247,
-   "DVN": 0.02506,
+   "DTE": -0.0929,
+   "DUK": -0.05982,
+   "DVA": 0.08243,
+   "DVN": 0.02507,
    "DXCM": 0.02612,
    "EBAY": 0.03209,
    "ECHO": -0.07832,
-   "ECL": 0.01661,
+   "ECL": 0.0166,
    "ED": -0.02993,
-   "EFX": 0.0429,
+   "EFX": 0.04291,
    "EG": 0.10249,
    "EIX": -0.00761,
-   "EL": 0.05277,
-   "ELV": 0.08604,
-   "EME": 0.04454,
+   "EL": 0.05278,
+   "ELV": 0.08603,
+   "EME": 0.04452,
    "EMR": 0.04066,
-   "EOG": 0.06773,
+   "EOG": 0.06774,
    "EQIX": 0.03046,
-   "EQT": 0.07493,
+   "EQT": 0.07494,
    "ERIE": 0.03545,
-   "ES": -0.02953,
+   "ES": -0.02952,
    "ESS": 0.05822,
    "ETN": 0.02213,
    "ETR": -0.09598,
    "EVRG": -0.07042,
-   "EW": 0.01858,
+   "EW": 0.01859,
    "EXC": -0.06872,
    "EXE": 0.06684,
    "EXPD": 0.03136,
    "EXPE": 0.07671,
-   "EXR": 0.0462,
-   "F": -0.13014,
+   "EXR": 0.04621,
+   "F": -0.13025,
    "FANG": 0.117,
    "FAST": 0.01447,
    "FCX": 0.02196,
-   "FDS": 0.05571,
+   "FDS": 0.05573,
    "FDX": 0.07451,
    "FDXF": -0.02552,
-   "FE": -0.0936,
+   "FE": -0.09362,
    "FER": 0.02007,
    "FERG": null,
    "FFIV": 0.03647,
-   "FICO": 0.05481,
-   "FIS": 0.15218,
+   "FICO": 0.0548,
+   "FIS": 0.15213,
    "FISV": null,
    "FITB": null,
-   "FIX": 0.05438,
+   "FIX": 0.05469,
    "FLEX": 0.02239,
    "FOX": 0.04637,
-   "FOXA": 0.03084,
-   "FRT": 0.04462,
+   "FOXA": 0.03076,
+   "FRT": 0.04463,
    "FSLR": 0.03733,
    "FTNT": 0.02662,
-   "FTV": 0.04861,
-   "GD": 0.04637,
-   "GDDY": 0.0876,
-   "GE": 0.0184,
+   "FTV": 0.04862,
+   "GD": 0.04635,
+   "GDDY": 0.08767,
+   "GE": 0.01847,
    "GEHC": 0.04878,
    "GEN": 0.10043,
-   "GEV": 0.10401,
+   "GEV": 0.10396,
    "GILD": 0.05121,
-   "GIS": 0.07097,
+   "GIS": 0.07099,
    "GL": 0.12292,
-   "GLW": 0.00886,
-   "GM": 0.39297,
+   "GLW": 0.00885,
+   "GM": 0.39311,
    "GNRC": 0.02978,
    "GOOG": -0.00032,
    "GOOGL": -0.00032,
-   "GPC": 0.05384,
-   "GPN": 0.30715,
+   "GPC": 0.05383,
+   "GPN": 0.30705,
    "GRMN": 0.01527,
    "GS": null,
    "GWW": 0.0191,
-   "HAL": 0.05844,
+   "HAL": 0.05845,
    "HAS": 0.04772,
    "HBAN": null,
-   "HCA": 0.03781,
-   "HD": 0.03093,
-   "HIG": 0.20079,
-   "HII": 0.01603,
+   "HCA": 0.03783,
+   "HD": 0.03094,
+   "HIG": 0.20082,
+   "HII": 0.01602,
    "HLT": 0.01774,
-   "HON": 0.09959,
+   "HON": 0.09946,
    "HONA": null,
    "HOOD": null,
-   "HPE": 0.07391,
+   "HPE": 0.07392,
    "HPQ": 0.12803,
-   "HRL": 0.05115,
+   "HRL": 0.05113,
    "HSIC": 0.04883,
    "HST": 0.07704,
    "HSY": 0.04772,
-   "HUBB": 0.02396,
-   "HUM": 0.06085,
+   "HUBB": 0.02394,
+   "HUM": 0.06091,
    "HWM": 0.0147,
    "IBKR": null,
    "IBM": 0.0529,
    "ICE": 0.003,
    "IDXX": 0.01918,
    "IEX": 0.03348,
-   "IFF": -0.10846,
+   "IFF": -0.10847,
    "ILMN": 0.02744,
    "INCY": 0.05218,
    "INTC": 0.00254,
    "INTU": 0.06958,
-   "INVH": 0.07482,
-   "IP": 0.12561,
-   "IQV": 0.04845,
-   "IR": 0.03114,
+   "INVH": 0.07485,
+   "IP": 0.12564,
+   "IQV": 0.04843,
+   "IR": 0.03115,
    "IRM": -0.01333,
    "ISRG": 0.02234,
-   "IT": 0.08815,
-   "ITW": 0.02824,
-   "IVZ": 0.10384,
-   "J": 0.03456,
+   "IT": 0.08809,
+   "ITW": 0.02823,
+   "IVZ": 0.10383,
+   "J": 0.03487,
    "JBHT": 0.03878,
-   "JBL": 0.04901,
-   "JCI": 0.03689,
+   "JBL": 0.049,
+   "JCI": 0.03287,
    "JKHY": 0.03266,
-   "JNJ": 0.02686,
+   "JNJ": 0.0269,
    "JPM": null,
    "KDP": 0.09127,
    "KEY": null,
    "KEYS": 0.03684,
-   "KHC": 0.10732,
-   "KIM": 0.05175,
+   "KHC": 0.10736,
+   "KIM": 0.05173,
    "KKR": null,
    "KLAC": 0.01419,
    "KMB": 0.02386,
-   "KMI": 0.01512,
+   "KMI": 0.0222,
    "KO": 0.01019,
-   "KR": 0.06061,
+   "KR": 0.06064,
    "L": 0.08833,
    "LDOS": 0.06515,
-   "LEN": 0.06171,
-   "LH": 0.03513,
-   "LHX": 0.06766,
-   "LII": 0.03044,
+   "LEN": 0.0617,
+   "LH": 0.03514,
+   "LHX": 0.0677,
+   "LII": 0.03046,
    "LIN": 0.01736,
    "LITE": 0.00264,
-   "LLY": 0.00726,
+   "LLY": 0.00727,
    "LMT": 0.041,
    "LNT": -0.08026,
-   "LOW": 0.03613,
+   "LOW": 0.03612,
    "LRCX": 0.01612,
    "LULU": 0.09386,
-   "LUV": -0.02786,
-   "LVS": 0.08057,
-   "LYB": 0.08542,
+   "LUV": -0.02785,
+   "LVS": 0.08322,
+   "LYB": 0.0854,
    "LYV": 0.03039,
    "MA": 0.02887,
-   "MAA": 0.06621,
+   "MAA": 0.06623,
    "MAR": 0.02429,
-   "MAS": 0.04994,
+   "MAS": 0.04997,
    "MCD": 0.02954,
    "MCHP": 0.04585,
    "MCK": 0.05814,
-   "MCO": 0.02892,
+   "MCO": 0.02893,
    "MDLZ": 0.03256,
    "MDT": 0.04106,
    "MELI": -0.03403,
-   "MET": -0.05481,
+   "MET": -0.0548,
    "META": 0.01027,
-   "MGM": 0.10493,
+   "MGM": 0.10495,
    "MKC": 0.05872,
-   "MLM": 0.04581,
-   "MMM": 0.06715,
+   "MLM": 0.04579,
+   "MMM": 0.06714,
    "MNST": 0.01595,
-   "MO": 0.05394,
-   "MOS": -0.07357,
-   "MPC": 0.14388,
+   "MO": 0.05395,
+   "MOS": -0.07354,
+   "MPC": 0.14387,
    "MPWR": 0.00747,
-   "MRK": 0.03849,
+   "MRK": 0.0385,
    "MRNA": -0.00647,
    "MRSH": 0.04374,
    "MRVL": 0.01707,
@@ -6116,190 +6282,190 @@
    "MTB": null,
    "MTD": 0.0196,
    "MU": 0.03309,
-   "NBIS": -0.32679,
-   "NCLH": -0.12679,
-   "NDAQ": 0.03325,
-   "NDSN": 0.03392,
-   "NEE": -0.11877,
-   "NEM": 0.07782,
+   "NBIS": -0.59847,
+   "NCLH": -0.12686,
+   "NDAQ": 0.03349,
+   "NDSN": 0.03393,
+   "NEE": -0.11882,
+   "NEM": 0.07786,
    "NFLX": 0.09982,
-   "NI": -0.10072,
-   "NKE": 0.03132,
+   "NI": -0.10073,
+   "NKE": 0.03131,
    "NOC": 0.0402,
    "NOW": 0.05422,
-   "NRG": 0.06792,
+   "NRG": 0.0679,
    "NSC": 0.02198,
    "NTAP": 0.03288,
    "NTRS": null,
    "NUE": 0.02738,
    "NVDA": 0.01063,
-   "NVR": 0.0456,
-   "NWS": 0.04702,
-   "NWSA": 0.0521,
+   "NVR": 0.04561,
+   "NWS": 0.04703,
+   "NWSA": 0.05211,
    "NXPI": 0.06116,
    "O": 0.02907,
    "ODFL": 0.02772,
    "OKE": 0.0137,
    "OKTA": 0.03246,
-   "OMC": 0.19039,
+   "OMC": 0.19139,
    "ON": 0.05835,
-   "ORCL": -0.11731,
+   "ORCL": -0.11733,
    "ORLY": 0.02142,
    "OTIS": 0.04695,
-   "OXY": 0.08356,
+   "OXY": 0.08357,
    "P": -0.00318,
-   "PANW": 0.01608,
+   "PANW": 0.01607,
    "PAYX": 0.04583,
    "PCAR": 0.03091,
    "PCG": -0.22245,
    "PDD": 0.66398,
    "PEG": -0.00857,
    "PEP": 0.04563,
-   "PFE": 0.07898,
+   "PFE": 0.07899,
    "PFG": 0.07205,
    "PG": 0.03215,
-   "PGR": 0.09531,
+   "PGR": 0.0953,
    "PH": 0.02349,
-   "PHM": 0.03489,
+   "PHM": 0.03611,
    "PKG": 0.02735,
-   "PLD": 0.04539,
+   "PLD": 0.04541,
    "PLTR": 0.00655,
-   "PM": 0.03717,
+   "PM": 0.03716,
    "PNC": null,
    "PNR": 0.0476,
-   "PNW": -0.07694,
+   "PNW": -0.07693,
    "PODD": 0.01073,
-   "PPG": 0.04056,
-   "PPL": -0.07008,
-   "PRU": 0.16834,
+   "PPG": 0.04053,
+   "PPL": -0.07007,
+   "PRU": 0.1684,
    "PSA": 0.04771,
-   "PSX": 0.09211,
+   "PSX": 0.0921,
    "PTC": null,
    "PWR": 0.03398,
    "PYPL": 0.09113,
-   "Q": 0.02815,
+   "Q": 0.02813,
    "QCOM": 0.04935,
    "RCL": -0.00058,
-   "RDDT": 0.04271,
+   "RDDT": 0.04269,
    "REG": 0.05284,
    "REGN": 0.0261,
    "RF": null,
    "RJF": null,
    "RKLB": -0.00536,
-   "RL": 0.04866,
+   "RL": 0.04865,
    "RMD": 0.03853,
-   "ROK": -0.01054,
-   "ROL": 0.02968,
+   "ROK": 0.03054,
+   "ROL": 0.02987,
    "ROP": 0.05123,
-   "ROST": 0.02705,
+   "ROST": 0.02694,
    "RSG": 0.02503,
-   "RTX": 0.03099,
-   "RVTY": 0.03668,
+   "RTX": 0.03098,
+   "RVTY": 0.0367,
    "SBAC": 0.03463,
-   "SBUX": 0.02626,
+   "SBUX": 0.02632,
    "SCHW": null,
    "SHOP": 0.00867,
-   "SHW": 0.0293,
+   "SHW": 0.02932,
    "SJM": 0.10331,
-   "SKYD": 0.42756,
-   "SLB": 0.04035,
+   "SKYD": 0.4287,
+   "SLB": 0.04036,
    "SMCI": -0.46253,
-   "SNA": 0.05752,
+   "SNA": 0.0575,
    "SNDK": 0.08927,
    "SNPS": 0.03927,
    "SO": -0.04671,
    "SOLV": 0.0119,
    "SPCX": null,
-   "SPG": 0.03225,
-   "SPGI": 0.04398,
-   "SRE": -0.21961,
-   "STE": 0.03203,
+   "SPG": 0.03226,
+   "SPGI": 0.04399,
+   "SRE": -0.21964,
+   "STE": 0.03204,
    "STLD": 0.01318,
    "STT": null,
    "STX": 0.01894,
    "STZ": 0.04539,
-   "SW": 0.04438,
-   "SWK": 0.11537,
-   "SWKS": 0.01454,
+   "SW": 0.04439,
+   "SWK": 0.11532,
+   "SWKS": 0.01456,
    "SYF": null,
-   "SYK": 0.03142,
+   "SYK": 0.03141,
    "SYY": 0.06344,
-   "T": 0.08002,
-   "TDG": 0.0193,
-   "TDY": 0.03194,
+   "T": 0.08006,
+   "TDG": 0.01955,
+   "TDY": 0.03219,
    "TECH": 0.02429,
-   "TEL": 0.03617,
+   "TEL": 0.03615,
    "TER": 0.01542,
    "TFC": null,
    "TGT": 0.04681,
-   "TJX": 0.02963,
+   "TJX": 0.02976,
    "TKO": 0.02258,
    "TMO": 0.02483,
    "TMUS": 0.09088,
-   "TPL": 0.00403,
+   "TPL": 0.00402,
    "TPR": 0.05258,
    "TRGP": 0.00254,
    "TRI": 0.02486,
    "TRMB": 0.05542,
    "TROW": 0.09009,
-   "TRV": 0.19148,
+   "TRV": 0.19143,
    "TSCO": 0.00671,
    "TSLA": 0.00322,
-   "TSN": 0.05755,
+   "TSN": 0.05757,
    "TT": 0.03787,
    "TTWO": 0.01847,
-   "TWLO": 0.03297,
+   "TWLO": 0.03298,
    "TXN": 0.01723,
-   "TXT": 0.05338,
-   "TYL": 0.04089,
+   "TXT": 0.05339,
+   "TYL": 0.0409,
    "UAL": -0.01622,
-   "UBER": 0.05212,
+   "UBER": 0.0521,
    "UDR": 0.06351,
-   "UHS": 0.06649,
+   "UHS": 0.06659,
    "ULTA": 0.03236,
-   "UNH": 0.07256,
+   "UNH": 0.07259,
    "UNP": 0.02821,
-   "UPS": 0.06539,
-   "URI": 0.03039,
+   "UPS": 0.06541,
+   "URI": 0.03038,
    "USB": null,
-   "V": 0.02639,
+   "V": 0.02641,
    "VEEV": 0.02576,
    "VICI": 0.01364,
-   "VLO": 0.11878,
-   "VLTO": 0.02656,
+   "VLO": 0.11875,
+   "VLTO": 0.02655,
    "VMC": 0.01988,
-   "VMRK": 0.03242,
+   "VMRK": 0.03243,
    "VRSK": 0.03513,
    "VRSN": 0.02851,
-   "VRT": 0.03808,
+   "VRT": 0.03807,
    "VRTX": 0.01712,
    "VST": 0.02003,
    "VTR": 0.03141,
    "VTRS": 0.13232,
-   "VYLR": 0.04994,
-   "VZ": 0.08322,
+   "VYLR": 0.04316,
+   "VZ": 0.08323,
    "WAB": 0.02479,
-   "WAT": -0.00374,
+   "WAT": -0.00187,
    "WDAY": 0.06434,
    "WDC": 0.02466,
-   "WEC": -0.05087,
-   "WELL": 0.04835,
+   "WEC": -0.05085,
+   "WELL": 0.04836,
    "WFC": null,
    "WM": 0.02557,
-   "WMB": -0.03305,
-   "WMT": 0.00701,
-   "WRB": 0.08665,
-   "WSM": 0.03572,
-   "WST": 0.0119,
+   "WMB": -0.03306,
+   "WMT": 0.00699,
+   "WRB": 0.08663,
+   "WSM": 0.03574,
+   "WST": 0.01191,
    "WTW": 0.04822,
-   "WY": 0.03888,
+   "WY": 0.0389,
    "WYNN": 0.04315,
    "XEL": -0.15936,
-   "XOM": 0.04068,
-   "XYL": 0.05607,
+   "XOM": 0.0407,
+   "XYL": 0.05604,
    "XYZ": 0.01637,
    "YUM": 0.03067,
-   "ZBH": 0.07382,
+   "ZBH": 0.07383,
    "ZBRA": 0.04584,
    "ZTS": 0.06028,
    "CRCL": 0.0164
@@ -6828,7 +6994,7 @@
  },
  "finalized_at": null,
  "ranking": {
-  "cutoff_final": 76.2,
+  "cutoff_final": 64.9,
   "eligible_count": 502,
   "universe": 519,
   "rows": [
@@ -6837,22 +7003,22 @@
     "name": "Comfort Systems USA, Inc.",
     "sector": "Industrials",
     "industry": "Engineering & Construction",
-    "score": 82.2,
+    "score": 82.1,
     "quality": 68,
     "health": 74,
     "value": 89,
-    "revisions": 94,
+    "revisions": 93,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 82.2,
+    "final": 82.1,
     "cyclical": false,
     "metrics": {
-     "price": 1112.27,
-     "forward_pe": 16.562887,
-     "peg": 0.3424,
+     "price": 1112.5,
+     "forward_pe": 16.56631,
+     "peg": 0.3377,
      "op_margin": 0.16780001,
      "gross_margin": 0.25698,
      "revenue_growth": 0.537,
@@ -6871,7 +7037,7 @@
     "name": "APA Corporation",
     "sector": "Energy",
     "industry": "Oil & Gas E&P",
-    "score": 78.1,
+    "score": 78.0,
     "quality": 71,
     "health": 65,
     "value": 78,
@@ -6883,18 +7049,18 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 81.1,
+    "final": 81.0,
     "cyclical": true,
     "metrics": {
      "price": 48.44,
      "forward_pe": 8.553514,
-     "peg": 1.1781,
+     "peg": 1.1972,
      "op_margin": 0.43315,
      "gross_margin": 0.78976,
      "revenue_growth": 0.315,
-     "growth_1y": -0.1915,
-     "rev_30d": 21.817419174428355,
-     "rev_90d": 36.11164521184037,
+     "growth_1y": -0.1933,
+     "rev_30d": 18.2784440504745,
+     "rev_90d": 36.296470769201186,
      "up_30d": 21.0,
      "down_30d": 2.0,
      "analysts": 26.0
@@ -6922,14 +7088,14 @@
     "metrics": {
      "price": 1495.16,
      "forward_pe": 23.583231,
-     "peg": 0.7852,
+     "peg": 0.7893,
      "op_margin": 0.38551998,
      "gross_margin": 0.54337,
      "revenue_growth": 0.552,
      "growth_1y": 0.36270002,
      "rev_30d": 9.090406496458545,
      "rev_90d": 10.46560062762832,
-     "up_30d": 21.0,
+     "up_30d": 22.0,
      "down_30d": 0.0,
      "analysts": 17.0
     },
@@ -6954,14 +7120,14 @@
     "final": 77.4,
     "cyclical": false,
     "metrics": {
-     "price": 202.0375,
-     "forward_pe": 20.369333,
-     "peg": 0.6187,
+     "price": 202.07,
+     "forward_pe": 20.37261,
+     "peg": 0.5963,
      "op_margin": 0.21107,
      "gross_margin": 0.38115,
      "revenue_growth": 0.612,
      "growth_1y": 0.37849998,
-     "rev_30d": 7.857318396631642,
+     "rev_30d": 7.896388590648574,
      "rev_90d": 9.011308097010719,
      "up_30d": 27.0,
      "down_30d": 0.0,
@@ -6975,7 +7141,7 @@
     "name": "EMCOR Group, Inc.",
     "sector": "Industrials",
     "industry": "Engineering & Construction",
-    "score": 76.7,
+    "score": 76.6,
     "quality": 52,
     "health": 70,
     "value": 87,
@@ -6985,12 +7151,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 76.7,
+    "final": 76.6,
     "cyclical": false,
     "metrics": {
-     "price": 659.08,
-     "forward_pe": 16.111849,
-     "peg": 0.4181,
+     "price": 659.36,
+     "forward_pe": 16.118694,
+     "peg": 0.4159,
      "op_margin": 0.0988,
      "gross_margin": 0.19588,
      "revenue_growth": 0.288,
@@ -7005,51 +7171,15 @@
     "status": "심층분석 후보 선정"
    },
    {
-    "ticker": "MPC",
-    "name": "Marathon Petroleum Corporation",
-    "sector": "Energy",
-    "industry": "Oil & Gas Refining & Marketing",
-    "score": 73.6,
-    "quality": 45,
-    "health": 61,
-    "value": 90,
-    "revisions": 92,
-    "eligible": true,
-    "bonus": 3,
-    "bonus_items": [
-     "M3 실적 개선 기업 (+3)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 76.6,
-    "cyclical": true,
-    "metrics": {
-     "price": 414.61,
-     "forward_pe": 6.750498,
-     "peg": 0.952,
-     "op_margin": 0.11652,
-     "gross_margin": 0.16202,
-     "revenue_growth": 0.609,
-     "growth_1y": -0.1079,
-     "rev_30d": 15.70562072797565,
-     "rev_90d": 95.43825919498204,
-     "up_30d": 15.0,
-     "down_30d": 2.0,
-     "analysts": 17.0
-    },
-    "rank": 6,
-    "status": "심층분석 후보 선정"
-   },
-   {
     "ticker": "VLO",
     "name": "Valero Energy Corporation",
     "sector": "Energy",
     "industry": "Oil & Gas Refining & Marketing",
-    "score": 73.3,
+    "score": 73.2,
     "quality": 44,
-    "health": 70,
+    "health": 69,
     "value": 81,
-    "revisions": 94,
+    "revisions": 93,
     "eligible": true,
     "bonus": 3,
     "bonus_items": [
@@ -7057,23 +7187,23 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 76.3,
+    "final": 76.2,
     "cyclical": true,
     "metrics": {
-     "price": 379.755,
-     "forward_pe": 7.0989447,
-     "peg": 1.3515,
+     "price": 379.83,
+     "forward_pe": 7.230249,
+     "peg": 1.3691,
      "op_margin": 0.12218001,
      "gross_margin": 0.19519,
      "revenue_growth": 0.465,
-     "growth_1y": -0.10560001,
-     "rev_30d": 18.20471023979873,
-     "rev_90d": 93.01075016642103,
+     "growth_1y": -0.1169,
+     "rev_30d": 16.10664133544123,
+     "rev_90d": 79.43005591919655,
      "up_30d": 15.0,
      "down_30d": 1.0,
      "analysts": 19.0
     },
-    "rank": 7,
+    "rank": 6,
     "status": "심층분석 후보 선정"
    },
    {
@@ -7081,82 +7211,45 @@
     "name": "CF Industries Holdings, Inc.",
     "sector": "Basic Materials",
     "industry": "Agricultural Inputs",
-    "score": 76.2,
+    "score": 76.0,
     "quality": 59,
     "health": 68,
     "value": 92,
-    "revisions": 84,
+    "revisions": 83,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 76.2,
+    "final": 76.0,
     "cyclical": true,
     "metrics": {
-     "price": 125.16,
-     "forward_pe": 10.697135,
-     "peg": 0.5302,
+     "price": 125.09,
+     "forward_pe": 10.642642,
+     "peg": 0.5105,
      "op_margin": 0.38489,
      "gross_margin": 0.42519,
      "revenue_growth": 0.121,
-     "growth_1y": -0.2006,
-     "rev_30d": 3.7896047672721562,
-     "rev_90d": 8.58659965969926,
+     "growth_1y": -0.1989,
+     "rev_30d": 3.863593769291095,
+     "rev_90d": 8.664008318875354,
      "up_30d": 6.0,
      "down_30d": 1.0,
      "analysts": 20.0
     },
-    "rank": 8,
+    "rank": 7,
     "status": "심층분석 후보 선정"
    },
    {
-    "ticker": "SPCX",
-    "name": "Space Exploration Technologies ",
-    "sector": "Industrials",
-    "industry": "Aerospace & Defense",
-    "score": 67.2,
-    "quality": 62,
-    "health": 74,
-    "value": 35,
-    "revisions": 94,
-    "eligible": true,
-    "bonus": 8,
-    "bonus_items": [
-     "M1 대가 상위보유: Cathie Wood (+3)",
-     "M1 대가 최근분기 매수: Cathie Wood (+5)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 75.2,
-    "cyclical": false,
-    "metrics": {
-     "price": 139.11,
-     "forward_pe": 50.726936,
-     "peg": null,
-     "op_margin": 0.01794,
-     "gross_margin": 0.56755,
-     "revenue_growth": 1.614,
-     "growth_1y": 14.928,
-     "rev_30d": 104.63714305676154,
-     "rev_90d": 134.9406426181418,
-     "up_30d": 14.0,
-     "down_30d": 1.0,
-     "analysts": 37.0
-    },
-    "rank": 9,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "ON",
-    "name": "ON Semiconductor Corporation",
-    "sector": "Technology",
-    "industry": "Semiconductors",
+    "ticker": "EXPE",
+    "name": "Expedia Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
     "score": 74.8,
-    "quality": 58,
-    "health": 68,
-    "value": 80,
-    "revisions": 89,
+    "quality": 72,
+    "health": 70,
+    "value": 88,
+    "revisions": 70,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
@@ -7165,9 +7258,79 @@
     "final": 74.8,
     "cyclical": true,
     "metrics": {
+     "price": 257.97,
+     "forward_pe": 10.374928,
+     "peg": 0.6654,
+     "op_margin": 0.1839,
+     "gross_margin": 0.90478,
+     "revenue_growth": 0.119,
+     "growth_1y": 0.16549999,
+     "rev_30d": 1.3458984761890829,
+     "rev_90d": 3.0462459127133825,
+     "up_30d": 16.0,
+     "down_30d": 6.0,
+     "analysts": 34.0
+    },
+    "rank": 8,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "score": 71.6,
+    "quality": 44,
+    "health": 61,
+    "value": 90,
+    "revisions": 86,
+    "eligible": true,
+    "bonus": 3,
+    "bonus_items": [
+     "M3 실적 개선 기업 (+3)"
+    ],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 74.6,
+    "cyclical": true,
+    "metrics": {
+     "price": 414.65,
+     "forward_pe": 6.8984737,
+     "peg": 0.9562,
+     "op_margin": 0.11652,
+     "gross_margin": 0.16202,
+     "revenue_growth": 0.609,
+     "growth_1y": -0.1261,
+     "rev_30d": 5.791009449425621,
+     "rev_90d": 79.83249242464134,
+     "up_30d": 13.0,
+     "down_30d": 3.0,
+     "analysts": 17.0
+    },
+    "rank": 9,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "ON",
+    "name": "ON Semiconductor Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "score": 74.5,
+    "quality": 58,
+    "health": 68,
+    "value": 80,
+    "revisions": 88,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 74.5,
+    "cyclical": true,
+    "metrics": {
      "price": 71.06,
      "forward_pe": 15.005458,
-     "peg": 0.1544,
+     "peg": 0.1489,
      "op_margin": 0.20412001,
      "gross_margin": 0.39898,
      "revenue_growth": 0.111,
@@ -7179,77 +7342,7 @@
      "analysts": 25.0
     },
     "rank": 10,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "EXPE",
-    "name": "Expedia Group, Inc.",
-    "sector": "Consumer Cyclical",
-    "industry": "Travel Services",
-    "score": 74.6,
-    "quality": 72,
-    "health": 70,
-    "value": 88,
-    "revisions": 69,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 74.6,
-    "cyclical": true,
-    "metrics": {
-     "price": 257.97,
-     "forward_pe": 10.374928,
-     "peg": 0.6733,
-     "op_margin": 0.1839,
-     "gross_margin": 0.90478,
-     "revenue_growth": 0.119,
-     "growth_1y": 0.1702,
-     "rev_30d": 1.0524711556563566,
-     "rev_90d": 2.7721853151924805,
-     "up_30d": 15.0,
-     "down_30d": 5.0,
-     "analysts": 34.0
-    },
-    "rank": 11,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "AVGO",
-    "name": "Broadcom Inc.",
-    "sector": "Technology",
-    "industry": "Semiconductors",
-    "score": 69.2,
-    "quality": 92,
-    "health": 64,
-    "value": 61,
-    "revisions": 61,
-    "eligible": true,
-    "bonus": 5,
-    "bonus_items": [
-     "M1 대가 최근분기 매수: Cathie Wood (+5)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 74.2,
-    "cyclical": true,
-    "metrics": {
-     "price": 347.01,
-     "forward_pe": 17.827318,
-     "peg": 0.36,
-     "op_margin": 0.48815,
-     "gross_margin": 0.75515,
-     "revenue_growth": 0.855,
-     "growth_1y": 0.6686,
-     "rev_30d": 0.4353299932406973,
-     "rev_90d": -0.598551343357362,
-     "up_30d": 2.0,
-     "down_30d": 0.0,
-     "analysts": 47.0
-    },
-    "rank": 12,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "status": "순위 밖"
    },
    {
     "ticker": "DELL",
@@ -7271,28 +7364,64 @@
     "final": 73.6,
     "cyclical": true,
     "metrics": {
-     "price": 344.28,
-     "forward_pe": 11.32145,
-     "peg": 0.3742,
+     "price": 344.53,
+     "forward_pe": 11.285283,
+     "peg": 0.3473,
      "op_margin": 0.09904,
      "gross_margin": 0.19910999,
      "revenue_growth": 0.577,
-     "growth_1y": 0.1733,
+     "growth_1y": 0.1757,
      "rev_30d": 15.48675885361656,
      "rev_90d": 46.61304851370482,
      "up_30d": 1.0,
      "down_30d": 0.0,
      "analysts": 25.0
     },
-    "rank": 13,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 11,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "score": 68.1,
+    "quality": 92,
+    "health": 64,
+    "value": 61,
+    "revisions": 57,
+    "eligible": true,
+    "bonus": 5,
+    "bonus_items": [
+     "M1 대가 최근분기 매수: Cathie Wood (+5)"
+    ],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 73.1,
+    "cyclical": true,
+    "metrics": {
+     "price": 347.01,
+     "forward_pe": 17.874178,
+     "peg": 0.3429,
+     "op_margin": 0.48815,
+     "gross_margin": 0.75515,
+     "revenue_growth": 0.855,
+     "growth_1y": 0.66440004,
+     "rev_30d": 0.10426001685072021,
+     "rev_90d": -0.9387177575682359,
+     "up_30d": 2.0,
+     "down_30d": 0.0,
+     "analysts": 47.0
+    },
+    "rank": 12,
+    "status": "순위 밖"
    },
    {
     "ticker": "TXN",
     "name": "Texas Instruments Incorporated",
     "sector": "Technology",
     "industry": "Semiconductors",
-    "score": 73.0,
+    "score": 73.1,
     "quality": 82,
     "health": 66,
     "value": 44,
@@ -7302,12 +7431,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 73.0,
+    "final": 73.1,
     "cyclical": true,
     "metrics": {
      "price": 303.6,
      "forward_pe": 26.099201,
-     "peg": 0.9473,
+     "peg": 0.9203,
      "op_margin": 0.41091,
      "gross_margin": 0.60243,
      "revenue_growth": 0.277,
@@ -7318,15 +7447,15 @@
      "down_30d": 0.0,
      "analysts": 29.0
     },
-    "rank": 14,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 13,
+    "status": "순위 밖"
    },
    {
     "ticker": "TER",
     "name": "Teradyne, Inc.",
     "sector": "Technology",
     "industry": "Semiconductor Equipment & Materials",
-    "score": 72.9,
+    "score": 72.7,
     "quality": 78,
     "health": 71,
     "value": 53,
@@ -7336,71 +7465,35 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 72.9,
+    "final": 72.7,
     "cyclical": true,
     "metrics": {
      "price": 249.55,
-     "forward_pe": 20.733858,
-     "peg": 0.4424,
+     "forward_pe": 20.730034,
+     "peg": 0.4186,
      "op_margin": 0.32512,
      "gross_margin": 0.59322,
      "revenue_growth": 0.698,
-     "growth_1y": 0.2744,
-     "rev_30d": 5.897729632327829,
-     "rev_90d": 6.887934303529124,
+     "growth_1y": 0.2745,
+     "rev_30d": 5.917262325833484,
+     "rev_90d": 6.907649638951821,
      "up_30d": 13.0,
      "down_30d": 1.0,
      "analysts": 16.0
     },
-    "rank": 15,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 14,
+    "status": "순위 밖"
    },
    {
-    "ticker": "PSX",
-    "name": "Phillips 66",
-    "sector": "Energy",
-    "industry": "Oil & Gas Refining & Marketing",
-    "score": 69.6,
-    "quality": 39,
-    "health": 62,
-    "value": 83,
-    "revisions": 90,
-    "eligible": true,
-    "bonus": 3,
-    "bonus_items": [
-     "M3 실적 개선 기업 (+3)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 72.6,
-    "cyclical": true,
-    "metrics": {
-     "price": 264.875,
-     "forward_pe": 8.206005,
-     "peg": 0.6758,
-     "op_margin": 0.081999995,
-     "gross_margin": 0.15079,
-     "revenue_growth": 0.464,
-     "growth_1y": -0.0714,
-     "rev_30d": 18.03200938458288,
-     "rev_90d": 61.4064450187218,
-     "up_30d": 14.0,
-     "down_30d": 3.0,
-     "analysts": 19.0
-    },
-    "rank": 16,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "OXY",
-    "name": "Occidental Petroleum Corporatio",
-    "sector": "Energy",
-    "industry": "Oil & Gas E&P",
+    "ticker": "ANET",
+    "name": "Arista Networks, Inc.",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
     "score": 72.5,
-    "quality": 59,
-    "health": 65,
-    "value": 70,
-    "revisions": 91,
+    "quality": 86,
+    "health": 76,
+    "value": 29,
+    "revisions": 95,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
@@ -7409,55 +7502,21 @@
     "final": 72.5,
     "cyclical": true,
     "metrics": {
-     "price": 58.76,
-     "forward_pe": 10.993143,
-     "peg": 0.876,
-     "op_margin": 0.29314,
-     "gross_margin": 0.74489,
-     "revenue_growth": 0.19,
-     "growth_1y": -0.2616,
-     "rev_30d": 29.552534245076323,
-     "rev_90d": 35.38056128724041,
-     "up_30d": 16.0,
-     "down_30d": 3.0,
-     "analysts": 27.0
-    },
-    "rank": 17,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "ANET",
-    "name": "Arista Networks, Inc.",
-    "sector": "Technology",
-    "industry": "Computer Hardware",
-    "score": 72.3,
-    "quality": 86,
-    "health": 77,
-    "value": 28,
-    "revisions": 95,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 72.3,
-    "cyclical": true,
-    "metrics": {
-     "price": 197.39,
-     "forward_pe": 32.6967,
-     "peg": 1.4998,
+     "price": 197.29,
+     "forward_pe": 32.680138,
+     "peg": 1.432,
      "op_margin": 0.43827,
      "gross_margin": 0.62881,
      "revenue_growth": 0.585,
      "growth_1y": 0.3793,
      "rev_30d": 15.720950916835038,
      "rev_90d": 17.006101295459302,
-     "up_30d": 17.0,
+     "up_30d": 18.0,
      "down_30d": 0.0,
      "analysts": 29.0
     },
-    "rank": 18,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 15,
+    "status": "순위 밖"
    },
    {
     "ticker": "MPWR",
@@ -7479,7 +7538,7 @@
     "metrics": {
      "price": 1390.54,
      "forward_pe": 29.808987,
-     "peg": 0.8256,
+     "peg": 0.7932,
      "op_margin": 0.29496,
      "gross_margin": 0.55263,
      "revenue_growth": 0.631,
@@ -7490,46 +7549,8 @@
      "down_30d": 0.0,
      "analysts": 14.0
     },
-    "rank": 19,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "SNDK",
-    "name": "Sandisk Corporation",
-    "sector": "Technology",
-    "industry": "Computer Hardware",
-    "score": 84.3,
-    "quality": 95,
-    "health": 72,
-    "value": 82,
-    "revisions": 86,
-    "eligible": true,
-    "bonus": 3,
-    "bonus_items": [
-     "M3 실적 개선 기업 (+3)"
-    ],
-    "penalty": 15,
-    "penalty_items": [
-     "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 73% vs 최근 4년 평균 10%"
-    ],
-    "final": 72.3,
-    "cyclical": true,
-    "metrics": {
-     "price": 885.01,
-     "forward_pe": 3.0617468,
-     "peg": null,
-     "op_margin": 0.7268,
-     "gross_margin": 0.79952,
-     "revenue_growth": 3.779,
-     "growth_1y": 0.2707,
-     "rev_30d": 8.977668875748158,
-     "rev_90d": 10.678674401240592,
-     "up_30d": 15.0,
-     "down_30d": 3.0,
-     "analysts": 24.0
-    },
-    "rank": 20,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 16,
+    "status": "순위 밖"
    },
    {
     "ticker": "KEYS",
@@ -7549,9 +7570,9 @@
     "final": 72.2,
     "cyclical": false,
     "metrics": {
-     "price": 297.71,
-     "forward_pe": 21.365616,
-     "peg": 0.6032,
+     "price": 297.68,
+     "forward_pe": 21.363464,
+     "peg": 0.5903,
      "op_margin": 0.19827,
      "gross_margin": 0.63278997,
      "revenue_growth": 0.365,
@@ -7562,30 +7583,138 @@
      "down_30d": 0.0,
      "analysts": 12.0
     },
-    "rank": 21,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 17,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "SNDK",
+    "name": "Sandisk Corporation",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "score": 84.1,
+    "quality": 95,
+    "health": 72,
+    "value": 82,
+    "revisions": 85,
+    "eligible": true,
+    "bonus": 3,
+    "bonus_items": [
+     "M3 실적 개선 기업 (+3)"
+    ],
+    "penalty": 15,
+    "penalty_items": [
+     "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 73% vs 최근 4년 평균 10%"
+    ],
+    "final": 72.1,
+    "cyclical": true,
+    "metrics": {
+     "price": 885.01,
+     "forward_pe": 3.0617468,
+     "peg": null,
+     "op_margin": 0.7268,
+     "gross_margin": 0.79952,
+     "revenue_growth": 3.779,
+     "growth_1y": 0.2707,
+     "rev_30d": 8.977668875748158,
+     "rev_90d": 10.678674401240592,
+     "up_30d": 15.0,
+     "down_30d": 3.0,
+     "analysts": 24.0
+    },
+    "rank": 18,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "OXY",
+    "name": "Occidental Petroleum Corporatio",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P",
+    "score": 71.9,
+    "quality": 59,
+    "health": 65,
+    "value": 69,
+    "revisions": 90,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 71.9,
+    "cyclical": true,
+    "metrics": {
+     "price": 58.75,
+     "forward_pe": 11.015178,
+     "peg": 0.8812,
+     "op_margin": 0.29314,
+     "gross_margin": 0.74489,
+     "revenue_growth": 0.19,
+     "growth_1y": -0.2647,
+     "rev_30d": 21.083578328433433,
+     "rev_90d": 35.5330297516797,
+     "up_30d": 16.0,
+     "down_30d": 3.0,
+     "analysts": 27.0
+    },
+    "rank": 19,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "score": 68.9,
+    "quality": 38,
+    "health": 62,
+    "value": 83,
+    "revisions": 87,
+    "eligible": true,
+    "bonus": 3,
+    "bonus_items": [
+     "M3 실적 개선 기업 (+3)"
+    ],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 71.9,
+    "cyclical": true,
+    "metrics": {
+     "price": 264.9,
+     "forward_pe": 8.315798,
+     "peg": 0.6809,
+     "op_margin": 0.081999995,
+     "gross_margin": 0.15079,
+     "revenue_growth": 0.464,
+     "growth_1y": -0.0798,
+     "rev_30d": 13.231489663615164,
+     "rev_90d": 49.167626230438586,
+     "up_30d": 14.0,
+     "down_30d": 4.0,
+     "analysts": 19.0
+    },
+    "rank": 20,
+    "status": "순위 밖"
    },
    {
     "ticker": "LRCX",
     "name": "Lam Research Corporation",
     "sector": "Technology",
     "industry": "Semiconductor Equipment & Materials",
-    "score": 71.8,
+    "score": 71.7,
     "quality": 81,
     "health": 73,
-    "value": 50,
-    "revisions": 82,
+    "value": 51,
+    "revisions": 81,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 71.8,
+    "final": 71.7,
     "cyclical": true,
     "metrics": {
      "price": 225.92,
      "forward_pe": 18.463053,
-     "peg": 1.0174,
+     "peg": 0.9832,
      "op_margin": 0.36951,
      "gross_margin": 0.51054,
      "revenue_growth": 0.544,
@@ -7596,85 +7725,49 @@
      "down_30d": 7.0,
      "analysts": 30.0
     },
-    "rank": 22,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 21,
+    "status": "순위 밖"
    },
    {
     "ticker": "EOG",
     "name": "EOG Resources, Inc.",
     "sector": "Energy",
     "industry": "Oil & Gas E&P",
-    "score": 71.7,
+    "score": 71.4,
     "quality": 66,
     "health": 68,
     "value": 62,
-    "revisions": 86,
+    "revisions": 85,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 71.7,
+    "final": 71.4,
     "cyclical": true,
     "metrics": {
-     "price": 158.33,
-     "forward_pe": 9.421813,
-     "peg": 1.1768,
+     "price": 158.32,
+     "forward_pe": 9.372962,
+     "peg": 1.1961,
      "op_margin": 0.3547,
      "gross_margin": 0.62984,
      "revenue_growth": 0.427,
-     "growth_1y": -0.1096,
-     "rev_30d": 9.201965227777084,
-     "rev_90d": 16.095723069309592,
+     "growth_1y": -0.097200006,
+     "rev_30d": 8.041755416114977,
+     "rev_90d": 17.07299830120454,
      "up_30d": 17.0,
      "down_30d": 4.0,
      "analysts": 29.0
     },
-    "rank": 23,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "LLY",
-    "name": "Eli Lilly and Company",
-    "sector": "Healthcare",
-    "industry": "Drug Manufacturers - General",
-    "score": 66.6,
-    "quality": 86,
-    "health": 61,
-    "value": 26,
-    "revisions": 88,
-    "eligible": true,
-    "bonus": 5,
-    "bonus_items": [
-     "M1 대가 최근분기 매수: Cathie Wood (+5)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 71.6,
-    "cyclical": false,
-    "metrics": {
-     "price": 1445.4,
-     "forward_pe": 28.542273,
-     "peg": 1.3191,
-     "op_margin": 0.51254004,
-     "gross_margin": 0.83634,
-     "revenue_growth": 0.386,
-     "growth_1y": 0.4311,
-     "rev_30d": 6.30604267424962,
-     "rev_90d": 8.601095561032727,
-     "up_30d": 22.0,
-     "down_30d": 1.0,
-     "analysts": 29.0
-    },
-    "rank": 24,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 22,
+    "status": "순위 밖"
    },
    {
     "ticker": "FANG",
     "name": "Diamondback Energy, Inc.",
     "sector": "Energy",
     "industry": "Oil & Gas E&P",
-    "score": 71.5,
+    "score": 71.4,
     "quality": 52,
     "health": 60,
     "value": 78,
@@ -7684,24 +7777,60 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 71.5,
+    "final": 71.4,
     "cyclical": true,
     "metrics": {
      "price": 184.93,
-     "forward_pe": 8.523234,
-     "peg": 1.0663,
+     "forward_pe": 8.486145,
+     "peg": 1.0823,
      "op_margin": 0.13883,
      "gross_margin": 0.73621005,
      "revenue_growth": 0.32,
      "growth_1y": -0.060100004,
      "rev_30d": 13.244087057471193,
      "rev_90d": 20.61410718565292,
-     "up_30d": 21.0,
+     "up_30d": 23.0,
      "down_30d": 3.0,
      "analysts": 30.0
     },
-    "rank": 25,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 23,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "LLY",
+    "name": "Eli Lilly and Company",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - General",
+    "score": 66.3,
+    "quality": 86,
+    "health": 61,
+    "value": 26,
+    "revisions": 87,
+    "eligible": true,
+    "bonus": 5,
+    "bonus_items": [
+     "M1 대가 최근분기 매수: Cathie Wood (+5)"
+    ],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 71.3,
+    "cyclical": false,
+    "metrics": {
+     "price": 1443.5,
+     "forward_pe": 28.504753,
+     "peg": 1.3341,
+     "op_margin": 0.51254004,
+     "gross_margin": 0.83634,
+     "revenue_growth": 0.386,
+     "growth_1y": 0.4311,
+     "rev_30d": 6.4622607495691975,
+     "rev_90d": 6.994299207314729,
+     "up_30d": 22.0,
+     "down_30d": 1.0,
+     "analysts": 29.0
+    },
+    "rank": 24,
+    "status": "순위 밖"
    },
    {
     "ticker": "APH",
@@ -7721,123 +7850,89 @@
     "final": 71.2,
     "cyclical": true,
     "metrics": {
-     "price": 78.27,
-     "forward_pe": 21.593807,
-     "peg": 0.7258,
+     "price": 78.23,
+     "forward_pe": 21.582775,
+     "peg": 0.7131,
      "op_margin": 0.28728,
      "gross_margin": 0.39209,
      "revenue_growth": 0.651,
      "growth_1y": 0.2785,
      "rev_30d": 8.833967884123423,
      "rev_90d": 12.428504075732949,
-     "up_30d": 11.0,
+     "up_30d": 16.0,
      "down_30d": 0.0,
      "analysts": 19.0
     },
-    "rank": 26,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 25,
+    "status": "순위 밖"
    },
    {
-    "ticker": "REGN",
-    "name": "Regeneron Pharmaceuticals, Inc.",
-    "sector": "Healthcare",
-    "industry": "Biotechnology",
-    "score": 70.5,
-    "quality": 57,
-    "health": 75,
-    "value": 57,
+    "ticker": "CSCO",
+    "name": "Cisco Systems, Inc.",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "score": 71.2,
+    "quality": 66,
+    "health": 62,
+    "value": 61,
     "revisions": 90,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 70.5,
+    "final": 71.2,
     "cyclical": false,
     "metrics": {
-     "price": 955.47,
-     "forward_pe": 13.510213,
-     "peg": 1.1595,
-     "op_margin": 0.30383,
-     "gross_margin": 0.46734002,
-     "revenue_growth": 0.363,
-     "growth_1y": 0.0287,
-     "rev_30d": 22.705131091912488,
-     "rev_90d": 23.259876739905017,
-     "up_30d": 5.0,
-     "down_30d": 1.0,
-     "analysts": 27.0
+     "price": 95.64,
+     "forward_pe": 15.922725,
+     "peg": 0.8817,
+     "op_margin": 0.25391,
+     "gross_margin": 0.64524,
+     "revenue_growth": 0.176,
+     "growth_1y": 0.091400005,
+     "rev_30d": 6.838810892151055,
+     "rev_90d": 7.595149851948308,
+     "up_30d": 4.0,
+     "down_30d": 0.0,
+     "analysts": 24.0
     },
-    "rank": 27,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 26,
+    "status": "순위 밖"
    },
    {
     "ticker": "GEV",
     "name": "GE Vernova Inc.",
     "sector": "Industrials",
     "industry": "Specialty Industrial Machinery",
-    "score": 70.4,
+    "score": 70.3,
     "quality": 67,
     "health": 76,
-    "value": 54,
-    "revisions": 82,
+    "value": 55,
+    "revisions": 81,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 70.4,
+    "final": 70.3,
     "cyclical": false,
     "metrics": {
-     "price": 802.755,
-     "forward_pe": 30.799238,
-     "peg": 1.511,
+     "price": 803.13,
+     "forward_pe": 30.813625,
+     "peg": 1.4826,
      "op_margin": 0.08218,
      "gross_margin": 0.21787001,
      "revenue_growth": 0.268,
      "growth_1y": 0.65660006,
      "rev_30d": 5.781130346858858,
      "rev_90d": 5.2005716490600085,
-     "up_30d": 17.0,
+     "up_30d": 19.0,
      "down_30d": 4.0,
      "analysts": 32.0
     },
-    "rank": 28,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "CPAY",
-    "name": "Corpay, Inc.",
-    "sector": "Technology",
-    "industry": "Software - Infrastructure",
-    "score": 70.1,
-    "quality": 83,
-    "health": 44,
-    "value": 76,
-    "revisions": 71,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 70.1,
-    "cyclical": false,
-    "metrics": {
-     "price": 462.1,
-     "forward_pe": 14.527404,
-     "peg": 0.8656,
-     "op_margin": 0.49785998,
-     "gross_margin": 0.80834,
-     "revenue_growth": 0.179,
-     "growth_1y": 0.136,
-     "rev_30d": 0.9607968478525176,
-     "rev_90d": 1.8060749794764186,
-     "up_30d": 14.0,
-     "down_30d": 1.0,
-     "analysts": 15.0
-    },
-    "rank": 29,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 27,
+    "status": "순위 밖"
    },
    {
     "ticker": "LITE",
@@ -7848,7 +7943,7 @@
     "quality": 55,
     "health": 73,
     "value": 40,
-    "revisions": 96,
+    "revisions": 95,
     "eligible": true,
     "bonus": 3,
     "bonus_items": [
@@ -7872,83 +7967,185 @@
      "down_30d": 0.0,
      "analysts": 25.0
     },
-    "rank": 30,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 28,
+    "status": "순위 밖"
    },
    {
-    "ticker": "HPE",
-    "name": "Hewlett Packard Enterprise Comp",
+    "ticker": "CPAY",
+    "name": "Corpay, Inc.",
     "sector": "Technology",
-    "industry": "Communication Equipment",
-    "score": 69.9,
-    "quality": 50,
-    "health": 50,
-    "value": 90,
+    "industry": "Software - Infrastructure",
+    "score": 70.0,
+    "quality": 83,
+    "health": 44,
+    "value": 76,
+    "revisions": 71,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 70.0,
+    "cyclical": false,
+    "metrics": {
+     "price": 462.22,
+     "forward_pe": 14.531177,
+     "peg": 0.8774,
+     "op_margin": 0.49785998,
+     "gross_margin": 0.80834,
+     "revenue_growth": 0.179,
+     "growth_1y": 0.136,
+     "rev_30d": 0.9607968478525176,
+     "rev_90d": 1.8060749794764186,
+     "up_30d": 14.0,
+     "down_30d": 1.0,
+     "analysts": 15.0
+    },
+    "rank": 29,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "REGN",
+    "name": "Regeneron Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "score": 69.8,
+    "quality": 57,
+    "health": 75,
+    "value": 57,
+    "revisions": 87,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 69.8,
+    "cyclical": false,
+    "metrics": {
+     "price": 955.47,
+     "forward_pe": 13.487478,
+     "peg": 1.1647,
+     "op_margin": 0.30383,
+     "gross_margin": 0.46734002,
+     "revenue_growth": 0.363,
+     "growth_1y": 0.026500002,
+     "rev_30d": 22.705131091912488,
+     "rev_90d": 23.259876739905017,
+     "up_30d": 7.0,
+     "down_30d": 2.0,
+     "analysts": 27.0
+    },
+    "rank": 30,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "APP",
+    "name": "Applovin Corporation",
+    "sector": "Communication Services",
+    "industry": "Advertising Agencies",
+    "score": 69.6,
+    "quality": 94,
+    "health": 69,
+    "value": 47,
+    "revisions": 68,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 69.6,
+    "cyclical": false,
+    "metrics": {
+     "price": 409.1,
+     "forward_pe": 19.611452,
+     "peg": 0.8614,
+     "op_margin": 0.77782995,
+     "gross_margin": 0.8878,
+     "revenue_growth": 0.555,
+     "growth_1y": 0.202,
+     "rev_30d": 4.072325022698231,
+     "rev_90d": 1.2883184316531446,
+     "up_30d": 11.0,
+     "down_30d": 6.0,
+     "analysts": 30.0
+    },
+    "rank": 31,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "ADI",
+    "name": "Analog Devices, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "score": 69.5,
+    "quality": 77,
+    "health": 60,
+    "value": 52,
     "revisions": 83,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.9,
-    "cyclical": false,
+    "final": 69.5,
+    "cyclical": true,
     "metrics": {
-     "price": 48.3,
-     "forward_pe": 10.19988,
-     "peg": 0.4007,
-     "op_margin": 0.081199996,
-     "gross_margin": 0.36622003,
-     "revenue_growth": 0.337,
-     "growth_1y": 0.2361,
-     "rev_30d": 0.7675643928431694,
-     "rev_90d": 16.927130274604128,
-     "up_30d": 12.0,
+     "price": 397.97,
+     "forward_pe": 24.090967,
+     "peg": 0.588,
+     "op_margin": 0.35671002,
+     "gross_margin": 0.65800005,
+     "revenue_growth": 0.396,
+     "growth_1y": 0.28280002,
+     "rev_30d": 1.1182742253981344,
+     "rev_90d": 9.673776437572565,
+     "up_30d": 4.0,
      "down_30d": 0.0,
-     "analysts": 21.0
+     "analysts": 33.0
     },
-    "rank": 31,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 32,
+    "status": "순위 밖"
    },
    {
-    "ticker": "COP",
-    "name": "ConocoPhillips",
-    "sector": "Energy",
-    "industry": "Oil & Gas E&P",
-    "score": 69.7,
-    "quality": 56,
-    "health": 66,
-    "value": 62,
-    "revisions": 90,
+    "ticker": "HPE",
+    "name": "Hewlett Packard Enterprise Comp",
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "score": 69.5,
+    "quality": 50,
+    "health": 50,
+    "value": 90,
+    "revisions": 82,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.7,
-    "cyclical": true,
+    "final": 69.5,
+    "cyclical": false,
     "metrics": {
-     "price": 142.36,
-     "forward_pe": 12.39818,
-     "peg": 0.9071,
-     "op_margin": 0.25877002,
-     "gross_margin": 0.49008,
-     "revenue_growth": 0.293,
-     "growth_1y": -0.0397,
-     "rev_30d": 14.257610570067591,
-     "rev_90d": 24.103110054311106,
-     "up_30d": 19.0,
-     "down_30d": 3.0,
-     "analysts": 27.0
+     "price": 48.29,
+     "forward_pe": 10.197768,
+     "peg": 0.3858,
+     "op_margin": 0.081199996,
+     "gross_margin": 0.36622003,
+     "revenue_growth": 0.337,
+     "growth_1y": 0.2361,
+     "rev_30d": 0.564265053793136,
+     "rev_90d": 16.33823301796169,
+     "up_30d": 2.0,
+     "down_30d": 0.0,
+     "analysts": 21.0
     },
-    "rank": 32,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 33,
+    "status": "순위 밖"
    },
    {
     "ticker": "KLAC",
     "name": "KLA Corporation",
     "sector": "Technology",
     "industry": "Semiconductor Equipment & Materials",
-    "score": 69.6,
+    "score": 69.5,
     "quality": 84,
     "health": 68,
     "value": 38,
@@ -7958,12 +8155,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.6,
+    "final": 69.5,
     "cyclical": true,
     "metrics": {
      "price": 152.32,
      "forward_pe": 21.457027,
-     "peg": 1.4187,
+     "peg": 1.3738,
      "op_margin": 0.4264,
      "gross_margin": 0.61465,
      "revenue_growth": 0.289,
@@ -7974,30 +8171,30 @@
      "down_30d": 2.0,
      "analysts": 26.0
     },
-    "rank": 33,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 34,
+    "status": "순위 밖"
    },
    {
     "ticker": "NXPI",
     "name": "NXP Semiconductors N.V.",
     "sector": "Technology",
     "industry": "Semiconductors",
-    "score": 69.6,
+    "score": 69.5,
     "quality": 78,
     "health": 57,
     "value": 79,
-    "revisions": 63,
+    "revisions": 62,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.6,
+    "final": 69.5,
     "cyclical": true,
     "metrics": {
      "price": 265.09,
      "forward_pe": 14.44796,
-     "peg": 0.5429,
+     "peg": 0.5384,
      "op_margin": 0.33845,
      "gross_margin": 0.56457,
      "revenue_growth": 0.193,
@@ -8008,49 +8205,83 @@
      "down_30d": 8.0,
      "analysts": 29.0
     },
-    "rank": 34,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 35,
+    "status": "순위 밖"
    },
    {
-    "ticker": "NTAP",
-    "name": "NetApp, Inc.",
-    "sector": "Technology",
-    "industry": "Software - Infrastructure",
-    "score": 69.5,
-    "quality": 76,
-    "health": 73,
-    "value": 46,
-    "revisions": 81,
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P",
+    "score": 69.3,
+    "quality": 56,
+    "health": 66,
+    "value": 62,
+    "revisions": 89,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.5,
+    "final": 69.3,
+    "cyclical": true,
+    "metrics": {
+     "price": 142.28,
+     "forward_pe": 12.375822,
+     "peg": 0.9215,
+     "op_margin": 0.25877002,
+     "gross_margin": 0.49008,
+     "revenue_growth": 0.293,
+     "growth_1y": -0.039100002,
+     "rev_30d": 14.39970705039351,
+     "rev_90d": 24.257450890323977,
+     "up_30d": 17.0,
+     "down_30d": 3.0,
+     "analysts": 27.0
+    },
+    "rank": 36,
+    "status": "순위 밖"
+   },
+   {
+    "ticker": "TPR",
+    "name": "Tapestry, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Luxury Goods",
+    "score": 69.3,
+    "quality": 71,
+    "health": 54,
+    "value": 60,
+    "revisions": 86,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 69.3,
     "cyclical": false,
     "metrics": {
-     "price": 181.37,
-     "forward_pe": 16.259237,
-     "peg": 2.063,
-     "op_margin": 0.26032,
-     "gross_margin": 0.70625997,
-     "revenue_growth": 0.299,
-     "growth_1y": 0.1153,
-     "rev_30d": 0.4581447251761117,
-     "rev_90d": 13.554854893924977,
-     "up_30d": 4.0,
+     "price": 132.41,
+     "forward_pe": 14.394708,
+     "peg": 1.895,
+     "op_margin": 0.23674999,
+     "gross_margin": 0.77135,
+     "revenue_growth": 0.111,
+     "growth_1y": 0.1035,
+     "rev_30d": 3.3596156201507257,
+     "rev_90d": 4.320942850143807,
+     "up_30d": 15.0,
      "down_30d": 0.0,
-     "analysts": 16.0
+     "analysts": 20.0
     },
-    "rank": 35,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 37,
+    "status": "순위 밖"
    },
    {
     "ticker": "GNRC",
     "name": "Generac Holdlings Inc.",
     "sector": "Industrials",
     "industry": "Specialty Industrial Machinery",
-    "score": 69.3,
+    "score": 69.1,
     "quality": 47,
     "health": 54,
     "value": 75,
@@ -8060,12 +8291,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 69.3,
+    "final": 69.1,
     "cyclical": false,
     "metrics": {
-     "price": 190.76,
-     "forward_pe": 13.649933,
-     "peg": 0.4843,
+     "price": 190.77,
+     "forward_pe": 13.650649,
+     "peg": 0.479,
      "op_margin": 0.08625,
      "gross_margin": 0.38179,
      "revenue_growth": 0.162,
@@ -8076,49 +8307,15 @@
      "down_30d": 0.0,
      "analysts": 18.0
     },
-    "rank": 36,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "ADI",
-    "name": "Analog Devices, Inc.",
-    "sector": "Technology",
-    "industry": "Semiconductors",
-    "score": 69.2,
-    "quality": 77,
-    "health": 60,
-    "value": 52,
-    "revisions": 82,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 69.2,
-    "cyclical": true,
-    "metrics": {
-     "price": 397.97,
-     "forward_pe": 24.090967,
-     "peg": 0.6047,
-     "op_margin": 0.35671002,
-     "gross_margin": 0.65800005,
-     "revenue_growth": 0.396,
-     "growth_1y": 0.28120002,
-     "rev_30d": 1.00386979563903,
-     "rev_90d": 9.549692379087748,
-     "up_30d": 4.0,
-     "down_30d": 0.0,
-     "analysts": 32.0
-    },
-    "rank": 37,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 38,
+    "status": "순위 밖"
    },
    {
     "ticker": "STX",
     "name": "Seagate Technology Holdings PLC",
     "sector": "Technology",
     "industry": "Computer Hardware",
-    "score": 81.2,
+    "score": 81.1,
     "quality": 84,
     "health": 68,
     "value": 76,
@@ -8132,12 +8329,12 @@
     "penalty_items": [
      "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 40% vs 최근 4년 평균 16%"
     ],
-    "final": 69.2,
+    "final": 69.1,
     "cyclical": true,
     "metrics": {
      "price": 528.29,
      "forward_pe": 8.0850525,
-     "peg": 0.3105,
+     "peg": 0.3009,
      "op_margin": 0.40488,
      "gross_margin": 0.50351,
      "revenue_growth": 0.61,
@@ -8148,8 +8345,8 @@
      "down_30d": 1.0,
      "analysts": 24.0
     },
-    "rank": 38,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 39,
+    "status": "순위 밖"
    },
    {
     "ticker": "MRVL",
@@ -8160,7 +8357,7 @@
     "quality": 70,
     "health": 66,
     "value": 55,
-    "revisions": 82,
+    "revisions": 81,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
@@ -8171,7 +8368,7 @@
     "metrics": {
      "price": 156.76,
      "forward_pe": 21.32818,
-     "peg": 0.4044,
+     "peg": 0.3854,
      "op_margin": 0.16812,
      "gross_margin": 0.52216,
      "revenue_growth": 0.365,
@@ -8182,53 +8379,56 @@
      "down_30d": 1.0,
      "analysts": 40.0
     },
-    "rank": 39,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 40,
+    "status": "순위 밖"
    },
    {
-    "ticker": "ALAB",
-    "name": "Astera Labs, Inc.",
-    "sector": "Technology",
-    "industry": "Semiconductors",
-    "score": 68.9,
-    "quality": 76,
-    "health": 77,
-    "value": 25,
+    "ticker": "SPCX",
+    "name": "Space Exploration Technologies ",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "score": 56.9,
+    "quality": 53,
+    "health": 52,
+    "value": 19,
     "revisions": 94,
     "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
+    "bonus": 8,
+    "bonus_items": [
+     "M1 대가 상위보유: Cathie Wood (+3)",
+     "M1 대가 최근분기 매수: Cathie Wood (+5)"
+    ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 68.9,
-    "cyclical": true,
+    "final": 64.9,
+    "cyclical": false,
     "metrics": {
-     "price": 221.83,
-     "forward_pe": 31.01676,
+     "price": 139.11,
+     "forward_pe": 50.726936,
      "peg": null,
-     "op_margin": 0.25516,
-     "gross_margin": 0.73892,
-     "revenue_growth": 1.537,
-     "growth_1y": 0.6325,
-     "rev_30d": 11.863022954635026,
-     "rev_90d": 11.86109838134757,
-     "up_30d": 18.0,
-     "down_30d": 0.0,
-     "analysts": 22.0
+     "op_margin": 0.01794,
+     "gross_margin": 0.56755,
+     "revenue_growth": 1.614,
+     "growth_1y": 14.928,
+     "rev_30d": 104.63714305676154,
+     "rev_90d": 139.27131412033117,
+     "up_30d": 14.0,
+     "down_30d": 1.0,
+     "analysts": 37.0
     },
-    "rank": 40,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
+    "rank": 68,
+    "status": "심층분석 후보 선정"
    },
    {
     "ticker": "MSTR",
     "name": "Strategy Inc",
     "sector": "Technology",
     "industry": "Software - Application",
-    "score": 51.3,
+    "score": 51.1,
     "quality": 31,
     "health": 28,
     "value": 50,
-    "revisions": 85,
+    "revisions": 84,
     "eligible": true,
     "bonus": 10,
     "bonus_items": [
@@ -8236,7 +8436,7 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 61.3,
+    "final": 61.1,
     "cyclical": false,
     "metrics": {
      "price": 111.62,
@@ -8246,13 +8446,13 @@
      "gross_margin": 0.67836,
      "revenue_growth": -0.025,
      "growth_1y": 1.9936999,
-     "rev_30d": 40.56774753649391,
-     "rev_90d": 262.50091361263594,
+     "rev_30d": 62.020070453805374,
+     "rev_90d": 310.55789996037805,
      "up_30d": 3.0,
      "down_30d": 2.0,
      "analysts": 15.0
     },
-    "rank": 109,
+    "rank": 110,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -8260,11 +8460,11 @@
     "name": "Circle Internet Group, Inc.",
     "sector": "Financial Services",
     "industry": "Capital Markets",
-    "score": 44.5,
+    "score": 42.7,
     "quality": 52,
     "health": 78,
-    "value": 29,
-    "revisions": 29,
+    "value": 30,
+    "revisions": 22,
     "eligible": true,
     "bonus": 8,
     "bonus_items": [
@@ -8273,7 +8473,7 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 52.5,
+    "final": 50.7,
     "cyclical": false,
     "metrics": {
      "price": 62.2,
@@ -8285,11 +8485,11 @@
      "growth_1y": 0.18290001,
      "rev_30d": -8.847638094701555,
      "rev_90d": -7.104256525452309,
-     "up_30d": 8.0,
-     "down_30d": 2.0,
+     "up_30d": 7.0,
+     "down_30d": 5.0,
      "analysts": 24.0
     },
-    "rank": 223,
+    "rank": 250,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -8297,7 +8497,7 @@
     "name": "Adobe Inc.",
     "sector": "Technology",
     "industry": "Software - Application",
-    "score": 65.8,
+    "score": 65.9,
     "quality": 82,
     "health": 69,
     "value": 93,
@@ -8307,17 +8507,17 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 65.8,
+    "final": 65.9,
     "cyclical": false,
     "metrics": {
      "price": 243.08,
      "forward_pe": 8.869208,
-     "peg": 0.5745,
+     "peg": 0.5855,
      "op_margin": 0.36323002,
      "gross_margin": 0.89252996,
      "revenue_growth": 0.129,
      "growth_1y": 0.1196,
-     "rev_30d": -0.40782124326066677,
+     "rev_30d": -0.3649178625803279,
      "rev_90d": 0.17310055402411706,
      "up_30d": 0.0,
      "down_30d": 3.0,
@@ -8330,7 +8530,7 @@
     "name": "NVIDIA Corporation",
     "sector": "Technology",
     "industry": "Semiconductors",
-    "score": 79.8,
+    "score": 79.9,
     "quality": 96,
     "health": 71,
     "value": 78,
@@ -8343,18 +8543,18 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 87.8,
+    "final": 87.9,
     "cyclical": true,
     "metrics": {
      "price": 162.85,
-     "forward_pe": 10.28589,
-     "peg": 0.2021,
+     "forward_pe": 10.272057,
+     "peg": 0.198,
      "op_margin": 0.65213996,
      "gross_margin": 0.74674004,
      "revenue_growth": 1.059,
-     "growth_1y": 0.7,
-     "rev_30d": -0.40824148894726003,
-     "rev_90d": 23.625984058505704,
+     "growth_1y": 0.6998,
+     "rev_30d": -0.3827303230995425,
+     "rev_90d": 23.657651769062838,
      "up_30d": 7.0,
      "down_30d": 0.0,
      "analysts": 53.0
