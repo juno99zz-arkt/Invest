@@ -460,7 +460,8 @@ def finalize():
         weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights"), prev_weights,
                                                      analyses, prices, meta, stance, _profile(), res.get("allocation"),
                                                      new_tickers=[d["ticker"] for d in decisions if d["action"] == "신규편입"],
-                                                     fear=fear_t, prev_alloc=_last_alloc(hist, week))
+                                                     fear=fear_t, prev_alloc=_last_alloc(hist, week),
+                                                     prev_alerts={h["ticker"]: h.get("alert_level") for h in hist.get("portfolio", [])})
         alloc["agent_reason"] = res.get("weights_reason")
         for n in alloc["notes"]:
             print("  비중: " + n)
@@ -601,7 +602,8 @@ def finalize_interim(req, res):
     weights, alloc = aside_bridge.size_portfolio([h["ticker"] for h in kept], res.get("target_weights") or keep_w,
                                                  prev_weights, analyses, px, meta, stance, _profile(),
                                                  res.get("allocation"), new_tickers=new_tk, fear=fear_t,
-                                                 prev_alloc=_last_alloc(hist))
+                                                 prev_alloc=_last_alloc(hist),
+                                                 prev_alerts={h["ticker"]: h.get("alert_level") for h in hist.get("portfolio", [])})
     alloc["agent_reason"] = res.get("weights_reason")
     for h in removed:
         p = px.get(h["ticker"])

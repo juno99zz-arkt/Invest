@@ -212,7 +212,7 @@ def expected_return(a, price, probs=None):
 
 
 def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile, allocation=None, new_tickers=None,
-                   fear=None, staged=None, prev_alloc=None):
+                   fear=None, staged=None, prev_alloc=None, prev_alerts=None):
     """최대 5종목 개별주 + 원화 현금 계좌의 비중 결정 (ETF·코어 없음, 종목 선택과 분리).
     1) 종목별 출발점: 보유 종목은 Agent 제안(없으면 지난 비중), 신규는 확신도별 기본(5→30, 4→20, 3→10 탐색 비중)
        — Agent 는 신규 종목을 확신도 기본보다 높일 수 없음
@@ -300,7 +300,13 @@ def size_portfolio(kept, proposed, prev, analyses, prices, meta, stance, profile
                     notes.append(f"{tk}: 약세 시나리오 {down * 100:.0f}% → 전체 손실 {max_loss}% 이내로 비중 {x}%→{cap}%")
                     x = cap
         lvl = a.get("alert_level")
-        if lvl == "비중 재검토":
+        if lvl == "비중 재검토" and pw is not None and (prev_alerts or {}).get(tk) == "비중 재검토":
+            # 이미 직전 판단에서 절반 축소가 반영된 같은 경고 구간 → 매일 재판단마다 다시 절반으로 줄이지 않고 동결
+            # (더 줄이려면 Agent 가 target_weights 를 낮추거나 '논리 붕괴'로 올린다)
+            if x > pw:
+                notes.append(f"{tk}: 경고 '비중 재검토' 유지(이미 축소 반영) → 지난 비중 {pw}% 동결")
+                x = pw
+        elif lvl == "비중 재검토":
             nx = max(5, _floor5((pw or x) / 2))
             notes.append(f"{tk}: 경고 '비중 재검토' → {x}%→{min(x, nx)}%")
             x = min(x, nx)
