@@ -271,8 +271,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 165,
-   "last_price": 155.46,
-   "observed_date": "2026-11-18",
+   "last_price": 150.96,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -2923,8 +2923,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 225,
-   "last_price": 235.55,
-   "observed_date": "2026-11-18",
+   "last_price": 226.2,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -3600,8 +3600,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 88,
-   "last_price": 96.5,
-   "observed_date": "2026-11-18",
+   "last_price": 90.32,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -3877,8 +3877,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 41,
-   "last_price": 54.63,
-   "observed_date": "2026-11-18",
+   "last_price": 53.31,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -4915,8 +4915,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 900,
-   "last_price": 1101.38,
-   "observed_date": "2026-11-18",
+   "last_price": 1139.95,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -5210,8 +5210,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 1395,
-   "last_price": 1383.11,
-   "observed_date": "2026-11-18",
+   "last_price": 1395.27,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -6002,8 +6002,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 107,
-   "last_price": 119.32,
-   "observed_date": "2026-11-18",
+   "last_price": 113.725,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -6270,8 +6270,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 545,
-   "last_price": 646.0,
-   "observed_date": "2026-11-18",
+   "last_price": 646.36,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -7062,8 +7062,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 165,
-   "last_price": 190.195,
-   "observed_date": "2026-11-18",
+   "last_price": 194.43,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -7330,8 +7330,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 42,
-   "last_price": 46.88,
-   "observed_date": "2026-11-18",
+   "last_price": 45.52,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -7863,8 +7863,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 285,
-   "last_price": 363.8929,
-   "observed_date": "2026-11-18",
+   "last_price": 343.73,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  },
@@ -8123,8 +8123,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 52,
-   "last_price": 56.52,
-   "observed_date": "2026-11-18",
+   "last_price": 53.76,
+   "observed_date": "2026-11-19",
    "pending": false
   }
  }
