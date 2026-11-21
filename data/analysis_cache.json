@@ -274,7 +274,7 @@
    "version": 1,
    "buy_below": 152,
    "last_price": 125.53,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -1085,120 +1085,13 @@
      }
     ]
    }
-  }
- },
- "WDAY": {
-  "analyzed_date": "2026-09-26",
-  "price": 189.45,
-  "eps_next_fy": 13.23298,
-  "next_earnings": "2026-08-27",
-  "analysis": {
-   "one_line_thesis": "대기업 HR·재무 시스템오브레코드라는 강한 해자와 97% 총유지율을 유지한 채 구독매출 13% 성장·비GAAP 영업이익률 31%·FCF 31.8억달러를 내고 있는데, 'AI가 좌석형 SaaS를 잠식한다'는 공포로 선행 PER 14~17배·FCF수익률 6.7%까지 디레이팅된 저평가 우량주.",
-   "quality": {
-    "score": 4,
-    "moat": "포춘500 다수가 쓰는 HCM·재무 시스템오브레코드로 교체비용이 극단적으로 높고, FY27 2분기 총유지율(GRR) 97%로 이탈이 거의 없다. 구독매출이 전체 매출의 약 93%(2.471B/2.649B)로 반복성이 높고, 성장 동력도 신규 로고보다 기존 고객 내 확장에서 나온다는 점이 해자의 실체를 보여준다.",
-    "growth_durability": "FY27 2분기 매출 26.5억달러(+12.8%), 구독 +13.9%, cRPO 90.3억달러(+14.2%)로 두 자릿수 성장은 유지되나 감속 추세다(FY26 구독 +14.4% → FY27 +13% → 회사의 FY28 초기 목표 약 +11%). 반면 에이전틱 AI 제품이 분기 신규 ACV의 25% 이상(1억달러+), AI 누적 ARR 약 6억달러로 '좌석 외' 매출원이 실제로 생기고 있어 감속을 일부 상쇄한다. 총 구독 백로그는 274억달러로 +8%에 그쳐(계약 믹스·기간 영향) 장기 성장의 질에는 물음표가 남는다.",
-    "summary": "성장률은 20%대에서 10%대 초반으로 내려왔지만, 유지율·구독 비중·기존 고객 확장 구조를 볼 때 성장의 대부분은 구조적이며 일회성이 아니다. AI ACV 비중 25%는 제품 경쟁력이 아직 살아있다는 증거이나, FY28 11% 가이드는 성숙 국면 진입을 인정한 것이다."
-   },
-   "financial_health": {
-    "score": 4,
-    "cash_flow": "TTM FCF 28.4억달러(FCF마진 30%), 회사 FY27 가이드는 영업현금흐름 34.5억달러·FCF 31.8억달러(+15%)로 현금창출이 이익보다 빠르게 늘고 있다. 다만 TTM 주식보상비용 16.5억달러(매출의 약 16~17%)를 차감하면 실질 FCF는 약 12억달러 수준으로, 현금흐름의 질은 표면 수치보다 한 단계 낮게 봐야 한다.",
-    "debt": "순부채/EBITDA 0.23배로 사실상 무차입에 가까운 구조이며, 대규모 자사주 매입으로 현금이 줄었음에도 레버리지 부담은 미미하다. 전환사채·회사채가 있으나 연간 30억달러 이상의 FCF로 충분히 감당 가능한 수준이다.",
-    "dilution": "TTM 자사주 매입 52.3억달러로 SBC를 크게 초과해 유통주식수가 1년간 -9.7% 감소했고, 2분기에 13억달러를 매입한 뒤 신규 40억달러(무기한) 매입 승인을 추가했다. SBC 희석을 상쇄하는 수준을 넘어 주당가치를 적극적으로 끌어올리는 국면이다.",
-    "summary": "무차입에 가까운 대차대조표 + 30% FCF마진 + 순감소하는 주식수라는 조합은 소프트웨어 업종에서도 상위권이다. 유일한 감점 요인은 매출 대비 16~17%에 달하는 SBC로, 비GAAP 수익성이 실제보다 과대 표시된다는 점이다."
-   },
-   "valuation": {
-    "score": 4,
-    "current_view": "주가 189.45달러, 시총 457억달러로 선행 PER 14.3배(차기 회계연도 EPS 컨센서스 13.23달러), PEG 0.70, FCF수익률 6.67%다. FY27 가이드 FCF 31.8억달러 기준 EV/FCF는 15배 안팎으로, 과거 워크데이가 통상 받던 30배 이상의 FCF 멀티플은 물론 두 자릿수 성장 SaaS 평균 대비로도 크게 할인된 수준이다. 참고로 trailing PER 38.9배는 FY27 2분기 GAAP EPS 2.57달러(전년비 +206%)에 일회성 성격 항목이 섞인 영향으로 왜곡돼 있어 그대로 쓰기 어렵다.",
-    "upside_scenario": "구독 성장 11~13%가 유지되고 영업이익률이 FY27 31%에서 회사 말대로 매년 2%p 이상 확대되면 EPS는 연 19~20%(컨센서스 FY27 +20%, 차기 +19.5%) 성장하고, 여기에 연 5~9%의 주식수 감소가 더해진다. 멀티플이 그대로 유지돼도 연 20% 내외의 수익률이 가능하며, 'AI 수혜주'로 재평가돼 선행 PER 20배만 회복해도 250~270달러(애널리스트 평균목표 208.7달러 상회)가 정당화된다.",
-    "summary": "가격이 낙관이 아니라 비관(AI 구조적 쇠퇴 시나리오)을 반영하고 있다는 점이 이 종목의 핵심 매력이다. 정당화 조건은 단순하다 — 성장률이 10% 밑으로 무너지지 않고 마진 확대가 계속되면 현재 배수는 과도한 할인이다."
-   },
-   "catalysts": [
-    {
-     "event": "연례 Financial Analyst Day (라스베이거스, Workday Rising 중 개최)",
-     "timing": "2026-10-13",
-     "impact": "불확실",
-     "detail": "FY28 구독 성장 약 11%와 '영업이익률 2%p 이상 확대'라는 초기 목표를 공식 중기 목표로 구체화할 자리다. 마진 로드맵이 31%→33% 이상으로 명확해지고 AI 제품 수익화 목표(현재 AI ARR 약 6억달러)가 제시되면 멀티플 회복의 방아쇠가 되지만, 성장 목표가 10% 아래로 제시되면 반대 방향으로 크게 움직일 수 있다."
-    },
-    {
-     "event": "FY27 3분기 실적 (cRPO 가이드 11~12%)",
-     "timing": "2026년 11월 하순",
-     "impact": "불확실",
-     "detail": "3분기 총매출 26.9억달러(+11%)·구독 25.15억달러(+12%)·비GAAP 영업이익률 30% 가이드 대비 실제치와 cRPO 성장률이 핵심이다. 2분기 cRPO +14.2%에서 가이드대로 11~12%로 둔화되는지, 아니면 다시 13% 이상을 지키는지가 'AI 잠식' 논쟁의 1차 판정 기준이 된다."
-    },
-    {
-     "event": "에이전틱 AI 제품 ACV 확대 및 Sana Enterprise 등 신제품 상용화",
-     "timing": "향후 2~4개 분기",
-     "impact": "긍정",
-     "detail": "2분기 AI 신규 ACV 1억달러 돌파(신규 ACV의 25% 이상), 신규 수주 절반 이상이 AI 솔루션 포함이라는 추세가 이어지면 좌석 수와 무관한 매출원이 확보된다. 경영진은 Sana Enterprise, Workday Extend 등에서 추가 업사이드를 언급했다."
-    },
-    {
-     "event": "40억달러 신규 자사주 매입 집행",
-     "timing": "지속(분기별)",
-     "impact": "긍정",
-     "detail": "TTM 52.3억달러 매입으로 주식수가 이미 9.7% 줄었고 신규 40억달러 무기한 승인이 더해졌다. 연 30억달러 이상의 FCF가 뒷받침되므로 EPS 성장에 매 분기 2~3%p를 더하는 구조적 지원 요인이다."
-    },
-    {
-     "event": "차기 회계연도 EPS 컨센서스 상향 흐름 지속 여부",
-     "timing": "1~2개 분기",
-     "impact": "긍정",
-     "detail": "최근 30일간 상향 35건 대 하향 1건, 컨센서스 +4.7% 상향으로 추정치 모멘텀이 매우 긍정적이다. 4개 분기 연속 EPS 서프라이즈(+5~7%)가 이어지고 있어 상향 사이클이 당분간 지속될 가능성이 높다."
-    }
-   ],
-   "bear_case": {
-    "summary": "가장 강한 약세 논리는 '워크데이 과금이 직원 수에 연동된다'는 구조적 취약성이다. AI 에이전트가 화이트칼라 고용 증가를 둔화시키면 좌석 기반 구독의 자연 성장분이 사라지고, 성장은 FY28 11% → 이후 한 자릿수로 계단식 하락할 수 있다. 실제로 총 구독 백로그 성장률이 +8%로 cRPO(+14.2%)보다 훨씬 낮은 점은 장기 계약의 질이 약해지고 있다는 신호로 해석될 수 있으며, 이 경우 현재의 '싸 보이는' 멀티플은 밸류 트랩이 된다.",
-    "key_risks": [
-     "직원 수 연동 과금 모델의 AI 리스크: 고객사 인력 증가 둔화가 곧 구독 성장 둔화로 직결된다.",
-     "성장 감속의 연속성: FY26 구독 +14.4% → FY27 +13% → FY28 목표 약 11%로 매년 2%p 내외씩 낮아지고 있다.",
-     "총 백로그 +8%(274억달러) vs cRPO +14.2%의 괴리 — 계약 기간 단축·기존고객 위주 믹스로 장기 가시성이 약화.",
-     "경쟁 심화: Oracle Fusion·SAP SuccessFactors의 AI 번들링, 중견시장에서 Rippling·Deel 등 신흥 경쟁자의 침투.",
-     "매출의 16~17%에 달하는 SBC(연 16.5억달러) — 비GAAP 마진 31%의 상당 부분이 주주 희석으로 지불되고 있다.",
-     "소프트웨어 섹터 전반의 AI발 디레이팅이 장기화되면 실적이 좋아도 멀티플이 회복되지 않을 수 있다(1년 주가 -23.2%)."
-    ],
-    "thesis_breakers": [
-     "cRPO 성장률이 2개 분기 연속 10% 미만으로 내려가는 경우(현재 14.2%, 3분기 가이드 11~12%).",
-     "10월 13일 애널리스트 데이 또는 FY28 공식 가이던스에서 구독 성장 목표가 10% 미만으로 제시되는 경우.",
-     "총유지율(GRR)이 97%에서 95% 이하로 하락하거나 순유지율 악화가 언급되는 경우.",
-     "AI 신규 ACV가 분기 1억달러·신규 ACV 25% 비중에서 정체·역행하는 경우(AI 수익화 실패).",
-     "비GAAP 영업이익률 확대가 멈추거나(연 +2%p 미달) FCF 가이던스가 하향되는 경우.",
-     "자사주 매입이 급감해 유통주식수 감소가 멈추고 SBC 희석이 재개되는 경우."
-    ]
-   },
-   "thesis_status": "해당없음",
-   "thesis_status_reason": "신규 편입 후보로, 기존 보유 논리가 없어 해당사항 없음. 참고로 데이터 요약의 next_earnings(2026-08-27)는 이미 지난 일정이며, 해당 FY27 2분기 실적(매출 26.5억달러 +13%, 비GAAP EPS 2.75달러, FY27 가이던스 상향)은 본 분석에 반영했다.",
-   "verdict": "편입 적합",
-   "verdict_reason": "해자(GRR 97%, 시스템오브레코드)·재무(무차입 수준, FCF마진 30%, 주식수 -9.7%)·가격(선행 PER 14.3배, FCF수익률 6.7%, PEG 0.70)·추정치 모멘텀(30일 상향 35 대 하향 1)이 모두 우호적이며, 주가는 낙관이 아니라 'AI가 좌석형 SaaS를 죽인다'는 비관을 이미 반영하고 있다. 성장이 11~13%만 유지되고 마진이 연 2%p씩 확대되면 멀티플 재평가 없이도 EPS 20% 성장 + 자사주 매입으로 6개월~수년 보유의 기대값이 뚜렷하다. 다만 FY28 성장 목표 11%와 총 백로그 +8%는 감속이 현재진행형임을 뜻하므로, 10월 13일 애널리스트 데이와 11월 3분기 cRPO를 반드시 확인하는 조건부 편입으로 본다.",
-   "conviction": 3,
-   "sources": [
-    {
-     "title": "Workday Announces Fiscal 2027 Second Quarter Financial Results (2026-08-27)",
-     "url": "https://newsroom.workday.com/2026-08-27-Workday-Announces-Fiscal-2027-Second-Quarter-Financial-Results"
-    },
-    {
-     "title": "Workday Q2 FY27 slides: AI drives 25% of new sales, margins expand (Investing.com)",
-     "url": "https://www.investing.com/news/company-news/workday-q2-fy27-slides-ai-drives-25-of-new-sales-margins-expand-93CH-4880278"
-    },
-    {
-     "title": "Workday (WDAY) Q2 2027 Earnings Call Transcript (The Motley Fool)",
-     "url": "https://www.fool.com/earnings/call-transcripts/2026/08/31/workday-wday-q2-2027-earnings-call-transcript/"
-    },
-    {
-     "title": "WDAY Q2 Earnings Beat Estimates on Subscription Growth, Margin Gains (Yahoo Finance/Zacks)",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/wday-q2-earnings-beat-estimates-143300884.html"
-    },
-    {
-     "title": "Workday to Hold Annual Financial Analyst Day on October 13, 2026",
-     "url": "https://newsroom.workday.com/2026-09-01-Workday-to-Hold-Annual-Financial-Analyst-Day-on-October-13,-2026"
-    },
-    {
-     "title": "Workday, Inc. Form 8-K – FY2026 4Q 실적 및 FY2027 가이던스 (SEC)",
-     "url": "https://www.sec.gov/Archives/edgar/data/1327811/000132781126000010/wday-01312026x991.htm"
-    },
-    {
-     "title": "Workday Q2 FY2027 Earnings Call Transcript (cRPO·백로그·유지율)",
-     "url": "https://www.roic.ai/quote/WDAY/transcripts/2027-year/2-quarter"
-    }
-   ]
+  },
+  "price_review": {
+   "version": 1,
+   "buy_below": 300,
+   "last_price": 261.51,
+   "observed_date": "2026-11-22",
+   "pending": true
   }
  },
  "RDDT": {
@@ -2525,112 +2418,6 @@
    "pending": false
   }
  },
- "ADI": {
-  "analyzed_date": "2026-09-26",
-  "price": 393.6,
-  "eps_next_fy": 16.34812,
-  "next_earnings": "2026-11-24",
-  "analysis": {
-   "one_line_thesis": "아날로그 반도체 2위 업체 ADI가 산업용 사이클 회복과 AI 데이터센터 전력(grid-to-chip) 수요로 사상 최고 실적·마진을 내고 있으나, 현재 주가는 사상 최고 수준의 마진(비GAAP 영업이익률 52%)이 유지된다는 전제를 이미 반영하고 있어 '좋은 기업, 애매한 진입 시점'이다.",
-   "quality": {
-    "score": 4,
-    "moat": "고성능 아날로그는 제품 수명이 10년 이상이고 설계 인(design-in) 후 교체 비용이 커 전환율이 낮다. ADI는 산업·항공우주·ATE 등 고부가 영역에서 수만 개 SKU와 직간접 채널을 보유하며, 경영진은 Maxim 인수 시너지를 2026년 7억 달러, 2027년 누적 10억 달러로 제시했다. 내부 팹+파운드리 하이브리드(하이브리드 생산 모델)로 공급 유연성을 확보한 점도 사이클 상승기에 점유율 방어 요인이다.",
-    "growth_durability": "FY2026 3분기 매출 40.2억 달러(+40% YoY), 비GAAP 총이익률 72.5%, 4분기 가이던스 43억±1억 달러·비GAAP 영업이익률 52%로 FY2026 매출은 약 151억 달러(FY2025 110억 달러 대비 +37%)가 예상된다. 다만 FY2024 매출이 94억 달러까지 빠졌던 재고조정 이후의 사이클 반등분이 성장의 상당 부분이며, 구조적 신성장 축인 데이터센터+ATE 합산 비중은 매출의 약 20% 수준이다. 경영진은 2030년 데이터센터·에너지 SAM이 1년 전 전망 대비 2배로 커졌다고 밝혀 secular 스토리는 강화됐으나, 연 35~40% 성장률은 명백히 사이클 성격이다.",
-    "summary": "해자(설계 인 고착성, 포트폴리오 폭, 산업/방산 노출)는 실체가 분명하고 AI 전력 체인이라는 새 성장축이 붙었다. 그러나 현재 성장률과 마진은 사이클 회복+재고 리스탁의 증폭 효과를 크게 포함하고 있어, 구조적 성장률(중장기 7~10%)과 현재 실적을 구분해서 봐야 한다."
-   },
-   "financial_health": {
-    "score": 4,
-    "cash_flow": "TTM 영업현금흐름 55억 달러, CapEx 6억 달러로 잉여현금흐름 49억 달러(매출의 36%)를 기록했다. TTM 주식보상비용은 3.5억 달러로 FCF의 약 7%에 불과해 현금흐름의 질이 높다. CapEx를 매출의 4~6% 이내로 유지하는 자산경량 하이브리드 모델 덕에 업사이클에서도 FCF 전환이 잘 된다.",
-    "debt": "순부채/EBITDA 약 1.0배로 부담이 낮고, 사이클 하강기에도 배당을 유지할 수 있는 수준이다. 다만 Linear·Maxim 인수 잔재로 자본총계 대비 무형자산·영업권 비중이 커 ROE가 12.2%에 그치고 GAAP 이익이 상각비로 눌린다(GAAP 후행 PER 46.7배 vs 비GAAP 기준 FY2026 약 31배).",
-    "dilution": "TTM 자사주 매입 31.3억 달러로 최근 1년 주식수 -1.5%, 3분기에만 배당·자사주로 17억 달러를 환원했다. 1분기에 분기배당을 11% 인상한 1.10달러로 올려 22년 연속 증배를 이어갔고, 장기적으로 FCF의 100% 환원(배당 40~60%+나머지 자사주) 정책을 유지 중이다.",
-    "summary": "현금창출력·레버리지·환원정책 모두 우량하다. 유일한 관찰 포인트는 수요 가속에 대비해 사상 최대 재고(재고일수 156일, 다이뱅크 전략적 축적)를 쌓고 있다는 점으로, 수요가 꺾이면 재고평가·가동률 역풍으로 마진과 운전자본이 동시에 악화될 수 있다."
-   },
-   "valuation": {
-    "score": 2,
-    "current_view": "주가 393.6달러는 FY2026 비GAAP EPS 추정치 약 12.9달러 기준 약 31배, FY2027 컨센서스 16.35달러 기준 24.1배다(PEG 0.58). 문제는 분모가 비GAAP 영업이익률 52%, 총이익률 74%라는 회사 역사상 최고 수준의 마진을 전제로 한다는 점이다. 중간 사이클(매출 130억 달러대, 영업이익률 42~45%) 정상화 EPS를 10~11달러로 보면 현 주가는 정상화 이익의 36~39배로, 과거 ADI의 20~30배 밴드 상단을 넘는다.",
-    "upside_scenario": "AI 데이터센터 전력(Empower Semiconductor의 수직 전력전달 기술 포함)과 ATE가 2027년에도 두 자릿수 성장하고 산업 리스탁이 이어져 FY2027 EPS가 17~18달러로 상향되고 25배가 유지되면 430~450달러(+10~15%), 애널리스트 평균 목표가 470달러(+20%)에 근접한다. 추정치 리비전은 90일 +10.6%, 30일 상향 23건·하향 0건으로 아직 상승 방향이다.",
-    "summary": "저PEG는 사이클 피크 이익을 분모에 넣었을 때 나타나는 전형적 착시일 수 있다. 1년 +61% 상승 후 고점 대비 -11.4% 수준으로, 상방 10~20% 대비 사이클 정상화 시 -30% 이상의 하방이 열려 있어 현재 가격의 위험보상비는 매력적이지 않다."
-   },
-   "catalysts": [
-    {
-     "event": "FY2026 4분기 실적 및 FY2027 초기 전망 제시",
-     "timing": "2026년 11월 24일",
-     "impact": "불확실",
-     "detail": "가이던스는 매출 43억±1억 달러, 비GAAP EPS 3.86±0.15달러, 총이익률 약 74%(전분기 대비 +150bp), 영업이익률 52%다. 경영진이 FY2027을 '왕성한 성장의 해'로 예고한 만큼 구체적 수주·수율·마진 지속성 코멘트가 멀티플 방향을 결정한다."
-    },
-    {
-     "event": "데이터센터 전력 플랫폼 및 Empower Semiconductor 통합 매출화",
-     "timing": "2026년 말~2027년",
-     "impact": "긍정",
-     "detail": "Empower 인수는 AI 가속기의 전력밀도 병목을 겨냥한 'grid-to-core' 전략의 핵심으로, 초기 매출은 2026년 말, 본격 확대는 2027년으로 안내됐다. 데이터센터는 4분기에 전분기 대비 약 10% 성장해 성장의 선두가 될 전망이다."
-    },
-    {
-     "event": "산업·ATE 수요 사이클 지속 여부(수주·채널 재고)",
-     "timing": "매 분기",
-     "impact": "불확실",
-     "detail": "3분기 채널 재고 주수는 목표(6~7주)를 밑돌아 여전히 타이트하지만, 자체 재고는 사상 최대다. 채널 주수가 7주 이상으로 올라가면서 매출 증가율이 둔화되면 리스탁 수요의 되돌림 신호로 해석된다."
-    },
-    {
-     "event": "배당 인상 및 자사주 매입 지속",
-     "timing": "2027년 2월(1분기 실적 시점)",
-     "impact": "긍정",
-     "detail": "직전 인상은 분기 1.10달러(+11%)로 22년 연속 증배였고, FCF 49억 달러 기반이라 두 자릿수 인상 여력이 있다. 주식수는 연 1.5% 감소 중으로 EPS에 소폭 기여한다."
-    }
-   ],
-   "bear_case": {
-    "summary": "아날로그 산업은 4~5년 주기로 재고 사이클을 반복해 왔고, ADI는 지금 매출 +40%, 비GAAP 영업이익률 52%, 총이익률 74%라는 역사적 피크 근처에 있다. 피크 마진·피크 성장률 위에 얹힌 24배 선행 PER은 사이클이 한 번만 꺾여도 이익과 멀티플이 동시에 축소되는 더블 디레이팅 위험을 안고 있다. FY2024 매출이 전년 대비 -23%(123억→94억 달러) 급감했던 전례가 이 리스크의 실측치다.",
-    "key_risks": [
-     "사이클 피크 리스크: 산업·자동차 고객의 리스탁이 끝나면 매출이 정상화되며 가동률 하락으로 총이익률이 70% 아래로 되돌아갈 수 있다(FY2024 사례).",
-     "경쟁 심화: TI의 300mm 내재화 기반 공격적 캐파·가격 정책, 그리고 중국 로컬 아날로그 업체의 범용 영역 대체가 장기 ASP·점유율을 압박한다.",
-     "AI 노출의 양면성: 데이터센터+ATE 20% 비중은 성장 동력인 동시에 하이퍼스케일러 캐펙스 조정 시 멀티플 프리미엄이 먼저 빠지는 부분이며, 전력 반도체 영역은 MPS·인피니언·TI 등과 경쟁이 치열하다.",
-     "재고·운전자본: 사상 최대 재고와 다이뱅크 축적은 수요 가속 전제에 베팅한 것으로, 수요가 어긋나면 충당금과 가동률 손실이 동시에 발생한다.",
-     "회계·수익성 괴리: 인수 관련 무형자산 상각으로 GAAP ROE가 12.2%에 머물러 비GAAP 기준으로만 프리미엄을 정당화해야 한다는 부담."
-    ],
-    "thesis_breakers": [
-     "분기 실적에서 수주(bookings)가 전분기 대비 감소하거나 book-to-bill이 1 아래로 떨어질 때",
-     "유통 채널 재고가 목표 6~7주를 넘어 8주 이상으로 확대되면서 매출 증가율이 한 자릿수로 둔화될 때",
-     "비GAAP 총이익률이 70% 미만, 영업이익률이 45% 미만으로 가이던스되는 분기가 나올 때",
-     "FY2027 EPS 컨센서스 리비전이 하향 우위로 전환(30일 하향 건수 > 상향 건수)될 때",
-     "데이터센터 매출의 전분기 대비 성장이 멈추거나 주요 하이퍼스케일러 전력 플랫폼 설계에서 탈락이 확인될 때"
-    ]
-   },
-   "thesis_status": "해당없음",
-   "thesis_status_reason": "신규 편입 후보로 기존 보유 논리가 없어 해당없음으로 둔다. 다만 제공된 데이터의 GAAP 지표(영업이익률 39.5%, 후행 PER 46.7배)는 인수 무형자산 상각 때문에 실제 수익력을 과소·과대 왜곡하므로, 최신 공시 기준 비GAAP(3분기 총이익률 72.5%, 4분기 영업이익률 가이던스 52%, EPS 3.45달러)을 기준으로 분석했다.",
-   "verdict": "관찰",
-   "verdict_reason": "기업의 질과 재무 건전성(FCF 49억 달러, 순부채/EBITDA 1.0배, 22년 연속 증배)은 장기 보유 기준을 충분히 충족하고 AI 전력·ATE라는 새 성장축도 실체가 있다. 그러나 매출 +40%, 비GAAP 영업이익률 52%라는 역대 최고 조건 위에서 FY2027 기준 24배(정상화 이익 기준 35배 이상)에 거래되고 있어, 상방 10~20%(목표가 470달러) 대비 사이클 정상화 시 -30% 이상의 하방이 비대칭적으로 크다. 11월 24일 4분기 실적에서 FY2027 가이던스와 수주·채널 재고 추이를 확인한 뒤, 또는 정상화 이익 기준 25~28배(대략 280~320달러대) 구간에서 분할 접근하는 것이 합리적이다.",
-   "conviction": 3,
-   "sources": [
-    {
-     "title": "Analog Devices Reports Record Fiscal Third Quarter 2026 Financial Results (Form 8-K, Exhibit 99.1)",
-     "url": "https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000072/adi3q26exhibit991earnings.htm"
-    },
-    {
-     "title": "Analog Devices Q3 results, Q4 outlook beat forecasts; shares dip",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-climbs-fiscal-q3-113825197.html"
-    },
-    {
-     "title": "Earnings call transcript: Analog Devices tops Q3 2026 estimates on record sales",
-     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-analog-devices-tops-q3-2026-estimates-on-record-sales-93CH-4867836"
-    },
-    {
-     "title": "Analog Devices (ADI) Q3 2026 Earnings Call Transcript",
-     "url": "https://www.fool.com/earnings/call-transcripts/2026/08/19/analog-devices-adi-q3-2026-earnings-call-transcript/"
-    },
-    {
-     "title": "Analog Devices Reports Fiscal First Quarter 2026 Financial Results (Form 8-K, Exhibit 99.1)",
-     "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000015/adi1q26exhibit991earnings.htm"
-    },
-    {
-     "title": "Analog Devices, Inc. Q2 2026 Earnings Call Summary (Empower Semiconductor 인수)",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-inc-q2-2026-164606619.html"
-    },
-    {
-     "title": "Analog Devices Form 10-Q FY2026 (2026-05-02 종료 분기)",
-     "url": "https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000052/adi-20260502.htm"
-    }
-   ]
-  }
- },
  "ADBE": {
   "analyzed_date": "2026-11-21",
   "price": 217.71,
@@ -2910,7 +2697,7 @@
    "version": 1,
    "buy_below": 225,
    "last_price": 217.71,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -3602,7 +3389,7 @@
    "version": 1,
    "buy_below": 80,
    "last_price": 77.8,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -3878,8 +3665,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 41,
-   "last_price": 47.545,
-   "observed_date": "2026-11-21",
+   "last_price": 47.51,
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -4916,8 +4703,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 900,
-   "last_price": 1042.55,
-   "observed_date": "2026-11-21",
+   "last_price": 1042.47,
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -5212,7 +4999,7 @@
    "version": 1,
    "buy_below": 1395,
    "last_price": 1266.22,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -6271,8 +6058,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 545,
-   "last_price": 603.705,
-   "observed_date": "2026-11-21",
+   "last_price": 603.32,
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -7079,8 +6866,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 165,
-   "last_price": 166.245,
-   "observed_date": "2026-11-21",
+   "last_price": 166.24,
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -7345,7 +7132,7 @@
    "version": 1,
    "buy_below": 42,
    "last_price": 45.03,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -7877,8 +7664,8 @@
   "price_review": {
    "version": 1,
    "buy_below": 285,
-   "last_price": 334.27,
-   "observed_date": "2026-11-21",
+   "last_price": 334.18,
+   "observed_date": "2026-11-22",
    "pending": false
   }
  },
@@ -8409,7 +8196,7 @@
    "version": 1,
    "buy_below": 317,
    "last_price": 348.29,
-   "observed_date": "2026-11-21",
+   "observed_date": "2026-11-22",
    "pending": false
   }
  }
