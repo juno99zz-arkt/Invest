@@ -1,6 +1,6 @@
 {
- "built_at_kst": "2026-11-22 06:14",
- "week": "2026-11-22",
+ "built_at_kst": "2026-11-23 06:14",
+ "week": "2026-11-23",
  "universe_size": 519,
  "m1": {
   "investors": [
@@ -782,17 +782,17 @@
    {
     "sector": "Healthcare",
     "sector_kr": "헬스케어",
-    "stocks": 60,
-    "eps_revision_pct_30d": 0.3,
+    "stocks": 61,
+    "eps_revision_pct_30d": 0.29,
     "eps_revision_pct_7d": 0.0,
     "upgrade_ratio": 0.57,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
      0.0,
-     0.03,
-     0.46,
-     0.86
+     0.02,
+     0.29,
+     0.8
     ]
    },
    {
@@ -1291,7 +1291,7 @@
   ]
  },
  "m5": {
-  "period": "2026-11-07 ~ 2026-11-21",
+  "period": "2026-11-08 ~ 2026-11-22",
   "buy": [
    {
     "ticker": "AKAM",
