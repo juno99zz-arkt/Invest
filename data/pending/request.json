@@ -1,8 +1,8 @@
 {
- "week": "2026-11-22",
- "date": "2026-11-22",
- "created_at_kst": "2026-11-22 06:14",
- "spy_price": null,
+ "week": "2026-11-23",
+ "date": "2026-11-23",
+ "created_at_kst": "2026-11-23 06:14",
+ "spy_price": 689.81,
  "held": [
   "NVDA",
   "ADBE"
@@ -32,7 +32,7 @@
   "ASML": null,
   "EME": null,
   "APP": null,
-  "KEYS": "지난 분석 28일 경과",
+  "KEYS": null,
   "VLO": null,
   "MSTR": null,
   "CRCL": null
@@ -45,6 +45,7 @@
   "ASML": "2026-11-21",
   "EME": "2026-11-06",
   "APP": "2026-11-21",
+  "KEYS": "2026-11-22",
   "VLO": "2026-11-12",
   "MSTR": "2026-11-21",
   "CRCL": "2026-11-18"
@@ -55,7 +56,7 @@
    "name": "NVIDIA Corporation",
    "sector": "IT·기술",
    "industry": "Semiconductors",
-   "as_of": "2026-11-22",
+   "as_of": "2026-11-23",
    "price": 125.53,
    "market_cap_b": 3031.17,
    "valuation": {
@@ -65,10 +66,182 @@
     "pe_trailing_gaap": 13.5,
     "pe_current_fy": 13.0,
     "pe_next_fy": 7.6,
-    "pe_ntm_est": 8.2,
+    "pe_ntm_est": 8.1,
     "eps_current_fy": 9.66925,
     "eps_next_fy": 16.60528,
-    "eps_ntm_est": 15.39,
+    "eps_ntm_est": 15.41,
+    "forward_pe_yahoo": 7.6,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 4.19,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 244.18286,
+    "analyst_rating_mean_1buy_5sell": 1.80952,
+    "analysts": 56.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 12.27,
+    "mean": 16.60528,
+    "high": 18.785,
+    "spread_pct": 39.2
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 74.9,
+    "op_margin_pct": 66.1,
+    "roe_pct": 117.4,
+    "revenue_growth_last_q_yoy_pct": 103.2,
+    "eps_growth_last_q_yoy_pct": 107.7,
+    "eps_growth_est_this_fy_pct": 102.7,
+    "eps_growth_est_next_fy_pct": 71.7
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 127.01,
+    "sbc_ttm_b": 7.24,
+    "buyback_ttm_b": 55.31,
+    "fcf_margin_pct": 27.4,
+    "fcf_margin_basis": "Yahoo 요약",
+    "revenue_ttm_b": null,
+    "net_debt_to_ebitda": -0.24,
+    "share_count_change_pct": -0.82,
+    "share_count_span": "2025-07→2026-07"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 16.60528,
+    "chg_7d_pct": 4.38,
+    "chg_30d_pct": 4.34,
+    "chg_90d_pct": 27.74,
+    "up_revisions_30d": 7.0,
+    "down_revisions_30d": 0.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-10",
+     "2026-01",
+     "2026-04",
+     "2026-07",
+     "2026-10"
+    ],
+    "revenue_b": [
+     57.01,
+     68.13,
+     81.61,
+     96.22,
+     null
+    ],
+    "op_margin_pct": [
+     63.2,
+     65.0,
+     65.6,
+     66.2,
+     null
+    ],
+    "diluted_eps": [
+     1.3,
+     1.76,
+     2.39,
+     2.46,
+     2.7
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2023-01",
+     26.97
+    ],
+    [
+     "2024-01",
+     60.92
+    ],
+    [
+     "2025-01",
+     130.5
+    ],
+    [
+     "2026-01",
+     215.94
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2026-01",
+     "actual": 1.62,
+     "estimate": 1.53812,
+     "surprise_pct": 5.3
+    },
+    {
+     "quarter": "2026-04",
+     "actual": 1.87,
+     "estimate": 1.77191,
+     "surprise_pct": 5.5
+    },
+    {
+     "quarter": "2026-07",
+     "actual": 2.22,
+     "estimate": 2.09113,
+     "surprise_pct": 6.2
+    },
+    {
+     "quarter": "2026-10",
+     "actual": 2.68,
+     "estimate": 2.47313,
+     "surprise_pct": 8.4
+    }
+   ],
+   "next_earnings": "2026-11-17",
+   "return_1y_pct": -29.7,
+   "from_52w_high_pct": -47.5,
+   "quant_score": {
+    "score": 85.9,
+    "quality": 94,
+    "health": 72,
+    "value": 81,
+    "revisions": 92,
+    "score_before": null
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [
+    "M1 대가 상위보유: Cathie Wood, Chase Coleman (+3점)",
+    "M1 대가 최근분기 매수: Cathie Wood (+5점)",
+    "M3 실적 개선 기업 (+3점)"
+   ],
+   "holding": {
+    "added_date": "2026-09-13",
+    "added_price": 218.29,
+    "return_since_add_pct": -42.5,
+    "original_thesis": "AI 인프라 사이클의 사실상 독점 공급자로 분기 매출이 1년 만에 2배(46.7B→96.2B)가 됐는데 주가는 1년간 +23%에 그쳐, 선행 PER 14배(PEG 0.46)까지 멀티플이 압축된 '고성장 + 비(非)고평가' 조합이다.",
+    "thesis_breakers": [
+     "분기 매출의 전분기 대비 증가율이 2개 분기 연속 5% 미만으로 둔화되거나 가이던스가 컨센서스를 하회하는 경우",
+     "GAAP 총마진이 70% 아래로 하락하고 경영진이 원가 전가 실패를 인정하는 경우",
+     "차기 회계연도 EPS 컨센서스가 2개 분기 연속 하향(상향 건수 < 하향 건수)으로 전환되는 경우",
+     "재고와 구매 약정은 계속 늘어나는데 데이터센터 매출 성장률이 함께 둔화되는 조합이 나타나는 경우",
+     "상위 고객 중 한 곳이 자체 ASIC 비중 대폭 확대로 엔비디아 물량을 축소한다고 공식화하는 경우",
+     "하이퍼스케일러 합산 2027년 CAPEX 가이던스가 전년 대비 감소로 제시되는 경우"
+    ],
+    "last_thesis_status": "약화",
+    "last_conviction": 2
+   }
+  }
+ ],
+ "dossiers": [
+  {
+   "ticker": "NVDA",
+   "name": "NVIDIA Corporation",
+   "sector": "IT·기술",
+   "industry": "Semiconductors",
+   "as_of": "2026-11-23",
+   "price": 125.53,
+   "market_cap_b": 3031.17,
+   "valuation": {
+    "trailing_pe": 13.483351,
+    "forward_pe": 7.5596437,
+    "peg": 0.1519,
+    "pe_trailing_gaap": 13.5,
+    "pe_current_fy": 13.0,
+    "pe_next_fy": 7.6,
+    "pe_ntm_est": 8.1,
+    "eps_current_fy": 9.66925,
+    "eps_next_fy": 16.60528,
+    "eps_ntm_est": 15.41,
     "forward_pe_yahoo": 7.6,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
     "fcf_yield_pct": 4.19,
@@ -221,11 +394,1104 @@
    }
   },
   {
+   "ticker": "ADBE",
+   "name": "Adobe Inc.",
+   "sector": "IT·기술",
+   "industry": "Software - Application",
+   "as_of": "2026-11-23",
+   "price": 217.71,
+   "market_cap_b": 84.73,
+   "valuation": {
+    "trailing_pe": 12.15578,
+    "forward_pe": 7.9435387,
+    "peg": 0.5243,
+    "pe_trailing_gaap": 12.2,
+    "pe_current_fy": 8.9,
+    "pe_next_fy": 7.9,
+    "pe_ntm_est": 8.0,
+    "eps_current_fy": 24.46841,
+    "eps_next_fy": 27.40718,
+    "eps_ntm_est": 27.37,
+    "forward_pe_yahoo": 7.9,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 12.5,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 266.9097,
+    "analyst_rating_mean_1buy_5sell": 2.97436,
+    "analysts": 33.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 22.67,
+    "mean": 27.40718,
+    "high": 29.19,
+    "spread_pct": 23.8
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 89.3,
+    "op_margin_pct": 36.3,
+    "roe_pct": 61.9,
+    "revenue_growth_last_q_yoy_pct": 12.9,
+    "eps_growth_last_q_yoy_pct": 10.5,
+    "eps_growth_est_this_fy_pct": 16.9,
+    "eps_growth_est_next_fy_pct": 12.0
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 10.59,
+    "sbc_ttm_b": 2.07,
+    "buyback_ttm_b": 9.29,
+    "fcf_margin_pct": 40.8,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 25.97,
+    "net_debt_to_ebitda": 0.12,
+    "share_count_change_pct": -6.9,
+    "share_count_span": "2025-08→2026-08"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 27.40718,
+    "chg_7d_pct": 0.0,
+    "chg_30d_pct": -0.36,
+    "chg_90d_pct": 0.19,
+    "up_revisions_30d": 0.0,
+    "down_revisions_30d": 3.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-08",
+     "2025-11",
+     "2026-02",
+     "2026-05",
+     "2026-08"
+    ],
+    "revenue_b": [
+     5.99,
+     6.19,
+     6.4,
+     6.62,
+     6.76
+    ],
+    "op_margin_pct": [
+     36.3,
+     36.5,
+     37.8,
+     33.8,
+     34.8
+    ],
+    "diluted_eps": [
+     4.18,
+     4.45,
+     4.6,
+     4.25,
+     4.62
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-11",
+     17.61
+    ],
+    [
+     "2023-11",
+     19.41
+    ],
+    [
+     "2024-11",
+     21.5
+    ],
+    [
+     "2025-11",
+     23.77
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-11",
+     "actual": 5.5,
+     "estimate": 5.39763,
+     "surprise_pct": 1.9
+    },
+    {
+     "quarter": "2026-02",
+     "actual": 6.06,
+     "estimate": 5.87314,
+     "surprise_pct": 3.2
+    },
+    {
+     "quarter": "2026-05",
+     "actual": 5.96,
+     "estimate": 5.81474,
+     "surprise_pct": 2.5
+    },
+    {
+     "quarter": "2026-08",
+     "actual": 6.13,
+     "estimate": 6.08663,
+     "surprise_pct": 0.7
+    }
+   ],
+   "next_earnings": "2026-12-09",
+   "return_1y_pct": -32.8,
+   "from_52w_high_pct": -39.1,
+   "quant_score": {
+    "score": 65.8,
+    "quality": 82,
+    "health": 69,
+    "value": 92,
+    "revisions": 28,
+    "score_before": 65.5
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [],
+   "holding": {
+    "added_date": "2026-10-11",
+    "added_price": 242.27,
+    "return_since_add_pct": -10.1,
+    "original_thesis": "TTM FCF 마진 40.8%, FCF 수익률 11.2%, 희석주식 연 6.8% 감소를 갖춘 현금창출 기업입니다. 그런데 'AI가 크리에이티브 툴을 상품화한다'는 우려와 유기적 ARR 둔화(FY26 목표에서 Semrush를 빼면 약 8.3%)가 겹쳐 향후 12개월 추정 EPS 기준 8.9배까지 내려왔습니다. 12월 9일 FY27 가이던스가 리베이스 없이 나오면 기대값이 매수 쪽에 있는 '값싼 논쟁주'입니다.",
+    "thesis_breakers": [
+     "FY27 총 ending ARR 성장 목표가 8% 미만(Semrush 효과 소멸 후 순수 유기 기준)이거나, 실제 총 ARR 성장률이 2개 분기 연속 8% 미만인 경우.",
+     "FY27 non-GAAP EPS 가이던스 중간값이 25달러 미만(FY26 24.45~24.50달러 대비 사실상 정체)인 경우.",
+     "non-GAAP 영업이익률이 40% 미만으로 가이던스되거나, TTM FCF 마진이 32% 미만으로 2개 분기 연속 떨어지는 경우.",
+     "AI-first ARR 성장률이 전년 대비 50% 미만으로 꺾이거나, 프리미엄 MAU 증가에도 순신규 ARR이 2개 분기 더 전년 대비 감소하는 경우.",
+     "자사주 매입이 FCF의 50% 미만으로 줄거나, 대형 현금 인수로 희석주식 감소 추세(현재 연 −6.8%)가 멈추는 경우.",
+     "신임 CEO 체제에서 ARR·MAU 등 핵심 지표 공시가 축소되거나 정의가 바뀌어 투명성이 후퇴하는 경우."
+    ],
+    "last_thesis_status": "유효",
+    "last_conviction": 3
+   }
+  },
+  {
+   "ticker": "FIX",
+   "name": "Comfort Systems USA, Inc.",
+   "sector": "산업재",
+   "industry": "Engineering & Construction",
+   "as_of": "2026-11-23",
+   "price": 1042.47,
+   "market_cap_b": 36.47,
+   "valuation": {
+    "trailing_pe": 22.51555,
+    "forward_pe": 15.491272,
+    "peg": 0.3165,
+    "pe_trailing_gaap": 22.5,
+    "pe_current_fy": 20.5,
+    "pe_next_fy": 15.5,
+    "pe_ntm_est": 15.9,
+    "eps_current_fy": 50.82289,
+    "eps_next_fy": 67.29402,
+    "eps_ntm_est": 65.58,
+    "forward_pe_yahoo": 15.5,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 6.69,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 1772.2727,
+    "analyst_rating_mean_1buy_5sell": 1.46154,
+    "analysts": 11.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 62.75,
+    "mean": 67.29402,
+    "high": 71.32,
+    "spread_pct": 12.7
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 25.7,
+    "op_margin_pct": 16.8,
+    "roe_pct": 58.6,
+    "revenue_growth_last_q_yoy_pct": 53.7,
+    "eps_growth_last_q_yoy_pct": 68.6,
+    "eps_growth_est_this_fy_pct": 76.0,
+    "eps_growth_est_next_fy_pct": 32.4
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 2.44,
+    "sbc_ttm_b": 0.04,
+    "buyback_ttm_b": 0.44,
+    "fcf_margin_pct": 19.5,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 12.54,
+    "net_debt_to_ebitda": -0.81,
+    "share_count_change_pct": -0.2,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 67.29402,
+    "chg_7d_pct": 0.21,
+    "chg_30d_pct": 11.74,
+    "chg_90d_pct": 12.08,
+    "up_revisions_30d": 9.0,
+    "down_revisions_30d": 0.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     2.45,
+     2.65,
+     2.87,
+     3.27,
+     3.77
+    ],
+    "op_margin_pct": [
+     15.4,
+     16.1,
+     16.9,
+     17.1,
+     16.5
+    ],
+    "diluted_eps": [
+     8.25,
+     9.37,
+     10.51,
+     12.53,
+     13.91
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     4.14
+    ],
+    [
+     "2023-12",
+     5.21
+    ],
+    [
+     "2024-12",
+     7.03
+    ],
+    [
+     "2025-12",
+     9.1
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 9.37,
+     "estimate": 6.75492,
+     "surprise_pct": 38.7
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 10.51,
+     "estimate": 6.80521,
+     "surprise_pct": 54.4
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 12.53,
+     "estimate": 10.45514,
+     "surprise_pct": 19.9
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 13.91,
+     "estimate": 12.85102,
+     "surprise_pct": 8.2
+    }
+   ],
+   "next_earnings": "2026-10-22",
+   "return_1y_pct": 16.9,
+   "from_52w_high_pct": -49.5,
+   "quant_score": {
+    "score": 82.2,
+    "quality": 68,
+    "health": 74,
+    "value": 89,
+    "revisions": 94,
+    "score_before": 81.9
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [],
+   "holding": null
+  },
+  {
+   "ticker": "APA",
+   "name": "APA Corporation",
+   "sector": "에너지",
+   "industry": "Oil & Gas E&P",
+   "as_of": "2026-11-23",
+   "price": 45.03,
+   "market_cap_b": 15.12,
+   "valuation": {
+    "trailing_pe": 7.321951,
+    "forward_pe": 7.6826744,
+    "peg": 1.1083,
+    "pe_trailing_gaap": 7.3,
+    "pe_current_fy": 6.3,
+    "pe_next_fy": 7.6,
+    "pe_ntm_est": 7.5,
+    "eps_current_fy": 7.1463,
+    "eps_next_fy": 5.91403,
+    "eps_ntm_est": 6.04,
+    "forward_pe_yahoo": 7.7,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 13.78,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 50.61538,
+    "analyst_rating_mean_1buy_5sell": 2.57143,
+    "analysts": 26.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 3.37,
+    "mean": 5.91403,
+    "high": 9.07475,
+    "spread_pct": 96.5
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 79.0,
+    "op_margin_pct": 43.3,
+    "roe_pct": 33.3,
+    "revenue_growth_last_q_yoy_pct": 31.5,
+    "eps_growth_last_q_yoy_pct": 250.9,
+    "eps_growth_est_this_fy_pct": 89.6,
+    "eps_growth_est_next_fy_pct": -17.2
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 2.08,
+    "sbc_ttm_b": null,
+    "buyback_ttm_b": null,
+    "fcf_margin_pct": 22.0,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 9.46,
+    "net_debt_to_ebitda": 0.53,
+    "share_count_change_pct": -4.4,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 5.91403,
+    "chg_7d_pct": 4.29,
+    "chg_30d_pct": 14.34,
+    "chg_90d_pct": 40.79,
+    "up_revisions_30d": 21.0,
+    "down_revisions_30d": 2.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     2.12,
+     1.99,
+     2.33,
+     2.37,
+     2.77
+    ],
+    "op_margin_pct": [
+     31.8,
+     32.1,
+     43.3,
+     55.7,
+     43.1
+    ],
+    "diluted_eps": [
+     0.57,
+     0.79,
+     1.26,
+     2.11,
+     2.0
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     11.07
+    ],
+    [
+     "2023-12",
+     8.28
+    ],
+    [
+     "2024-12",
+     9.74
+    ],
+    [
+     "2025-12",
+     8.92
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 0.91,
+     "estimate": 0.64206,
+     "surprise_pct": 41.7
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 1.38,
+     "estimate": 1.14143,
+     "surprise_pct": 20.9
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 1.89,
+     "estimate": 1.87114,
+     "surprise_pct": 1.0
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 1.94,
+     "estimate": 1.59192,
+     "surprise_pct": 21.9
+    }
+   ],
+   "next_earnings": "2026-11-04",
+   "return_1y_pct": 93.4,
+   "from_52w_high_pct": -14.7,
+   "quant_score": {
+    "score": 78.2,
+    "quality": 71,
+    "health": 65,
+    "value": 80,
+    "revisions": 92,
+    "score_before": 78.3
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [
+    "M3 실적 개선 기업 (+3점)"
+   ],
+   "holding": null
+  },
+  {
+   "ticker": "VRT",
+   "name": "Vertiv Holdings, LLC",
+   "sector": "산업재",
+   "industry": "Electrical Equipment & Parts",
+   "as_of": "2026-11-23",
+   "price": 166.24,
+   "market_cap_b": 64.01,
+   "valuation": {
+    "trailing_pe": 31.072899,
+    "forward_pe": 16.836357,
+    "peg": 0.4906,
+    "pe_trailing_gaap": 31.1,
+    "pe_current_fy": 23.1,
+    "pe_next_fy": 16.8,
+    "pe_ntm_est": 17.3,
+    "eps_current_fy": 7.1907,
+    "eps_next_fy": 9.90613,
+    "eps_ntm_est": 9.62,
+    "forward_pe_yahoo": 16.8,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 4.86,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 332.55267,
+    "analyst_rating_mean_1buy_5sell": 1.3871,
+    "analysts": 30.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 8.729,
+    "mean": 9.90613,
+    "high": 11.89,
+    "spread_pct": 31.9
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 38.1,
+    "op_margin_pct": 21.1,
+    "roe_pct": 46.6,
+    "revenue_growth_last_q_yoy_pct": 61.2,
+    "eps_growth_last_q_yoy_pct": 91.2,
+    "eps_growth_est_this_fy_pct": 71.2,
+    "eps_growth_est_next_fy_pct": 37.8
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 3.11,
+    "sbc_ttm_b": 0.06,
+    "buyback_ttm_b": null,
+    "fcf_margin_pct": 23.7,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 13.12,
+    "net_debt_to_ebitda": -0.11,
+    "share_count_change_pct": 0.72,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 9.90613,
+    "chg_7d_pct": 0.33,
+    "chg_30d_pct": 7.74,
+    "chg_90d_pct": 8.87,
+    "up_revisions_30d": 27.0,
+    "down_revisions_30d": 0.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     2.68,
+     2.88,
+     2.65,
+     3.27,
+     4.31
+    ],
+    "op_margin_pct": [
+     20.5,
+     21.1,
+     16.4,
+     19.5,
+     23.0
+    ],
+    "diluted_eps": [
+     1.02,
+     1.14,
+     0.99,
+     1.27,
+     1.95
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     5.69
+    ],
+    [
+     "2023-12",
+     6.86
+    ],
+    [
+     "2024-12",
+     8.01
+    ],
+    [
+     "2025-12",
+     10.23
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 1.36,
+     "estimate": 1.29646,
+     "surprise_pct": 4.9
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 1.17,
+     "estimate": 1.0115,
+     "surprise_pct": 15.7
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 1.52,
+     "estimate": 1.42824,
+     "surprise_pct": 6.4
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 2.21,
+     "estimate": 1.82366,
+     "surprise_pct": 21.2
+    }
+   ],
+   "next_earnings": "2026-10-28",
+   "return_1y_pct": 4.1,
+   "from_52w_high_pct": -55.8,
+   "quant_score": {
+    "score": 80.2,
+    "quality": 74,
+    "health": 71,
+    "value": 80,
+    "revisions": 91,
+    "score_before": 79.7
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [],
+   "holding": null
+  },
+  {
+   "ticker": "ASML",
+   "name": "ASML Holding N.V. - New York Re",
+   "sector": "IT·기술",
+   "industry": "Semiconductor Equipment & Materials",
+   "as_of": "2026-11-23",
+   "price": 1266.22,
+   "market_cap_b": 488.02,
+   "valuation": {
+    "trailing_pe": 31.156988,
+    "forward_pe": 19.972149,
+    "peg": 0.676,
+    "pe_trailing_gaap": 31.2,
+    "pe_current_fy": 30.6,
+    "pe_next_fy": 22.4,
+    "pe_ntm_est": 23.1,
+    "eps_current_fy": 41.41393,
+    "eps_next_fy": 56.43418,
+    "eps_ntm_est": 54.87,
+    "forward_pe_yahoo": 20.0,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 4.3,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 2107.5134,
+    "analyst_rating_mean_1buy_5sell": 1.36585,
+    "analysts": 17.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 37.43,
+    "mean": 56.43418,
+    "high": 63.89124,
+    "spread_pct": 46.9
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 54.3,
+    "op_margin_pct": 38.6,
+    "roe_pct": 65.6,
+    "revenue_growth_last_q_yoy_pct": 55.2,
+    "eps_growth_last_q_yoy_pct": 135.9,
+    "eps_growth_est_this_fy_pct": 67.6,
+    "eps_growth_est_next_fy_pct": 36.3
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 21.0,
+    "sbc_ttm_b": 0.22,
+    "buyback_ttm_b": 7.85,
+    "fcf_margin_pct": 53.2,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 39.47,
+    "net_debt_to_ebitda": -0.67,
+    "share_count_change_pct": -0.7,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 56.43418,
+    "chg_7d_pct": 0.9,
+    "chg_30d_pct": 9.09,
+    "chg_90d_pct": 10.47,
+    "up_revisions_30d": 22.0,
+    "down_revisions_30d": 0.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     7.52,
+     9.72,
+     8.77,
+     9.33,
+     11.66
+    ],
+    "op_margin_pct": [
+     32.8,
+     35.3,
+     36.0,
+     37.1,
+     44.4
+    ],
+    "diluted_eps": [
+     5.48,
+     7.34,
+     7.15,
+     7.58,
+     12.93
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     21.17
+    ],
+    [
+     "2023-12",
+     27.56
+    ],
+    [
+     "2024-12",
+     28.26
+    ],
+    [
+     "2025-12",
+     32.67
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 7.34,
+     "estimate": 7.54521,
+     "surprise_pct": -2.7
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 7.15,
+     "estimate": 6.621,
+     "surprise_pct": 8.0
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 7.58,
+     "estimate": 6.94813,
+     "surprise_pct": 9.1
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 11.8193,
+     "estimate": 10.75815,
+     "surprise_pct": 9.9
+    }
+   ],
+   "next_earnings": "2027-01-27",
+   "return_1y_pct": 31.8,
+   "from_52w_high_pct": -36.2,
+   "quant_score": {
+    "score": 79.4,
+    "quality": 88,
+    "health": 74,
+    "value": 59,
+    "revisions": 93,
+    "score_before": 76.6
+   },
+   "data_conflicts": [
+    {
+     "metric": "FCF 마진(TTM)",
+     "values": {
+      "현금흐름표 4분기 합계": "53.2%",
+      "Yahoo 요약(levered FCF)": "26.3%"
+     },
+     "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
+    },
+    {
+     "metric": "다음 회계연도 EPS",
+     "values": {
+      "forwardEps": 63.39929,
+      "추정치 추이(+1y)": 56.43418
+     },
+     "why": "추정 PER 기준 EPS 불일치"
+    }
+   ],
+   "cycle_check": null,
+   "dashboard_signals": [],
+   "holding": null
+  },
+  {
+   "ticker": "EME",
+   "name": "EMCOR Group, Inc.",
+   "sector": "산업재",
+   "industry": "Engineering & Construction",
+   "as_of": "2026-11-23",
+   "price": 603.32,
+   "market_cap_b": 26.41,
+   "valuation": {
+    "trailing_pe": 17.442036,
+    "forward_pe": 14.692667,
+    "peg": 0.3806,
+    "pe_trailing_gaap": 17.4,
+    "pe_current_fy": 17.3,
+    "pe_next_fy": 14.7,
+    "pe_ntm_est": 14.9,
+    "eps_current_fy": 34.9351,
+    "eps_next_fy": 41.06266,
+    "eps_ntm_est": 40.43,
+    "forward_pe_yahoo": 14.7,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 5.61,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 875.6,
+    "analyst_rating_mean_1buy_5sell": 1.84615,
+    "analysts": 10.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 38.33,
+    "mean": 41.06266,
+    "high": 43.50161,
+    "spread_pct": 12.6
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 19.6,
+    "op_margin_pct": 9.9,
+    "roe_pct": 40.6,
+    "revenue_growth_last_q_yoy_pct": 28.8,
+    "eps_growth_last_q_yoy_pct": 37.6,
+    "eps_growth_est_this_fy_pct": 35.0,
+    "eps_growth_est_next_fy_pct": 17.5
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 1.48,
+    "sbc_ttm_b": 0.02,
+    "buyback_ttm_b": 0.61,
+    "fcf_margin_pct": 7.5,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 19.84,
+    "net_debt_to_ebitda": -0.1,
+    "share_count_change_pct": -1.72,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 41.06266,
+    "chg_7d_pct": 0.38,
+    "chg_30d_pct": 9.87,
+    "chg_90d_pct": 11.75,
+    "up_revisions_30d": 9.0,
+    "down_revisions_30d": 0.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     4.3,
+     4.51,
+     4.63,
+     5.15,
+     5.54
+    ],
+    "op_margin_pct": [
+     9.4,
+     9.5,
+     8.7,
+     10.6,
+     10.5
+    ],
+    "diluted_eps": [
+     6.57,
+     9.68,
+     6.84,
+     9.06,
+     9.04
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     11.08
+    ],
+    [
+     "2023-12",
+     12.58
+    ],
+    [
+     "2024-12",
+     14.57
+    ],
+    [
+     "2025-12",
+     16.99
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 7.19,
+     "estimate": 6.68125,
+     "surprise_pct": 7.6
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 6.84,
+     "estimate": 5.90443,
+     "surprise_pct": 15.8
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 9.06,
+     "estimate": 7.23108,
+     "surprise_pct": 25.3
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 9.6,
+     "estimate": 8.3568,
+     "surprise_pct": 14.9
+    }
+   ],
+   "next_earnings": "2026-10-29",
+   "return_1y_pct": 4.0,
+   "from_52w_high_pct": -36.0,
+   "quant_score": {
+    "score": 77.2,
+    "quality": 52,
+    "health": 70,
+    "value": 88,
+    "revisions": 93,
+    "score_before": 76.4
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [],
+   "holding": null
+  },
+  {
+   "ticker": "APP",
+   "name": "Applovin Corporation",
+   "sector": "커뮤니케이션",
+   "industry": "Advertising Agencies",
+   "as_of": "2026-11-23",
+   "price": 348.29,
+   "market_cap_b": 115.4,
+   "valuation": {
+    "trailing_pe": 23.453873,
+    "forward_pe": 16.695877,
+    "peg": 0.7333,
+    "pe_trailing_gaap": 23.5,
+    "pe_current_fy": 21.4,
+    "pe_next_fy": 16.8,
+    "pe_ntm_est": 17.2,
+    "eps_current_fy": 16.262,
+    "eps_next_fy": 20.72451,
+    "eps_ntm_est": 20.26,
+    "forward_pe_yahoo": 16.7,
+    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
+    "fcf_yield_pct": 4.22,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
+    "analyst_target_mean": 458.11,
+    "analyst_rating_mean_1buy_5sell": 1.57576,
+    "analysts": 31.0
+   },
+   "eps_estimate_range_next_fy": {
+    "low": 17.53,
+    "mean": 20.72451,
+    "high": 23.11,
+    "spread_pct": 26.9
+   },
+   "growth_profitability": {
+    "gross_margin_pct": 88.8,
+    "op_margin_pct": 77.8,
+    "roe_pct": 210.1,
+    "revenue_growth_last_q_yoy_pct": 55.5,
+    "eps_growth_last_q_yoy_pct": 75.5,
+    "eps_growth_est_this_fy_pct": 63.1,
+    "eps_growth_est_next_fy_pct": 20.2
+   },
+   "cash_debt_dilution": {
+    "fcf_ttm_b": 4.87,
+    "sbc_ttm_b": null,
+    "buyback_ttm_b": 3.23,
+    "fcf_margin_pct": 64.1,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
+    "revenue_ttm_b": 7.61,
+    "net_debt_to_ebitda": 0.06,
+    "share_count_change_pct": -2.13,
+    "share_count_span": "2025-09→2026-09"
+   },
+   "estimate_revisions_next_fy_eps": {
+    "current": 20.72451,
+    "chg_7d_pct": 0.22,
+    "chg_30d_pct": 4.07,
+    "chg_90d_pct": 1.27,
+    "up_revisions_30d": 11.0,
+    "down_revisions_30d": 6.0
+   },
+   "quarterly": {
+    "periods": [
+     "2025-09",
+     "2025-12",
+     "2026-03",
+     "2026-06",
+     "2026-09"
+    ],
+    "revenue_b": [
+     1.41,
+     1.66,
+     1.84,
+     1.92,
+     2.18
+    ],
+    "op_margin_pct": [
+     76.8,
+     76.9,
+     78.2,
+     77.7,
+     78.2
+    ],
+    "diluted_eps": [
+     2.45,
+     3.24,
+     3.56,
+     3.76,
+     4.3
+    ]
+   },
+   "annual_revenue_b": [
+    [
+     "2022-12",
+     2.82
+    ],
+    [
+     "2023-12",
+     1.84
+    ],
+    [
+     "2024-12",
+     3.22
+    ],
+    [
+     "2025-12",
+     5.48
+    ]
+   ],
+   "eps_surprises": [
+    {
+     "quarter": "2025-12",
+     "actual": 3.24,
+     "estimate": 2.94408,
+     "surprise_pct": 10.1
+    },
+    {
+     "quarter": "2026-03",
+     "actual": 3.56,
+     "estimate": 3.44326,
+     "surprise_pct": 3.4
+    },
+    {
+     "quarter": "2026-06",
+     "actual": 3.76,
+     "estimate": 3.74407,
+     "surprise_pct": 0.4
+    },
+    {
+     "quarter": "2026-09",
+     "actual": 4.3,
+     "estimate": 4.03057,
+     "surprise_pct": 6.7
+    }
+   ],
+   "next_earnings": "2026-11-04",
+   "return_1y_pct": -33.1,
+   "from_52w_high_pct": -52.5,
+   "quant_score": {
+    "score": 71.8,
+    "quality": 95,
+    "health": 69,
+    "value": 55,
+    "revisions": 68,
+    "score_before": 71.0
+   },
+   "data_conflicts": [],
+   "cycle_check": null,
+   "dashboard_signals": [
+    "M1 대가 최근분기 매수: Stan Druckenmiller (+5점)"
+   ],
+   "holding": null
+  },
+  {
    "ticker": "KEYS",
    "name": "Keysight Technologies Inc.",
    "sector": "IT·기술",
    "industry": "Scientific & Technical Instruments",
-   "as_of": "2026-11-22",
+   "as_of": "2026-11-23",
    "price": 261.51,
    "market_cap_b": 44.52,
    "valuation": {
@@ -359,1428 +1625,12 @@
    "return_1y_pct": 51.4,
    "from_52w_high_pct": -32.6,
    "quant_score": {
-    "score": 75.7,
+    "score": 75.6,
     "quality": 72,
     "health": 70,
     "value": 63,
     "revisions": 93,
     "score_before": null
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  }
- ],
- "dossiers": [
-  {
-   "ticker": "NVDA",
-   "name": "NVIDIA Corporation",
-   "sector": "IT·기술",
-   "industry": "Semiconductors",
-   "as_of": "2026-11-22",
-   "price": 125.53,
-   "market_cap_b": 3031.17,
-   "valuation": {
-    "trailing_pe": 13.483351,
-    "forward_pe": 7.5596437,
-    "peg": 0.1519,
-    "pe_trailing_gaap": 13.5,
-    "pe_current_fy": 13.0,
-    "pe_next_fy": 7.6,
-    "pe_ntm_est": 8.2,
-    "eps_current_fy": 9.66925,
-    "eps_next_fy": 16.60528,
-    "eps_ntm_est": 15.39,
-    "forward_pe_yahoo": 7.6,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 4.9,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 244.18286,
-    "analyst_rating_mean_1buy_5sell": 1.80952,
-    "analysts": 56.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 12.27,
-    "mean": 16.60528,
-    "high": 18.785,
-    "spread_pct": 39.2
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 74.9,
-    "op_margin_pct": 66.1,
-    "roe_pct": 117.4,
-    "revenue_growth_last_q_yoy_pct": 103.2,
-    "eps_growth_last_q_yoy_pct": 107.7,
-    "eps_growth_est_this_fy_pct": 102.7,
-    "eps_growth_est_next_fy_pct": 71.7
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 127.01,
-    "sbc_ttm_b": 7.24,
-    "buyback_ttm_b": 55.31,
-    "fcf_margin_pct": 41.1,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": null,
-    "net_debt_to_ebitda": -0.24,
-    "share_count_change_pct": -0.82,
-    "share_count_span": "2025-07→2026-07"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 16.60528,
-    "chg_7d_pct": 4.38,
-    "chg_30d_pct": 4.34,
-    "chg_90d_pct": 27.74,
-    "up_revisions_30d": 7.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-10",
-     "2026-01",
-     "2026-04",
-     "2026-07",
-     "2026-10"
-    ],
-    "revenue_b": [
-     57.01,
-     68.13,
-     81.61,
-     96.22,
-     null
-    ],
-    "op_margin_pct": [
-     63.2,
-     65.0,
-     65.6,
-     66.2,
-     null
-    ],
-    "diluted_eps": [
-     1.3,
-     1.76,
-     2.39,
-     2.46,
-     2.7
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2023-01",
-     26.97
-    ],
-    [
-     "2024-01",
-     60.92
-    ],
-    [
-     "2025-01",
-     130.5
-    ],
-    [
-     "2026-01",
-     215.94
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2026-01",
-     "actual": 1.62,
-     "estimate": 1.53812,
-     "surprise_pct": 5.3
-    },
-    {
-     "quarter": "2026-04",
-     "actual": 1.87,
-     "estimate": 1.77191,
-     "surprise_pct": 5.5
-    },
-    {
-     "quarter": "2026-07",
-     "actual": 2.22,
-     "estimate": 2.09113,
-     "surprise_pct": 6.2
-    },
-    {
-     "quarter": "2026-10",
-     "actual": 2.68,
-     "estimate": 2.47313,
-     "surprise_pct": 8.4
-    }
-   ],
-   "next_earnings": "2026-11-17",
-   "return_1y_pct": -29.7,
-   "from_52w_high_pct": -47.5,
-   "quant_score": {
-    "score": 87.5,
-    "quality": 96,
-    "health": 72,
-    "value": 86,
-    "revisions": 92,
-    "score_before": 85.9
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [
-    "M1 대가 상위보유: Cathie Wood, Chase Coleman (+3점)",
-    "M1 대가 최근분기 매수: Cathie Wood (+5점)",
-    "M3 실적 개선 기업 (+3점)"
-   ],
-   "holding": {
-    "added_date": "2026-09-13",
-    "added_price": 218.29,
-    "return_since_add_pct": -42.5,
-    "original_thesis": "AI 인프라 사이클의 사실상 독점 공급자로 분기 매출이 1년 만에 2배(46.7B→96.2B)가 됐는데 주가는 1년간 +23%에 그쳐, 선행 PER 14배(PEG 0.46)까지 멀티플이 압축된 '고성장 + 비(非)고평가' 조합이다.",
-    "thesis_breakers": [
-     "분기 매출의 전분기 대비 증가율이 2개 분기 연속 5% 미만으로 둔화되거나 가이던스가 컨센서스를 하회하는 경우",
-     "GAAP 총마진이 70% 아래로 하락하고 경영진이 원가 전가 실패를 인정하는 경우",
-     "차기 회계연도 EPS 컨센서스가 2개 분기 연속 하향(상향 건수 < 하향 건수)으로 전환되는 경우",
-     "재고와 구매 약정은 계속 늘어나는데 데이터센터 매출 성장률이 함께 둔화되는 조합이 나타나는 경우",
-     "상위 고객 중 한 곳이 자체 ASIC 비중 대폭 확대로 엔비디아 물량을 축소한다고 공식화하는 경우",
-     "하이퍼스케일러 합산 2027년 CAPEX 가이던스가 전년 대비 감소로 제시되는 경우"
-    ],
-    "last_thesis_status": "약화",
-    "last_conviction": 2
-   }
-  },
-  {
-   "ticker": "ADBE",
-   "name": "Adobe Inc.",
-   "sector": "IT·기술",
-   "industry": "Software - Application",
-   "as_of": "2026-11-22",
-   "price": 217.71,
-   "market_cap_b": 84.73,
-   "valuation": {
-    "trailing_pe": 12.15578,
-    "forward_pe": 7.9435387,
-    "peg": 0.5339,
-    "pe_trailing_gaap": 12.2,
-    "pe_current_fy": 8.9,
-    "pe_next_fy": 7.9,
-    "pe_ntm_est": 8.0,
-    "eps_current_fy": 24.46841,
-    "eps_next_fy": 27.40718,
-    "eps_ntm_est": 27.36,
-    "forward_pe_yahoo": 7.9,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 12.5,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 266.9097,
-    "analyst_rating_mean_1buy_5sell": 2.97436,
-    "analysts": 33.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 22.67,
-    "mean": 27.40718,
-    "high": 29.19,
-    "spread_pct": 23.8
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 89.3,
-    "op_margin_pct": 36.3,
-    "roe_pct": 61.9,
-    "revenue_growth_last_q_yoy_pct": 12.9,
-    "eps_growth_last_q_yoy_pct": 10.5,
-    "eps_growth_est_this_fy_pct": 16.9,
-    "eps_growth_est_next_fy_pct": 12.0
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 10.59,
-    "sbc_ttm_b": 2.07,
-    "buyback_ttm_b": 9.29,
-    "fcf_margin_pct": 40.8,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 25.97,
-    "net_debt_to_ebitda": 0.12,
-    "share_count_change_pct": -6.9,
-    "share_count_span": "2025-08→2026-08"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 27.40718,
-    "chg_7d_pct": 0.0,
-    "chg_30d_pct": -0.36,
-    "chg_90d_pct": 0.19,
-    "up_revisions_30d": 0.0,
-    "down_revisions_30d": 3.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-08",
-     "2025-11",
-     "2026-02",
-     "2026-05",
-     "2026-08"
-    ],
-    "revenue_b": [
-     5.99,
-     6.19,
-     6.4,
-     6.62,
-     6.76
-    ],
-    "op_margin_pct": [
-     36.3,
-     36.5,
-     37.8,
-     33.8,
-     34.8
-    ],
-    "diluted_eps": [
-     4.18,
-     4.45,
-     4.6,
-     4.25,
-     4.62
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-11",
-     17.61
-    ],
-    [
-     "2023-11",
-     19.41
-    ],
-    [
-     "2024-11",
-     21.5
-    ],
-    [
-     "2025-11",
-     23.77
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-11",
-     "actual": 5.5,
-     "estimate": 5.39763,
-     "surprise_pct": 1.9
-    },
-    {
-     "quarter": "2026-02",
-     "actual": 6.06,
-     "estimate": 5.87314,
-     "surprise_pct": 3.2
-    },
-    {
-     "quarter": "2026-05",
-     "actual": 5.96,
-     "estimate": 5.81474,
-     "surprise_pct": 2.5
-    },
-    {
-     "quarter": "2026-08",
-     "actual": 6.13,
-     "estimate": 6.08663,
-     "surprise_pct": 0.7
-    }
-   ],
-   "next_earnings": "2026-12-09",
-   "return_1y_pct": -32.8,
-   "from_52w_high_pct": -39.1,
-   "quant_score": {
-    "score": 65.8,
-    "quality": 82,
-    "health": 69,
-    "value": 92,
-    "revisions": 28,
-    "score_before": 65.5
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": {
-    "added_date": "2026-10-11",
-    "added_price": 242.27,
-    "return_since_add_pct": -10.1,
-    "original_thesis": "TTM FCF 마진 40.8%, FCF 수익률 11.2%, 희석주식 연 6.8% 감소를 갖춘 현금창출 기업입니다. 그런데 'AI가 크리에이티브 툴을 상품화한다'는 우려와 유기적 ARR 둔화(FY26 목표에서 Semrush를 빼면 약 8.3%)가 겹쳐 향후 12개월 추정 EPS 기준 8.9배까지 내려왔습니다. 12월 9일 FY27 가이던스가 리베이스 없이 나오면 기대값이 매수 쪽에 있는 '값싼 논쟁주'입니다.",
-    "thesis_breakers": [
-     "FY27 총 ending ARR 성장 목표가 8% 미만(Semrush 효과 소멸 후 순수 유기 기준)이거나, 실제 총 ARR 성장률이 2개 분기 연속 8% 미만인 경우.",
-     "FY27 non-GAAP EPS 가이던스 중간값이 25달러 미만(FY26 24.45~24.50달러 대비 사실상 정체)인 경우.",
-     "non-GAAP 영업이익률이 40% 미만으로 가이던스되거나, TTM FCF 마진이 32% 미만으로 2개 분기 연속 떨어지는 경우.",
-     "AI-first ARR 성장률이 전년 대비 50% 미만으로 꺾이거나, 프리미엄 MAU 증가에도 순신규 ARR이 2개 분기 더 전년 대비 감소하는 경우.",
-     "자사주 매입이 FCF의 50% 미만으로 줄거나, 대형 현금 인수로 희석주식 감소 추세(현재 연 −6.8%)가 멈추는 경우.",
-     "신임 CEO 체제에서 ARR·MAU 등 핵심 지표 공시가 축소되거나 정의가 바뀌어 투명성이 후퇴하는 경우."
-    ],
-    "last_thesis_status": "유효",
-    "last_conviction": 3
-   }
-  },
-  {
-   "ticker": "FIX",
-   "name": "Comfort Systems USA, Inc.",
-   "sector": "산업재",
-   "industry": "Engineering & Construction",
-   "as_of": "2026-11-22",
-   "price": 1042.47,
-   "market_cap_b": 36.47,
-   "valuation": {
-    "trailing_pe": 22.51555,
-    "forward_pe": 15.491272,
-    "peg": 0.3165,
-    "pe_trailing_gaap": 22.5,
-    "pe_current_fy": 20.5,
-    "pe_next_fy": 15.5,
-    "pe_ntm_est": 15.9,
-    "eps_current_fy": 50.82289,
-    "eps_next_fy": 67.29402,
-    "eps_ntm_est": 65.54,
-    "forward_pe_yahoo": 15.5,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 6.2,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 1772.2727,
-    "analyst_rating_mean_1buy_5sell": 1.46154,
-    "analysts": 11.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 62.75,
-    "mean": 67.29402,
-    "high": 71.32,
-    "spread_pct": 12.7
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 25.7,
-    "op_margin_pct": 16.8,
-    "roe_pct": 58.6,
-    "revenue_growth_last_q_yoy_pct": 53.7,
-    "eps_growth_last_q_yoy_pct": 68.6,
-    "eps_growth_est_this_fy_pct": 76.0,
-    "eps_growth_est_next_fy_pct": 32.4
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 2.44,
-    "sbc_ttm_b": 0.04,
-    "buyback_ttm_b": 0.44,
-    "fcf_margin_pct": 19.5,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 12.54,
-    "net_debt_to_ebitda": -0.81,
-    "share_count_change_pct": -0.2,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 67.29402,
-    "chg_7d_pct": 0.21,
-    "chg_30d_pct": 11.74,
-    "chg_90d_pct": 12.08,
-    "up_revisions_30d": 9.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     2.45,
-     2.65,
-     2.87,
-     3.27,
-     3.77
-    ],
-    "op_margin_pct": [
-     15.4,
-     16.1,
-     16.9,
-     17.1,
-     16.5
-    ],
-    "diluted_eps": [
-     8.25,
-     9.37,
-     10.51,
-     12.53,
-     13.91
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     4.14
-    ],
-    [
-     "2023-12",
-     5.21
-    ],
-    [
-     "2024-12",
-     7.03
-    ],
-    [
-     "2025-12",
-     9.1
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 9.37,
-     "estimate": 6.75492,
-     "surprise_pct": 38.7
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 10.51,
-     "estimate": 6.80521,
-     "surprise_pct": 54.4
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 12.53,
-     "estimate": 10.45514,
-     "surprise_pct": 19.9
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 13.91,
-     "estimate": 12.85102,
-     "surprise_pct": 8.2
-    }
-   ],
-   "next_earnings": "2026-10-22",
-   "return_1y_pct": 16.9,
-   "from_52w_high_pct": -49.5,
-   "quant_score": {
-    "score": 82.3,
-    "quality": 68,
-    "health": 74,
-    "value": 89,
-    "revisions": 94,
-    "score_before": 81.9
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  },
-  {
-   "ticker": "APA",
-   "name": "APA Corporation",
-   "sector": "에너지",
-   "industry": "Oil & Gas E&P",
-   "as_of": "2026-11-22",
-   "price": 45.03,
-   "market_cap_b": 15.12,
-   "valuation": {
-    "trailing_pe": 7.321951,
-    "forward_pe": 7.6826744,
-    "peg": 1.1083,
-    "pe_trailing_gaap": 7.3,
-    "pe_current_fy": 6.3,
-    "pe_next_fy": 7.6,
-    "pe_ntm_est": 7.4,
-    "eps_current_fy": 7.1463,
-    "eps_next_fy": 5.91403,
-    "eps_ntm_est": 6.05,
-    "forward_pe_yahoo": 7.7,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 13.8,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 50.61538,
-    "analyst_rating_mean_1buy_5sell": 2.57143,
-    "analysts": 26.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 3.37,
-    "mean": 5.91403,
-    "high": 9.07475,
-    "spread_pct": 96.5
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 79.0,
-    "op_margin_pct": 43.3,
-    "roe_pct": 33.3,
-    "revenue_growth_last_q_yoy_pct": 31.5,
-    "eps_growth_last_q_yoy_pct": 250.9,
-    "eps_growth_est_this_fy_pct": 89.6,
-    "eps_growth_est_next_fy_pct": -17.2
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 2.08,
-    "sbc_ttm_b": null,
-    "buyback_ttm_b": null,
-    "fcf_margin_pct": 22,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 9.46,
-    "net_debt_to_ebitda": 0.53,
-    "share_count_change_pct": -4.4,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 5.91403,
-    "chg_7d_pct": 4.29,
-    "chg_30d_pct": 14.34,
-    "chg_90d_pct": 40.79,
-    "up_revisions_30d": 21.0,
-    "down_revisions_30d": 2.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     2.12,
-     1.99,
-     2.33,
-     2.37,
-     2.77
-    ],
-    "op_margin_pct": [
-     31.8,
-     32.1,
-     43.3,
-     55.7,
-     43.1
-    ],
-    "diluted_eps": [
-     0.57,
-     0.79,
-     1.26,
-     2.11,
-     2.0
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     11.07
-    ],
-    [
-     "2023-12",
-     8.28
-    ],
-    [
-     "2024-12",
-     9.74
-    ],
-    [
-     "2025-12",
-     8.92
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 0.91,
-     "estimate": 0.64206,
-     "surprise_pct": 41.7
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 1.38,
-     "estimate": 1.14143,
-     "surprise_pct": 20.9
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 1.89,
-     "estimate": 1.87114,
-     "surprise_pct": 1.0
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 1.94,
-     "estimate": 1.59192,
-     "surprise_pct": 21.9
-    }
-   ],
-   "next_earnings": "2026-11-04",
-   "return_1y_pct": 93.4,
-   "from_52w_high_pct": -14.7,
-   "quant_score": {
-    "score": 78.3,
-    "quality": 71,
-    "health": 65,
-    "value": 80,
-    "revisions": 92,
-    "score_before": 78.4
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [
-    "M3 실적 개선 기업 (+3점)"
-   ],
-   "holding": null
-  },
-  {
-   "ticker": "VRT",
-   "name": "Vertiv Holdings, LLC",
-   "sector": "산업재",
-   "industry": "Electrical Equipment & Parts",
-   "as_of": "2026-11-22",
-   "price": 166.24,
-   "market_cap_b": 64.01,
-   "valuation": {
-    "trailing_pe": 31.072899,
-    "forward_pe": 16.836357,
-    "peg": 0.5459,
-    "pe_trailing_gaap": 31.1,
-    "pe_current_fy": 23.1,
-    "pe_next_fy": 16.8,
-    "pe_ntm_est": 17.3,
-    "eps_current_fy": 7.1907,
-    "eps_next_fy": 9.90613,
-    "eps_ntm_est": 9.62,
-    "forward_pe_yahoo": 16.8,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 4.9,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 332.55267,
-    "analyst_rating_mean_1buy_5sell": 1.3871,
-    "analysts": 30.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 8.729,
-    "mean": 9.90613,
-    "high": 11.89,
-    "spread_pct": 31.9
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 38.1,
-    "op_margin_pct": 21.1,
-    "roe_pct": 46.6,
-    "revenue_growth_last_q_yoy_pct": 61.2,
-    "eps_growth_last_q_yoy_pct": 91.2,
-    "eps_growth_est_this_fy_pct": 71.2,
-    "eps_growth_est_next_fy_pct": 37.8
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 3.11,
-    "sbc_ttm_b": 0.06,
-    "buyback_ttm_b": null,
-    "fcf_margin_pct": 23.9,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 13.12,
-    "net_debt_to_ebitda": -0.11,
-    "share_count_change_pct": 0.72,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 9.90613,
-    "chg_7d_pct": 0.33,
-    "chg_30d_pct": 7.74,
-    "chg_90d_pct": 8.87,
-    "up_revisions_30d": 27.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     2.68,
-     2.88,
-     2.65,
-     3.27,
-     4.31
-    ],
-    "op_margin_pct": [
-     20.5,
-     21.1,
-     16.4,
-     19.5,
-     23.0
-    ],
-    "diluted_eps": [
-     1.02,
-     1.14,
-     0.99,
-     1.27,
-     1.95
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     5.69
-    ],
-    [
-     "2023-12",
-     6.86
-    ],
-    [
-     "2024-12",
-     8.01
-    ],
-    [
-     "2025-12",
-     10.23
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 1.36,
-     "estimate": 1.29646,
-     "surprise_pct": 4.9
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 1.17,
-     "estimate": 1.0115,
-     "surprise_pct": 15.7
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 1.52,
-     "estimate": 1.42824,
-     "surprise_pct": 6.4
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 2.21,
-     "estimate": 1.82366,
-     "surprise_pct": 21.2
-    }
-   ],
-   "next_earnings": "2026-10-28",
-   "return_1y_pct": 4.1,
-   "from_52w_high_pct": -55.8,
-   "quant_score": {
-    "score": 80.1,
-    "quality": 74,
-    "health": 71,
-    "value": 80,
-    "revisions": 91,
-    "score_before": 79.5
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  },
-  {
-   "ticker": "ASML",
-   "name": "ASML Holding N.V. - New York Re",
-   "sector": "IT·기술",
-   "industry": "Semiconductor Equipment & Materials",
-   "as_of": "2026-11-22",
-   "price": 1266.22,
-   "market_cap_b": 488.02,
-   "valuation": {
-    "trailing_pe": 31.156988,
-    "forward_pe": 19.972149,
-    "peg": 0.7226,
-    "pe_trailing_gaap": 31.2,
-    "pe_current_fy": 30.6,
-    "pe_next_fy": 22.4,
-    "pe_ntm_est": 23.1,
-    "eps_current_fy": 41.41393,
-    "eps_next_fy": 56.43418,
-    "eps_ntm_est": 54.83,
-    "forward_pe_yahoo": 20.0,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 4.7,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 2107.5134,
-    "analyst_rating_mean_1buy_5sell": 1.36585,
-    "analysts": 17.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 37.43,
-    "mean": 56.43418,
-    "high": 63.89124,
-    "spread_pct": 46.9
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 54.3,
-    "op_margin_pct": 38.6,
-    "roe_pct": 65.6,
-    "revenue_growth_last_q_yoy_pct": 55.2,
-    "eps_growth_last_q_yoy_pct": 135.9,
-    "eps_growth_est_this_fy_pct": 67.6,
-    "eps_growth_est_next_fy_pct": 36.3
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 21.0,
-    "sbc_ttm_b": 0.22,
-    "buyback_ttm_b": 7.85,
-    "fcf_margin_pct": 53.2,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 39.47,
-    "net_debt_to_ebitda": -0.67,
-    "share_count_change_pct": -0.7,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 56.43418,
-    "chg_7d_pct": 0.9,
-    "chg_30d_pct": 9.09,
-    "chg_90d_pct": 10.47,
-    "up_revisions_30d": 22.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     7.52,
-     9.72,
-     8.77,
-     9.33,
-     11.66
-    ],
-    "op_margin_pct": [
-     32.8,
-     35.3,
-     36.0,
-     37.1,
-     44.4
-    ],
-    "diluted_eps": [
-     5.48,
-     7.34,
-     7.15,
-     7.58,
-     12.93
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     21.17
-    ],
-    [
-     "2023-12",
-     27.56
-    ],
-    [
-     "2024-12",
-     28.26
-    ],
-    [
-     "2025-12",
-     32.67
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 7.34,
-     "estimate": 7.54521,
-     "surprise_pct": -2.7
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 7.15,
-     "estimate": 6.621,
-     "surprise_pct": 8.0
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 7.58,
-     "estimate": 6.94813,
-     "surprise_pct": 9.1
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 11.8193,
-     "estimate": 10.75815,
-     "surprise_pct": 9.9
-    }
-   ],
-   "next_earnings": "2027-01-27",
-   "return_1y_pct": 31.8,
-   "from_52w_high_pct": -36.2,
-   "quant_score": {
-    "score": 79.5,
-    "quality": 88,
-    "health": 74,
-    "value": 60,
-    "revisions": 93,
-    "score_before": 76.5
-   },
-   "data_conflicts": [
-    {
-     "metric": "FCF 마진(TTM)",
-     "values": {
-      "현금흐름표 4분기 합계": "53.2%",
-      "Yahoo 요약(levered FCF)": "26.3%"
-     },
-     "why": "FCF 정의·기간이 다름. 기업의 질·재무·가격 점수에 영향"
-    },
-    {
-     "metric": "다음 회계연도 EPS",
-     "values": {
-      "forwardEps": 63.39929,
-      "추정치 추이(+1y)": 56.43418
-     },
-     "why": "추정 PER 기준 EPS 불일치"
-    }
-   ],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  },
-  {
-   "ticker": "EME",
-   "name": "EMCOR Group, Inc.",
-   "sector": "산업재",
-   "industry": "Engineering & Construction",
-   "as_of": "2026-11-22",
-   "price": 603.32,
-   "market_cap_b": 26.41,
-   "valuation": {
-    "trailing_pe": 17.442036,
-    "forward_pe": 14.692667,
-    "peg": 0.3806,
-    "pe_trailing_gaap": 17.4,
-    "pe_current_fy": 17.3,
-    "pe_next_fy": 14.7,
-    "pe_ntm_est": 14.9,
-    "eps_current_fy": 34.9351,
-    "eps_next_fy": 41.06266,
-    "eps_ntm_est": 40.41,
-    "forward_pe_yahoo": 14.7,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 5.7,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 875.6,
-    "analyst_rating_mean_1buy_5sell": 1.84615,
-    "analysts": 10.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 38.33,
-    "mean": 41.06266,
-    "high": 43.50161,
-    "spread_pct": 12.6
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 19.6,
-    "op_margin_pct": 9.9,
-    "roe_pct": 40.6,
-    "revenue_growth_last_q_yoy_pct": 28.8,
-    "eps_growth_last_q_yoy_pct": 37.6,
-    "eps_growth_est_this_fy_pct": 35.0,
-    "eps_growth_est_next_fy_pct": 17.5
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 1.48,
-    "sbc_ttm_b": 0.02,
-    "buyback_ttm_b": 0.61,
-    "fcf_margin_pct": 7.5,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 19.84,
-    "net_debt_to_ebitda": -0.1,
-    "share_count_change_pct": -1.72,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 41.06266,
-    "chg_7d_pct": 0.38,
-    "chg_30d_pct": 9.87,
-    "chg_90d_pct": 11.75,
-    "up_revisions_30d": 9.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     4.3,
-     4.51,
-     4.63,
-     5.15,
-     5.54
-    ],
-    "op_margin_pct": [
-     9.4,
-     9.5,
-     8.7,
-     10.6,
-     10.5
-    ],
-    "diluted_eps": [
-     6.57,
-     9.68,
-     6.84,
-     9.06,
-     9.04
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     11.08
-    ],
-    [
-     "2023-12",
-     12.58
-    ],
-    [
-     "2024-12",
-     14.57
-    ],
-    [
-     "2025-12",
-     16.99
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 7.19,
-     "estimate": 6.68125,
-     "surprise_pct": 7.6
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 6.84,
-     "estimate": 5.90443,
-     "surprise_pct": 15.8
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 9.06,
-     "estimate": 7.23108,
-     "surprise_pct": 25.3
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 9.6,
-     "estimate": 8.3568,
-     "surprise_pct": 14.9
-    }
-   ],
-   "next_earnings": "2026-10-29",
-   "return_1y_pct": 4.0,
-   "from_52w_high_pct": -36.0,
-   "quant_score": {
-    "score": 77.2,
-    "quality": 52,
-    "health": 70,
-    "value": 89,
-    "revisions": 93,
-    "score_before": 76.4
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [],
-   "holding": null
-  },
-  {
-   "ticker": "APP",
-   "name": "Applovin Corporation",
-   "sector": "커뮤니케이션",
-   "industry": "Advertising Agencies",
-   "as_of": "2026-11-22",
-   "price": 348.29,
-   "market_cap_b": 115.4,
-   "valuation": {
-    "trailing_pe": 23.453873,
-    "forward_pe": 16.695877,
-    "peg": 0.7981,
-    "pe_trailing_gaap": 23.5,
-    "pe_current_fy": 21.4,
-    "pe_next_fy": 16.8,
-    "pe_ntm_est": 17.2,
-    "eps_current_fy": 16.262,
-    "eps_next_fy": 20.72451,
-    "eps_ntm_est": 20.25,
-    "forward_pe_yahoo": 16.7,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 4.2,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 458.11,
-    "analyst_rating_mean_1buy_5sell": 1.57576,
-    "analysts": 31.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 17.53,
-    "mean": 20.72451,
-    "high": 23.11,
-    "spread_pct": 26.9
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 88.8,
-    "op_margin_pct": 77.8,
-    "roe_pct": 210.1,
-    "revenue_growth_last_q_yoy_pct": 55.5,
-    "eps_growth_last_q_yoy_pct": 75.5,
-    "eps_growth_est_this_fy_pct": 63.1,
-    "eps_growth_est_next_fy_pct": 20.2
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 4.87,
-    "sbc_ttm_b": null,
-    "buyback_ttm_b": 3.23,
-    "fcf_margin_pct": 64.1,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": 7.61,
-    "net_debt_to_ebitda": 0.06,
-    "share_count_change_pct": -2.13,
-    "share_count_span": "2025-09→2026-09"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 20.72451,
-    "chg_7d_pct": 0.22,
-    "chg_30d_pct": 4.07,
-    "chg_90d_pct": 1.27,
-    "up_revisions_30d": 11.0,
-    "down_revisions_30d": 6.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-09",
-     "2025-12",
-     "2026-03",
-     "2026-06",
-     "2026-09"
-    ],
-    "revenue_b": [
-     1.41,
-     1.66,
-     1.84,
-     1.92,
-     2.18
-    ],
-    "op_margin_pct": [
-     76.8,
-     76.9,
-     78.2,
-     77.7,
-     78.2
-    ],
-    "diluted_eps": [
-     2.45,
-     3.24,
-     3.56,
-     3.76,
-     4.3
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2022-12",
-     2.82
-    ],
-    [
-     "2023-12",
-     1.84
-    ],
-    [
-     "2024-12",
-     3.22
-    ],
-    [
-     "2025-12",
-     5.48
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2025-12",
-     "actual": 3.24,
-     "estimate": 2.94408,
-     "surprise_pct": 10.1
-    },
-    {
-     "quarter": "2026-03",
-     "actual": 3.56,
-     "estimate": 3.44326,
-     "surprise_pct": 3.4
-    },
-    {
-     "quarter": "2026-06",
-     "actual": 3.76,
-     "estimate": 3.74407,
-     "surprise_pct": 0.4
-    },
-    {
-     "quarter": "2026-09",
-     "actual": 4.3,
-     "estimate": 4.03057,
-     "surprise_pct": 6.7
-    }
-   ],
-   "next_earnings": "2026-11-04",
-   "return_1y_pct": -33.1,
-   "from_52w_high_pct": -52.5,
-   "quant_score": {
-    "score": 71.6,
-    "quality": 95,
-    "health": 69,
-    "value": 54,
-    "revisions": 68,
-    "score_before": 70.8
-   },
-   "data_conflicts": [],
-   "cycle_check": null,
-   "dashboard_signals": [
-    "M1 대가 최근분기 매수: Stan Druckenmiller (+5점)"
-   ],
-   "holding": null
-  },
-  {
-   "ticker": "KEYS",
-   "name": "Keysight Technologies Inc.",
-   "sector": "IT·기술",
-   "industry": "Scientific & Technical Instruments",
-   "as_of": "2026-11-22",
-   "price": 261.51,
-   "market_cap_b": 44.52,
-   "valuation": {
-    "trailing_pe": 29.886858,
-    "forward_pe": 15.136397,
-    "peg": 0.5185,
-    "pe_trailing_gaap": 29.9,
-    "pe_current_fy": 17.2,
-    "pe_next_fy": 15.1,
-    "pe_ntm_est": 17.0,
-    "eps_current_fy": 15.23067,
-    "eps_next_fy": 17.2769,
-    "eps_ntm_est": 15.36,
-    "forward_pe_yahoo": 15.1,
-    "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 3.93,
-    "fcf_yield_basis": "AI 검증 확정값",
-    "analyst_target_mean": 391.08334,
-    "analyst_rating_mean_1buy_5sell": 1.5,
-    "analysts": 12.0
-   },
-   "eps_estimate_range_next_fy": {
-    "low": 16.27,
-    "mean": 17.2769,
-    "high": 18.97,
-    "spread_pct": 15.6
-   },
-   "growth_profitability": {
-    "gross_margin_pct": 65.8,
-    "op_margin_pct": 23.8,
-    "roe_pct": 23.6,
-    "revenue_growth_last_q_yoy_pct": 40.5,
-    "eps_growth_last_q_yoy_pct": 112.1,
-    "eps_growth_est_this_fy_pct": 30.0,
-    "eps_growth_est_next_fy_pct": 13.4
-   },
-   "cash_debt_dilution": {
-    "fcf_ttm_b": 1.47,
-    "sbc_ttm_b": 0.21,
-    "buyback_ttm_b": 0.62,
-    "fcf_margin_pct": 24.4,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
-    "revenue_ttm_b": null,
-    "net_debt_to_ebitda": -0.09,
-    "share_count_change_pct": -0.92,
-    "share_count_span": "2025-07→2026-07"
-   },
-   "estimate_revisions_next_fy_eps": {
-    "current": 17.2769,
-    "chg_7d_pct": 9.35,
-    "chg_30d_pct": 9.35,
-    "chg_90d_pct": 10.08,
-    "up_revisions_30d": 1.0,
-    "down_revisions_30d": 0.0
-   },
-   "quarterly": {
-    "periods": [
-     "2025-10",
-     "2026-01",
-     "2026-04",
-     "2026-07",
-     "2026-10"
-    ],
-    "revenue_b": [
-     1.42,
-     1.6,
-     1.72,
-     1.85,
-     null
-    ],
-    "op_margin_pct": [
-     15.3,
-     15.5,
-     23.7,
-     25.0,
-     null
-    ],
-    "diluted_eps": [
-     1.33,
-     1.63,
-     2.02,
-     2.3,
-     2.82
-    ]
-   },
-   "annual_revenue_b": [
-    [
-     "2023-10",
-     5.46
-    ],
-    [
-     "2024-10",
-     4.98
-    ],
-    [
-     "2025-10",
-     5.38
-    ],
-    [
-     "2026-10",
-     null
-    ]
-   ],
-   "eps_surprises": [
-    {
-     "quarter": "2026-01",
-     "actual": 2.17,
-     "estimate": 1.9954,
-     "surprise_pct": 8.8
-    },
-    {
-     "quarter": "2026-04",
-     "actual": 2.87,
-     "estimate": 2.32041,
-     "surprise_pct": 23.7
-    },
-    {
-     "quarter": "2026-07",
-     "actual": 3.07,
-     "estimate": 2.48193,
-     "surprise_pct": 23.7
-    },
-    {
-     "quarter": "2026-10",
-     "actual": 3.61,
-     "estimate": 3.38038,
-     "surprise_pct": 6.8
-    }
-   ],
-   "next_earnings": "2026-11-19",
-   "return_1y_pct": 51.4,
-   "from_52w_high_pct": -32.6,
-   "quant_score": {
-    "score": 77.0,
-    "quality": 74,
-    "health": 70,
-    "value": 67,
-    "revisions": 93,
-    "score_before": 75.7
    },
    "data_conflicts": [],
    "cycle_check": null,
@@ -1792,7 +1642,7 @@
    "name": "Valero Energy Corporation",
    "sector": "에너지",
    "industry": "Oil & Gas Refining & Marketing",
-   "as_of": "2026-11-22",
+   "as_of": "2026-11-23",
    "price": 334.18,
    "market_cap_b": 93.2,
    "valuation": {
@@ -1805,11 +1655,11 @@
     "pe_ntm_est": 6.4,
     "eps_current_fy": 60.23472,
     "eps_next_fy": 51.2229,
-    "eps_ntm_est": 52.19,
+    "eps_ntm_est": 52.16,
     "forward_pe_yahoo": 6.5,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 14.9,
-    "fcf_yield_basis": "AI 검증 확정값",
+    "fcf_yield_pct": 16.18,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 421.3158,
     "analyst_rating_mean_1buy_5sell": 2.5,
     "analysts": 19.0
@@ -1834,7 +1684,7 @@
     "sbc_ttm_b": null,
     "buyback_ttm_b": 7.26,
     "fcf_margin_pct": 9.8,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
     "revenue_ttm_b": 153.33,
     "net_debt_to_ebitda": 0.06,
     "share_count_change_pct": -8.57,
@@ -1945,7 +1795,7 @@
    "name": "Strategy Inc",
    "sector": "IT·기술",
    "industry": "Software - Application",
-   "as_of": "2026-11-22",
+   "as_of": "2026-11-23",
    "price": 77.8,
    "market_cap_b": 32.93,
    "valuation": {
@@ -1958,11 +1808,11 @@
     "pe_ntm_est": 4.2,
     "eps_current_fy": -6.73156,
     "eps_next_fy": 21.34548,
-    "eps_ntm_est": 18.35,
+    "eps_ntm_est": 18.42,
     "forward_pe_yahoo": 4.5,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": -0.08,
-    "fcf_yield_basis": "AI 검증 확정값",
+    "fcf_yield_pct": -52.73,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 233.26666,
     "analyst_rating_mean_1buy_5sell": 1.25,
     "analysts": 15.0
@@ -1986,8 +1836,8 @@
     "fcf_ttm_b": -17.37,
     "sbc_ttm_b": 0.05,
     "buyback_ttm_b": null,
-    "fcf_margin_pct": -5.7,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+    "fcf_margin_pct": -3507.6,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
     "revenue_ttm_b": 0.5,
     "net_debt_to_ebitda": null,
     "share_count_change_pct": 46.97,
@@ -2079,10 +1929,10 @@
    "return_1y_pct": -54.4,
    "from_52w_high_pct": -60.3,
    "quant_score": {
-    "score": 51.7,
-    "quality": 33,
+    "score": 51.1,
+    "quality": 31,
     "health": 28,
-    "value": 51,
+    "value": 50,
     "revisions": 84,
     "score_before": 51.2
    },
@@ -2115,7 +1965,7 @@
    "name": "Circle Internet Group, Inc.",
    "sector": "금융",
    "industry": "Capital Markets",
-   "as_of": "2026-11-22",
+   "as_of": "2026-11-23",
    "price": 47.51,
    "market_cap_b": 12.19,
    "valuation": {
@@ -2131,8 +1981,8 @@
     "eps_ntm_est": 1.29,
     "forward_pe_yahoo": 33.3,
     "forward_pe_yahoo_basis": "Yahoo forwardPE = 현재가 ÷ 다음 회계연도 컨센서스 EPS (향후 12개월 아님)",
-    "fcf_yield_pct": 4.8,
-    "fcf_yield_basis": "AI 검증 확정값",
+    "fcf_yield_pct": 5.73,
+    "fcf_yield_basis": "현금흐름표 TTM FCF ÷ 시가총액",
     "analyst_target_mean": 102.3675,
     "analyst_rating_mean_1buy_5sell": 2.17241,
     "analysts": 24.0
@@ -2156,8 +2006,8 @@
     "fcf_ttm_b": 0.7,
     "sbc_ttm_b": 0.21,
     "buyback_ttm_b": null,
-    "fcf_margin_pct": 22.1,
-    "fcf_margin_basis": "AI 검증 확정값 (공식 현금흐름표)",
+    "fcf_margin_pct": 23.1,
+    "fcf_margin_basis": "현금흐름표 TTM FCF ÷ TTM 매출",
     "revenue_ttm_b": 3.03,
     "net_debt_to_ebitda": -4.68,
     "share_count_change_pct": 7.47,
@@ -2249,10 +2099,10 @@
    "return_1y_pct": -33.4,
    "from_52w_high_pct": -64.2,
    "quant_score": {
-    "score": 43.1,
+    "score": 43.8,
     "quality": 52,
     "health": 78,
-    "value": 31,
+    "value": 34,
     "revisions": 23,
     "score_before": 39.0
    },
@@ -2283,7 +2133,7 @@
   }
  ],
  "market_context": {
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-23",
   "sector_eps_revisions_30d": [
    {
     "sector": "에너지",
@@ -2307,7 +2157,7 @@
    },
    {
     "sector": "헬스케어",
-    "chg_pct": 0.3,
+    "chg_pct": 0.29,
     "momentum": "→횡보"
    },
    {
@@ -2438,265 +2288,463 @@
    "id": 6
   },
   {
-   "title": "Copa Holdings: 3 Key Takeaways for Long-Term Investors",
+   "title": "Ferrovial: 3 Key Takeaways for Long-Term Investors",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/copa-holdings-3-key-takeaways-long-term-investors",
+   "url": "https://www.nasdaq.com/articles/ferrovial-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsOperating revenues grew 31.9% year over year to $1.2 billion.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsConstruction order book reached an all-time high of 19 billion euros.",
    "id": 7
   },
   {
-   "title": "ZIM: 3 Key Takeaways for Long-Term Investors",
+   "title": "Newtek: 3 Key Takeaways for Long-Term Investors",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/zim-3-key-takeaways-long-term-investors",
+   "url": "https://www.nasdaq.com/articles/newtek-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsZIM raised 2026 EBITDA guidance to $3.3 billion to $3.5 billion.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsQuarterly net interest income reached $18.9 million, up 30% year over year.",
    "id": 8
   },
   {
-   "title": "Gap: 3 Key Takeaways for Long-Term Investors",
+   "title": "One Stop: 3 Key Takeaways for Long-Term Investors",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/gap-3-key-takeaways-long-term-investors",
+   "url": "https://www.nasdaq.com/articles/one-stop-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsGap net sales rose 11% with comparable sales up 9%.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsOne Stop raised full-year 2026 revenue growth guidance to 40%.",
    "id": 9
   },
   {
-   "title": "Best Semiconductor Stocks to Buy: Micron vs. Intel",
+   "title": "NOV: 3 Key Takeaways for Long-Term Investors",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/best-semiconductor-stocks-buy-micron-vs-intel",
+   "url": "https://www.nasdaq.com/articles/nov-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Should you buy stock in Micron Technology right now? Before you buy stock in Micron Technology, consider this:Missed Nvidia in 2009? This Rare Signal Is Flashing Again. In 2009, a \"Double Down\" signal flashed for a little-known chipmaker called Nvidia. For the first time in years",
+   "published": "2026-11-22",
+   "snippet": "Key PointsNOV reported third-quarter revenue of $2.23 billion and $90 million net income.",
    "id": 10
   },
   {
-   "title": "Here's the Average Social Security Benefit for Men by Age",
+   "title": "Why York Space Systems Stock Plunged This Week",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/heres-average-social-security-benefit-men-age",
+   "url": "https://www.nasdaq.com/articles/why-york-space-systems-stock-plunged-week",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsAs of December 2025, men receive an average monthly benefit of $2,282.28, which is $409.85 higher than the average for women.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsYork Space Systems dropped after major Wall Street firms cut price targets following defense contract award delays.",
    "id": 11
   },
   {
-   "title": "Key deals this week: PANW, FANG, ZS, LLY, and more",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675391-key-deals-this-week-panw-fang-zs-lly-and-more?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Does Anthropic Have a Competitive Advantage? These are the Four Big Ones",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/does-anthropic-have-competitive-advantage-these-are-four-big-ones",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
+   "published": "2026-11-22",
+   "snippet": "Key PointsAnthropic went public in the biggest IPO in history, raising $91.6 billion.",
    "id": 12
   },
   {
-   "title": "‘It’s downright dirty’: My brother moved in with our ailing mother and closed her bank account. What can I do?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/it-is-heartbreaking-exhausting-and-downright-dirty-my-brother-took-over-our-ailing-mothers-life-and-finances-what-can-i-do-b4d48817?mod=mw_rss_topstories",
+   "title": "Warren Buffett’s Successor, Greg Abel, Has Invested Nearly 47% of Berkshire Hathaway’s $360 Billion Stock Portfolio in Just 3 Stocks (and None Are AI Hyperscalers)",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/warren-buffetts-successor-greg-abel-has-invested-nearly-47-berkshire-hathaways-360-billion",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "“It is devastating when the people you should be able to trust become the very people you have to protect yourself from.”",
+   "published": "2026-11-22",
+   "snippet": "Key PointsSome of Berkshire's top stocks were purchased in the 1990s, while others are more recent.",
    "id": 13
   },
   {
-   "title": "The sudden reversal in the stock market, and what comes next",
-   "source": "The Washington Post",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSm50RWJ1NlVXc1k3X1NqclJ4Vy1INGk2b1hMOExGTG1wVF9HeGF0M2JTY2s1TEhPeHJ6MWRkSFVPU2ZrYzlsczI2N3ZHN0lHOFJsSXBaeU15QzdXSmRENll4WXA1Qjl1YlQ3M2JKWC0zclRvck9lT2J5cEttTG9qaWQtY2RxUDh1ZWNJaGFldHhiT3pwYW9qYThqdE4?oc=5",
+   "title": "Bears will be yelling fire in crowded theater - Dan Ives",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4675414-bears-will-be-yelling-fire-in-crowded-theater-dan-ives?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-21",
+   "published": "2026-11-22",
    "snippet": "",
    "id": 14
   },
   {
-   "title": "1 Compelling Reason to Buy Vistra Stock Before November Ends",
+   "title": "Anthropic Stock Could Soar by 72%, According to This Wall Street Analyst",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/1-compelling-reason-buy-vistra-stock-november-ends",
+   "url": "https://www.nasdaq.com/articles/anthropic-stock-could-soar-72-according-wall-street-analyst",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsVistra stock has fallen 20% this year as regulatory scrutiny and concerns over electricity costs weigh on independent power producers.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsNeedham’s Scott Berg initiated coverage of Anthropic with a Buy rating and a $150 price target.",
    "id": 15
   },
   {
-   "title": "CAVA vs. On: Which Consumer Stock Is a Better Buy for 2027?",
+   "title": "Nuvectis: 3 Key Takeaways for Long-Term Investors",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/cava-vs-which-consumer-stock-better-buy-2027",
+   "url": "https://www.nasdaq.com/articles/nuvectis-3-key-takeaways-long-term-investors",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsCAVA Group is rapidly expanding its Mediterranean fast-casual footprint while growing its retail presence in grocery stores.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsNuvectis ended the third quarter with $140 million in cash.",
    "id": 16
   },
   {
-   "title": "Meet the Warren Buffett Rule That Makes This Consumer Stock a Buy With $1,000 Right Now",
+   "title": "When Can Anthropic Insiders Sell? What the Post-IPO Lockup Period Means for Shareholders.",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/meet-warren-buffett-rule-makes-consumer-stock-buy-1000-right-now-0",
+   "url": "https://www.nasdaq.com/articles/when-can-anthropic-insiders-sell-what-post-ipo-lockup-period-means-shareholders",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsBuffett learned the hard way that a great business at a fair price beats a so-so business at a bargain price.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsThe staggered lockup periods for Anthropic insiders range from a few weeks to 365 days.",
    "id": 17
   },
   {
-   "title": "Nvidia probe in California extends to potential criminal violations: Bloomberg",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675398-nvidia-probed-over-criminal-violations-california?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Social Security should be shut down, this Republican senator says",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/social-security-should-be-shut-down-this-republican-senator-says-8f7fef81?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
+   "published": "2026-11-22",
+   "snippet": "The program’s trust funds are forecast to run out of money in the next six years.",
    "id": 18
   },
   {
-   "title": "Airbnb vs. DoorDash: Which Stock Is a Better Buy?",
+   "title": "United Airlines Has Warned Air Traffic Control Isn’t Ready for Air Taxis. That’s a Bigger Problem for Archer Than Its Cash Burn.",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/airbnb-vs-doordash-which-stock-better-buy",
+   "url": "https://www.nasdaq.com/articles/united-airlines-has-warned-air-traffic-control-isnt-ready-air-taxis-thats-bigger-problem",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsAirbnb maintains a highly profitable marketplace model with strong net income and significant free cash flow generation.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsArcher Aviation's shares are down more than 52% this year.",
    "id": 19
   },
   {
-   "title": "‘I’ve been a stay-at-home mom’: I’m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/ive-been-a-stay-at-home-mom-im-50-and-have-a-chronic-illness-my-husband-lost-his-job-should-he-raid-his-401-k-63e59123?mod=mw_rss_topstories",
+   "title": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?",
+   "source": "Nasdaq",
+   "url": "https://www.nasdaq.com/articles/nike-vs-procter-gamble-which-consumer-stock-better-buy-2027-0",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "“Our financial and healthcare situation has become increasingly concerning.”",
+   "published": "2026-11-22",
+   "snippet": "Key PointsNike continues to leverage its global brand power through direct-to-consumer digital expansion and high-profile international sports partnerships.",
    "id": 20
   },
   {
-   "title": "‘Buyers are out for blood’: With home sales at a record low, buyers are calling the shots",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/buyers-are-out-for-blood-as-housing-market-finally-hits-rock-bottom-fa5093a6?mod=mw_rss_topstories",
+   "title": "'Hunger Games' helps box office rebound amid GTA 6 fever",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4675413-hunger-games-helps-box-office-rebound-amid-gta-6-fever?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "The few buyers left in the market braving record-high home prices and 7% mortgage rates are starting to call the shots, real-estate agents say.",
+   "published": "2026-11-22",
+   "snippet": "",
    "id": 21
   },
   {
-   "title": "MSCI Is Cutting Strategy and Metaplanet From Its Indexes. Here's What It Means for Bitcoin Treasury Company Stocks.",
+   "title": "Uber Trades at 16 Times Forward Earnings and a 30% Discount to Its All-Time High Stock Price. Here’s Why Robotaxis Make That a Mistake.",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/msci-cutting-strategy-and-metaplanet-its-indexes-heres-what-it-means-bitcoin-treasury",
+   "url": "https://www.nasdaq.com/articles/uber-trades-16-times-forward-earnings-and-30-discount-its-all-time-high-stock-price-heres",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsMSCI will remove Strategy and Metaplanet from its indexes at the close of Nov. 30.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsTwo of the leading self-driving platforms -- Waymo and Tesla -- could grow their adoption over time.",
    "id": 22
   },
   {
-   "title": "Better Recent IPO: SpaceX or Anthropic?",
+   "title": "Figma vs. Fastly: Which Cloud Stock Is a Better Buy for 2027?",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/better-recent-ipo-spacex-or-anthropic",
+   "url": "https://www.nasdaq.com/articles/figma-vs-fastly-which-cloud-stock-better-buy-2027",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsSpaceX made $4.4 billion in profit in the third quarter.",
+   "published": "2026-11-22",
+   "snippet": "Key PointsFigma continues to deliver high revenue growth while expanding its collaborative design ecosystem into large enterprises.",
    "id": 23
   },
   {
-   "title": "Is Ford Stock A Buy?",
+   "title": "What Every 65-Year-Old Should Know About Social Security",
    "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/ford-stock-buy",
+   "url": "https://www.nasdaq.com/articles/what-every-65-year-old-should-know-about-social-security",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Should you buy stock in Ford Motor Company right now? Before you buy stock in Ford Motor Company, consider this:Missed Nvidia in 2009? This Rare Signal Is Flashing Again. In 2009, a \"Double Down\" signal flashed for a little-known chipmaker called Nvidia. For the first time in yea",
+   "published": "2026-11-22",
+   "snippet": "Key PointsIf your full retirement age is 67, claiming Social Security at 65 will reduce your benefits by around 13.33%.",
    "id": 24
   },
   {
-   "title": "Medtronic Is About to Report Its First Earnings Since Spinning Off MiniMed. Should You Buy the Stock Before Nov. 24?",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/medtronic-about-report-its-first-earnings-spinning-minimed-should-you-buy-stock-nov-24",
+   "title": "Wall Street Strategists See Silver Lining for Stock Market",
+   "source": "Barron's",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVGVBc1ZvVkN3NHA2dnQzbEFQeEtsanRGYWluMXRLamVkZHNRYlZyWnZXMnRHQzk2SWhuSjh6Xy1ySGE5blRiZXA1ck1RM3pyMEZiX1RickFIVzBxa3NGejJNN1RGcFQ3cURNd05pVGNFZjFHM3dHV2RxTVZhWWU3eUhKb1JqM3RUcEQtc3ItN1lHVUh1Smc1dmNvZjJ4QQ?oc=5",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsMedtronic concluded its spin-off of MiniMed in October.",
+   "published": "2026-11-22",
+   "snippet": "",
    "id": 25
   },
   {
-   "title": "2 Growth Stocks That Could Double by 2031",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/2-growth-stocks-could-double-2031",
+   "title": "Goldman watching for 3 conditions that could support a stock correction bottom",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4675412-goldman-watching-for-3-conditions-that-could-support-a-stock-correction-bottom?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsAll it takes is a 15% annualized gain to double a stock's value in five years.",
+   "published": "2026-11-22",
+   "snippet": "",
    "id": 26
   },
   {
-   "title": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
+   "title": "Medicare beneficiaries could skip the nursing home for cheaper care at home under new bill",
    "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/my-husband-is-happily-retired-at-64-and-thinks-i-should-keep-working-is-he-being-fair-325c5f38?mod=mw_rss_topstories",
+   "url": "https://www.marketwatch.com/story/medicare-beneficiaries-could-skip-the-nursing-home-for-cheaper-care-at-home-under-new-bill-e289c8d0?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "“I’m exhausted. My alarm goes off at 6 a.m., and I have a 50-minute commute.”",
+   "published": "2026-11-22",
+   "snippet": "The plan would free up hospital and nursing-home beds — and lower costs.",
    "id": 27
   },
   {
-   "title": "Better Buy: Bitcoin vs. Ethereum",
-   "source": "Nasdaq",
-   "url": "https://www.nasdaq.com/articles/better-buy-bitcoin-vs-ethereum",
+   "title": "OpenAI calls for industry-wide AI brake tied to perplexity",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4675411-openai-calls-for-industry-wide-ai-brake-tied-to-perplexity?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Key PointsBitcoin and Ether have both plummeted from their all-time highs.",
+   "published": "2026-11-22",
+   "snippet": "",
    "id": 28
   },
   {
-   "title": "Trump to work with Dems to cap credit card interest rates",
+   "title": "SA Asks: How much of a threat is Anthropic's multi-chip strategy to Nvidia?",
    "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675397-trump-work-with-dems-cap-credit-card-interest-rate?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "url": "https://seekingalpha.com/news/4675384-sa-asks-how-much-of-a-threat-is-anthropics-multi-chip-strategy-to-nvidia?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "kind": "뉴스",
-   "published": "2026-11-21",
+   "published": "2026-11-22",
    "snippet": "",
    "id": 29
   },
   {
-   "title": "America is definitely rich enough to fix Social Security and Medicare. Here’s how.",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/america-is-definitely-rich-enough-to-fix-social-security-and-medicare-heres-how-30678aa5?mod=mw_rss_topstories",
+   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
    "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "This one, simple, low-pain tax solves all the problems.",
+   "published": "2026-11-22",
+   "snippet": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
    "id": 30
+  },
+  {
+   "title": "These little-known investments could be among the best bargains in a crash",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/these-little-known-investments-could-be-among-the-best-bargains-in-a-crash-78a379b4?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "If this stock market turmoil turns into a full-blown crash, look for low-risk investment bargains among closed-end funds.",
+   "id": 31
+  },
+  {
+   "title": "Private equity has been buying up hospice centers — with striking consequences",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/private-equity-has-been-buying-up-hospice-centers-with-striking-consequences-63642545?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Medicare costs are higher and patients stay longer at hospice providers owned by private-equity firms, new research has found.",
+   "id": 32
+  },
+  {
+   "title": "Director of National Intelligence Jay Clayton warns Americans of 'bumps in the road' after tech outages",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/jay-clayton-tech-outages-faa-microsoft-thanksgiving.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Clayton’s warning comes ahead of Thanksgiving travel, after separate outages disrupted air travel, Microsoft 365 and some bank transactions.",
+   "id": 33
+  },
+  {
+   "title": "‘Nvidia’s turmoil has me spooked’: Is it time to sell my stocks and buy real estate?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "If you are tempted to ditch stocks for property or CDs, take a deep breath before making any sudden moves.",
+   "id": 34
+  },
+  {
+   "title": "Delta flights delayed due to automated system issue",
+   "source": "Seeking Alpha",
+   "url": "https://seekingalpha.com/news/4675410-delta-flights-delayed-due-to-automated-system-issue?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 35
+  },
+  {
+   "title": "I’m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/were-in-our-50s-and-terrified-of-a-market-crash-should-we-put-400-000-of-our-1-million-retirement-savings-into-an-annuity-1943f240?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "“We have a house worth $450,000. Our combined annual income is $125,000.”",
+   "id": 36
+  },
+  {
+   "title": "‘I felt so seen’: Why families across America are laughing — and crying — over SNL’s ‘Sister’ sketch",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/so-sad-and-so-true-has-your-family-talked-about-snls-sister-sketch-yet-19bf9d67?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "The late-night comedy sketch does the impossible by making female caregivers feel seen.",
+   "id": 37
   },
   {
    "title": "‘Never too late to start’: Practical investing advice from some of the top women in finance",
    "source": "MarketWatch",
    "url": "https://www.marketwatch.com/story/never-too-late-to-start-practical-investing-advice-from-some-of-the-top-women-in-finance-e01f0755?mod=mw_rss_topstories",
    "kind": "뉴스",
-   "published": "2026-11-21",
+   "published": "2026-11-22",
    "snippet": "There are plenty of rich and influential women in the U.S. Their time may be coming.",
-   "id": 31
+   "id": 38
   },
   {
-   "title": "Amazon nearing $7.5B deal to buy AI start-up Decart: FT",
+   "title": "My husband spent $80,000 on a boat, yet says my plans for a $100,000 pottery studio are irresponsible. Who’s right?",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/my-husband-spent-80-000-on-a-boat-yet-says-my-plans-for-a-100-000-pottery-studio-are-irresponsible-whos-right-1a69436a?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "“We have $2.9 million in retirement accounts. That includes some money that we inherited about 10 years ago.”",
+   "id": 39
+  },
+  {
+   "title": "America is definitely rich enough to fix Social Security and Medicare. Here’s how.",
+   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/story/america-is-definitely-rich-enough-to-fix-social-security-and-medicare-heres-how-30678aa5?mod=mw_rss_topstories",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "This one, simple, low-pain tax solves all the problems.",
+   "id": 40
+  },
+  {
+   "title": "DNI Clayton says U.S. probing alleged Chinese spy Alice Huang",
    "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675396-amazon-nears-75b-deal-buy-ai-start-up-decart?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "url": "https://seekingalpha.com/news/4675408-dni-clayton-says-u-s-probing-alleged-chinese-spy-alice-huang?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 41
+  },
+  {
+   "title": "Dow Jones and S&P 500 Outlook: Top Stock Market Headlines and Data This Week",
+   "source": "Benzinga",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNLVFvcWNxMmdMM1RuY3BaUHNwUlU0eEl4UldoLWxMeDZpQTFHYnRlaVBmcWRmTHhhNkstb3daUnc3X0J5X3hhQ0RhZVJEWVdXeFFqZnliMzh3RVpNX0FZNFptcXQyWHFSRnR1VG5fS1ktYnpPajZtbFozWGtaVWJ4b2M1ZldvRFdXR3ZZTmRMRkVocWJ5QlZ2Wl9OSjFzV3JhOTg3YTFNTVRISTBlUHdpMC1IZ2RJQm1MWTVLZWY0TVBOUnFpTmp0bllnZw?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 42
+  },
+  {
+   "title": "Social Security benefits are rising in 2027, but other changes could affect what you keep",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/social-security-changes-cola-taxes-medicare.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "A 3.6% Social Security cost-of-living adjustment for 2027 will increase benefits across the board. But Medicare and tax changes will also affect retirees.",
+   "id": 43
+  },
+  {
+   "title": "Saudi Arabia, Bahrain report new attacks as Iran says it remains open to a deal with U.S.",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/saudi-houthi-bahrain-iran-attacks-araghchi-talks.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Saudi Arabia said it destroyed a drone launched by Iran-backed Houthis, while Bahrain said an industrial facility was hit by Iranian projectiles.",
+   "id": 44
+  },
+  {
+   "title": "Pizza chains are under pressure. GLP-1 use is only one part of the problem",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/pizza-chains-sales-glp-1-demand.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Domino's, Papa Johns and Pizza Hut face weaker demand, more delivery competition and changing eating habits, including GLP-1 use.",
+   "id": 45
+  },
+  {
+   "title": "Correction or deeper reckoning? Investors seek signs US stock selling will abate",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnYzWUVUeXcyWndZNlpnR25GMW5GdkJ2blJjeUdXdlhvZ1VqNWpVSGdYX1RsQ1F3eUhkRUFaX0lxQTNnVFNySmphdG1KM2Y0NTZrdGRoTWxEaE0ybmVSUnBtdDB2VW9tWGtrYkZfUmZUaUdxWDUyUEZGZ2tSajBqSTJydzNhb2xwaTctX21xQmxmXzFyZ1BIWE80ZF8?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 46
+  },
+  {
+   "title": "Top Wall Street analysts favor these 3 dividend stocks for strong returns",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/top-wall-street-analysts-favor-these-stocks-for-strong-returns.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Wall Street analysts can help shortlist attractive dividend-paying stocks, as their recommendations are backed by thorough analysis of a company's financials.",
+   "id": 47
+  },
+  {
+   "title": "The Nasdaq is in freefall. Here's one stock to look at",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/the-nasdaq-is-in-freefall-heres-one-stock-to-look-at.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Elevated options premiums are creating an opportunity in Amazon",
+   "id": 48
+  },
+  {
+   "title": "Will the Fed raise interest rates this year? Divided economists weigh in - ABC News",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3NMLXhhYU1lOVVLWU9sY0k0SDUyQnEwMG9SZ1RzNHZobTIyYk9KWGJlOGhic3FKdlQ2NXlIVDF6SW1oRlNWZlY2NHlNLWlnNGoybzAwLWlkV3V1Q1ZtM21KS2FLTy02NEF6VjY4UmFNc2hYa21mRURlSkJYZWxtc1R3VmRYZFlKNUU3NzZiMkZGNGJZcG1xZUNCN0RQNkRndEVPb9IBqgFBVV95cUxOU1FSZ3pWOURaQUxBS296TzBtRFFGclJXTnpLYWwzZXU1Q01kcVZUczBxUDAwR3FaYmFZdzlXUWM2T0Q3TDVldm9nSVY4OERYRUtkdm5sdndPSU1ETU1yc3BuMEpXLTd2VFFZRTVQcWdMZFdEZ0EzYjhTS200RFBkZy1jbE01WVhVbEgyX1Z2dXc4MWxmbXd6cl9pSlp2TDRldkdkS2hwOVE0Zw?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 49
+  },
+  {
+   "title": "A battered stock market looks for the bottom: What to watch this week",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcU03UEttMkt2VHk0czNiZGxHNnB0MTR6Z2lvN01WUEF4VXZaejRWdV9IZ1d1b2YxUTc5bG9NUXVscVV4RjZ1TmdEdGtzWDdlb0JsQzhIWUozSHhGVFNSYW55aWpaalN4V1NlU21GWUpjYURFVU9YajkwZ3ltNXhvM2kwRW51T2RtYzVtajM4M3RvRmYwLUNQU1RHN0hjYmlsR3JGdTQ2WVNoMThMNTNwZmI0VlB5NXhaYzZoLWxralZSSGM?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 50
+  },
+  {
+   "title": "S&P500 Forecast: SPX jumps ahead of Anthropic’s record IPO",
+   "source": "StoneX",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZi1nc0ZuX1FtRkZBblBabWtyaUQtZnBwczJFUkRrYThXbUt4amtjaV81NUlLdE9nSm56ZDBEWlFRVkRma0tCV2xnSGVlNlIwTC0zVG9MbEdkUFlKU29ZaTh5NUwzQVRLcFNIVndVMDhPRkR0YXVMWEVySDRFOVE2MGJPSXVYZUQxSFhtWFZTNFE0YjhaaEpucjdFeG9naV9GcF94REtZREs0ZFU?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 51
+  },
+  {
+   "title": "Quantum computing’s first real-world payoff may come in energy, not drug discovery",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/22/quantum-computing-energy-applications.html",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "Quantum computing firms are testing energy-grid optimization, solar materials and hydrogen catalysts as they pursue practical uses.",
+   "id": 52
+  },
+  {
+   "title": "Where Will Nvidia Stock Be in 20 Years? The Answer Might Surprise You.",
+   "source": "Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOU2Qzd3l0VU5QZ0Z6cVhjVnhYZzBwVjJBRks4ek9mVV9MNzFrWGdYZDJEcVA0ZGNBVWNwbkRvdkJJTGF4THlVT3d3dzBVZFZOLWJRV3l1Z3FpbklJVGJhNi1PLWl0d0xJRHgxQ09fY1dPMVYzQXBvd3Jab3RaVTlERG1fc2ppWXBwSjhXWjA1a094MnZJT2M4?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 53
+  },
+  {
+   "title": "US MARKETS CALL: A Bull-Market Correction Or A Tech-Wreck Bear Market? Also: Our New S&P 500 Targets.",
+   "source": "Yardeni QuickTakes",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORXhLZF9pZXM5LWVtcC1IWjd2QVFHNXBiTTZBdnhhSFBQUjR4Zy1ZM1ExNW9KSm9mM0U5RmtsOE13aGtISkV5OWwwQ21wb0k2X0JXdDFJZzl1WXl3VWFCQnNMSUdtN3JSaWljVzltcGx2Wmt3Q1B0cm9OMXByeFh0M2FJSmtyMFFCWWpjWm83Z1B0Ni1obnBmWk50RWtDYnFUWUkxZ19CX1FLRWVycjhFbkVsVmlFSERWcmNnOFVRbGhkLXVOSHgyaUV1cGw?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 54
+  },
+  {
+   "title": "Stock market correction? This chief investment officer sees the S&P 500 soaring 45% to 10,000",
+   "source": "Fortune",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbWMydm9FbVFNbEVhQVl6RHhuZnVYbzZ3UGE5clZSWWtHd0VnOWZvamxqbGMzVllwaXlqb09Za3FDaFhFMWFGYTN4ZktCSXF4TnNWN0J5VnJ1VFEtUmtIbVBYVVJtWkdxbGRUZ0tmREJtRkhlaVJ0dHlHcU16eEYwdTNvMUpkTEpHVjlqdzNoYk5TMHVtUHFwcjRVc3hGNEJx?oc=5",
+   "kind": "뉴스",
+   "published": "2026-11-22",
+   "snippet": "",
+   "id": 55
+  },
+  {
+   "title": "What's next after a brutal stock plunge we might have seen coming",
+   "source": "NPR",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb05YZGhhOFFQOVRfbTZwUy1KRGVtYzdaMklFMHNQb3dNMnFBNVZEWHdTR003cHZZeFp4aG55T0E4eE8xT0FaMDM4dk9QcE5kb1Y1YjIwUnNTa2ZZd1o5eGlKT0lkd3NtNTkyLWRpSzVzdmZFTE9ONTJDc1MteVJQV2tmUEU5aWpnbnJsRHBYbExHV1JUUHdFdXJkMkl5Yy1PXzRScUJNQnJUSjROeFE?oc=5",
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 32
+   "id": 56
   },
   {
-   "title": "Tesla to launch FSD 15 next month, Elon Musk says",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675395-tesla-launch-fsd-15-next-month-elon-musk?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "title": "Federal Reserve raises interest rates for the 1st time since 2023 - ABC News",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYktxZlJxRVNrdUZFRWViQjVMLUh3OGJwNGhrVFpJY2E5QTAyajNfcnFSb09rZUVkSnVMUHd4WkpsYktvZGczX05nRzVhSTdKNWtfU2hWb09IYnNQQ01tTlMwMV95YzJkbWVDMklwZ19XMC1RNmVsckpGS3FpNUpiRlUxZkVtNXk5NE5YRnpBSTI4eEhVOWxaUlBzZDlxb3p1ZVBFeHFR0gGrAUFVX3lxTFBrZzU3UXhjRlBBblFYNzJZZ3dINVFwMnpIOFQwRlJ1NmRTa3JNUGlkamJyS08wRjM5UlFuMkRJcHAtUEQxYjF3b2Yyc2E2V1hOOEhQRHRPckpidllEOHpLRG9VUTFxSUwyaE95SzNNZ0pkemQwQkNBYkZPbTBpN0ZMYTBWU25nT3FrUVNNal9Eb0lCNnJwZTVFUVVhM0dDRlMzQ1pQTF8xRTV6bw?oc=5",
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 33
-  },
-  {
-   "title": "SA Asks: Who's the best-positioned cybersecurity provider right now?",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675381-sa-asks-whos-the-best-positioned-cybersecurity-provider-right-now?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
-   "id": 34
-  },
-  {
-   "title": "Real estate stocks dip alongside broader markets even as long-term yields go down",
-   "source": "Seeking Alpha",
-   "url": "https://seekingalpha.com/news/4675287-real-estate-stocks-dip-alongside-broader-markets-even-as-long-term-yields-go-down?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
-   "id": 35
+   "id": 57
   },
   {
    "title": "Trump says there could be a 'positive spin' from the latest FBI database hack",
@@ -2705,25 +2753,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "This would make the second recent intrusion into the FBI system.",
-   "id": 36
-  },
-  {
-   "title": "Is Social Security a Ponzi scheme? No. Don’t get carried away with 1930s-era prophecies of doom.",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/the-thought-of-living-to-100-terrifies-me-is-social-security-a-giant-ponzi-scheme-84a64e7e?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Wisconsin Republican Sen. Ron Johnson called Social Security a “scam” and urged lawmakers to shut it down.",
-   "id": 37
-  },
-  {
-   "title": "‘I’m sick of flying’: I paid for priority boarding, but the overhead bins were full. Was I duped?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/im-sick-of-flying-i-paid-for-priority-boarding-but-the-overhead-bins-were-full-was-i-duped-0badcc80?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "“Maybe next time I’ll try the other approach: I’ll board whenever I feel like it and drop my suitcase in the first open slot I see.”",
-   "id": 38
+   "id": 58
   },
   {
    "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
@@ -2732,16 +2762,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008.",
-   "id": 39
-  },
-  {
-   "title": "Micron and Sandisk stocks might look like bargains, but analysts say that’s actually a red flag",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/micron-and-sandisk-stocks-might-look-like-bargains-but-analysts-say-thats-actually-a-red-flag-da1f1f5d?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "Cheap valuation multiples for memory stocks have historically been associated with peak pricing levels, according to analysts.",
-   "id": 40
+   "id": 59
   },
   {
    "title": "Prediction: Nvidia Stock Will Be Worth This Much in 1 Year",
@@ -2750,16 +2771,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 41
-  },
-  {
-   "title": "‘Nvidia’s turmoil has me spooked’: Is it time to sell my stocks?",
-   "source": "MarketWatch",
-   "url": "https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?mod=mw_rss_topstories",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "If you are tempted to ditch stocks for property or CDs, take a deep breath before making any sudden moves.",
-   "id": 42
+   "id": 60
   },
   {
    "title": "Tech outages are fueling a new doomsday economy",
@@ -2768,34 +2780,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "Recent technology outages have left some worried about AI cyberattacks and the U.S. electricity grid. The doomsday economy is heating up as a result.",
-   "id": 43
-  },
-  {
-   "title": "I never wanted the American Dream and I felt like something was wrong with me—until I moved abroad",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/make-it/2026/11/21/never-wanted-american-dream-moving-abroad-redefine-success.html",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "\"I realized it was okay to want something different,\" says Cepee Tabibian, who moved to Spain in 2015 at age 35.",
-   "id": 44
-  },
-  {
-   "title": "Retirees face a looming deadline for required withdrawals — missing it could trigger a tax penalty",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/21/rmd-deadline-penalty-2026.html",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "The busy holiday season may lead retirees to miss a key deadline for retirement account withdrawals.",
-   "id": 45
-  },
-  {
-   "title": "During Wall Street's worst week in over a year, we put money to work. What we're buying",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/investingclub/2026/11/21/during-wall-streets-worst-week-in-over-a-year-we-put-money-to-work-what-were-buying.html",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "The brutal sell-off is creating opportunities for us to put cash to work.",
-   "id": 46
+   "id": 61
   },
   {
    "title": "Billionaire Daniel Loeb’s ‘Bear Math’: AI’s $7 Trillion Spending Boom Faces a $3 Trillion Reality Check",
@@ -2804,7 +2789,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 47
+   "id": 62
   },
   {
    "title": "An ‘illusion of glitz and glamour’: Inside California’s modern-day gold rush, where miners can bring in millions",
@@ -2813,16 +2798,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "The price of gold has sparked a modern-day gold rush in California. Small-scale miners are investing time, physical labor and money to unearth the yellow metal.",
-   "id": 48
-  },
-  {
-   "title": "Stock Market Sell-Off: History Says This Is the Smartest Move Investors Can Make Right Now",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYWRYcjdlYlJ1b2hHdE9VSjQxNGg2TDRza0YxSXZ5dWMtQ2dHMWZBWk8wVjlPdEVQYVd4MF9MVE80cmpvdW9DNlpYbVh2blVUWTNNbjItcG5LNDlQclhIS3h2QnFxXzFoS0xIQjByLWk2V095NVJPVmZXTkdLWXBJb3NJemdaMHZJZ0JFaVFmOWh3T0dyM0toQjVB?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
-   "id": 49
+   "id": 63
   },
   {
    "title": "State and federal battle over prediction markets regulation heats up after midterms",
@@ -2831,7 +2807,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "States, Congress and the CFTC are escalating the fight over prediction market regulation after the midterms.",
-   "id": 50
+   "id": 64
   },
   {
    "title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
@@ -2840,7 +2816,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "Warren Buffett more than quadrupled his Thanksgiving donations to four family foundations this year to $5.5 billion.",
-   "id": 51
+   "id": 65
   },
   {
    "title": "International first class is over for U.S. airlines. Enter the mega business-class cabin",
@@ -2849,7 +2825,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "Airlines are opting to build giant business-class cabins with ever-more luxurious suites.",
-   "id": 52
+   "id": 66
   },
   {
    "title": "New US AI chip rules against China threaten Southeast Asia’s data centers",
@@ -2858,7 +2834,16 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 53
+   "id": 67
+  },
+  {
+   "title": "S&P 500 correction: Five forces behind the market sell-off",
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html",
+   "kind": "뉴스",
+   "published": "2026-11-21",
+   "snippet": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records. The Nasdaq Composite lost its gain for the year.",
+   "id": 68
   },
   {
    "title": "The AI boom had a really bad week — and it's raising loud alarms",
@@ -2867,7 +2852,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 54
+   "id": 69
   },
   {
    "title": "S&P 500 forecast for 2027: Wall Street expects a rebound after an 11.6% drop fueled by AI fears",
@@ -2876,16 +2861,16 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 55
+   "id": 70
   },
   {
-   "title": "How China is using summits to expand its global influence",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
+   "title": "EXCLUSIVE: Nvidia's accounting is a focus of US SEC investigation, sources say",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMzlPdFVTT2cyVkhmMFVKNWZ1MnpNT0NLcURnblg4THMwUWNuYTRBLWUxU0ZSSUR5bk1zNnBmVlhIUjByNkN6TzVBNC1uaXQxM0dwY2FkMzZQdm00a0xyMXo3NFNpSUNPdERZWU82aGZLa0lNZHpMOXVnVDBVQW9lMmNrWEVRczVYS1Racm1NNlNERDBJeTFJRG1pZVRfTC1LTy1pNjhpVzRaeGRrY25kSzQ1aDNUUQ?oc=5",
    "kind": "뉴스",
    "published": "2026-11-21",
-   "snippet": "Chinese President Xi Jinping has helped coordinate yet another photo-op of global significance.",
-   "id": 56
+   "snippet": "",
+   "id": 71
   },
   {
    "title": "Does Record Earnings Guidance Change The Bull Case For Moog Stock (MOG.A)?",
@@ -2894,7 +2879,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 57
+   "id": 72
   },
   {
    "title": "Tech stocks analyst on worst stock market week in over a year: 'Dark day in tech'",
@@ -2903,16 +2888,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 58
-  },
-  {
-   "title": "Should Raised Earnings Guidance Require Action From Riskified Stock Investors?",
-   "source": "Yahoo Finance",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRDNJMHJqcVlWWGxnM3J1UVdCeXozQnQ5aEZ1emZJMkxsQ0xucjE2NUQ2ZUh4bEJjcFdBcXQtR3pvUEM1QUoyVDFpNm1STFUwdVlqR0dVNmRkdDh6RDktYVZYWTAzSjlkVjBWbVd5cVBLUk0tazZpajBwR3J1ektTakpXYTY3azNjQ04zVk9qalZILTJfQXJBMl9xLUswZnFFTEoyVWU2dw?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-21",
-   "snippet": "",
-   "id": 59
+   "id": 73
   },
   {
    "title": "Stock market selloff pushes mortgage rates down",
@@ -2921,7 +2897,7 @@
    "kind": "뉴스",
    "published": "2026-11-21",
    "snippet": "",
-   "id": 60
+   "id": 74
   },
   {
    "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
@@ -2930,7 +2906,7 @@
    "kind": "뉴스",
    "published": "2026-11-20",
    "snippet": "Once the most valuable company in the world, Nvidia now ranks fourth behind Apple, Microsoft and Alphabet.",
-   "id": 61
+   "id": 75
   },
   {
    "title": "Why a top economist says the stock market will remain volatile",
@@ -2939,132 +2915,6 @@
    "kind": "뉴스",
    "published": "2026-11-20",
    "snippet": "",
-   "id": 62
-  },
-  {
-   "title": "The Federal Reserve Is Expected to Raise Interest Rates Next Month. By How Much Is an Open Question.",
-   "source": "Barron's",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdTFoLTh6OXU1N2ZjSmNYN09CTWhISTZuaVhMSXJCbklsdEFyWGpQN3B3c0NieVdVRUV6VnRDYjdIWG1vaFVOQWRRM19ZaklQMUZuUktlT2hCT3V3NnhCZDg2Y215b09aVmFFRkNyeTNmYzZYYWt1LXlnRkM3bG1ad1YxdGVNUnVhcE82RXh4TQ?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "",
-   "id": 63
-  },
-  {
-   "title": "Trump again urges Fed to lower interest rates",
-   "source": "The Hill",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORHJUSEpNa0JZMndrUTZhcTdiQjkzTUU0bkJqSmF5ZGNJYV8xSGozbjJTQ3FwUEpNUUdvd0JjYWJHMy1vRGI5YlNrUmNlUF9vNVFiYkRyT3YwWmdhRWlFMVl5bGVPcUcyeTNVRDNENzJlTVYwT3hWSHV0UUwybF9wZEFmQjE4LWc4OVBUVUx3SzJEREJmUXNhTU5ETTQ1Rl92dmFtQS1B0gGrAUFVX3lxTE5WbHZmMnMxbl9oRlU5S0JsbFFBVF9RaldTc1RfSmk1dEZRNEw3SEJhZkw0S19HQ1dfNlNiZjZ6T05UWDNYZ1BRMkNQRWhxWGt6U2JnRkZ2emQ0NmFfdWN5ZFdQdHV2NXhncWpJc05qWU1kQnJYSVBOM2NTeGRfWkE2TFduRWpWX1FmQ0pOSU1OOWkyUXpiNFFWWERBVnNJakdHUzM2VjR0VEhYYw?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "",
-   "id": 64
-  },
-  {
-   "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/treasury-secretary-scott-bessent.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Trump said he discussed Jensen Huang with China's Xi. Bessent said the ousted Nvidia CEO didn't come up in talks he had while in China.",
-   "id": 65
-  },
-  {
-   "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Cybersecurity companies have been hunting for acquisitions in the AI era.",
-   "id": 66
-  },
-  {
-   "title": "Anthropic falls nearly 9% in first full day of trading as tech stocks get shellacked",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Anthropic opened at $111.50 per share on Thursday, but closed at $97.17, which was 17% above the $83 IPO price.",
-   "id": 67
-  },
-  {
-   "title": "Federal Reserve announces College Fed Challenge winners",
-   "source": "Federal Reserve",
-   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Federal Reserve announces College Fed Challenge winners",
-   "id": 68
-  },
-  {
-   "title": "Nasdaq 100 Forecast: Anthropic IPO fails to calm AI worries",
-   "source": "StoneX",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWU8ybzlxdUlpQzh6R1hNU0hOTDF6SllWeHhHWW1FZFI3Vkx4UXpMRjZfZjVrOFNVcUdZbEM2cmQxX1BaZVJmal9waTFFV2JZcHlYUXIteUhyQmdwVUJGRGJyQ3RZN2xxa210SUhUUGV2b2dOR1pCX0ZEcG1obXdGbFZzVkNWSV9pLWNCajF4V0FVUjZNek93dEczRWxpRUFNNFp1dmN0WlEydw?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "",
-   "id": 69
-  },
-  {
-   "title": "Peterson: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-   "id": 70
-  },
-  {
-   "title": "Anthropic defied the odds in its record IPO. Now it has to reckon with AI market turbulence",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Anthropic faced a market sell-off, raging anti-AI sentiment and a crisis at Nvidia in pulling off the largest IPO on record.",
-   "id": 71
-  },
-  {
-   "title": "Trump says he still has confidence in Lutnick",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/trump-lutnick-commerce-china-ai.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "President Donald Trump, when asked by CNBC's Eamon Javers, said he has not lost confidence in Commerce Secretary Howard Lutnick.",
-   "id": 72
-  },
-  {
-   "title": "Why stock market is tanking despite massive Anthropic IPO",
-   "source": "The Hill",
-   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE52U2tnRzdwTmw5eW1NWVdDZy01UDlxQ2FaNUphZGhBNHdIakk1cUVMcEFPakZ4dDFVLURsTDZ6Qk9KU3lHc3RFN1pmRnNVR3pZZ29CeTNRNG5GdHhXMVJ3RU5pOVpldVpPR3VkNjJSb0FyMzdhRHVJd3I2NnhSUdIBgwFBVV95cUxNck9VckJQZmxROFdpRmtCZ1pSb1JJYUhtUFNEOXo2OEY2dUVPSWxCQkcweHBEMXhxRHdFSXFvdTFXN0trSkt4UXZYLU5zQ0FQU0puUzMweW8wZjRnaGpsZUFFNk9iSXJ6dUkwQW12VG14RDRVWlVnLVlPTEdfOThUWUdpaw?oc=5",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "",
-   "id": 73
-  },
-  {
-   "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for a historic trilateral summit in China.",
-   "id": 74
-  },
-  {
-   "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Odds that the S&P 500 will cross 8,000, which were once north of 70%, are extremely low on platform Kalshi.",
-   "id": 75
-  },
-  {
-   "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
-   "source": "CNBC",
-   "url": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html",
-   "kind": "뉴스",
-   "published": "2026-11-20",
-   "snippet": "Former Nvidia CEO Jensen Huang has faced a flurry of criticism on Capitol Hill in the wake of his involvement with a suspected Chinese spy.",
    "id": 76
   }
  ],
@@ -3144,40 +2994,35 @@
  },
  "scores": {
   "NVDA": {
-   "score": 87.5,
-   "quality": 96,
+   "score": 85.9,
+   "quality": 94,
    "health": 72,
-   "value": 86,
+   "value": 81,
    "revisions": 92,
    "eligible": true,
    "turnaround": false,
-   "fcf_margin_pct": 41.1,
-   "fcf_yield_pct": 4.9,
+   "fcf_margin_pct": 27.4,
+   "fcf_yield_pct": 3.27,
    "net_debt_ebitda": -0.24,
    "parts": {
     "quality": {
      "gross": 0.8745,
      "op": 0.9826,
      "roe": 0.9814,
-     "fcf_margin": 0.9525773195876288,
+     "fcf_margin": 0.8539,
      "rev_growth": 0.9807,
      "eps_growth": 0.9648
     },
     "health": {
      "net_debt": 0.8802,
-     "fcf_positive": 1.0
+     "fcf_positive": 0.5617
     },
     "value": {
      "fwd_pe": 0.913,
-     "fcf_yield": 0.6630434782608695,
+     "fcf_yield": 0.5161,
      "peg": 0.9954
     },
-    "revisions": 0.9244
-   },
-   "score_before": 85.9,
-   "rescored": {
-    "fcf_margin": 0.41100000000000003,
-    "fcf_yield": 0.049
+    "revisions": 0.9246
    }
   },
   "ADBE": {
@@ -3196,9 +3041,9 @@
      "gross": 0.9653,
      "op": 0.8494,
      "roe": 0.9089,
-     "fcf_margin": 0.9525773195876288,
+     "fcf_margin": 0.9526748971193416,
      "rev_growth": 0.6438,
-     "eps_growth": 0.5969
+     "eps_growth": 0.5977
     },
     "health": {
      "net_debt": 0.814,
@@ -3206,19 +3051,19 @@
     },
     "value": {
      "fwd_pe": 0.9022,
-     "fcf_yield": 0.9782608695652174,
-     "peg": 0.8904
+     "fcf_yield": 0.978494623655914,
+     "peg": 0.8884
     },
-    "revisions": 0.2813
+    "revisions": 0.2821
    },
    "score_before": 65.5,
    "rescored": {
-    "fcf_margin": 0.408,
-    "fcf_yield": 0.125
+    "fcf_margin": 0.4078552175587216,
+    "fcf_yield": 0.1250048219382674
    }
   },
   "FIX": {
-   "score": 82.3,
+   "score": 82.2,
    "quality": 68,
    "health": 74,
    "value": 89,
@@ -3226,16 +3071,16 @@
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 19.5,
-   "fcf_yield_pct": 6.2,
+   "fcf_yield_pct": 6.69,
    "net_debt_ebitda": -0.81,
    "parts": {
     "quality": {
      "gross": 0.2027,
      "op": 0.3977,
      "roe": 0.9006,
-     "fcf_margin": 0.7422680412371134,
+     "fcf_margin": 0.7407407407407407,
      "rev_growth": 0.9382,
-     "eps_growth": 0.8885
+     "eps_growth": 0.8887
     },
     "health": {
      "net_debt": 0.9256,
@@ -3244,18 +3089,18 @@
     "value": {
      "fwd_pe": 0.825,
      "fcf_yield": 0.8961038961038961,
-     "peg": 0.9566
+     "peg": 0.9522
     },
-    "revisions": 0.938
+    "revisions": 0.9381
    },
    "score_before": 81.9,
    "rescored": {
-    "fcf_margin": 0.195,
-    "fcf_yield": 0.062
+    "fcf_margin": 0.194636332203572,
+    "fcf_yield": 0.06693927990580495
    }
   },
   "APA": {
-   "score": 78.3,
+   "score": 78.2,
    "quality": 71,
    "health": 65,
    "value": 80,
@@ -3263,14 +3108,14 @@
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 22.0,
-   "fcf_yield_pct": 13.8,
+   "fcf_yield_pct": 13.78,
    "net_debt_ebitda": 0.53,
    "parts": {
     "quality": {
      "gross": 0.9112,
      "op": 0.917,
      "roe": 0.766,
-     "fcf_margin": 0.7876288659793814,
+     "fcf_margin": 0.7860082304526749,
      "rev_growth": 0.8629,
      "eps_growth": 0.0254
     },
@@ -3281,35 +3126,35 @@
     "value": {
      "fwd_pe": 0.8095,
      "fcf_yield": 0.9523809523809523,
-     "peg": 0.637
+     "peg": 0.6287
     },
-    "revisions": 0.9158
+    "revisions": 0.9159
    },
-   "score_before": 78.4,
+   "score_before": 78.3,
    "rescored": {
-    "fcf_margin": 0.22,
-    "fcf_yield": 0.138
+    "fcf_margin": 0.22029598308668077,
+    "fcf_yield": 0.13783895875165825
    }
   },
   "VRT": {
-   "score": 80.1,
+   "score": 80.2,
    "quality": 74,
    "health": 71,
    "value": 80,
    "revisions": 91,
    "eligible": true,
    "turnaround": false,
-   "fcf_margin_pct": 23.9,
-   "fcf_yield_pct": 4.9,
+   "fcf_margin_pct": 23.7,
+   "fcf_yield_pct": 4.86,
    "net_debt_ebitda": -0.11,
    "parts": {
     "quality": {
      "gross": 0.3668,
      "op": 0.5425,
      "roe": 0.8696,
-     "fcf_margin": 0.8123711340206186,
+     "fcf_margin": 0.808641975308642,
      "rev_growth": 0.9614,
-     "eps_growth": 0.9119
+     "eps_growth": 0.9121
     },
     "health": {
      "net_debt": 0.8492,
@@ -3317,36 +3162,36 @@
     },
     "value": {
      "fwd_pe": 0.7125,
-     "fcf_yield": 0.8051948051948052,
-     "peg": 0.8836
+     "fcf_yield": 0.7922077922077922,
+     "peg": 0.9043
     },
-    "revisions": 0.9134
+    "revisions": 0.9136
    },
-   "score_before": 79.5,
+   "score_before": 79.7,
    "rescored": {
-    "fcf_margin": 0.239,
-    "fcf_yield": 0.049
+    "fcf_margin": 0.23742433252519707,
+    "fcf_yield": 0.04864991589955182
    }
   },
   "ASML": {
-   "score": 79.5,
+   "score": 79.4,
    "quality": 88,
    "health": 74,
-   "value": 60,
+   "value": 59,
    "revisions": 93,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 53.2,
-   "fcf_yield_pct": 4.7,
+   "fcf_yield_pct": 4.3,
    "net_debt_ebitda": -0.67,
    "parts": {
     "quality": {
      "gross": 0.6351,
      "op": 0.8803,
      "roe": 0.9172,
-     "fcf_margin": 0.9814432989690721,
+     "fcf_margin": 0.9814814814814815,
      "rev_growth": 0.944,
-     "eps_growth": 0.908
+     "eps_growth": 0.9082
     },
     "health": {
      "net_debt": 0.9194,
@@ -3354,36 +3199,36 @@
     },
     "value": {
      "fwd_pe": 0.3261,
-     "fcf_yield": 0.6521739130434783,
-     "peg": 0.8196
+     "fcf_yield": 0.6236559139784946,
+     "peg": 0.8314
     },
-    "revisions": 0.9263
+    "revisions": 0.9265
    },
-   "score_before": 76.5,
+   "score_before": 76.6,
    "rescored": {
-    "fcf_margin": 0.532,
-    "fcf_yield": 0.047
+    "fcf_margin": 0.5319872826073189,
+    "fcf_yield": 0.04302947453603966
    }
   },
   "EME": {
    "score": 77.2,
    "quality": 52,
    "health": 70,
-   "value": 89,
+   "value": 88,
    "revisions": 93,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 7.5,
-   "fcf_yield_pct": 5.7,
+   "fcf_yield_pct": 5.61,
    "net_debt_ebitda": -0.1,
    "parts": {
     "quality": {
      "gross": 0.1409,
      "op": 0.1873,
      "roe": 0.8199,
-     "fcf_margin": 0.35360824742268043,
+     "fcf_margin": 0.35185185185185186,
      "rev_growth": 0.8475,
-     "eps_growth": 0.7681
+     "eps_growth": 0.7686
     },
     "health": {
      "net_debt": 0.845,
@@ -3392,35 +3237,35 @@
     "value": {
      "fwd_pe": 0.85,
      "fcf_yield": 0.8701298701298701,
-     "peg": 0.9361
+     "peg": 0.9317
     },
-    "revisions": 0.9341
+    "revisions": 0.9342
    },
    "score_before": 76.4,
    "rescored": {
-    "fcf_margin": 0.075,
-    "fcf_yield": 0.057
+    "fcf_margin": 0.07471113430816756,
+    "fcf_yield": 0.05610928378484934
    }
   },
   "APP": {
-   "score": 71.6,
+   "score": 71.8,
    "quality": 95,
    "health": 69,
-   "value": 54,
+   "value": 55,
    "revisions": 68,
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 64.1,
-   "fcf_yield_pct": 4.2,
+   "fcf_yield_pct": 4.22,
    "net_debt_ebitda": 0.06,
    "parts": {
     "quality": {
      "gross": 0.9633,
      "op": 1.0,
      "roe": 0.9814,
-     "fcf_margin": 0.9938144329896907,
+     "fcf_margin": 0.9938271604938271,
      "rev_growth": 0.9469,
-     "eps_growth": 0.8043
+     "eps_growth": 0.8047
     },
     "health": {
      "net_debt": 0.8223,
@@ -3429,51 +3274,46 @@
     "value": {
      "fwd_pe": 0.3636,
      "fcf_yield": 0.4782608695652174,
-     "peg": 0.7877
+     "peg": 0.8064
     },
-    "revisions": 0.6834
+    "revisions": 0.684
    },
-   "score_before": 70.8,
+   "score_before": 71.0,
    "rescored": {
-    "fcf_margin": 0.6409999999999999,
-    "fcf_yield": 0.042
+    "fcf_margin": 0.6406569732736452,
+    "fcf_yield": 0.04224310537117446
    }
   },
   "KEYS": {
-   "score": 77.0,
-   "quality": 74,
+   "score": 75.6,
+   "quality": 72,
    "health": 70,
-   "value": 67,
+   "value": 63,
    "revisions": 93,
    "eligible": true,
    "turnaround": false,
-   "fcf_margin_pct": 24.4,
-   "fcf_yield_pct": 3.93,
+   "fcf_margin_pct": 18.3,
+   "fcf_yield_pct": 2.94,
    "net_debt_ebitda": -0.09,
    "parts": {
     "quality": {
      "gross": 0.7761,
      "op": 0.6255,
      "roe": 0.6522,
-     "fcf_margin": 0.8164948453608247,
+     "fcf_margin": 0.7078,
      "rev_growth": 0.9054,
-     "eps_growth": 0.6556
+     "eps_growth": 0.6562
     },
     "health": {
      "net_debt": 0.843,
-     "fcf_positive": 1.0
+     "fcf_positive": 0.5617
     },
     "value": {
      "fwd_pe": 0.5109,
-     "fcf_yield": 0.5869565217391305,
-     "peg": 0.8995
+     "fcf_yield": 0.4839,
+     "peg": 0.8952
     },
-    "revisions": 0.927
-   },
-   "score_before": 75.7,
-   "rescored": {
-    "fcf_margin": 0.244,
-    "fcf_yield": 0.0393
+    "revisions": 0.9271
    }
   },
   "VLO": {
@@ -3485,16 +3325,16 @@
    "eligible": true,
    "turnaround": false,
    "fcf_margin_pct": 9.8,
-   "fcf_yield_pct": 14.9,
+   "fcf_yield_pct": 16.18,
    "net_debt_ebitda": 0.06,
    "parts": {
     "quality": {
      "gross": 0.139,
-     "op": 0.2452,
+     "op": 0.2471,
      "roe": 0.8716,
-     "fcf_margin": 0.4309278350515464,
+     "fcf_margin": 0.43004115226337447,
      "rev_growth": 0.9266,
-     "eps_growth": 0.0333
+     "eps_growth": 0.0332
     },
     "health": {
      "net_debt": 0.8244,
@@ -3503,33 +3343,33 @@
     "value": {
      "fwd_pe": 0.9048,
      "fcf_yield": 0.9523809523809523,
-     "peg": 0.6119
+     "peg": 0.6059
     },
-    "revisions": 0.9178
+    "revisions": 0.9179
    },
    "score_before": 72.4,
    "rescored": {
-    "fcf_margin": 0.098,
-    "fcf_yield": 0.149
+    "fcf_margin": 0.09833884443053083,
+    "fcf_yield": 0.16178529846723894
    }
   },
   "MSTR": {
-   "score": 51.7,
-   "quality": 33,
+   "score": 51.1,
+   "quality": 31,
    "health": 28,
-   "value": 51,
+   "value": 50,
    "revisions": 84,
    "eligible": true,
    "turnaround": true,
-   "fcf_margin_pct": -5.7,
-   "fcf_yield_pct": -0.08,
+   "fcf_margin_pct": -3507.6,
+   "fcf_yield_pct": -52.73,
    "net_debt_ebitda": null,
    "parts": {
     "quality": {
      "gross": 0.7992,
      "op": 0.0019,
      "roe": 0.0124,
-     "fcf_margin": 0.088659793814433,
+     "fcf_margin": 0.00205761316872428,
      "rev_growth": 0.084,
      "eps_growth": 0.9863
     },
@@ -3539,36 +3379,36 @@
     },
     "value": {
      "fwd_pe": 0.9674,
-     "fcf_yield": 0.05434782608695652,
+     "fcf_yield": 0.03225806451612903,
      "peg": 0.5
     },
-    "revisions": 0.8382
+    "revisions": 0.8385
    },
    "score_before": 51.2,
    "rescored": {
-    "fcf_margin": -0.057,
-    "fcf_yield": -0.0008
+    "fcf_margin": -35.07584788813189,
+    "fcf_yield": -0.5273235455208174
    }
   },
   "CRCL": {
-   "score": 43.1,
+   "score": 43.8,
    "quality": 52,
    "health": 78,
-   "value": 31,
+   "value": 34,
    "revisions": 23,
    "eligible": true,
    "turnaround": false,
-   "fcf_margin_pct": 22.1,
-   "fcf_yield_pct": 4.8,
+   "fcf_margin_pct": 23.1,
+   "fcf_yield_pct": 5.73,
    "net_debt_ebitda": -4.68,
    "parts": {
     "quality": {
      "gross": 0.2143,
      "op": 0.2201,
      "roe": 0.4037,
-     "fcf_margin": 0.7876288659793814,
+     "fcf_margin": 0.8024691358024691,
      "rev_growth": 0.723,
-     "eps_growth": 0.7789
+     "eps_growth": 0.7793
     },
     "health": {
      "net_debt": 0.9897,
@@ -3576,15 +3416,15 @@
     },
     "value": {
      "fwd_pe": 0.0417,
-     "fcf_yield": 0.3953488372093023,
+     "fcf_yield": 0.46511627906976744,
      "peg": 0.5
     },
-    "revisions": 0.2263
+    "revisions": 0.2265
    },
    "score_before": 39.0,
    "rescored": {
-    "fcf_margin": 0.221,
-    "fcf_yield": 0.048
+    "fcf_margin": 0.23059769653741477,
+    "fcf_yield": 0.05733458812246695
    }
   }
  },
@@ -3603,8 +3443,8 @@
   "CRCL": "2026-11-04"
  },
  "signals": {
-  "built_at_kst": "2026-11-22 06:14",
-  "week": "2026-11-22",
+  "built_at_kst": "2026-11-23 06:14",
+  "week": "2026-11-23",
   "universe_size": 519,
   "m1": {
    "investors": [
@@ -4386,17 +4226,17 @@
     {
      "sector": "Healthcare",
      "sector_kr": "헬스케어",
-     "stocks": 60,
-     "eps_revision_pct_30d": 0.3,
+     "stocks": 61,
+     "eps_revision_pct_30d": 0.29,
      "eps_revision_pct_7d": 0.0,
      "upgrade_ratio": 0.57,
      "momentum": "→횡보",
      "sparkline": [
       0.0,
       0.0,
-      0.03,
-      0.46,
-      0.86
+      0.02,
+      0.29,
+      0.8
      ]
     },
     {
@@ -4895,7 +4735,7 @@
    ]
   },
   "m5": {
-   "period": "2026-11-07 ~ 2026-11-21",
+   "period": "2026-11-08 ~ 2026-11-22",
    "buy": [
     {
      "ticker": "AKAM",
@@ -5588,7 +5428,7 @@
    "HAS": 0.1553,
    "HBAN": null,
    "HCA": 0.0501,
-   "HD": 0.0703,
+   "HD": 0.0676,
    "HIG": 0.2495,
    "HII": 0.0143,
    "HLT": 0.2843,
@@ -5751,7 +5591,7 @@
    "PRU": 0.1155,
    "PSA": 0.5879,
    "PSX": 0.0566,
-   "PTC": null,
+   "PTC": 0.3151,
    "PWR": 0.0842,
    "PYPL": 0.1308,
    "Q": 0.1268,
@@ -6109,7 +5949,7 @@
    "HAS": 0.05117,
    "HBAN": null,
    "HCA": 0.03969,
-   "HD": 0.03559,
+   "HD": 0.03422,
    "HIG": 0.20176,
    "HII": 0.0175,
    "HLT": 0.01857,
@@ -6272,7 +6112,7 @@
    "PRU": 0.17672,
    "PSA": 0.04876,
    "PSX": 0.10194,
-   "PTC": null,
+   "PTC": 0.04064,
    "PWR": 0.03729,
    "PYPL": 0.10137,
    "Q": 0.03218,
@@ -6924,9 +6764,9 @@
    "CRCL": "Financial Services"
   }
  },
- "finalized_at": "2026-11-22 10:47",
+ "finalized_at": null,
  "ranking": {
-  "cutoff_final": 75.7,
+  "cutoff_final": 75.6,
   "eligible_count": 502,
   "universe": 519,
   "rows": [
@@ -6935,7 +6775,7 @@
     "name": "Comfort Systems USA, Inc.",
     "sector": "Industrials",
     "industry": "Engineering & Construction",
-    "score": 82.3,
+    "score": 82.2,
     "quality": 68,
     "health": 74,
     "value": 89,
@@ -6945,7 +6785,7 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 82.3,
+    "final": 82.2,
     "cyclical": false,
     "metrics": {
      "price": 1042.47,
@@ -6969,7 +6809,7 @@
     "name": "APA Corporation",
     "sector": "Energy",
     "industry": "Oil & Gas E&P",
-    "score": 78.3,
+    "score": 78.2,
     "quality": 71,
     "health": 65,
     "value": 80,
@@ -6981,7 +6821,7 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 81.3,
+    "final": 81.2,
     "cyclical": true,
     "metrics": {
      "price": 45.03,
@@ -7005,7 +6845,7 @@
     "name": "Vertiv Holdings, LLC",
     "sector": "Industrials",
     "industry": "Electrical Equipment & Parts",
-    "score": 80.0,
+    "score": 80.2,
     "quality": 74,
     "health": 71,
     "value": 80,
@@ -7015,12 +6855,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 80.0,
+    "final": 80.2,
     "cyclical": false,
     "metrics": {
      "price": 166.24,
      "forward_pe": 16.836357,
-     "peg": 0.5459,
+     "peg": 0.4906,
      "op_margin": 0.21107,
      "gross_margin": 0.38115,
      "revenue_growth": 0.612,
@@ -7039,7 +6879,7 @@
     "name": "ASML Holding N.V. - New York Re",
     "sector": "Technology",
     "industry": "Semiconductor Equipment & Materials",
-    "score": 79.3,
+    "score": 79.4,
     "quality": 88,
     "health": 74,
     "value": 59,
@@ -7049,12 +6889,12 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 79.3,
+    "final": 79.4,
     "cyclical": true,
     "metrics": {
      "price": 1266.22,
      "forward_pe": 19.972149,
-     "peg": 0.7226,
+     "peg": 0.676,
      "op_margin": 0.38551998,
      "gross_margin": 0.54337,
      "revenue_growth": 0.552,
@@ -7076,7 +6916,7 @@
     "score": 77.2,
     "quality": 52,
     "health": 70,
-    "value": 89,
+    "value": 88,
     "revisions": 93,
     "eligible": true,
     "bonus": 0,
@@ -7107,10 +6947,10 @@
     "name": "Applovin Corporation",
     "sector": "Communication Services",
     "industry": "Advertising Agencies",
-    "score": 71.6,
+    "score": 71.8,
     "quality": 95,
     "health": 69,
-    "value": 54,
+    "value": 55,
     "revisions": 68,
     "eligible": true,
     "bonus": 5,
@@ -7119,12 +6959,12 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 76.6,
+    "final": 76.8,
     "cyclical": false,
     "metrics": {
      "price": 348.29,
      "forward_pe": 16.695877,
-     "peg": 0.7981,
+     "peg": 0.7333,
      "op_margin": 0.77782995,
      "gross_margin": 0.8878,
      "revenue_growth": 0.555,
@@ -7179,7 +7019,7 @@
     "name": "Keysight Technologies Inc.",
     "sector": "Technology",
     "industry": "Scientific & Technical Instruments",
-    "score": 75.7,
+    "score": 75.6,
     "quality": 72,
     "health": 70,
     "value": 63,
@@ -7189,7 +7029,7 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 75.7,
+    "final": 75.6,
     "cyclical": false,
     "metrics": {
      "price": 261.51,
@@ -7354,7 +7194,7 @@
     "name": "Dell Technologies Inc.",
     "sector": "Technology",
     "industry": "Computer Hardware",
-    "score": 71.4,
+    "score": 71.3,
     "quality": 46,
     "health": 57,
     "value": 78,
@@ -7366,7 +7206,7 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 74.4,
+    "final": 74.3,
     "cyclical": true,
     "metrics": {
      "price": 278.02,
@@ -7390,10 +7230,10 @@
     "name": "Western Digital Corporation",
     "sector": "Technology",
     "industry": "Computer Hardware",
-    "score": 83.7,
+    "score": 83.6,
     "quality": 85,
     "health": 70,
-    "value": 78,
+    "value": 77,
     "revisions": 96,
     "eligible": true,
     "bonus": 5,
@@ -7404,7 +7244,7 @@
     "penalty_items": [
      "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 41% vs 최근 4년 평균 13%"
     ],
-    "final": 73.7,
+    "final": 73.6,
     "cyclical": true,
     "metrics": {
      "price": 261.11,
@@ -7492,6 +7332,40 @@
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
+    "ticker": "ANET",
+    "name": "Arista Networks, Inc.",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "score": 73.0,
+    "quality": 86,
+    "health": 76,
+    "value": 32,
+    "revisions": 95,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 73.0,
+    "cyclical": true,
+    "metrics": {
+     "price": 167.62,
+     "forward_pe": 27.765446,
+     "peg": 1.2166,
+     "op_margin": 0.43827,
+     "gross_margin": 0.62881,
+     "revenue_growth": 0.585,
+     "growth_1y": 0.3793,
+     "rev_30d": 15.598635105067032,
+     "rev_90d": 17.006101295459302,
+     "up_30d": 18.0,
+     "down_30d": 0.0,
+     "analysts": 29.0
+    },
+    "rank": 17,
+    "status": "순위 밖 (상위 8개 선정 완료 후)"
+   },
+   {
     "ticker": "CPAY",
     "name": "Corpay, Inc.",
     "sector": "Technology",
@@ -7523,40 +7397,6 @@
      "up_30d": 14.0,
      "down_30d": 1.0,
      "analysts": 15.0
-    },
-    "rank": 17,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "TXN",
-    "name": "Texas Instruments Incorporated",
-    "sector": "Technology",
-    "industry": "Semiconductors",
-    "score": 73.0,
-    "quality": 82,
-    "health": 65,
-    "value": 44,
-    "revisions": 94,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 73.0,
-    "cyclical": true,
-    "metrics": {
-     "price": 263.75,
-     "forward_pe": 22.673466,
-     "peg": 0.7995,
-     "op_margin": 0.41091,
-     "gross_margin": 0.60243,
-     "revenue_growth": 0.277,
-     "growth_1y": 0.28,
-     "rev_30d": 14.275196908285798,
-     "rev_90d": 15.400630053408046,
-     "up_30d": 26.0,
-     "down_30d": 0.0,
-     "analysts": 29.0
     },
     "rank": 18,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
@@ -7596,33 +7436,33 @@
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
-    "ticker": "ANET",
-    "name": "Arista Networks, Inc.",
+    "ticker": "TXN",
+    "name": "Texas Instruments Incorporated",
     "sector": "Technology",
-    "industry": "Computer Hardware",
-    "score": 72.5,
-    "quality": 86,
-    "health": 76,
-    "value": 29,
-    "revisions": 95,
+    "industry": "Semiconductors",
+    "score": 72.9,
+    "quality": 82,
+    "health": 65,
+    "value": 44,
+    "revisions": 94,
     "eligible": true,
     "bonus": 0,
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 72.5,
+    "final": 72.9,
     "cyclical": true,
     "metrics": {
-     "price": 167.62,
-     "forward_pe": 27.765446,
-     "peg": 1.3761,
-     "op_margin": 0.43827,
-     "gross_margin": 0.62881,
-     "revenue_growth": 0.585,
-     "growth_1y": 0.3793,
-     "rev_30d": 15.598635105067032,
-     "rev_90d": 17.006101295459302,
-     "up_30d": 18.0,
+     "price": 263.75,
+     "forward_pe": 22.673466,
+     "peg": 0.7995,
+     "op_margin": 0.41091,
+     "gross_margin": 0.60243,
+     "revenue_growth": 0.277,
+     "growth_1y": 0.28,
+     "rev_30d": 14.275196908285798,
+     "rev_90d": 15.400630053408046,
+     "up_30d": 26.0,
      "down_30d": 0.0,
      "analysts": 29.0
     },
@@ -7634,7 +7474,7 @@
     "name": "Humana Inc.",
     "sector": "Healthcare",
     "industry": "Healthcare Plans",
-    "score": 67.4,
+    "score": 67.3,
     "quality": 37,
     "health": 77,
     "value": 59,
@@ -7646,7 +7486,7 @@
     ],
     "penalty": 0,
     "penalty_items": [],
-    "final": 72.4,
+    "final": 72.3,
     "cyclical": false,
     "metrics": {
      "price": 390.0,
@@ -7670,7 +7510,7 @@
     "name": "Cisco Systems, Inc.",
     "sector": "Technology",
     "industry": "Communication Equipment",
-    "score": 72.1,
+    "score": 72.0,
     "quality": 70,
     "health": 63,
     "value": 59,
@@ -7680,7 +7520,7 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 72.1,
+    "final": 72.0,
     "cyclical": false,
     "metrics": {
      "price": 90.64,
@@ -7697,6 +7537,42 @@
      "analysts": 24.0
     },
     "rank": 22,
+    "status": "순위 밖 (상위 8개 선정 완료 후)"
+   },
+   {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "score": 66.6,
+    "quality": 92,
+    "health": 64,
+    "value": 59,
+    "revisions": 54,
+    "eligible": true,
+    "bonus": 5,
+    "bonus_items": [
+     "M1 대가 최근분기 매수: Cathie Wood (+5)"
+    ],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 71.6,
+    "cyclical": true,
+    "metrics": {
+     "price": 304.41,
+     "forward_pe": 15.702569,
+     "peg": 0.3008,
+     "op_margin": 0.48815,
+     "gross_margin": 0.75515,
+     "revenue_growth": 0.855,
+     "growth_1y": 0.6607,
+     "rev_30d": -0.075273913407132,
+     "rev_90d": -0.9326965895305855,
+     "up_30d": 2.0,
+     "down_30d": 0.0,
+     "analysts": 47.0
+    },
+    "rank": 23,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -7731,42 +7607,6 @@
      "up_30d": 22.0,
      "down_30d": 1.0,
      "analysts": 29.0
-    },
-    "rank": 23,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "AVGO",
-    "name": "Broadcom Inc.",
-    "sector": "Technology",
-    "industry": "Semiconductors",
-    "score": 66.5,
-    "quality": 92,
-    "health": 64,
-    "value": 59,
-    "revisions": 54,
-    "eligible": true,
-    "bonus": 5,
-    "bonus_items": [
-     "M1 대가 최근분기 매수: Cathie Wood (+5)"
-    ],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 71.5,
-    "cyclical": true,
-    "metrics": {
-     "price": 304.41,
-     "forward_pe": 15.702569,
-     "peg": 0.3425,
-     "op_margin": 0.48815,
-     "gross_margin": 0.75515,
-     "revenue_growth": 0.855,
-     "growth_1y": 0.6607,
-     "rev_30d": -0.075273913407132,
-     "rev_90d": -0.9326965895305855,
-     "up_30d": 2.0,
-     "down_30d": 0.0,
-     "analysts": 47.0
     },
     "rank": 24,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
@@ -7861,7 +7701,7 @@
     "metrics": {
      "price": 239.33,
      "forward_pe": 7.4604626,
-     "peg": 0.6239,
+     "peg": 0.6152,
      "op_margin": 0.081999995,
      "gross_margin": 0.15079,
      "revenue_growth": 0.464,
@@ -7931,7 +7771,7 @@
     "metrics": {
      "price": 40.91,
      "forward_pe": 8.639733,
-     "peg": 0.3634,
+     "peg": 0.3268,
      "op_margin": 0.081199996,
      "gross_margin": 0.36622003,
      "revenue_growth": 0.337,
@@ -7953,7 +7793,7 @@
     "score": 70.4,
     "quality": 84,
     "health": 68,
-    "value": 43,
+    "value": 42,
     "revisions": 84,
     "eligible": true,
     "bonus": 0,
@@ -8018,7 +7858,7 @@
     "name": "NetApp, Inc.",
     "sector": "Technology",
     "industry": "Software - Infrastructure",
-    "score": 70.1,
+    "score": 70.0,
     "quality": 76,
     "health": 73,
     "value": 52,
@@ -8028,7 +7868,7 @@
     "bonus_items": [],
     "penalty": 0,
     "penalty_items": [],
-    "final": 70.1,
+    "final": 70.0,
     "cyclical": false,
     "metrics": {
      "price": 157.65,
@@ -8127,7 +7967,7 @@
     "score": 71.4,
     "quality": 81,
     "health": 73,
-    "value": 55,
+    "value": 54,
     "revisions": 77,
     "eligible": true,
     "bonus": 3,
@@ -8230,7 +8070,7 @@
     "name": "Seagate Technology Holdings PLC",
     "sector": "Technology",
     "industry": "Computer Hardware",
-    "score": 81.1,
+    "score": 81.0,
     "quality": 84,
     "health": 68,
     "value": 76,
@@ -8244,7 +8084,7 @@
     "penalty_items": [
      "경기순환 업종 사이클 정점 할인(-15점): 현재 영업이익률 40% vs 최근 4년 평균 16%"
     ],
-    "final": 69.1,
+    "final": 69.0,
     "cyclical": true,
     "metrics": {
      "price": 457.01,
@@ -8261,6 +8101,40 @@
      "analysts": 24.0
     },
     "rank": 38,
+    "status": "순위 밖 (상위 8개 선정 완료 후)"
+   },
+   {
+    "ticker": "GNRC",
+    "name": "Generac Holdlings Inc.",
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery",
+    "score": 68.7,
+    "quality": 47,
+    "health": 54,
+    "value": 72,
+    "revisions": 94,
+    "eligible": true,
+    "bonus": 0,
+    "bonus_items": [],
+    "penalty": 0,
+    "penalty_items": [],
+    "final": 68.7,
+    "cyclical": false,
+    "metrics": {
+     "price": 193.22,
+     "forward_pe": 13.693194,
+     "peg": 0.4851,
+     "op_margin": 0.08625,
+     "gross_margin": 0.38179,
+     "revenue_growth": 0.162,
+     "growth_1y": 0.4248,
+     "rev_30d": 8.590817232733636,
+     "rev_90d": 19.37720332007075,
+     "up_30d": 15.0,
+     "down_30d": 0.0,
+     "analysts": 18.0
+    },
+    "rank": 39,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -8293,40 +8167,6 @@
      "up_30d": 5.0,
      "down_30d": 0.0,
      "analysts": 9.0
-    },
-    "rank": 39,
-    "status": "순위 밖 (상위 8개 선정 완료 후)"
-   },
-   {
-    "ticker": "GNRC",
-    "name": "Generac Holdlings Inc.",
-    "sector": "Industrials",
-    "industry": "Specialty Industrial Machinery",
-    "score": 68.6,
-    "quality": 47,
-    "health": 54,
-    "value": 72,
-    "revisions": 94,
-    "eligible": true,
-    "bonus": 0,
-    "bonus_items": [],
-    "penalty": 0,
-    "penalty_items": [],
-    "final": 68.6,
-    "cyclical": false,
-    "metrics": {
-     "price": 193.22,
-     "forward_pe": 13.693194,
-     "peg": 0.5149,
-     "op_margin": 0.08625,
-     "gross_margin": 0.38179,
-     "revenue_growth": 0.162,
-     "growth_1y": 0.4248,
-     "rev_30d": 8.590817232733636,
-     "rev_90d": 19.37720332007075,
-     "up_30d": 15.0,
-     "down_30d": 0.0,
-     "analysts": 18.0
     },
     "rank": 40,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
@@ -8364,7 +8204,7 @@
      "down_30d": 2.0,
      "analysts": 15.0
     },
-    "rank": 107,
+    "rank": 106,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -8401,7 +8241,7 @@
      "down_30d": 5.0,
      "analysts": 24.0
     },
-    "rank": 232,
+    "rank": 233,
     "status": "순위 밖 (상위 8개 선정 완료 후)"
    },
    {
@@ -8424,7 +8264,7 @@
     "metrics": {
      "price": 217.71,
      "forward_pe": 7.9435387,
-     "peg": 0.5339,
+     "peg": 0.5243,
      "op_margin": 0.36323002,
      "gross_margin": 0.89252996,
      "revenue_growth": 0.129,
@@ -8475,9 +8315,5 @@
     "status": "보유 종목 (매주 자동 재점검)"
    }
   ]
- },
- "finalized_result_at": "2026-11-22 10:46",
- "finalize_errors": [
-  "market_brief 없음"
- ]
+ }
 }
