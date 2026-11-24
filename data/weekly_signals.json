@@ -1,6 +1,6 @@
 {
- "built_at_kst": "2026-11-24 06:14",
- "week": "2026-11-24",
+ "built_at_kst": "2026-11-25 06:14",
+ "week": "2026-11-25",
  "universe_size": 519,
  "m1": {
   "investors": [
@@ -719,8 +719,8 @@
     "sector": "Energy",
     "sector_kr": "에너지",
     "stocks": 21,
-    "eps_revision_pct_30d": 2.49,
-    "eps_revision_pct_7d": -0.25,
+    "eps_revision_pct_30d": 1.05,
+    "eps_revision_pct_7d": -0.49,
     "upgrade_ratio": 0.7,
     "momentum": "↑상승중",
     "sparkline": [
@@ -735,48 +735,32 @@
     "sector": "Technology",
     "sector_kr": "IT·기술",
     "stocks": 93,
-    "eps_revision_pct_30d": 1.06,
-    "eps_revision_pct_7d": 0.01,
+    "eps_revision_pct_30d": 0.9,
+    "eps_revision_pct_7d": 0.0,
     "upgrade_ratio": 0.7,
     "momentum": "↑상승중",
     "sparkline": [
      0.0,
-     0.24,
-     0.6,
-     2.16,
-     3.77
+     0.17,
+     0.74,
+     3.16,
+     3.74
     ]
    },
    {
     "sector": "Industrials",
     "sector_kr": "산업재",
     "stocks": 80,
-    "eps_revision_pct_30d": 0.47,
-    "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.61,
+    "eps_revision_pct_30d": 0.48,
+    "eps_revision_pct_7d": 0.04,
+    "upgrade_ratio": 0.62,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.07,
-     0.13,
-     1.05,
-     0.93
-    ]
-   },
-   {
-    "sector": "Communication Services",
-    "sector_kr": "커뮤니케이션",
-    "stocks": 22,
-    "eps_revision_pct_30d": 0.47,
-    "eps_revision_pct_7d": -0.0,
-    "upgrade_ratio": 0.47,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.0,
-     0.14,
-     0.97,
-     0.42
+     0.03,
+     0.19,
+     0.96,
+     1.09
     ]
    },
    {
@@ -790,9 +774,41 @@
     "sparkline": [
      0.0,
      0.0,
-     0.02,
+     0.04,
      0.29,
-     0.8
+     0.77
+    ]
+   },
+   {
+    "sector": "Communication Services",
+    "sector_kr": "커뮤니케이션",
+    "stocks": 22,
+    "eps_revision_pct_30d": 0.21,
+    "eps_revision_pct_7d": -0.0,
+    "upgrade_ratio": 0.47,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.0,
+     0.14,
+     0.74,
+     0.44
+    ]
+   },
+   {
+    "sector": "Utilities",
+    "sector_kr": "유틸리티",
+    "stocks": 31,
+    "eps_revision_pct_30d": 0.11,
+    "eps_revision_pct_7d": 0.02,
+    "upgrade_ratio": 0.47,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     -0.01,
+     -0.07,
+     -0.01,
+     0.02
     ]
    },
    {
@@ -805,74 +821,58 @@
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.0,
-     0.18,
+     0.03,
+     0.14,
      0.32,
-     0.29
-    ]
-   },
-   {
-    "sector": "Utilities",
-    "sector_kr": "유틸리티",
-    "stocks": 31,
-    "eps_revision_pct_30d": 0.08,
-    "eps_revision_pct_7d": 0.02,
-    "upgrade_ratio": 0.47,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.0,
-     -0.06,
-     -0.01,
-     0.02
+     0.25
     ]
    },
    {
     "sector": "Consumer Defensive",
     "sector_kr": "필수소비재",
     "stocks": 32,
-    "eps_revision_pct_30d": -0.07,
+    "eps_revision_pct_30d": -0.0,
     "eps_revision_pct_7d": 0.0,
     "upgrade_ratio": 0.4,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     -0.01,
-     0.0,
-     0.06,
-     0.02
+     -0.03,
+     -0.04,
+     0.09,
+     -0.03
     ]
    },
    {
     "sector": "Basic Materials",
     "sector_kr": "소재",
     "stocks": 19,
-    "eps_revision_pct_30d": -0.41,
-    "eps_revision_pct_7d": -0.07,
+    "eps_revision_pct_30d": -0.46,
+    "eps_revision_pct_7d": -0.03,
     "upgrade_ratio": 0.45,
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     -0.11,
+     -0.09,
      -0.76,
      -0.41,
-     -0.71
+     -0.76
     ]
    },
    {
     "sector": "Consumer Cyclical",
     "sector_kr": "경기소비재",
     "stocks": 56,
-    "eps_revision_pct_30d": -0.92,
-    "eps_revision_pct_7d": -0.05,
+    "eps_revision_pct_30d": -0.62,
+    "eps_revision_pct_7d": 0.0,
     "upgrade_ratio": 0.4,
     "momentum": "↓하락중",
     "sparkline": [
      0.0,
      0.0,
-     -0.12,
-     -1.02,
-     -1.57
+     -0.22,
+     -1.11,
+     -1.59
     ]
    },
    {
@@ -880,15 +880,15 @@
     "sector_kr": "부동산",
     "stocks": 30,
     "eps_revision_pct_30d": -1.03,
-    "eps_revision_pct_7d": -0.4,
+    "eps_revision_pct_7d": -0.31,
     "upgrade_ratio": 0.39,
     "momentum": "↓하락중",
     "sparkline": [
      0.0,
      0.0,
      -0.3,
-     -0.07,
-     -0.43
+     -0.04,
+     0.0
     ]
    }
   ]
@@ -900,10 +900,10 @@
     "ticker": "SMCI",
     "name": "Super Micro Computer, Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 16,
+    "market_cap_b": 15,
     "revenue_growth_pct": 297.5,
     "earnings_growth_pct": 581.3,
-    "eps_revision_30d": 30.4,
+    "eps_revision_30d": 24.29,
     "eps_revision_90d": 30.4,
     "up_30d": 12.0,
     "down_30d": 0.0,
@@ -927,7 +927,7 @@
     "ticker": "LITE",
     "name": "Lumentum Holdings Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 49,
+    "market_cap_b": 44,
     "revenue_growth_pct": 136.5,
     "earnings_growth_pct": 6980.0,
     "eps_revision_30d": 13.01,
@@ -954,7 +954,7 @@
     "ticker": "DELL",
     "name": "Dell Technologies Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 214,
+    "market_cap_b": 185,
     "revenue_growth_pct": 57.7,
     "earnings_growth_pct": 272.9,
     "eps_revision_30d": 15.49,
@@ -978,41 +978,14 @@
    },
    {
     "rank": 4,
-    "ticker": "MU",
-    "name": "Micron Technology, Inc.",
-    "sector": "IT·기술",
-    "market_cap_b": 801,
-    "revenue_growth_pct": 379.3,
-    "earnings_growth_pct": 1059.5,
-    "eps_revision_30d": 0.94,
-    "eps_revision_90d": 22.1,
-    "up_30d": 3.0,
-    "down_30d": 1.0,
-    "op_margin_q": [
-     32.6,
-     45.0,
-     67.6,
-     80.4,
-     80.7
-    ],
-    "eps_surprises": [
-     20.6,
-     33.2,
-     21.4,
-     5.0
-    ],
-    "next_earnings": "2026-12-17"
-   },
-   {
-    "rank": 5,
     "ticker": "APA",
     "name": "APA Corporation",
     "sector": "에너지",
     "market_cap_b": 15,
     "revenue_growth_pct": 31.5,
     "earnings_growth_pct": 250.9,
-    "eps_revision_30d": 14.34,
-    "eps_revision_90d": 40.79,
+    "eps_revision_30d": 12.64,
+    "eps_revision_90d": 40.4,
     "up_30d": 21.0,
     "down_30d": 2.0,
     "op_margin_q": [
@@ -1031,65 +1004,38 @@
     "next_earnings": "2026-11-04"
    },
    {
-    "rank": 6,
-    "ticker": "VLO",
-    "name": "Valero Energy Corporation",
-    "sector": "에너지",
-    "market_cap_b": 92,
-    "revenue_growth_pct": 46.5,
-    "earnings_growth_pct": 576.8,
-    "eps_revision_30d": 8.11,
-    "eps_revision_90d": 70.93,
-    "up_30d": 15.0,
-    "down_30d": 1.0,
+    "rank": 5,
+    "ticker": "HPE",
+    "name": "Hewlett Packard Enterprise Comp",
+    "sector": "IT·기술",
+    "market_cap_b": 53,
+    "revenue_growth_pct": 33.7,
+    "earnings_growth_pct": 410.2,
+    "eps_revision_30d": 10.77,
+    "eps_revision_90d": 31.9,
+    "up_30d": 3.0,
+    "down_30d": 0.0,
     "op_margin_q": [
      4.7,
-     5.2,
-     5.3,
-     11.7,
-     19.7
+     4.2,
+     6.3,
+     7.7,
+     12.0
     ],
     "eps_surprises": [
-     17.0,
-     33.5,
-     23.8,
-     12.6
+     10.8,
+     48.0,
+     18.4,
+     11.0
     ],
-    "next_earnings": "2027-01-28"
+    "next_earnings": "2026-11-23"
    },
    {
-    "rank": 7,
-    "ticker": "PSX",
-    "name": "Phillips 66",
-    "sector": "에너지",
-    "market_cap_b": 93,
-    "revenue_growth_pct": 46.4,
-    "earnings_growth_pct": 4299.0,
-    "eps_revision_30d": 7.1,
-    "eps_revision_90d": 52.63,
-    "up_30d": 14.0,
-    "down_30d": 4.0,
-    "op_margin_q": [
-     2.8,
-     4.8,
-     0.4,
-     8.4,
-     12.7
-    ],
-    "eps_surprises": [
-     14.7,
-     225.7,
-     25.4,
-     19.4
-    ],
-    "next_earnings": "2026-10-28"
-   },
-   {
-    "rank": 8,
+    "rank": 6,
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
     "sector": "IT·기술",
-    "market_cap_b": 3985,
+    "market_cap_b": 3752,
     "revenue_growth_pct": 103.2,
     "earnings_growth_pct": 107.7,
     "eps_revision_30d": 4.34,
@@ -1112,38 +1058,38 @@
     "next_earnings": "2026-11-17"
    },
    {
-    "rank": 9,
-    "ticker": "STX",
-    "name": "Seagate Technology Holdings PLC",
-    "sector": "IT·기술",
-    "market_cap_b": 119,
-    "revenue_growth_pct": 61.0,
-    "earnings_growth_pct": 212.3,
-    "eps_revision_30d": 15.92,
-    "eps_revision_90d": 18.01,
-    "up_30d": 17.0,
-    "down_30d": 1.0,
+    "rank": 7,
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "에너지",
+    "market_cap_b": 92,
+    "revenue_growth_pct": 46.4,
+    "earnings_growth_pct": 4299.0,
+    "eps_revision_30d": 2.73,
+    "eps_revision_90d": 50.69,
+    "up_30d": 14.0,
+    "down_30d": 4.0,
     "op_margin_q": [
-     26.9,
-     29.9,
-     35.7,
-     43.1,
-     48.9
+     2.8,
+     4.8,
+     0.4,
+     8.4,
+     12.7
     ],
     "eps_surprises": [
-     9.6,
-     16.8,
-     12.1,
-     3.4
+     14.7,
+     225.7,
+     25.4,
+     19.4
     ],
-    "next_earnings": "2027-01-26"
+    "next_earnings": "2027-02-03"
    },
    {
-    "rank": 10,
+    "rank": 8,
     "ticker": "TKO",
     "name": "TKO Group Holdings, Inc.",
     "sector": "커뮤니케이션",
-    "market_cap_b": 35,
+    "market_cap_b": 36,
     "revenue_growth_pct": 21.5,
     "earnings_growth_pct": 185.9,
     "eps_revision_30d": 29.57,
@@ -1164,6 +1110,60 @@
      20.7
     ],
     "next_earnings": "2026-11-04"
+   },
+   {
+    "rank": 9,
+    "ticker": "STX",
+    "name": "Seagate Technology Holdings PLC",
+    "sector": "IT·기술",
+    "market_cap_b": 111,
+    "revenue_growth_pct": 61.0,
+    "earnings_growth_pct": 212.3,
+    "eps_revision_30d": 12.19,
+    "eps_revision_90d": 16.38,
+    "up_30d": 17.0,
+    "down_30d": 1.0,
+    "op_margin_q": [
+     26.9,
+     29.9,
+     35.7,
+     43.1,
+     48.9
+    ],
+    "eps_surprises": [
+     9.6,
+     16.8,
+     12.1,
+     3.4
+    ],
+    "next_earnings": "2027-01-26"
+   },
+   {
+    "rank": 10,
+    "ticker": "SNDK",
+    "name": "Sandisk Corporation",
+    "sector": "IT·기술",
+    "market_cap_b": 89,
+    "revenue_growth_pct": 377.9,
+    "earnings_growth_pct": 6909.6,
+    "eps_revision_30d": 7.81,
+    "eps_revision_90d": 8.45,
+    "up_30d": 15.0,
+    "down_30d": 3.0,
+    "op_margin_q": [
+     8.3,
+     35.5,
+     70.0,
+     78.5,
+     79.6
+    ],
+    "eps_surprises": [
+     75.0,
+     59.7,
+     13.7,
+     6.7
+    ],
+    "next_earnings": "2027-02-15"
    }
   ]
  },
@@ -1173,13 +1173,13 @@
     "rank": 1,
     "ticker": "GILD",
     "name": "Gilead Sciences, Inc.",
-    "market_cap_b": 211.6,
+    "market_cap_b": 221.1,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -3.13,
     "consensus_eps": 10.15,
     "analyst_count": 26,
-    "current_price": 170.59,
-    "projected_pe": 16.8,
+    "current_price": 178.29,
+    "projected_pe": 17.6,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      -6.75,
@@ -1190,13 +1190,13 @@
     "rank": 2,
     "ticker": "VMRK",
     "name": "Vivmark Residential",
-    "market_cap_b": 49.2,
+    "market_cap_b": 50.1,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -0.15,
     "consensus_eps": 0.4,
     "analyst_count": 20,
-    "current_price": 63.52,
-    "projected_pe": 157.9,
+    "current_price": 64.64,
+    "projected_pe": 160.6,
     "sig_proj_pe": "red",
     "recent_eps": [
      1.0428,
@@ -1207,13 +1207,13 @@
     "rank": 3,
     "ticker": "TTWO",
     "name": "Take-Two Interactive Software, ",
-    "market_cap_b": 39.2,
+    "market_cap_b": 41.3,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -1.29,
-    "consensus_eps": 10.2,
+    "consensus_eps": 10.09,
     "analyst_count": 29,
-    "current_price": 209.36,
-    "projected_pe": 20.5,
+    "current_price": 220.41,
+    "projected_pe": 21.8,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      -0.32,
@@ -1224,13 +1224,13 @@
     "rank": 4,
     "ticker": "MSTR",
     "name": "Strategy Inc",
-    "market_cap_b": 35.7,
+    "market_cap_b": 33.0,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -52.33,
     "consensus_eps": 17.24,
     "analyst_count": 15,
-    "current_price": 84.4,
-    "projected_pe": 4.9,
+    "current_price": 77.55,
+    "projected_pe": 4.5,
     "sig_proj_pe": "green",
     "recent_eps": [
      -24.45,
@@ -1241,13 +1241,13 @@
     "rank": 5,
     "ticker": "RKLB",
     "name": "Rocket Lab Corporation",
-    "market_cap_b": 33.4,
+    "market_cap_b": 30.9,
     "turnaround_quarter": "내년 연간 흑자 예상",
     "trailing_eps": -0.37,
     "consensus_eps": 0.07,
-    "analyst_count": 20,
-    "current_price": 49.63,
-    "projected_pe": 693.4,
+    "analyst_count": 21,
+    "current_price": 45.98,
+    "projected_pe": 642.4,
     "sig_proj_pe": "red",
     "recent_eps": [
      -0.07,
@@ -1258,13 +1258,13 @@
     "rank": 6,
     "ticker": "COIN",
     "name": "Coinbase Global, Inc.",
-    "market_cap_b": 28.8,
+    "market_cap_b": 27.1,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -2.77,
     "consensus_eps": 2.4,
     "analyst_count": 34,
-    "current_price": 108.78,
-    "projected_pe": 45.3,
+    "current_price": 102.34,
+    "projected_pe": 42.7,
     "sig_proj_pe": "red",
     "recent_eps": [
      -1.36,
@@ -1275,13 +1275,13 @@
     "rank": 7,
     "ticker": "MOS",
     "name": "Mosaic Company (The)",
-    "market_cap_b": 6.4,
+    "market_cap_b": 6.3,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -3.54,
     "consensus_eps": 1.25,
     "analyst_count": 18,
-    "current_price": 20.09,
-    "projected_pe": 16.1,
+    "current_price": 19.68,
+    "projected_pe": 15.7,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      0.13,
@@ -1291,7 +1291,7 @@
   ]
  },
  "m5": {
-  "period": "2026-11-09 ~ 2026-11-23",
+  "period": "2026-11-10 ~ 2026-11-24",
   "buy": [
    {
     "ticker": "AKAM",
@@ -1305,24 +1305,13 @@
     "signal_type": "bullish"
    },
    {
-    "ticker": "ROK",
-    "insider_name": "Moret Blake D.",
-    "title": "President and CEO",
-    "transaction": "매수",
-    "date": "2026-11-09",
-    "amount_usd": 1545450,
-    "shares": 4000,
-    "signal": "장내 매수 (자기 돈으로 매수)",
-    "signal_type": "bullish"
-   },
-   {
     "ticker": "SKYD",
     "insider_name": "Cardinale Gerald J.",
     "title": "이사",
     "transaction": "매수",
-    "date": "2026-11-17",
-    "amount_usd": 1495481,
-    "shares": 199770,
+    "date": "2026-11-19",
+    "amount_usd": 2196786,
+    "shares": 310590,
     "signal": "장내 매수 (자기 돈으로 매수)",
     "signal_type": "bullish"
    },
@@ -1457,6 +1446,17 @@
     "shares": 1000,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "CAT",
+    "insider_name": "MacLennan David",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-12",
+    "amount_usd": 208635,
+    "shares": 350,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
    }
   ],
   "sell": [
@@ -1473,25 +1473,13 @@
     "signal_type": "neutral"
    },
    {
-    "ticker": "SYK",
-    "insider_name": "STRYKER RONDA E",
-    "title": "이사",
+    "ticker": "PLTR",
+    "insider_name": "Sankar Shyam",
+    "title": "See Remarks",
     "transaction": "매도",
-    "date": "2026-11-06",
-    "amount_usd": 178924731,
-    "shares_sold_pct": 24.4,
-    "plan_10b5_1": false,
-    "signal": "보유 지분의 24.4% 재량 매도 — 주의",
-    "signal_type": "bearish"
-   },
-   {
-    "ticker": "ANET",
-    "insider_name": "BECHTOLSHEIM ANDREAS",
-    "title": "10% 대주주",
-    "transaction": "매도",
-    "date": "2026-11-18",
-    "amount_usd": 143055423,
-    "shares_sold_pct": 0.2,
+    "date": "2026-11-19",
+    "amount_usd": 112890599,
+    "shares_sold_pct": 31.0,
     "plan_10b5_1": true,
     "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
@@ -1507,6 +1495,18 @@
     "plan_10b5_1": false,
     "signal": "보유 지분의 51.5% 재량 매도 — 주의",
     "signal_type": "bearish"
+   },
+   {
+    "ticker": "ANET",
+    "insider_name": "BECHTOLSHEIM ANDREAS",
+    "title": "10% 대주주",
+    "transaction": "매도",
+    "date": "2026-11-18",
+    "amount_usd": 100038817,
+    "shares_sold_pct": 0.2,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
    },
    {
     "ticker": "STZ",
@@ -1530,18 +1530,6 @@
     "shares_sold_pct": 2.2,
     "plan_10b5_1": false,
     "signal": "재량 매도 (보유분 대비 소규모)",
-    "signal_type": "neutral"
-   },
-   {
-    "ticker": "PLTR",
-    "insider_name": "Sankar Shyam",
-    "title": "See Remarks",
-    "transaction": "매도",
-    "date": "2026-11-10",
-    "amount_usd": 64933199,
-    "shares_sold_pct": 31.0,
-    "plan_10b5_1": true,
-    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
     "signal_type": "neutral"
    },
    {
@@ -1579,10 +1567,21 @@
     "plan_10b5_1": false,
     "signal": "보유 지분의 58.0% 재량 매도 — 주의",
     "signal_type": "bearish"
+   },
+   {
+    "ticker": "AMD",
+    "insider_name": "Su Lisa T",
+    "title": "Chair, President & CEO",
+    "transaction": "매도",
+    "date": "2026-11-16",
+    "amount_usd": 35489904,
+    "shares_sold_pct": 2.3,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
    }
   ],
   "buy_tickers": [
-   "ADM",
    "AKAM",
    "ALNY",
    "BA",
@@ -1595,7 +1594,6 @@
    "ELV",
    "ETN",
    "PLD",
-   "ROK",
    "SKYD",
    "TJX",
    "URI",
@@ -1616,14 +1614,14 @@
     "ticker": "AVGO",
     "eps_growth_last_q": 215.3,
     "eps_growth_this_fy": 70.9,
-    "eps_growth_next_fy": 66.1,
+    "eps_growth_next_fy": 65.9,
     "trend": "지속 성장"
    },
    {
     "ticker": "AMD",
     "eps_growth_last_q": 93.8,
     "eps_growth_this_fy": 93.9,
-    "eps_growth_next_fy": 118.2,
+    "eps_growth_next_fy": 117.9,
     "trend": "가속 전망"
    },
    {
@@ -1636,8 +1634,8 @@
    {
     "ticker": "MU",
     "eps_growth_last_q": 1059.5,
-    "eps_growth_this_fy": 133.9,
-    "eps_growth_next_fy": 18.2,
+    "eps_growth_this_fy": 133.3,
+    "eps_growth_next_fy": 16.4,
     "trend": "둔화 전망"
    },
    {
