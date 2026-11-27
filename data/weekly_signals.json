@@ -1,6 +1,6 @@
 {
- "built_at_kst": "2026-11-27 06:14",
- "week": "2026-11-27",
+ "built_at_kst": "2026-11-28 06:14",
+ "week": "2026-11-28",
  "universe_size": 519,
  "m1": {
   "investors": [
@@ -720,7 +720,7 @@
     "sector_kr": "에너지",
     "stocks": 21,
     "eps_revision_pct_30d": 1.21,
-    "eps_revision_pct_7d": -0.35,
+    "eps_revision_pct_7d": -0.49,
     "upgrade_ratio": 0.7,
     "momentum": "↑상승중",
     "sparkline": [
@@ -742,7 +742,7 @@
     "sparkline": [
      0.0,
      0.17,
-     0.74,
+     0.85,
      2.65,
      3.3
     ]
@@ -773,26 +773,10 @@
     "momentum": "→횡보",
     "sparkline": [
      0.0,
-     0.0,
+     0.01,
      0.04,
      0.29,
      0.77
-    ]
-   },
-   {
-    "sector": "Financial Services",
-    "sector_kr": "금융",
-    "stocks": 69,
-    "eps_revision_pct_30d": 0.1,
-    "eps_revision_pct_7d": 0.0,
-    "upgrade_ratio": 0.58,
-    "momentum": "→횡보",
-    "sparkline": [
-     0.0,
-     0.03,
-     0.14,
-     0.32,
-     0.29
     ]
    },
    {
@@ -809,6 +793,22 @@
      -0.07,
      -0.03,
      0.07
+    ]
+   },
+   {
+    "sector": "Financial Services",
+    "sector_kr": "금융",
+    "stocks": 69,
+    "eps_revision_pct_30d": 0.09,
+    "eps_revision_pct_7d": 0.0,
+    "upgrade_ratio": 0.58,
+    "momentum": "→횡보",
+    "sparkline": [
+     0.0,
+     0.0,
+     0.11,
+     0.32,
+     0.29
     ]
    },
    {
@@ -870,7 +870,7 @@
     "sparkline": [
      0.0,
      0.0,
-     -0.22,
+     -0.19,
      -1.11,
      -1.59
     ]
@@ -900,7 +900,7 @@
     "ticker": "SMCI",
     "name": "Super Micro Computer, Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 15,
+    "market_cap_b": 16,
     "revenue_growth_pct": 297.5,
     "earnings_growth_pct": 581.3,
     "eps_revision_30d": 24.29,
@@ -927,7 +927,7 @@
     "ticker": "DELL",
     "name": "Dell Technologies Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 189,
+    "market_cap_b": 202,
     "revenue_growth_pct": 103.4,
     "earnings_growth_pct": 286.8,
     "eps_revision_30d": 13.74,
@@ -954,7 +954,7 @@
     "ticker": "LITE",
     "name": "Lumentum Holdings Inc.",
     "sector": "IT·기술",
-    "market_cap_b": 43,
+    "market_cap_b": 47,
     "revenue_growth_pct": 136.5,
     "earnings_growth_pct": 6980.0,
     "eps_revision_30d": 11.36,
@@ -981,7 +981,7 @@
     "ticker": "HPE",
     "name": "Hewlett Packard Enterprise Comp",
     "sector": "IT·기술",
-    "market_cap_b": 54,
+    "market_cap_b": 56,
     "revenue_growth_pct": 50.3,
     "earnings_growth_pct": 1047.2,
     "eps_revision_30d": 12.94,
@@ -1035,7 +1035,7 @@
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
     "sector": "IT·기술",
-    "market_cap_b": 3605,
+    "market_cap_b": 3634,
     "revenue_growth_pct": 103.2,
     "earnings_growth_pct": 107.7,
     "eps_revision_30d": 4.34,
@@ -1062,7 +1062,7 @@
     "ticker": "PSX",
     "name": "Phillips 66",
     "sector": "에너지",
-    "market_cap_b": 92,
+    "market_cap_b": 94,
     "revenue_growth_pct": 46.4,
     "earnings_growth_pct": 4299.0,
     "eps_revision_30d": 2.73,
@@ -1089,7 +1089,7 @@
     "ticker": "TKO",
     "name": "TKO Group Holdings, Inc.",
     "sector": "커뮤니케이션",
-    "market_cap_b": 36,
+    "market_cap_b": 37,
     "revenue_growth_pct": 21.5,
     "earnings_growth_pct": 185.9,
     "eps_revision_30d": 29.91,
@@ -1116,7 +1116,7 @@
     "ticker": "STX",
     "name": "Seagate Technology Holdings PLC",
     "sector": "IT·기술",
-    "market_cap_b": 108,
+    "market_cap_b": 117,
     "revenue_growth_pct": 61.0,
     "earnings_growth_pct": 212.3,
     "eps_revision_30d": 11.99,
@@ -1143,7 +1143,7 @@
     "ticker": "SNDK",
     "name": "Sandisk Corporation",
     "sector": "IT·기술",
-    "market_cap_b": 84,
+    "market_cap_b": 97,
     "revenue_growth_pct": 377.9,
     "earnings_growth_pct": 6909.6,
     "eps_revision_30d": 7.53,
@@ -1173,13 +1173,13 @@
     "rank": 1,
     "ticker": "GILD",
     "name": "Gilead Sciences, Inc.",
-    "market_cap_b": 219.2,
+    "market_cap_b": 219.5,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -3.13,
-    "consensus_eps": 10.12,
+    "consensus_eps": 10.15,
     "analyst_count": 26,
-    "current_price": 176.74,
-    "projected_pe": 17.5,
+    "current_price": 177.0,
+    "projected_pe": 17.4,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      -6.75,
@@ -1190,13 +1190,13 @@
     "rank": 2,
     "ticker": "VMRK",
     "name": "Vivmark Residential",
-    "market_cap_b": 50.6,
+    "market_cap_b": 50.8,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -0.15,
     "consensus_eps": 0.4,
     "analyst_count": 20,
-    "current_price": 65.33,
-    "projected_pe": 162.4,
+    "current_price": 65.56,
+    "projected_pe": 162.9,
     "sig_proj_pe": "red",
     "recent_eps": [
      1.0428,
@@ -1207,13 +1207,13 @@
     "rank": 3,
     "ticker": "TTWO",
     "name": "Take-Two Interactive Software, ",
-    "market_cap_b": 42.6,
+    "market_cap_b": 43.1,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -1.29,
-    "consensus_eps": 10.2,
+    "consensus_eps": 10.09,
     "analyst_count": 29,
-    "current_price": 227.34,
-    "projected_pe": 22.3,
+    "current_price": 230.22,
+    "projected_pe": 22.8,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      -0.32,
@@ -1224,13 +1224,13 @@
     "rank": 4,
     "ticker": "MSTR",
     "name": "Strategy Inc",
-    "market_cap_b": 34.0,
+    "market_cap_b": 34.7,
     "turnaround_quarter": "이번 분기 흑자 예상",
     "trailing_eps": -52.33,
     "consensus_eps": 17.24,
     "analyst_count": 15,
-    "current_price": 79.96,
-    "projected_pe": 4.6,
+    "current_price": 81.62,
+    "projected_pe": 4.7,
     "sig_proj_pe": "green",
     "recent_eps": [
      -24.45,
@@ -1241,13 +1241,13 @@
     "rank": 5,
     "ticker": "RKLB",
     "name": "Rocket Lab Corporation",
-    "market_cap_b": 31.6,
+    "market_cap_b": 34.2,
     "turnaround_quarter": "내년 연간 흑자 예상",
     "trailing_eps": -0.37,
     "consensus_eps": 0.07,
     "analyst_count": 21,
-    "current_price": 47.02,
-    "projected_pe": 656.9,
+    "current_price": 50.88,
+    "projected_pe": 710.8,
     "sig_proj_pe": "red",
     "recent_eps": [
      -0.07,
@@ -1258,13 +1258,13 @@
     "rank": 6,
     "ticker": "COIN",
     "name": "Coinbase Global, Inc.",
-    "market_cap_b": 27.5,
+    "market_cap_b": 28.3,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -2.77,
-    "consensus_eps": 2.55,
-    "analyst_count": 35,
-    "current_price": 103.72,
-    "projected_pe": 40.7,
+    "consensus_eps": 2.53,
+    "analyst_count": 36,
+    "current_price": 107.04,
+    "projected_pe": 42.3,
     "sig_proj_pe": "red",
     "recent_eps": [
      -1.36,
@@ -1275,13 +1275,13 @@
     "rank": 7,
     "ticker": "MOS",
     "name": "Mosaic Company (The)",
-    "market_cap_b": 6.5,
+    "market_cap_b": 6.7,
     "turnaround_quarter": "다음 분기 흑자 예상",
     "trailing_eps": -3.54,
-    "consensus_eps": 1.25,
+    "consensus_eps": 1.11,
     "analyst_count": 18,
-    "current_price": 20.35,
-    "projected_pe": 16.3,
+    "current_price": 21.04,
+    "projected_pe": 19.0,
     "sig_proj_pe": "yellow",
     "recent_eps": [
      0.13,
@@ -1291,7 +1291,7 @@
   ]
  },
  "m5": {
-  "period": "2026-11-12 ~ 2026-11-26",
+  "period": "2026-11-13 ~ 2026-11-27",
   "buy": [
    {
     "ticker": "PLTR",
@@ -1312,8 +1312,8 @@
     "date": "2026-11-23",
     "amount_usd": 49871574,
     "shares": 251910,
-    "signal": "내부자 3인 동시 장내 매수 — 강한 신호",
-    "signal_type": "strong_bullish"
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
    },
    {
     "ticker": "AKAM",
@@ -1331,9 +1331,9 @@
     "insider_name": "Cardinale Gerald J.",
     "title": "이사",
     "transaction": "매수",
-    "date": "2026-11-19",
-    "amount_usd": 2196786,
-    "shares": 310590,
+    "date": "2026-11-24",
+    "amount_usd": 2346669,
+    "shares": 333530,
     "signal": "장내 매수 (자기 돈으로 매수)",
     "signal_type": "bullish"
    },
@@ -1357,17 +1357,6 @@
     "amount_usd": 1161650,
     "shares": 12500,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
-    "signal_type": "strong_bullish"
-   },
-   {
-    "ticker": "COHR",
-    "insider_name": "ANDERSON JAMES ROBERT",
-    "title": "CEO",
-    "transaction": "매수",
-    "date": "2026-11-09",
-    "amount_usd": 997400,
-    "shares": 5000,
-    "signal": "내부자 3인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
    },
    {
@@ -1415,17 +1404,6 @@
     "signal_type": "bullish"
    },
    {
-    "ticker": "ALNY",
-    "insider_name": "SCHULMAN AMY W",
-    "title": "이사",
-    "transaction": "매수",
-    "date": "2026-11-09",
-    "amount_usd": 299526,
-    "shares": 1910,
-    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
-    "signal_type": "strong_bullish"
-   },
-   {
     "ticker": "BRK-B",
     "insider_name": "O'Sullivan Michael J.",
     "title": "See Remarks",
@@ -1437,17 +1415,6 @@
     "signal_type": "bullish"
    },
    {
-    "ticker": "ALNY",
-    "insider_name": "Sigal Charles Elliott",
-    "title": "이사",
-    "transaction": "매수",
-    "date": "2026-11-10",
-    "amount_usd": 243600,
-    "shares": 1600,
-    "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
-    "signal_type": "strong_bullish"
-   },
-   {
     "ticker": "BG",
     "insider_name": "Zenuk Mark N",
     "title": "이사",
@@ -1457,6 +1424,39 @@
     "shares": 2500,
     "signal": "내부자 2인 동시 장내 매수 — 강한 신호",
     "signal_type": "strong_bullish"
+   },
+   {
+    "ticker": "CAT",
+    "insider_name": "MacLennan David",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-12",
+    "amount_usd": 208635,
+    "shares": 350,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "TJX",
+    "insider_name": "PINTOFF CRAIG ADAM",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-20",
+    "amount_usd": 199823,
+    "shares": 1427,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
+   },
+   {
+    "ticker": "URI",
+    "insider_name": "Taussig Alexander R.",
+    "title": "이사",
+    "transaction": "매수",
+    "date": "2026-11-20",
+    "amount_usd": 150086,
+    "shares": 149,
+    "signal": "장내 매수 (자기 돈으로 매수)",
+    "signal_type": "bullish"
    }
   ],
   "sell": [
@@ -1509,18 +1509,6 @@
     "signal_type": "neutral"
    },
    {
-    "ticker": "MSI",
-    "insider_name": "BROWN GREGORY Q",
-    "title": "Chairman and CEO",
-    "transaction": "매도",
-    "date": "2026-11-16",
-    "amount_usd": 74466857,
-    "shares_sold_pct": 50.0,
-    "plan_10b5_1": false,
-    "signal": "보유 지분의 50.0% 재량 매도 — 주의",
-    "signal_type": "bearish"
-   },
-   {
     "ticker": "STZ",
     "insider_name": "WildStar Partners LLC",
     "title": "10% 대주주",
@@ -1545,18 +1533,6 @@
     "signal_type": "neutral"
    },
    {
-    "ticker": "ILMN",
-    "insider_name": "Meister Keith A.",
-    "title": "이사",
-    "transaction": "매도",
-    "date": "2026-11-09",
-    "amount_usd": 61093041,
-    "shares_sold_pct": 57.3,
-    "plan_10b5_1": false,
-    "signal": "보유 지분의 57.3% 재량 매도 — 주의",
-    "signal_type": "bearish"
-   },
-   {
     "ticker": "ANET",
     "insider_name": "BECHTOLSHEIM ANDREAS",
     "title": "10% 대주주",
@@ -1569,6 +1545,18 @@
     "signal_type": "neutral"
    },
    {
+    "ticker": "MSI",
+    "insider_name": "BROWN GREGORY Q",
+    "title": "Chairman and CEO",
+    "transaction": "매도",
+    "date": "2026-11-16",
+    "amount_usd": 40306931,
+    "shares_sold_pct": 50.0,
+    "plan_10b5_1": false,
+    "signal": "보유 지분의 50.0% 재량 매도 — 주의",
+    "signal_type": "bearish"
+   },
+   {
     "ticker": "DIS",
     "insider_name": "IGER ROBERT A",
     "title": "이사",
@@ -1579,17 +1567,27 @@
     "plan_10b5_1": false,
     "signal": "보유 지분의 58.0% 재량 매도 — 주의",
     "signal_type": "bearish"
+   },
+   {
+    "ticker": "AMD",
+    "insider_name": "Su Lisa T",
+    "title": "Chair, President & CEO",
+    "transaction": "매도",
+    "date": "2026-11-16",
+    "amount_usd": 35489904,
+    "shares_sold_pct": 2.3,
+    "plan_10b5_1": true,
+    "signal": "사전 계획 매도(10b5-1) — 경영 판단 신호 약함",
+    "signal_type": "neutral"
    }
   ],
   "buy_tickers": [
    "AKAM",
-   "ALNY",
    "BA",
    "BG",
    "BRK-B",
    "CAT",
    "COHR",
-   "ECL",
    "ELV",
    "ETN",
    "PLD",
@@ -1648,8 +1646,8 @@
    {
     "ticker": "AMAT",
     "eps_growth_last_q": 43.1,
-    "eps_growth_this_fy": 49.7,
-    "eps_growth_next_fy": 27.2,
+    "eps_growth_this_fy": 49.6,
+    "eps_growth_next_fy": 28.5,
     "trend": "둔화 전망"
    }
   ],
@@ -1759,178 +1757,209 @@
  },
  "market_brief": {
   "stance": "방어적",
-  "stance_reason": "① 11/23(월) NVDA 이사회가 젠슨 황을 CEO로 복귀시키자 S&P500 +4.73%(7,237.17)·나스닥 +6.51%(24,089.56)·다우 +3.01%로 2025년 4월 이후 최대 상승이 나왔지만, S&P500은 여전히 125일선(7,584) 아래이고 나스닥100은 고점 대비 약 15% 낮은 조정 구간이다. 약세장 속 하루 급반등은 흔한 현상이라 추세 전환으로 보기엔 이르다. ② 금리 경로는 바뀌지 않았다: 기준금리 3.75~4.00%에서 12/9 FOMC 25bp 인상이 선물시장에 완전히 반영돼 있고, 윌리엄스 뉴욕 연은 총재도 11/23 '인플레이션에 할 일이 남았다'며 2%는 2027년에 근접, 그다음 해 도달로 봤다. ③ NVDA는 리더십 공백은 메워졌지만 SEC 회계 검토 보도·Megaspeed 수출통제 수사·12/1~3 의회 조사가 그대로 남아 '숫자를 믿을 수 있느냐'의 위험은 해소되지 않았다. ④ CNN 공포·탐욕 지수는 9.7 → 17.0으로 올라 10 미만 매수 가중(2단계)이 풀리고 20 미만 '경계' 단계로 돌아왔다. 따라서 방어적 스탠스를 유지하고, 신규 매수는 검증 완료·기준가 이하 종목만 분할로 한다. allocation 은 따로 조정하지 않는다.",
-  "market_env": "지난주 7거래일 연속 하락(나스닥 주간 −10%, 2020년 코로나 초기 이후 최악)으로 조정 구간에 들어갔던 미국 증시가 11/23 NVDA CEO 복귀 소식에 기술주 중심으로 급반등했다. 반도체 ETF(SMH)는 +16% 넘게, 메모리 ETF는 +19% 넘게 올랐고 MU +19%·CoreWeave +22% 등 AI 체인 전반이 반등했다. 에너지·필수소비재를 뺀 전 섹터가 올랐는데, 같은 날 유가는 공급 증가로 3% 넘게 하락했고 정제마진도 좁혀지며 올해 가장 강했던 정유주 트레이드가 꺾이는 모습이다. 금리는 여전히 '인상 사이클'이다. 12월 25bp 인상이 완전히 반영돼 있고 11월 PMI도 4분기 연율 약 3% 성장과 목표를 크게 웃도는 물가 압력을 가리킨다. 섹터 이익 추정치는 에너지(+2.5%)·IT(+1.1%)만 상향이고 경기소비재·부동산은 하향이다. 공포·탐욕 지수는 17.0(극단적 공포)으로, 안전자산 수요(주식−국채 20일 수익률 −6.75%p)와 정크본드 스프레드가 여전히 극단적 공포 쪽이다.",
-  "key_change": "이번 주의 결정적 변화는 지난주 투매의 직접적 방아쇠였던 NVDA 경영 공백이 '대통령이 직접 개입한 CEO 복귀'로 메워졌다는 점이다. NVDA는 하루 +31.5%($125.53 → $165.05), 시가총액 약 9,500억달러가 늘어 미국 상장사 하루 최대 증가를 기록했고, AI 체인 전체의 할인 요인이 일부 걷혔다. 그러나 해소된 것은 '누가 회사를 이끄느냐'뿐이다. 회계(SEC 검토 보도)·수출통제(Megaspeed·Alice Huang 수사)·지배구조(이사회 독립위원회 조사, 의회 초당적 비판) 위험은 그대로이고, 10-Q 제출도 아직이다. 연준의 12월 인상 전망도 바뀌지 않아, 이번 반등은 바닥 확인이 아니라 '꼬리 위험 하나가 줄어든 것'으로 해석하는 편이 맞다.",
+  "stance_reason": "① 지수는 반등했지만 추세는 아직 돌아서지 않았다. 11/27 S&P500은 7,297.49로 주간 +5.6%(2025년 4월 이후 최대)를 기록했지만, 여전히 125일선(7,575) 아래이고 10/6 고점(7,818.93)보다 약 6.7% 낮다. 11/20(6,910.39) 조정 진입 뒤 1주일 반등만으로 바닥이 확인됐다고 보기 어렵다. ② 금리는 오히려 더 매파적으로 바뀌었다. 3분기 GDP가 3.4%에서 4.3%(연율)로 상향 수정되면서 CME FedWatch는 12/9 FOMC 인상을 거의 100% 반영하고 1월 추가 인상까지 예상한다. 성장주 멀티플에는 역풍이 이어진다. ③ 보유 종목의 비가격 위험이 그대로다. NVDA는 캘리포니아 법무장관 조사, 증권 집단소송·대표소송, 이사회 독립 조사, 12/1~3 의회 면담·청문회가 남았고, 11/19 시행된 BIS 원격 접근 규정으로 네오클라우드 수요 일부가 막혔다. ADBE는 12/9 첫 FY27 가이던스 전이다. ④ CNN 공포·탐욕 지수는 15.6에서 24.9로 올라 '극단적 공포' 안에서 회복 중이다. 10 미만 매수 가중 구간과는 거리가 멀다. 그래서 방어적 스탠스를 유지하고, 신규 매수는 검증 완료이면서 기준가 이하인 종목만 섹터 한도 안에서 분할로 한다. allocation은 따로 조정하지 않는다.",
+  "market_env": "추수감사절 주간 미국 증시는 11/23 NVDA CEO 복귀를 계기로 크게 반등했다. 11/27 단축 거래에서도 S&P500 +1.60%(7,297.49), 나스닥 +2.31%(24,129.50), 다우 +1.18%(50,774.94)로 마감했고, 주간으로는 S&P500 +5.6%, 나스닥 약 +6.7%, 다우 약 +5.5%다. 그래도 S&P500은 125일선(7,575) 아래이고, NVDA는 이번 주 급등에도 11월 −28%, 연초 대비 −21%다. 거시 쪽은 '강한 성장 + 인상 사이클'이다. 3분기 GDP 2차 추정치 4.3%와 11월 종합 PMI 54.6 모두 경기 확장을 가리키고, 시장은 12월 인상을 사실상 확정으로, 1월 추가 인상까지 반영한다. 섹터 이익 추정치(30일)는 에너지 +1.21%·IT +0.85%만 상향이고 소재·경기소비재·부동산은 하향이다. 사이클 지표는 반도체 7종목 중 4종목이 내년 EPS 둔화를 전망하고 빅테크 CapEx는 전년비 중앙값 +114%로 '투자는 확대, 이익 전망은 둔화'의 엇갈림이 이어진다. 공포·탐욕 지수는 24.9로 정크본드 수요·안전자산 수요·풋/콜이 여전히 극단적 공포다.",
+  "key_change": "이번 주 바뀐 것은 두 가지다. 첫째, 지수가 하루 반등이 아니라 주간 +5.6%로 반등했다. 지난주 7일 연속 하락의 직접 원인이던 NVDA 경영 공백이 메워졌기 때문이다. 다만 NVDA 자체는 11/23 +31.5% 뒤 상승분을 상당 부분 반납했고, 반등은 AMZN·AVGO·META 등 다른 대형 기술주로 넓어졌다. 둘째, 금리 쪽은 오히려 나빠졌다. GDP 상향 수정(3.4%→4.3%)으로 '인상 1회 뒤 멈춤' 시나리오가 약해지고 1월 추가 인상이 가격에 들어왔다. 정리하면 꼬리 위험(NVDA 경영 공백)은 줄었지만 할인율 위험(연속 인상)은 커졌다. 그래서 이번 반등은 스탠스를 바꿀 근거가 아니라, 기준가 안쪽 종목을 선별할 기회 정도로 본다.",
   "next_events": [
    {
-    "date": "2026-11-25",
-    "event": "미국 10월 PCE 물가·3분기 GDP 2차 추정·연준 베이지북 — 12/9 인상 폭과 2027년 경로를 가를 마지막 주요 물가 지표 (날짜는 직전 브리핑 기준)"
-   },
-   {
-    "date": "2026-11-26~27",
-    "event": "추수감사절 휴장(26일)·단축 거래(27일, 오후 1시 마감) — 거래량이 얇아 급반등 뒤 변동성 확대 가능"
+    "date": "2026-11-29",
+    "event": "OPEC+ 장관급 회의 — 2027년 생산 체계 결정. 유가·정제마진 방향과 APA 등 에너지 후보의 이익 전망에 영향"
    },
    {
     "date": "2026-11-30",
-    "event": "MSCI 지수 리밸런싱 발효 — MSTR 등 디지털자산 보유 기업 제외에 따른 기계적 매도"
+    "event": "MSCI 지수 리밸런싱 적용(장 마감 기준) — MSTR 제외에 따른 패시브 매도. 같은 날 MSTR 주간 8-K(BTC 매입·STRC 재매입), 사이버먼데이"
    },
    {
     "date": "2026-12-01",
-    "event": "ADBE 새 CEO(아닐 차크라바르티) 취임 / 젠슨 황, 하원 3개 위원회 비공개 녹취 면담(NVDA의 중국 칩 유출 관여 여부)"
+    "event": "ADBE 새 CEO(아닐 차크라바르티) 취임 / 젠슨 황 하원 3개 위원회 비공개 면담(12/1~2, 중국 칩 유출·Megaspeed 관련)"
    },
    {
     "date": "2026-12-02",
-    "event": "NVDA 법무총괄 팀 테터 하원 비공개 면담 — 수출통제 준수 책임 라인 확인"
+    "event": "Salesforce FY27 3분기 실적(장 마감 후) — AI 시대 SaaS 수요와 가격 결정력, ADBE 가이던스의 선행 참고. NVDA 법무총괄 하원 면담"
    },
    {
     "date": "2026-12-03",
-    "event": "젠슨 황 상원 은행위원회 공개 청문회(단독 증인) — 지배구조·국가안보 질의, 주가 변동성 이벤트"
+    "event": "젠슨 황 상원 은행위원회 공개 청문회 — 지배구조·수출통제 질의, NVDA 변동성 이벤트"
    },
    {
     "date": "2026-12-04",
-    "event": "미국 11월 고용보고서 / NVDA 10-Q 제출 여부 — 조사·소환·우발채무·내부통제 공시 확인"
+    "event": "미국 11월 고용보고서(오전 8:30 ET) — 12월 인상 폭과 1월 추가 인상 여부의 마지막 핵심 지표 / NVDA 10-Q 제출 여부 확인"
    },
    {
     "date": "2026-12-08~09",
-    "event": "FOMC(25bp 인상 완전 반영)·점도표, 12/9 ADBE FY26 4분기 실적·FY27 가이던스"
+    "event": "FOMC(12/9 결정, 25bp 인상 거의 100% 반영)·점도표 — 2027년 인상 경로"
+   },
+   {
+    "date": "2026-12-09",
+    "event": "ADBE FY26 4분기 실적·첫 FY27 가이던스(장 마감 후, 한국 12/10 오전) — 보유 논리의 분기점"
    }
   ],
   "news": [
    {
-    "title": "Jensen Huang reinstated as Nvidia CEO. Stock skyrockets 31%",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+    "title": "NVDA 8-K: 경영진·이사 변경",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
     "published": "2026-11-23",
+    "kind": "공시",
+    "summary": "NVDA가 11/23 8-K로 젠슨 황의 CEO·이사 복귀를 공시했고 주가는 하루 +31.5% 올랐다. 리더십 공백은 메워졌지만 회계·수출통제·지배구조 조사는 그대로다.",
+    "insight": "NVDA 원래 논리(AI 인프라 독점 공급·고성장 비고평가)의 사업 가정은 그대로이고, '약화'의 근거(10-Q 미제출·조사 미해소)도 이 공시로 풀리지 않았다. 확신도·경고 단계를 바꿀 사건이 아니다.",
+    "fact": "NVDA는 11/23 Item 5.02 8-K로 경영진·이사 변경을 공시했다. 이사회가 젠슨 황을 CEO·사장·이사로 복귀시킨 내용이고, 주가는 그날 하루 +31.5%(165.05달러) 올랐다.",
+    "interpretation": "리더십 공백이라는 꼬리 위험은 공식 공시로 해소됐다. 하지만 복귀는 조사 결과가 아니라 정치적 결정이어서 회계·수출통제·지배구조 조사는 그대로 남는다.",
+    "thesis_impact": "변화 없음",
+    "stars": 4,
+    "tickers": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "Nvidia's billion-dollar board bet: Who's protected as lawsuits mount?",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/25/nvidias-billion-dollar-board-bet-whos-protected-as-lawsuits-mount.html",
+    "published": "2026-11-27",
     "kind": "뉴스",
-    "summary": "NVDA 이사회가 젠슨 황을 CEO로 즉시 복귀시키며 정부 고위층 의견을 들었다고 밝혔고, 주가는 하루 31.5% 올라 $165.05로 마감했다. 경영 공백 위험은 줄었지만 회계·수출통제 조사는 계속된다.",
-    "insight": "NVDA 보유 논리의 'AI 인프라 독점 공급자' 축은 CEO 복귀로 실행 위험이 줄었다. 하지만 직전 확신도 2의 핵심 이유였던 데이터 신뢰성(10-Q 미제출·SEC 회계 검토 보도)은 이번 발표로 바뀌지 않아, 주가 회복만으로 비중을 되돌릴 근거는 아니다.",
-    "fact": "NVDA 이사회가 11/23 만장일치로 젠슨 황을 CEO·사장·이사로 즉시 복귀시켰다. 이사회는 '미국 정부 고위층의 의견을 받았고 복귀가 국가안보 위험이 아니다'라고 밝혔고, 주가는 하루 +31.5%($165.05)로 마감했다.",
-    "interpretation": "지난주 AI 체인 투매의 직접 원인이던 경영 공백이 메워져 리더십·고객 관계 위험은 크게 줄었다. 다만 이사회 독립위원회 조사는 '끝까지 진행'되고 회계·수출통제 의혹도 그대로라 해소된 것은 위험의 일부다.",
-    "thesis_impact": "강화",
+    "summary": "캘리포니아 법무장관 조사, 증권 집단소송·대표소송, 이사회 독립 조사가 동시에 진행 중이다. CEO 복귀와 별개로 NVDA 공시 신뢰성 위험은 수 분기 이어질 수 있다.",
+    "insight": "NVDA의 '검증 대기'와 '반대 근거 미해소'를 연장하는 사실이다. 소송은 주장 단계지만 10-Q의 우발채무·내부통제 공시 내용이 확신도 회복의 전제 조건이 됐다.",
+    "fact": "캘리포니아 법무장관이 NVDA의 투자자 오도 여부를 조사하고 있다. 11/9 증권 집단소송(2025-10-09~2026-11-08 매수자 대상)과 11/11 대표소송(약 20억달러 내부자 매도 주장)이 제기됐고, 11/8 시작된 이사회 독립 조사도 진행 중이다.",
+    "interpretation": "리더십이 돌아왔어도 법적 절차는 이제 시작 단계다. 공시 신뢰성 문제는 수 분기에 걸쳐 헤드라인 위험으로 남는다.",
+    "thesis_impact": "약화",
+    "stars": 4,
+    "tickers": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
+    "published": "2026-11-26",
+    "kind": "뉴스",
+    "summary": "BIS의 새 원격 접근 규정(11/19 시행)으로 중국계 임차 고객을 둔 네오클라우드가 NVDA 칩을 살 수 없게 됐다. 규제가 우회 수요까지 막기 시작했다는 뜻이다.",
+    "insight": "NVDA의 데이터센터 수요 가정 중 '중국 외 지역을 통한 간접 수요'가 줄어든다. 금액은 공개되지 않았지만, 직전에 확인된 동남아 출하 중단과 같은 방향이라 FY28 EPS 하단(12.27달러) 쪽 위험이 커진다.",
+    "fact": "미 상무부 BIS가 11/16 발표하고 11/19 시행한 잠정 최종 규정은 중국 기업이 해외 데이터센터의 첨단 미국 GPU를 원격으로 임차하는 경로를 막는다. 칩 판매사들은 중국계 임차 고객에게 용량을 빌려주는 네오클라우드에는 NVDA 칩을 공급하지 않겠다고 통보했다.",
+    "interpretation": "그동안 우회 수요로 남아 있던 중국계 원격 수요가 공식적으로 막혔다. 원래 중국 고객용이던 GPU는 새 구매자를 찾아야 해 네오클라우드 투자 심리에 부담이다.",
+    "thesis_impact": "약화",
+    "stars": 4,
+    "tickers": [
+     "NVDA",
+     "HPE"
+    ]
+   },
+   {
+    "title": "Trump demands probe into 'record setting error' after third-quarter GDP data gets massive revision higher",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/26/trump-gdp-revision-investigation.html",
+    "published": "2026-11-27",
+    "kind": "뉴스",
+    "summary": "3분기 GDP가 4.3%로 상향 수정돼 연준의 12월 인상이 사실상 확정되고 1월 추가 인상까지 가격에 들어왔다. 성장주 할인율 위험이 커졌다.",
+    "insight": "고PER 성장주보다는 저PER·고FCF 종목이 상대적으로 유리하다. ADBE(향후 12개월 PER 약 8배)는 멀티플 방어력이 있지만, NVDA·KEYS·VRT처럼 성장 기대가 반영된 AI 체인은 멀티플 압박이 이어진다.",
+    "fact": "11/25 발표된 3분기 GDP 2차 추정치는 연율 4.3%로 속보치 3.4%에서 0.9%p 올랐다. 트럼프 대통령은 '기록적 오류'라며 조사를 요구했지만, 이 수정폭은 1990년 이후 공동 16위로 이례적인 수준은 아니다. CME FedWatch는 12월 인상을 거의 100%, 1월 추가 인상까지 반영한다.",
+    "interpretation": "경기가 강해 연준이 연속 인상할 명분이 커졌다. 지난주까지 '12월 한 번'이던 시장 기대가 '12월+1월'로 옮겨가 할인율 위험이 커졌다.",
+    "thesis_impact": "약화",
     "stars": 5,
     "tickers": [
-     "NVDA"
-    ]
-   },
-   {
-    "title": "Stock market jumps after reinstatement of Jensen Huang as Nvidia CEO",
-    "source": "CBS News",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBEZ2IzdVdRZFN3QXJ4djZjWVZBcEtKWURLaGhwaG4xNzUyV3dXMXJtdktYUlNMaHo2eWtEdHNIeUhXLVpZaEV1dVRvd1pPaGpNelY4aERWQ1NZblk5cVdzOHpZbVFhRk9IcUlMamI5MnNLZw?oc=5",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "NVDA CEO 복귀에 S&P500 +4.73%, 나스닥 +6.51%로 2025년 4월 이후 최대 상승이 나왔다. 반도체가 주도했지만 지수는 아직 장기 이동평균 아래 조정 구간이다.",
-    "insight": "VRT·FIX·EME 같은 데이터센터 전력·설비 후보는 반등으로 기준가와의 거리가 더 벌어졌다(VRT +12.9%, FIX +28.7%). 가격 조건상 편입 대기가 길어지고, 지금 판단할 것은 반등이 아니라 기준가 이하 검증 종목이다.",
-    "fact": "11/23 S&P500은 +4.73%(7,237.17), 나스닥 +6.51%(24,089.56), 다우 +3.01%(+1,448포인트)로 2025년 4월 이후 최대 상승을 기록했다. 반도체 ETF(SMH)는 16% 넘게, MU는 19%, CoreWeave는 22% 올랐고 에너지·필수소비재만 하락했다.",
-    "interpretation": "지난주 조정의 핵심이던 AI 체인이 반등을 주도했다. 다만 S&P500은 125일선(7,584) 아래이고 나스닥100은 고점 대비 약 15% 낮아 추세 전환은 확인되지 않았다.",
-    "thesis_impact": "변화 없음",
-    "stars": 4,
-    "tickers": [
      "NVDA",
-     "VRT",
-     "FIX",
-     "EME"
-    ]
-   },
-   {
-    "title": "U.S. probes Megaspeed, Alice Huang as new figure emerges in Nvidia chip case",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/11/23/nvidia-megaspeed-chipmaker-us.html",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "미 정부는 Megaspeed·Alice Huang의 수출통제 위반 가능성 수사가 진행 중이라고 밝혔고, 의회는 12월 초 NVDA 경영진을 면담한다. CEO 복귀와 별개로 회사 준법 위험은 남아 있다.",
-    "insight": "NVDA의 '반대 근거 미해소' 상태는 그대로다. 회사 내부 누가 무엇을 알았는지가 쟁점이 되면 중국 매출 이전에 미국 내 정책 신뢰도와 벌금·소송 위험이 생긴다. 12/3 상원 공개 청문회 전까지 확신도 상향 근거로 쓰기 어렵다.",
-    "fact": "미 국가정보국장 제이 클레이턴은 Alice Huang과 Megaspeed에 대한 수사가 '진행 중'이라고 밝혔다. 이 수사는 2024년 상무부·법무부가 수출통제 위반 가능성으로 시작했고 형사 부분은 법무부가 맡고 있다. 베선트 재무장관은 NVDA의 중국 칩 판매에서 누가 준법을 감독했는지 답을 요구하고 있으며, 황 CEO와 법무총괄은 12/1~2 하원 3개 위원회 비공개 면담을 받는다.",
-    "interpretation": "CEO 복귀로 '국가안보 위험 없음'이라는 정부 의견이 나왔지만, 회사 차원의 수출통제 준수 문제는 별도 수사로 남아 있다. NVDA에 대한 기소는 보도되지 않았다.",
-    "thesis_impact": "약화",
-    "stars": 4,
-    "tickers": [
-     "NVDA"
-    ]
-   },
-   {
-    "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
-    "source": "CNBC",
-    "url": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "윌리엄스 총재가 인플레이션 대응에 할 일이 남았다며 2%를 2027~2028년에 도달할 것으로 봤다. 시장은 12월 25bp 인상을 완전히 반영하고 있다.",
-    "insight": "ADBE(FCF 수익률 11%대·자사주 매입)처럼 현금흐름이 밸류에이션을 받치는 보유 종목은 금리 인상에 상대적으로 강하다. APP·VRT처럼 높은 멀티플 후보는 기준가 하향 여지를 유지해야 한다.",
-    "fact": "윌리엄스 뉴욕 연은 총재는 11/23 인플레이션에 '할 일이 남았다'며 2% 복귀가 '100% 필수'라고 말했고, 2027년에 목표에 근접하고 그다음 해 도달할 것으로 봤다. 기준금리는 3.75~4.00%이고 시장은 12/8~9 FOMC의 25bp 인상을 완전히 반영하고 있다.",
-    "interpretation": "증시 급반등에도 연준의 '인상 사이클'은 바뀌지 않았다. 고PER 성장주에는 할인율 역풍이 계속되고, 무차입·고현금흐름 기업이 상대적으로 유리하다.",
-    "thesis_impact": "변화 없음",
-    "stars": 4,
-    "tickers": [
      "ADBE",
-     "APP",
-     "VRT"
+     "KEYS"
     ]
    },
    {
-    "title": "Oil slides more than 3% as supply growth overshadows attack risks",
-    "source": "Seeking Alpha",
-    "url": "https://seekingalpha.com/news/4675845-oil-slides-more-than-3-percent-as-supply-growth-overshadows-attack-risks?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
-    "published": "2026-11-23",
+    "title": "U.S. Stocks Close Sharply Higher in Shortened Black Friday Session and Post Big Weekly Gains",
+    "source": "JBizNews",
+    "url": "https://jbiznews.com/u-s-stocks-close-sharply-higher-in-shortened-black-friday-session-and-post-big-weekly-gains-dow-jones-industrial-average-up-1-18-sp-500-up-1-60-nasdaq-composite-up-2-31/",
+    "published": "2026-11-27",
     "kind": "뉴스",
-    "summary": "공급 증가로 유가가 3% 넘게 떨어졌고 정제마진도 좁혀지며 정유주가 약세다. 올해 가장 강했던 에너지 이익 상향 흐름이 꺾일 수 있다.",
-    "insight": "VLO 후보의 핵심 가정인 '높은 정제마진 지속'이 흔들린다(현재가 기준가 대비 +15.6%, 기대수익 5.3%). APA도 유가 하락에 민감하다. 두 종목 모두 편입 대기 상태를 유지하고 기준가를 올리지 않는다.",
-    "fact": "11/23 유가가 공급 증가에 밀려 3% 넘게 하락했다. 같은 날 CNBC는 올해 걸프·호르무즈·러시아 공급 차질로 급등했던 정제마진이 최근 1주일 사이 좁혀지며 정유주 매도가 나오고 있다고 보도했다.",
-    "interpretation": "증시 전반이 급등한 날 에너지 섹터만 하락했다. 에너지 섹터 이익 추정치 상향(+2.5%)이 정점을 지나고 있을 가능성을 보여준다.",
-    "thesis_impact": "약화",
-    "stars": 3,
-    "tickers": [
-     "VLO",
-     "APA"
-    ]
-   },
-   {
-    "title": "Oracle and CoreWeave stocks stage big gains as investors bet the AI cash will keep flowing",
-    "source": "MarketWatch",
-    "url": "https://www.marketwatch.com/story/oracle-and-coreweave-stocks-stage-big-gains-as-investors-bet-the-ai-cash-will-keep-flowing-eeb1aa85?mod=mw_rss_topstories",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "NVDA 반등과 함께 Oracle·CoreWeave가 급등했다. NVDA의 자금 지원에 기대는 AI 클라우드 생태계의 연결 구조가 다시 드러났다.",
-    "insight": "VRT·FIX·EME의 데이터센터 수주는 네오클라우드·하이퍼스케일러의 자금 조달이 유지돼야 이어진다. 금리 인상기에 자금 조달 비용이 오르면 이 체인의 2027년 CAPEX 가정이 가장 먼저 시험받는다.",
-    "fact": "11/23 Oracle과 CoreWeave가 급등했다. MarketWatch는 NVDA의 AI 생태계 자금 지원이 Oracle·CoreWeave·Nebius·Iren 같은 클라우드 기업에 결정적이었다며, 투자자들이 'AI 자금이 계속 흐를 것'에 베팅했다고 전했다.",
-    "interpretation": "네오클라우드의 주가가 자체 실적보다 NVDA의 자금 공급 능력에 묶여 있다는 점이 다시 확인됐다. NVDA가 흔들리면 AI 체인 전체의 자금 조달이 같이 흔들리는 구조다.",
+    "summary": "S&P500이 주간 +5.6%로 2025년 4월 이후 최대 상승을 기록했지만 여전히 125일선 아래다. 연휴 주간의 얇은 거래 속 반등이라 추세 전환으로 보기엔 이르다.",
+    "insight": "가격만 바뀌었고 보유·후보 종목의 이익 가정은 바뀌지 않았다. ASML(1,325.82달러 ≤ 1,395달러)·KEYS(278.74달러 ≤ 280달러)는 아직 기준가 안쪽이고, VRT·APP·FIX는 기준가에서 더 멀어졌다.",
+    "fact": "11/27 단축 거래에서 S&P500 +1.60%(7,297.49), 나스닥 +2.31%(24,129.50), 다우 +1.18%(50,774.94)로 마감했다. 주간으로는 S&P500 +5.6%로 2025년 4월 이후 최대 상승이고, 필라델피아 반도체지수는 이날 약 +4.7% 올랐다.",
+    "interpretation": "조정 진입(11/20) 뒤 1주일 만에 낙폭의 상당 부분을 되찾았다. 하지만 지수는 125일선(7,575) 아래이고 거래량이 얇은 연휴 주간이라 추세 전환 신호로는 약하다.",
     "thesis_impact": "변화 없음",
     "stars": 3,
+    "tickers": [
+     "SPY",
+     "QQQ",
+     "SMH"
+    ]
+   },
+   {
+    "title": "These stocks soared the most during a wild week highlighted by Huang’s return to Nvidia",
+    "source": "MarketWatch",
+    "url": "https://www.marketwatch.com/story/these-stocks-soared-the-most-during-a-wild-week-highlighted-by-huangs-return-to-nvidia-578b3f9a?mod=mw_rss_topstories",
+    "published": "2026-11-27",
+    "kind": "뉴스",
+    "summary": "NVDA는 CEO 복귀 랠리에도 11월 −28%, 연초 대비 −21%다. 시장은 경영 공백보다 조사·규제 위험을 더 길게 할인하고 있다.",
+    "insight": "NVDA는 FY28 EPS 컨센서스 기준 약 9배로 싸지만, 지금 할인의 원인이 이익이 아니라 신뢰라서 밸류에이션만으로 추가 매수할 근거는 아니다. 오늘 재점검에서 수출통제 집행 위험을 반영해 buy_below를 148달러에서 144달러로 내렸고, 현재가 150.49달러는 그보다 위다.",
+    "fact": "MarketWatch는 NVDA가 이번 주 급등했지만 11월 한 달 약 −28%, 연초 대비 약 −21%라고 전했다.",
+    "interpretation": "CEO 복귀 반등이 11월 낙폭을 되돌리지 못했다. 시장이 '경영 공백'보다 '조사·규제 위험'을 더 오래 할인하고 있다는 뜻이다.",
+    "thesis_impact": "변화 없음",
+    "stars": 3,
+    "tickers": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "KEYS 8-K: 실적 발표",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1601046/000160104626000040/keys-20261119.htm",
+    "published": "2026-11-19",
+    "kind": "공시",
+    "summary": "KEYS가 수주 +53%와 컨센서스를 웃도는 1분기 가이던스를 공시했다. 편입 조건은 충족하지만 IT 섹터 2종목 한도로 편입은 보류 중이다.",
+    "insight": "KEYS는 '편입 적합'·확신도 4이고 현재가 278.74달러가 기준가 280달러 이하다. 하지만 IT·기술 섹터 보유가 이미 2종목(NVDA·ADBE)이라 섹터당 2종목 한도 때문에 실제 편입은 막혀 있다. 한도가 풀리거나 교체 조건이 생기면 1순위 후보다.",
+    "fact": "KEYS는 11/19 8-K(Item 2.02)로 FY26 4분기 실적을 공시했다. 매출 19.9억달러(+41%), 수주 23.4억달러(+53%, book-to-bill 1.17), non-GAAP EPS 3.61달러이고, FY27 1분기 EPS 가이던스는 3.63~3.69달러로 컨센서스(약 3.25달러)를 웃돈다.",
+    "interpretation": "AI 유선·데이터센터 계측 수요가 수주로 확인됐고, 가이던스가 컨센서스를 크게 넘어 추정치 상향 여지가 남아 있다.",
+    "thesis_impact": "강화",
+    "stars": 3,
+    "tickers": [
+     "KEYS"
+    ]
+   },
+   {
+    "title": "HPE 8-K: 실적 발표 · 공정공시(IR 자료)",
+    "source": "SEC EDGAR (기업 공시)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/hpe-20261123.htm",
+    "published": "2026-11-23",
+    "kind": "공시",
+    "summary": "HPE는 FY26 4분기 실적과 FY27 가이던스 상향을 발표했지만, Cloud & AI 마진 하락도 함께 예고했다. 싸지만 정점 이익 위험이 풀리지 않았다.",
+    "insight": "HPE는 가이던스 기준 PER 약 7.7배로 싸지만, 회사가 직접 마진 하락을 예고해 '관찰' 판단이 바뀌지 않는다. 현재가 42.76달러는 기준가 37달러보다 15.6% 높다.",
+    "fact": "HPE는 11/23 8-K(Item 2.02)로 FY26 4분기 실적을 공시했다. 매출 +50%, non-GAAP EPS 1.43달러(가이던스 상단 1.30달러 상회)였고, FY27 EPS 가이던스는 5.05~5.35달러, FCF 55억달러 이상이다. 회사는 Cloud & AI 영업이익률이 18.4%에서 약 14%로 내려간다고 밝혔다.",
+    "interpretation": "AI 서버·Juniper 통합으로 외형은 크게 늘었지만, 이익의 상당 부분이 메모리 판가 전가에서 나와 정점 이익 논쟁이 남는다.",
+    "thesis_impact": "변화 없음",
+    "stars": 2,
+    "tickers": [
+     "HPE"
+    ]
+   },
+   {
+    "title": "Adobe Suffers Early Loss in 'Firefly Foundry' Trademark Dispute",
+    "source": "Bloomberg Law",
+    "url": "https://news.bloomberglaw.com/ip-law/adobe-suffers-early-loss-in-firefly-foundry-trademark-dispute",
+    "published": "2026-11-17",
+    "kind": "뉴스",
+    "summary": "법원이 Adobe의 'Firefly Foundry' 명칭 사용을 예비 가처분으로 금지했다. 명칭 문제라 재무 영향은 작아 보이지만, 이행 합의 내용은 아직 확인되지 않았다.",
+    "insight": "ADBE 논리(현금창출·자사주 감소·저PER 논쟁주)의 핵심 가정은 바뀌지 않는다. 이행 합의가 '명칭 변경'에 그치면 영향이 없고, 제품 공급 중단으로 번지면 AI-first ARR 가정을 다시 봐야 한다.",
+    "fact": "캘리포니아 북부 연방지법은 11/15 Foundry Visionmongers(Roper 자회사)가 낸 소송에서 Adobe의 'Firefly Foundry' 명칭 사용을 금지하는 예비 가처분을 내렸다. 법원은 10일 안에 이행 방식(명칭 변경 범위·시점)에 대한 합의서나 공동 의견서를 내라고 했는데, 11/28 현재 그 제출 내용은 확인되지 않는다.",
+    "interpretation": "판결 대상이 제품이 아니라 명칭이어서 직접적인 재무 영향은 작을 가능성이 높다. 다만 Disney 등 기업 고객 계약에 쓰인 브랜드를 바꾸는 비용과 혼선은 남는다.",
+    "thesis_impact": "변화 없음",
+    "stars": 2,
+    "tickers": [
+     "ADBE"
+    ]
+   },
+   {
+    "title": "Catalyst Watch: Jobs report, Jensen Huang in DC, and Cyber Monday",
+    "source": "Seeking Alpha",
+    "url": "https://seekingalpha.com/news/4677053-catalyst-watch-jobs-report-jensen-huang-in-dc-and-cyber-monday?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+    "published": "2026-11-27",
+    "kind": "뉴스",
+    "summary": "다음 주는 고용보고서, 젠슨 황 의회 출석, Salesforce·Marvell 실적, OPEC+ 회의가 몰린 주다. 금리·AI 반도체 신뢰·소프트웨어 수요를 동시에 확인한다.",
+    "insight": "Salesforce(12/2) 실적은 12/9 ADBE 가이던스를 앞두고 AI 시대 SaaS 좌석·가격 결정력을 미리 볼 기회다. 황 청문회(12/3)는 NVDA '반대 근거 미해소' 판단에 바로 연결된다.",
+    "fact": "Seeking Alpha의 다음 주 일정 정리에 따르면 11월 고용보고서, 젠슨 황의 워싱턴 의회 일정, 사이버먼데이가 주요 이벤트다. Salesforce·Marvell·Snowflake·MongoDB·Okta 실적과 OPEC+ 회의도 같은 주에 있다.",
+    "interpretation": "다음 주는 금리(고용), AI 반도체 신뢰(황 청문회), 소프트웨어 수요(Salesforce·Snowflake)를 한꺼번에 확인하는 주다.",
+    "thesis_impact": "해당없음",
+    "stars": 2,
     "tickers": [
      "NVDA",
-     "VRT",
-     "FIX",
-     "EME"
-    ]
-   },
-   {
-    "title": "Why Monday’s huge stock-market rally is actually a warning sign for bulls",
-    "source": "MarketWatch",
-    "url": "https://www.marketwatch.com/story/why-mondays-huge-stock-market-rally-is-actually-a-warning-sign-for-bulls-49d227a8?mod=mw_rss_topstories",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "역사적으로 대규모 하루 반등은 약세장 안에서 더 자주 나왔다는 분석이 나왔다. 이번 급등을 바닥 확인으로 보기는 이르다.",
-    "insight": "공포·탐욕 지수가 10 미만에서 17로 올라오며 자동 매수 가중이 풀렸다. 반등을 쫓아 기준가를 올리기보다 기존 기준가 이하 종목만 보는 원칙을 유지한다.",
-    "fact": "MarketWatch는 11/23 같은 대규모 일일 반등 대부분이 약세장 중에 나왔다며, 월요일 급등이 오히려 강세론자에게 경고 신호라고 분석했다.",
-    "interpretation": "하루 급반등은 숏커버링과 포지션 정리로 나오는 경우가 많아, 반등의 지속성은 다음 1~2주 거래량·시장 폭으로 확인해야 한다.",
-    "thesis_impact": "변화 없음",
-    "stars": 2,
-    "tickers": []
-   },
-   {
-    "title": "Get ready for 3 consecutive rate hikes starting next month, bank economist warns",
-    "source": "Business Insider",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa3V1T1pFS0tQMk4zekFHRHpmcUxWMElMNWh0Vjd2MHpodkh2N2dMMV9VRHc0cC1UWEN2aGZ2S0lhRGxiaGhqYWxzNWFIZGFoc0U3X3ZCOVU4QlRwblFMZlFpZ2VHTVQzanNRTE5iMUo0d2tQMTczYVlMRU1FREJ5Yk5xT3NaLXFGcjJiUVFoaG96RDZVanFhRnJ1SDFuR05KWWR3LXcwbw?oc=5",
-    "published": "2026-11-23",
-    "kind": "뉴스",
-    "summary": "12월부터 3회 연속 인상 가능성을 경고하는 은행 이코노미스트 전망이 나왔다. 컨센서스보다 매파적인 경로가 거론된다.",
-    "insight": "금리 인상이 이어지면 MSTR·CRCL처럼 금리·유동성에 민감한 관심 종목의 기준 시나리오가 약해진다(CRCL은 금리가 오르면 준비금 이자수익이 늘지만 코인 유동성은 줄어드는 양면성).",
-    "fact": "Business Insider는 한 은행 이코노미스트가 다음 달(12월)부터 3회 연속 금리 인상에 대비하라고 경고했다고 보도했다.",
-    "interpretation": "시장 컨센서스(12월 25bp)보다 매파적인 시나리오가 공개적으로 거론된다. 11/25 PCE가 예상보다 높으면 2027년 추가 인상 가격이 빠르게 반영될 수 있다.",
-    "thesis_impact": "변화 없음",
-    "stars": 2,
-    "tickers": [
-     "MSTR",
-     "CRCL"
+     "ADBE",
+     "CRM"
     ]
    }
   ],
